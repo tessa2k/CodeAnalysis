@@ -1,0 +1,42 @@
+name: codeanalysis
+channels:
+- conda-forge
+
+dependencies:
+- python>=3.10
+
+# Jupyter Notebooks
+# --------------------------------------------------------------------------------
+- conda-forge::notebook
+- conda-forge::ipykernel
+- conda-forge::ipywidgets
+- conda-forge::jupyterlab
+
+# Plotting
+# --------------------------------------------------------------------------------
+- conda-forge::matplotlib
+- conda-forge::seaborn
+
+# Utilities
+# --------------------------------------------------------------------------------
+- tqdm
+
+# Data Science
+# --------------------------------------------------------------------------------
+- conda-forge::scikit-learn
+- pandas
+- numpy
+- scipy
+
+# Text
+# --------------------------------------------------------------------------------
+- nltk
+- spacy
+- beautifulsoup4
+
+- pip
+- pip:
+    - gensim
+    - textblob
+    - msal
+    - requests
