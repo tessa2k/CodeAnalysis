@@ -150,15 +150,15 @@ def process_result(id_list, metadata, output, type="currents"):
 
 if __name__ == "__main__":
     # test_examples()
-    sample_list = [114665, 118434, 114424, 105383, 113949]
+    sample_list = [118434, 105383, 114424, 114665, 113949]
     metadata_file_path = '/Users/cynthia/Desktop/Capstone-CodeAnalysis/Data/model_metadata.json'
     with open(metadata_file_path, 'r', encoding='utf-8') as json_file:
         metadata = json.load(json_file)
-    test_file_path = '/Users/cynthia/Desktop/Capstone-CodeAnalysis/Data/prompt_test.json'
+    test_file_path = '/Users/cynthia/Desktop/Capstone-CodeAnalysis/Data/prompt_test(2).json'
     with open(test_file_path, 'r', encoding='utf-8') as json_file:
         output = json.load(json_file)
     
-    most_relevant, potentially_relevant = output[0]["results"], output[1]["results"]
+    most_relevant = output["results"]
 
     print("Most relevant:")
     y_true, y_pred = process_result(sample_list, metadata, most_relevant, type="currents")
@@ -168,12 +168,13 @@ if __name__ == "__main__":
     pprint(result_1)
     print()
 
-    print("Potentially relevant:")
-    y_true, y_pred = process_result(sample_list, metadata, potentially_relevant, type="currents")
-    print("True: ", y_true)
-    print("Predict: ", y_pred)
-    result_2 = Evaluate(y_true, y_pred).result()
-    pprint(result_2)
+    output_file_path = '/Users/cynthia/Desktop/Capstone-CodeAnalysis/Data/sample_performance_1.json'
+    with open(output_file_path, 'w', encoding='utf-8') as output_file:
+        json.dump({
+            "y_true": y_true,
+            "y_pred": y_pred,
+            "Performance": result_1
+        }, output_file, indent=4)
 
     
     
