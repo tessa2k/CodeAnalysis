@@ -59,9 +59,9 @@ class Evaluate:
         Micro Precision: average(TP/(TP + FP))
         '''
         pp_tot = sum(len(items) for items in self.y_pred if items)
-        ret_macro = self.tp_tot/pp_tot
+        ret_micro = self.tp_tot/pp_tot
         precision_results = self.precision_list()
-        ret_micro = sum([item for item in precision_results if item])/len(precision_results)
+        ret_macro = sum([item for item in precision_results if item])/len(precision_results)
         return {"macro": ret_macro, "micro": ret_micro}
 
 
@@ -86,9 +86,9 @@ class Evaluate:
         Micro Recall: average(TP/(TP + FN))
         '''
         true_tot = sum(len(items) for items in self.y_true if items)
-        ret_macro = self.tp_tot/true_tot
+        ret_micro = self.tp_tot/true_tot
         recall_results = self.recall_list()
-        ret_micro = sum([item for item in recall_results if item])/len(recall_results)
+        ret_macro = sum([item for item in recall_results if item])/len(recall_results)
         return {"macro": ret_macro, "micro": ret_micro}
         
     def result(self):
