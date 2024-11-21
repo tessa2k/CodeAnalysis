@@ -55,7 +55,7 @@ class Evaluate:
         
     def precision(self):
         '''
-        Macro Precision: TP_total / true_total
+        Macro Precision: TP_total / pred_total
         Micro Precision: average(TP/(TP + FP))
         '''
         pp_tot = sum(len(items) for items in self.y_pred if items)
@@ -67,7 +67,7 @@ class Evaluate:
 
     def recall_list(self):
         """
-        Recall: TP / (TP + FN), also True Positive Rate
+        Recall: TP / (TP + FN)
         
         Returns:
         - List of recall score for each model output.
@@ -82,7 +82,7 @@ class Evaluate:
 
     def recall(self):
         '''
-        Macro Recall: TP_total / pred_total
+        Macro Recall: TP_total / true_total
         Micro Recall: average(TP/(TP + FN))
         '''
         true_tot = sum(len(items) for items in self.y_true if items)
