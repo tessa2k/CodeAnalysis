@@ -27,6 +27,3 @@ print(neg_samples)
 # ground truth labels
 labels = {i: 1 for i in pos_samples}
 labels.update({i: 0 for i in neg_samples})
-
-
-
