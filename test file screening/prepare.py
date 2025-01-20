@@ -142,7 +142,7 @@ if __name__ == "__main__":
     file_model_id = get_model_id(authorization_headers)
     print(f"Total number of files is {len(file_model_id)}")
     # download files
-    sample_folder = '/Users/tessakong/Desktop/CodeAnalysis/sample5'
+    sample_folder = '/Users/tessakong/Desktop/CodeAnalysis/samples'
     file_code_list = shuffle(file_model_id)
     dwn_files(sample_folder, file_model_id, authorization_headers, file_code_list)
 
