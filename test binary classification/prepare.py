@@ -77,16 +77,19 @@ def sample_negative(list_from, list_exclude, n, seed=None):
 def prepare_file_code_id():
     # Access "modeldb-code-analysis/modeldb-zips"
     endpoint = 'https://graph.microsoft.com/v1.0/me/drive/root:/modeldb-code-analysis/modeldb-zips:/children'
-    response = requests.get(endpoint, headers=headers)
     file_code_id = {}
-    if response.status_code == 200:
-        files_in_subfolder = response.json().get('value', [])
-        for file in files_in_subfolder:
-            file_code = file['name'][:-4]
-            file_code_id[file_code] = file['id']
-            # print(f"File Name: {file['name']} - File ID: {file['id']}")
-    else:
-        print(f"Error: {response.status_code} - {response.text}")
+    while endpoint:
+        response = requests.get(endpoint, headers=headers)
+        if response.status_code == 200:
+            files_in_subfolder = response.json().get('value', [])
+            for file in files_in_subfolder:
+                file_code = file['name'][:-4]
+                file_code_id[file_code] = file['id']
+            endpoint = response.json().get('@odata.nextLink')
+        else:
+            print(f"Error: {response.status_code} - {response.text}")
+            break
+           
     return file_code_id
 
 def extract_samples(sample_folder, file_code_id, pos_samples, neg_samples):
@@ -100,25 +103,27 @@ def extract_samples(sample_folder, file_code_id, pos_samples, neg_samples):
     os.makedirs(sample_folder, exist_ok=True)
     for code in tqdm.tqdm(list(file_code_id.keys())):
         file_id = file_code_id[code]
-        if int(code) in set(pos_samples + neg_samples):
-            zip_filename = f"{code}.zip"
-            local_path = os.path.join(sample_folder, zip_filename)
-            extract_path = os.path.join(sample_folder, code)
+        try:
+            numeric_code = int(''.join(filter(str.isdigit, code)))
+            if numeric_code in set(pos_samples + neg_samples):
+                zip_filename = f"{code}.zip"
+                local_path = os.path.join(sample_folder, zip_filename)
+                extract_path = os.path.join(sample_folder, code)
 
-            # download zip file into local directory
-            download_endpoint = f'https://graph.microsoft.com/v1.0/me/drive/items/{file_id}/content'
-            response = requests.get(download_endpoint, headers=headers)
+                # download zip file into local directory
+                download_endpoint = f'https://graph.microsoft.com/v1.0/me/drive/items/{file_id}/content'
+                response = requests.get(download_endpoint, headers=headers)
 
-            if response.status_code == 200:
-                with open(local_path, 'wb') as file:
-                    file.write(response.content)
-                print(f"Downloaded {zip_filename} to {local_path}")
-                
-                with zipfile.ZipFile(local_path, 'r') as zip_ref:
-                    zip_ref.extractall(extract_path)
-                    print(f"Unzip {zip_filename} to {extract_path}")
-            else:
-                print(f"Failed to download {zip_filename}")
+                if response.status_code == 200:
+                    with open(local_path, 'wb') as file:
+                        file.write(response.content)
+                    
+                    with zipfile.ZipFile(local_path, 'r') as zip_ref:
+                        zip_ref.extractall(extract_path)
+                else:
+                    print(f"Failed to download {zip_filename}")
+        except ValueError:
+            print(f"Skipping invalid code: {code}")
 
 if __name__ == "__main__":
     print("Prepare positive and negative samples...")
@@ -146,7 +151,6 @@ if __name__ == "__main__":
     client_id = os.getenv('CLIENT_ID')
     client_secret = os.getenv('CLIENT_SECRET')
     tenant_id = os.getenv('TENANT_ID')
-    # redirect_uri = 'https://login.microsoftonline.com/common/oauth2/nativeclient'
 
     # Get access token
     authority = f'https://login.microsoftonline.com/{tenant_id}'
@@ -163,10 +167,10 @@ if __name__ == "__main__":
     print("Preparing file_code_id ...")
     file_code_id = prepare_file_code_id()
 
-    print(len(pos_samples))
-    print(len(neg_samples))
-    print(len(set(pos_samples+neg_samples)))
-    print(len(file_code_id.keys()))
+    # print(len(pos_samples))
+    # print(len(neg_samples))
+    # print(len(set(pos_samples+neg_samples)))
+    # print(len(file_code_id.keys()))
 
     print("Extracting samples files and downloading...")
     sample_folder = '/Users/cynthia/Desktop/Capstone-CodeAnalysis/CodeAnalysis/sampleParkinsons'
