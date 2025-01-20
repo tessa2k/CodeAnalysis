@@ -168,6 +168,6 @@ if __name__ == "__main__":
     print(len(set(pos_samples+neg_samples)))
     print(len(file_code_id.keys()))
 
-    # print("Extracting samples files and downloading...")
-    # sample_folder = '/Users/cynthia/Desktop/Capstone-CodeAnalysis/CodeAnalysis/sample_Parkinsons'
-    # extract_samples(sample_folder, file_code_id, pos_samples, neg_samples)
+    print("Extracting samples files and downloading...")
+    sample_folder = '/Users/cynthia/Desktop/Capstone-CodeAnalysis/CodeAnalysis/sampleParkinsons'
+    extract_samples(sample_folder, file_code_id, pos_samples, neg_samples)
