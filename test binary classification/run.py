@@ -3,11 +3,9 @@ Binary Classification Test on Parkinson's
 '''
 import requests
 import pprint
-import time
 from tqdm import tqdm
 import json
 import pandas as pd
-import random
 
 # openAI API
 import os
