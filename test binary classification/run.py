@@ -10,6 +10,20 @@ import pandas as pd
 import random
 from prepare import api_request, sample_negative
 
+# openAI API
+import os
+from openai import OpenAI
+from dotenv import load_dotenv
+
+# file screening
+
+
+def run():
+    pass
+
+api_key = os.getenv('API_KEY')
+organization=os.getenv('ORGANIZATION')
+
 MODEL_IDS = "/api/v1/models"
 MODEL_ID_FILTER_HEADER = "/api/v1/models?model_concept="
 

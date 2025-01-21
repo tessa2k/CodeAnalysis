@@ -5,7 +5,6 @@ from tqdm import tqdm
 import json
 import pandas as pd
 
-
 # utils
 import os
 import tqdm
@@ -167,10 +166,16 @@ if __name__ == "__main__":
     print("Preparing file_code_id ...")
     file_code_id = prepare_file_code_id()
 
-    # print(len(pos_samples))
-    # print(len(neg_samples))
-    # print(len(set(pos_samples+neg_samples)))
-    # print(len(file_code_id.keys()))
+    # write file_code_id, labels into a DataFrame
+    # ground truth labels
+    labels = {i: 1 for i in pos_samples}
+    labels.update({i: 0 for i in neg_samples})
+    df = pd.DataFrame({
+        'code': labels.keys(),
+        'label': labels.values(),
+        'file_id': [file_code_id[str(code)] for code in labels.keys()]
+    })
+    df.to_csv('binary_labels_Parkinson.csv', index=False)
 
     print("Extracting samples files and downloading...")
     sample_folder = '/Users/cynthia/Desktop/Capstone-CodeAnalysis/CodeAnalysis/sampleParkinsons'
