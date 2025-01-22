@@ -161,14 +161,14 @@ if __name__ == "__main__":
     file_model_id = get_model_id(authorization_headers)
     print(f"Total number of files is {len(file_model_id)}")
     # download files
-    sample_folder = '/Users/tessakong/Desktop/CodeAnalysis/samples'
+    sample_folder = '/Users/mengmengdu/Desktop/CodeAnalysis/samples'
     file_code_list = shuffle(file_model_id)
-    dwn_files(sample_folder, file_model_id, authorization_headers, file_code_list)
+    dwn_files(sample_folder, file_model_id, authorization_headers, file_code_list,100)
 
     # file screening
     # ================================== Need to fill ====================================
-    json_file_path = "/Users/tessakong/Desktop/CodeAnalysis/manual_classifier_rules.json"
-    for code in file_code_list[:20]:
+    json_file_path = "/Users/mengmengdu/Desktop/CodeAnalysis/manual_classifier_rules.json"
+    for code in file_code_list[:100]:
         print(f'==============================Processing model {code}==============================')
         scores = get_score_metric(code, json_file_path, sample_folder)
         scores.sort(key = lambda x: x[0], reverse = True)
@@ -188,7 +188,7 @@ if __name__ == "__main__":
     unfiltered_output_file_folder=f'{sample_folder}/unfiltered_files'
     if os.path.exists(unfiltered_output_file_folder):
         shutil.rmtree(unfiltered_output_file_folder)
-    for code in file_code_list[:20]:
+    for code in file_code_list[:100]:
         print(f'==============================Processing model {code}==============================')
         list_of_all_files = []
         path = f'{sample_folder}/{code}'
