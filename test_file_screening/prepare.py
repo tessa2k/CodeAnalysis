@@ -14,6 +14,10 @@ import pprint
 import shutil
 from dotenv import load_dotenv
 
+# GLOBAL VARIABLES
+ACCEPTABLE_EXTENSIONS = ('.py', '.cpp', '.java', '.m', '.txt', '.h', '.data', 
+                            '.html', '.c', '.mod', '.g', '.p', ".ode", ".html")  # Adjust as needed
+
 def connect_onedrive():
     load_dotenv()
 
@@ -97,22 +101,19 @@ def get_score_metric(model_name, json_file_path, sample_folder):
     # Convert rules to a dictionary of regex patterns and replacements
     pattern_mapping = {re.compile(pattern): replacement for pattern, replacement in rules.items()}
     matched_files = []
-    # Define acceptable file extensions
-    acceptable_extensions = ('.py', '.cpp', '.java', '.m', '.txt', '.h', '.data', 
-                             '.html', '.c', '.mod', '.g', '.p', ".ode", ".html")  # Adjust as needed
 
-    traverse_folder(extract_folder, score_metric, acceptable_extensions, pattern_mapping)
+    traverse_folder(extract_folder, score_metric, pattern_mapping)
     return score_metric
 
-def traverse_folder(path, score_metric, acceptable_extensions, pattern_mapping):
+def traverse_folder(path, score_metric, pattern_mapping):
     for entry in os.listdir(path):
         full_path = os.path.join(path, entry)
         if os.path.isdir(full_path):
             print(f'Traverse folder: {full_path}')
-            traverse_folder(full_path, score_metric, acceptable_extensions, pattern_mapping)
+            traverse_folder(full_path, score_metric, pattern_mapping)
         else:
             # Check if the file extension is acceptable
-            if not entry.lower().endswith(acceptable_extensions):
+            if not entry.lower().endswith(ACCEPTABLE_EXTENSIONS):
                 continue  # Skip the file if the extension is not acceptable
             score = 0   
             with open(full_path, 'r', encoding='utf-8', errors='ignore') as f:
@@ -122,9 +123,28 @@ def traverse_folder(path, score_metric, acceptable_extensions, pattern_mapping):
                         score += 1
             score_metric.append((score, full_path))
 
-def concat_files(code, sample_folder, file_path_list, output_file_folder, topK):
+def traverse_folder_without_filter(path, file_list):
+    for entry in os.listdir(path):
+        full_path = os.path.join(path, entry)
+        if os.path.isdir(full_path):
+            print(f'Traverse folder: {full_path}')
+            traverse_folder_without_filter(full_path, file_list)
+        else:
+            if not entry.lower().endswith(ACCEPTABLE_EXTENSIONS):
+                continue
+            file_list.append(full_path)
+
+def concat_files(code, file_path_list, output_file_folder, topK):
+    # create output folder
     os.makedirs(output_file_folder, exist_ok=True)
-    output_file_path = f'{output_file_folder}/{code}_top{topK}.txt'
+    
+    # topK = 0 for unfiltered files
+    if topK == 0:
+        output_file_path = f'{output_file_folder}/{code}.txt'
+    else:
+        output_file_path = f'{output_file_folder}/{code}_top{topK}.txt'
+    
+    # concatenate files
     with open(output_file_path, 'w', encoding='utf-8') as output_file:
         for file_path in file_path_list:
             output_file.write(f'=== {file_path} ===\n')  # Write the file path
@@ -146,10 +166,10 @@ if __name__ == "__main__":
     dwn_files(sample_folder, file_model_id, authorization_headers, file_code_list)
 
     # file screening
+    # ================================== Need to fill ====================================
     json_file_path = "/Users/tessakong/Desktop/CodeAnalysis/manual_classifier_rules.json"
     for code in file_code_list[:20]:
         print(f'==============================Processing model {code}==============================')
-        file_id = file_model_id[code]
         scores = get_score_metric(code, json_file_path, sample_folder)
         scores.sort(key = lambda x: x[0], reverse = True)
         propotion = 0.5
@@ -159,8 +179,21 @@ if __name__ == "__main__":
             print(f"topK is 0 for model {code}, ignore")
             continue
         file_path_list = [s[1] for s in scores[:topK]]
-        screening_output_file_folder=f'{sample_folder}/match_file'
-        concat_files(code, sample_folder, file_path_list, screening_output_file_folder, topK)
+        filtered_output_file_folder=f'{sample_folder}/filtered_files'
+        concat_files(code, file_path_list, filtered_output_file_folder, topK)
+
+
+    
+    # without filter
+    unfiltered_output_file_folder=f'{sample_folder}/unfiltered_files'
+    if os.path.exists(unfiltered_output_file_folder):
+        shutil.rmtree(unfiltered_output_file_folder)
+    for code in file_code_list[:20]:
+        print(f'==============================Processing model {code}==============================')
+        list_of_all_files = []
+        path = f'{sample_folder}/{code}'
+        traverse_folder_without_filter(path, list_of_all_files)
+        concat_files(code, list_of_all_files, unfiltered_output_file_folder, 0)
 
 
 
