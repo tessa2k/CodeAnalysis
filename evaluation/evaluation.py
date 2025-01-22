@@ -1,5 +1,5 @@
 '''
-evaluate gpt generated metadata types
+evaluation module
 '''
 import json
 from pprint import pprint
