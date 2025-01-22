@@ -1,0 +1,70 @@
+{
+    "112547": {
+        "filter": "Oscillations, Calcium dynamics, Calcium waves",
+        "unfilter": "Calcium dynamics, Oscillations, Calcium waves"
+    },
+    "57910": {
+        "filter": "Spike Frequency Adaptation, Ion Channel Kinetics, Action Potentials, Epilepsy, Heart disease",
+        "unfilter": "Spike Frequency Adaptation, Ion Channel Kinetics, Detailed Neuronal Models, Action Potentials, Pathophysiology, Epilepsy, Long-QT."
+    },
+    "236310": {
+        "filter": "Ion Channel Kinetics, Calcium dynamics, Detailed Neuronal Models, Electrodiffusion.",
+        "unfilter": "Ion Channel Kinetics, Membrane Properties"
+    },
+    "232855": {
+        "filter": "Ion Channel Kinetics, Synchronization, Calcium dynamics, Circadian Rhythms, Connectivity matrix, Oscillations, Spatio-temporal Activity Patterns",
+        "unfilter": "Oscillations, Synchronization, Spatio-temporal Activity Patterns, Connectivity matrix, Calcium dynamics, Circadian Rhythms, Gamma oscillations."
+    },
+    "126098": {
+        "filter": "Signaling pathways, Reaction-diffusion, Synaptic Plasticity, Calcium dynamics, Intrinsic plasticity, G-protein coupled",
+        "unfilter": "Signaling pathways, Calcium dynamics, Synaptic Plasticity, Ion Channel Kinetics, G-protein coupled"
+    },
+    "260967": {
+        "filter": "Ion Channel Kinetics, Axonal Action Potentials, Action Potential Initiation, Detailed Neuronal Models, Temperature, Markov-type model",
+        "unfilter": "Ion Channel Kinetics, Axonal Action Potentials, Saltatory Conduction, Temperature, Detailed Neuronal Models"
+    },
+    "93390": {
+        "filter": "Free software, Patent, Redistribution",
+        "unfilter": "Detailed Neuronal Models, Ion Channel Kinetics, Parameter Fitting, Methods, Conductances estimation"
+    },
+    "54903": {
+        "filter": "Ion Channel Kinetics, Hodgkin-Huxley Model, Action Potentials, Temperature Sensitivity, Detailed Neuronal Models",
+        "unfilter": "Ion Channel Kinetics, Parameter Fitting, Detailed Neuronal Models"
+    },
+    "139418": {
+        "filter": "Calcium dynamics, Potassium buffering, Simplified Models, Calcium waves",
+        "unfilter": "Calcium dynamics, Potassium buffering, Sodium pump, Ion Channel Kinetics, Homeostasis, Electrodiffusion, Dynamic extracellular concentrations"
+    },
+    "93395": {
+        "filter": "Pattern Recognition, Activity Patterns, Synaptic Integration, Electrotonus, Connectivity matrix, Information transfer, Synaptic-input statistic, Conductance distributions.",
+        "unfilter": "Rate-coding model neurons, Sensory coding, Temporal Coding, Stochastic simulation, Pattern Recognition, Information transfer."
+    },
+    "115356": {
+        "filter": "Ion Channel Kinetics, Calcium dynamics, Spike Frequency Adaptation",
+        "unfilter": "Ion Channel Kinetics, Detailed Neuronal Models, Calcium dynamics, Temperature"
+    },
+    "154955": {
+        "filter": "Bursting, Ion Channel Kinetics, Calcium dynamics, Oscillations, Detailed Neuronal Models",
+        "unfilter": "Bursting, Ion Channel Kinetics, Calcium dynamics, Oscillations, Differential Equations, Pacemaking mechanism, Conductance distributions, Potassium buffering, Membrane Properties, Action Potentials"
+    },
+    "169208": {
+        "filter": "Saltatory conduction, Axonal Action Potentials, Conduction failure, Membrane Properties, Detailed Neuronal Models, Parameter Fitting, Synaptic Integration, Electrodiffusion.",
+        "unfilter": "Parameter Fitting, Conductance distributions, Detailed Neuronal Models, Connectivity matrix, Axonal Action Potentials"
+    },
+    "185014": {
+        "filter": "Oscillations, Synchronization, Short-term Synaptic Plasticity, Gamma oscillations, Beta oscillations, Connectivity matrix",
+        "unfilter": "Oscillations, Synchronization, Parameter Fitting, Simplified Models, Detailed Neuronal Models, Gamma oscillations, Beta oscillations, Temporal Pattern Generation, Sensory processing, Olfaction."
+    },
+    "116575": {
+        "filter": "Ion Channel Kinetics, Spike Initiation, Invertebrate, Detailed Neuronal Models",
+        "unfilter": "Ion Channel Kinetics, Rate-coding model neurons, Parameter Fitting, Simplified Models"
+    },
+    "66277": {
+        "filter": "Gamma oscillations, Sleep, Epilepsy, Oscillations, Spindles, Synchronization, Bursting, Detailed Neuronal Models, Brain Rhythms",
+        "unfilter": "Gamma oscillations, Spindles, Epilepsy, Oscillations, Synchronization"
+    },
+    "184167": {
+        "filter": "Action Potential Initiation, Detailed Neuronal Models, Ion Channel Kinetics, Action Potentials",
+        "unfilter": "Ion Channel Kinetics, Calcium dynamics, Detailed Neuronal Models, Synaptic Integration, Active Dendrites"
+    }
+}
