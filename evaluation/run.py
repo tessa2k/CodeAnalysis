@@ -58,14 +58,14 @@ if __name__ == "__main__":
 
     # modelconcepts
     print("Evaluate modelconcepts predictions...")
-    test_file_path = 'results/modelconcepts_filter_test.json'
+    test_file_path = 'results/modelconcepts_filter_test_1.json'
     result = run(metadata_file_path, test_file_path, "model_concept")
     pprint(result)
     print()
 
     # celltypes
     print("Evaluate celltypes predictions...")
-    test_file_path = 'results/celltype_filter_test.json'
+    test_file_path = 'results/celltype_filter_test_1.json'
     result = run(metadata_file_path, test_file_path, "neurons") 
     pprint(result)
 
