@@ -24,7 +24,7 @@ def run(para):
             file_content = file.read()
             file_content = file_content[:5000]
         prompt = (
-            f"You are a neuroscience expert specializing in ion channel and current analysis. "
+            f"You are a neuroscience expert. "
             f"Given the following content:\n\n{file_content}\n\n"
             f"Please identify whether this content contains relevant information about {topic}. "
             f"If the answer is yes, please answer Y; otherwise, answer N. DO NOT analyze."

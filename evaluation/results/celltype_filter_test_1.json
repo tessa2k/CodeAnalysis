@@ -1,0 +1,314 @@
+{
+    "151282": {
+        "filter": "Hippocampus CA3 pyramidal GLU cell, Hippocampus CA3 interneuron basket GABA cell, Hippocampus CA3 interneuron oriens alveus GABA cell, Hippocampus CA3 stratum oriens lacunosum-moleculare interneuron, Hippocampus CA3 axo-axonic cells, Pinsky-Rinzel CA1/3 pyramidal cell.",
+        "unfilter": "Hippocampus CA3 pyramidal GLU cell, Hippocampus CA3 interneuron basket GABA cell, Hippocampus CA3 interneuron oriens alveus GABA cell, Hippocampus CA3 axo-axonic cells"
+    },
+    "91983": {
+        "filter": "Pancreatic Beta Cell",
+        "unfilter": "Pancreatic Beta Cell"
+    },
+    "260015": {
+        "filter": "Neostriatum medium spiny direct pathway GABA cell, Thalamus reticular nucleus GABA cell, Neocortex L2/3 pyramidal GLU cell",
+        "unfilter": "Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell, Neocortex M1 L2/6 pyramidal intratelencephalic GLU cell, Neocortex M1 L6 pyramidal corticothalamic GLU cell, Neocortex M1 L5B pyramidal pyramidal tract GLU cell, Neocortex V1 interneuron basket PV GABA cell, Neocortex M1 interneuron basket PV GABA cell, Neocortex U1 interneuron basket PV GABA cell"
+    },
+    "184054": {
+        "filter": "Dentate gyrus granule GLU cell, Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell",
+        "unfilter": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell"
+    },
+    "236429": {
+        "filter": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell, Neocortex V1 L5B pyramidal pyramidal tract GLU cell",
+        "unfilter": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell"
+    },
+    "263988": {
+        "filter": "Myelinated neuron, Auditory nerve",
+        "unfilter": "Dentate gyrus granule GLU cell, Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell, Cerebellum Purkinje GABA cell, Spinal cord lumbar motor neuron alpha ACh cell, Neostriatum medium spiny direct pathway GABA cell, Locus ceruleus principal NE cell, Raphe nuclei principal 5HT cell"
+    },
+    "112547": {
+        "filter": "Astrocyte",
+        "unfilter": "Astrocyte"
+    },
+    "235774": {
+        "filter": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell",
+        "unfilter": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell, Neocortex M1 L2/6 pyramidal intratelencephalic GLU cell, Neocortex M1 L5B pyramidal pyramidal tract GLU cell, Neocortex M1 L6 pyramidal corticothalamic GLU cell, Neocortex V1 L5B pyramidal pyramidal tract GLU cell"
+    },
+    "57910": {
+        "filter": "Hodgkin-Huxley neuron",
+        "unfilter": "Hodgkin-Huxley neuron, Dorsal Root Ganglion (DRG) cell, Neuroblastoma"
+    },
+    "184181": {
+        "filter": "Hippocampus CA1 pyramidal GLU cell, Neocortex L5/6 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell",
+        "unfilter": "Neostriatum interneuron gaba/parvalbumin GABA cell, Neocortex V1 interneuron basket PV GABA cell, Neocortex fast spiking (FS) interneuron"
+    },
+    "151460": {
+        "filter": "Dentate gyrus granule GLU cell, Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell, Piriform cortex anterior pyramidal layer II GLU cell, Piriform cortex posterior pyramidal layer II GLU cell",
+        "unfilter": "Subthalamic nucleus principal GABA cell, Subthalamus nucleus projection neuron"
+    },
+    "185021": {
+        "filter": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell",
+        "unfilter": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell"
+    },
+    "185862": {
+        "filter": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Olfactory bulb main mitral GLU cell",
+        "unfilter": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Squid axon, Neocortex layer 5 pyramidal cell"
+    },
+    "236310": {
+        "filter": "Nucleus accumbens spiny projection neuron",
+        "unfilter": "Neostriatum medium spiny direct pathway GABA cell, Nucleus accumbens spiny projection neuron, Neostriatum medium spiny indirect pathway GABA cell"
+    },
+    "232855": {
+        "filter": "Suprachiasmatic nucleus (SCN) neuron, Retina ganglion GLU cell",
+        "unfilter": "Suprachiasmatic nucleus (SCN) neuron, Retina ganglion GLU cell"
+    },
+    "153196": {
+        "filter": "Neocortex L5/6 pyramidal GLU cell, Neocortex U1 L5B pyramidal pyramidal tract GLU cell, Neocortex M1 L5B pyramidal pyramidal tract GLU cell, Neocortex V1 L5B pyramidal pyramidal tract GLU cell",
+        "unfilter": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell"
+    },
+    "261483": {
+        "filter": "Dentate gyrus granule GLU cell, Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell, Hippocampus CA1 interneuron oriens alveus GABA cell, Hippocampus CA3 interneuron oriens alveus GABA cell, Hippocampus CA3 interneuron basket GABA cell, Hippocampus CA1 interneuron basket GABA cell, Neocortex V1 L5B pyramidal pyramidal tract GLU cell.",
+        "unfilter": "Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell, Retina ganglion GLU cell, Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell"
+    },
+    "144007": {
+        "filter": "Locust Lobula Giant Movement Detector (LGMD) neuron",
+        "unfilter": "Locust Lobula Giant Movement Detector (LGMD) neuron"
+    },
+    "185300": {
+        "filter": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell",
+        "unfilter": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell, Neocortex M1 L5B pyramidal pyramidal tract GLU cell, Neocortex M1 L2/6 pyramidal intratelencephalic GLU cell, Neocortex spiny stellate cell, Neocortex primary motor area pyramidal layer 5 corticospinal cell, Neocortex layer 5 pyramidal cell"
+    },
+    "264519": {
+        "filter": "Hodgkin-Huxley neuron, Abstract Wang-Buzsaki neuron, Abstract Izhikevich neuron, Abstract Morris-Lecar neuron, Abstract integrate-and-fire leaky neuron, Abstract integrate-and-fire adaptive exponential (AdEx) neuron, Abstract theta neuron, Abstract integrate-and-fire fractional leaky neuron, Abstract single compartment conductance based cell, Abstract integrate-and-fire leaky neuron with dendritic subunits, Abstract Rulkov-Bazhenov map neurons, Abstract integrate-and-fire leaky neuron with exponential post-synaptic current, Abstract quadratic integrate-and-fire, Abstract rate-based neuron",
+        "unfilter": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell"
+    },
+    "126098": {
+        "filter": "Neostriatum medium spiny direct pathway GABA cell, Neostriatum medium spiny indirect pathway GABA cell",
+        "unfilter": "Neostriatum medium spiny direct pathway GABA cell, Neostriatum medium spiny indirect pathway GABA cell"
+    },
+    "125154": {
+        "filter": "NG108-15 neuronal cell, Hodgkin-Huxley neuron",
+        "unfilter": "Hodgkin-Huxley neuron, NG108-15 neuronal cell"
+    },
+    "137846": {
+        "filter": "Neostriatum medium spiny direct pathway GABA cell, Neostriatum medium spiny indirect pathway GABA cell, Substantia nigra pars compacta DA cell",
+        "unfilter": "Neostriatum medium spiny direct pathway GABA cell, Neostriatum medium spiny indirect pathway GABA cell, Subthalamic nucleus projection neuron, Globus pallidus principal GABA cell, Substantia nigra pars compacta DA cell, Substantia nigra pars reticulata principal GABA cell, Striatal projection neuron."
+    },
+    "238892": {
+        "filter": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell, Neocortex spiking regular (RS) neuron, Neocortex fast spiking (FS) interneuron",
+        "unfilter": "Hodgkin-Huxley neuron"
+    },
+    "2015421": {
+        "filter": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell.",
+        "unfilter": "Hippocampus CA1 pyramidal GLU cell, Hipica mpus CA3 pyramidal GLU cell, Dentate gyrus granule GLU cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell"
+    },
+    "245417": {
+        "filter": "Dentate gyrus granule GLU cell, Dentate gyrus mossy cell, Hippocampus CA3 pyramidal GLU cell",
+        "unfilter": "Dentate gyrus granule GLU cell, Dentate gyrus mossy cell"
+    },
+    "260967": {
+        "filter": "Dentate gyrus granule GLU cell",
+        "unfilter": "Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell, Myelinated neuron"
+    },
+    "93390": {
+        "filter": "Dentate gyrus granule GLU cell, Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Neostriatum medium spiny direct pathway GABA cell, Substantia nigra pars compacta DA cell, Thalamus geniculate nucleus/lateral principal GLU cell, Thalamus reticular nucleus GABA cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell, Olfactory bulb main mitral GLU cell, Piriform cortex anterior pyramidal layer II GLU cell, Cerebellum Purkinje GABA cell, Spinal cord lumbar motor neuron alpha ACh cell, Cochlear nucleus octopus GLU cell, Neocortex M1 L2/6 pyramidal intratelencephalic GLU cell",
+        "unfilter": "Hodgkin-Huxley neuron, Neocortex pyramidal cell, Neocortex layer 5 pyramidal cell, Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell"
+    },
+    "266989": {
+        "filter": "Thalamus geniculate nucleus/lateral principal GLU cell, Thalamus reticular nucleus GABA cell",
+        "unfilter": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Thalamus geniculate nucleus/lateral principal GLU cell"
+    },
+    "59582": {
+        "filter": "Neocortex L2/3 pyramidal GLU cell, Neocortex L5/6 pyramidal GLU cell, Cerebellum Purkinje GABA cell",
+        "unfilter": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell"
+    },
+    "184149": {
+        "filter": "Hippocampus CA1 pyramidal GLU cell, Hodgkin-Huxley neuron",
+        "unfilter": "Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell, Neocortex V1 L5B pyramidal pyramidal tract GLU cell, Neocortex M1 L2/6 pyramidal intratelencephalic GLU cell, Neocortex M1 L6 pyramidal corticothalamic GLU cell, Neocortex M1 L5B pyramidal pyramidal tract GLU cell, Neocortex U1 L5B pyramidal pyramidal tract GLU cell, Neocortex U1 L2/6 pyramidal intratelencephalic GLU cell, Neocortex U1 L6 pyramidal corticalthalamic GLU cell"
+    },
+    "87581": {
+        "filter": "Myenteric interstitial cell of Cajal (ICCMY)",
+        "unfilter": "Myenteric interstitial cell of Cajal (ICCMY), Intramuscular interstitial cell of Cajal (ICCIM)"
+    },
+    "262422": {
+        "filter": "Hodgkin-Huxley neuron",
+        "unfilter": "Hodgkin-Huxley neuron"
+    },
+    "128816": {
+        "filter": "Brainstem neuron",
+        "unfilter": "Neostriatum medium spiny direct pathway GABA cell, Neostriatum medium spiny indirect pathway GABA cell, Neocortex U1 L5B pyramidal pyramidal tract GLU cell, Subthalamic nucleus principal GABA cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell"
+    },
+    "184330": {
+        "filter": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Hippocampus CA1 interneuron oriens alveus GABA cell, Hippocampus CA1 stratum radiatum interneuron, Hippocampus CA3 stratum oriens lacunosum-moleculare interneuron, Hippocampus septum medial GABAergic neuron, Hippocampus CA3 axo-axonic cells, Hippocampus CA1 stratum oriens lacunosum-moleculare interneuron, Hippocampus CA1 PV+ fast-firing interneuron, Hippocampus CA1 basket cell - CCK/VIP, Hippocampus CA1 stratum radiatum lacunosum-moleculare interneuron",
+        "unfilter": "Dentate gyrus granule GLU cell, Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell, Olfactory bulb main mitral GLU cell, Cerebellum Purkinje GABA cell, Neocortex fast spiking (FS) interneuron"
+    },
+    "244384": {
+        "filter": "Substantia nigra pars compacta DA cell, Subthalamus nucleus projection neuron, Globus pallidus principal GABA cell",
+        "unfilter": "Substantia nigra pars compacta DA cell, Globus pallidus principal GABA cell, Subthalamic nucleus principal GABA cell, Dopaminergic substantia nigra neuron."
+    },
+    "112834": {
+        "filter": "Nucleus accumbens spiny projection neuron, Neostriatum medium spiny direct pathway GABA cell",
+        "unfilter": "Neostriatum medium spiny direct pathway GABA cell, Nucleus accumbens spiny projection neuron, Striatal projection neuron"
+    },
+    "71317": {
+        "filter": "Spinal cord lumbar motor neuron alpha ACh cell, Spinal cord motor neuron slow twitch, Spinal cord motor neuron fatigue resistant, Spinal cord motor neuron fast fatiguing",
+        "unfilter": "Spinal cord lumbar motor neuron alpha ACh cell"
+    },
+    "151457": {
+        "filter": "Dentate gyrus granule GLU cell, Dentate gyrus mossy cell, Dentate gyrus basket cell, Dentate gyrus hilar cell, Dentate gyrus MOPP cell, Dentate gyrus HIPP cell",
+        "unfilter": "Dentate gyrus granule GLU cell, Dentate gyrus basket cell, Dentate gyrus mossy cell, Dentate gyrus hilar cell"
+    },
+    "126466": {
+        "filter": "Neocortex spiking regular (RS) neuron, Neocortex spiking low threshold (LTS) neuron, Neocortex fast spiking (FS) interneuron",
+        "unfilter": "Neocortex L5/6 pyramidal GLU cell, Neocortex spiking regular (RS) neuron, Neocortex spiking low threshold (LTS) neuron, Neocortex fast spiking (FS) interneuron"
+    },
+    "245411": {
+        "filter": "Neostriatum medium spiny direct pathway GABA cell, Neostriatum medium spiny indirect pathway GABA cell",
+        "unfilter": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Dentate gyrus granule GLU cell"
+    },
+    "184158": {
+        "filter": "Hippocampus CA3 pyramidal GLU cell, Hippocampus CA1 interneuron basket GABA cell",
+        "unfilter": "Neocortex spiking regular (RS) neuron, Neocortex layer 5 pyramidal cell, Neocortex L5/6 pyramidal GLU cell"
+    },
+    "266814": {
+        "filter": "Substantia nigra pars compacta DA cell, Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell",
+        "unfilter": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell"
+    },
+    "54903": {
+        "filter": "Hodgkin-Huxley neuron, Squid axon, Neocortex layer 5 pyramidal cell, Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell",
+        "unfilter": "Hodgkin-Huxley neuron, Squid axon, Neocortex layer 5 pyramidal cell, Neocortex layer 2-3 interneuron, Neocortex fast spiking (FS) interneuron"
+    },
+    "184179": {
+        "filter": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell",
+        "unfilter": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell, Cerebellum Purkinje GABA cell, Dentate gyrus granule GLU cell"
+    },
+    "2937": {
+        "filter": "Hippocampus CA1 pyramidal GLU cell",
+        "unfilter": "Hippocampus CA1 pyramidal GLU cell"
+    },
+    "139760": {
+        "filter": "Abstract Izhikevich neuron, Hodgkin-Huxley neuron, Squid axon, Cardiac ventricular cell, Heart cell",
+        "unfilter": "Leech heart motor neuron (HE), Skeletal muscle cell, Abstract Izhikevich neuron, Leech heart interneuron"
+    },
+    "244684": {
+        "filter": "Dentate gyrus granule GLU cell, Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell, Neocortex L5/6 pyramidal GLU cell",
+        "unfilter": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell"
+    },
+    "139418": {
+        "filter": "Thalamus geniculate nucleus/lateral principal GLU cell, Thalamus reticular nucleus GABA cell, Thalamus DLM projection neuron, Hippocampus CA1 pyramidal GLU cell",
+        "unfilter": "Dentate gyrus granule GLU cell, Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Thalamus geniculate nucleus/lateral principal GLU cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell, Hippocampus CA1 interneuron oriens alveus GABA cell, Hippocampus CA1 stratum radiatum interneuron, Hippocampus CA3 stratum oriens lacunosum-moleculare interneuron, Hippocampus CA3 axo-axonic cells, Dorsal Root Ganglion cell: Spinal cord muscle spindle type Ia sensory fiber, Dorsal Root Ganglion cell: Spinal cord muscle spindle type II sensory fiber"
+    },
+    "93395": {
+        "filter": "Dentate gyrus granule GLU cell, Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Thalamus geniculate nucleus/lateral principal GLU cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell, Olfactory bulb main mitral GLU cell, Retina ganglion GLU cell, Substantia nigra pars compacta DA cell",
+        "unfilter": "Hippocampus CA1 pyramidal GLU cell, Neocortex L5/6 pyramidal GLU cell, Retina ganglion GLU cell, Neocortex V1 interneuron basket PV GABA cell, Spleen muscle cell."
+    },
+    "115356": {
+        "filter": "Dentate gyrus granule GLU cell, Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell",
+        "unfilter": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell"
+    },
+    "20015": {
+        "filter": "Hippocampus CA1 interneuron oriens alveus GABA cell, Hippocampus CA3 interneuron basket GABA cell, Hippocampus CA1 interneuron basket GABA cell, Dentate gyrus basket cell",
+        "unfilter": "Hippocampus CA1 interneuron oriens alveus GABA cell, Hippocampus CA1 interneuron basket GABA cell, Hippocampus CA3 interneuron basket GABA cell, Hippocampus CA3 interneuron oriens alveus GABA cell"
+    },
+    "3670": {
+        "filter": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Thalamus reticular nucleus GABA cell",
+        "unfilter": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell"
+    },
+    "168866": {
+        "filter": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell, Neocortex M1 L5B pyramidal pyramidal tract GLU cell, Reticulospinal neuron, Neocortex M1 L2/6 pyramidal intratelencephalic GLU cell, Neocortex M1 L6 pyramidal corticothalamic GLU cell, Neocortex V1 L5B pyramidal pyramidal tract GLU cell, Neocortex V1 L4 stellate GLU cell",
+        "unfilter": "Dentate gyrus granule GLU cell, Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell, Olfactory bulb main mitral GLU cell, Cerebellum Purkinje GABA cell, Neostriatum medium spiny direct pathway GABA cell, Thalamus geniculate nucleus/lateral principal GLU cell"
+    },
+    "266577": {
+        "filter": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell, Neocortex V1 interneuron basket PV GABA cell, Hippocampus CA1 interneuron oriens alveus GABA cell, Hippocampus CA3 interneuron basket GABA cell, Neocortex M1 interneuron basket PV GABA cell",
+        "unfilter": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Dentate gyrus granule GLU cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell"
+    },
+    "266871": {
+        "filter": "Cochlea hair inner GLU cell, Auditory nerve",
+        "unfilter": "Dentate gyrus granule GLU cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell, Cochlea hair inner GLU cell, Cochlear nucleus bushy GLU cell, Cochlear nucleus octopus GLU cell"
+    },
+    "184315": {
+        "filter": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Hippocampus CA1 interneuron oriens alveus GABA cell, Hippocampus CA1 interneuron basket GABA cell, Hippocampus CA3 interneuron basket GABA cell, Hippocampus CA3 stratum oriens lacunosum-moleculare interneuron, Hippocampus CA1 stratum omanior radiatum interneuron, Hippocampus CA3 axo-axonic cells, Hippocampus CA1 basket cell - CCK/VIP",
+        "unfilter": "Neocortex L2/3 pyramidal GLU cell, Neocortex L5/6 pyramidal GLU cell, Neocortex M1 L2/6 pyramidal intratelencephalic GLU cell, Neocortex M1 L5B pyramidal pyramidal tract GLU cell, Neocortex M1 L6 pyramidal corticothalamic GLU cell, Neocortex U1 L2/6 pyramidal intratelencephalic GLU cell, Neocortex U1 L5B pyramidal pyramidal tract GLU cell, Neocortex U1 L6 pyramidal corticalthalamic GLU cell"
+    },
+    "154955": {
+        "filter": "Pituitary cell",
+        "unfilter": "Pituitary cell"
+    },
+    "120835": {
+        "filter": "Cardiac ventricular cell",
+        "unfilter": "Cardiac ventricular cell, Heart cell"
+    },
+    "128449": {
+        "filter": "Locust Lobula Giant Movement Detector (LGMD) neuron",
+        "unfilter": "Locust Lobula Giant Movement Detector (LGMD) neuron"
+    },
+    "65218": {
+        "filter": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell",
+        "unfilter": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell"
+    },
+    "140789": {
+        "filter": "Dentate gyrus basket cell",
+        "unfilter": "Dentate gyrus basket cell"
+    },
+    "125529": {
+        "filter": "Respiratory column neuron, PreBotzinger complex neuron",
+        "unfilter": "PreBotzinger complex neuron"
+    },
+    "263711": {
+        "filter": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell, Olfactory bulb main mitral GLU cell",
+        "unfilter": "Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell, Neocortex V1 interneuron basket PV GABA cell, Neocortex M1 L2/6 pyramidal intratelencephalic GLU cell, Neocortex M1 L6 pyramidal corticothalamic GLU cell, Neocortex M1 L5B pyramidal pyramidal tract GLU cell, Neocortex V1 L5B pyramidal pyramidal tract GLU cell, Neocortex V1 L4 stellate GLU cell, Neocortex M1 L4 stellate GLU cell, Neocortex U1 L4 stellate GLU cell, Neocortex deep neurogliaform interneuron, Neocortex superficial neurogliaform interneuron, Neocortex primary motor area pyramidal layer 5 corticospinal cell, Dentate gyrus granule GLU cell, Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell"
+    },
+    "169208": {
+        "filter": "Myelinated neuron, Squid axon, Hodgkin-Huxley neuron",
+        "unfilter": "Myelinated neuron"
+    },
+    "2016601": {
+        "filter": "Thalamus geniculate nucleus/lateral principal GLU cell, Thalamus reticular nucleus GABA cell",
+        "unfilter": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA1 interneuron basket GABA cell"
+    },
+    "185014": {
+        "filter": "Olfactory bulb main mitral GLU cell, Olfactory bulb main interneuron granule MC GABA cell",
+        "unfilter": "Olfactory bulb main mitral GLU cell, Olfactory bulb main interneuron granule MC GABA cell, Olfactory bulb main interneuron granule TC GABA cell."
+    },
+    "141063": {
+        "filter": "Dorsal Root Ganglion (DRG) cell: cold sensing",
+        "unfilter": "Dorsal Root Ganglion cell: cold sensing, Neuroblastoma, Dorsal Root Ganglion (DRG) cell"
+    },
+    "116575": {
+        "filter": "Leech pressure (P) mechanosensory neuron, Leech heart interneuron, Leech T segmental sensory neuron, Leech S cell, Leech C interneuron, Leech Retzius neuron, Leech heart motor neuron (HE)",
+        "unfilter": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Squid axon, Hodgkin-Huxley neuron"
+    },
+    "256388": {
+        "filter": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Hippocampus CA1 interneuron oriens alveus GABA cell, Hippocampus CA1 stratum radiatum interneuron, Hippocampus CA3 stratum oriens lacunosum-moleculare interneuron, Hippocampus CA3 stratum radiatum lacunosum-moleculare interneuron, Dentate gyrus granule GLU cell",
+        "unfilter": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell, Dentate gyrus granule GLU cell, Neocortex layer 5 pyramidal cell, Neocortex primary motor area pyramidal layer 5 corticospinal cell"
+    },
+    "38235": {
+        "filter": "Neocortex L2/3 pyramidal GLU cell, Neocortex L5/6 pyramidal GLU cell, Cochlear nucleus pyramidal/fusiform GLU cell",
+        "unfilter": "Cochlear nucleus bushy GLU cell, Medial Nucleus of the Trapezoid Body (MNTB) neuron"
+    },
+    "66277": {
+        "filter": "Thalamus geniculate nucleus/lateral principal GLU cell, Thalamus reticular nucleus GABA cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell",
+        "unfilter": "Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell, Thalamus geniculate nucleus/lateral principal GLU cell, Thalamus reticular nucleus GABA cell"
+    },
+    "261623": {
+        "filter": "Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell",
+        "unfilter": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell, Neocortex V1 interneuron basket PV GABA cell"
+    },
+    "51781": {
+        "filter": "Dentate gyrus granule GLU cell, Dentate gyrus basket cell, Dentate gyrus mossy cell, Dentate gyrus hilar cell",
+        "unfilter": "Dentate gyrus granule GLU cell, Dentate gyrus basket cell, Dentate gyrus mossy cell, Dentate gyrus hilar cell"
+    },
+    "2014999": {
+        "filter": "Cardiac ventricular cell, Cardiac atrial cell, Heart cell",
+        "unfilter": "Spinal cord sympathetic preganglionic neuron, CN stellate cell"
+    },
+    "184167": {
+        "filter": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell, Neocortex U1 L5B pyramidal pyramidal tract GLU cell, Neocortex U1 L2/6 pyramidal intratelencephalic GLU cell, Neocortex U1 L6 pyramidal corticalthalamic GLU cell, Neocortex M1 L2/6 pyramidal intratelencephalic GLU cell, Neocortex M1 L6 pyramidal corticothalamic GLU cell, Neocortex M1 L5B pyramidal pyramidal tract GLU cell, Neocortex V1 L5B pyramidal pyramidal tract GLU cell, Hippocampus CA4 pyramidal GLU cell, Dentate gyrus granule GLU cell",
+        "unfilter": "Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell, Neocortex V1 interneuron basket PV GABA cell, Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Neocortex V1 L5B pyramidal pyramidal tract GLU cell, Neocortex M1 L5B pyramidal pyramidal tract GLU cell, Neocortex M1 L2/6 pyramidal intratelencephalic GLU cell"
+    },
+    "137263": {
+        "filter": "Hodgkin-Huxley neuron, Dorsal Root Ganglion (DRG) cell, Urinary Bladder small-diameter DRG neuron",
+        "unfilter": "Hodgkin-Huxley neuron, Dorsal Root Ganglion (DRG) cell"
+    },
+    "126776": {
+        "filter": "Hippocampus CA1 pyramidal GLU cell",
+        "unfilter": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA1 interneuron oriens alveus GABA cell, Hippocampus CA1 basket cell"
+    }
+}
