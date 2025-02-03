@@ -125,12 +125,19 @@ def extract_samples(sample_folder, file_code_id, pos_samples, neg_samples):
             print(f"Skipping invalid code: {code}")
 
 if __name__ == "__main__":
+    '''
+    To change model concept for experiments, change variables:
+    - CONCEPT_NAME = "Aging/Alzheimer`s"
+    - sample_folder: model output folder directory
+    - df.to_csv('binary_labels_{new_concept_name}.csv', index=False)
+    '''
     print("Prepare positive and negative samples...")
     MODEL_IDS = "/api/v1/models"
     MODEL_ID_FILTER_HEADER = "/api/v1/models?model_concept="
 
     # the concept name to be classified
-    CONCEPT_NAME = "Parkinson's"
+    # CONCEPT_NAME = "Parkinson's"
+    CONCEPT_NAME = "Aging/Alzheimer`s"
     MODEL_ID_FILTER_URL = MODEL_ID_FILTER_HEADER + CONCEPT_NAME
 
     pos_samples= api_request(MODEL_ID_FILTER_URL)
@@ -175,8 +182,10 @@ if __name__ == "__main__":
         'label': labels.values(),
         'file_id': [file_code_id[str(code)] for code in labels.keys()]
     })
-    df.to_csv('binary_labels_Parkinson.csv', index=False)
+    # df.to_csv('binary_labels_Parkinson.csv', index=False)
+    df.to_csv('binary_labels_Alzheimer.csv', index=False)
 
     print("Extracting samples files and downloading...")
-    sample_folder = '/Users/cynthia/Desktop/Capstone-CodeAnalysis/CodeAnalysis/sampleParkinsons'
+    # sample_folder = '/Users/cynthia/Desktop/Capstone-CodeAnalysis/CodeAnalysis/sampleParkinsons'
+    sample_folder = '/Users/cynthia/Desktop/Capstone-CodeAnalysis/CodeAnalysis/sampleAlzheimer'
     extract_samples(sample_folder, file_code_id, pos_samples, neg_samples)

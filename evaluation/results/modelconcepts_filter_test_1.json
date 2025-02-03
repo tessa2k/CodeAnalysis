@@ -1,0 +1,314 @@
+{
+    "151282": {
+        "filter": "Pattern Recognition, Temporal Pattern Generation, Parameter Fitting, Methods, Data Analysis",
+        "unfilter": "Pattern Recognition, Activity Patterns, Parameter Fitting, Methods, Temporal Coding, Information transfer, Synaptic-input statistic"
+    },
+    "91983": {
+        "filter": "Calcium dynamics, Ion Channel Kinetics, Oscillations, Signaling pathways, Calcium waves",
+        "unfilter": "Ion Channel Kinetics, Calcium dynamics, Oscillations, Calcium waves, G-protein coupled, Synaptic Integration, Conductance distributions, Bifurcation, Neuromodulation, Neurotransmitter dynamics, Synaptic Amplification, Pacemaking mechanism."
+    },
+    "260015": {
+        "filter": "G-protein coupled, Neurotransmitter dynamics, Synaptic Integration, Ion Channel Kinetics, Synaptic Plasticity, Long-term Synaptic Plasticity",
+        "unfilter": "Activity Patterns, Spatio-temporal Activity Patterns, Detailed Neuronal Models, Synaptic Integration, Synchronization"
+    },
+    "184054": {
+        "filter": "Synaptic Plasticity, Calcium dynamics, Ion Channel Kinetics, Synaptic Integration, Long-term Synaptic Plasticity",
+        "unfilter": "Ion Channel Kinetics, Calcium dynamics, Synaptic Integration, Synaptic Plasticity, Long-term Synaptic Plasticity, Active Dendrites, Detailed Neuronal Models."
+    },
+    "236429": {
+        "filter": "Dendritic Action Potentials, Influence of Dendritic Geometry, Detailed Neuronal Models, Synaptic Integration, Active Dendrites, Spatio-temporal Activity Patterns, Spatial connectivity, Membrane Properties",
+        "unfilter": "Dendritic Action Potentials, Active Dendrites, Influence of Dendritic Geometry, Detailed Neuronal Models, Synaptic Integration, Spatio-temporal Activity Patterns, Connectivity matrix, Membrane Properties, Spatial Navigation"
+    },
+    "263988": {
+        "filter": "Axonal Action Potentials, Connectivity matrix, Fascicles, Neurite growth",
+        "unfilter": "Parameter Fitting, Linear regression, Polynomial regression, Data processing, Matrix operations, Symmetric matrix, Data analysis, Error handling, Tools for lists and dictionaries."
+    },
+    "112547": {
+        "filter": "Oscillations, Calcium dynamics, Calcium waves, Mathematical model, Spontaneous activity",
+        "unfilter": "Oscillations, Calcium dynamics, Calcium waves"
+    },
+    "235774": {
+        "filter": "Spreading depolarization, Ion Channel Kinetics, Chloride regulation, Homeostasis, Potassium buffering, Cellular volume dynamics, Neurotransmitter dynamics, Electrodiffusion, Reaction-diffusion, Dynamic extracellular concentrations",
+        "unfilter": "Spreading depolarization, Homeostasis, Ion Channel Kinetics, Neurotransmitter dynamics, Reaction-diffusion"
+    },
+    "57910": {
+        "filter": "Spike Frequency Adaptation, Ion Channel Kinetics, Pathophysiology, Epilepsy, Heart disease",
+        "unfilter": "Ion Channel Kinetics, Spike Frequency Adaptation, Action Potentials, Pathophysiology, Heart disease, Epilepsy"
+    },
+    "184181": {
+        "filter": "Ion Channel Kinetics, Detailed Neuronal Models, Synaptic Plasticity, Action Potentials",
+        "unfilter": "Ion Channel Kinetics, Detailed Neuronal Models, Calcium dynamics, Membrane Properties"
+    },
+    "151460": {
+        "filter": "Synaptic Integration, Ion Channel Kinetics, Synaptic Plasticity, Parameter Fitting, Neurotransmitter dynamics, Simplified Models",
+        "unfilter": "Ion Channel Kinetics, Calcium dynamics, Temperature, Detailed Neuronal Models"
+    },
+    "185021": {
+        "filter": "Activity Patterns, Oscillations, Synchronization, Spike Frequency Adaptation, Synaptic Integration, Membrane Properties, Excitability, Balanced networks",
+        "unfilter": "Bursting, Synchronization, Spike Frequency Adaptation, Intrinsic plasticity, Network Model, Oscillations"
+    },
+    "185862": {
+        "filter": "Simplified Models, Synaptic Plasticity, Long-term Synaptic Plasticity, Ion Channel Kinetics, Parameter Fitting, Neurotransmitter dynamics, Synaptic Integration.",
+        "unfilter": "Axonal Action Potentials, Action Potentials, Spatio-temporal Activity Patterns, Neurite Growth"
+    },
+    "236310": {
+        "filter": "Ion Channel Kinetics, Calcium dynamics, Detailed Neuronal Models",
+        "unfilter": "Ion Channel Kinetics, Membrane Properties, Conductances estimation"
+    },
+    "232855": {
+        "filter": "Ion Channel Kinetics, Calcium dynamics, Oscillations, Synchronization, Connectivity matrix, Circadian Rhythms",
+        "unfilter": "Circadian Rhythms, Synchronization, Spatio-temporal Activity Patterns, Connectivity matrix, Calcium dynamics, Ion Channel Kinetics, Temporal Pattern Generation, Activity Patterns"
+    },
+    "153196": {
+        "filter": "Action Potentials, Axonal Action Potentials, Detailed Neuronal Models, Ion Channel Kinetics, Parameter Fitting, Synaptic Integration",
+        "unfilter": "Influence of Dendritic Geometry, Synaptic Integration, Detailed Neuronal Models, Spatio-temporal Activity Patterns, Rotation and Translation of Neuronal Structures, Coordinate Transformations."
+    },
+    "261483": {
+        "filter": "Active Efficient Coding, Sensory processing, Synaptic noise, Synaptic Integration, Parameter Fitting, Simplified Models, Pattern Recognition, Spatio-temporal Activity Patterns",
+        "unfilter": "Pattern Recognition, Sensory processing, Disparity estimation, Vision, Feature selectivity"
+    },
+    "144007": {
+        "filter": "Action Potential Initiation, Ion Channel Kinetics, Active Dendrites, Detailed Neuronal Models, Synaptic Integration, Spike Frequency Adaptation, Conductance distributions, Calcium dynamics.",
+        "unfilter": "Ion Channel Kinetics, Detailed Neuronal Models, Parameter Fitting, Synaptic Integration, Calcium dynamics, Motion Detection, Sensory processing"
+    },
+    "185300": {
+        "filter": "Signaling pathways, Parameter Fitting, Detailed Neuronal Models, Synaptic Integration",
+        "unfilter": "Parameter Fitting, Simplified Models, Detailed Neuronal Models, Activity Patterns, Temporal Pattern Generation"
+    },
+    "264519": {
+        "filter": "Ion Channel Kinetics, Simplified Models, Sleep, Calcium dynamics, Synchronization, Pattern Recognition, Oscillations, Temporal Pattern Generation, Activity Patterns, Parameter Fitting, Synaptic Integration, Memory, Neurotransmitter dynamics.",
+        "unfilter": "Ion Channel Kinetics, Calcium dynamics, Membrane Properties, Sleep-Wake transition, Synaptic Integration"
+    },
+    "126098": {
+        "filter": "Signaling pathways, Reaction-diffusion, Calcium dynamics, Synaptic plasticity, Long-term Synaptic Plasticity, Intracellular dynamics, Neurotransmitter dynamics",
+        "unfilter": "Calcium dynamics, Signaling pathways, Synaptic Plasticity, G-protein coupled, Intrinsic plasticity, Calcium waves"
+    },
+    "125154": {
+        "filter": "Ion Channel Kinetics, Action Potentials, Epilepsy, Stochastic simulation, Therapeutics, Membrane Properties, Depolarization block, Simulation Studies",
+        "unfilter": "Ion Channel Kinetics, Action Potentials, Epilepsy, Persistent activity, Depolarization block, Synaptic Integration, Detailed Neuronal Models, Therapeutics"
+    },
+    "137846": {
+        "filter": "Ion Channel Kinetics, Temperature, Detailed Neuronal Models",
+        "unfilter": "Synaptic Integration, Temporal Coding, Spike Frequency Adaptation, Synchronization, Synaptic Amplification, Synaptic-input statistic"
+    },
+    "238892": {
+        "filter": "Spreading depression, Reaction-diffusion, Extracellular Fields, Potassium buffering, Anoxic depolarization, Cellular volume dynamics, Pathophysiology, Sodium pump, Synaptic noise.",
+        "unfilter": "Reaction-diffusion, Electrodiffusion, Dynamic extracellular concentrations"
+    },
+    "2015421": {
+        "filter": "Homeostasis, Synaptic Plasticity, Short-term Synaptic Plasticity, Long-term Synaptic Plasticity, Spike Frequency Adaptation, STDP, Calcium dynamics, Connectivity matrix, Synaptic noise, Langevin process, Excitability, Structural plasticity, Homeostatic plasticity, Balanced networks.",
+        "unfilter": "Homeostasis, Activity Patterns, Synaptic Integration, Temporal Pattern Generation, Spatio-temporal Activity Patterns, Synaptic noise, Connectivity matrix, Sensory processing, Balanced networks, Pattern Recognition."
+    },
+    "245417": {
+        "filter": "Ion Channel Kinetics, Axonal Action Potentials, Calcium dynamics, Parameter Fitting, Synaptic Integration",
+        "unfilter": "Ion Channel Kinetics, Calcium dynamics, Detailed Neuronal Models, Parameter Fitting, Membrane Properties, Synaptic Integration, Conductance distributions, Temperature"
+    },
+    "260967": {
+        "filter": "Ion Channel Kinetics, Axonal Action Potentials, Action Potentials, Temperature, Markov-type model",
+        "unfilter": "Axonal Action Potentials, Ion Channel Kinetics, Detailed Neuronal Models, Parameter Fitting, Temperature, Double cable"
+    },
+    "93390": {
+        "filter": "Copying, Distribution, Modification",
+        "unfilter": "Detailed Neuronal Models, Ion Channel Kinetics, Parameter Fitting, Conductances Estimation, Synaptic Integration, Membrane Properties"
+    },
+    "266989": {
+        "filter": "Ion Channel Kinetics, Calcium dynamics, Detailed Neuronal Models, Rebound firing, Oscillations",
+        "unfilter": "Ion Channel Kinetics, Action Potentials, Calcium dynamics, Detailed Neuronal Models"
+    },
+    "59582": {
+        "filter": "Neurite growth, Structural plasticity, Development, Stochastic simulation",
+        "unfilter": "Neurite growth, Structural plasticity, Simplified Models, Parameter Fitting, Visual processing, Information transfer, Software development"
+    },
+    "184149": {
+        "filter": "Ion Channel Kinetics, Action Potentials, Detailed Neuronal Models",
+        "unfilter": "Detailed Neuronal Models, Ion Channel Kinetics, Calcium dynamics, Synaptic Integration, Membrane Properties, Axonal Action Potentials"
+    },
+    "87581": {
+        "filter": "Ion Channel Kinetics, Oscillations, Spatio-temporal Activity Patterns, Parameter Fitting, Detailed Neuronal Models",
+        "unfilter": "Ion Channel Kinetics, Oscillations, Spatio-temporal Activity Patterns, Parameter Fitting, Simplified Models"
+    },
+    "262422": {
+        "filter": "Ion Channel Kinetics, Bursting, Activity Patterns, Membrane Properties, Parameter Fitting, Simplified Models, Calcium dynamics, Temporal Pattern Generation",
+        "unfilter": "Bursting, Ion Channel Kinetics, Temporal Pattern Generation, Membrane Properties, Simplified Models"
+    },
+    "128816": {
+        "filter": "Oscillations, Synchronization, Connectivity matrix, Action Selection/Decision Making, Stochastic simulation, Dynamics.",
+        "unfilter": "Pattern Recognition, Activity Patterns, Spatio-temporal Activity Patterns, Connectivity matrix, Attractor Neural Network, Synaptic Integration, Simplified Models."
+    },
+    "184330": {
+        "filter": "Action Potentials, Detailed Neuronal Models, Synaptic Integration, Ion Channel Kinetics, Dendritic Action Potentials",
+        "unfilter": "Ion Channel Kinetics, Calcium dynamics"
+    },
+    "244384": {
+        "filter": "Action Potential Initiation, Activity Patterns, Synaptic Integration, Synaptic Plasticity, Oscillations, Temporal Pattern Generation, Ion Channel Kinetics, Parkinson's, Neuromodulation, Memory",
+        "unfilter": "Synchronization, Spatio-temporal Activity Patterns, Parkinson's, Synaptic Plasticity, Connectivity matrix"
+    },
+    "112834": {
+        "filter": "Ion Channel Kinetics, Synaptic Integration, Calcium dynamics, Detailed Neuronal Models, Synaptic Plasticity",
+        "unfilter": "Ion Channel Kinetics, Calcium dynamics, Detailed Neuronal Models, Parameter Fitting, Synaptic Integration"
+    },
+    "71317": {
+        "filter": "Ion Channel Kinetics, Detailed Neuronal Models, Calcium dynamics, Membrane Properties, Active Dendrites, Axonal Action Potentials, Calcium waves, Neurotransmitter dynamics, Dendritic Action Potentials",
+        "unfilter": "Ion Channel Kinetics, Action Potentials, Action Potential Initiation, Axonal Action Potentials, Detailed Neuronal Models."
+    },
+    "151457": {
+        "filter": "Ion Channel Kinetics, Epilepsy, Detailed Neuronal Models, Connectivity matrix, Synaptic Integration.",
+        "unfilter": "Ion Channel Kinetics, Calcium dynamics, Synaptic Integration, Detailed Neuronal Models, Calcium-activated Potassium Channel"
+    },
+    "126466": {
+        "filter": "Sustained Activity, Random Connectivity, Spiking Activity, Integrate-and-Fire Neurons, Synaptic Integration, Connectivity Matrix, Parameter Fitting, Spike Frequency Adaptation, Noise Sensitivity, Activity Patterns, Membrane Properties, Temporal Pattern Generation",
+        "unfilter": "Activity Patterns, Burstong, Simplified Models, Network Connectivity, Synaptic Integration, Spike Frequency Adaptation, Persistent activity, Random Connectivity, Temporal Pattern Generation"
+    },
+    "245411": {
+        "filter": "Ion Channel Kinetics, Synaptic Plasticity, Calcium dynamics, Detailed Neuronal Models, Synaptic Integration, STDP, Excitability, Spatio-temporal Activity Patterns.",
+        "unfilter": "Calcium dynamics, Synaptic Integration, Parameter Fitting, Synaptic Plasticity, Dendritic Action Potentials, Delay, Calcium waves, Detailed Neuronal Models, Parameter sensitivity."
+    },
+    "184158": {
+        "filter": "Action Potentials, Ion Channel Kinetics, Detailed Neuronal Models, Synaptic Integration, Membrane Properties, Parameter Fitting",
+        "unfilter": "Detailed Neuronal Models, Influence of Dendritic Geometry, Axonal Action Potentials, Synaptic Integration, Membrane Properties"
+    },
+    "266814": {
+        "filter": "Ion Channel Kinetics, Detailed Neuronal Models, Calcium dynamics, Synaptic Integration, Spatio-temporal Activity Patterns, Bifurcation, Dendritic Action Potentials, Model Builing, Simulation, Parameter Fitting, Reproducibility, Software Integration",
+        "unfilter": "Synaptic Integration, Calcium dynamics, Neurotransmitter dynamics, Synaptic noise, Membrane Properties, Ion Channel Kinetics, Dendritic Action Potentials, Electrodiffusion, Detailed Neuronal Models."
+    },
+    "54903": {
+        "filter": "Ion Channel Kinetics, Action Potentials, Detailed Neuronal Models",
+        "unfilter": "Ion Channel Kinetics, Parameter Fitting, Detailed Neuronal Models"
+    },
+    "184179": {
+        "filter": "Ion Channel Kinetics, Synaptic Integration, Membrane Properties, Action Potentials",
+        "unfilter": "Ion Channel Kinetics, Calcium dynamics, Action Potentials, Detailed Neuronal Models, Synaptic Integration."
+    },
+    "2937": {
+        "filter": "Dendritic Action Potentials, Ion Channel Kinetics, Active Dendrites, Detailed Neuronal Models, Membrane Properties, Slow Inactivation, Sodium Channel Dynamics, Simulation Methods, Modeled Ion Conductance",
+        "unfilter": "Ion Channel Kinetics, Dendritic Action Potentials, Active Dendrites, Cellular volume dynamics, Membrane Properties, Action Potentials"
+    },
+    "139760": {
+        "filter": "Action Potentials, Synchronization, Spatio-temporal Activity Patterns, Simplified Models, Short-term Synaptic Plasticity, Invertebrate, Synaptic Integration, Depolarization block, Noise Sensitivity, Oscillations",
+        "unfilter": "Kinematic Study, Invertebrate, Simplified Models, Oscillations, Temporal Pattern Generation, Synaptic Plasticity, Ion Channel Kinetics, Activity Patterns, Parameter Fitting"
+    },
+    "244684": {
+        "filter": "Spatio-temporal Activity Patterns, Synaptic Plasticity, Coincidence Detection, Long-term Synaptic Plasticity, Homeostasis, Pattern Recognition, Temporal Coding.",
+        "unfilter": "Coincidence Detection, Spatio-temporal Activity Patterns, Synaptic Plasticity, Long-term Synaptic Plasticity, STDP, Pattern Recognition, Temporal Coding, Homeostasis, Parameter Fitting"
+    },
+    "139418": {
+        "filter": "Calcium dynamics, Potassium buffering, Simplified Models",
+        "unfilter": "Ion Channel Kinetics, Calcium dynamics, Potassium buffering, Sodium pump, Homeostasis."
+    },
+    "93395": {
+        "filter": "Copying, Distribution, Modification",
+        "unfilter": "Rate-coding model neurons, Sensory coding, Pattern Recognition, Temporal Coding, Maximum entropy models, Information transfer"
+    },
+    "115356": {
+        "filter": "Ion Channel Kinetics, Calcium dynamics, Membrane Properties",
+        "unfilter": "Ion Channel Kinetics, Calcium dynamics, Action Potentials, Membrane Properties, Depolarization block"
+    },
+    "20015": {
+        "filter": "Ion Channel Kinetics, Detailed Neuronal Models",
+        "unfilter": "Ion Channel Kinetics, Detailed Neuronal Models, Synaptic Integration"
+    },
+    "3670": {
+        "filter": "Ion Channel Kinetics, Synaptic Integration, G-protein coupled, Neurotransmitter dynamics, Simplified Models, Parameter Fitting.",
+        "unfilter": "Ion Channel Kinetics, Calcium dynamics, Spike Frequency Adaptation, Membrane Properties, Detailed Neuronal Models, Conductance distributions"
+    },
+    "168866": {
+        "filter": "Simplified Models, Synaptic Plasticity, Connectivity matrix, Synaptic Integration, Oscillations, Temporal Pattern Generation, Synchronization, Parameter Fitting.",
+        "unfilter": "Spatio-temporal Activity Patterns, Bursting, Synchronization, Parameter Fitting, Activity Patterns, Rate-coding model neurons, Temporal Pattern Generation, Spike Frequency Adaptation"
+    },
+    "266577": {
+        "filter": "Oscillations, Synchronization, Bifurcation, Connectivity matrix, Spatio-temporal Activity Patterns, Pattern Recognition, Activity Patterns, Temporal Pattern Generation, Simplified Models.",
+        "unfilter": "Oscillations, Bifurcation, Attractor Neural Network, Spatio-temporal Activity Patterns, Connectivity matrix"
+    },
+    "266871": {
+        "filter": "Action Potentials, Synaptic Integration, Calcium dynamics, Audition, Neurotransmitter dynamics, Ion Channel Kinetics, Conduction failure.",
+        "unfilter": "Pattern Recognition, Temporal Pattern Generation, Spatio-temporal Activity Patterns, Sensory processing, Synchronization, Spike Frequency Adaptation, Information transfer, Sensory coding, Audition, Sensory processing"
+    },
+    "184315": {
+        "filter": "Ion Channel Kinetics, Detailed Neuronal Models, Synaptic Plasticity, Calcium dynamics, Membrane Properties, Conductance distributions, Synaptic Integration, Spike Frequency Adaptation",
+        "unfilter": "Detailed Neuronal Models, Axonal Action Potentials, Influence of Dendritic Geometry, Synaptic Integration"
+    },
+    "154955": {
+        "filter": "Bursting, Ion Channel Kinetics, Calcium dynamics, Oscillations, Bifurcation, Membrane Properties",
+        "unfilter": "Bursting, Ion Channel Kinetics, Calcium dynamics, Oscillations, Bifurcation, Membrane Properties."
+    },
+    "120835": {
+        "filter": "Ion Channel Kinetics, Parameter Fitting, Detailed Neuronal Models, Heart disease, Markov-type model",
+        "unfilter": "Ion Channel Kinetics, Markov-type model, Parameter Fitting, Heart disease"
+    },
+    "128449": {
+        "filter": "Spike Frequency Adaptation, Parameter Fitting, Simplified Models, Intrinsic plasticity",
+        "unfilter": "Spike Frequency Adaptation, Parameter Fitting, Simplified Models, Intrinsic plasticity, Rate-coding model neurons, Calcium dynamics"
+    },
+    "65218": {
+        "filter": "Synaptic Integration, Synaptic Plasticity, Detailed Neuronal Models, Temporal Pattern Generation, Oscillations",
+        "unfilter": "Ion Channel Kinetics, Calcium dynamics, Synaptic Integration, Oscillations"
+    },
+    "140789": {
+        "filter": "Detailed Neuronal Models, Influence of Dendritic Geometry, Synaptic Integration, Membrane Properties, Electrotonus",
+        "unfilter": "Detailed Neuronal Models, Dendritic Action Potentials, Influence of Dendritic Geometry, Synaptic Integration, Electrotonus, Parameter Fitting"
+    },
+    "125529": {
+        "filter": "Respiratory control, Oscillations, Temporal Pattern Generation, Activity Patterns, Bursting",
+        "unfilter": "Temporal Pattern Generation, Bursting, Ion Channel Kinetics, Oscillations, Respiratory control, Brain Rhythms, Bifurcation."
+    },
+    "263711": {
+        "filter": "Spatio-temporal Activity Patterns, Synchronization, Temporal Pattern Generation, Activity Patterns, Sequence learning.",
+        "unfilter": "Spatio-temporal Activity Patterns, Pattern Recognition, Synchronization, Sequence learning, Balanced networks"
+    },
+    "169208": {
+        "filter": "Conduction failure, Axonal Action Potentials, Parameter sensitivity, Detailed Neuronal Models.",
+        "unfilter": "Conduction failure, Parameter Fitting, Conductance distributions, Synaptic Integration, Parameter sensitivity"
+    },
+    "2016601": {
+        "filter": "Ion Channel Kinetics, Calcium dynamics, Oscillations, Synchronization, Spindles, Rebound firing",
+        "unfilter": "Place cell/field, Spatial Navigation, Spatio-temporal Activity Patterns, Spatial connectivity, Memory"
+    },
+    "185014": {
+        "filter": "Oscillations, Synchronization, Short-term Synaptic Plasticity, Connectivity matrix, Beta oscillations, Gamma oscillations, Brain Rhythms, Respiratory control.",
+        "unfilter": "Oscillations, Synchronization, Gamma oscillations, Beta oscillations, Sensory processing, Spatio-temporal Activity Patterns."
+    },
+    "141063": {
+        "filter": "Bursting, Ion Channel Kinetics, Temperature, Oscillations, Bifurcation, Temperature, Sensory processing",
+        "unfilter": "Bursting, Temperature, Ion Channel Kinetics, Oscillations, Noise Sensitivity, Temporal Pattern Generation, Intrinsic plasticity"
+    },
+    "116575": {
+        "filter": "Action Potential Initiation, Ion Channel Kinetics, Invertebrate, Learning",
+        "unfilter": "Ion Channel Kinetics, Parameter Fitting, Detailed Neuronal Models, Simplified Models"
+    },
+    "256388": {
+        "filter": "Ion Channel Kinetics, Parameter Fitting, Simplified Models, Synaptic Integration, Calcium dynamics",
+        "unfilter": "Ion Channel Kinetics, Synaptic Plasticity, Action Potentials, Active Dendrites, Dendritic Action Potentials, Burst Bursting, Synaptic Integration."
+    },
+    "38235": {
+        "filter": "Ion Channel Kinetics, Detailed Neuronal Models, Synaptic Integration, Conductance distributions, Neurotransmitter dynamics, Excitability",
+        "unfilter": "Calcium dynamics, Short-term Synaptic Plasticity, Synaptic Integration, Neurotransmitter dynamics, Vesicle release"
+    },
+    "66277": {
+        "filter": "Gamma oscillations, Spindles, Epilepsy, Oscillations, Synchronization",
+        "unfilter": "Gamma oscillations, Spindles, Epilepsy, Oscillations, Synchronization, Activity Patterns, Bursting, Detailed Neuronal Models."
+    },
+    "261623": {
+        "filter": "Synaptic Integration, Synaptic Plasticity, Short-term Synaptic Plasticity, Ion Channel Kinetics, Oscillations, Synchronization, Detailed Neuronal Models, Action Potentials, Calcium dynamics, Intrinsic plasticity, Noise Sensitivity, Spike Frequency Adaptation, Persistent activity.",
+        "unfilter": "Connectivity matrix, Synaptic Integration, Detailed Neuronal Models, Synaptic Plasticity, Calcium dynamics, Oscillations"
+    },
+    "51781": {
+        "filter": "Ion Channel Kinetics, Detailed Neuronal Models, Epilepsy, Pathophysiology, Spatio-temporal Activity Patterns, Connectivity matrix, Excitability, Synaptic Integration, Structural plasticity, Synaptic noise, Membrane Properties, Development.",
+        "unfilter": "Ion Channel Kinetics, Calcium dynamics, Membrane Properties, Detailed Neuronal Models"
+    },
+    "2014999": {
+        "filter": "Ion Channel Kinetics, Cardiac pacemaking, Calcium dynamics, Markov-type model",
+        "unfilter": "Connectivity matrix, Synaptic Integration, Random networks, Structural plasticity"
+    },
+    "184167": {
+        "filter": "Action Potentials, Detailed Neuronal Models, Ion Channel Kinetics, Synaptic Integration",
+        "unfilter": "Ion Channel Kinetics, Calcium dynamics, Detailed Neuronal Models, Synaptic Integration, Axonal Action Potentials, Dendritic Action Potentials, Influence of Dendritic Geometry"
+    },
+    "137263": {
+        "filter": "Action Potentials, Bursting, Ion Channel Kinetics, Nociception, Oscillations, Temporal Pattern Generation, Synchronization, Pattern Recognition",
+        "unfilter": "Action Potentials, Bursting, Ion Channel Kinetics, Temporal Pattern Generation, Oscillations, Nociception, Synchronization"
+    },
+    "126776": {
+        "filter": "Active Dendrites, Axonal Action Potentials, Ion Channel Kinetics, Rebound Firing, Dendritic Action Potentials, Post-Inhibitory Rebound.",
+        "unfilter": "Rebound firing, Ion Channel Kinetics, Detailed Neuronal Models, Dendritic Action Potentials, Axonal Action Potentials."
+    }
+}

@@ -62,10 +62,15 @@ def concat_files(code, sample_folder, file_path_list, topK):
     print(f"Concatenated file for model {code} have been saved to {output_file_path}")
 
 if __name__ == "__main__":
+    '''
+    To change model concept for experiments, change variables:
+    - sample_folder: model output folder directory
+    - df = pd.read_csv("binary_labels_{concept_name}.csv")
+    '''
     # file screening
     json_file_path = "../manual_classifier_rules.json"
-    sample_folder = '../sampleParkinsons'
-    df = pd.read_csv("binary_labels_Parkinson.csv")
+    sample_folder = '../sampleAlzheimer' # change this for new concept name
+    df = pd.read_csv("binary_labels_Alzheimer.csv") # change this for new concept name
     file_code_list = df["code"]
     for code in tqdm(file_code_list):
         scores = get_score_metric(code, json_file_path, sample_folder)
