@@ -2,7 +2,5 @@
 .DS_Store
 samples/
 sampleParkinsons/
+sampleAlzheimer/
 
-
-evaluation/__pycache__/
-evaluation/results/
