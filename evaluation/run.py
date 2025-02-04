@@ -1,27 +1,12 @@
 '''
-evaluate gpt generated metadata types
+Use self-defined precision/recall to evaluate gpt generated metadata types
 '''
 import json
 from pprint import pprint
 import evaluation as eval
+import sys
+from utils import process_result
 
-
-
-
-# celltype
-def process_result(id_list, metadata, output, type, group_name):
-    y_true_list = []
-    y_pred_list = []
-    for num in id_list:
-        if num in metadata.keys():
-            y_true = metadata[str(num)][type]
-            y_pred = output[str(num)][group_name].split(',')
-            y_pred = [i.strip() for i in y_pred]
-            y_true_list.append(y_true)
-            y_pred_list.append(y_pred)
-    
-    
-    return y_true_list, y_pred_list
 
 def run(metadata_file_path, test_file_path, topic_name, output_dir=None):
     with open(metadata_file_path, 'r', encoding='utf-8') as json_file:
@@ -51,22 +36,43 @@ def run(metadata_file_path, test_file_path, topic_name, output_dir=None):
                              'recall_micro': result['recall_micro']}
     return result_dict
 
+def main():
+    if len(sys.argv) != 3:
+        print("Usage: python script.py <test_file> <metadata_type>")
+        sys.exit(1)
 
-if __name__ == "__main__":
     # ground truth
     metadata_file_path = 'model_metadata.json'
 
-    # modelconcepts
-    print("Evaluate modelconcepts predictions...")
-    test_file_path = 'results/modelconcepts_filter_test_1.json'
-    result = run(metadata_file_path, test_file_path, "model_concept")
-    pprint(result)
-    print()
+    test_file = sys.argv[1]
+    test_file_path = 'results/' + test_file
 
-    # celltypes
-    print("Evaluate celltypes predictions...")
-    test_file_path = 'results/celltype_filter_test_1.json'
-    result = run(metadata_file_path, test_file_path, "neurons") 
+    metadata_type = sys.argv[2]
+
+    print(f"Evaluate {metadata_type} predictions...")
+    result = run(metadata_file_path, test_file_path, metadata_type)
     pprint(result)
+
+
+if __name__ == "__main__":
+    # ground truth
+    # metadata_file_path = 'model_metadata.json'
+
+    # # modelconcepts
+    # print("Evaluate modelconcepts predictions...")
+    # test_file_path = 'results/modelconcepts_filter_test_1.json'
+    # result = run(metadata_file_path, test_file_path, "model_concept")
+    # pprint(result)
+    # print()
+
+    # # celltypes
+    # print("Evaluate celltypes predictions...")
+    # test_file_path = 'results/celltype_filter_test_1.json'
+    # result = run(metadata_file_path, test_file_path, "neurons") 
+    # pprint(result)
+
+    main()
+    # command examples
+    # python run.py modelconcepts_filter_test_1.json model_concept
 
 
