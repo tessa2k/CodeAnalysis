@@ -1,0 +1,62 @@
+{
+    "93395": {
+        "filter": "Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell, Neocortex V1 L5B pyramidal pyramidal tract GLU cell, Neocortex U1 L5B pyramidal pyramidal tract GLU cell, Neocortex U1 L2/6 pyramidal intratelencephalic GLU cell, Neocortex U1 L6 pyramidal corticalthalamic GLU cell, Neocortex M1 L2/6 pyramidal intratelencephalic GLU cell, Neocortex M1 L6 pyramidal corticothalamic GLU cell, Neocortex M1 L5B pyramidal pyramidal tract GLU cell"
+    },
+    "169208": {
+        "filter": "Myelinated neuron, Squid axon"
+    },
+    "143602": {
+        "filter": "Hippocampus CA1 pyramidal GLU cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Thalamus geniculate nucleus/lateral principal GLU cell, Olfactory bulb main mitral GLU cell, Neocortex V1 L4 stellate GLU cell, Cerebellum Purkinje GABA cell, Spinal cord lumbar motor neuron alpha ACh cell"
+    },
+    "117810": {
+        "filter": "Spinal cord lumbar motor neuron alpha ACh cell, Spinal cord lumbar Interneuron 1a GLY cell"
+    },
+    "232855": {
+        "filter": "Suprachiasmatic nucleus (SCN) neuron, Retina ganglion GLU cell"
+    },
+    "112547": {
+        "filter": "Astrocyte"
+    },
+    "185014": {
+        "filter": "Olfactory bulb main mitral GLU cell, Olfactory bulb main interneuron granule MC GABA cell, Olfactory bulb main interneuron granule TC GABA cell, Olfactory bulb main interneuron periglomerular GABA cell"
+    },
+    "154955": {
+        "filter": "Pituitary cell"
+    },
+    "93390": {
+        "filter": "Hodgkin-Huxley neuron"
+    },
+    "184167": {
+        "filter": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell, Dentate gyrus granule GLU cell, Hippocampus CA1 interneuron oriens alveus GABA cell"
+    },
+    "54903": {
+        "filter": "Hodgkin-Huxley neuron, Squid axon, Neocortex fast spiking (FS) interneuron, Neocortex layer 5 pyramidal cell, Neocortex primary motor area pyramidal layer 5 corticospinal cell"
+    },
+    "66277": {
+        "filter": "Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell, Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Neocortex V1 L5B pyramidal pyramidal tract GLU cell, Neocortex V1 L4 stellate GLU cell, Neocortex M1 L5B pyramidal pyramidal tract GLU cell, Neocortex spiking regular (RS) neuron, Neocortex spiking irregular interneuron, Neocortex fast spiking (FS) interneuron, Neocortex dissociated cultured nerve cell, Neocortex bitufted interneuron, Neocortex superficial neurogliaform interneuron, Neocortex spiking low threshold (LTS) neuron, Neocortex deep neurogliaform interneuron."
+    },
+    "258478": {
+        "filter": "Thalamus geniculate nucleus/lateral principal GLU cell, Thalamus reticular nucleus GABA cell"
+    },
+    "139418": {
+        "filter": "Thalamus geniculate nucleus/lateral principal GLU cell, Thalamus reticular nucleus GABA cell"
+    },
+    "260967": {
+        "filter": "Hippocampus CA1 pyramidal GLU cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell, Myelinated neuron"
+    },
+    "116575": {
+        "filter": "Hippocampus CA1 pyramidal GLU cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell, Olfactory bulb main mitral GLU cell, Hippocampus CA1 interneuron basket GABA cell, Cerebellum interneuron Golgi GABA cell"
+    },
+    "57910": {
+        "filter": "Hodgkin-Huxley neuron"
+    },
+    "236310": {
+        "filter": "Neostriatum medium spiny direct pathway GABA cell, Nucleus accumbens spiny projection neuron"
+    },
+    "126098": {
+        "filter": "Neostriatum medium spiny direct pathway GABA cell, Neostriatum medium spiny indirect pathway GABA cell"
+    },
+    "115356": {
+        "filter": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Neocortex L5/6 pyramidal GLU cell, Olfactory bulb main mitral GLU cell, Neocortex fast spiking (FS) interneuron"
+    }
+}

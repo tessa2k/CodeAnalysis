@@ -9,7 +9,8 @@ from dotenv import load_dotenv
 
 # GLOBAL VARIABLES
 ACCEPTABLE_EXTENSIONS = ('.py', '.cpp', '.java', '.m', '.txt', '.h', '.data', 
-                            '.html', '.c', '.mod', '.g', '.p', ".ode", ".html")  # Adjust as needed
+                            '.html', '.c', '.mod', '.g', '.p', ".ode", ".html")  #.mdl
+            
 def connect_onedrive():
     load_dotenv()
 
@@ -115,7 +116,9 @@ def extract_comments(content, filename):
         '.html': r'<!--.*?-->'  ,
         '.mod': r'COMMENT(.*?)ENDCOMMENT' ,#need to change
         '.ode': r'%.*',
-        '.txt': r'.*'
+        '.txt': r'.*',
+        '.m': r'%.*' ,
+        '.g': r'//.*|/\*.*?\*/' 
     }
     pattern = comment_patterns.get(file_extension, r'')
     return re.findall(pattern, content, re.DOTALL) if pattern else []
@@ -150,8 +153,8 @@ if __name__ == "__main__":
 
     # file screening
     # ================================== Need to fill ====================================
-    output_file_folder = '/Users/mengmengdu/Desktop/CodeAnalysis/samples/extracted_data'
+    output_file_folder = '/Users/mengmengdu/Desktop/CodeAnalysis/data/extracted_data'
     if os.path.exists(output_file_folder):
         shutil.rmtree(output_file_folder)
-    process_files(sample_folder, output_file_folder, file_code_list, 5)
+    process_files(sample_folder, output_file_folder, file_code_list, 20)
    

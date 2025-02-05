@@ -1,0 +1,131 @@
+=== Following is the header of samples/139418/fietkiewicz2011/nkpump.mod ===
+TITLE Sodium Potassium Pump
+
+UNITS {
+      (molar) = (1/liter)
+      (mV) = (millivolts)
+      (mA) = (milliamp)
+      (mM) = (millimolar)
+}
+
+NEURON {
+       SUFFIX pump
+       USEION k READ ko WRITE ik
+       RANGE ipumpmax, kbath
+}
+
+PARAMETER {
+	  kbath	= 9		 (mM)
+	  ko		         (mM)
+	  ipumpmax = 0.0005     (mA/cm2)
+	  ipump			 (mA/cm2)
+
+
+=== Following is the header of samples/139418/fietkiewicz2011/ISK.mod ===
+TITLE Calcium Dependant Potassium Channel
+
+UNITS {
+      (molar) = (1/liter)
+      (mV) = (millivolts)
+      (mA) = (milliamp)
+      (mM) = (millimolar)
+	(S) = (siemens)
+}
+
+NEURON {
+       SUFFIX sk
+       USEION ca READ cai
+       USEION k READ ek WRITE ik
+       RANGE i, gbar, theta, ztau
+       GLOBAL zinf
+}
+
+PARAMETER {
+	  cai	(mM)
+
+
+=== Following is the header of samples/139418/fietkiewicz2011/capump.mod ===
+TITLE decay of submembrane calcium concentration
+:
+: Internal calcium concentration due to calcium currents and pump.
+: Differential equations.
+:
+: This file contains two mechanisms:
+:
+: 1. Simple model of ATPase pump with 3 kinetic constants (Destexhe 1992)
+:
+:       Cai + P <-> CaP -> Cao + P  (k1,k2,k3)
+:
+:   A Michaelis-Menten approximation is assumed, which reduces the complexity
+:   of the system to 2 parameters: 
+:       kt = <tot enzyme concentration> * k3  -> TIME CONSTANT OF THE PUMP
+:	kd = k2/k1 (dissociation constant)    -> EQUILIBRIUM CALCIUM VALUE
+:   The values of these parameters are chosen assuming a high affinity of 
+:   the pump to calcium and a low transport capacity (cfr. Blaustein, 
+:   TINS, 11: 438, 1988, and references therein).  
+:
+:   For further information about this this mechanism, see Destexhe, A. 
+
+
+=== Following is the header of samples/139418/fietkiewicz2011/potassiumcontrol.mod ===
+TITLE  Glial Buffering, and Potassium Diffusion Mechanism
+
+UNITS {
+      (molar) = (1/liter)
+      (mV) = (millivolts)
+      (mA) = (milliamp)
+      (mM) = (millimolar)
+      FARADAY = (faraday) (coulombs)
+}
+
+NEURON {
+       SUFFIX potassium
+       USEION k READ ik, ko  WRITE ko
+       RANGE fhspace, txfer, bmax, k1N, k1,  kbath
+}
+
+PARAMETER {
+	  kbath = 9			  (mM)
+	  fhspace =300			  (angstrom) : thickness of F-H space
+	  txfer = 50			  (ms) : tau for F-H space
+
+
+=== Following is the header of samples/139418/fietkiewicz2011/readme.txt ===
+Author: Chris Fietkiewicz, Ph.D., Case Western Reserve University
+
+Contact: chris.fietkiewicz at case.edu
+
+Instructions: Requires NEURON
+(http://www.neuron.yale.edu/neuron). Compile mod files before running
+simulations. Run either figure11.hoc or figure13.hoc to recreate
+raster plots similar to Figure 11 or Figure 13, respectively, from the
+paper. See source code and paper for additional documentation.
+
+20120113 updates from Fietkiewicz for Fig 11, 13 and update of euler
+method to derivimplicit for capump.mod as per
+http://www.neuron.yale.edu/phpbb/viewtopic.php?f=28&t=592
+
+
+=== Following is the header of samples/139418/fietkiewicz2011/cax.mod ===
+COMMENT
+Slavish transliteration of equation from Purvis & Butera 2005.
+Not a remapping of their Ca accum mechanism in a form that would use density parameters.
+
+Cannot be used outside of the context of their model 
+(K1 implicitly assumes a particular volume and surface/volume ratio, which 
+depend on cell geometry).
+
+In the absence of calcium currents, cai will monoexponentially decay toward 0.
+ENDCOMMENT
+
+NEURON {
+	SUFFIX cax
+	USEION ca READ ica WRITE cai
+	RANGE K1, K2
+}
+
+UNITS {
+	(mM) = (milli/liter)
+	(mA) = (milliamp)
+
+

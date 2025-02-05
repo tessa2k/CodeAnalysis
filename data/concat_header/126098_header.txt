@@ -1,0 +1,5451 @@
+=== Following is the header of samples/126098/Plos_model/Script_DKO_Ca010.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_DKO.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "010"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/InpCaAlps035.txt ===
+0.06
+0.15419
+0.24651
+0.33698
+0.42564
+0.5125
+0.5976
+0.68095
+0.7626
+0.84256
+0.92086
+0.99752
+1.0726
+1.146
+1.2179
+1.2883
+1.3572
+1.4245
+1.4904
+1.5549
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP2Afix_Ca015.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP2Afix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "015"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Spiny_DKO.g ===
+//genesis
+// kkit Version 11 flat dumpfile
+ 
+// Saved on Mon Jun 29 11:03:06 2009
+ 
+include kkit {argv 1}
+ 
+FASTDT = 5e-06
+SIMDT = 0.0002
+CONTROLDT = 1
+PLOTDT = 0.1
+MAXTIME = 10000
+TRANSIENT_TIME = 200
+VARIABLE_DT_FLAG = 0
+DEFAULT_VOL = 1e-18
+VERSION = 11.0
+setfield /file/modpath value /Users/nakano/genesis/
+kparms
+ 
+//genesis
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP1fix_Ca055.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP1fix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "055"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP2Afix_Ca030.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP2Afix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "030"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_ctr_Ca085.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "085"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_DKO_Ca035.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_DKO.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "035"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP1fix_Ca070.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP1fix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "070"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_long_DA.g ===
+//genesis
+//Câ000100܂
+//DA͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny.g       /* main scripts */
+
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults_DA"
+str InputCafilename = {"InpCaAlps" @ {Input_Ca} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Long_000_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Long_000_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/Long_000_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Long_000_" @ {Input_DA} @ "D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/Long_000_" @ {Input_DA} @ "D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/Long_000_" @ {Input_DA} @ "D75.txt"}
+str OutputD137filename = {"./" @ {save_directory} @ "/Long_000_" @ {Input_DA} @ "D137.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/InpCaAlps020.txt ===
+0.06
+0.11382
+0.16658
+0.21828
+0.26894
+0.31857
+0.3672
+0.41483
+0.46149
+0.50718
+0.55192
+0.59573
+0.63862
+0.6806
+0.72168
+0.76189
+0.80124
+0.83973
+0.87738
+0.91421
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PKAfix_Ca080.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PKAfix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "080"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_CaMKIIfix_Ca085.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_CaMKIIfix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "085"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP2Afix_Ca055.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP2Afix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "055"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_DKO_Ca050.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_DKO.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "050"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_Loop_PP2AD75_Kcat1e_1.g ===
+//genesis
+//cAMP1-10
+//Ca͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny071128_Loop2.g       /* main scripts */
+
+
+function Output(Cdk5_0)
+str Cdk5_0
+
+str save_directory = "simresults"
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat1e_1_cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat1e_1_Cdk5.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat1e_1_D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat1e_1_D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat1e_1_D75.txt"}
+str OutputInhD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat1e_1_InhD75.txt"}
+str OutputPKAfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat1e_1_PKA.txt"}
+str OutputPP2ACafilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat1e_1_PP2ACa.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_ctr_Ca010_timedp100.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "010"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Timedp00100_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Timedp00100_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/Timedp00100_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Timedp00100_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP1fix_Ca015.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP1fix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "015"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_Loop_PP2AD75_Kcat1e2.g ===
+//genesis
+//cAMP1-10
+//Ca͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny071128_Loop2.g       /* main scripts */
+
+
+function Output(Cdk5_0)
+str Cdk5_0
+
+str save_directory = "simresults"
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat1e2_cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat1e2_Cdk5.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat1e2_D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat1e2_D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat1e2_D75.txt"}
+str OutputInhD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat1e2_InhD75.txt"}
+str OutputPKAfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat1e2_PKA.txt"}
+str OutputPP2ACafilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat1e2_PP2ACa.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_DKO_Ca075.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_DKO.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "075"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP2Afix_Ca070.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP2Afix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "070"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_Loop_InhPKA_Kd036.g ===
+//genesis
+//cAMP1-10
+//Ca͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny071128_Loop2.g       /* main scripts */
+
+
+function Output(Cdk5_0)
+str Cdk5_0
+
+str save_directory = "simresults"
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd036_cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd036_Cdk5.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd036_D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd036_D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd036_D75.txt"}
+str OutputInhD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd036_InhD75.txt"}
+str OutputPKAfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd036_PKA.txt"}
+str OutputPP2ACafilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd036_PP2ACa.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_ctr_Ca.g ===
+//genesis
+//Câ000100܂
+//DA͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny.g       /* main scripts */
+
+
+function Output(Input_Ca)
+str Input_Ca
+
+str save_directory = "simresults"
+str InputCafilename = {"InpCaAlps" @ {Input_Ca} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_000cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_000Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_000CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_000D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_000D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_000D75.txt"}
+str OutputD137filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_000D137.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP1fix_Ca030.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP1fix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "030"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_Loop_PKAPP2A_Kcat5e_1.g ===
+//genesis
+//cAMP1-10
+//Ca͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny071128_Loop2.g       /* main scripts */
+
+
+function Output(Cdk5_0)
+str Cdk5_0
+
+str save_directory = "simresults"
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat5e_1_cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat5e_1_Cdk5.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat5e_1_D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat5e_1_D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat5e_1_D75.txt"}
+str OutputInhD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat5e_1_InhD75.txt"}
+str OutputPKAfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat5e_1_PKA.txt"}
+str OutputPP2ACafilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat5e_1_PP2ACa.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PKAfix_Ca090.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PKAfix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "090"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_CaMKIIfix_Ca095.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_CaMKIIfix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "095"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP2Afix_Ca045.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP2Afix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "045"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_DA000_Ca.g ===
+//genesis
+//Câ000100܂
+//DA͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny_DA000.g       /* main scripts */
+
+
+function Output(Input_Ca)
+str Input_Ca
+
+str save_directory = "simresults"
+str InputCafilename = {"InpCaAlps" @ {Input_Ca} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/DA000_" @ {Input_Ca} @ "_000cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/DA000_" @ {Input_Ca} @ "_000Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/DA000_" @ {Input_Ca} @ "_000CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/DA000_" @ {Input_Ca} @ "_000D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/DA000_" @ {Input_Ca} @ "_000D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/DA000_" @ {Input_Ca} @ "_000D75.txt"}
+str OutputD137filename = {"./" @ {save_directory} @ "/DA000_" @ {Input_Ca} @ "_000D137.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Spiny_DA020.g ===
+//genesis
+// kkit Version 11 flat dumpfile
+ 
+// Saved on Tue Jun 30 12:44:01 2009
+ 
+include kkit {argv 1}
+ 
+FASTDT = 5e-06
+SIMDT = 0.0002
+CONTROLDT = 1
+PLOTDT = 0.1
+MAXTIME = 10000
+TRANSIENT_TIME = 200
+VARIABLE_DT_FLAG = 0
+DEFAULT_VOL = 1e-18
+VERSION = 11.0
+setfield /file/modpath value /Users/nakano/genesis/
+kparms
+ 
+//genesis
+
+
+=== Following is the header of samples/126098/Plos_model/Script_Loop_InhPKA_Kd062.g ===
+//genesis
+//cAMP1-10
+//Ca͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny071128_Loop2.g       /* main scripts */
+
+
+function Output(Cdk5_0)
+str Cdk5_0
+
+str save_directory = "simresults"
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd062_cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd062_Cdk5.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd062_D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd062_D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd062_D75.txt"}
+str OutputInhD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd062_InhD75.txt"}
+str OutputPKAfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd062_PKA.txt"}
+str OutputPP2ACafilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd062_PP2ACa.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_DKO_Ca040.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_DKO.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "040"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP1fix_Ca005.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP1fix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "005"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_DKO_Ca065.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_DKO.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "065"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_ctr_Ca010_timedp500.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "010"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Timedp00500_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Timedp00500_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/Timedp00500_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Timedp00500_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Spiny_DA005.g ===
+//genesis
+// kkit Version 11 flat dumpfile
+ 
+// Saved on Tue Jun 30 17:00:32 2009
+ 
+include kkit {argv 1}
+ 
+FASTDT = 5e-06
+SIMDT = 0.0002
+CONTROLDT = 1
+PLOTDT = 0.1
+MAXTIME = 10000
+TRANSIENT_TIME = 200
+VARIABLE_DT_FLAG = 0
+DEFAULT_VOL = 1e-18
+VERSION = 11.0
+setfield /file/modpath value /Users/nakano/genesis/
+kparms
+ 
+//genesis
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP2Afix_Ca060.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP2Afix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "060"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP1fix_Ca020.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP1fix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "020"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/InpCaAlps030.txt ===
+0.06
+0.14074
+0.21987
+0.29742
+0.3734
+0.44786
+0.5208
+0.59225
+0.66223
+0.73077
+0.79788
+0.86359
+0.92792
+0.9909
+1.0525
+1.1128
+1.1719
+1.2296
+1.2861
+1.3413
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP2Afix_Ca005.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP2Afix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "005"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP1fix_Ca045.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP1fix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "045"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP2Afix_Ca020.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP2Afix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "020"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_ctr_Ca010_timedp1000.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "010"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Timedp01000_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Timedp01000_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/Timedp01000_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Timedp01000_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_ctr_Ca095.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "095"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_DKO_Ca025.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_DKO.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "025"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_DA020_Ca.g ===
+//genesis
+//Câ000100܂
+//DA͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny_DA020.g       /* main scripts */
+
+
+function Output(Input_Ca)
+str Input_Ca
+
+str save_directory = "simresults"
+str InputCafilename = {"InpCaAlps" @ {Input_Ca} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/DA020_" @ {Input_Ca} @ "_000cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/DA020_" @ {Input_Ca} @ "_000Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/DA020_" @ {Input_Ca} @ "_000CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/DA020_" @ {Input_Ca} @ "_000D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/DA020_" @ {Input_Ca} @ "_000D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/DA020_" @ {Input_Ca} @ "_000D75.txt"}
+str OutputD137filename = {"./" @ {save_directory} @ "/DA020_" @ {Input_Ca} @ "_000D137.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP1fix_Ca060.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP1fix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "060"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_ctr_Ca100_timedp50.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "100"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Timedp00050_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Timedp00050_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/Timedp00050_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Timedp00050_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/InpCaAlps025.txt ===
+0.06
+0.12728
+0.19322
+0.25785
+0.32117
+0.38321
+0.444
+0.50354
+0.56186
+0.61897
+0.6749
+0.72966
+0.78327
+0.83575
+0.88711
+0.93737
+0.98655
+1.0347
+1.0817
+1.1278
+
+
+=== Following is the header of samples/126098/Plos_model/Script_DKO_Ca100.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_DKO.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "100"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/InpCaAlps095.txt ===
+0.06
+0.31567
+0.56625
+0.81181
+1.0524
+1.2882
+1.5192
+1.7454
+1.9671
+2.1841
+2.3966
+2.6047
+2.8084
+3.0078
+3.203
+3.394
+3.5809
+3.7637
+3.9426
+4.1175
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP2Afix_DA.g ===
+//genesis
+//DÂ000100܂
+//Ca͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP2Afix.g       /* main scripts */
+
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP2Afix_000_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP2Afix_000_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP2Afix_000_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP2Afix_000_" @ {Input_DA} @ "D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/PP2Afix_000_" @ {Input_DA} @ "D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/PP2Afix_000_" @ {Input_DA} @ "D75.txt"}
+str OutputD137filename = {"./" @ {save_directory} @ "/PP2Afix_000_" @ {Input_DA} @ "D137.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PKAfix_Ca060.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PKAfix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "060"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/InpDAAlp004.txt ===
+0.01
+0.10838
+0.18804
+0.25165
+0.30154
+0.33974
+0.36804
+0.38796
+0.40085
+0.40786
+0.41
+0.40813
+0.40299
+0.39523
+0.38538
+0.37392
+0.36124
+0.34768
+0.33352
+0.31899
+
+
+=== Following is the header of samples/126098/Plos_model/Script_CaMKIIfix_Ca065.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_CaMKIIfix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "065"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/InpDAAlp010.txt ===
+0.01
+0.25596
+0.45511
+0.61413
+0.73885
+0.83436
+0.90509
+0.9549
+0.98712
+1.0047
+1.01
+1.0053
+0.99248
+0.97306
+0.94845
+0.9198
+0.8881
+0.8542
+0.81879
+0.78248
+
+
+=== Following is the header of samples/126098/Plos_model/Script_DA000_DA_Ca010.g ===
+//genesis
+//DÂ000100܂
+//Ca͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny_DA000.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "010"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp000_" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/DA000_" @ {Input_Ca} @ "_" @{Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/DA000_" @ {Input_Ca} @ "_" @{Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/DA000_" @ {Input_Ca} @ "_" @{Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/DA000_" @ {Input_Ca} @ "_" @{Input_DA} @ "D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/DA000_" @ {Input_Ca} @ "_" @{Input_DA} @ "D34.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/InpDAAlp005.txt ===
+0.01
+0.13298
+0.23255
+0.31206
+0.37442
+0.42218
+0.45755
+0.48245
+0.49856
+0.50733
+0.51
+0.50766
+0.50124
+0.49153
+0.47922
+0.4649
+0.44905
+0.4321
+0.4144
+0.39624
+
+
+=== Following is the header of samples/126098/Plos_model/Script_CaMKIIfix_DA.g ===
+//genesis
+//DÂ000100܂
+//Ca͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny_CaMKIIfix.g       /* main scripts */
+
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/CaMKIIfix_000_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/CaMKIIfix_000_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/CaMKIIfix_000_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/CaMKIIfix_000_" @ {Input_DA} @ "D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/CaMKIIfix_000_" @ {Input_DA} @ "D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/CaMKIIfix_000_" @ {Input_DA} @ "D75.txt"}
+str OutputD137filename = {"./" @ {save_directory} @ "/CaMKIIfix_000_" @ {Input_DA} @ "D137.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_ctr_Ca100.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "100"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PKAfix_Ca045.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PKAfix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "045"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_CaMKIIfix_Ca040.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_CaMKIIfix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "040"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP2Afix_Ca090.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP2Afix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "090"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/InpCaAlps080.txt ===
+0.06
+0.2753
+0.48631
+0.69311
+0.89574
+1.0943
+1.2888
+1.4793
+1.6659
+1.8487
+2.0277
+2.2029
+2.3745
+2.5424
+2.7067
+2.8676
+3.0249
+3.1789
+3.3295
+3.4768
+
+
+=== Following is the header of samples/126098/Plos_model/Script_DKO_Ca095.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_DKO.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "095"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_ctr_Ca025.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "025"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/InpCaAlps055.txt ===
+0.06
+0.20802
+0.35309
+0.49526
+0.63457
+0.77107
+0.90479
+1.0358
+1.1641
+1.2897
+1.4128
+1.5333
+1.6512
+1.7666
+1.8796
+1.9902
+2.0984
+2.2043
+2.3078
+2.4091
+
+
+=== Following is the header of samples/126098/Plos_model/Script_CaMKIIfix_Ca100.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_CaMKIIfix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "100"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_ctr_Ca010_timedn1000.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "010"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Timedn01000_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Timedn01000_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/Timedn01000_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Timedn01000_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PKAfix_Ca020.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PKAfix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "020"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_CaMKIIfix_Ca025.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_CaMKIIfix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "025"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_ctr_Ca040.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "040"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_Loop_PKAPP2A_Kcat2e0.g ===
+//genesis
+//cAMP1-10
+//Ca͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny071128_Loop2.g       /* main scripts */
+
+
+function Output(Cdk5_0)
+str Cdk5_0
+
+str save_directory = "simresults"
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat2e0_cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat2e0_Cdk5.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat2e0_D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat2e0_D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat2e0_D75.txt"}
+str OutputInhD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat2e0_InhD75.txt"}
+str OutputPKAfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat2e0_PKA.txt"}
+str OutputPP2ACafilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat2e0_PP2ACa.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/InpDAAlp006.txt ===
+0.01
+0.15758
+0.27706
+0.37248
+0.44731
+0.50462
+0.54706
+0.57694
+0.59627
+0.60679
+0.61
+0.60719
+0.59949
+0.58784
+0.57307
+0.55588
+0.53686
+0.51652
+0.49528
+0.47349
+
+
+=== Following is the header of samples/126098/Plos_model/InpDAAlp012.txt ===
+0.01
+0.30515
+0.54413
+0.73495
+0.88462
+0.99923
+1.0841
+1.1439
+1.1825
+1.2036
+1.21
+1.2044
+1.189
+1.1657
+1.1361
+1.1018
+1.0637
+1.023
+0.98055
+0.93698
+
+
+=== Following is the header of samples/126098/Plos_model/Script_Loop_InhPKA_Kd096.g ===
+//genesis
+//cAMP1-10
+//Ca͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny071128_Loop2.g       /* main scripts */
+
+
+function Output(Cdk5_0)
+str Cdk5_0
+
+str save_directory = "simresults"
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd096_cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd096_Cdk5.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd096_D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd096_D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd096_D75.txt"}
+str OutputInhD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd096_InhD75.txt"}
+str OutputPKAfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd096_PKA.txt"}
+str OutputPP2ACafilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd096_PP2ACa.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_ctr_Ca010_timedn500.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "010"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Timedn00500_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Timedn00500_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/Timedn00500_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Timedn00500_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP1fix_Ca090.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP1fix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "090"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_Loop_PP2AD75_Kcat1e_2.g ===
+//genesis
+//cAMP1-10
+//Ca͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny071128_Loop2.g       /* main scripts */
+
+
+function Output(Cdk5_0)
+str Cdk5_0
+
+str save_directory = "simresults"
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat1e_2_cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat1e_2_Cdk5.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat1e_2_D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat1e_2_D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat1e_2_D75.txt"}
+str OutputInhD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat1e_2_InhD75.txt"}
+str OutputPKAfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat1e_2_PKA.txt"}
+str OutputPP2ACafilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat1e_2_PP2ACa.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_ctr_Ca065.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "065"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PKAfix_Ca005.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PKAfix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "005"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/InpCaAlps040.txt ===
+0.06
+0.16765
+0.27316
+0.37655
+0.47787
+0.57714
+0.6744
+0.76966
+0.86297
+0.95436
+1.0438
+1.1315
+1.2172
+1.3012
+1.3834
+1.4638
+1.5425
+1.6195
+1.6948
+1.7684
+
+
+=== Following is the header of samples/126098/Plos_model/Script_Loop_PP2AD75_Kcat1e1.g ===
+//genesis
+//cAMP1-10
+//Ca͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny071128_Loop2.g       /* main scripts */
+
+
+function Output(Cdk5_0)
+str Cdk5_0
+
+str save_directory = "simresults"
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat1e1_cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat1e1_Cdk5.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat1e1_D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat1e1_D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat1e1_D75.txt"}
+str OutputInhD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat1e1_InhD75.txt"}
+str OutputPKAfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat1e1_PKA.txt"}
+str OutputPP2ACafilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat1e1_PP2ACa.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/InpCaAlps050.txt ===
+0.06
+0.19456
+0.32645
+0.45569
+0.58234
+0.70643
+0.82799
+0.94708
+1.0637
+1.1779
+1.2898
+1.3993
+1.5065
+1.6115
+1.7142
+1.8147
+1.9131
+2.0093
+2.1034
+2.1955
+
+
+=== Following is the header of samples/126098/Plos_model/Script_Loop_InhPKA_Kd240.g ===
+//genesis
+//cAMP1-10
+//Ca͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny071128_Loop2.g       /* main scripts */
+
+
+function Output(Cdk5_0)
+str Cdk5_0
+
+str save_directory = "simresults"
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd240_cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd240_Cdk5.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd240_D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd240_D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd240_D75.txt"}
+str OutputInhD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd240_InhD75.txt"}
+str OutputPKAfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd240_PKA.txt"}
+str OutputPP2ACafilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd240_PP2ACa.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_DKO_Ca.g ===
+//genesis
+//Câ000100܂
+//DA͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny_DKO.g       /* main scripts */
+
+
+function Output(Input_Ca)
+str Input_Ca
+
+str save_directory = "simresults"
+str InputCafilename = {"InpCaAlps" @ {Input_Ca} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_000cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_000Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_000CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_000D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_000D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_000D75.txt"}
+str OutputD137filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_000D137.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PKAfix_Ca030.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PKAfix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "030"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_CaMKIIfix_Ca035.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_CaMKIIfix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "035"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_ctr_Ca050.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "050"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/InpDAAlp016.txt ===
+0.01
+0.40354
+0.72217
+0.9766
+1.1762
+1.329
+1.4422
+1.5218
+1.5734
+1.6014
+1.61
+1.6025
+1.582
+1.5509
+1.5115
+1.4657
+1.415
+1.3607
+1.3041
+1.246
+
+
+=== Following is the header of samples/126098/Plos_model/InpDAAlp002.txt ===
+0.01
+0.059192
+0.099022
+0.13083
+0.15577
+0.17487
+0.18902
+0.19898
+0.20542
+0.20893
+0.21
+0.20906
+0.2065
+0.20261
+0.19769
+0.19196
+0.18562
+0.17884
+0.17176
+0.1645
+
+
+=== Following is the header of samples/126098/Plos_model/Script_ctr_Ca010_timedn100.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "010"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Timedn00100_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Timedn00100_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/Timedn00100_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Timedn00100_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP1fix_Ca.g ===
+//genesis
+//Câ000100܂
+//DA͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP1fix.g       /* main scripts */
+
+
+function Output(Input_Ca)
+str Input_Ca
+
+str save_directory = "simresults"
+str InputCafilename = {"InpCaAlps" @ {Input_Ca} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_000cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_000Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_000CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_000D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_000D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_000D75.txt"}
+str OutputD137filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_000D137.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP1fix_Ca080.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP1fix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "080"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_ctr_Ca075.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "075"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_ctr_Ca010_timedn50.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "010"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Timedn00050_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Timedn00050_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/Timedn00050_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Timedn00050_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Spiny_CaMKIIfix.g ===
+//genesis
+// kkit Version 11 flat dumpfile
+ 
+// Saved on Mon Jun 29 20:06:07 2009
+ 
+include kkit {argv 1}
+ 
+FASTDT = 5e-06
+SIMDT = 0.0002
+CONTROLDT = 1
+PLOTDT = 0.1
+MAXTIME = 10000
+TRANSIENT_TIME = 200
+VARIABLE_DT_FLAG = 0
+DEFAULT_VOL = 1e-18
+VERSION = 11.0
+setfield /file/modpath value /Users/nakano/genesis/
+kparms
+ 
+//genesis
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PKAfix_Ca015.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PKAfix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "015"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_CaMKIIfix_Ca010.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_CaMKIIfix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "010"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/InpCaAlps045.txt ===
+0.06
+0.18111
+0.2998
+0.41612
+0.53011
+0.64178
+0.75119
+0.85837
+0.96334
+1.0662
+1.1668
+1.2654
+1.3619
+1.4563
+1.5488
+1.6393
+1.7278
+1.8144
+1.8991
+1.982
+
+
+=== Following is the header of samples/126098/Plos_model/Spiny.g ===
+//genesis
+// kkit Version 11 flat dumpfile
+ 
+// Saved on Thu Jan 28 01:17:02 2010
+ 
+include kkit {argv 1}
+ 
+FASTDT = 5e-06
+SIMDT = 0.0002
+CONTROLDT = 1
+PLOTDT = 0.1
+MAXTIME = 1000
+TRANSIENT_TIME = 200
+VARIABLE_DT_FLAG = 0
+DEFAULT_VOL = 1e-18
+VERSION = 11.0
+setfield /file/modpath value /Users/nakano/genesis/
+kparms
+ 
+//genesis
+
+
+=== Following is the header of samples/126098/Plos_model/InpCaAlps090.txt ===
+0.06
+0.30221
+0.5396
+0.77225
+1.0002
+1.2236
+1.4424
+1.6567
+1.8667
+2.0723
+2.2736
+2.4708
+2.6638
+2.8527
+3.0376
+3.2185
+3.3956
+3.5688
+3.7382
+3.9039
+
+
+=== Following is the header of samples/126098/Plos_model/Script_Loop_PKAPP2A_Kcat2e_1.g ===
+//genesis
+//cAMP1-10
+//Ca͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny071128_Loop2.g       /* main scripts */
+
+
+function Output(Cdk5_0)
+str Cdk5_0
+
+str save_directory = "simresults"
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat2e_1_cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat2e_1_Cdk5.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat2e_1_D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat2e_1_D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat2e_1_D75.txt"}
+str OutputInhD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat2e_1_InhD75.txt"}
+str OutputPKAfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat2e_1_PKA.txt"}
+str OutputPP2ACafilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat2e_1_PP2ACa.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_DA005_DA.g ===
+//genesis
+//DÂ000100܂
+//Ca͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny_DA005.g       /* main scripts */
+
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp005_" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/DA005_000_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/DA005_000_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/DA005_000_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/DA005_000_" @ {Input_DA} @ "D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/DA005_000_" @ {Input_DA} @ "D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/DA005_000_" @ {Input_DA} @ "D75.txt"}
+str OutputD137filename = {"./" @ {save_directory} @ "/DA005_000_" @ {Input_DA} @ "D137.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_ctr_Ca010.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "010"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_Loop_PKAPP2A_Kcat5e0.g ===
+//genesis
+//cAMP1-10
+//Ca͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny071128_Loop2.g       /* main scripts */
+
+
+function Output(Cdk5_0)
+str Cdk5_0
+
+str save_directory = "simresults"
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat5e0_cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat5e0_Cdk5.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat5e0_D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat5e0_D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat5e0_D75.txt"}
+str OutputInhD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat5e0_InhD75.txt"}
+str OutputPKAfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat5e0_PKA.txt"}
+str OutputPP2ACafilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat5e0_PP2ACa.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/InpDAAlp015.txt ===
+0.01
+0.37894
+0.67766
+0.91619
+1.1033
+1.2465
+1.3526
+1.4274
+1.4757
+1.502
+1.51
+1.503
+1.4837
+1.4546
+1.4177
+1.3747
+1.3271
+1.2763
+1.2232
+1.1687
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PKAfix_Ca070.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PKAfix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "070"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_CaMKIIfix_Ca075.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_CaMKIIfix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "075"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/InpDAAlp014.txt ===
+0.01
+0.35434
+0.63315
+0.85578
+1.0304
+1.1641
+1.2631
+1.3329
+1.378
+1.4025
+1.41
+1.4034
+1.3855
+1.3583
+1.3238
+1.2837
+1.2393
+1.1919
+1.1423
+1.0915
+
+
+=== Following is the header of samples/126098/Plos_model/InpDAAlp000.txt ===
+0.01
+0.01
+0.01
+0.01
+0.01
+0.01
+0.01
+0.01
+0.01
+0.01
+0.01
+0.01
+0.01
+0.01
+0.01
+0.01
+0.01
+0.01
+0.01
+0.01
+
+
+=== Following is the header of samples/126098/Plos_model/Script_Loop_InhPKA_Kd021.g ===
+//genesis
+//cAMP1-10
+//Ca͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny071128_Loop2.g       /* main scripts */
+
+
+function Output(Cdk5_0)
+str Cdk5_0
+
+str save_directory = "simresults"
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd021_cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd021_Cdk5.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd021_D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd021_D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd021_D75.txt"}
+str OutputInhD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd021_InhD75.txt"}
+str OutputPKAfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd021_PKA.txt"}
+str OutputPP2ACafilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd021_PP2ACa.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PKAfix_Ca055.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PKAfix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "055"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_CaMKIIfix_Ca050.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_CaMKIIfix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "050"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP2Afix_Ca080.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP2Afix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "080"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_DA005_DA_Ca010.g ===
+//genesis
+//DÂ000100܂
+//Ca͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny_DA005.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "010"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp005_" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/DA005_" @ {Input_Ca} @ "_" @{Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/DA005_" @ {Input_Ca} @ "_" @{Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/DA005_" @ {Input_Ca} @ "_" @{Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/DA005_" @ {Input_Ca} @ "_" @{Input_DA} @ "D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/DA005_" @ {Input_Ca} @ "_" @{Input_DA} @ "D34.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/InpCaAlps085.txt ===
+0.06
+0.28875
+0.51296
+0.73268
+0.94798
+1.1589
+1.3656
+1.568
+1.7663
+1.9605
+2.1507
+2.3368
+2.5191
+2.6975
+2.8722
+3.043
+3.2103
+3.3738
+3.5339
+3.6904
+
+
+=== Following is the header of samples/126098/Plos_model/Script_DKO_Ca085.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_DKO.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "085"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PKAfix_DA.g ===
+//genesis
+//DÂ000100܂
+//Ca͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PKAfix.g       /* main scripts */
+
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PKAfix_000_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PKAfix_000_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PKAfix_000_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PKAfix_000_" @ {Input_DA} @ "D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/PKAfix_000_" @ {Input_DA} @ "D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/PKAfix_000_" @ {Input_DA} @ "D75.txt"}
+str OutputD137filename = {"./" @ {save_directory} @ "/PKAfix_000_" @ {Input_DA} @ "D137.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_ctr_Ca035.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "035"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP1fix_Ca095.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP1fix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "095"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_Loop_PKAPP2A_Kcat1e_1.g ===
+//genesis
+//cAMP1-10
+//Ca͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny071128_Loop2.g       /* main scripts */
+
+
+function Output(Cdk5_0)
+str Cdk5_0
+
+str save_directory = "simresults"
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat1e_1_cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat1e_1_Cdk5.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat1e_1_D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat1e_1_D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat1e_1_D75.txt"}
+str OutputInhD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat1e_1_InhD75.txt"}
+str OutputPKAfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat1e_1_PKA.txt"}
+str OutputPP2ACafilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat1e_1_PP2ACa.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_DA005_Ca.g ===
+//genesis
+//Câ000100܂
+//DA͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny_DA005.g       /* main scripts */
+
+
+function Output(Input_Ca)
+str Input_Ca
+
+str save_directory = "simresults"
+str InputCafilename = {"InpCaAlps" @ {Input_Ca} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/DA005_" @ {Input_Ca} @ "_000cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/DA005_" @ {Input_Ca} @ "_000Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/DA005_" @ {Input_Ca} @ "_000CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/DA005_" @ {Input_Ca} @ "_000D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/DA005_" @ {Input_Ca} @ "_000D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/DA005_" @ {Input_Ca} @ "_000D75.txt"}
+str OutputD137filename = {"./" @ {save_directory} @ "/DA005_" @ {Input_Ca} @ "_000D137.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_ctr_Ca100_timedn1000.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "100"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Timedn01000_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Timedn01000_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/Timedn01000_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Timedn01000_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_CaMKIIfix_Ca005.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_CaMKIIfix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "005"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_ctr_Ca060.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "060"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_Loop_PP2AD75_Kcat2e0.g ===
+//genesis
+//cAMP1-10
+//Ca͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny071128_Loop2.g       /* main scripts */
+
+
+function Output(Cdk5_0)
+str Cdk5_0
+
+str save_directory = "simresults"
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat2e0_cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat2e0_Cdk5.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat2e0_D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat2e0_D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat2e0_D75.txt"}
+str OutputInhD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat2e0_InhD75.txt"}
+str OutputPKAfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat2e0_PKA.txt"}
+str OutputPP2ACafilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat2e0_PP2ACa.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/InpDAAlp018.txt ===
+0.01
+0.45273
+0.81119
+1.0974
+1.3219
+1.4938
+1.6212
+1.7108
+1.7688
+1.8004
+1.81
+1.8016
+1.7785
+1.7435
+1.6992
+1.6476
+1.5906
+1.5296
+1.4658
+1.4005
+
+
+=== Following is the header of samples/126098/Plos_model/Script_Loop_PP2AD75_Kcat5e_1.g ===
+//genesis
+//cAMP1-10
+//Ca͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny071128_Loop2.g       /* main scripts */
+
+
+function Output(Cdk5_0)
+str Cdk5_0
+
+str save_directory = "simresults"
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat5e_1_cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat5e_1_Cdk5.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat5e_1_D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat5e_1_D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat5e_1_D75.txt"}
+str OutputInhD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat5e_1_InhD75.txt"}
+str OutputPKAfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat5e_1_PKA.txt"}
+str OutputPP2ACafilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat5e_1_PP2ACa.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PKAfix_Ca100.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PKAfix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "100"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PKAfix_Ca.g ===
+//genesis
+//Câ000100܂
+//DA͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PKAfix.g       /* main scripts */
+
+
+function Output(Input_Ca)
+str Input_Ca
+
+str save_directory = "simresults"
+str InputCafilename = {"InpCaAlps" @ {Input_Ca} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_000cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_000Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_000CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_000D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_000D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_000D75.txt"}
+str OutputD137filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_000D137.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_ctr_Ca045.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "045"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_Loop_InhPKA_Kd030.g ===
+//genesis
+//cAMP1-10
+//Ca͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny071128_Loop2.g       /* main scripts */
+
+
+function Output(Cdk5_0)
+str Cdk5_0
+
+str save_directory = "simresults"
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd030_cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd030_Cdk5.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd030_D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd030_D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd030_D75.txt"}
+str OutputInhD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd030_InhD75.txt"}
+str OutputPKAfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd030_PKA.txt"}
+str OutputPP2ACafilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd030_PP2ACa.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_DA020_DA_Ca010.g ===
+//genesis
+//DÂ000100܂
+//Ca͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny_DA020.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "010"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp020_" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/DA020_" @ {Input_Ca} @ "_" @{Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/DA020_" @ {Input_Ca} @ "_" @{Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/DA020_" @ {Input_Ca} @ "_" @{Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/DA020_" @ {Input_Ca} @ "_" @{Input_DA} @ "D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/DA020_" @ {Input_Ca} @ "_" @{Input_DA} @ "D34.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_Loop_PKAPP2A_Kcat1e1.g ===
+//genesis
+//cAMP1-10
+//Ca͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny071128_Loop2.g       /* main scripts */
+
+
+function Output(Cdk5_0)
+str Cdk5_0
+
+str save_directory = "simresults"
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat1e1_cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat1e1_Cdk5.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat1e1_D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat1e1_D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat1e1_D75.txt"}
+str OutputInhD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat1e1_InhD75.txt"}
+str OutputPKAfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat1e1_PKA.txt"}
+str OutputPP2ACafilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat1e1_PP2ACa.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PKAfix_Ca025.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PKAfix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "025"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_CaMKIIfix_Ca020.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_CaMKIIfix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "020"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/InpCaAlps060.txt ===
+0.06
+0.22147
+0.37973
+0.53483
+0.68681
+0.83571
+0.98159
+1.1245
+1.2645
+1.4015
+1.5358
+1.6672
+1.7958
+1.9218
+2.0451
+2.1657
+2.2837
+2.3992
+2.5121
+2.6226
+
+
+=== Following is the header of samples/126098/Plos_model/Script_DKO_Ca090.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_DKO.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "090"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_ctr_Ca020.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "020"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PKAfix_Ca040.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PKAfix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "040"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_CaMKIIfix_Ca045.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_CaMKIIfix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "045"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP2Afix_Ca095.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP2Afix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "095"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/InpCaAlps100.txt ===
+0.06
+0.32912
+0.59289
+0.85138
+1.1047
+1.3529
+1.596
+1.8342
+2.0674
+2.2959
+2.5196
+2.7386
+2.9531
+3.163
+3.3684
+3.5695
+3.7662
+3.9586
+4.1469
+4.331
+
+
+=== Following is the header of samples/126098/Plos_model/Script_DKO_DA.g ===
+//genesis
+//DÂ000100܂
+//Ca͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny_DKO.g       /* main scripts */
+
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/DKO000_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/DKO000_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/DKO000_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/DKO000_" @ {Input_DA} @ "D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/DKO000_" @ {Input_DA} @ "D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/DKO000_" @ {Input_DA} @ "D75.txt"}
+str OutputD137filename = {"./" @ {save_directory} @ "/DKO000_" @ {Input_DA} @ "D137.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP1fix_DA.g ===
+//genesis
+//DÂ000100܂
+//Ca͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP1fix.g       /* main scripts */
+
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP1fix_000_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP1fix_000_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP1fix_000_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP1fix_000_" @ {Input_DA} @ "D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/PP1fix_000_" @ {Input_DA} @ "D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/PP1fix_000_" @ {Input_DA} @ "D75.txt"}
+str OutputD137filename = {"./" @ {save_directory} @ "/PP1fix_000_" @ {Input_DA} @ "D137.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Spiny_PP1fix.g ===
+//genesis
+// kkit Version 11 flat dumpfile
+ 
+// Saved on Mon Jun 29 20:04:58 2009
+ 
+include kkit {argv 1}
+ 
+FASTDT = 5e-06
+SIMDT = 0.0002
+CONTROLDT = 1
+PLOTDT = 0.1
+MAXTIME = 10000
+TRANSIENT_TIME = 200
+VARIABLE_DT_FLAG = 0
+DEFAULT_VOL = 1e-18
+VERSION = 11.0
+setfield /file/modpath value /Users/nakano/genesis/
+kparms
+ 
+//genesis
+
+
+=== Following is the header of samples/126098/Plos_model/Script_ctr_Ca100_timedn500.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "100"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Timedn00500_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Timedn00500_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/Timedn00500_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Timedn00500_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PKAfix_Ca065.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PKAfix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "065"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_CaMKIIfix_Ca060.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_CaMKIIfix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "060"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Spiny_PP2Afix.g ===
+//genesis
+// kkit Version 11 flat dumpfile
+ 
+// Saved on Mon Jun 29 20:05:20 2009
+ 
+include kkit {argv 1}
+ 
+FASTDT = 5e-06
+SIMDT = 0.0002
+CONTROLDT = 1
+PLOTDT = 0.1
+MAXTIME = 10000
+TRANSIENT_TIME = 200
+VARIABLE_DT_FLAG = 0
+DEFAULT_VOL = 1e-18
+VERSION = 11.0
+setfield /file/modpath value /Users/nakano/genesis/
+kparms
+ 
+//genesis
+
+
+=== Following is the header of samples/126098/Plos_model/Script_ctr_Ca005.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "005"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/InpCaAlps075.txt ===
+0.06
+0.26184
+0.45967
+0.65354
+0.84351
+1.0296
+1.212
+1.3906
+1.5656
+1.7369
+1.9047
+2.069
+2.2298
+2.3872
+2.5413
+2.6921
+2.8396
+2.984
+3.1252
+3.2633
+
+
+=== Following is the header of samples/126098/Plos_model/InpCaAlps065.txt ===
+0.06
+0.23493
+0.40638
+0.5744
+0.73904
+0.90036
+1.0584
+1.2132
+1.3648
+1.5133
+1.6587
+1.8011
+1.9405
+2.0769
+2.2105
+2.3412
+2.469
+2.5941
+2.7165
+2.8362
+
+
+=== Following is the header of samples/126098/Plos_model/Script_ctr_Ca100_timedn100.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "100"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Timedn00100_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Timedn00100_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/Timedn00100_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Timedn00100_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_Loop_InhPKA_Kd024.g ===
+//genesis
+//cAMP1-10
+//Ca͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny071128_Loop2.g       /* main scripts */
+
+
+function Output(Cdk5_0)
+str Cdk5_0
+
+str save_directory = "simresults"
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd024_cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd024_Cdk5.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd024_D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd024_D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd024_D75.txt"}
+str OutputInhD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd024_InhD75.txt"}
+str OutputPKAfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd024_PKA.txt"}
+str OutputPP2ACafilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd024_PP2ACa.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_DKO_Ca080.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_DKO.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "080"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_ctr_Ca030.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "030"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PKAfix_Ca050.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PKAfix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "050"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_CaMKIIfix_Ca055.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_CaMKIIfix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "055"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP2Afix_Ca085.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP2Afix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "085"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_Loop_PP2AD75_Kcat5e0.g ===
+//genesis
+//cAMP1-10
+//Ca͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny071128_Loop2.g       /* main scripts */
+
+
+function Output(Cdk5_0)
+str Cdk5_0
+
+str save_directory = "simresults"
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat5e0_cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat5e0_Cdk5.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat5e0_D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat5e0_D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat5e0_D75.txt"}
+str OutputInhD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat5e0_InhD75.txt"}
+str OutputPKAfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat5e0_PKA.txt"}
+str OutputPP2ACafilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat5e0_PP2ACa.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_Loop_InhPKA_Kd124.g ===
+//genesis
+//cAMP1-10
+//Ca͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny071128_Loop2.g       /* main scripts */
+
+
+function Output(Cdk5_0)
+str Cdk5_0
+
+str save_directory = "simresults"
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd124_cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd124_Cdk5.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd124_D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd124_D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd124_D75.txt"}
+str OutputInhD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd124_InhD75.txt"}
+str OutputPKAfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd124_PKA.txt"}
+str OutputPP2ACafilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd124_PP2ACa.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PKAfix_Ca075.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PKAfix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "075"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_ctr_Ca010_timedp50.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "010"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Timedp00050_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Timedp00050_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/Timedp00050_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Timedp00050_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_CaMKIIfix_Ca070.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_CaMKIIfix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "070"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_ctr_Ca015.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "015"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/InpCaAlps070.txt ===
+0.06
+0.24839
+0.43302
+0.61397
+0.79128
+0.965
+1.1352
+1.3019
+1.4652
+1.6251
+1.7817
+1.935
+2.0852
+2.2321
+2.3759
+2.5166
+2.6543
+2.789
+2.9208
+3.0497
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP1fix_Ca085.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP1fix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "085"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_Loop_InhPKA_Kd120.g ===
+//genesis
+//cAMP1-10
+//Ca͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny071128_Loop2.g       /* main scripts */
+
+
+function Output(Cdk5_0)
+str Cdk5_0
+
+str save_directory = "simresults"
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd120_cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd120_Cdk5.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd120_D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd120_D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd120_D75.txt"}
+str OutputInhD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd120_InhD75.txt"}
+str OutputPKAfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd120_PKA.txt"}
+str OutputPP2ACafilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd120_PP2ACa.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP2Afix_Ca.g ===
+//genesis
+//Câ000100܂
+//DA͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP2Afix.g       /* main scripts */
+
+
+function Output(Input_Ca)
+str Input_Ca
+
+str save_directory = "simresults"
+str InputCafilename = {"InpCaAlps" @ {Input_Ca} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_000cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_000Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_000CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_000D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_000D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_000D75.txt"}
+str OutputD137filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_000D137.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PKAfix_Ca010.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PKAfix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "010"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_CaMKIIfix_Ca015.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_CaMKIIfix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "015"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/InpDAAlp020.txt ===
+0.01
+0.50192
+0.90022
+1.2183
+1.4677
+1.6587
+1.8002
+1.8998
+1.9642
+1.9993
+2.01
+2.0006
+1.975
+1.9361
+1.8869
+1.8296
+1.7662
+1.6984
+1.6276
+1.555
+
+
+=== Following is the header of samples/126098/Plos_model/Script_ctr_Ca070.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "070"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/InpDAAlp008.txt ===
+0.01
+0.20677
+0.36609
+0.4933
+0.59308
+0.66949
+0.72608
+0.76592
+0.7917
+0.80572
+0.81
+0.80626
+0.79598
+0.78045
+0.76076
+0.73784
+0.71248
+0.68536
+0.65703
+0.62799
+
+
+=== Following is the header of samples/126098/Plos_model/Script_CaMKIIfix_Ca.g ===
+//genesis
+//Câ000100܂
+//DA͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny_CaMKIIfix.g       /* main scripts */
+
+
+function Output(Input_Ca)
+str Input_Ca
+
+str save_directory = "simresults"
+str InputCafilename = {"InpCaAlps" @ {Input_Ca} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_000cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_000Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_000CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_000D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_000D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_000D75.txt"}
+str OutputD137filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_000D137.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_ctr_Ca055.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "055"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PKAfix_Ca035.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PKAfix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "035"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_CaMKIIfix_Ca030.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_CaMKIIfix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "030"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Readme.txt ===
+MAIN FILE: Spiny.g
+Script files: Script_*.g
+
+Input files:  
+Ca input: InpCaAlpsxxx.txt
+DA input: InpDAAlpxxx.txt
+where xxx is a amplitude of the input.
+
+
+To reproduce figures in the paper, please run script files as below.
+
+.g files are the file format of GENESIS/kinetikit
+.cps files are the file format of COPASI
+
+
+Fig5
+Script_ctr_Ca010.g
+Script_ctr_Ca100.g
+Script_ctr_DA.g
+
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP2Afix_Ca075.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP2Afix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "075"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_DKO_Ca070.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_DKO.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "070"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP1fix_Ca035.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP1fix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "035"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_Loop_PKAPP2A_Kcat1e2.g ===
+//genesis
+//cAMP1-10
+//Ca͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny071128_Loop2.g       /* main scripts */
+
+
+function Output(Cdk5_0)
+str Cdk5_0
+
+str save_directory = "simresults"
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat1e2_cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat1e2_Cdk5.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat1e2_D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat1e2_D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat1e2_D75.txt"}
+str OutputInhD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat1e2_InhD75.txt"}
+str OutputPKAfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat1e2_PKA.txt"}
+str OutputPP2ACafilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat1e2_PP2ACa.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_Loop_PKAPP2A_Kcat1e_2.g ===
+//genesis
+//cAMP1-10
+//Ca͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny071128_Loop2.g       /* main scripts */
+
+
+function Output(Cdk5_0)
+str Cdk5_0
+
+str save_directory = "simresults"
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat1e_2_cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat1e_2_Cdk5.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat1e_2_D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat1e_2_D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat1e_2_D75.txt"}
+str OutputInhD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat1e_2_InhD75.txt"}
+str OutputPKAfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat1e_2_PKA.txt"}
+str OutputPP2ACafilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PKAPP2A_Kcat1e_2_PP2ACa.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_DKO_Ca055.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_DKO.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "055"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_long_Ca010.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "010"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults_Ca010"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Long_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Long_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/Long_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Long_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PKAfix_Ca085.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PKAfix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "085"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_CaMKIIfix_Ca080.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_CaMKIIfix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "080"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP2Afix_Ca050.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP2Afix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "050"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Spiny071128_Loop2.g ===
+//genesis
+// kkit Version 11 flat dumpfile
+ 
+// Saved on Mon Dec  3 22:41:40 2007
+ 
+include kkit {argv 1}
+ 
+FASTDT = 5e-06
+SIMDT = 0.0002
+CONTROLDT = 1
+PLOTDT = 0.1
+MAXTIME = 1000
+TRANSIENT_TIME = 200
+VARIABLE_DT_FLAG = 0
+DEFAULT_VOL = 1e-18
+VERSION = 11.0
+setfield /file/modpath value /Users/nakano/genesis/
+kparms
+ 
+//genesis
+
+
+=== Following is the header of samples/126098/Plos_model/InpCaAlps015.txt ===
+0.06
+0.10037
+0.13993
+0.17871
+0.2167
+0.25393
+0.2904
+0.32612
+0.36111
+0.39538
+0.42894
+0.4618
+0.49396
+0.52545
+0.55626
+0.58642
+0.61593
+0.6448
+0.67303
+0.70065
+
+
+=== Following is the header of samples/126098/Plos_model/Script_DA020_DA.g ===
+//genesis
+//DÂ000100܂
+//Ca͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny_DA020.g       /* main scripts */
+
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp020_" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/DA020_000_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/DA020_000_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/DA020_000_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/DA020_000_" @ {Input_DA} @ "D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/DA020_000_" @ {Input_DA} @ "D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/DA020_000_" @ {Input_DA} @ "D75.txt"}
+str OutputD137filename = {"./" @ {save_directory} @ "/DA020_000_" @ {Input_DA} @ "D137.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP1fix_Ca010.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP1fix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "010"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_ctr_Ca080.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "080"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_ctr_Ca100_timedp100.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "100"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Timedp00100_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Timedp00100_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/Timedp00100_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Timedp00100_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_Loop_InhPKA_Kd012.g ===
+//genesis
+//cAMP1-10
+//Ca͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny071128_Loop2.g       /* main scripts */
+
+
+function Output(Cdk5_0)
+str Cdk5_0
+
+str save_directory = "simresults"
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd012_cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd012_Cdk5.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd012_D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd012_D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd012_D75.txt"}
+str OutputInhD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd012_InhD75.txt"}
+str OutputPKAfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd012_PKA.txt"}
+str OutputPP2ACafilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd012_PP2ACa.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_DKO_Ca030.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_DKO.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "030"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_DA000_DA.g ===
+//genesis
+//DÂ000100܂
+//Ca͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny_DA000.g       /* main scripts */
+
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp000_" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/DA000_000_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/DA000_000_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/DA000_000_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/DA000_000_" @ {Input_DA} @ "D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/DA000_000_" @ {Input_DA} @ "D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/DA000_000_" @ {Input_DA} @ "D75.txt"}
+str OutputD137filename = {"./" @ {save_directory} @ "/DA000_000_" @ {Input_DA} @ "D137.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Spiny_DA050.g ===
+//genesis
+// kkit Version 11 flat dumpfile
+ 
+// Saved on Wed Jul  1 08:32:23 2009
+ 
+include kkit {argv 1}
+ 
+FASTDT = 5e-06
+SIMDT = 0.0002
+CONTROLDT = 1
+PLOTDT = 0.1
+MAXTIME = 10000
+TRANSIENT_TIME = 200
+VARIABLE_DT_FLAG = 0
+DEFAULT_VOL = 1e-18
+VERSION = 11.0
+setfield /file/modpath value /Users/nakano/genesis/
+kparms
+ 
+//genesis
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP2Afix_Ca035.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP2Afix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "035"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_Loop_InhPKA_Kd018.g ===
+//genesis
+//cAMP1-10
+//Ca͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny071128_Loop2.g       /* main scripts */
+
+
+function Output(Cdk5_0)
+str Cdk5_0
+
+str save_directory = "simresults"
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd018_cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd018_Cdk5.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd018_D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd018_D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd018_D75.txt"}
+str OutputInhD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd018_InhD75.txt"}
+str OutputPKAfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd018_PKA.txt"}
+str OutputPP2ACafilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd018_PP2ACa.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP1fix_Ca075.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP1fix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "075"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_CDK5CK1_Ca.g ===
+//genesis
+//Câ000100܂
+//DA͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny_CK1Cdk5Cut.g       /* main scripts */
+
+
+function Output(Input_Ca)
+str Input_Ca
+
+str save_directory = "simresults"
+str InputCafilename = {"InpCaAlps" @ {Input_Ca} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/CK1Cdk5Cut_" @ {Input_Ca} @ "_000cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/CK1Cdk5Cut_" @ {Input_Ca} @ "_000Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/CK1Cdk5Cut_" @ {Input_Ca} @ "_000CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/CK1Cdk5Cut_" @ {Input_Ca} @ "_000D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/CK1Cdk5Cut_" @ {Input_Ca} @ "_000D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/CK1Cdk5Cut_" @ {Input_Ca} @ "_000D75.txt"}
+str OutputD137filename = {"./" @ {save_directory} @ "/CK1Cdk5Cut_" @ {Input_Ca} @ "_000D137.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP2Afix_Ca010.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP2Afix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "010"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Spiny_CK1Cdk5Cut.g ===
+//genesis
+// kkit Version 11 flat dumpfile
+ 
+// Saved on Tue Jun 30 09:33:58 2009
+ 
+include kkit {argv 1}
+ 
+FASTDT = 5e-06
+SIMDT = 0.0002
+CONTROLDT = 1
+PLOTDT = 0.1
+MAXTIME = 10000
+TRANSIENT_TIME = 200
+VARIABLE_DT_FLAG = 0
+DEFAULT_VOL = 1e-18
+VERSION = 11.0
+setfield /file/modpath value /Users/nakano/genesis/
+kparms
+ 
+//genesis
+
+
+=== Following is the header of samples/126098/Plos_model/Script_DKO_Ca015.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_DKO.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "015"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP1fix_Ca050.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP1fix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "050"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Spiny_PKAfix.g ===
+//genesis
+// kkit Version 11 flat dumpfile
+ 
+// Saved on Mon Jun 29 20:04:39 2009
+ 
+include kkit {argv 1}
+ 
+FASTDT = 5e-06
+SIMDT = 0.0002
+CONTROLDT = 1
+PLOTDT = 0.1
+MAXTIME = 10000
+TRANSIENT_TIME = 200
+VARIABLE_DT_FLAG = 0
+DEFAULT_VOL = 1e-18
+VERSION = 11.0
+setfield /file/modpath value /Users/nakano/genesis/
+kparms
+ 
+//genesis
+
+
+=== Following is the header of samples/126098/Plos_model/Script_ctr_Ca090.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "090"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_DKO_Ca020.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_DKO.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "020"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP2Afix_Ca025.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP2Afix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "025"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_Loop_PP2AD75_Kcat2e_1.g ===
+//genesis
+//cAMP1-10
+//Ca͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny071128_Loop2.g       /* main scripts */
+
+
+function Output(Cdk5_0)
+str Cdk5_0
+
+str save_directory = "simresults"
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat2e_1_cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat2e_1_Cdk5.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat2e_1_D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat2e_1_D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat2e_1_D75.txt"}
+str OutputInhD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat2e_1_InhD75.txt"}
+str OutputPKAfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat2e_1_PKA.txt"}
+str OutputPP2ACafilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_PP2AD75_Kcat2e_1_PP2ACa.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP1fix_Ca065.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP1fix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "065"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP2Afix_Ca100.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP2Afix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "100"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_DKO_Ca005.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_DKO.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "005"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_ctr_DA.g ===
+//genesis
+//DÂ000100܂
+//Ca͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny.g       /* main scripts */
+
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/000_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/000_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/000_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/000_" @ {Input_DA} @ "D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/000_" @ {Input_DA} @ "D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/000_" @ {Input_DA} @ "D75.txt"}
+str OutputD137filename = {"./" @ {save_directory} @ "/000_" @ {Input_DA} @ "D137.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP1fix_Ca040.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP1fix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "040"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_ctr_Ca100_timedp1000.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "100"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Timedp01000_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Timedp01000_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/Timedp01000_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Timedp01000_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_ctr_Ca100_timedp500.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "100"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Timedp00500_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Timedp00500_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/Timedp00500_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Timedp00500_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP1fix_Ca100.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP1fix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "100"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/InpCaAlps005.txt ===
+0.06
+0.073456
+0.086645
+0.099569
+0.11223
+0.12464
+0.1368
+0.14871
+0.16037
+0.17179
+0.18298
+0.19393
+0.20465
+0.21515
+0.22542
+0.23547
+0.24531
+0.25493
+0.26434
+0.27355
+
+
+=== Following is the header of samples/126098/Plos_model/Spiny_DA000.g ===
+//genesis
+// kkit Version 11 flat dumpfile
+ 
+// Saved on Tue Jun 30 12:45:07 2009
+ 
+include kkit {argv 1}
+ 
+FASTDT = 5e-06
+SIMDT = 0.0002
+CONTROLDT = 1
+PLOTDT = 0.1
+MAXTIME = 10000
+TRANSIENT_TIME = 200
+VARIABLE_DT_FLAG = 0
+DEFAULT_VOL = 1e-18
+VERSION = 11.0
+setfield /file/modpath value /Users/nakano/genesis/
+kparms
+ 
+//genesis
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP2Afix_Ca065.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP2Afix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "065"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_DKO_Ca060.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_DKO.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "060"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP1fix_Ca025.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP1fix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "025"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP1fix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_Loop_InhPKA_Kd180.g ===
+//genesis
+//cAMP1-10
+//Ca͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny071128_Loop2.g       /* main scripts */
+
+
+function Output(Cdk5_0)
+str Cdk5_0
+
+str save_directory = "simresults"
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd180_cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd180_Cdk5.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd180_D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd180_D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd180_D75.txt"}
+str OutputInhD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd180_InhD75.txt"}
+str OutputPKAfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd180_PKA.txt"}
+str OutputPP2ACafilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd180_PP2ACa.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_Loop_InhPKA_Kd048.g ===
+//genesis
+//cAMP1-10
+//Ca͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny071128_Loop2.g       /* main scripts */
+
+
+function Output(Cdk5_0)
+str Cdk5_0
+
+str save_directory = "simresults"
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd048_cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd048_Cdk5.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd048_D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd048_D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd048_D75.txt"}
+str OutputInhD75filename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd048_InhD75.txt"}
+str OutputPKAfilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd048_PKA.txt"}
+str OutputPP2ACafilename = {"./" @ {save_directory} @ "/Loop_Cdk50_" @ {Cdk5_0} @ "_InhPKA_Kd048_PP2ACa.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_DKO_Ca045.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_DKO.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "045"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/DKO" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PKAfix_Ca095.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PKAfix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "095"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PKAfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_CaMKIIfix_Ca090.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_CaMKIIfix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "090"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/CaMKIIfix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_PP2Afix_Ca040.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny_PP2Afix.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "040"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/PP2Afix_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_long_Ca.g ===
+//genesis
+//Câ000100܂
+//DA͂Ȃ
+
+//kinetikitt@C̓ǂݍ
+include Spiny.g       /* main scripts */
+
+
+function Output(Input_Ca)
+str Input_Ca
+
+str save_directory = "simresults_Ca"
+str InputCafilename = {"InpCaAlps" @ {Input_Ca} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Long_" @ {Input_Ca} @ "_000cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Long_" @ {Input_Ca} @ "_000Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/Long_" @ {Input_Ca} @ "_000CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Long_" @ {Input_Ca} @ "_000D.txt"}
+str OutputD34filename = {"./" @ {save_directory} @ "/Long_" @ {Input_Ca} @ "_000D34.txt"}
+str OutputD75filename = {"./" @ {save_directory} @ "/Long_" @ {Input_Ca} @ "_000D75.txt"}
+str OutputD137filename = {"./" @ {save_directory} @ "/Long_" @ {Input_Ca} @ "_000D137.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Script_ctr_Ca100_timedn50.g ===
+//genesis
+//DA000100܂
+//Ca͎w
+
+
+//kinetikitt@C̓ǂݍ
+include Spiny.g       /* main scripts */
+
+//Ca͋x̎w
+str Input_Ca = "100"
+
+function Output(Input_DA)
+str Input_DA
+
+str save_directory = "simresults"
+str InputDAfilename = {"InpDAAlp" @ {Input_DA} @ ".txt"}
+str OutputcAMPfilename = {"./" @ {save_directory} @ "/Timedn00050_" @ {Input_Ca} @ "_" @ {Input_DA} @ "cAMP.txt"}
+str OutputCdk5filename = {"./" @ {save_directory} @ "/Timedn00050_" @ {Input_Ca} @ "_" @ {Input_DA} @ "Cdk5.txt"}
+str OutputCK1filename = {"./" @ {save_directory} @ "/Timedn00050_" @ {Input_Ca} @ "_" @ {Input_DA} @ "CK1.txt"}
+str OutputDfilename = {"./" @ {save_directory} @ "/Timedn00050_" @ {Input_Ca} @ "_" @ {Input_DA} @ "D.txt"}
+
+
+=== Following is the header of samples/126098/Plos_model/Spiny_DA100.g ===
+//genesis
+// kkit Version 11 flat dumpfile
+ 
+// Saved on Wed Jul  1 08:31:14 2009
+ 
+include kkit {argv 1}
+ 
+FASTDT = 5e-06
+SIMDT = 0.0002
+CONTROLDT = 1
+PLOTDT = 0.1
+MAXTIME = 10000
+TRANSIENT_TIME = 200
+VARIABLE_DT_FLAG = 0
+DEFAULT_VOL = 1e-18
+VERSION = 11.0
+setfield /file/modpath value /Users/nakano/genesis/
+kparms
+ 
+//genesis
+
+
+=== Following is the header of samples/126098/Plos_model/InpCaAlps010.txt ===
+0.06
+0.086912
+0.11329
+0.13914
+0.16447
+0.18929
+0.2136
+0.23742
+0.26074
+0.28359
+0.30596
+0.32786
+0.34931
+0.3703
+0.39084
+0.41095
+0.43062
+0.44986
+0.46869
+0.4871
+
+

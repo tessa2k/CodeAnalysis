@@ -1,0 +1,135 @@
+=== Following is the header of samples/169208/YoungEtAl2013/MATLAB files/velsetupfirst.m ===
+script
+
+%   This script formats the 2 parameter velocity data into two
+%   vectors with par1 and par2 values and a matrix with (i, j)th
+%   element being the conduction velocity resulting from the ith
+%   par1 value and jth par2 value.  Use this script only once.
+%   Use velsetupnext.m for additional data for the same plot.
+%   To use, first load the vel(par1, par2) data from a dat file
+%   into the matrix 'data' with the following command:
+%   data = load('location/filename.dat').  Next, use the command:
+%   velsetupfirst
+
+%   E.g.
+%   data = load('VELOCITY-141106_myeL_gap_1.dat');
+%   velsetupfirst
+%   data = load('VELOCITY-141106_myeL_gap_2.dat');
+%   velsetupnext
+
+numofrows = size(data, 1);
+
+
+
+=== Following is the header of samples/169208/YoungEtAl2013/MATLAB files/velsetupnext.m ===
+script
+
+%   Run this to include additional 2 parameter velocity data.
+%   Thus, the data generated from velsetupfirst.m is updated.
+%   Run after velsetupfirst.m and follow the same instructions,
+%   except use command: velsetupnext instead.
+%   velsetupfirst.m should only be used once, but velsetupnext.m
+%   can be used as many times as needed after velsetupfirst.m
+%   has been used.
+
+%   E.g.
+%   data = load('VELOCITY-141106_myeL_gap_1.dat');
+%   velsetupfirst
+%   data = load('VELOCITY-141106_myeL_gap_1.dat');
+%   velsetupnext
+
+numofdata = size(data, 1);
+
+for i = 1:numofdata
+    newpar1 = data(i, 1);
+
+
+=== Following is the header of samples/169208/YoungEtAl2013/MATLAB files/readme.txt ===
+After the data from NEURON is generated, these .m files can be used with MATLAB to 
+open and sort these files into more useful vectors and matrices.  It is recommended 
+that the generated .dat files be in the same directory or in a subdirectory as the 
+.m files.  Instructions for their use are in comments in their respective codes.
+
+velsetupfirst.m and velsetupnext.m are used to sort the 2-parameter velocity data.
+voltsetup.m is used to sort the voltage data.
+
+=== Following is the header of samples/169208/YoungEtAl2013/MATLAB files/voltsetup.m ===
+function [pos, time, volt] = voltsetup(filename)
+
+%   This script formats the voltage data from filename.dat (string)
+%   Outputs are:
+%   pos = n x 1 vector containing the positions, where first position is
+%   defined to be at 0
+%   time = m x 1 vector containing the times, where the first time is
+%   defined to be at 0
+%   volt = m x n matrix where volt(i, j) is the voltage of position n at
+%   time m
+
+%   E.g.
+%   [posI1, timeI1, voltI1] = voltsetup('INTVOLTAGE-150108_gap_1.dat');
+%   [posI2, timeI2, voltI2] = voltsetup('INTVOLTAGE-150108_gap_2.dat');
+%   [posE1, timeE1, voltE1] = voltsetup('EXTVOLTAGE-150108_gap_1.dat');
+%   [posE2, timeE2, voltE2] = voltsetup('EXTVOLTAGE-150108_gap_2.dat');
+
+ data = load(filename);
+ pos = data(1, 2:end);
+ pos = pos';
+
+
+=== Following is the header of samples/169208/YoungEtAl2013/readme.txt ===
+This is a readme for the model and data analysis files for the paper:
+
+Young RG, Castelfranco AM, Hartline DK (2013) The "Lillie transition":
+models of the onset of saltatory conduction in myelinating axons. J
+Comput Neurosci 34:533-46
+
+Please see the readme's in the NEURON and MATLAB folders.  You will
+need to run NEURON first, then MATLAB.
+
+
+=== Following is the header of samples/169208/YoungEtAl2013/NEURON files/voltage/readme.txt ===
+-----VOLTAGE-----
+
+Attached are five files related to obtaining voltages.  With these, you should be 
+able to load our base neuron, change most of its parameters (e.g. tighten delta, 
+the submyelin gap size), and record the voltages of a certain region of the neuron. 
+ The files with INTVOLTAGE in their names record trans-axolemmal voltages, while 
+the files with EXTVOLTAGE in their names record trans-fiber voltages.
+
+Base neuron:
+ NEURON_001-130308.hoc
+Algorithms:
+ ALG_PARCHA-130523.hoc ("PARameter CHAnge")
+ ALG_INTVOLTAGE-150108.hoc
+ ALG_EXTVOLTAGE-150108.hoc
+Batch file:
+ BATCH_INTVOLTAGE-150108_gap.hoc
+ BATCH_EXTVOLTAGE-150108_gap.hoc
+
+BATCH_INTVOLTAGE-150108_gap.hoc and BATCH_EXTVOLTAGE-150108_gap.hoc are the only 
+HOC file that should be executed.  Both will load the base neuron and the parameter 
+
+
+=== Following is the header of samples/169208/YoungEtAl2013/NEURON files/velocity/readme.txt ===
+-----VELOCITY-----
+
+Attached are six files related to obtaining conduction velocities.  With these,
+you should be able to load our base neuron, change most of its parameters (e.g.
+tighten delta, the submyelin gap size), and record the resulting conduction
+velocities.
+
+Base neuron:
+ NEURON_001-130308.hoc
+Algorithms:
+ ALG_PARCHA-130523.hoc ("PARameter CHAnge")
+ ALG_VELOCITY-130308.hoc
+Batch file:
+ BATCH_VELOCITY-141106_myeL_gap_1.hoc
+ BATCH_VELOCITY-141106_myeL_gap_2.hoc
+Other:
+ ALG_PARCHA-130523.pdf (Supplementary documentation for the PARCHA algorithm)
+
+BATCH_VELOCITY-141106_myeL_gap_1.hoc and BATCH_VELOCITY-141106_myeL_gap_2.hoc are 
+the only HOC files that should be executed. They will load the base neuron, the two 
+
+

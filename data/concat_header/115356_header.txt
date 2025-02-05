@@ -1,0 +1,391 @@
+=== Following is the header of samples/115356/RoyeckEtAl2008/km.mod ===
+
+: K-Strom, I_M, Warman 94
+: eK  Martina 
+: T-dependence. from Halliwell, Adams 82
+
+UNITS 
+{
+        (mA) = (milliamp)
+        (mV) = (millivolt)
+	(S) = (siemens)
+}
+ 
+NEURON {
+        SUFFIX KM
+	USEION k READ ek WRITE ik
+        RANGE gMbar, gM, timesTau, plusTau
+        GLOBAL uinf, utau
+}
+ 
+PARAMETER 
+
+
+=== Following is the header of samples/115356/RoyeckEtAl2008/KCT.mod ===
+: K-Strom, I_CT,  Stacey, Durand 2000
+: eK from Martina
+
+UNITS 
+{
+        (molar) = (1/liter)
+	(mM) = (millimolar)
+        (mA) = (milliamp)
+        (mV) = (millivolt)
+	(S) = (siemens)
+}
+ 
+NEURON {
+        SUFFIX KCT
+	USEION ca READ cai
+	USEION k WRITE ik
+        RANGE gCTbar, gCT
+        GLOBAL cinf, dinf, dtau, ctau
+}
+ 
+
+
+=== Following is the header of samples/115356/RoyeckEtAl2008/NaIn.mod ===
+TITLE naIn
+: intermedaite inactivating Na current  
+: Inakctivation from Magistretti and Alonso 1999, J. Gen. Physiol.
+
+NEURON {
+	SUFFIX naIn
+	USEION na READ ena WRITE ina
+	RANGE  gbar, thegna, htau
+	GLOBAL minf, hinf :, mtau, 
+}
+
+PARAMETER {
+	gbar = .0052085   	(mho/cm2)
+	
+	:q10m=3.1
+	:q10h=2.3
+	
+	mtau = 1 (ms)
+	:htau = 5 (ms)
+	
+
+
+=== Following is the header of samples/115356/RoyeckEtAl2008/CAT.mod ===
+TITLE T-calcium channel
+: gate h, taus Kloeckner 99 and Chemin 2002; 
+: gate  m: Lee, Dand 99
+: q10s  Coulter 89
+
+UNITS {
+	(mA) = (milliamp)
+	(mV) = (millivolt)
+
+: hier eigene Befehle
+        (molar) = (1/liter)
+        (mM) = (millimolar)
+
+	FARADAY = 96520 (coul)
+	R = 8.3134 (joule/degC)
+	KTOMV = .0853 (mV/degC)
+	F = 96485 (coul)
+}
+
+PARAMETER {
+
+
+=== Following is the header of samples/115356/RoyeckEtAl2008/KAHP.mod ===
+: K-AHP-current, Stacey, Durand 2000
+: eK from  Martina
+ 
+
+UNITS 
+{
+        (mA) = (milliamp)
+        (mV) = (millivolt)
+	(S) = (siemens)
+	(molar) = (1/liter)
+}
+ 
+NEURON {
+        SUFFIX KAHP
+	USEION k WRITE ik
+	USEION ca2 READ ca2i VALENCE 2.0
+        RANGE gAHPbar, gAHP
+        GLOBAL qinf, qtau
+}
+ 
+
+
+=== Following is the header of samples/115356/RoyeckEtAl2008/Ca2Dyn.mod ===
+: adapted from My1stNRN
+INDEPENDENT {t FROM 0 TO 1 WITH 1 (ms)}
+
+NEURON {
+	SUFFIX ca2dyn
+	USEION ca READ ica
+	USEION ca2 READ ca2i WRITE ca2i VALENCE 2.0
+	RANGE depth,ca2inf,taur
+}
+
+UNITS {
+	(molar) = (1/liter)			: moles do not appear in units
+	(mM)	= (millimolar)
+	(um)	= (micron)
+	(mA)	= (milliamp)
+	(msM)	= (ms mM)
+}
+
+CONSTANT {
+	FARADAY = 96489		(coul)		: moles do not appear in units
+
+
+=== Following is the header of samples/115356/RoyeckEtAl2008/CAR.mod ===
+: CA-R-channel, gates Dimitri
+: taus from Randall 97
+: own GHK
+: T-dependence from McAllister-Williams 95
+
+
+UNITS {
+	(mA) = (milliamp)
+	(mV) = (millivolt)
+
+: hier eigene Befehle
+        (molar) = (1/liter)
+        (mM) = (millimolar)
+
+	FARADAY = 96520 (coul)
+	R = 8.3134 (joule/degC)
+	KTOMV = .0853 (mV/degC)
+	F = 96485 (coul)
+}
+
+
+
+=== Following is the header of samples/115356/RoyeckEtAl2008/kdr.mod ===
+NEURON {
+  SUFFIX kdrG
+  USEION k READ ek WRITE ik
+  RANGE gbar, g, i
+}
+
+UNITS {
+  (S) = (siemens)
+  (mV) = (millivolt)
+  (mA) = (milliamp)	
+}
+
+PARAMETER {
+  gbar = 0.006 (S/cm2)
+}
+
+ASSIGNED {
+  v	(mV)
+  ek	(mV)
+  ik 	(mA/cm2)
+
+
+=== Following is the header of samples/115356/RoyeckEtAl2008/CAnpq.mod ===
+: from  Migliore mycan2.mod,without deactivation
+: activation gate from  Dimitri, tau midpoint-
+: voltage 
+: own GHK
+: T-dependece from McAllister-Williams 95
+
+
+UNITS {
+	(mA) = (milliamp)
+	(mV) = (millivolt)
+
+: hier eigene Befehle
+        (molar) = (1/liter)
+        (mM) = (millimolar)
+
+	F = 96485 (coul)
+	R = 8.3134 (joule/degC)
+}
+
+PARAMETER {
+
+
+=== Following is the header of samples/115356/RoyeckEtAl2008/readme.html ===
+<html><pre>
+This is the readme for the model associated with the paper:
+
+Royeck M, Horstmann MT, Remy S, Reitze M, Yaari Y, Beck H (2008) Role
+of Axonal NaV1.6 Sodium Channels in Action Potential Initiation of CA1
+Pyramidal Neurons.
+
+These model files were supplied by Dr Marie-Therese Horstmann.
+
+Usage:
+------
+
+Check that you have NEURON installed (available from
+http://www.neuron.yale.edu). Autolaunch from ModelDB **or** download
+and extract the archive and compile the mod files to run under ...
+
+linux/unix
+----------
+by typing
+nrnivmodl
+
+
+=== Following is the header of samples/115356/RoyeckEtAl2008/Nap.mod ===
+TITLE nap
+
+
+NEURON {
+	SUFFIX nap
+	USEION na READ ena WRITE ina
+	RANGE  gbar, timestauh, timestaum, shifttaum, shifttauh, thegna
+	GLOBAL minf, mtau 
+
+}
+
+PARAMETER {
+	gbar = .0052085   	(mho/cm2)
+	
+	:q10m=3.1
+	:q10h=2.3
+	
+	timestauh=1
+	timestaum=1
+	shifttaum=1
+
+
+=== Following is the header of samples/115356/RoyeckEtAl2008/na3.mod ===
+TITLE na3
+: Na current 
+: modified from Jeff Magee. M.Migliore may97
+: added sh to account for higher threshold M.Migliore, Apr.2002
+
+NEURON {
+	SUFFIX na3Mig
+	USEION na READ ena WRITE ina
+	RANGE  gbar, ar2, sh, thegna
+	GLOBAL minf, hinf, mtau, htau, sinf, taus,qinf, thinf
+}
+
+PARAMETER {
+	sh   = 8	(mV)
+	gbar = 0.010   	(mho/cm2)	
+								
+	tha  =  -30	(mV)		: v 1/2 for act	
+	qa   = 7.2	(mV)		: act slope (4.5)		
+	Ra   = 0.4	(/ms)		: open (v)		
+	Rb   = 0.124 	(/ms)		: close (v)		
+
+
+=== Following is the header of samples/115356/RoyeckEtAl2008/h.mod ===
+TITLE I-h channel from Magee 1998 for distal dendrites
+
+
+UNITS {
+	(mA) = (milliamp)
+	(mV) = (millivolt)
+
+}
+
+PARAMETER {
+	v 		(mV)
+        ehd = -30	(mV)        
+	celsius 	(degC)
+	ghdbar=.0001 	(mho/cm2)
+        vhalfl=-90   	(mV)
+        vhalft=-75   	(mV)
+        a0t=0.011      	(/ms)
+        zetal=4    	(1)
+        zetat=2.2    	(1)
+        gmt=.4   	(1)
+
+
+=== Following is the header of samples/115356/RoyeckEtAl2008/naxmig.mod ===
+TITLE nax
+: Na current for axon. No slow inact.
+: M.Migliore Jul. 1997
+: added sh to account for higher threshold M.Migliore, Apr.2002
+
+NEURON {
+	SUFFIX naxMig
+	USEION na READ ena WRITE ina
+	RANGE  gbar, sh, thegna
+	GLOBAL minf, hinf, mtau, htau,thinf, qinf
+}
+
+PARAMETER {
+	sh   = 8	(mV)
+	gbar = 0.010   	(mho/cm2)	
+								
+	tha  =  -30	(mV)		: v 1/2 for act	
+	qa   = 7.2	(mV)		: act slope (4.5)		
+	Ra   = 0.4	(/ms)		: open (v)		
+	Rb   = 0.124 	(/ms)		: close (v)		
+
+
+=== Following is the header of samples/115356/RoyeckEtAl2008/ka.mod ===
+: from Golomb, Yue, Yaari J. Neurophysiol. 2006
+
+:slow time constant introduced
+
+NEURON {
+  SUFFIX kaG
+  USEION k READ ek WRITE ik
+  RANGE gbar, g, i
+}
+
+UNITS {
+  (S) = (siemens)
+  (mV) = (millivolt)
+  (mA) = (milliamp)	
+}
+
+PARAMETER {
+  gbar = 0.0014 (S/cm2)
+  btau = 15 (ms)
+  atau = 0.5 (ms)
+
+
+=== Following is the header of samples/115356/RoyeckEtAl2008/CAl.mod ===
+: from Migliore mycan2.mod, no deactivation 
+: activation gate from Dimitri, tau  midpoint-
+: voltage 
+: own GHK
+: T-dependece from McAllister-Williams 95
+
+
+UNITS {
+	(mA) = (milliamp)
+	(mV) = (millivolt)
+
+: hier eigene Befehle
+        (molar) = (1/liter)
+        (mM) = (millimolar)
+
+	F = 96485 (coul)
+	R = 8.3134 (joule/degC)
+}
+
+PARAMETER {
+
+
+=== Following is the header of samples/115356/RoyeckEtAl2008/CaDyn.mod ===
+: adapted from My1stNRN
+INDEPENDENT {t FROM 0 TO 1 WITH 1 (ms)}
+
+NEURON {
+	SUFFIX cadyn
+	USEION ca READ ica, cai WRITE cai
+	RANGE depth,cainf,taur
+}
+
+UNITS {
+	(molar) = (1/liter)			: moles do not appear in units
+	(mM)	= (millimolar)
+	(um)	= (micron)
+	(mA)	= (milliamp)
+	(msM)	= (ms mM)
+}
+
+CONSTANT {
+	FARADAY = 96489		(coul)		: moles do not appear in units
+}
+
+

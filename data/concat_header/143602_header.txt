@@ -1,0 +1,18 @@
+=== Following is the header of samples/143602/SterrattEtAl2011/readme.html ===
+<html><pre>
+The book:
+
+Principles of Computational Modelling in Neuroscience
+by
+David Sterratt, Bruce Graham, Andrew Gillies, David Willshaw
+Published June 2011 by Cambridge University Press
+402 pages with 178 b/w and 2-colour illustrations and 7 tables.
+
+contains many code examples at this web site:
+<a href="http://www.compneuroprinciples.org/">http://www.compneuroprinciples.org/</a>
+
+The frontmatter for the book (including the table of contents and
+preface) is available <a href="http://assets.cambridge.org/97805218/77954/frontmatter/9780521877954_frontmatter.pdf">here</a>.
+</pre></html>
+
+
