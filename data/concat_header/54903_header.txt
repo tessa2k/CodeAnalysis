@@ -1,0 +1,138 @@
+=== Following is the header of samples/54903/Hossain/km.mod ===
+
+COMMENT
+26 Ago 2002 Modification of original channel to allow variable time step and to correct an initialization error.
+    Done by Michael Hines(michael.hines@yale.e) and Ruggero Scorcioni(rscorcio@gmu.edu) at EU Advance Course in Computational Neuroscience. Obidos, Portugal
+
+km.mod
+
+Potassium channel, Hodgkin-Huxley style kinetics
+Based on I-M (muscarinic K channel)
+Slow, noninactivating
+
+Author: Zach Mainen, Salk Institute, 1995, zach@salk.edu
+	
+ENDCOMMENT
+
+INDEPENDENT {t FROM 0 TO 1 WITH 1 (ms)}
+
+NEURON {
+	SUFFIX km
+	USEION k READ ek WRITE ik
+
+
+=== Following is the header of samples/54903/Hossain/na.mod ===
+
+COMMENT
+26 Ago 2002 Modification of original channel to allow variable time step and to correct an initialization error.
+    Done by Michael Hines(michael.hines@yale.e) and Ruggero Scorcioni(rscorcio@gmu.edu) at EU Advance Course in Computational Neuroscience. Obidos, Portugal
+
+
+na.mod
+
+Sodium channel, Hodgkin-Huxley style kinetics.  
+
+Kinetics were fit to data from Huguenard et al. (1988) and Hamill et
+al. (1991)
+
+qi is not well constrained by the data, since there are no points
+between -80 and -55.  So this was fixed at 5 while the thi1,thi2,Rg,Rd
+were optimized using a simplex least square proc
+
+voltage dependencies are shifted approximately from the best
+fit to give higher threshold
+
+
+
+=== Following is the header of samples/54903/Hossain/nach.mod ===
+: 	Sodium chanel from 
+:	Contribution of the Kv3.1 potassium channel to high-frequency firing in mouse auditory neurones
+:	Lu-Yang Wang, Li Gan, Ian D. Forsythe and Leonard K. Kaczmarek
+:	J. Physiol (1998), 501.9, pp. 183-194
+
+NEURON {
+	SUFFIX NaCh
+	USEION na READ ena WRITE ina
+	RANGE gbar, g, ina
+	GLOBAL minf, mtau, hinf, htau, am, bm, ah, bh
+}
+
+: area in paper is 1000 (um2) so divide our density parameters by 10
+
+UNITS {
+	(mV) = (millivolt)
+	(S) = (mho)
+	(mA) = (milliamp)
+}
+
+
+
+=== Following is the header of samples/54903/Hossain/naxn.mod ===
+TITLE nax
+: Na current for axon. No slow inact.
+: M.Migliore Jul. 1997
+: added sh to account for higher threshold M.Migliore, Apr.2002
+
+NEURON {
+	SUFFIX naxn
+	USEION na READ ena WRITE ina
+	RANGE  gbar, sh
+	GLOBAL minf, hinf, mtau, htau,thinf, qinf
+}
+
+PARAMETER {
+	sh   = 0	(mV)
+	gbar = 0.0333   	(mho/cm2)	
+								
+	tha  =  -30	(mV)		: v 1/2 for act	
+	qa   = 7.2	(mV)		: act slope (4.5)		
+	Ra   = 0.4	(/ms)		: open (v)		
+	Rb   = 0.124 	(/ms)		: close (v)		
+
+
+=== Following is the header of samples/54903/Hossain/naf.mod ===
+TITLE Sodium transient current for RD Traub, J Neurophysiol 89:909-921, 2003
+
+COMMENT
+
+	Implemented by Maciej Lazarewicz 2003 (mlazarew@seas.upenn.edu)
+
+ENDCOMMENT
+
+INDEPENDENT { t FROM 0 TO 1 WITH 1 (ms) }
+
+UNITS { 
+	(mV) = (millivolt) 
+	(mA) = (milliamp) 
+} 
+NEURON { 
+	SUFFIX naf
+	USEION na READ ena WRITE ina
+	RANGE gbar, ina
+}
+PARAMETER { 
+
+
+=== Following is the header of samples/54903/Hossain/kv.mod ===
+
+COMMENT
+26 Ago 2002 Modification of original channel to allow variable time step and to correct an initialization error.
+    Done by Michael Hines(michael.hines@yale.e) and Ruggero Scorcioni(rscorcio@gmu.edu) at EU Advance Course in Computational Neuroscience. Obidos, Portugal
+
+kv.mod
+
+Potassium channel, Hodgkin-Huxley style kinetics
+Kinetic rates based roughly on Sah et al. and Hamill et al. (1991)
+
+Author: Zach Mainen, Salk Institute, 1995, zach@salk.edu
+	
+ENDCOMMENT
+
+INDEPENDENT {t FROM 0 TO 1 WITH 1 (ms)}
+
+NEURON {
+	SUFFIX kv
+	USEION k READ ek WRITE ik
+	RANGE n, gk, gbar
+
+

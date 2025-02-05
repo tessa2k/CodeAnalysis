@@ -1,0 +1,17 @@
+=== Following is the header of samples/258478/CsernaiEtAl2019/readme.html ===
+<html>
+The NEURON and MATLAB models associated with the paper:<p/>
+
+Csernai M, Borbély S, Kocsis K, Burka D, Fekete Z, Balogh V, Káli S,
+Emri Z, Barthó P (2019) Dynamics of sleep oscillations is coupled to
+brain temperature on multiple scales. J Physiol<br/>
+<a href="http://dx.doi.org/10.1113/JP277664">http://dx.doi.org/10.1113/JP277664</a><p/>
+
+are available at the authors github repository:<p/>
+<a href="https://github.com/BarthoLab/SpindleTemperatureModel/">https://github.com/BarthoLab/SpindleTemperatureModel/</a><p/>
+</html>
+
+
+
+
+

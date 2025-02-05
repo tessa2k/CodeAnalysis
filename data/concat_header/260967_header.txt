@@ -1,0 +1,364 @@
+=== Following is the header of samples/260967/CohenEtAl2020Cell6/readme.html ===
+<html>
+<p>This is the readme for the model associated with the paper:
+</p>
+<p>Cohen CCH, Popovic MA, Klooster J, Weil M, Mobius W, Nave K, Kole MHP
+(2020) Saltatory Conduction along Myelinated Axons Involves a
+Periaxonal Nanocircuit. <a href="https://doi.org/10.1016/j.cell.2019.11.039">Cell</a>
+</p>
+<p>This NEURON code was contributed by CCH Cohen.
+</p>
+<p>Startup options:
+</p>
+<p>compilemod.hoc
+</p><ul>
+  <li>Compile or recompile mod files.
+  </li><li>Required for running any model.
+  </li><li>Run once after setup or download to a new machine.
+</li></ul>
+<p>openmodel.hoc
+</p><ul>
+  <li>View and test the model.
+
+
+=== Following is the header of samples/260967/CohenEtAl2020Cell6/lib/Kv7.mod ===
+TITLE Axonal Kv7-current
+
+COMMENT
+
+Model of cortical pyramidal neuron Kv7/M currents. The kinetic parameters, voltage-dependence and reversal potentials are estimated by fitting and analysis of axonal K7/M-currents at 33 degrees celsius. MHP Kole, Canberra, 2008 and Amsterdam, 2011.
+
+Made threadsafe (CCohen)
+
+ENDCOMMENT
+
+UNITS {
+	
+	(mA) = (milliamp)
+	(mV) = (millivolt)
+	(pS) = (picosiemens)
+	(um) = (micron)
+}
+
+INDEPENDENT {t FROM 0 TO 1 WITH 1 (ms)}
+
+
+
+=== Following is the header of samples/260967/CohenEtAl2020Cell6/lib/KCa.mod ===
+COMMENT
+
+Kca.mod
+
+Calcium-dependent potassium channel
+Based on
+Pennefather (1990) -- sympathetic ganglion cells
+taken from
+Reuveni et al (1993) -- neocortical cells
+
+Author: Zach Mainen, Salk Institute, 1995, zach@salk.edu
+
+MHP Kole: the caix increased from 1 -> 4, Ra 0.01 to 0.05 and Rb 0.02 to 0.1, according to Schaefer et al, 2003 to allow BAC firing.
+
+Made threadsafe (CCohen)
+
+ENDCOMMENT
+
+INDEPENDENT {t FROM 0 TO 1 WITH 1 (ms)}
+
+
+
+=== Following is the header of samples/260967/CohenEtAl2020Cell6/lib/CaT.mod ===
+COMMENT
+
+changed from (AS Oct0899)
+ca.mod to lead to thalamic ca current inspired by destexhe and huguenrd
+Uses fixed eca instead of GHK eqn
+
+LVA Ca
+Schaefer et al 2003
+
+Made threadsafe (CCohen)
+
+ENDCOMMENT
+
+INDEPENDENT {t FROM 0 TO 1 WITH 1 (ms)}
+
+NEURON {
+	
+	SUFFIX it2
+	USEION ca READ eca WRITE ica
+	RANGE m, h, gcaT, icaT, gbar
+
+
+=== Following is the header of samples/260967/CohenEtAl2020Cell6/lib/Kv1.mod ===
+TITLE Voltage-gated low threshold potassium current from Kv1 subunits
+
+COMMENT
+
+NEURON implementation of a potassium channel from Kv1.1 subunits
+Kinetical scheme: Hodgkin-Huxley m^4, no inactivation
+
+Kinetic data taken from: Zerr et al., J.Neurosci. 18 (1998) 2842
+Vhalf = -28.8 +/- 2.3 mV; k = 8.1 +/- 0.9 mV
+
+The voltage dependency of the rate constants was approximated by:
+
+alpha = ca * exp(-(v+cva)/cka)
+beta = cb * exp(-(v+cvb)/ckb)
+
+Parameters ca, cva, cka, cb, cvb, ckb
+are defined in the CONSTANT block.
+
+Laboratory for Neuronal Circuit Dynamics
+RIKEN Brain Science Institute, Wako City, Japan
+
+
+=== Following is the header of samples/260967/CohenEtAl2020Cell6/lib/Cad.mod ===
+
+TITLE decay of internal calcium concentration
+:
+: Internal calcium concentration due to calcium currents and pump.
+: Differential equations.
+:
+: Simple model of ATPase pump with 3 kinetic constants (Destexhe 92)
+:     Cai + P <-> CaP -> Cao + P  (k1,k2,k3)
+: A Michaelis-Menten approximation is assumed, which reduces the complexity
+: of the system to 2 parameters: 
+:       kt = <tot enzyme concentration> * k3  -> TIME CONSTANT OF THE PUMP
+:	kd = k2/k1 (dissociation constant)    -> EQUILIBRIUM CALCIUM VALUE
+: The values of these parameters are chosen assuming a high affinity of 
+: the pump to calcium and a low transport capacity (cfr. Blaustein, 
+: TINS, 11: 438, 1988, and references therein).  
+:
+: Units checked using "modlunit" -> factor 10000 needed in ca entry
+:
+: VERSION OF PUMP + DECAY (decay can be viewed as simplified buffering)
+:
+
+
+=== Following is the header of samples/260967/CohenEtAl2020Cell6/lib/Na.mod ===
+: Eight state kinetic sodium channel gating scheme
+: Modified from k3st.mod, chapter 9.9 (example 9.7)
+: of the NEURON book
+: 12 August 2008, Christoph Schmidt-Hieber
+: accompanies the publication:
+: Schmidt-Hieber C, Bischofberger J. (2010)
+: Fast sodium channel gating supports localized and efficient 
+: axonal action potential initiation.
+: J Neurosci 30:10233-42
+: Made threadsafe (CCohen)
+
+NEURON {
+
+    SUFFIX na
+    USEION na READ ena WRITE ina
+    GLOBAL vShift, vShift_inact, maxrate
+    RANGE vShift_inact_local
+    RANGE gna, gbar, ina_ina
+    RANGE a1_0, a1_1, b1_0, b1_1, a2_0, a2_1
+    RANGE b2_0, b2_1, a3_0, a3_1, b3_0, b3_1
+
+
+=== Following is the header of samples/260967/CohenEtAl2020Cell6/lib/Nax.mod ===
+: Eight state kinetic sodium channel gating scheme
+: Modified from k3st.mod, chapter 9.9 (example 9.7)
+: of the NEURON book
+: 12 August 2008, Christoph Schmidt-Hieber
+: accompanies the publication:
+: Schmidt-Hieber C, Bischofberger J. (2010)
+: Fast sodium channel gating supports localized and efficient 
+: axonal action potential initiation.
+: J Neurosci 30:10233-42
+: Made threadsafe (CCohen)
+
+NEURON {
+    
+    SUFFIX nax
+    USEION na READ ena WRITE ina
+    GLOBAL vShift, vShift_inact, maxrate
+    RANGE vShift_inact_local
+    RANGE gna, gbar, ina_inax
+    RANGE a1_0, a1_1, b1_0, b1_1, a2_0, a2_1
+    RANGE b2_0, b2_1, a3_0, a3_1, b3_0, b3_1
+
+
+=== Following is the header of samples/260967/CohenEtAl2020Cell6/lib/Nap.mod ===
+TITLE nap
+
+COMMENT
+	
+	File copied from Royeck et al., 2008, ModelDB #115356
+	Converted into pS for easier implementation
+	half changed from -52.3 to -62.3
+
+	Made threadsafe (CCohen)
+
+ENDCOMMENT
+
+NEURON {
+	
+	SUFFIX nap
+	USEION na READ ena WRITE ina
+	RANGE  gbar, timestauh, timestaum, shifttaum, shifttauh
+	GLOBAL minf, mtau
+	THREADSAFE
+}
+
+
+=== Following is the header of samples/260967/CohenEtAl2020Cell6/lib/Kv1ax.mod ===
+TITLE Axonal voltage-gated potassium current
+
+COMMENT
+
+	Hallermann, de Kock, Stuart and Kole, Nature Neuroscience, 2012
+	doi:10.1038/nn.3132
+	
+	n8*h1 + n8*h2 Hodgkin-Huxley model with steeper inact (Hallerman/ongoing)
+
+	Made threadsafe (CCohen)
+
+ENDCOMMENT
+
+NEURON {
+	
+	SUFFIX kv1ax
+	USEION k READ ek WRITE ik
+	RANGE gkv1, ikv1, gbar
+	GLOBAL ninf, ntau
+	GLOBAL h1inf, h1tau
+
+
+=== Following is the header of samples/260967/CohenEtAl2020Cell6/lib/H.mod ===
+COMMENT
+
+Made threadsafe (CCohen)
+
+ENDCOMMENT
+
+TITLE Ih-current
+
+UNITS {
+	
+	(mA) = (milliamp)
+	(mV) = (millivolt)
+    (mM) = (milli/liter)
+}
+
+INDEPENDENT {t FROM 0 TO 1 WITH 1 (ms)}
+
+PARAMETER {
+	
+	dt 				(ms)
+
+
+=== Following is the header of samples/260967/CohenEtAl2020Cell6/lib/CaH.mod ===
+COMMENT
+
+ca.mod
+Uses fixed eca instead of GHK eqn
+
+HVA Ca current
+Based on Reuveni, Friedman, Amitai and Gutnick (1993) J. Neurosci. 13:
+4609-4621.
+
+Author: Zach Mainen, Salk Institute, 1994, zach@salk.edu
+
+Made threadsafe (CCohen)
+
+ENDCOMMENT
+
+INDEPENDENT {t FROM 0 TO 1 WITH 1 (ms)}
+
+NEURON {
+	
+	SUFFIX ca
+
+
+=== Following is the header of samples/260967/CohenEtAl2020Cell6/lib/Nais.mod ===
+: Eight state kinetic sodium channel gating scheme
+: Modified from k3st.mod, chapter 9.9 (example 9.7)
+: of the NEURON book
+: 12 August 2008, Christoph Schmidt-Hieber
+: accompanies the publication:
+: Schmidt-Hieber C, Bischofberger J. (2010)
+: Fast sodium channel gating supports localized and efficient 
+: axonal action potential initiation.
+: J Neurosci 30:10233-42
+: Made threadsafe (CCohen)
+
+NEURON {
+    
+    SUFFIX nais
+    USEION na READ ena WRITE ina
+    GLOBAL vShift, vShift_inact, maxrate
+    RANGE vShift_inact_local
+    RANGE gna, gbar, ina_inax
+    RANGE a1_0, a1_1, b1_0, b1_1, a2_0, a2_1
+    RANGE b2_0, b2_1, a3_0, a3_1, b3_0, b3_1
+
+
+=== Following is the header of samples/260967/CohenEtAl2020Cell6/lib/Kv.mod ===
+COMMENT
+
+kv.mod
+
+Potassium channel, Hodgkin-Huxley style kinetics
+Kinetic rates based roughly on Sah et al. and Hamill et al. (1991)
+
+Author: Zach Mainen, Salk Institute, 1995, zach@salk.edu
+
+Made threadsafe (CCohen)
+
+ENDCOMMENT
+
+INDEPENDENT {t FROM 0 TO 1 WITH 1 (ms)}
+
+NEURON {
+	
+	SUFFIX kv
+	USEION k READ ek WRITE ik
+	RANGE n, gk, gbar
+
+
+=== Following is the header of samples/260967/__MACOSX/CohenEtAl2020Cell6/._readme.html ===
+    Mac OS X            	   2                                               ATTR             <                     <  com.apple.quarantine q/0081;642dae74;Chrome;5E6C4988-24C7-4E2A-B324-76618A1588B7 
+
+=== Following is the header of samples/260967/__MACOSX/CohenEtAl2020Cell6/lib/._Kv.mod ===
+    Mac OS X            	   2                                               ATTR             <                     <  com.apple.quarantine q/0081;642dae74;Chrome;5E6C4988-24C7-4E2A-B324-76618A1588B7 
+
+=== Following is the header of samples/260967/__MACOSX/CohenEtAl2020Cell6/lib/._Nax.mod ===
+    Mac OS X            	   2                                               ATTR             <                     <  com.apple.quarantine q/0081;642dae74;Chrome;5E6C4988-24C7-4E2A-B324-76618A1588B7 
+
+=== Following is the header of samples/260967/__MACOSX/CohenEtAl2020Cell6/lib/._KCa.mod ===
+    Mac OS X            	   2                                               ATTR             <                     <  com.apple.quarantine q/0081;642dae74;Chrome;5E6C4988-24C7-4E2A-B324-76618A1588B7 
+
+=== Following is the header of samples/260967/__MACOSX/CohenEtAl2020Cell6/lib/._Kv7.mod ===
+    Mac OS X            	   2                                               ATTR             <                     <  com.apple.quarantine q/0081;642dae74;Chrome;5E6C4988-24C7-4E2A-B324-76618A1588B7 
+
+=== Following is the header of samples/260967/__MACOSX/CohenEtAl2020Cell6/lib/._CaT.mod ===
+    Mac OS X            	   2                                               ATTR             <                     <  com.apple.quarantine q/0081;642dae74;Chrome;5E6C4988-24C7-4E2A-B324-76618A1588B7 
+
+=== Following is the header of samples/260967/__MACOSX/CohenEtAl2020Cell6/lib/._Kv1.mod ===
+    Mac OS X            	   2                                               ATTR             <                     <  com.apple.quarantine q/0081;642dae74;Chrome;5E6C4988-24C7-4E2A-B324-76618A1588B7 
+
+=== Following is the header of samples/260967/__MACOSX/CohenEtAl2020Cell6/lib/._Cad.mod ===
+    Mac OS X            	   2                                               ATTR             <                     <  com.apple.quarantine q/0081;642dae74;Chrome;5E6C4988-24C7-4E2A-B324-76618A1588B7 
+
+=== Following is the header of samples/260967/__MACOSX/CohenEtAl2020Cell6/lib/._CaH.mod ===
+    Mac OS X            	   2                                               ATTR             <                     <  com.apple.quarantine q/0081;642dae74;Chrome;5E6C4988-24C7-4E2A-B324-76618A1588B7 
+
+=== Following is the header of samples/260967/__MACOSX/CohenEtAl2020Cell6/lib/._Na.mod ===
+    Mac OS X            	   2                                               ATTR             <                     <  com.apple.quarantine q/0081;642dae74;Chrome;5E6C4988-24C7-4E2A-B324-76618A1588B7 
+
+=== Following is the header of samples/260967/__MACOSX/CohenEtAl2020Cell6/lib/._Kv1ax.mod ===
+    Mac OS X            	   2                                               ATTR             <                     <  com.apple.quarantine q/0081;642dae74;Chrome;5E6C4988-24C7-4E2A-B324-76618A1588B7 
+
+=== Following is the header of samples/260967/__MACOSX/CohenEtAl2020Cell6/lib/._Nap.mod ===
+    Mac OS X            	   2                                               ATTR             <                     <  com.apple.quarantine q/0081;642dae74;Chrome;5E6C4988-24C7-4E2A-B324-76618A1588B7 
+
+=== Following is the header of samples/260967/__MACOSX/CohenEtAl2020Cell6/lib/._Nais.mod ===
+    Mac OS X            	   2                                               ATTR             <                     <  com.apple.quarantine q/0081;642dae74;Chrome;5E6C4988-24C7-4E2A-B324-76618A1588B7 
+
+=== Following is the header of samples/260967/__MACOSX/CohenEtAl2020Cell6/lib/._H.mod ===
+    Mac OS X            	   2                                               ATTR             <                     <  com.apple.quarantine q/0081;642dae74;Chrome;5E6C4988-24C7-4E2A-B324-76618A1588B7 
+
