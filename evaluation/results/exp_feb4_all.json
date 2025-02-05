@@ -1,0 +1,69 @@
+{
+    "Modelconcepts": {
+      "Modelconcepts_header": {
+        "samples": 20,
+        "metrics": {
+          "f1_micro": 0.36231884057971014,
+          "hamming": 0.024189114898295765,
+          "jaccard": 0.2295284780578898,
+          "precision_micro": 0.26881720430107525,
+          "recall_micro": 0.5555555555555556
+        }
+      },
+      "Modelconcepts_naivefilter": {
+        "samples": 20,
+        "metrics": {
+          "f1_micro": 0.3,
+          "hamming": 0.02516175413371675,
+          "jaccard": 0.1792124542124542,
+          "precision_micro": 0.2830188679245283,
+          "recall_micro": 0.3191489361702128
+        }
+      },
+      "Modelconcepts_unfilter": {
+        "samples": 20,
+        "metrics": {
+          "f1_micro": 0.26548672566371684,
+          "hamming": 0.029834651329978434,
+          "jaccard": 0.1649017649017649,
+          "precision_micro": 0.22727272727272727,
+          "recall_micro": 0.3191489361702128
+        }
+      }
+    },
+    "Celltypes": {
+      "Celltypes_header": {
+        "samples": 20,
+        "metrics": {
+          "f1_micro": 0.3389830508474576,
+          "hamming": 0.01079136690647482,
+          "jaccard": 0.37179487179487175,
+          "precision_micro": 0.2222222222222222,
+          "recall_micro": 0.7142857142857143
+        }
+      },
+      "Celltypes_naivefilter": {
+        "samples": 20,
+        "metrics": {
+          "f1_micro": 0.5,
+          "hamming": 0.006594724220623501,
+          "jaccard": 0.498015873015873,
+          "precision_micro": 0.3793103448275862,
+          "recall_micro": 0.7333333333333333
+        }
+      },
+      "Celltypes_unfilter": {
+        "samples": 20,
+        "metrics": {
+          "f1_micro": 0.5116279069767442,
+          "hamming": 0.006294964028776978,
+          "jaccard": 0.43333333333333335,
+          "precision_micro": 0.39285714285714285,
+          "recall_micro": 0.7333333333333333
+        }
+      }
+    }
+  }
+  
+
+  

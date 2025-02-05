@@ -1,0 +1,62 @@
+{
+    "150912": {
+        "header": "Hippocampus CA1 pyramidal GLU cell, Neostriatum medium spiny direct pathway GABA cell, Neostriatum medium spiny indirect pathway GABA cell, Neostriatum fast spiking interneuron, Neocortex spiking regular (RS) neuron, Neocortex fast spiking (FS) interneuron"
+    },
+    "156733": {
+        "header": "Cerebellum interneuron granule GLU cell, Cerebellum Purkinje GABA cell, Cerebellum golgi cell"
+    },
+    "184325": {
+        "header": "Hippocampus CA1 pyramidal GLU cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell"
+    },
+    "237323": {
+        "header": "Hippocampus CA1 pyramidal GLU cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell, Locus ceruleus principal NE cell."
+    },
+    "123086": {
+        "header": "Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell, Neocortex V1 L5B pyramidal pyramidal tract GLU cell, Neocortex V1 interneuron bipolar VIP/CR GABA cell, Neocortex V1 interneuron chandelier SOM GABA cell, Neocortex V1 L4 stellate GLU cell, Neocortex M1 interneuron basket PV GABA cell, Neocortex U1 interneuron basket PV GABA cell, Neocortex M1 L4 stellate GLU cell, Neocortex U1 L4 stellate GLU cell, Neocortex M1 interneuron bipolar VIP/CR GABA cell, Neocortex U1 interneuron bipolar VIP/CR GABA cell, Neocortex M1 interneuron chandelier SOM GABA cell, Neocortex U1 interneuron chandelier SOM GABA cell."
+    },
+    "245427": {
+        "header": "Substantia nigra pars compacta DA cell, Ventral tegmental area dopamine neuron, Dopaminergic substantia nigra neuron"
+    },
+    "117359": {
+        "header": "Dentate gyrus granule GLU cell, Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Neostriatum medium spiny direct pathway GABA cell, Substantia nigra pars compacta DA cell, Thalamus geniculate nucleus/lateral principal GLU cell, Thalamus reticular nucleus GABA cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell, Olfactory bulb main mitral GLU cell, Retinal ganglion GLU cell, Cerebellum Purkinje GABA cell, Spinal cord lumbar motor neuron alpha ACh cell, Neocortex V1 interneuron basket PV GABA cell, Olfactory bulb main interneuron granule MC GABA cell, Neocortex fast spiking (FS) interneuron, Dorsal Root Ganglion (DRG) cell, Ventral tegmental area dopamine neuron."
+    },
+    "151945": {
+        "header": "Astrocyte"
+    },
+    "117207": {
+        "header": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Thalamus geniculate nucleus/lateral principal GLU cell, Neocortex L5/6 pyramidal GLU cell"
+    },
+    "184324": {
+        "header": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell, Hippocampus CA1 interneuron oriens alveus GABA cell, Hippocampus CA3 interneuron oriens alveus GABA cell, Hippocampus CA1 interneuron basket GABA cell, Hippocampus CA1 axo-axonic cell, Neocortex fast spiking (FS) interneuron"
+    },
+    "140462": {
+        "header": "Olfactory bulb main mitral GLU cell, Olfactory bulb main juxtaglomerular cell"
+    },
+    "152539": {
+        "header": "Abstract integrate-and-fire leaky neuron, Hippocampus CA1 pyramidal GLU cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell"
+    },
+    "189946": {
+        "header": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Hippocampus CA1 interneuron oriens alveus GABA cell, Hippocampus CA3 interneuron basket GABA cell, Hippocampus CA1 stratum radiatum interneuron, Hippocampus CA3 stratum oriens lacunosum-moleculare interneuron, Dentate gyrus granule GLU cell, Dentate gyrus basket cell, Dentate gyrus mossy cell, Hippocampus CA1 basket cell"
+    },
+    "7386": {
+        "header": "Hippocampus CA1 pyramidal GLU cell"
+    },
+    "230046": {
+        "header": "Dentate gyrus granule GLU cell, Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell, Neocortex M1 L5B pyramidal pyramidal tract GLU cell, Neocortex M1 L2/6 pyramidal intratelencephalic GLU cell, Neocortex M1 L6 pyramidal corticothalamic GLU cell, Neocortex V1 L5B pyramidal pyramidal tract GLU cell, Neocortex U1 L5B pyramidal pyramidal tract GLU cell, Neocortex U1 L2/6 pyramidal intratelencephalic GLU cell, Neocortex U1 L6 pyramidal corticalthalamic GLU cell"
+    },
+    "240364": {
+        "header": "Olfactory bulb main tufted middle GLU cell, Olfactory bulb main interneuron periglomerular GABA cell, Olfactory bulb main interneuron granule MC GABA cell, Olfactory bulb main mitral GLU cell, Olfactory bulb main interneuron tufted external GABA cell, Olfactory bulb short axon cell, Olfactory bulb (accessory) mitral cell"
+    },
+    "261881": {
+        "header": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Hippocampus CA1 interneuron oriens alveus GABA cell, Hippocampus CA1 interneuron basket GABA cell, Hippocampus CA3 interneuron basket GABA cell"
+    },
+    "184305": {
+        "header": "Hippocampus CA1 pyramidal GLU cell, Hippocampus CA3 pyramidal GLU cell, Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell"
+    },
+    "112547": {
+        "header": "Astrocyte"
+    },
+    "184725": {
+        "header": "Neocortex L5/6 pyramidal GLU cell, Neocortex L2/3 pyramidal GLU cell, Neocortex L5B pyramidal pyramidal tract GLU cell, Neocortex L6 pyramidal corticalthalamic GLU cell, Neocortex M1 L5B pyramidal pyramidal tract GLU cell, Neocortex M1 L6 pyramidal corticothalamic GLU cell, Neocortex V1 L5B pyramidal pyramidal tract GLU cell, Neocortex primary motor area pyramidal layer 5 corticospinal cell"
+    }
+}
