@@ -1,0 +1,359 @@
+=== Following is the header of samples/152539/CavallariEtAl2014__7_2015/LIF_CUBN/ran1.h ===
+float ran1(long *idum);
+
+
+=== Following is the header of samples/152539/CavallariEtAl2014__7_2015/LIF_CUBN/gasdev.c ===
+#include <math.h>
+#include "ran1.h"
+#include "gasdev.h"
+
+
+float gasdev(long *idum)
+{
+	float ran1(long *idum); 
+	static int iset=0;
+	static float gset;
+	float fac,rsq,v1,v2;
+
+	if  (iset == 0) {
+		do {
+			v1=2.0*ran1(idum)-1.0;
+			v2=2.0*ran1(idum)-1.0;
+			rsq=v1*v1+v2*v2;
+		} while (rsq >= 1.0 || rsq == 0.0);
+		fac=sqrt(-2.0*log(rsq)/rsq);
+		gset=v1*fac;
+
+
+=== Following is the header of samples/152539/CavallariEtAl2014__7_2015/LIF_CUBN/code_CUBN.m ===
+% CODE_CUBN  Simulate a recurrent network with excitatory and inhibitory
+%            Leaky Integrate-and-Fire (LIF) neurons with current-based
+%            synapses. The network has random connectivity and the input 
+%            to each neuron is given by a Poisson process with a 
+%            time-varying rate identical for all the neurons. 
+%
+%  The network is fully described in the paper Comparison of the dynamics
+%  of neural interactions between current-based and conductance-based 
+%  integrate-and-fire recurrent networks written by S.Cavallari, S.Panzeri
+%  and A.Mazzoni and published in Frontiers in Neural Circuits (2014),
+%  8:12. doi:10.3389/fncir.2014.00012. 
+%  The paper compares the activity of this current-based network with
+%  the activity of a comparable network of LIF neurons with 
+%  conductance-based synpases. 
+%  Please cite the paper if you use the code.
+%
+%   [E2EI,I2EI,eFR,iFR] = CODE_CUBN(NET,INPUT2E,INPUT2I,SEED1,SEED2),
+%   where:  
+%   NET: external structure with the network's parameters 
+%   (see e.g. parameters_CUBN script).
+
+
+=== Following is the header of samples/152539/CavallariEtAl2014__7_2015/LIF_CUBN/code_CUBN.c ===
+/* 
+ * @file code_CUBN.c
+ * @brief mex code to simulate a recurrent random network with excitatory 
+ *        and inhibitory LIF CURRENT-BASED neurons. 
+ *          The network is fully described in the paper 
+ *          Comparison of the dynamics of neural interactions between
+ *          current-based and conductance-based integrate-and-fire 
+ *          recurrent networks written by S.Cavallari, S.Panzeri 
+ *          and A.Mazzoni and published in Frontiers in Neural Circuits 
+ *          (2014), 8:12. doi:10.3389/fncir.2014.00012.
+ *          Please cite this paper if you use the code.
+ * @author Stefano Cavallari
+ * @date 2 2014
+ *
+ */
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <stddef.h>
+
+
+=== Following is the header of samples/152539/CavallariEtAl2014__7_2015/LIF_CUBN/ReadMe_CUBN.txt ===
+Recurrent random network with excitatory and inhibitory Leaky Integrate-and-Fire neurons with current-based 
+synapses from the paper Comparison of the dynamics of neural interactions between current-based and 
+conductance-based integrate-and-fire recurrent networks written by S.Cavallari, S.Panzeri and A.Mazzoni and 
+published in Frontiers in Neural Circuits (2014), 8:12. doi:10.3389/fncir.2014.00012. The paper compares the 
+activity of this current-based network (i.e. code_CUBN.c) with the activity of a comparable network of LIF 
+neurons with conductance-based synapses (whose source code is in the LIF_COBN folder). 
+
+The function code_CUBN.c is a mex source code. You have to compile this routine in Matlab to generate the 
+mex file (e.g.: code_CUBN.mexw64). Note that you have to include the functions ran1.c and gasdev.c in the 
+compiling instruction in the Matlab workspace, in the following way: 
+mex code_CUBN.c ran1.c gasdev.c 
+
+After you compiled the function, you can call it as specified in the help.
+For more information use the help of the function (and see the example below): 
+help code_CUBN 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In the following an easy example for setting the arguments to generate the data used in figures 4I; 7 (i.e. LFP) 
+and 6A (i.e. average firing rate) once you compiled the mex file.
+
+
+
+=== Following is the header of samples/152539/CavallariEtAl2014__7_2015/LIF_CUBN/parameters_CUBN.m ===
+% Conventions for variable names:
+% - prefix "N" stands for "number of..."
+%
+% - prefix "e" stands for "excitatory"
+% - prefix "i" stands for "inhibitory"
+% - prefix "x" stands for "external"
+%
+% - prefix "e2e" stands for "excitatory to excitatory"
+% - prefix "e2i" stands for "excitatory to inhibitory"
+% - prefix "x2e" stands for "external to excitatory"
+% - prefix "e2i" stands for "external to inhibitory"
+%
+% - "T" stands for greek letter "tau"
+
+
+
+% THE NETWORK
+
+% Time resolution [ms]
+net_CUBN.Dt = 0.05;
+
+
+=== Following is the header of samples/152539/CavallariEtAl2014__7_2015/LIF_CUBN/gasdev.h ===
+float gasdev(long *idum);
+
+=== Following is the header of samples/152539/CavallariEtAl2014__7_2015/LIF_CUBN/ran1.c ===
+#include "ran1.h"
+/* note #undef's at end of file */
+/* returns a uniform random deviate between 0 and 1 (exclusive of the endpoint values)*/
+/* call with idum a negative integer to initialize (if you use a positive integer the deviates you obtain is independet of the seed); 
+ * do not alter idum between successive deviates in a sequence
+ * If the value of idum is not initialized you will always obtain the same deviates
+ */
+
+#define IA 16807
+#define IM 2147483647
+#define AM (1.0/IM)
+#define IQ 127773
+#define IR 2836
+#define NTAB 32
+#define NDIV (1+(IM-1)/NTAB)
+#define EPS 1.2e-7
+#define RNMX (1.0-EPS)
+
+
+
+
+
+=== Following is the header of samples/152539/CavallariEtAl2014__7_2015/LIF_CUBN/OU_process.m ===
+function n = OU_process(simulLen, Dt, tau, sigma_2, seed)
+%OU_PROCESS Exact numerical solution of the Ornstein-Uhlenbeck (OU) process
+%   modified by Stefano Cavallari from the original code of Daniel Charlebois
+%
+%   n = OU_process(simulLen, Dt, tau, sigma_2, seed),
+%   where
+%   simulLen = number of samples of the OU process in output
+%   Dt = time step of the OU process in output. Units of (ms)
+%   tau = relaxation time of the OU process, see eq. 2 of Cavallari et al
+%   2014. Units of (ms)
+%   note that Dt and tau must have the same units of time (not necessarily ms)
+%   sigma_2 = it is the variance(i.e. sigma^2) of the OU process in output
+%   (see eq. 2 of Cavallari et al 2014). The units of sigma^2 set the units
+%   of the OU process in output. Units of [(spikes/ms)/Dt]
+%   seed = seed for the random number generator (integer number)
+%
+%   The OU process equation can be written as (Gillespie 1996):
+%   dn/dt = -n/tau + sqrt(c) * eta(t) 
+%   and the parameter c (diffusion constant) corresponds to (2*sigma^2/tau) 
+%   with sigma e tau defined as in the eq. 2 of Cavallari et al 2014
+
+
+=== Following is the header of samples/152539/CavallariEtAl2014__7_2015/readme.txt ===
+This is the readme for the two neural network models (mex file) associated with the following paper:
+
+S.Cavallari, S. Panzeri and A.Mazzoni (2014) Comparison of the
+dynamics of neural interactions between current-based and conductance-based 
+integrate-and-fire recurrent networks, Frontiers in Neural Circuits
+8:12. doi: 10.3389/fncir.2014.00012
+
+Recurrent networks, each of two populations (excitatory and inhibitory) of
+randomly connected Leaky Integrate-and-Fire (LIF) neurons with either
+conductance-based synapses (COBN) or current-based synapses (CUBN)
+were studied. The activity of the LIF COBN model were compared with the
+activity of the associated model LIF CUBN. 
+Instructions are provided in the ReadMe files in each model associated sub folder, LIF_COBN and
+LIF_CUBN.
+
+If you have any questions about the implementation of these matlab
+models, which require compilation with mex, contact:
+ste.cavallari@gmail.com
+
+Please cite the paper if you use the codes.
+
+
+=== Following is the header of samples/152539/CavallariEtAl2014__7_2015/LIF_COBN/ran1.h ===
+float ran1(long *idum);
+
+
+=== Following is the header of samples/152539/CavallariEtAl2014__7_2015/LIF_COBN/gasdev.c ===
+#include <math.h>
+#include "ran1.h"
+#include "gasdev.h"
+
+
+float gasdev(long *idum)
+{
+	float ran1(long *idum); 
+	static int iset=0;
+	static float gset;
+	float fac,rsq,v1,v2;
+
+	if  (iset == 0) {
+		do {
+			v1=2.0*ran1(idum)-1.0;
+			v2=2.0*ran1(idum)-1.0;
+			rsq=v1*v1+v2*v2;
+		} while (rsq >= 1.0 || rsq == 0.0);
+		fac=sqrt(-2.0*log(rsq)/rsq);
+		gset=v1*fac;
+
+
+=== Following is the header of samples/152539/CavallariEtAl2014__7_2015/LIF_COBN/parameters_COBN.m ===
+% Conventions for variable names:
+% - prefix "N" stands for "number of..."
+%
+% - prefix "e" stands for "excitatory"
+% - prefix "i" stands for "inhibitory"
+% - prefix "x" stands for "external"
+%
+% - prefix "e2e" stands for "excitatory to excitatory"
+% - prefix "e2i" stands for "excitatory to inhibitory"
+% - prefix "x2e" stands for "external to excitatory"
+% - prefix "e2i" stands for "external to inhibitory"
+%
+% - "T" stands for greek letter "tau"
+
+
+
+% THE NETWORK
+
+% Time resolution [ms]
+net_COBN.Dt = 0.05;
+
+
+=== Following is the header of samples/152539/CavallariEtAl2014__7_2015/LIF_COBN/code_COBN.c ===
+/* 
+ * @file code_COBN.c
+ * @brief mex code to simulate a recurrent random network with excitatory 
+ *        and inhibitory LIF CONDUCTANCE-BASED neurons. 
+ *          The network is fully described in the paper 
+ *          Comparison of the dynamics of neural interactions between
+ *          current-based and conductance-based integrate-and-fire 
+ *          recurrent networks written by S.Cavallari, S.Panzeri 
+ *          and A.Mazzoni and published in Frontiers in Neural Circuits 
+ *          (2014), 8:12. doi:10.3389/fncir.2014.00012.
+ *          Please cite this paper if you use the code.
+ * @author Stefano Cavallari
+ * @date 2 2014
+ *
+ */
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <stddef.h>
+
+
+=== Following is the header of samples/152539/CavallariEtAl2014__7_2015/LIF_COBN/code_COBN.m ===
+% CODE_COBN  Simulate a recurrent network with excitatory and inhibitory
+%            Leaky Integrate-and-Fire (LIF) neurons with conductance-based 
+%            synapses. The network has random connectivity and the input 
+%            to each neuron is given by a Poisson process with a 
+%            time-varying rate identical for all the neurons. 
+%
+%  The network is fully described in the paper Comparison of the dynamics
+%  of neural interactions between current-based and conductance-based 
+%  integrate-and-fire recurrent networks written by S.Cavallari, S.Panzeri
+%  and A.Mazzoni and published in Frontiers in Neural Circuits (2014),
+%  8:12. doi:10.3389/fncir.2014.00012. 
+%  The paper compares the activity of this conductance-based network with
+%  the activity of a comparable network of LIF neurons with current-based 
+%  synpases. 
+%  Please cite the paper if you use the code.
+%
+%   [E2EI,I2EI,eFR,iFR] = CODE_COBN(NET,INPUT2E,INPUT2I,SEED1,SEED2), 
+%   where:  
+%   NET: external structure with the network's parameters.
+%   (see e.g. parameters_COBN script).
+
+
+=== Following is the header of samples/152539/CavallariEtAl2014__7_2015/LIF_COBN/gasdev.h ===
+float gasdev(long *idum);
+
+=== Following is the header of samples/152539/CavallariEtAl2014__7_2015/LIF_COBN/ran1.c ===
+#include "ran1.h"
+/* note #undef's at end of file */
+/* returns a uniform random deviate between 0 and 1 (exclusive of the endpoint values)*/
+/* call with idum a negative integer to initialize (if you use a positive integer the deviates you obtain is independet of the seed); 
+ * do not alter idum between successive deviates in a sequence
+ * If the value of idum is not initialized you will always obtain the same deviates
+ */
+
+#define IA 16807
+#define IM 2147483647
+#define AM (1.0/IM)
+#define IQ 127773
+#define IR 2836
+#define NTAB 32
+#define NDIV (1+(IM-1)/NTAB)
+#define EPS 1.2e-7
+#define RNMX (1.0-EPS)
+
+
+
+
+
+=== Following is the header of samples/152539/CavallariEtAl2014__7_2015/LIF_COBN/ReadMe_COBN.txt ===
+Recurrent random network with excitatory and inhibitory Leaky Integrate-and-Fire (LIF) neurons with 
+conductance-based synapses from the paper Comparison of the dynamics of neural interactions between 
+current-based and conductance-based integrate-and-fire recurrent networks written by S.Cavallari, S.Panzeri 
+and A.Mazzoni and published in Frontiers in Neural Circuits (2014), 8:12. doi:10.3389/fncir.2014.00012. The 
+paper compares the activity of this conductance-based network (i.e. code_COBN.c) with the activity of a 
+comparable network of LIF neurons with current-based synapses (whose source code is in the LIF_CUBN 
+folder). 
+
+The function code_COBN.c is a mex source code. You have to compile this routine in Matlab to generate the 
+mex file (e.g.: code_COBN.mexw64). Note that you have to include the functions ran1.c and gasdev.c in the 
+compiling instruction in the Matlab workspace, in the following way: 
+mex code_COBN.c ran1.c gasdev.c 
+
+After you compiled the function, you can call it as specified in the help. 
+For more information use the help of the function (and see the example below): 
+help code_COBN 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In the following an easy example for setting the arguments to generate the data used in figures 4I; 7 (i.e. LFP) 
+and 6A (i.e. average firing rate) once you compiled the mex file.
+
+
+=== Following is the header of samples/152539/CavallariEtAl2014__7_2015/LIF_COBN/OU_process.m ===
+function n = OU_process(simulLen, Dt, tau, sigma_2, seed)
+%OU_PROCESS Exact numerical solution of the Ornstein-Uhlenbeck (OU) process
+%   modified by Stefano Cavallari from the original code of Daniel Charlebois
+%
+%   n = OU_process(simulLen, Dt, tau, sigma_2, seed),
+%   where
+%   simulLen = number of samples of the OU process in output
+%   Dt = time step of the OU process in output. Units of (ms)
+%   tau = relaxation time of the OU process, see eq. 2 of Cavallari et al
+%   2014. Units of (ms)
+%   note that Dt and tau must have the same units of time (not necessarily ms)
+%   sigma_2 = it is the variance(i.e. sigma^2) of the OU process in output
+%   (see eq. 2 of Cavallari et al 2014). The units of sigma^2 set the units
+%   of the OU process in output. Units of [(spikes/ms)/Dt]
+%   seed = seed for the random number generator (integer number)
+%
+%   The OU process equation can be written as (Gillespie 1996):
+%   dn/dt = -n/tau + sqrt(c) * eta(t) 
+%   and the parameter c (diffusion constant) corresponds to (2*sigma^2/tau) 
+%   with sigma e tau defined as in the eq. 2 of Cavallari et al 2014
+
+

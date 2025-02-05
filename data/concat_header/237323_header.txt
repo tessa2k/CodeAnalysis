@@ -1,0 +1,10 @@
+=== Following is the header of samples/237323/DugginsEtAl2017/readme.html ===
+<html>
+The model for the paper:<p/>
+Duggins P, Stewart TC, Choo X, Eliasmith C (2017) The Effects of Guanfacine and Phenylephrine on a Spiking Neuron Model of Working Memory. Top Cogn Sci 9:117-134
+<p/>
+is available at the authors github repository:<p/>
+<a href="https://github.com/psipeter/drugs_and_working_memory">https://github.com/psipeter/drugs_and_working_memory</a>
+</html>
+
+

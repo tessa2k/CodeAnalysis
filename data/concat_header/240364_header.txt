@@ -1,0 +1,242 @@
+=== Following is the header of samples/240364/ET-Cell-Model-master/ME-PCM/uq_ETCell.h ===
+#ifndef UQ_ETCELL_H_INCLUDED
+#define UQ_ETCELL_H_INCLUDED
+
+#include <stdio.h>
+
+void uq_ET(double* pars, int num_pars, FILE* fp);
+void uq_processTrace(FILE* fp, FILE* op);
+
+#endif
+
+
+=== Following is the header of samples/240364/ET-Cell-Model-master/ME-PCM/uq_parameters.h ===
+#ifndef PARAMETERS_H_INCLUDED
+#define PARAMETERS_H_INCLUDED
+
+// Reversal potentials (mV)
+#define vL -62.5
+#define vH -35.0
+#define vNa 45.0
+#define vK -105.0
+#define vCa 120.0
+
+// Conductances (mS/cm^2)
+// commented out conductances are provided by a parameter determined by the location on the grid in parameter space
+#define gL 2.5
+// #define gH 20.0
+// #define gNaP 8.3244
+// #define gLVA 15.0213
+#define gNa 29.17
+#define gK 12.96
+#define gHVA 2.0
+// #define gBK 5.0
+
+
+=== Following is the header of samples/240364/ET-Cell-Model-master/ME-PCM/abscissa.c ===
+/*
+	Numerical Integration by Gauss-Legendre Quadrature Formulas of high orders.
+	High-precision abscissas and weights are used.
+
+	Project homepage: http://www.holoborodko.com/pavel/?page_id=679
+	Contact e-mail:   pavel@holoborodko.com
+
+	Copyright (c)2007-2010 Pavel Holoborodko
+	All rights reserved.
+
+	Redistribution and use in source and binary forms, with or without
+	modification, are permitted provided that the following conditions
+	are met:
+
+	1. Redistributions of source code must retain the above copyright
+	notice, this list of conditions and the following disclaimer.
+
+	2. Redistributions in binary form must reproduce the above copyright
+	notice, this list of conditions and the following disclaimer in the
+	documentation and/or other materials provided with the distribution.
+
+
+=== Following is the header of samples/240364/ET-Cell-Model-master/ME-PCM/readTrace.c ===
+#include <stdio.h>
+
+void readTrace(FILE* trace, FILE* spikes, FILE* metrics)
+{
+
+  double t,V,w,Vprev,freq = 0.0,lastSpike = -99.0;
+  int count = 0;
+  int status;
+
+  status = fscanf(trace,"%le %le %le\n",&t,&V,&w);
+  Vprev = V;
+
+  while (status != EOF)
+  {
+    if(Vprev < 0.0 && V > 0.0)
+    {
+      if (lastSpike != -99.0)
+        freq += 1.0/(t - lastSpike)*1000;
+      fprintf(spikes,"%le\n",t);
+      lastSpike = t;
+
+
+=== Following is the header of samples/240364/ET-Cell-Model-master/ME-PCM/sample.c ===
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <omp.h>
+#include <mpi.h>
+#include <dirent.h>
+#include <sys/stat.h>
+#include <errno.h>
+#include "uq_ETCell.h"
+
+int abscissa(int n, double *x, double *w);
+
+/*
+██ ███    ██ ██████  ██    ██ ████████
+██ ████   ██ ██   ██ ██    ██    ██
+██ ██ ██  ██ ██████  ██    ██    ██
+██ ██  ██ ██ ██      ██    ██    ██
+██ ██   ████ ██       ██████     ██
+*/
+
+
+
+=== Following is the header of samples/240364/ET-Cell-Model-master/ME-PCM/uq_ET.c ===
+#include <math.h>
+#include <omp.h>
+#include "gsl/gsl_errno.h"
+#include "gsl/gsl_matrix.h"
+#include "gsl/gsl_odeiv2.h"
+#include "uq_ETCell.h"
+#include "uq_parameters.h"
+
+#define TIME 7000
+#define NUM_EQ 9
+
+int vfield (double t, const double y[], double dy[], void *params);
+double squarewave(double t, double freq, double amp, double duty_cycle);
+
+/*Definition of squarewave function*/
+
+double squarewave(double t, double freq, double amp, double duty_cycle)
+{
+  double t_sec = t/1000;
+  double period = 1.0/freq;
+
+
+=== Following is the header of samples/240364/ET-Cell-Model-master/ME-PCM/uq_processTrace.c ===
+#include <stdlib.h>
+#include <float.h>
+#include <math.h>
+#include "uq_ETCell.h"
+
+#define SPIKE_POINT 0
+#define PI 3.1415926535897932384626433832795028841971693993751
+
+#define min(a,b) \
+  ({ __typeof__ (a) _a = (a); \
+      __typeof__ (b) _b = (b); \
+    _a < _b ? _a : _b; })
+
+void uq_processTrace(FILE* fp, FILE* op)
+{
+  //input metrics
+  double t, V, nK, hNaP, mH, mLVA, hLVA, wBK, Ca, nMystery, tau;
+
+  //output metrics
+  double burstDuration = 0;
+
+
+=== Following is the header of samples/240364/ET-Cell-Model-master/parameters.m ===
+function pars = parameters
+
+%% Reversal potentials (mV)
+pars.vL = -62.5;
+pars.vH = -35;
+pars.vNa = 45;
+pars.vK = -105;
+pars.vCa = 120;
+
+%% Conductances (mS/cm^2)
+% gL = 2.5;
+% gH = 20;
+% gNaP = 8.3244;
+% gLVA = 15.0213;
+% gNa = 29.17;
+% gK = 12.96;
+% gHVA = 2;
+% gBK = 5;
+% gHVK = 10;
+
+
+
+=== Following is the header of samples/240364/ET-Cell-Model-master/README.html ===
+<html>
+<p>Model of the Mammalian ET cell
+</p>
+<p>Computational model and files to recreate the results from the paper "A Computational Model of the Mammalian External Tufted Cell" <a href="https://doi.org/10.1016/j.jtbi.2018.10.003">https://doi.org/10.1016/j.jtbi.2018.10.003</a>
+</p>
+<p>Author: Ryan Viertel
+</p>
+<dl>
+  <dt><strong>Usage</strong></dt>
+<dd>data = ET(input,sampling_rate);
+</dd></dl>
+<p>input: input vector, if no input then just a vector of zeros
+</p>
+<p>sampling_rate: rate at which the input vector should be sampled. 1000 for milisecond
+</p>
+<p>returns the following struct:
+</p>
+<p>data.T - time vector data.X - ODE variables at each time step
+</p>
+<p>data.X(:,1) - Membrane Potential<br/>
+
+
+=== Following is the header of samples/240364/ET-Cell-Model-master/xpp/bifurcation.ode ===
+# initial conditions
+
+#full system steady state
+#init v=-50.39614 nK=0.06187592 hNaP=0.1852592 hH=0.1362835 mLVA=0.06024908 hLVA=0.2716246 mBK=0.0902021 ca=0.0006561159 nHVK=0.06383691
+
+# reduced for bifurcation
+init v=-50.39614 nK=0.06187592 hNaP=0.1852592 hH=0.1362835 mLVA=0.06024908 ca=0.0006561159 nHVK=0.06383691
+
+#other parameters
+#external current (microA/cm^2)
+par mBK=0.2
+# mBK = -1.6*hLVA + 0.42
+hLVA = -(mBK - 0.42)/1.6
+par Iapp=0
+#capacitance (microF/cm^2)
+par C=21
+#concentration of calcium (mM)
+par Ca0=0.00002
+#calcium concentration time constant (ms)
+par tau_Ca=8
+
+
+=== Following is the header of samples/240364/ET-Cell-Model-master/ET.m ===
+function data = ET(ORNtrace, ORNsamplingrate)
+
+    %% set up params
+	PARS = parameters;
+  % PARS.gNaP = gPerSodium;
+
+    ics = [-51.408534874838772   0.055706295559466   0.139259083672574   0.157733123889777   0.048620921041047   0.216830183163897 0.118223401083348   0.000398391792190   0.049382804823416]; % just after end of burst at equilibrium state
+
+    odeopts = odeset('Events',@spikedetect,'MaxStep',2);
+
+    data = integrator(@vfield_ET, odeopts, ics, PARS, ORNtrace, ORNsamplingrate);
+end
+
+function xdot = vfield_ET(t,x,p)
+% Vector field for the minimal ET model.
+%
+%   INPUTS:
+%   t -- current time
+%   x -- (9,1) vector of current vector values
+%   p -- struct containing parameter values in p.ET.param_name format
+
+

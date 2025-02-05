@@ -1,0 +1,184 @@
+=== Following is the header of samples/140462/MasurkarChen2011/ICat2.mod ===
+TITLE Sustained calcium current from plateau potential-firing rat olfactory glomerular neurons
+
+: originally implemented by Maciej Lazarewicz 2003 (mlazarew@seas.upenn.edu)
+: original title - Calcium high-threshold L type current for RD Traub, J Neurophysiol 89:909-921, 2003
+: Modified by Arjun Masurkar to resemble HVA current in plateau-firing
+: juxtaglomerular neurons
+
+: changes: carev=35
+: to change: IV curve should match (peak I at 0mv, activation similar to IT)
+
+
+INDEPENDENT { t FROM 0 TO 1 WITH 1 (ms) }
+
+NEURON { 
+	SUFFIX iCat2
+	USEION ca WRITE ica
+	RANGE  gbar, ica
+}
+
+
+
+
+=== Following is the header of samples/140462/MasurkarChen2011/nmitral.mod ===
+
+COMMENT
+
+na.mod
+
+Sodium channel, Hodgkin-Huxley style kinetics.  
+
+
+qi is not well constrained by the data, since there are no points
+between -80 and -55.  So this was fixed at 5 while the thi1,thi2,Rg,Rd
+were optimized using a simplex least square proc
+
+voltage dependencies are shifted approximately +5mV from the best
+fit to give higher threshold
+
+use with kd.mod
+
+Author: Upinder S. Bhalla, California Institute of Technology
+J. of Neurophysiology, V69, N6, 1993
+
+
+
+=== Following is the header of samples/140462/MasurkarChen2011/ICat1m3h.mod ===
+TITLE Transient calcium current from plateau potential-firing rat olfactory glomerular neurons
+:   based on recordings by Arjun Masurkar; code based on -
+:
+:   Ca++ current responsible for low threshold spikes (LTS)
+:   RETICULAR THALAMUS
+:   Differential equations
+:
+:   Model of Huguenard & McCormick, J Neurophysiol 68: 1373-1383, 1992.
+:   
+:   Written by Alain Destexhe, Salk Institute, Sept 18, 1992
+:   
+:   code adapted for Vitko et al 2005 (Perez-Reyes group)
+
+
+INDEPENDENT {t FROM 0 TO 1 WITH 1 (ms)}
+
+NEURON {
+	SUFFIX iCat1m3h
+	USEION ca READ cai, cao WRITE ica
+	RANGE gcabar, m_inf, tau_m, h_inf, tau_h, shift, i
+
+
+=== Following is the header of samples/140462/MasurkarChen2011/IKt3.mod ===
+
+COMMENT
+
+kd.mod
+
+Potassium channel, Hodgkin-Huxley style kinetics
+Kinetic rates based on Sah et al. and Hamill et al. (1991)
+
+Use with na.mod
+
+Author: Zach Mainen, Salk Institute, 1994, zach@salk.edu
+	
+ENDCOMMENT
+
+INDEPENDENT {t FROM 0 TO 1 WITH 1 (ms)}
+
+NEURON {
+	SUFFIX Ikt3	USEION k READ ek WRITE ik
+	RANGE n, gk, gbar, actshift, i
+	GLOBAL ninf, ntau, ik
+
+
+=== Following is the header of samples/140462/MasurkarChen2011/IKt1m4h.mod ===
+TITLE K-A
+: K-A current for Mitral Cells from Wang et al (1996)
+: M.Migliore Jan. 2002
+
+NEURON {
+	SUFFIX Ikt1m4h
+	USEION k READ ek WRITE ik
+	RANGE  gbar, ik
+	GLOBAL minf, mtau, hinf, htau
+}
+
+PARAMETER {
+	gbar = 0.002   	(mho/cm2)	
+								
+	celsius
+	ek		(mV)            : must be explicitly def. in hoc
+	v 		(mV)
+	a0m=0.04
+	vhalfm=-31.5
+	zetam=0.17
+
+
+=== Following is the header of samples/140462/MasurkarChen2011/readme.html ===
+<html><pre>
+This is the readme for the model files associated with the papers:
+
+Masurkar AV, Chen WR (2011) Potassium currents of olfactory bulb
+juxtaglomerular cells: characterization, simulation, and implications
+for plateau potential firing. Neuroscience
+
+Masurkar AV, Chen WR (2011) Calcium currents of olfactory bulb
+juxtaglomerular cells: Profile and multiple conductance plateau
+potential simulation. Neuroscience
+
+These NEURON simulator files were contributed by Arjun Masurkar.
+
+Usage:
+
+Autolaunch from ModelDB or download, extract, and compile the mod
+files in the archive with nrnivmodl (unix), mknrndll (pc or mac) and
+start with the command "nrngui mosinit.hoc" (unix), double click on
+mosinit.hoc (windows), or drag and drop the mosinit.hoc file onto the
+nrngui icon (mac).
+
+
+=== Following is the header of samples/140462/MasurkarChen2011/Ikt2m2h.mod ===
+TITLE K-A
+: K-A current for Mitral Cells from Wang et al (1996)
+: M.Migliore Jan. 2002
+
+NEURON {
+	SUFFIX Ikt2m2h
+	USEION k READ ek WRITE ik
+	RANGE  gbar, ik
+	GLOBAL minf, mtau, hinf, htau
+}
+
+PARAMETER {
+	gbar = 0.002   	(mho/cm2)	
+								
+	celsius
+	ek		(mV)            : must be explicitly def. in hoc
+	v 		(mV)
+	a0m=0.04
+	vhalfm=-17.91
+	zetam=0.562
+
+
+=== Following is the header of samples/140462/MasurkarChen2011/ipulse2.mod ===
+COMMENT
+  ipulse2.mod
+  Generates a train of current pulses
+  User specifies dur (pulse duration), per (period, i.e. interval between pulse onsets),
+  and number of pulses.
+  Ensures that period is longer than pulse duration.
+  2/6/2002 NTC
+ENDCOMMENT
+
+
+NEURON {
+	POINT_PROCESS Ipulse2
+	RANGE del, dur, per, num, amp, i
+	ELECTRODE_CURRENT i
+}
+
+UNITS {
+	(nA) = (nanoamp)
+}
+
+
+

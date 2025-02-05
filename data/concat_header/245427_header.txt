@@ -1,0 +1,230 @@
+=== Following is the header of samples/245427/MoubarakEtAl2018/KV4_DAsoma.mod ===
+COMMENT 
+
+Model for an kV4 cuRrent recorded in DA neurons.
+This current has two inactivation rates and a rapid rate for recovery from inactivation
+Activation and inactivation parameters are from amendola
+
+ENDCOMMENT
+
+
+NEURON
+ {
+	 THREADSAFE
+  SUFFIX kaDasoma  USEION k READ ek WRITE ik 
+ 
+RANGE gbar, g, i  
+
+RANGE atau, btau
+
+RANGE ainf, binf
+
+
+
+=== Following is the header of samples/245427/MoubarakEtAl2018/passive.mod ===
+TITLE passive membrane channel
+
+UNITS {
+	(mV) = (millivolt)
+	(mA) = (milliamp)
+	(S) = (siemens)
+}
+
+NEURON {
+	THREADSAFE
+	SUFFIX pasnts
+	NONSPECIFIC_CURRENT i
+	RANGE g, e
+
+}
+
+PARAMETER {
+	g = .00001	(S/cm2)	<0,1e9>
+	e = -50	(mV)
+}
+
+
+=== Following is the header of samples/245427/MoubarakEtAl2018/NA12.mod ===
+COMMENT 
+
+Model for an SODIUM cuRrent recorded in DA neurons.Nav12 style
+
+Activation and inactivation parameters DERIVED FROM MIGLIORE 
+
+
+ENDCOMMENT
+
+
+NEURON
+ {
+	 THREADSAFE
+  SUFFIX Na12  USEION na READ ena WRITE ina 
+ 
+RANGE gbar, g, i  
+
+RANGE atau, btau   
+
+RANGE ainf, binf 
+
+
+=== Following is the header of samples/245427/MoubarakEtAl2018/IK_SK.mod ===
+TITLE Calcium dependent potassium channel (small conductance SK) from callaway (2000)
+ 
+
+UNITS {
+        (molar) = (1/liter)
+        (pA) =  (picoamp)
+	(mV) =	(millivolt)
+        (pS)  =  (picosiemens)
+	(mA) =	(milliamp)
+	(mM) =	(millimolar)
+	
+}
+
+
+INDEPENDENT {v FROM -100 TO 50 WITH 50 (mV)}
+
+NEURON {
+	THREADSAFE
+	SUFFIX kca
+	USEION ca READ cai
+
+
+=== Following is the header of samples/245427/MoubarakEtAl2018/Readme.txt ===
+This model was used to generate data from Figures 8-9 of the article.
+
+
+Cell_0.hoc to cell_4.hoc files described the simplified morphology of DA neurons with an increase in ABD Length and its complexity (nb of secondary dendrites on ABD) from 0 to 4 files. They also contains the conductances for each compartment. 
+
+init_*.hoc files are files of initialization (dt, time of simulation, graph, etc...). They load cell_*.hoc files and then launch the simulation and the analysis. 
+
+variable_length_*.hoc files allow automatic changing in AIS length but also conductances in several compartments.
+
+spike_extract_frequency.hoc calculates the spike frequency after some spikes have been generated and save the trace corresponding to the first spike of the data chunk from which the frequency was analyzed. Here you can specify the number of spikes you want to skip, the number of spikes you want to measure the frequency from and the amount of time before and after the spike you want to record. 
+
+WARNING :
+ 1/ If the the amount of time before and after the spike you want to record is longer than the inter-spike interval, the program will analyze two spikes as one and the data will be wrong. 
+2/ If the number of spike generated during the simulation is less than the number of spikes skipped plus the number of spikes kept, no measurement will occur. So increase the time window. 
+
+
+Spike_analysis computes the spike characteristics and write them into a file. Here you set the threshold for the first derivative. 
+
+start_linux.sh launches the compilation of mod files and the simulation on linux computer. It doesn't not work on windows. To use it on windows, you need to load the init_* files one by one or to write your own bat file. You also need to compile mod files first. 
+
+
+
+=== Following is the header of samples/245427/MoubarakEtAl2018/KV4_DA.mod ===
+COMMENT 
+
+Model for an kV4 cuRrent recorded in DA neurons.
+This current has two inactivation rates and a rapid rate for recovery from inactivation
+Activation and inactivation parameters are from amendola
+
+ENDCOMMENT
+
+
+NEURON
+ {
+	 THREADSAFE
+  SUFFIX kaDa  USEION k READ ek WRITE ik 
+ 
+RANGE gbar, g, i  
+
+RANGE atau, btau
+
+RANGE ainf, binf
+
+
+
+=== Following is the header of samples/245427/MoubarakEtAl2018/KVDR.mod ===
+COMMENT 
+
+Model for an kVdr current recorded in DA neurons.
+This current has a form of n4.No inactivation
+Activation  parameters are derived from Schild et al  J physiol (1993)  see also paton 
+
+ENDCOMMENT
+
+
+NEURON
+ {
+	 THREADSAFE
+  SUFFIX kdrDA  USEION k READ ek WRITE ik 
+ 
+RANGE gbar, g, i  
+
+RANGE atau
+
+RANGE ainf 
+
+
+
+=== Following is the header of samples/245427/MoubarakEtAl2018/CAV13.mod ===
+TITLE calcium lVA channels for DA
+
+COMMENT
+ LOWthreshold calcium channel (L-type)
+
+ 
+ENDCOMMENT
+
+UNITS {
+	(mM) = (milli/liter)
+	(mV) = (millivolt)
+	(mA) = (milliamp)
+	(pS) =(picosiemens)
+     FARADAY = (faraday) (coulomb)
+           R = (k-mole) (joule/degC)
+}
+
+
+
+NEURON {
+
+
+=== Following is the header of samples/245427/MoubarakEtAl2018/IH.mod ===
+COMMENT 
+
+Model for an Ih amendola
+ENDCOMMENT
+
+
+NEURON
+ {
+	 THREADSAFE
+  SUFFIX Ih
+NONSPECIFIC_CURRENT i
+ 
+RANGE gbar, g, i  
+
+RANGE tauh
+RANGE ainf
+
+
+ }
+
+
+
+=== Following is the header of samples/245427/MoubarakEtAl2018/ca_diffusion.mod ===
+COMMENT
+Decay of internal calcium concentration
+
+Internal calcium concentration due to calcium currents and pump.
+
+Differential equations.
+
+Simple model of ATPase pump with 3 kinetic constants (Destexhe 92)
+     Cai + P <-> CaP -> Cao + P  (k1,k2,k3)
+A Michaelis-Menten approximation is assumed, which reduces the complexity
+of the system to 2 parameters: 
+    kt = <tot enzyme concentration> * k3  -> TIME CONSTANT OF THE PUMP
+	kd = k2/k1 (dissociation constant)    -> EQUILIBRIUM CALCIUM VALUE
+The values of these parameters are chosen assuming a high affinity of 
+the pump to calcium and a low transport capacity (cfr. Blaustein, 
+TINS, 11: 438, 1988, and references therein).  
+
+Units checked using "modlunit" -> factor 10000 needed in ca entry
+
+VERSION OF PUMP + DECAY (decay can be viewed as simplified buffering)
+
+

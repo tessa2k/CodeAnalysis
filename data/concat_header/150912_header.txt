@@ -1,0 +1,2679 @@
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/add_outputUS2.g ===
+
+
+function add_output
+	create asc_file /output/plot_out
+	setfield /output/plot_out   flush 1  leave_open 1 append 1 \
+          float_format %0.6g
+    useclock /output/plot_out 1
+	addmsg /cell/soma /output/plot_out  SAVE Vm
+
+	addmsg /cell/tertdend1_1/fluorescence /output/plot_out SAVE ratio
+	addmsg /cell/tertdend5_1/fluorescence /output/plot_out SAVE ratio
+	addmsg /cell/tertdend9_1/fluorescence /output/plot_out SAVE ratio
+
+	addmsg /cell/tertdend1_1/volavg /output/plot_out SAVE meanValue
+	addmsg /cell/tertdend5_1/volavg /output/plot_out SAVE meanValue
+	addmsg /cell/tertdend9_1/volavg /output/plot_out SAVE meanValue
+
+	addmsg /cell/tertdend1_1/NR2A/GHK /output/plot_out SAVE Ik
+	addmsg /cell/tertdend1_1/NR2A/block /output/plot_out SAVE Ik
+	addmsg /cell/tertdend5_1/NR2A/GHK /output/plot_out SAVE Ik
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/upstateAPstimGABA.g ===
+
+
+//set random seed so for each simulation the randomspike train will be the same
+randseed 2394075
+
+//3 = 5757538
+//5 = 9824501
+//4 = 2394075
+
+/****************begin local subroutines*************/
+function add_output
+	create asc_file /output/plot_out
+	setfield /output/plot_out   flush 1  leave_open 1 append 1 \
+          float_format %0.6g
+    useclock /output/plot_out 1
+	addmsg /cell/soma /output/plot_out  SAVE Vm
+	//addmsg /cell/soma/KIR_channel /output/plot_out SAVE Gk
+	//addmsg /cell/soma/Ca_difshell_1 /output/plot_out  SAVE C
+	//addmsg /cell/soma/Ca_difshell_2 /output/plot_out  SAVE C
+	//addmsg /cell/soma/Ca_difshell_4 /output/plot_out  SAVE C
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/Store_Parameters.g ===
+//genesis
+
+//this is a function to create a file will all the important parameters for each simulation
+//things like Mg concentration, CDI parameters, Fura parameters, NMDA parameters etc.
+
+
+function Store_Parameters
+	print "calciumdye=" {calciumdye}
+	print "calciumtype=" {calciumtype}
+	print "calciuminact=" {calciuminact}
+	print "NMDAbuffermode=" {NMDAbuffermode}
+	if (calciumdye == 1)
+		print "Furaconc=" {btotal3} 
+		print "FuraKf=" {Kf3}
+		print "FuraKb=" {Kb3}
+	elif (calciumdye == 2)
+		print "Fluo5Fconc=" {btotal5}
+		print "Fluo5FKf=" {Kf5}
+		print "Fluo5FKb=" {Kb5}
+	end
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/US20noAPSTDP.g ===
+
+
+
+str cellpath = "/cell"
+str othercell = "/othercell"
+
+
+include RebekahSims/SpikeMakerSTDP.g
+include RebekahSims/add_outputgradSTDP
+
+
+
+
+create compartment {othercell}
+addmsg {othercell} {cellpath}/tertdend1_1/spikegen INPUT Vm
+addmsg {othercell} {cellpath}/tertdend1_2/spikegen INPUT Vm
+addmsg {othercell} {cellpath}/tertdend1_3/spikegen INPUT Vm
+addmsg {othercell} {cellpath}/tertdend1_4/spikegen INPUT Vm
+addmsg {othercell} {cellpath}/tertdend1_5/spikegen INPUT Vm
+addmsg {othercell} {cellpath}/tertdend1_6/spikegen INPUT Vm
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/add_outputgrad4.g ===
+
+
+function add_output
+	create asc_file /output/plot_out
+	setfield /output/plot_out   flush 1  leave_open 1 append 1 \
+          float_format %0.6g
+    useclock /output/plot_out 1
+	addmsg /cell/soma /output/plot_out  SAVE Vm
+	addmsg /cell/tertdend1_1 /output/plot_out SAVE Vm
+	addmsg /cell/tertdend5_1 /output/plot_out SAVE Vm
+	addmsg /cell/tertdend9_1 /output/plot_out SAVE Vm
+	addmsg /cell/tertdend13_1 /output/plot_out SAVE Vm
+
+	addmsg /cell/tertdend1_1/volavg /output/plot_out SAVE meanValue
+	addmsg /cell/tertdend5_1/volavg /output/plot_out SAVE meanValue
+	addmsg /cell/tertdend9_1/volavg /output/plot_out SAVE meanValue
+	addmsg /cell/tertdend13_1/volavg /output/plot_out SAVE meanValue
+
+	addmsg /cell/tertdend1_1/Ca_difshell_1CaMN /output/plot_out SAVE Bbound
+	addmsg /cell/tertdend5_1/Ca_difshell_1CaMN /output/plot_out SAVE Bbound
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/Shindou3APpre-post.g ===
+//genesis Shindou3AP.g
+
+include RebekahSims/addoutput.g
+str cellpath = "/cell"
+add_output
+
+str stimtype = "Shindou3APpre-post"
+diskpath={diskpath}@(stimtype)@".txt"
+echo {diskpath}
+setfield /output/plot_out filename output/{diskpath}
+reset
+
+setfield /output/plot_out filename output/{diskpath}
+		call /output/plot_out OUT_OPEN
+		call /output/plot_out OUT_WRITE "time SomaVm somaVavg primVavg secVavg tertVavg" //header
+
+
+step 0.1 -time
+
+	setfield {cellpath}/tertdend1_1/presyn_ext z {1/{getclock 0}}
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/US175.g ===
+
+
+add_output
+
+float inj = 800e-12
+int Hz = 10  //for glu, function incrases by 2.5 this for GABA
+float upstate_time = 0.3
+float AP_time = 0.175  //AP latency from upstate onset
+float AP_durtime = 0.005 //duration of AP depolarization at soma, 5 ms
+
+
+str stimtype = "AP175flat"
+str diskpath={diskpath1}@(stimtype)@{spiketypeFlat}@".txt"
+echo {diskpath}
+setfield /output/plot_out filename output/{diskpath}
+reset
+
+include RebekahSims/header.g
+
+	makeallpreFlat {Hz}
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/theta.g ===
+//genesis theta.g
+
+
+include RebekahSims/addoutput.g
+str cellpath = "/cell"
+add_output
+
+str stimtype = "ThetaLong"
+diskpath={diskpath}@(stimtype)@".txt"
+echo {diskpath}
+setfield /output/plot_out filename output/{diskpath}
+reset
+
+setfield /output/plot_out filename output/{diskpath}
+		call /output/plot_out OUT_OPEN
+		call /output/plot_out OUT_WRITE "time SomaVm somaVavg primVavg secVavg tertVavg" //header
+
+float trainHz = 10.5
+float burstHz = 50
+int i
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/ifFURA.g ===
+//genesis
+//IF2.g
+
+function add_output
+	create asc_file /output/plot_out
+	setfield /output/plot_out   flush 1  leave_open 1 append 1 \
+          float_format %0.6g
+    useclock /output/plot_out 1
+	addmsg /cell/soma /output/plot_out  SAVE Vm
+	//addmsg /cell/soma/NaF_channel /output/plot_out  SAVE Gk
+/*
+	addmsg /cell/soma/BK_channel /output/plot_out  SAVE Gk
+	addmsg /cell/soma/SK_channel /output/plot_out  SAVE Gk
+	//addmsg /cell/soma/KAf_channel /output/plot_out  SAVE Gk
+	//addmsg /cell/soma/KDR_channel /output/plot_out  SAVE Gk
+	//addmsg /cell/soma/KAs_channel /output/plot_out  SAVE Gk
+
+	addmsg /cell/soma/BK_channel /output/plot_out  SAVE Gk
+	addmsg /cell/soma/SK_channel /output/plot_out  SAVE Gk
+
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/SingleBlast.g ===
+//genesis SingleBlast.g
+
+include RebekahSims/add_outputgrad3.g
+
+add_output
+str cellpath = "/cell"
+str othercell = "/othercell"
+str stimtype = "SingleBlastlong"
+diskpath={diskpath}@(stimtype)@".txt"
+echo {diskpath}
+setfield /output/plot_out filename output/{diskpath}
+reset
+
+setfield /output/plot_out filename output/{diskpath}
+		call /output/plot_out OUT_OPEN
+		call /output/plot_out OUT_WRITE "time SomaVm tert1Vm tert1Fluo5F tert1Vavg tert1NMDACa tert1LCa tert1NMDAGHKgk tert1NMDAblockgk tert1L12X tert1L12Y tert1L12Z tert1L13X tert1L13Y tert1L13Z tert1RX tert1RY tert1RZ" //header	
+
+//because we are using the facsynchan which cannot recieve activation messages, we have to use spikegen 
+//objects and send input into them.
+ 
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/add_outputBuffers.g ===
+
+
+function add_output
+	create asc_file /output/plot_out
+	setfield /output/plot_out   flush 1  leave_open 1 append 1 \
+          float_format %0.6g
+    useclock /output/plot_out 1
+	addmsg /cell/soma /output/plot_out  SAVE Vm
+	
+	addmsg /cell/tertdend1_1/volavg /output/plot_out SAVE meanValue 
+	addmsg /cell/tertdend5_1/volavg /output/plot_out SAVE meanValue 
+	addmsg /cell/tertdend9_1/volavg /output/plot_out SAVE meanValue 
+	addmsg /cell/tertdend13_1/volavg /output/plot_out SAVE meanValue
+
+	addmsg /cell/tertdend1_1/Ca_difshell_1CaMN /output/plot_out SAVE Bbound
+	addmsg /cell/tertdend5_1/Ca_difshell_1CaMN /output/plot_out SAVE Bbound
+	addmsg /cell/tertdend9_1/Ca_difshell_1CaMN /output/plot_out SAVE Bbound
+	addmsg /cell/tertdend13_1/Ca_difshell_1CaMN /output/plot_out SAVE Bbound
+
+	addmsg /cell/tertdend1_1/Ca_difshell_1CaMC /output/plot_out SAVE Bbound
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/US20grad.g ===
+
+
+add_output
+float inj = 800e-12
+str stimtype = "20APgrad"
+str diskpath={diskpath1}@(stimtype)@{spiketypeGrad}@".txt"
+echo {diskpath}
+setfield /output/plot_out filename output/{diskpath}
+reset
+
+include RebekahSims/header.g
+
+int Hz = 10 //for glu, function multiplies this by 2 for GABA
+float upstate_time = 0.3
+float AP_time = 0.02  //AP latency from upstate onset
+float AP_durtime = 0.005 //duration of AP depolarization at soma, 5 ms
+float high_time = 0.01
+float med_time  = 0.2
+float low_time  = 0.09
+
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/US100.g ===
+
+
+add_output
+
+float inj = 800e-12
+int Hz = 10  //for glu, function incrases by 2.5 this for GABA
+float upstate_time = 0.3
+float AP_time = 0.1  //AP latency from upstate onset
+float AP_durtime = 0.005 //duration of AP depolarization at soma, 5 ms
+
+
+str stimtype = "AP100flat"
+str diskpath={diskpath1}@(stimtype)@{spiketypeFlat}@".txt"
+echo {diskpath}
+setfield /output/plot_out filename output/{diskpath}
+reset
+
+include RebekahSims/header.g
+
+	makeallpreFlat {Hz}
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/SpontAPgrad.g ===
+
+str cellpath = "/cell"
+
+
+include RebekahSims/SpikeMaker.g
+include RebekahSims/add_outputgrad2.g
+
+add_output
+
+float inj = 800e-12
+str stimtype = "SpontAPgrad"
+diskpath={diskpath}@(stimtype)@{spiketype}@".txt"
+echo {diskpath}
+setfield /output/plot_out filename output/{diskpath}
+reset
+
+call /output/plot_out OUT_OPEN
+call /output/plot_out OUT_WRITE "time SomaVm tert1Vm tert5Vm tert9Vm tert13Vm tert1Fura tert5Fura tert9Fura tert13Fura tert1_1GkSum tert1_1CaSum" //header	
+
+
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/US20gradSTDP.g ===
+
+
+
+str cellpath = "/cell"
+str othercell = "/othercell"
+
+
+include RebekahSims/SpikeMakerSTDP.g
+include RebekahSims/add_outputgradSTDP
+
+
+
+
+create compartment {othercell}
+addmsg {othercell} {cellpath}/tertdend1_1/spikegen INPUT Vm
+addmsg {othercell} {cellpath}/tertdend1_2/spikegen INPUT Vm
+addmsg {othercell} {cellpath}/tertdend1_3/spikegen INPUT Vm
+addmsg {othercell} {cellpath}/tertdend1_4/spikegen INPUT Vm
+addmsg {othercell} {cellpath}/tertdend1_5/spikegen INPUT Vm
+addmsg {othercell} {cellpath}/tertdend1_6/spikegen INPUT Vm
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/SingleStim.g ===
+//genesis SingleStim.g
+
+include RebekahSims/addoutput.g
+str cellpath = "/cell"
+add_output
+
+str stimtype = "Singletert"
+diskpath={diskpath}@(stimtype)@".txt"
+echo {diskpath}
+setfield /output/plot_out filename output/{diskpath}
+reset
+
+setfield /output/plot_out filename output/{diskpath}
+		call /output/plot_out OUT_OPEN
+		call /output/plot_out OUT_WRITE "time SomaVm tert1_1volavg tert1_1Cadif1 tert1_1fura" //header
+
+
+step 0.05 -time
+
+	setfield {cellpath}/tertdend1_1/presyn_ext z {1/{getclock 0}}
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/header.g ===
+
+
+//header call from addoutput.g files
+
+//addoutputBuffers.g
+
+call /output/plot_out OUT_OPEN
+call /output/plot_out OUT_WRITE "time SomaVm tert1volavg tert5volavg tert9volavg tert13volavg tert1CaMN tert5CaMN tert9CaMN tert13CaMN tert1CaMC tert5CaMC tert9CaMC tert13CaMC tert1cb tert5cb tert9cb tert13cb" //header	
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/if3.g ===
+//genesis
+//IF2.g
+
+function add_output
+	create asc_file /output/plot_out
+	setfield /output/plot_out   flush 1  leave_open 1 append 1 \
+          float_format %0.6g
+    useclock /output/plot_out 1
+	addmsg /cell/soma /output/plot_out  SAVE Vm
+/*
+	addmsg /cell/soma/BK_channel /output/plot_out  SAVE Gk
+	addmsg /cell/soma/SK_channel /output/plot_out  SAVE Gk
+	addmsg /cell/secdend11/BK_channel /output/plot_out  SAVE Gk
+	addmsg /cell/secdend11/SK_channel /output/plot_out  SAVE Gk
+
+	
+	addmsg /cell/soma/CaR_channelGHK /output/plot_out SAVE Gk
+	addmsg /cell/soma/CaN_channelGHK /output/plot_out SAVE Gk
+	addmsg /cell/soma/CaT_channelGHK /output/plot_out SAVE Gk
+	addmsg /cell/soma/CaL13_channelGHK /output/plot_out SAVE Gk
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/addoutputX.g ===
+//addoutput.g
+	// function for saving parameter in ascii file.  
+	//function is made and called in this file
+	
+//make function 
+
+function sav_disk_asc(diskpath,srcpath,field)
+    create asc_file /output/{diskpath}
+    setfield /output/{diskpath}   flush 1  leave_open 1 append 1 \
+          float_format %0.6g
+    useclock /output/{diskpath} 0
+    setfield /output/{diskpath} filename output/{diskpath}
+    addmsg {srcpath} /output/{diskpath}  SAVE {field}
+    call /output/{diskpath} OUT_OPEN
+    call /output/{diskpath} OUT_WRITE "time #1" //header
+    echo {diskpath}
+end
+		
+		
+		
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/US50gradSTDP.g ===
+
+
+
+str cellpath = "/cell"
+str othercell = "/othercell"
+
+
+include RebekahSims/SpikeMakerSTDP.g
+include RebekahSims/add_outputgradSTDP
+
+
+
+
+create compartment {othercell}
+addmsg {othercell} {cellpath}/tertdend1_1/spikegen INPUT Vm
+addmsg {othercell} {cellpath}/tertdend1_2/spikegen INPUT Vm
+addmsg {othercell} {cellpath}/tertdend1_3/spikegen INPUT Vm
+addmsg {othercell} {cellpath}/tertdend1_4/spikegen INPUT Vm
+addmsg {othercell} {cellpath}/tertdend1_5/spikegen INPUT Vm
+addmsg {othercell} {cellpath}/tertdend1_6/spikegen INPUT Vm
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/US100grad.g ===
+
+
+add_output
+
+float inj = 800e-12
+str stimtype = "100APgrad"
+str diskpath={diskpath1}@(stimtype)@{spiketypeGrad}@".txt"
+echo {diskpath}
+setfield /output/plot_out filename output/{diskpath}
+reset
+
+include RebekahSims/header.g
+
+int Hz = 10 //for glu, function multiplies this by 2 for GABA
+float upstate_time = 0.3
+float AP_time = 0.1  //AP latency from upstate onset
+float AP_durtime = 0.005 //duration of AP depolarization at soma, 5 ms
+float high_time = 0.01
+float med_time  = 0.2
+float low_time  = 0.09
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/US10.g ===
+
+
+add_output
+
+float inj = 800e-12
+int Hz = 10  //for glu, function incrases by 2.5 this for GABA
+float upstate_time = 0.3
+float AP_time = 0.01  //AP latency from upstate onset
+float AP_durtime = 0.005 //duration of AP depolarization at soma, 5 ms
+
+
+str stimtype = "AP10flat"
+str diskpath={diskpath1}@(stimtype)@{spiketypeFlat}@".txt"
+echo {diskpath}
+setfield /output/plot_out filename output/{diskpath}
+reset
+
+include RebekahSims/header.g
+
+	makeallpreFlat {Hz}
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/SpikeMakerSTDP.g ===
+
+
+str spiketype = "spke4"
+
+//1: high=*50, med =*1, low =/1.5, gaba = *2
+//2: high=*40, med =*1, low =/1.5, gaba = *2
+//3: high=*40, med =*1, low =/1.5, gaba = *3
+//4: high=*40, med =*1, low =/1.5, gaba = *4
+//5: high=*60, med =/2, low =/5, gaba = *4
+//6: high=*30, med =*1, low =/1.5, gaba = *4
+
+
+//****start local subroutines
+
+function makeinputpre(rate, path)
+    str rate
+    str path
+    create randomspike {path}/randomspikehigh
+    setfield ^ min_amp 1.0 max_amp 1.0 rate {{rate}*40} reset 1 reset_value 0	
+    create randomspike {path}/randomspikemed
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/US175noAPSTDP.g ===
+
+
+
+str cellpath = "/cell"
+str othercell = "/othercell"
+
+
+include RebekahSims/SpikeMakerSTDP.g
+include RebekahSims/add_outputgradSTDP
+
+
+
+
+create compartment {othercell}
+addmsg {othercell} {cellpath}/tertdend1_1/spikegen INPUT Vm
+addmsg {othercell} {cellpath}/tertdend1_2/spikegen INPUT Vm
+addmsg {othercell} {cellpath}/tertdend1_3/spikegen INPUT Vm
+addmsg {othercell} {cellpath}/tertdend1_4/spikegen INPUT Vm
+addmsg {othercell} {cellpath}/tertdend1_5/spikegen INPUT Vm
+addmsg {othercell} {cellpath}/tertdend1_6/spikegen INPUT Vm
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/upstateAPstim.g ===
+
+
+//set random seed so for each simulation the randomspike train will be the same
+randseed 5757538
+//2 = 9824501
+//1 = 2394075
+
+include RebekahSims/addoutput.g
+
+/****************begin local subroutines*************/
+
+//these three functions used to provide synaptic input to neuron
+
+function makeinputpre(rate, path)
+    str rate
+    str path
+    create randomspike {path}/randomspike
+    setfield ^ min_amp 1.0 max_amp 1.0 rate {rate} reset 1 reset_value 0	
+    create randomspike {path}/randomspike2
+    setfield ^ min_amp 1.0 max_amp 1.0 rate {rate+1} reset 1 reset_value 0
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/add_outputgradSTDP.g ===
+
+
+function add_output
+	create asc_file /output/plot_out
+	setfield /output/plot_out   flush 1  leave_open 1 append 1 \
+          float_format %0.6g
+    useclock /output/plot_out 1
+	addmsg /cell/soma /output/plot_out  SAVE Vm
+		
+	addmsg /cell/tertdend1_1/Fluo5FVavg /output/plot_out SAVE meanValue
+	addmsg /cell/tertdend5_1/Fluo5FVavg /output/plot_out SAVE meanValue
+	addmsg /cell/tertdend9_1/Fluo5FVavg /output/plot_out SAVE meanValue
+	addmsg /cell/tertdend13_1/Fluo5FVavg /output/plot_out SAVE meanValue
+
+	addmsg /cell/tertdend1_2/Fluo5FVavg /output/plot_out SAVE meanValue
+	addmsg /cell/tertdend1_3/Fluo5FVavg /output/plot_out SAVE meanValue
+	
+	addmsg /cell/tertdend1_1/NMDApool /output/plot_out SAVE Ca
+	addmsg /cell/tertdend1_1/Lpool /output/plot_out SAVE Ca
+	addmsg /cell/tertdend5_1/NMDApool /output/plot_out SAVE Ca
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/iv.g ===
+
+//IF.g
+
+//str srcpath={neuronname}@"/soma"
+//str savefield="Vm"
+//float outputclock = 2e-5
+//create asc_file /output/plot_out
+
+//useclock /output/plot_out 1
+//setfield /output/plot_out   flush 1  leave_open 1 append 1 \
+//          float_format %0.6g
+
+ function add_output
+	create asc_file /output/plot_out
+	setfield /output/plot_out   flush 1  leave_open 1 append 1 \
+          float_format %0.6g
+    useclock /output/plot_out 1
+	addmsg /cell/soma /output/plot_out  SAVE Vm
+	call /output/plot_out OUT_OPEN
+	call /output/plot_out OUT_WRITE "time SomaVm" //header
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/upstateAPstim1.g ===
+
+
+//set random seed so for each simulation the randomspike train will be the same
+randseed 5757538
+//2 = 9824501
+//1 = 2394075
+
+/****************begin local subroutines*************/
+function add_output
+	create asc_file /output/plot_out
+	setfield /output/plot_out   flush 1  leave_open 1 append 1 \
+          float_format %0.6g
+    useclock /output/plot_out 1
+	addmsg /cell/soma /output/plot_out  SAVE Vm
+	//addmsg /cell/soma/KIR_channel /output/plot_out SAVE Gk
+	//addmsg /cell/soma/Ca_difshell_1 /output/plot_out  SAVE C
+	//addmsg /cell/soma/Ca_difshell_2 /output/plot_out  SAVE C
+	//addmsg /cell/soma/Ca_difshell_4 /output/plot_out  SAVE C
+	//addmsg /cell/soma/Ca_difshell_5 /output/plot_out  SAVE C
+	//addmsg /cell/soma/BKK_channel /output/plot_out  SAVE Ik
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/US50.g ===
+
+
+add_output
+
+float inj = 800e-12
+int Hz = 10  //for glu, function incrases by 2.5 this for GABA
+float upstate_time = 0.3
+float AP_time = 0.05  //AP latency from upstate onset
+float AP_durtime = 0.005 //duration of AP depolarization at soma, 5 ms
+
+
+str stimtype = "AP50flat"
+str diskpath={diskpath1}@(stimtype)@{spiketypeFlat}@".txt"
+echo {diskpath}
+setfield /output/plot_out filename output/{diskpath}
+reset
+
+include RebekahSims/header.g
+
+	makeallpreFlat {Hz}
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/add_output5.g ===
+
+
+function add_output
+	create asc_file /output/plot_out
+	setfield /output/plot_out   flush 1  leave_open 1 append 1 \
+          float_format %0.6g
+    useclock /output/plot_out 1
+	addmsg /cell/soma /output/plot_out  SAVE Vm
+	
+	addmsg /cell/primdend1/Fluo5FVavg /output/plot_out SAVE meanValue
+	addmsg /cell/primdend2/Fluo5FVavg /output/plot_out SAVE meanValue
+	addmsg /cell/primdend3/Fluo5FVavg /output/plot_out SAVE meanValue
+	addmsg /cell/primdend4/Fluo5FVavg /output/plot_out SAVE meanValue
+
+	addmsg /cell/secdend11/Fluo5FVavg /output/plot_out SAVE meanValue
+	addmsg /cell/secdend21/Fluo5FVavg /output/plot_out SAVE meanValue
+	addmsg /cell/secdend31/Fluo5FVavg /output/plot_out SAVE meanValue
+	addmsg /cell/secdend41/Fluo5FVavg /output/plot_out SAVE meanValue
+
+	addmsg /cell/tertdend1_1/Fluo5FVavg /output/plot_out SAVE meanValue
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/add_outputgrad3.g ===
+
+
+function add_output
+	create asc_file /output/plot_out
+	setfield /output/plot_out   flush 1  leave_open 1 append 1 \
+          float_format %0.6g
+    useclock /output/plot_out 1
+	addmsg /cell/soma /output/plot_out  SAVE Vm
+	addmsg /cell/tertdend1_1 /output/plot_out SAVE Vm
+
+	addmsg /cell/tertdend1_1/Fluo5FVavg /output/plot_out SAVE meanValue
+	addmsg /cell/tertdend1_1/volavg /output/plot_out SAVE meanValue
+
+	addmsg /cell/tertdend1_1/NMDApool /output/plot_out SAVE Ca
+	addmsg /cell/tertdend1_1/Lpool /output/plot_out SAVE Ca
+
+	addmsg /cell/tertdend1_1/NR2A/GHK /output/plot_out SAVE Gk
+	addmsg /cell/tertdend1_1/NR2A/block /output/plot_out SAVE Gk
+
+	addmsg /cell/tertdend1_1/CaL12_channel /output/plot_out SAVE X 
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/add_outputgrad.g ===
+
+
+function add_output
+	create asc_file /output/plot_out
+	setfield /output/plot_out   flush 1  leave_open 1 append 1 \
+          float_format %0.6g
+    useclock /output/plot_out 1
+	addmsg /cell/soma /output/plot_out  SAVE Vm
+	addmsg /cell/tertdend1_1 /output/plot_out SAVE Vm
+	addmsg /cell/tertdend5_1 /output/plot_out SAVE Vm
+	addmsg /cell/tertdend9_1 /output/plot_out SAVE Vm
+	addmsg /cell/tertdend13_1 /output/plot_out SAVE Vm
+
+	addmsg /cell/tertdend1_1/Fluo5F /output/plot_out SAVE ratio
+	addmsg /cell/tertdend5_1/fluorescence /output/plot_out SAVE ratio
+	addmsg /cell/tertdend9_1/fluorescence /output/plot_out SAVE ratio
+	addmsg /cell/tertdend13_1/fluorescence /output/plot_out SAVE ratio
+
+	addmsg /cell/tertdend1_1/fluorescence /output/plot_out SAVE ratio
+	addmsg /cell/tertdend5_1/fluorescence /output/plot_out SAVE ratio
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/US175gradSTDP.g ===
+
+
+
+str cellpath = "/cell"
+str othercell = "/othercell"
+
+
+include RebekahSims/SpikeMakerSTDP.g
+include RebekahSims/add_outputgradSTDP
+
+
+
+
+create compartment {othercell}
+addmsg {othercell} {cellpath}/tertdend1_1/spikegen INPUT Vm
+addmsg {othercell} {cellpath}/tertdend1_2/spikegen INPUT Vm
+addmsg {othercell} {cellpath}/tertdend1_3/spikegen INPUT Vm
+addmsg {othercell} {cellpath}/tertdend1_4/spikegen INPUT Vm
+addmsg {othercell} {cellpath}/tertdend1_5/spikegen INPUT Vm
+addmsg {othercell} {cellpath}/tertdend1_6/spikegen INPUT Vm
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/if4.g ===
+//genesis
+//IF2.g
+
+function add_output
+	create asc_file /output/plot_out
+	setfield /output/plot_out   flush 1  leave_open 1 append 1 \
+          float_format %0.6g
+    useclock /output/plot_out 1
+	addmsg /cell/soma /output/plot_out  SAVE Vm
+
+	addmsg /cell/soma/BK_channel /output/plot_out  SAVE Gk
+	addmsg /cell/soma/SK_channel /output/plot_out  SAVE Gk
+	//addmsg /cell/soma/KAf_channel /output/plot_out  SAVE Gk
+	//addmsg /cell/soma/KDR_channel /output/plot_out  SAVE Gk
+	//addmsg /cell/soma/KAs_channel /output/plot_out  SAVE Gk
+
+	addmsg /cell/secdend11/BK_channel /output/plot_out  SAVE Gk
+	addmsg /cell/secdend11/SK_channel /output/plot_out  SAVE Gk
+/*
+	addmsg /cell/soma/CaR_channelGHK /output/plot_out SAVE Gk
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/US50noAPSTDP.g ===
+
+
+
+str cellpath = "/cell"
+str othercell = "/othercell"
+
+
+include RebekahSims/SpikeMakerSTDP.g
+include RebekahSims/add_outputgradSTDP
+
+
+
+
+create compartment {othercell}
+addmsg {othercell} {cellpath}/tertdend1_1/spikegen INPUT Vm
+addmsg {othercell} {cellpath}/tertdend1_2/spikegen INPUT Vm
+addmsg {othercell} {cellpath}/tertdend1_3/spikegen INPUT Vm
+addmsg {othercell} {cellpath}/tertdend1_4/spikegen INPUT Vm
+addmsg {othercell} {cellpath}/tertdend1_5/spikegen INPUT Vm
+addmsg {othercell} {cellpath}/tertdend1_6/spikegen INPUT Vm
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/US290.g ===
+
+
+add_output
+
+float inj = 800e-12
+int Hz = 10  //for glu, function incrases by 2.5 this for GABA
+float upstate_time = 0.3
+float AP_time = 0.290  //AP latency from upstate onset
+float AP_durtime = 0.005 //duration of AP depolarization at soma, 5 ms
+
+
+str stimtype = "AP290flat"
+str diskpath={diskpath1}@(stimtype)@{spiketypeFlat}@".txt"
+echo {diskpath}
+setfield /output/plot_out filename output/{diskpath}
+reset
+
+include RebekahSims/header.g
+
+	makeallpreFlat {Hz}
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/SpikeMakerFlat.g ===
+
+str spiketypeFlat = "SpikeF1"
+
+//F1 = glu *4; GABA *7
+
+//these three functions used to provide synaptic input to neuron
+
+function makeinputpreFlat(rate, path)
+    str rate
+    str path
+    create randomspike {path}/randomspike
+    setfield ^ min_amp 1.0 max_amp 1.0 rate {{rate}*{4}} reset 1 reset_value 0	
+    create randomspike {path}/randomspike2
+    setfield ^ min_amp 1.0 max_amp 1.0 rate {{rate}*{7}} reset 1 reset_value 0	
+ end
+	
+function makeinputpostFlat(pathspike, path) 
+	str path
+	int msgnum
+	addmsg {pathspike} {path} SPIKE
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/US5grad.g ===
+
+str cellpath = "/cell"
+
+
+include RebekahSims/SpikeMaker.g
+include RebekahSims/add_outputPools.g
+
+add_output
+
+str stimtype = "5APgrad"
+str diskpath={diskpath1}@(stimtype)@{spiketype}@".txt"
+echo {diskpath}
+setfield /output/plot_out filename output/{diskpath}
+reset
+
+call /output/plot_out OUT_OPEN
+call /output/plot_out OUT_WRITE "time SomaVm tert1pool tert5pool tert9pool tert13pool tert1volavg tert5volavg tert9volavg tert13volavg tert1dif1 tert5dif1 tert9dif1 tert13dif1 tert1F2 tert5F2 tert9F2 tert13F2 tert1NMDA tert5NMDA tert9NMDA tert13NMDA" //header	
+int Hz = 10 //for glu, function multiplies this by 2 for GABA
+float upstate_time = 0.3
+float AP_time = 0.005  //AP latency from upstate onset
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/SpikeMaker.g ===
+
+
+str spiketype = "spke18"
+
+//1: high=*50, med =*1, low =/1.5, gaba = *2
+//2: high=*40, med =*1, low =/1.5, gaba = *2
+//3: high=*40, med =*1, low =/1.5, gaba = *3
+//4: high=*40, med =*1, low =/1.5, gaba = *4
+//4r: high=*40, med =*5, low =/1, gaba = *7
+//4ra: high=*30, med =*4, low =/1, gaba = *7
+//4rb: high=*30, med =*3, low =/1, gaba = *7
+//5: high=*60, med =/2, low =/5, gaba = *4
+//6: high=*30, med =*1, low =/1.5, gaba = *4
+//7r: high=*50, med=*5, low =*1, GABA = *7  gaba delay
+//8r: high=*70, med=*5, low =*1, GABA = *10
+//9r: high=*90, med=*5, low =*1, GABA = *10
+//10r: high=*120, med=*1, low =*1, GABA = *10
+//11r: high=*200, med=/2, low =/2, GABA = *40
+//12y: high=*50, med=*1, low=/2, gaba = *8
+//13y: high=*30, med=*5, low=/1.5, gaba=*5
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/add_outputgrad2.g ===
+
+
+function add_output
+	create asc_file /output/plot_out
+	setfield /output/plot_out   flush 1  leave_open 1 append 1 \
+          float_format %0.6g
+    useclock /output/plot_out 1
+	addmsg /cell/soma /output/plot_out  SAVE Vm
+
+	addmsg /cell/tertdend1_1 /output/plot_out SAVE Vm
+	addmsg /cell/tertdend5_1 /output/plot_out SAVE Vm
+	addmsg /cell/tertdend9_1 /output/plot_out SAVE Vm
+	addmsg /cell/tertdend13_1 /output/plot_out SAVE Vm
+/*
+	addmsg /cell/tertdend1_1/Fluo5FVavg /output/plot_out SAVE meanValue
+	addmsg /cell/tertdend5_1/Fluo5FVavg /output/plot_out SAVE meanValue
+	addmsg /cell/tertdend9_1/Fluo5FVavg /output/plot_out SAVE meanValue
+	addmsg /cell/tertdend13_1/Fluo5FVavg /output/plot_out SAVE meanValue
+
+	addmsg /cell/tertdend1_1/NMDApool /output/plot_out SAVE Ca
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/US10grad.g ===
+
+
+add_output
+float inj = 800e-12
+str stimtype = "10APgrad"
+str diskpath={diskpath1}@(stimtype)@{spiketypeGrad}@".txt"
+echo {diskpath}
+setfield /output/plot_out filename output/{diskpath}
+reset
+
+include RebekahSims/header.g
+
+int Hz = 10 //for glu, function multiplies this by 2 for GABA
+float upstate_time = 0.3
+float AP_time = 0.01  //AP latency from upstate onset
+float AP_durtime = 0.005 //duration of AP depolarization at soma, 5 ms
+float high_time = 0.01
+float med_time  = 0.2
+float low_time  = 0.09
+
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/US30.g ===
+
+
+add_output
+
+float inj = 800e-12
+int Hz = 10  //for glu, function incrases by 2.5 this for GABA
+float upstate_time = 0.3
+float AP_time = 0.03  //AP latency from upstate onset
+float AP_durtime = 0.005 //duration of AP depolarization at soma, 5 ms
+
+
+str stimtype = "AP30flat"
+str diskpath={diskpath1}@(stimtype)@{spiketypeFlat}@".txt"
+echo {diskpath}
+setfield /output/plot_out filename output/{diskpath}
+reset
+
+include RebekahSims/header.g
+
+	makeallpreFlat {Hz}
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/add_outputUS.g ===
+
+
+function add_output
+	create asc_file /output/plot_out
+	setfield /output/plot_out   flush 1  leave_open 1 append 1 \
+          float_format %0.6g
+    useclock /output/plot_out 1
+	addmsg /cell/soma /output/plot_out  SAVE Vm
+	addmsg /cell/tertdend1_1 /output/plot_out SAVE Vm
+	addmsg /cell/tertdend5_1 /output/plot_out SAVE Vm
+	addmsg /cell/tertdend9_1 /output/plot_out SAVE Vm
+	addmsg /cell/tertdend13_1 /output/plot_out SAVE Vm
+
+	addmsg /cell/tertdend1_1/fluorescence /output/plot_out SAVE ratio
+	addmsg /cell/tertdend5_1/fluorescence /output/plot_out SAVE ratio
+	addmsg /cell/tertdend9_1/fluorescence /output/plot_out SAVE ratio
+	addmsg /cell/tertdend9_1/fluorescence /output/plot_out SAVE ratio
+
+	addmsg /cell/tertdend1_1/volavg /output/plot_out SAVE meanValue
+	addmsg /cell/tertdend5_1/volavg /output/plot_out SAVE meanValue
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/if2noproto.g ===
+//genesis
+//IF2noproto.g
+
+function add_output
+	create asc_file /output/plot_out
+	setfield /output/plot_out   flush 1  leave_open 1 append 1 \
+          float_format %0.6g
+    useclock /output/plot_out 1
+	addmsg /cell/soma /output/plot_out  SAVE Vm
+	addmsg /cell/soma/BK_channel /output/plot_out  SAVE Gk
+	addmsg /cell/soma/SK_channel /output/plot_out  SAVE Gk
+	addmsg /cell/secdend11/BK_channel /output/plot_out  SAVE Gk
+	addmsg /cell/secdend11/SK_channel /output/plot_out  SAVE Gk
+		
+  if (calciumtype==0)
+	addmsg /cell/soma/Ca_difshell_1 /output/plot_out SAVE C
+	addmsg /cell/primdend1/Ca_difshell_1 /output/plot_out SAVE C
+	addmsg /cell/secdend11/Ca_difshell_1 /output/plot_out SAVE C
+	addmsg /cell/tertdend1_1/Ca_difshell_1 /output/plot_out SAVE C
+	addmsg /cell/tertdend1_6/Ca_difshell_1 /output/plot_out SAVE C
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/add_outputDistance.g ===
+
+
+function add_output
+	create asc_file /output/plot_out
+	setfield /output/plot_out   flush 1  leave_open 1 append 1 \
+          float_format %0.6g
+    useclock /output/plot_out 1
+	addmsg /cell/soma /output/plot_out  SAVE Vm
+
+	addmsg /cell/primdend1/volavg /output/plot_out SAVE meanValue 
+	addmsg /cell/primdend2/volavg /output/plot_out SAVE meanValue
+	addmsg /cell/primdend3/volavg /output/plot_out SAVE meanValue
+	addmsg /cell/primdend4/volavg /output/plot_out SAVE meanValue
+
+	addmsg /cell/secdend11/volavg /output/plot_out SAVE meanValue 
+	addmsg /cell/secdend21/volavg /output/plot_out SAVE meanValue
+	addmsg /cell/secdend31/volavg /output/plot_out SAVE meanValue
+	addmsg /cell/secdend41/volavg /output/plot_out SAVE meanValue
+
+	addmsg /cell/tertdend1_1/volavg /output/plot_out SAVE meanValue
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/Shindou3AP.g ===
+//genesis Shindou3AP.g
+
+include RebekahSims/addoutput.g
+str cellpath = "/cell"
+add_output
+
+str stimtype = "Shindou3APonly"
+diskpath={diskpath}@(stimtype)@".txt"
+echo {diskpath}
+setfield /output/plot_out filename output/{diskpath}
+reset
+
+setfield /output/plot_out filename output/{diskpath}
+		call /output/plot_out OUT_OPEN
+		call /output/plot_out OUT_WRITE "time SomaVm somaVavg primVavg secVavg tertVavg" //header
+
+
+step 0.1 -time
+
+	//setfield {cellpath}/tertdend1_1/presyn_ext z {1/{getclock 0}}
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/US30grad.g ===
+
+
+add_output
+float inj = 800e-12
+str stimtype = "30APgrad"
+str diskpath={diskpath1}@(stimtype)@{spiketypeGrad}@".txt"
+echo {diskpath}
+setfield /output/plot_out filename output/{diskpath}
+reset
+
+include RebekahSims/header.g
+
+int Hz = 10 //for glu, function multiplies this by 2 for GABA
+float upstate_time = 0.3
+float AP_time = 0.03  //AP latency from upstate onset
+float AP_durtime = 0.005 //duration of AP depolarization at soma, 5 ms
+float high_time = 0.01
+float med_time  = 0.2
+float low_time  = 0.09
+
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/if5.g ===
+//genesis
+//IF2.g
+
+function add_output
+	create asc_file /output/plot_out
+	setfield /output/plot_out   flush 1  leave_open 1 append 1 \
+          float_format %0.6g
+    useclock /output/plot_out 1
+	addmsg /cell/soma /output/plot_out  SAVE Vm
+	//addmsg /cell/soma/NaF_channel /output/plot_out  SAVE Gk
+/*
+	addmsg /cell/soma/BK_channel /output/plot_out  SAVE Gk
+	addmsg /cell/soma/SK_channel /output/plot_out  SAVE Gk
+	//addmsg /cell/soma/KAf_channel /output/plot_out  SAVE Gk
+	//addmsg /cell/soma/KDR_channel /output/plot_out  SAVE Gk
+	//addmsg /cell/soma/KAs_channel /output/plot_out  SAVE Gk
+
+	addmsg /cell/soma/BK_channel /output/plot_out  SAVE Gk
+	addmsg /cell/soma/SK_channel /output/plot_out  SAVE Gk
+
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/US20.g ===
+
+
+add_output
+
+float inj = 800e-12
+int Hz = 10  //for glu, function incrases by 2.5 this for GABA
+float upstate_time = 0.3
+float AP_time = 0.02  //AP latency from upstate onset
+float AP_durtime = 0.005 //duration of AP depolarization at soma, 5 ms
+
+
+str stimtype = "AP20flat"
+str diskpath={diskpath1}@(stimtype)@{spiketypeFlat}@".txt"
+echo {diskpath}
+setfield /output/plot_out filename output/{diskpath}
+reset
+
+include RebekahSims/header.g
+
+	makeallpreFlat {Hz}
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/PairedPulse.g ===
+//genesis PairedPulse.g
+
+include RebekahSims/addoutput.g
+
+add_output
+str cellpath = "/cell"
+str stimtype = "PP50ms"
+diskpath={diskpath}@(stimtype)@".txt"
+echo {diskpath}
+setfield /output/plot_out filename output/{diskpath}
+reset
+
+setfield /output/plot_out filename output/{diskpath}
+		call /output/plot_out OUT_OPEN
+		call /output/plot_out OUT_WRITE "time SomaVm somaVavg primVavg secVavg tertVavg" //header
+
+int i
+float isi = 0.05 //50ms
+
+for (i=0; i<1; i=i+1)
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/hfs.g ===
+//genesis HFS.g
+
+
+include RebekahSims/addoutput.g
+str cellpath = "/cell"
+add_output
+
+str stimtype = "HFS"
+diskpath={diskpath}@(stimtype)@".txt"
+echo {diskpath}
+setfield /output/plot_out filename output/{diskpath}
+reset
+
+setfield /output/plot_out filename output/{diskpath}
+		call /output/plot_out OUT_OPEN
+		call /output/plot_out OUT_WRITE "time SomaVm somaVavg primVavg secVavg tertVavg" //header
+
+int i
+int j
+
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/US20tester.g ===
+
+
+
+/****************begin local subroutines*************/
+function add_output
+	create asc_file /output/plot_out
+	setfield /output/plot_out   flush 1  leave_open 1 append 1 \
+          float_format %0.6g
+    useclock /output/plot_out 1
+	addmsg /cell/soma /output/plot_out  SAVE Vm
+
+	addmsg /cell/tertdend1_1/fluorescence /output/plot_out SAVE ratio
+	
+	addmsg /cell/tertdend2_1/fluorescence /output/plot_out SAVE ratio
+	
+	addmsg /cell/tertdend3_1/fluorescence /output/plot_out SAVE ratio
+
+	addmsg /cell/tertdend1_1/NR2A/GHK /output/plot_out SAVE Ik
+	addmsg /cell/tertdend1_1/NR2A/block /output/plot_out SAVE Ik
+	addmsg /cell/tertdend2_1/NR2A/GHK /output/plot_out SAVE Ik
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/PairedPulse2.g ===
+//genesis PairedPulse2.g
+
+include RebekahSims/addoutput.g
+
+add_output
+str cellpath = "/cell"
+str othercell = "/othercell"
+str stimtype = "PPtrain"
+diskpath={diskpath}@(stimtype)@".txt"
+echo {diskpath}
+setfield /output/plot_out filename output/{diskpath}
+reset
+
+setfield /output/plot_out filename output/{diskpath}
+		call /output/plot_out OUT_OPEN
+		call /output/plot_out OUT_WRITE "time SomaVm secVm SecVavg secNMDAgk secAMPAgk secFura" //header
+
+//because we are using the facsynchan which cannot recieve activation messages, we have to use spikegen 
+//objects and send input into them.
+ 
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/add_outputPools.g ===
+
+
+function add_output
+	create asc_file /output/plot_out
+	setfield /output/plot_out   flush 1  leave_open 1 append 1 \
+          float_format %0.6g
+    useclock /output/plot_out 1
+	addmsg /cell/soma /output/plot_out  SAVE Vm
+	
+	addmsg /cell/tertdend1_1/allpool /output/plot_out SAVE Ca
+	addmsg /cell/tertdend5_1/allpool /output/plot_out SAVE Ca
+	addmsg /cell/tertdend9_1/allpool /output/plot_out SAVE Ca
+	addmsg /cell/tertdend13_1/allpool /output/plot_out SAVE Ca
+
+	addmsg /cell/tertdend1_1/volavg /output/plot_out SAVE meanValue 
+	addmsg /cell/tertdend5_1/volavg /output/plot_out SAVE meanValue 
+	addmsg /cell/tertdend9_1/volavg /output/plot_out SAVE meanValue 
+	addmsg /cell/tertdend13_1/volavg /output/plot_out SAVE meanValue
+
+	addmsg /cell/tertdend1_1/Ca_difshell_1 /output/plot_out SAVE C
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/SpontAP.g ===
+
+
+
+include RebekahSims/add_outputgrad2
+
+//these three functions used to provide synaptic input to neuron
+
+function makeinputpre(rate, path)
+    str rate
+    str path
+    create randomspike {path}/randomspike
+    setfield ^ min_amp 1.0 max_amp 1.0 rate {{rate}*6} reset 1 reset_value 0	
+    create randomspike {path}/randomspike2
+    setfield ^ min_amp 1.0 max_amp 1.0 rate {{rate}*7} reset 1 reset_value 0	
+ end
+	
+function makeinputpost(pathspike, path) 
+	str path
+	int msgnum
+	addmsg {pathspike} {path} SPIKE
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/US5.g ===
+
+include RebekahSims/add_outputPools
+
+//these three functions used to provide synaptic input to neuron
+
+function makeinputpre(rate, path)
+    str rate
+    str path
+    create randomspike {path}/randomspike
+    setfield ^ min_amp 1.0 max_amp 1.0 rate {{rate}*4} reset 1 reset_value 0	
+    create randomspike {path}/randomspike2
+    setfield ^ min_amp 1.0 max_amp 1.0 rate {{rate}*7} reset 1 reset_value 0	
+ end
+	
+function makeinputpost(pathspike, path) 
+	str path
+	int msgnum
+	addmsg {pathspike} {path} SPIKE
+    	msgnum = {getfield {path} nsynapses} - 1
+   	 setfield {path} \
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/USnoAP.g ===
+
+
+add_output
+
+float inj = 0
+int Hz = 10  //for glu, function incrases by 2.5 this for GABA
+float upstate_time = 0.3
+float AP_time = 0.290  //AP latency from upstate onset
+float AP_durtime = 0.005 //duration of AP depolarization at soma, 5 ms
+
+
+str stimtype = "noAPflat"
+str diskpath={diskpath1}@(stimtype)@{spiketypeFlat}@".txt"
+echo {diskpath}
+setfield /output/plot_out filename output/{diskpath}
+reset
+
+include RebekahSims/header.g
+
+	makeallpreFlat {Hz}
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/add_outputgrad5.g ===
+
+
+function add_output
+	create asc_file /output/plot_out
+	setfield /output/plot_out   flush 1  leave_open 1 append 1 \
+          float_format %0.6g
+    useclock /output/plot_out 1
+	addmsg /cell/soma /output/plot_out  SAVE Vm
+	
+	addmsg /cell/primdend1/Fluo5FVavg /output/plot_out SAVE meanValue
+	addmsg /cell/primdend2/Fluo5FVavg /output/plot_out SAVE meanValue
+	addmsg /cell/primdend3/Fluo5FVavg /output/plot_out SAVE meanValue
+	addmsg /cell/primdend4/Fluo5FVavg /output/plot_out SAVE meanValue
+
+	addmsg /cell/secdend11/Fluo5FVavg /output/plot_out SAVE meanValue
+	addmsg /cell/secdend21/Fluo5FVavg /output/plot_out SAVE meanValue
+	addmsg /cell/secdend31/Fluo5FVavg /output/plot_out SAVE meanValue
+	addmsg /cell/secdend41/Fluo5FVavg /output/plot_out SAVE meanValue
+
+	addmsg /cell/tertdend1_1/Fluo5FVavg /output/plot_out SAVE meanValue
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/US100noAPSTDP.g ===
+
+
+
+str cellpath = "/cell"
+str othercell = "/othercell"
+
+
+include RebekahSims/SpikeMakerSTDP.g
+include RebekahSims/add_outputgradSTDP
+
+
+
+
+create compartment {othercell}
+addmsg {othercell} {cellpath}/tertdend1_1/spikegen INPUT Vm
+addmsg {othercell} {cellpath}/tertdend1_2/spikegen INPUT Vm
+addmsg {othercell} {cellpath}/tertdend1_3/spikegen INPUT Vm
+addmsg {othercell} {cellpath}/tertdend1_4/spikegen INPUT Vm
+addmsg {othercell} {cellpath}/tertdend1_5/spikegen INPUT Vm
+addmsg {othercell} {cellpath}/tertdend1_6/spikegen INPUT Vm
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/addoutput.g ===
+//addoutput.g
+	// function for saving parameter in ascii file.  
+	//function is made and called in this file
+	
+//make function 
+
+function sav_disk_asc(diskpath,srcpath,field)
+    create asc_file /output/{diskpath}
+    setfield /output/{diskpath}   flush 1  leave_open 1 append 1 \
+          float_format %0.6g
+    useclock /output/{diskpath} 0
+    setfield /output/{diskpath} filename output/{diskpath}
+    addmsg {srcpath} /output/{diskpath}  SAVE {field}
+    call /output/{diskpath} OUT_OPEN
+    call /output/{diskpath} OUT_WRITE "time #1" //header
+    echo {diskpath}
+end
+		
+		
+		
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/SpikeMakerGrad.g ===
+
+
+str spiketypeGrad = "spke18"
+
+//18: high=*50, med=*3, low=*1, gaba=*7
+//19: high=*40, med=*5, low=*2, gaba=*7
+
+//****start local subroutines
+
+function makeinputpreGrad(rate, path)
+    str rate
+    str path
+    create randomspike {path}/randomspikehigh
+    setfield ^ min_amp 1.0 max_amp 1.0 rate {{rate}*50} reset 1 reset_value 0	
+    create randomspike {path}/randomspikemed
+    setfield ^ min_amp 1.0 max_amp 1.0 rate {{rate}*3} reset 1 reset_value 0	
+    create randomspike {path}/randomspikelow
+    setfield ^ min_amp 1.0 max_amp 1.0 rate {{rate}*1} reset 1 reset_value 0	
+    create randomspike {path}/randomspike2
+    setfield ^ min_amp 1.0 max_amp 1.0 rate {{rate}*7} reset 1 reset_value 0	
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/USnoAPgrad.g ===
+
+
+add_output
+
+float inj = 0 //ALWAYS zero for no AP
+str stimtype = "noAPgrad"
+str diskpath={diskpath1}@(stimtype)@{spiketypeGrad}@".txt"
+echo {diskpath}
+setfield /output/plot_out filename output/{diskpath}
+reset
+
+include RebekahSims/header.g
+
+int Hz = 10 //for glu, function multiplies this by 2 for GABA
+float upstate_time = 0.3
+float AP_time = 0.01  //AP latency from upstate onset
+float AP_durtime = 0.005 //duration of AP depolarization at soma, 5 ms
+float high_time = 0.01
+float med_time  = 0.2
+float low_time  = 0.09
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/US290grad.g ===
+
+
+
+add_output
+float inj = 800e-12
+str stimtype = "290APgrad"
+str diskpath={diskpath1}@(stimtype)@{spiketypeGrad}@".txt"
+echo {diskpath}
+setfield /output/plot_out filename output/{diskpath}
+reset
+
+include RebekahSims/header.g
+
+int Hz = 10 //for glu, function multiplies this by 2 for GABA
+float upstate_time = 0.3
+float AP_time = 0.29  //AP latency from upstate onset
+float AP_durtime = 0.005 //duration of AP depolarization at soma, 5 ms
+float high_time = 0.01
+float med_time  = 0.2
+float low_time  = 0.09
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/US175grad.g ===
+
+
+add_output
+
+float inj = 800e-12
+str stimtype = "175APgrad"
+str diskpath={diskpath1}@(stimtype)@{spiketypeGrad}@".txt"
+echo {diskpath}
+setfield /output/plot_out filename output/{diskpath}
+reset
+
+include RebekahSims/header.g
+
+int Hz = 10 //for glu, function multiplies this by 2 for GABA
+float upstate_time = 0.3
+float AP_time = 0.175  //AP latency from upstate onset
+float AP_durtime = 0.005 //duration of AP depolarization at soma, 5 ms
+float high_time = 0.01
+float med_time  = 0.2
+float low_time  = 0.09
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/US50grad.g ===
+
+
+add_output
+float inj = 800e-12
+str stimtype = "50APgrad"
+str diskpath={diskpath1}@(stimtype)@{spiketypeGrad}@".txt"
+echo {diskpath}
+setfield /output/plot_out filename output/{diskpath}
+reset
+
+include RebekahSims/header.g
+
+int Hz = 10 //for glu, function multiplies this by 2 for GABA
+float upstate_time = 0.3
+float AP_time = 0.05  //AP latency from upstate onset
+float AP_durtime = 0.005 //duration of AP depolarization at soma, 5 ms
+float high_time = 0.01
+float med_time  = 0.2
+float low_time  = 0.09
+
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/ifBKSKtest.g ===
+//genesis
+//IF2.g
+
+function add_output
+	create asc_file /output/plot_out
+	setfield /output/plot_out   flush 1  leave_open 1 append 1 \
+          float_format %0.6g
+    useclock /output/plot_out 1
+	addmsg /cell/soma /output/plot_out  SAVE Vm
+
+	addmsg /cell/soma/BK_channel /output/plot_out  SAVE Gk
+	addmsg /cell/soma/SK_channel /output/plot_out  SAVE Gk
+	//addmsg /cell/soma/KAf_channel /output/plot_out  SAVE Gk
+	//addmsg /cell/soma/KDR_channel /output/plot_out  SAVE Gk
+	//addmsg /cell/soma/KAs_channel /output/plot_out  SAVE Gk
+/*
+	addmsg /cell/secdend11/BK_channel /output/plot_out  SAVE Gk
+	addmsg /cell/secdend11/SK_channel /output/plot_out  SAVE Gk
+
+	addmsg /cell/soma/CaR_channelGHK /output/plot_out SAVE Gk
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/simVclamp.g ===
+//genesis
+//IF2.g
+
+function add_output
+	create asc_file /output/plot_out
+	setfield /output/plot_out   flush 1  leave_open 1 append 1 \
+          float_format %0.6g
+    useclock /output/plot_out 1
+	addmsg /cell/soma /output/plot_out  SAVE Vm
+
+	addmsg /cell/soma/BK_channel /output/plot_out  SAVE Gk
+	addmsg /cell/soma/SK_channel /output/plot_out  SAVE Gk
+	addmsg /cell/secdend11/BK_channel /output/plot_out  SAVE Gk
+	addmsg /cell/secdend11/SK_channel /output/plot_out  SAVE Gk
+
+	addmsg /cell/soma/BK_channel /output/plot_out  SAVE Ik
+	addmsg /cell/soma/SK_channel /output/plot_out  SAVE Ik
+	addmsg /cell/secdend11/BK_channel /output/plot_out  SAVE Ik
+	addmsg /cell/secdend11/SK_channel /output/plot_out  SAVE Ik
+/*
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/if2.g ===
+//genesis
+//IF2.g
+
+function add_output
+	create asc_file /output/plot_out
+	setfield /output/plot_out   flush 1  leave_open 1 append 1 \
+          float_format %0.6g
+    useclock /output/plot_out 1
+	addmsg /cell/soma /output/plot_out  SAVE Vm
+	addmsg /cell/primdend1 /output/plot_out  SAVE Vm
+	addmsg /cell/secdend11 /output/plot_out  SAVE Vm
+	addmsg /cell/tertdend1_1 /output/plot_out  SAVE Vm
+	addmsg /cell/tertdend1_2 /output/plot_out  SAVE Vm
+	addmsg /cell/tertdend1_3 /output/plot_out  SAVE Vm
+	addmsg /cell/tertdend1_4 /output/plot_out  SAVE Vm
+
+	//addmsg /cell/soma/NaF_channel /output/plot_out  SAVE Gk
+/*
+	addmsg /cell/soma/BK_channel /output/plot_out  SAVE Gk
+	addmsg /cell/soma/SK_channel /output/plot_out  SAVE Gk
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/RebekahSims/US100gradSTDP.g ===
+
+
+
+str cellpath = "/cell"
+str othercell = "/othercell"
+
+
+include RebekahSims/SpikeMakerSTDP.g
+include RebekahSims/add_outputgradSTDP
+
+
+
+
+create compartment {othercell}
+addmsg {othercell} {cellpath}/tertdend1_1/spikegen INPUT Vm
+addmsg {othercell} {cellpath}/tertdend1_2/spikegen INPUT Vm
+addmsg {othercell} {cellpath}/tertdend1_3/spikegen INPUT Vm
+addmsg {othercell} {cellpath}/tertdend1_4/spikegen INPUT Vm
+addmsg {othercell} {cellpath}/tertdend1_5/spikegen INPUT Vm
+addmsg {othercell} {cellpath}/tertdend1_6/spikegen INPUT Vm
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/graphics7.g ===
+//genesis
+
+
+/***************************		MS Model, Version 9.1	*********************
+**************************** 	      graphics3.g 	*********************
+	Avrama Blackwell 	kblackw1@gmu.edu
+	Wonryull Koh		wkoh1@gmu.edu
+	Rebekah Evans 		rcolema2@gmu.edu
+	Sriram 				dsriraman@gmail.com	
+******************************************************************************
+
+*****************************************************************************/
+
+
+/*********************** Begin Local Subroutines *****************************/
+/*****************************************************************************/
+
+	//************************ Begin function record_channel *******************
+	function record_channel(compt,channel,xcell, color)
+ 		str compt,xcell,channel, color		
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MSsimSyn.g ===
+                       //genesis
+// MSsim.g 
+
+/***************************		MS Model, Version 9.1	***************
+*******************************************************************************
+****************************** Begin includes *******************************/
+
+str 	neuronname = "/cell"
+str pfile="MScell/MScelltapershortCM3noproto.p" //thickdends
+include MScell/MScellSyn	// access make_MS_cell this function is only called from MSsim.g
+include graphics7		        // access functions make_control & make_graph
+include RebekahSims/Store_Parameters.g
+			     
+// These two functions are only called from MSsimSyn.g
+/****************************** End includes *********************************/
+float outputclock=2e-5
+
+	setclock 0 5e-6   // Simulation time step (Second)       
+	setclock 1 {outputclock}
+
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/CaDifshellSpine.g ===
+//genesis
+
+/***************************		MS Model, Version 8	*********************
+**************************** 	      CaDifshellSpines.g 	*********************
+	Avrama Blackwell 	kblackw1@gmu.edu
+	Wonryull Koh		wkoh1@gmu.edu
+	Rebekah Evans 		rcolema2@gmu.edu
+	Sriram 			dsriraman@gmail.com	
+	Tom Sheehan 		tsheeha2@gmu.edu	
+******************************************************************************
+This file is a lot like CaDifshell.g, but is adjusted to make difshells in spines.
+some key adjustments are that these difshells are in 'slab' format rather than 'onion'
+and that these difshells start thinner than the main compartment difshells.
+*****************************************************************************/
+
+include MScell/New_Calcium/Ca_constants.g
+
+//***************************** Begin Local Subroutine ***********************
+
+
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/MScellshortSpines.p ===
+//***************************		MS Model, Version 5.0	**********************
+//*************************** 	      MScell.p 			**********************
+//			Tom Sheehan tsheeha2@gmu.edu	thsheeha@vt.edu	703-538-836
+//*****************************************************************************
+
+*relative
+*cartesian
+*asymmetric
+*lambda_warn
+
+//*set_global ELEAK -0.070
+//*set_global RA 1.0 
+//*set_global RM 8.695652
+//*set_global RM 1.8
+
+*set_global CM 0.01
+//*set_global EREST_ACT -0.085
+
+*start_cell /library/tert_dend
+tert_dend none 17.964 0 0 0.80
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/MScelltapershortCM3noproto.p ===
+//***************************		MS Model, Version 5.0	**********************
+//*************************** 	      MScell.p 			**********************
+//			Tom Sheehan tsheeha2@gmu.edu	thsheeha@vt.edu	703-538-836
+//*****************************************************************************
+
+*relative
+*cartesian
+*asymmetric
+*lambda_warn
+
+*set_global RA 6.0 
+//change Cm to account for no spines - make 3x higher?
+*set_global CM 0.03  
+//RM is set in globals.g! 
+
+*start_cell
+*spherical
+soma none 16.000 0 0 16.000
+
+*cylindrical
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/MScelltaperspines.p ===
+//***************************		MS Model, Version 5.0	**********************
+//*************************** 	      MScell.p 			**********************
+//			Tom Sheehan tsheeha2@gmu.edu	thsheeha@vt.edu	703-538-836
+//*****************************************************************************
+
+*relative
+*cartesian
+*asymmetric
+*lambda_warn
+
+//*set_global ELEAK -0.070
+//*set_global RA 1.0 
+//*set_global RM 8.695652
+//*set_global RM 1.8
+//*set_global CM 0.010 
+//change Cm to account for no spines - make 3x higher?
+*set_global CM 0.01  
+//*set_global EREST_ACT -0.085
+
+*start_cell /library/tert_dend
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/proto.g ===
+//genesis
+
+
+/***************************		MS Model, Version 9.1	*********************
+**************************** 	      proto.g 	*********************
+	Avrama Blackwell 	kblackw1@gmu.edu
+	Wonryull Koh		wkoh1@gmu.edu
+	Rebekah Evans 		rcolema2@gmu.edu
+	Sriram 				dsriraman@gmail.com	
+******************************************************************************
+
+*****************************************************************************
+*******************************************************************************
+	proto.g is called by MScell.g
+	it contains one primary routine:  
+		make_prototypes
+ 	and two local routines 
+		make_cylind_compartment
+		make_spines - this one needs much work
+	these are used by the primary and are not intended for external calls
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/AddCaSpines.g ===
+ //function to add calcium channels to spines 
+
+function addCaChannelspines(channelName, compPath, conductance, caBufferName)
+  str channelName, compPath
+  float conductance
+  str caBufferName
+
+  pushe {compPath}
+
+    // Copy the channel from library
+    copy /library/{channelName} {channelName}
+    copy /library/{channelName}GHK {channelName}GHK
+
+    // Set the new conductance
+    float len = {getfield {compPath} len}
+    float dia = {getfield {compPath} dia}
+    float pi = 3.141592653589793
+    float surf = {len*dia*pi} 
+
+    // echo "Channel: "{channelName}", conductance "{conductance}"S/m²"
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/CaDifshell.g ===
+//genesis
+
+/***************************		MS Model, Version 9.1	*********************
+**************************** 	      CaDifshell.g 	*********************
+	Avrama Blackwell 	kblackw1@gmu.edu
+	Wonryull Koh		wkoh1@gmu.edu
+	Rebekah Evans 		rcolema2@gmu.edu
+	Sriram 				dsriraman@gmail.com	
+******************************************************************************
+
+*****************************************************************************/
+
+//***************************** Begin Local Subroutine ***********************
+//old calcium concentration - single time constant of decay
+function add_CaConcen (buffername, a, b, cellpath)
+	str buffername,cellpath
+    float a,b
+
+    str compt
+	float len,dia,position
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/globals.g ===
+//genesis
+
+/***************************		MS Model, Version 9.1	**********************
+**************************** 	      	globals.g 			**********************
+
+******************************************************************************/
+
+//Careful - all of these can be overridden in the .p file
+        float ELEAK = -0.06
+        float PI = 3.1415926
+        //float RA = 1.0 //determined by .p file (6)
+        float RM = 2.8  //8.69565217  not overwritten in .p file, this is the right value
+        //float CM = 0.01  //is determined in .p file (altered to compensate for lack of spines)
+        float EREST_ACT = -0.085 //-85 mV
+ 	float TEMPERATURE = 35
+
+//parameters determined by hand tuning to match spike width, AHP shape &amp, fI curve
+
+float somaLen=16.1e-6 //soma only
+float prox=42.1e-6 //26.1e-6 //primary and secondary
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/SynParamsCtx.g ===
+//genesis
+//SynParams.g
+
+	str AMPAname = "AMPA"
+	float EkAMPA = 0.0
+        float AMPAtau1 = 1.1e-3   //wolf with qfact of 2 taken into account (t1 and t2)
+        float AMPAtau2 = 5.75e-3  
+        float AMPAgmax = 0.171e-9 //0.342e-9  25%or 50% Gsyn for shindou test//593e-12 I changed this to make the NMDA/AMPA ratio more like 2.75/1 which is what Ding 2008 finds int corticalstriatal synapses
+	float AMPACaper = 0 //0.001 //percent AMPA conductance that is carried by calcium. value from wolf							//more like 2/1 for thalamus so should be 0.47e-9 for thalamo-striatal syanpnse if NMDA is 0.94e-9 Rebekah Evans 6/25/10
+	float AMPAdes = 1 // 1  		//desensitization factor, (depr_per_spike field of facsynchan)
+	float AMPAdestau = 100e-3 // 100e-3	// desensitixation t (how fast des recovers)
+
+
+        str GABAname = "GABA"
+        float GABAtau1 = 0.25e-3    // From Galarreta and Hestrin 1997 
+        float GABAtau2 = 3.75e-3    //(used in Wolfs model)
+        float EkGABA = -0.060  		//calculated Kerr and Plenz 2004 Erev for Cl, is -60 mV 5/2/12 RCE
+        float GABAgmax = 900e-12  //was 750, Sri uses 900 //Modified Koos 2004 (Wolf uses 435e-12)
+
+	int GABA2Spine = 0                                // = 0, No GABA; 
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/include_channels.g ===
+//genesis
+//include_channels.g v9.1
+/*******
+Rebekah Evans updated 3/20/12
+include_channels.g is included in proto.g file
+**********/
+
+include MScell/channels/tabchanforms.g
+
+//voltage dependent channels
+include MScell/channels/NaF	
+include MScell/channels/NaFslowinact		//double checked RCE 3/23/12, realized htau has qfact 2 taken into account, but not mtau. no changes made, but will test qfact
+include MScell/channels/KaF  			//double checked RCE 3/21/12 fine, no changes.  triple checked with genesis _____
+include MScell/channels/Kir			//double checked RCE 3/22/12 fine, no changes. triple checked with genesis ____
+include MScell/channels/KaS			//double checked RCE 3/22/12 fine, no changes. triple checked with genesis _____
+include MScell/channels/Krp			//adjusted 3/22/12 RCE double checked _____ triple checked with genesis _____
+
+//calcium channels
+include MScell/channels/CaL12CDI  	//adjusted 3/20/12 RCE double checked _______  triple checked with genesis _____
+include MScell/channels/CaL13CDI  	//adjusted 3/20/12 RCE double checked _______ triple checked with genesis _____
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/connectCaChannels.g ===
+//genesis
+
+/***************************		MS Model, Version 9.1	*********************
+**************************** 	  		connectCaChannels.g		*********************
+
+******************************************************************************
+******************************************************************************/
+
+function coupleCaPoolCaChannel(bufferName, compPath, caChannelName)
+
+  str bufferName
+  str compPath
+  str caChannelName
+
+  pushe {compPath}
+
+  if({isa difshell {compPath}/{bufferName}})
+    addmsg {caChannelName}GHK {bufferName} INFLUX Ik 
+    addmsg {bufferName} {caChannelName}GHK CIN C
+  elif({isa Ca_concen {compPath}/{bufferName}})
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/US5grad.g ===
+
+str cellpath = "/cell"
+
+include RebekahSims/SpikeMaker.g
+include RebekahSims/add_outputgrad
+
+add_output
+
+str stimtype = "20Hz5msAP"
+diskpath={diskpath}@(stimtype)@".txt"
+echo {diskpath}
+setfield /output/plot_out filename output/{diskpath}
+reset
+call /output/plot_out OUT_OPEN
+call /output/plot_out OUT_WRITE "time SomaVm tert1Vm tert5Vm tert9Vm tert13Vm tert1fura tert5fura tert9fura tert13fura tert1vol tert5vol tert9vol tert13vol" //header	
+
+
+
+int Hz = 20 //for glu, function multiplies this by 2 for GABA
+float upstate_time = 0.3
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/MScellshortSpines.g ===
+//genesis
+
+
+/***************************		MS Model, Version 8	*********************
+**************************** 	      MScellqfact.g 	*********************
+	Avrama Blackwell 	kblackw1@gmu.edu
+	Wonryull Koh		wkoh1@gmu.edu
+	Rebekah Evans 		rcolema2@gmu.edu
+	Sriram 				dsriraman@gmail.com	
+	Tom Sheehan 		tsheeha2@gmu.edu	
+******************************************************************************
+
+*****************************************************************************
+*************************
+	MS_cell.g has only one externally called function: make_MS_cell. That primary 
+	function uses the services of the following two local subroutines:
+		set_position
+		add_channels
+
+******************************************************************************/
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/globals11.003.g ===
+//genesis
+
+/***************************		MS Model, Version 9.1	**********************
+**************************** 	      	globals.g 			**********************
+
+******************************************************************************/
+
+//Careful - all of these can be overridden in the .p file
+        float ELEAK = -0.06
+        float PI = 3.1415926
+        //float RA = 1.0 //determined by .p file (6)
+        float RM = 2.8  //8.69565217  not overwritten in .p file, this is the right value
+        //float CM = 0.01  //is determined in .p file (altered to compensate for lack of spines)
+        float EREST_ACT = -0.085 //-85 mV
+ 	float TEMPERATURE = 35
+
+//parameters determined by hand tuning to match spike width, AHP shape &amp, fI curve
+
+float somaLen=16.1e-6
+float prox=26.1e-6
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/AddSynapticChannels.g ===
+//genesis
+
+/***************************		MS Model, Version 9.4	**********************
+**************************** 	     AddSynapticChannels.g 	**********************
+
+******************************************************************************/
+
+
+function addNMDAchannel(compPath, chanpath,caBuffer, gbar, ghk)
+
+  str compPath, chanpath
+  float gbar
+  str caBuffer 
+  int ghk
+
+  copy /library/{chanpath} {compPath}/{chanpath}
+  addmsg {compPath} {compPath}/{chanpath}/block VOLTAGE Vm
+  addmsg {compPath} {compPath}/{chanpath} VOLTAGE Vm
+  addmsg {compPath}/{chanpath}/block {compPath} CHANNEL Gk Ek
+  
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/addinput.g ===
+
+//addinput.g
+//these two functions used to provide random spike synaptic input to neuron
+
+function makeinputpre(rate, path)
+    str rate
+	str path
+    create randomspike {path}/randomspike
+    setfield ^ min_amp 1.0 max_amp 1.0 rate {rate} reset 1 reset_value 0	
+ end
+	
+function makeinputpost(pathspike, path) 
+	str path
+	int msgnum
+	addmsg {pathspike} {path} SPIKE
+    msgnum = {getfield {path} nsynapses} - 1
+    setfield {path} \
+    synapse[{msgnum}].weight 1 synapse[{msgnum}].delay 0
+end
+
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/addchans.g ===
+//genesis
+
+/***************************		MS Model, Version 9.1	*********************
+**************************** 	      addchansNew.g 	*********************
+	Avrama Blackwell 	kblackw1@gmu.edu
+	Wonryull Koh		wkoh1@gmu.edu
+	Rebekah Evans 		rcolema2@gmu.edu
+	Sriram 				dsriraman@gmail.com		
+******************************************************************************/
+function connectKCachannel(compPath, caBufferName, channel)
+  str compPath, channel
+  str caBufferName
+
+  if({isa difshell {compPath}/{caBufferName}}) 
+    addmsg {compPath}/{caBufferName} {compPath}/{channel} CONCEN C
+  elif({isa Ca_concen {compPath}/{caBufferName}})
+   addmsg {compPath}/{caBufferName} {compPath}/{channel} CONCEN Ca
+  end
+end
+
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/MScellshortthickCM3noproto.p ===
+//***************************		MS Model, Version 5.0	**********************
+//*************************** 	      MScell.p 			**********************
+//			Tom Sheehan tsheeha2@gmu.edu	thsheeha@vt.edu	703-538-836
+//*****************************************************************************
+
+*relative
+*cartesian
+*asymmetric
+*lambda_warn
+
+*set_global RA 6.0 
+//change Cm to account for no spines - make 3x higher?
+*set_global CM 0.03  
+
+*start_cell
+*spherical
+soma none 16.000 0 0 16.000
+
+*cylindrical
+primdend1 soma 12 0 0 1.7
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/MScellshort.g ===
+//genesis
+
+
+/***************************		MS Model, Version 8	*********************
+**************************** 	      MScellqfact.g 	*********************
+	Avrama Blackwell 	kblackw1@gmu.edu
+	Wonryull Koh		wkoh1@gmu.edu
+	Rebekah Evans 		rcolema2@gmu.edu
+	Sriram 			dsriraman@gmail.com	
+******************************************************************************
+
+*****************************************************************************
+*************************
+	MS_cell.g has only one externally called function: make_MS_cell. That primary 
+	function uses the services of the following two local subroutines:
+		set_position
+		add_channels
+
+******************************************************************************/
+
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/MScellSyn.g ===
+//genesis
+//MScellSyn.g
+//This routine takes the MScell without synapses, and adds synapses
+
+include MScell/MScellshort.g                 //MScell without synapses
+include MScell/SynParamsCtx.g               //parameters on synaptic channels
+include MScell/channels/nmda_channel.g   //function to make nmda channel, either GHK or not, in library
+include MScell/channels/synaptic_channel.g // function to make non nmda synaptic channels in library
+include MScell/AddSynapticChannels.g	// contains functions to add channels to compartments
+
+function makeMScellSyn (cellname,pfile)
+   str cellname,pfile
+
+   str CompName
+
+   make_MS_cell {cellname} {pfile}
+
+	//************* create synaptic channels in library *********
+	pushe /library
+
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/spines.g ===
+//spines.g for including spines in the MSN model.
+
+//****************make the spines************************************
+
+//for calcium and buffer diffusion messages between spine neck and dendrite.  
+//this is a very unclean way to do it because these variables are defined elsewhere.
+str uppershellname = {CalciumName} @ 1
+str midshellname = {CalciumName} @ 2
+str bottomshellname = {CalciumName} @ 3
+str outermostShellName = {CalciumName} @ 1
+
+function make_spines
+
+float surf_neck, vol_neck, len_neck, dia_neck,dia_head,len_head,dia_head, surf_head,vol_head, shell_thick, dia_shell, shell_head, Ca_tau, kB, kE,r,Ca_base  
+
+// parameters:
+       // for spine neck:
+       len_neck=1e-6                               //0.16-2.13
+       dia_neck=0.1e-6                             //(0.038-0.46)e-6
+       // for spine head:
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/cntrlglobals.g ===
+//genesis
+
+/***************************		MS Model, Version 9.1	**********************
+**************************** 	      	globals.g 			**********************
+
+******************************************************************************/
+
+//Careful - all of these can be overridden in the .p file
+        float ELEAK = -0.06
+        float PI = 3.1415926
+        float RA = 1.0 //determined by .p file (6)
+        float RM = 2.8  //8.69565217  not overwritten in .p file, this is the right value
+        float CM = 0.01  //is determined in .p file (altered to compensate for lack of spines)
+        float EREST_ACT = -0.085 //-85 mV
+ 	float TEMPERATURE = 35
+
+//parameters determined by hand tuning to match spike width, AHP shape &amp, fI curve
+
+float somaLen=16.1e-6
+float prox=26.1e-6
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/channels/NaF.g ===
+//genesis
+
+/***************************MS Model, Version 9.1	*********************
+****************************   NaF.g 	*********************
+updated Rebekah Evans 3/22/12					
+******************************************************************************
+******************************************************************************/
+
+//**ref: Nobukuni Ogata, et.al. 1990
+
+
+function make_NaF_channel
+float Erev       = 0.05      // V
+
+    
+    str path = "NaF_channel" 
+
+    float xmin  = -0.10  /* minimum voltage we will see in the simulation */     // V
+    float xmax  = 0.05  /* maximum voltage we will see in the simulation */      // V
+    int xdivsFiner = 3000
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/channels/gaba_channel.g ===
+//genesis
+//gaba_channel.g
+
+function make_GABA_channel
+
+   str chanpath = "GABA_channel"
+   // From Galarreta and Hestrin 1997 (used in Wolfs model)
+   float tau1 = 0.25e-3
+   float tau2 = 3.75e-3
+
+   float gmax = 750e-12  //Modified Koos 2004 (Wolf uses 435e-12)
+   float Ek = -0.060
+
+	echo "XXXXXXXXXXXXXXX make_GABA_channel XXXXXXXXXXXXXXXX"
+	echo "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+	echo "XXXXXXXXXXXXXXX make_GABA_channel XXXXXXXXXXXXXXXX"
+
+   create synchan {chanpath}
+
+   setfield {chanpath} tau1 {tau1} \
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/channels/Kir.g ===
+//genesis
+/***************************		MS Model, Version 9.1 *********************
+**************************** 	    	Kirg 			*********************
+						Rebekah Evans updated 3/22/12 
+******************************************************************************
+******************************************************************************/
+
+
+function make_KIR_channel
+
+ //initial parameters for making tab channel
+	float Erev = -0.09
+	int m_power = 1
+    int h_power = 0
+    
+//units are mV, ms
+	float mA_rate = 1e-5
+	float mA_slope = -11
+	
+	float mB_rate = 1.2
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/channels/KaF.g ===
+//genesis
+
+/***************************		MS Model, Version 9.1 *********************
+**************************** 	    	KaF.g 			*********************
+						Rebekah Evans updated 3/21/12 
+	Kv4.2
+******************************************************************************
+******************************************************************************/
+
+function make_KAf_channel
+
+  //initial parameters for making tab channel
+	float Erev = -0.09
+	int m_power = 2   //used in Wolf 2005
+    int h_power = 1
+	
+//Activation constants for alphas and betas (obtained by matching m2 to Tkatch et al., 2000 Figs 2c, and mtau to fig 2b)
+//units are mV, ms
+	float mA_rate = 1.8  
+	float mA_vhalf = -18    
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/channels/CaR.g ===
+//genesis
+
+/***************************		MS Model, Version 9.1	*********************
+**************************** 	  		CaR.g 			*********************
+	Rebekah Evans 3/20/12 updated channel. 
+******************************************************************************
+******************************************************************************/
+
+function create_CaR
+	str chanName = "CaR_channel"
+	str compPath = "/library"
+
+	int c = 0	
+
+	int xdivs = 3000
+	float Ek = 0.140  //(nernst calculated for 35degrees, [Cain] 50nM [Caout]2mM)
+			//Ek is overwritten the the GHK object if it is used. 
+	float x = -0.1
+	float xmin = -0.1
+	float xmax = 0.05
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/channels/tabchanforms.g ===
+/*form call file for creating tab channels*/
+
+
+function exp_form (rate, slope, V)
+	float rate,slope,V
+	//equation is ({rate} *(exp ({-V}/{slope}) ))
+	float numx ={{-V}/{slope}}
+	float expx = {exp {numx}}
+	float entry = ({rate}*{expx})
+	return {entry}
+end
+
+function sig_form (rate, vhalf, slope, V)
+	float rate, vhalf, slope, V
+	//equation is ({rate}/(exp ({{V}-{vhalf}}/{slope})+1))
+	//rate/(EXP((v-vhalf)/slope)+1)
+	float numx = {{{V}-{vhalf}}/{slope}}
+	float expx = {exp {numx}}
+	float entry = ({rate}/{{expx}+1})
+	return {entry}
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/channels/KaS.g ===
+//genesis
+
+/***************************		MS Model, Version 9.1	*********************
+**************************** 	    	KaS.g 			*********************
+	Rebekah Evans update 3/22/12
+	Kv1.2
+******************************************************************************
+*****************************************************************************/
+
+
+function make_KAs_channel
+   //include tabchanforms
+  //initial parameters for making tab channel
+	float Erev = -0.09
+	int m_power = 2  //shen et al., 2004 p 1341
+   int h_power = 1
+	
+//Activation constants for alphas and betas Shen et al., 2004 fig 3B (minf^2) and 3D (mtau)
+	float mA_rate = 0.25 
+	float mA_vhalf = 54   
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/channels/nmda_channel.g ===
+//genesis
+//nmda_channel.g
+
+function make_NMDA_channel (chanpath, Ek, KMg, tau2, gmax, ghk, depr, deprtau)
+
+  str chanpath //what you want the channel to be called (full path)
+  float KMg, tau2, gmax  //parameters that differ between NR2A, B, C and D subunits
+  float depr
+  float deprtau
+  float Ek
+  int ghk 
+  
+  float tau1 =  (4.4624e-3)/2 //(5.63e-3)/8 //(4.4624e-3)/2 //  DE Chapman et al 2003, table 1 (5.63ms: wolf) w/qfact of 2 
+			     //is (4.4624e-3)/2 in Evans et al., 2012
+  float CMg = 1.4  // [Mg] in mM //Kerr and Plenz uses 1.4mM Mg
+
+  float eta = 1/18  // Kmg = 1/eta, (per mM) overwritten by synparams, 3.57 old, 18 new
+  float gamma = 99  //99 new //62 old  // per Volt
+
+	echo "XXXXXXXXXXXXXXX make_NMDA_channel XXXXXXXXXXXXXXXX"
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/channels/CaNCDI.g ===
+//genesis
+
+/***************************		MS Model, Version 9.1	*********************
+**************************** 	  		CaN.g 			*********************
+Rebekah Evans updated 3/20/12
+******************************************************************************
+******************************************************************************/
+
+function create_CaN
+	str chanName = "CaN_channel"
+	str compPath = "/library"
+
+	int c	
+	float Ek = 0.140 //(nernst calculated for 35degrees, [Cain] 50nM [Caout]2mM)
+			//Ek is overwritten the the GHK object if it is used. 
+	float x = -0.1
+	int xdivs = 3000
+	float xmin = -0.1
+	float xmax = 0.05
+        float increment ={{xmax}-{xmin}}/{xdivs}
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/channels/SK.g ===
+//genesis
+
+/***************************		MS Model, Version 9.1	*********************
+**************************** 	      SK.g 	*********************
+
+******************************************************************************
+
+*****************************************************************************/
+
+		// This is a simplified implementation of the SK channel without voltage
+		// dependence. Reference: MaylieBondHersonLeeAdelman2004
+		// Fast component has tau=4 ms, slow tau = 70 ms (rough ranges)
+
+
+function make_SK_channel
+
+  	int nStep = 3000
+  	float SKact = 0.0
+  	float CaMax = 0.1 // 100 uM
+	float CaMax = 0.006 // 6 uM 
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/channels/synaptic_channel.g ===
+//genesis
+//synaptic_channel.g
+
+function make_synaptic_channel (chanpath, tau1, tau2, gmax, Ek, depr, deprtau)
+   str chanpath
+   float tau1
+   float tau2
+   float gmax 
+   float Ek
+   float depr
+   float deprtau
+
+
+/*	echo "XXXXXXXXXXXXXXX make_synaptic_channel XXXXXXXXXXXXXXXX"
+	echo "chanpath = "{chanpath}
+	echo "tau1 = "{tau1}
+	echo "tau2 = "{tau2}
+	echo "gmax = "{gmax}
+	echo "XXXXXXXXXXXXXXX make_synaptic_channel XXXXXXXXXXXXXXXX"
+*/
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/channels/CaN.g ===
+//genesis
+
+/***************************		MS Model, Version 9.1	*********************
+**************************** 	  		CaN.g 			*********************
+Rebekah Evans updated 3/20/12
+******************************************************************************
+******************************************************************************/
+
+function create_CaN
+	str chanName = "CaN_channel"
+	str compPath = "/library"
+
+	int c	
+	float Ek = 0.140 //(nernst calculated for 35degrees, [Cain] 50nM [Caout]2mM)
+			//Ek is overwritten the the GHK object if it is used. 
+	float x = -0.1
+	int xdivs = 3000
+	float xmin = -0.1
+	float xmax = 0.05
+        float increment ={{xmax}-{xmin}}/{xdivs}
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/channels/Krp.g ===
+//genesis
+
+
+/***************************		MS Model, Version 9.1	*********************
+**************************** 	      Krp.g 	*********************
+Rebekah Evans updated 3/22/12
+*****************************************************************************/
+
+function make_Krp_channel
+	
+	float Erev = -0.09
+	int m_power = 2 //(Nisenbaum 1996 p 1187)
+	int h_power = 1
+	
+	//table filling parameters	
+    float xmin  = -0.1  
+    float xmax  = 0.05  
+    int  xdivsFiner = 3000
+    int c = 0
+    float increment =1000*{{xmax}-{xmin}}/{xdivsFiner}
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/channels/ampa_channel.g ===
+//genesis
+//ampa_channel.g
+
+function make_AMPA_channel(chanpath)
+   str chanpath
+
+   // Values from Wolfs model, original data Gotz et al 1997 (from NA),
+   // Chapman et al 2003
+  //float tau1 = 1.1e-3
+  // float tau2 = 5.75e-3 
+
+   //float gmax = 593e-12 these are all set in synparams.g
+   float Ek = 0.0
+
+	echo "XXXXXXXXXXXXXXX make_AMPA_channel XXXXXXXXXXXXXXXX"
+	echo "chanpath = "{chanpath}
+	echo "XXXXXXXXXXXXXXX make_AMPA_channel XXXXXXXXXXXXXXXX"
+
+   create facsynchan {chanpath}
+
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/channels/NaFslowinact.g ===
+//genesis
+
+/***************************MS Model, Version 9.1	*********************
+****************************   NaF.g 	*********************
+updated Rebekah Evans 3/22/12					
+******************************************************************************
+******************************************************************************/
+
+//**ref: Nobukuni Ogata, et.al. 1990
+
+
+function make_NaFd_channel
+float Erev       = 0.05      // V
+
+    
+    str path = "NaFd_channel" 
+
+    float xmin  = -0.10  /* minimum voltage we will see in the simulation */     // V
+    float xmax  = 0.05  /* maximum voltage we will see in the simulation */      // V
+    int xdivsFiner = 3000
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/channels/CaL13CDI.g ===
+//genesis
+
+/***************************		MS Model, Version 9.1	*********************
+**************************** 	    	CaL13channel.g 		*********************
+Rebekah Evans updated 3/20/12	
+******************************************************************************
+******************************************************************************/
+
+
+function create_CaL13
+	str chanName = "CaL13_channel"
+	str compPath = "/library"
+	int c, a
+	float Ek = 0.140  //(nernst calculated for 35degrees, [Cain] 50nM [Caout]2mM)
+			//Ek is overwritten the the GHK object if it is used. 
+	float xmin = -0.1
+	float xmax = 0.05
+	int 	xdivs = 3000
+	float mPower = 1.0   //mh is an equally common form to m2h (tuckwell 2012)
+	float hPower = 1.0
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/channels/KaFnew.g ===
+//genesis
+
+/***************************		MS Model, Version 9.1 *********************
+**************************** 	    	KaF.g 			*********************
+						Rebekah Evans updated 3/21/12 
+	Kv4.2
+******************************************************************************
+******************************************************************************/
+
+function make_KAf_channel
+
+  //initial parameters for making tab channel
+	float Erev = -0.09
+	int m_power = 2   //used in Wolf 2005
+    int h_power = 1
+	
+//Activation constants for alphas and betas (obtained by matching m2 to Tkatch et al., 2000 Figs 2c, and mtau to fig 2b)
+//units are mV, ms
+//new channel params 07/11/12
+	float mA_rate = 1.5  
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/channels/CaT.g ===
+//genesis
+
+/***************************		MS Model, Version 9.1	*********************
+**************************** 	  		CaT.g 			*********************
+	
+******************************************************************************
+Rebekah Evans updated 3/20/12 
+******************************************************************************/
+
+function create_CaT
+	str chanName = "CaT_channel"
+	str compPath = "/library"
+
+	int c = 0	
+	float Ek = 0.140 //(nernst calculated for 35degrees, [Cain] 50nM [Caout]2mM)
+			//Ek is overwritten the the GHK object if it is used. 
+	float increment = 0.00005	
+	float x = -0.1
+	int xdivs = 3000
+	float xmin = -0.1
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/channels/BK.g ===
+//genesis
+
+
+/***************************		MS Model, Version 9.1	*********************
+**************************** 	      BK.g 	*********************
+Rebekah Evans updated 3/22/12
+******************************************************************************
+
+*****************************************************************************/
+
+function make_BK_channel
+    float EK=-0.09  
+    float K1=0.003
+    float K4=0.009
+  
+  
+	//tuned to fit Berkefeld et al., 2006 fig 3C for 10uM Ca, with positive shift for 1uM Ca and negative shift for 100uM Ca. 
+    int xdivs = 299
+    int ydivs = {xdivs}
+    float xmin, xmax, ymin, ymax
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/channels/CaRCDI.g ===
+//genesis
+
+/***************************		MS Model, Version 9.1	*********************
+**************************** 	  		CaR.g 			*********************
+	Rebekah Evans 3/20/12 updated channel. 
+******************************************************************************
+******************************************************************************/
+
+function create_CaR
+	str chanName = "CaR_channel"
+	str compPath = "/library"
+
+	int c = 0	
+
+	int xdivs = 3000
+	float Ek = 0.140  //(nernst calculated for 35degrees, [Cain] 50nM [Caout]2mM)
+			//Ek is overwritten the the GHK object if it is used. 
+	float x = -0.1
+	float xmin = -0.1
+	float xmax = 0.05
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/channels/CaL12CDI.g ===
+//genesis
+
+/***************************		MS Model, Version 9.1	*********************
+**************************** 	    	CaL12channel.g 		*********************
+Rebekah Evans updated 3/20/12
+******************************************************************************
+******************************************************************************/
+
+
+function create_CaL12
+	str chanName = "CaL12_channel"
+	str compPath = "/library" //"/soma" for simvclamp, "/library" for normal sims
+	int c
+	float Ek = 0.140  //(nernst calculated for 35degrees, [Cain] 50nM [Caout]2mM)
+			//Ek is overwritten the the GHK object if it is used. 
+	float xmin = -0.1
+	float xmax = 0.05
+	int 	xdivs = 3000
+	float mPower = 1.0  //mh is an equally common form to m2h (tuckwell 2012)
+	float hPower = 1.0
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MScell/Ca_constants.g ===
+//genesis
+
+/***************************		MS Model, Version 9	*********************
+**************************** 	      Ca_constants.g 	*********************
+	Avrama Blackwell 	kblackw1@gmu.edu
+	Wonryull Koh		wkoh1@gmu.edu
+	Rebekah Evans 		rcolema2@gmu.edu
+	Sriram 			dsriraman@gmail.com	
+******************************************************************************
+
+*****************************************************************************/
+    str  CalciumName = "Ca_difshell_"
+    str  CA_BUFF_1 = "Ca_difshell_1"     // L and T type channels
+    str  CA_BUFF_2 = "Ca_difshell_2"     // coupled to the other channels (N and R)
+    str  CA_BUFF_3 = "Ca_difshell_3"     // all calcium channels
+  
+	int calciumdye = 0  //  flags for calcium dye. "0" means NO calcium dyes.
+                     // 1= Fura-2 (default conc 100 uM, can change below)
+                     // 2= Fluo-5F (300uM for Shindou, 100uM for Sabatini (check) and Lovinger)
+	int calciumtype = 0     // we  have two shell-modes:
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MSsimSyn3.g ===
+                       //genesis
+// MSsim.g 
+
+/***************************		MS Model, Version 9.1	***************
+*******************************************************************************
+****************************** Begin includes *******************************/
+
+str neuronname = "/cell"
+str cellpath = "/cell"
+
+str pfile="MScell/MScelltapershortCM3noproto.p"
+include MScell/MScellSyn	//access make_MS_cell this function is only called from MSsim.g
+include graphics7		        //access functions make_control & make_graph
+include RebekahSims/Store_Parameters.g
+include RebekahSims/SpikeMakerGrad.g
+include RebekahSims/SpikeMakerFlat.g
+include RebekahSims/add_outputBuffers.g	
+
+		     
+// These two functions are only called from MSsimSyn.g
+
+
+=== Following is the header of samples/150912/EvansEtAl2013/MSsimSyn7.g ===
+                       //genesis
+// MSsim.g 
+
+/***************************		MS Model, Version 9.1	***************
+*******************************************************************************
+****************************** Begin includes *******************************/
+
+str 	neuronname = "/cell"
+str pfile="MScell/MScelltapershortCM3noproto.p"
+include MScell/MScellSyn	// access make_MS_cell this function is only called from MSsim.g
+include graphics7		        // access functions make_control & make_graph
+include RebekahSims/Store_Parameters.g
+			     
+// These two functions are only called from MSsimSyn.g
+/****************************** End includes *********************************/
+float outputclock=2e-5
+
+	setclock 0 5e-6   // Simulation time step (Second)       
+	setclock 1 {outputclock}
+
+
+

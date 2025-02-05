@@ -1,0 +1,124 @@
+=== Following is the header of samples/261881/Giacopelli_et_al_2020_ModelDB/conv_model.m ===
+function [sim_indeg,sim_outdeg,gamma_true]=conv_model(data_indeg,data_outdeg,Ek,l,rho,m0,pup,pdw,pc)
+
+N=length(data_indeg);
+binvi=[0:5:max(data_indeg)];
+binvo=[0:5:max(data_outdeg)];
+
+figure(10); 
+subplot(2,2,1); hold on;
+title(strcat('in-degree for N=',num2str(N)))
+hdi = histogram(data_indeg,binvi,'Normalization','pdf');
+xlabel('in-degree'); ylabel('probability');
+
+subplot(2,2,2); hold on;
+title(strcat('out-degree for N=',num2str(N)))
+hdo = histogram(data_outdeg,binvo,'Normalization','pdf');
+xlabel('out-degree'); ylabel('probability');
+
+
+h=hdi;
+
+
+
+=== Following is the header of samples/261881/Giacopelli_et_al_2020_ModelDB/ba_model.m ===
+function [din,dout]=ba_model(n, m, a, gamma, rho)
+rng('shuffle');
+T=(rand(m,m)<rho).*(ones(m,m)-eye(m));
+targets=[1:m];
+dout=sum(T');
+din=sum(T);
+source=m+1;
+D = cumsum(gamma);
+f = waitbar(0,'Please wait...');
+while source<=n
+    cc=0;
+    for i=targets
+        dout(i)=dout(i)+1;
+        cc=cc+1;
+    end
+    dout=[dout,0];
+    din=[din, cc];
+    tr=dout+a; str=sum(tr); tr=tr./str;
+    bins=[0 cumsum(tr)];
+    mt=source;
+
+
+=== Following is the header of samples/261881/Giacopelli_et_al_2020_ModelDB/model_II.m ===
+function [sim_dinII,sim_doutII]=model_II(dinEE,doutEE,dinII,doutII)
+
+nE=length(dinEE); nI=length(dinII);
+
+m0=100; rho=0.1; Ek=10; l=15;
+pup=0.9; pdw=0.0005;
+
+[sim_dinII,sim_doutII]=conv_model(dinII(1:end-1),doutII(1:end-1),Ek,l,rho,m0,pup,pdw,2.75);
+
+
+=== Following is the header of samples/261881/Giacopelli_et_al_2020_ModelDB/model_EE.m ===
+function [sim_dinEE,sim_doutEE]=model_EE(dinEE,doutEE,dinII,doutII)
+
+nE=length(dinEE); nI=length(dinII);
+
+m0=100; rho=0.1; Ek=115; l=100;
+pup=0.9; pdw=0.0005;
+
+[sim_dinEE,sim_doutEE]=conv_model(dinEE(1:end-1),doutEE(1:end-1),Ek,l,rho,m0,pup,pdw,300);
+
+
+
+=== Following is the header of samples/261881/Giacopelli_et_al_2020_ModelDB/Main.m ===
+
+clear all 
+close all
+
+load('data.mat')
+
+[sim_dinEE,sim_doutEE]=model_EE(dinEE,doutEE,dinII,doutII);
+[sim_dinII,sim_doutII]=model_II(dinEE,doutEE,dinII,doutII);
+close all
+plot_figure(dinEE,doutEE,dinII,doutII,sim_dinEE,sim_doutEE,sim_dinII,sim_doutII,dinEE4,doutEE4,dinII4,doutII4,dinEE3,doutEE3,dinII3,doutII3);
+
+
+
+
+=== Following is the header of samples/261881/Giacopelli_et_al_2020_ModelDB/plot_figure.m ===
+function plot_figure(dinEE,doutEE,dinII,doutII,sim_dinEE,sim_doutEE,sim_dinII,sim_doutII,dinEE4,doutEE4,dinII4,doutII4,dinEE3,doutEE3,dinII3,doutII3)
+
+nE=length(dinEE); nI=length(dinII);
+N=nE+nI; fsz=20; pprt=10; ntype='pdf';
+
+figure(1); hold on; 
+subplot(2,2,1); hold on;
+title(strcat('NC in-degree EE'))
+hdEEi = histogram(dinEE,pprt,'Normalization',ntype);
+xlabel('in-degree'); ylabel('probability density');
+legend({'data','sim'},'Location','northeast');
+
+subplot(2,2,2); hold on;
+title(strcat('NC out-degree EE'))
+hdEEo = histogram(doutEE,pprt,'Normalization',ntype);
+xlabel('out-degree'); ylabel('probability density');
+legend({'data','sim'},'Location','northeast');
+
+subplot(2,2,3); hold on;
+title(strcat('NC in-degree II'))
+
+
+=== Following is the header of samples/261881/Giacopelli_et_al_2020_ModelDB/Version.txt ===
+Version of 27/02/2020
+
+=== Following is the header of samples/261881/Giacopelli_et_al_2020_ModelDB/impl_inf_deconv.m ===
+function g=impl_inf_deconv(f,h)
+
+l=min(length(f),length(h));
+A=zeros(l,l); b=zeros(l,1);
+A(1,1)=f(1);
+for eq=2:l
+    for i=0:eq-1
+        A(eq,i+1)=f(eq-i);
+    end
+end
+b=h';
+g=(A\b)';
+

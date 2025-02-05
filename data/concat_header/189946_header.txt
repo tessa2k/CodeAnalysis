@@ -1,0 +1,44 @@
+=== Following is the header of samples/189946/FietkiewiczLoparo2016/OriginalModel.m ===
+% Author: Chris Fietkiewicz
+% Reference: Christopher Fietkiewicz and Kenneth A. Loparo, Analysis and Enhancements of a Prolific Macroscopic Model of Epilepsy, Scientifica, vol. 2016, Article ID 3628247, 10 pages, 2016. doi:10.1155/2016/3628247
+% Description: Original model used for Figure 2 in Fietkiewicz and Loparo 2016. It is based on the original model specified in Wendling F, % Bartolomei F, Bellanger JJ, Chauvel P. Epileptic fast activity can be
+% explained by a model of impaired GABAergic dendritic inhibition. Eur J Neurosci, 2002;15(9):1499-1508.
+function OriginalModel
+stepSize = 0.001;
+totalDuration = 13 + 1 + 10 + 1 + 2 + 1 + 9 + 1 + 11;
+totalSteps = totalDuration / stepSize;
+duration = [13 10 2 9 11];
+bVals = [45 38 37 8 11];
+gVals = [20 20 20 20 2];
+
+A = 5 * ones(totalSteps, 1);
+B = [];
+G = [];
+for i = 1:5
+    steps = duration(i) / stepSize;
+    bSegment = bVals(i) * ones(steps, 1);
+    B = [B; bSegment];
+    gSegment = gVals(i) * ones(steps, 1);
+
+
+=== Following is the header of samples/189946/FietkiewiczLoparo2016/readme.html ===
+<html><pre>
+
+This is the readme for the matlab model associated with the
+publication
+
+Fietkiewicz C, Loparo KA (2016) Analysis and Enhancements of a
+Prolific Macroscopic Model of Epilepsy. Scientifica (Cairo)
+2016:3628247
+
+This model was contributed by Christopher Fietkiewicz.
+
+To run download and extract this archive.  Start matlab and cd to the
+folder of the extracted archive and type "OriginalModel" on the matlab
+command line. After a few seconds you should see the below image which
+is similar to Fig 2 (left) in the paper:
+
+<img src="./screenshot.png" alt="screenshot" width="550">
+</pre></html>
+
+
