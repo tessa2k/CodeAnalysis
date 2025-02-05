@@ -1,0 +1,62 @@
+{
+    "150912": {
+        "header": "Calcium dynamics, Synaptic Plasticity, Action Potentials, Dendritic Action Potentials, Detailed Neuronal Models, Active Dendrites, Synaptic Integration, Ion Channel Kinetics, STDP."
+    },
+    "156733": {
+        "header": "Ion Channel Kinetics, Calcium dynamics, Synaptic Integration, Parameter Fitting, Detailed Neuronal Models, Short-term Synaptic Plasticity"
+    },
+    "184325": {
+        "header": "Ion Channel Kinetics, Calcium dynamics, Action Potentials, Conductance distributions, Detailed Neuronal Models"
+    },
+    "237323": {
+        "header": "Working memory, Spiking Neuron Model, Neuromodulation, Drug binding"
+    },
+    "123086": {
+        "header": "Pattern Recognition, Vision, Sensory processing, Perceptual Categories"
+    },
+    "245427": {
+        "header": "Ion Channel Kinetics, Calcium dynamics, Membrane Properties, Detailed Neuronal Models"
+    },
+    "117359": {
+        "header": "I'm sorry, but you haven't provided any content for me to identify the most relevant model concepts from the given list. Please provide the content you'd like me to analyze."
+    },
+    "151945": {
+        "header": "Electrodiffusion, Extracellular Fields, Potassium buffering, Cellular volume dynamics, Membrane Properties, Ion Channel Kinetics."
+    },
+    "117207": {
+        "header": "Ion Channel Kinetics, Dendritic Action Potentials, Calcium dynamics, Conductance distributions, Active Dendrites, Detailed Neuronal Models, Action Potentials."
+    },
+    "184324": {
+        "header": "Ion Channel Kinetics, Action Potentials, Calcium dynamics, Detailed Neuronal Models"
+    },
+    "140462": {
+        "header": "Ion Channel Kinetics, Calcium dynamics, Olfaction, Pattern Recognition, Parameter Fitting, Detailed Neuronal Models"
+    },
+    "152539": {
+        "header": "Simplified Models, Rate-coding model neurons, Connectivity matrix, Balanced networks, Parameter sensitivity"
+    },
+    "189946": {
+        "header": "Epilepsy, Oscillations, Synchronization, Pathophysiology, Parameter Fitting, Simplified Models"
+    },
+    "7386": {
+        "header": "Dendritic Action Potentials, Ion Channel Kinetics, Action Potentials, Long-term Synaptic Plasticity, Coincidence Detection, Active Dendrites, Synaptic Plasticity, Detailed Neuronal Models"
+    },
+    "230046": {
+        "header": "Whole Mouse Brain Dynamics, Computational Neuroinformatics, Spatio-temporal Activity Patterns, Connectivity matrix, Oscillations, Synchronization, Multiscale, Brain Rhythms"
+    },
+    "240364": {
+        "header": "Action Potentials, Ion Channel Kinetics, Bursting, Parameter Fitting, Detailed Neuronal Models, Calcium dynamics, Conductances estimation, Oscillations, Spatio-temporal Activity Patterns, Temporal Pattern Generation, Parameter sensitivity."
+    },
+    "261881": {
+        "header": "Synchronization, Parameter Fitting, Simplified Models, Connectivity matrix, Parameter sensitivity"
+    },
+    "184305": {
+        "header": "Ion Channel Kinetics, Calcium dynamics, Detailed Neuronal Models, Membrane Properties, Action Potentials"
+    },
+    "112547": {
+        "header": "Oscillations, Calcium dynamics, Calcium waves, Signaling pathways"
+    },
+    "184725": {
+        "header": "Dendritic Action Potentials, Bursting, Active Dendrites, Depression, Synaptic Integration, Synaptic Plasticity, Short-term Synaptic Plasticity"
+    }
+}

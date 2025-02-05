@@ -36,7 +36,7 @@ def result_packed(y_true, y_pred, mlb):
         'hamming': hamming
     }
 
-def run(metadata_file_path, test_file_path, topic_name, output_dir=None):
+def run(metadata_file_path, test_file_path, topic_name, test_type):
     with open(metadata_file_path, 'r', encoding='utf-8') as json_file:
         metadata = json.load(json_file)
     with open(test_file_path, 'r', encoding='utf-8') as json_file:
@@ -47,16 +47,18 @@ def run(metadata_file_path, test_file_path, topic_name, output_dir=None):
     mlb = MultiLabelBinarizer()
     mlb.fit([metadata_list])
     
-    result_dict = {}
-    # print("Filtered results")
-    y_true, y_pred = process_result(list(output.keys()), metadata, output, topic_name, group_name="filter")
-    result_dict['filter'] = result_packed(y_true, y_pred, mlb)
+    # result_dict = {}
+    # # print("Filtered results")
+    # y_true, y_pred = process_result(list(output.keys()), metadata, output, topic_name, test_type)
+    # result_dict['filter'] = result_packed(y_true, y_pred, mlb)
 
-    # print("Unfiltered results")
-    y_true, y_pred = process_result(list(output.keys()), metadata, output, topic_name, group_name="unfilter")
-    result_dict['unfilter'] = result_packed(y_true, y_pred, mlb)
+    # # print("Unfiltered results")
+    # y_true, y_pred = process_result(list(output.keys()), metadata, output, topic_name, test_type)
+    # result_dict['unfilter'] = result_packed(y_true, y_pred, mlb)
 
-    return result_dict
+    y_true, y_pred = process_result(list(output.keys()), metadata, output, topic_name, test_type)
+
+    return result_packed(y_true, y_pred, mlb)
 
 def main():
     if len(sys.argv) != 3:
@@ -68,11 +70,15 @@ def main():
 
     test_file = sys.argv[1]
     test_file_path = 'results/' + test_file
-
     metadata_type = sys.argv[2]
 
+    test_type = input("Enter the test type (or type 'quit' to exit): ").strip()
+    if test_type.lower() == 'quit':
+        print("Exiting the test.")
+        sys.exit(0)
+
     print(f"Evaluate {metadata_type} predictions...")
-    result = run(metadata_file_path, test_file_path, metadata_type)
+    result = run(metadata_file_path, test_file_path, metadata_type, test_type)
     pprint(result)
 
 
@@ -97,3 +103,6 @@ if __name__ == "__main__":
 
     # print(f"Precision: {precision}, Recall: {recall}, F1-score: {f1}, Jaccard: {jaccard}, Hamming Loss: {hamming}")
     main()
+    # command examples
+    # python run_sklearn.py modelconcepts_filter_test_1.json model_concept
+    # python run_sklearn.py celltype_filter_test.json neurons
