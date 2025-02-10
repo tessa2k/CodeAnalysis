@@ -4,4 +4,4 @@ samples/
 sampleParkinsons/
 sampleAlzheimer/
 
-evaluation/__pycache__/
+**/__pycache__/

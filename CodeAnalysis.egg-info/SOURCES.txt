@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+CodeAnalysis.egg-info/PKG-INFO
+CodeAnalysis.egg-info/SOURCES.txt
+CodeAnalysis.egg-info/dependency_links.txt
+CodeAnalysis.egg-info/top_level.txt
+prepare/__init__.py
+prepare/utils.py

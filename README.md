@@ -69,3 +69,9 @@ Our current pipeline is designed for the following senario: Suppose a researcher
 A potential new scenario involves a person searching for a model related to a specific neuroscience topic (e.g., Parkinson's disease). In this case, the LLM would first determine whether the model pertains to the topic and then generate the metadata. We hypothesize that the LLM produces more accurate metadata when it has a better understanding of the context, as different types of metadata are inherently interconnected.
 
 To test this hypothesis, we propose gathering all models related to Parkinson's disease (True group) and randomly selecting unrelated models (False group). The initial evaluation will focus on the LLM's ability to correctly classify models into these groups. If the accuracy is high, we will further refine our approach by employing the Chain-of-Thought strategy: prompting the LLM with a binary classification question first, followed by metadata extraction.
+
+## Setup
+Make sure the work directory is root directory, run:
+```
+pip install -e .
+```
