@@ -3,7 +3,6 @@ import os
 from tqdm import tqdm
 from openai import OpenAI
 import pandas as pd
-from prepare import save_model_code_to_json, get_model_code
 import io
 import zipfile
 import json
@@ -16,12 +15,7 @@ import shutil
 from dotenv import load_dotenv
 
 ACCEPTABLE_EXTENSIONS = ('.py', '.cpp', '.java', '.m', '.txt', '.h', '.data', 
-                            '.html', '.c', '.mod', '.g', '.p', ".ode", ".html", "md")  # Adjust as needed
-
-# def get_model_code(file):
-#     with open(file, "r") as f:
-#         model_code_list = json.load(f)
-#     return model_code_list    
+                            '.html', '.c', '.mod', '.g', '.p', ".ode", ".html")  # Adjust as needed
 
 def traverse_folder(path, file_list):
     for entry in os.listdir(path):
@@ -53,9 +47,8 @@ def concat_files(model_code, file_list, output_path, num_header_lines = 20):
 
 
 if __name__ == "__main__":
-    save_model_code_to_json()
-    model_code_list = get_model_code()
-    
+    model_code_list = get_model_code('samples/file_code_list.json')
+
     # create new folder for header-concatenated files
     concat_file_path = 'data/concat_header'
     if os.path.exists(concat_file_path):
