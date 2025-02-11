@@ -2,11 +2,14 @@
 import os
 import json
 import requests
+import zipfile
 from dotenv import load_dotenv
 
 MODEL_CODE_FILE_PATH = "data/model_id_list.json"
+ACCEPTABLE_EXTENSIONS = ('.py', '.cpp', '.java', '.m', '.txt', '.h', '.data', 
+                         '.html', '.c', '.mod', '.g', '.p', ".ode", ".html", ".zip")  # Now includes .zip
 
-def api_request(url, method = 'GET', headers=None, params=None, json_data=None):
+def _api_request(url, method = 'GET', headers=None, params=None, json_data=None):
     '''
     Parameters:
       - url (str): The API endpoint.
@@ -46,7 +49,7 @@ def api_request(url, method = 'GET', headers=None, params=None, json_data=None):
 def save_model_code_to_json():
     model_url = "/api/v1/models"
     MODEL_CODE_FILE_PATH = "data/model_id_list.json"
-    model_code_list = api_request(model_url, method = 'GET')
+    model_code_list = _api_request(model_url, method = 'GET')
     # print(len(model_id_list))
     if os.path.exists(MODEL_CODE_FILE_PATH):
         os.remove(MODEL_CODE_FILE_PATH)
@@ -58,4 +61,35 @@ def get_model_code():
     with open(MODEL_CODE_FILE_PATH, "r") as f:
         model_code_list = json.load(f)
     return model_code_list
+
+def traverse_folder(path, file_list):
+    """
+    Recursively traverses a folder, adding files with acceptable extensions to file_list.
+    If a ZIP file is found, it extracts it and processes the contents.
+    
+    Args:
+        path (str): The directory path to traverse.
+        file_list (list): A list to store the paths of acceptable files.
+    """
+    for entry in os.listdir(path):
+        full_path = os.path.join(path, entry)
+        
+        if os.path.isdir(full_path):
+            print(f'Traverse folder: {full_path}')
+            traverse_folder(full_path, file_list)
+
+        elif entry.lower().endswith(".zip"):  # If it's a ZIP file, extract it
+            extract_path = os.path.join(path, f"{entry}_extracted")  # New folder for extracted files
+            
+            if not os.path.exists(extract_path):  # Avoid re-extracting
+                os.makedirs(extract_path)
+                with zipfile.ZipFile(full_path, 'r') as zip_ref:
+                    zip_ref.extractall(extract_path)  # Extract files
+                    print(f"Extracted {full_path} to {extract_path}")
+            
+            # Recursively traverse the extracted folder
+            traverse_folder(extract_path, file_list)
+
+        elif entry.lower().endswith(ACCEPTABLE_EXTENSIONS):
+            file_list.append(full_path)
 
