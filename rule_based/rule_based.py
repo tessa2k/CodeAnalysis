@@ -14,14 +14,14 @@ import json
 import re
 from tqdm import tqdm
 import pprint
-from prepare.utils import api_request, get_model_code
+from prepare.utils import _api_request, get_model_code
 from concurrent.futures import ThreadPoolExecutor, as_completed  # Uncomment for parallelization
 
 class RuleBased:
     _MODEL_IDS_URL = "/api/v1/models"
     _CAT_URL = "/api/v1/"
     _REG_EX = "manual_classifier_rules.json"
-    _DATA_FOLDER = ""  # Set this to your models directory
+    _DATA_FOLDER = "../All_Data"  # Set this to your models directory
     _TYPE_TO_NAME = {
         "celltypes": "neurons",
         "currents": "currents",
@@ -34,12 +34,13 @@ class RuleBased:
     
     def __init__(self, parallel: bool = False):
         self.parallel = parallel # True if apply parallel approach
-        self.metadata_types = api_request(self._CAT_URL)
+        self.metadata_types = _api_request(self._CAT_URL)
         self.model_id_list = get_model_code()
         # Convert type mapping values to sets for faster membership tests:
         self.type_mapping = {k: set(v) for k, v in self._fetch_type_mapping().items()}
         self.regex_mapping = self._get_regex_mapping()  # precompiled regex mapping
         self.type_list = list(self._TYPE_TO_NAME.keys())
+        self.file_extensions = set()
 
     def _traverse_file(self, model_id):
         '''
@@ -50,8 +51,10 @@ class RuleBased:
         directory = os.path.join(self._DATA_FOLDER, str(model_id))
         matched_categories = set()
         for root, _, files in os.walk(directory):
-            for file in tqdm(files, desc=f"Scanning files in model {model_id}"):
+            for file in files:
                 file_path = os.path.join(root, file)
+                file_extension = os.path.splitext(file_path)[1]
+                self.file_extensions.add(file_extension) # collect file extensions
                 try:
                     with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
                         # Read entire file content (adjust if files are huge)
@@ -83,7 +86,7 @@ class RuleBased:
             dict: mapping each model_id (folder) to its classified categories.
         """
         all_results = {}
-        for model_id in os.listdir(self._DATA_FOLDER):
+        for model_id in tqdm(os.listdir(self._DATA_FOLDER)):
             model_path = os.path.join(self._DATA_FOLDER, model_id)
             if os.path.isdir(model_path):
                 print(f"Scanning folder: {model_id}...")
@@ -143,7 +146,7 @@ class RuleBased:
         for metadata_type in self.metadata_types:
             url = f"/api/v1/{metadata_type}/name"
             try:
-                metadata_names = api_request(url)
+                metadata_names = _api_request(url)
                 if metadata_names is None:
                     raise ValueError(f"API response for {metadata_type} returned None.")
                 mapping[metadata_type] = metadata_names
@@ -180,6 +183,12 @@ class RuleBased:
                     results[metadata_type].append(item)
         return results
 
+    def get_extentions(self):
+        '''
+        Get the set of file extension among all models
+        '''
+        return self.file_extensions
+    
     def print_results(self, model_id):
         '''
         Print partial results for testing.
