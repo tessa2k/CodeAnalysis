@@ -1,0 +1,1912 @@
+=== Following is the header of samples/256028/TelenczukEtAl2018/readme.html ===
+<html>
+The code for the figures of the full morphology model associated with the paper:<p/>
+Telenczuk M, Fontaine B, Brette R (2017) The basis of sharp spike onset in standard biophysical models. PLoS One 12:e0175362<br/>
+<a href="http://dx.doi.org/10.1371/journal.pone.0175362">http://dx.doi.org/10.1371/journal.pone.0175362</a><p/>
+are available at the authors Zenodo (NEURON code) web site::<p/>
+<a href="https://doi.org/10.5281/zenodo.344951">https://doi.org/10.5281/zenodo.344951</a><p/>
+which also includes a link to a binder where the model can be run on the web:<p/>
+<a href="http://mybinder.org/repo/maikia/kink_paper">http://mybinder.org/repo/maikia/kink_paper</a><p/>
+Once you have started the binder you can navigate the index where a nice menu of figures exists as captured in the below image:<p/>
+<img src="./screenshot_figlist.png" alt="list of figure links"><p/>
+For example clicking on the figure 2 link leads to a python notebook which when the cells are executed generates these images:<p/>
+<img src="./screenshot.png" alt="fig 2 example"><p/>
+A movie is also available:<p/>
+<a href="https://doi.org/10.5281/zenodo.344955">https://doi.org/10.5281/zenodo.344955</a>
+</html>
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/libs/apkink/protocols.py ===
+from neuron import h
+import numpy as np
+
+def reset_simulation():
+    h.finitialize(h.v_init)
+    h.fcurrent()
+    h.frecord_init()
+    
+    
+def i_v_protocol(v_value,v_memb=-70,st_dur1=2.,st_dur2=3.):
+    ''' returns current at the soma and m (sodium opening variable) in the end of the axon for given voltage holding potential of soma 
+    uses currently defined model in neuron simulator
+    '''
+    st = h.SEClamp(0.5, sec = h.soma)
+    st.dur1 = st_dur1 # ms
+    st.dur2 = st_dur2
+    st.dur3 = 15.
+
+    st.amp1= v_memb
+    st.amp2= v_memb 
+    st.amp3= v_value
+
+    st.rs = 0.1 # for ideal clamp set to 0.001
+
+    # record params
+    vec_i = h.Vector()
+    vec_i.record(st._ref_i) #nA;
+        
+    vec_axonm = h.Vector()  
+    vec_axonm.record(h.axon(0.99)._ref_m_na)
+
+    h.run()    
+    
+    vec_i = np.array(vec_i)
+    vec_axonm = np.array(vec_axonm)
+    
+    reset_simulation()
+    return vec_i, vec_axonm
+    
+def pn_protocol(v_memb=-70):
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/libs/apkink/__init__.py ===
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/libs/neuroneap/field.py ===
+#!/usr/bin/env python
+#coding=utf-8
+
+import numpy as np
+import scipy.signal
+import re
+
+def select_sections(coords, type):
+    """Filter segments according to their name (taken from name field
+    in coords)
+    
+    - type - regular expression that the name should match
+    """ 
+    sec_type = np.zeros(len(coords), dtype=np.bool)
+    for i, name in enumerate(coords['name']):
+        if re.match(type, name) is not None:
+            sec_type[i] = True
+    return sec_type
+
+def hp_fir(N, cutoff, dt):
+    Fs = 1./(dt*1.E-3)
+    h = scipy.signal.firwin(N, cutoff/Fs/2., pass_zero=False)
+    def _filter_func(s):
+        filt_sig = scipy.signal.filtfilt(h, [1], s)
+        return filt_sig
+    return _filter_func
+        
+def calc_v_ext(pos, coord,  I, eta=3.5):
+    """
+    resistivity [eta] = Ohm.m
+    segments coordinates [coord] = um
+    measurement position [pos] = um
+    membrane current density [I] = mA/cm2 
+    """
+    x0, y0, z0 = pos
+    r = np.sqrt((coord['y']-y0)**2 + (coord['x']-x0)**2 +
+                (coord['z']-z0)**2)*1.E-6 # m
+    S = np.pi*coord['diam']*coord['L']*1.E-12 #m2
+    I = I*1.E4 # mA/m2
+    v_ext = np.sum(1./(4*np.pi)*eta*I*S/r,1) * 1E6 # nV
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/libs/neuroneap/cell.py ===
+#!/usr/bin/env python
+#coding=utf-8
+
+import neuron
+import numpy as np
+
+h = neuron.h
+
+def integrate(tstop, i_axial=False, neuron_cells = None):
+    """Run Neuron simulation and return time and 2d array of 
+    transmembrane currents (n_pts x n_segs). If i_axial is true
+    return in addition axial currents.
+    For particular cell in the network, pass the cell as neuron_cell,
+    if for all the cells in the network leave it None"""
+
+    i_membrane_all = []
+    i_axial_all = []
+    v_memb_all = []
+
+    if neuron_cells != None:      
+        for idx_cell in range(len(neuron_cells)):
+            i_membrane_all.append([]) 
+            i_axial_all.append([])  
+    
+    li = []
+    #for i in xrange(numcells):
+    #    li.append( np.array( tstop/h.dt, neuron_cells[i].all ) 
+        
+    while h.t < tstop:
+        h.fadvance()
+        if neuron_cells ==None:
+            v = get_for_all(get_i_membrane)
+            v_memb = get_v()
+            i_membrane_all.append(v)
+            v_memb_all.append(v_memb)
+
+        else:
+            v = []
+            for idx_cell, next_cell in enumerate(neuron_cells):
+                v_next = get_bycell(get_i_membrane, next_cell)
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/libs/neuroneap/graph.py ===
+#!/usr/bin/env python
+#coding=utf-8
+
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib import cm, collections, transforms, colors, ticker
+import field
+
+def plot_neuron(coords, scalar=None, colors=None,
+                norm=colors.Normalize(), cmap=cm.jet):
+   
+    a = plt.gca()
+    line_segs = [[(c['x0'], c['y0']), (c['x1'], c['y1'])] for c in
+                 coords]
+
+    col = collections.LineCollection(line_segs, cmap=cmap, norm=norm)
+    a.add_collection(col, autolim=True)
+    if scalar is not None:
+        col.set_array(scalar)
+    else:
+        col.set_color(colors)
+
+    a.autoscale_view()
+    plt.axis('equal')
+    return col
+
+def logcontour(xx, yy, zz, n_contours=10):
+    
+    v = np.logspace(np.log10(np.min(zz[:])),
+                    np.log10(np.max(zz[:])), n_contours)
+    lev_exp = np.arange(np.floor(np.log10(v.min())-1),
+                           np.floor(np.log10(v.max())+1))
+    
+    levs = np.power(10, lev_exp)*np.array([1, 2, 5])[:, np.newaxis]
+    levs = np.hstack(levs).astype(int)
+   
+    def pow_fmt(q, m):
+        if (m < 2) and (m > 0):
+            return "%d" % (10**m * q)
+        if q == 1:
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/libs/neuroneap/__init__.py ===
+import cell 
+import field
+import graph
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/libs/neuroneap/sitecustomize.py ===
+#!/usr/bin/env python
+#coding=utf-8
+
+## {{{ http://code.activestate.com/recipes/65287/ (r5)
+# code snippet, to be included in 'sitecustomize.py'
+import sys
+
+def info(type, value, tb):
+   if hasattr(sys, 'ps1') or not sys.stderr.isatty():
+      # we are in interactive mode or we don't have a tty-like
+      # device, so we call the default hook
+      sys.__excepthook__(type, value, tb)
+   else:
+      import traceback, pdb
+      # we are NOT in interactive mode, print the exception...
+      traceback.print_exception(type, value, tb)
+      print
+      # ...then start the debugger in post-mortem mode.
+      pdb.pm()
+
+sys.excepthook = info
+## end of http://code.activestate.com/recipes/65287/ }}}
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/libs/neuroneap/graph3d.py ===
+#!/usr/bin/env python
+#coding=utf-8
+
+import neuron
+h = neuron.h
+h.load_file("demo_ext.hoc")
+
+from calc_csd import get_seg_coords, initialize, integrate
+
+coords = get_seg_coords()
+import numpy as np
+
+def get_max_current(c):
+    tstop=50
+    h.dt = 0.025
+    
+    initialize()
+    t, I = integrate(tstop)
+    L = np.sqrt((c['x0']-c['x1'])**2+
+                (c['y0']-c['y1'])**2+
+                (c['z0']-c['z1'])**2
+               )
+    S = np.sqrt(np.pi)*c['diam']*L
+    i_max = np.abs(I*S).max(0)
+    i_norm = np.log(i_max)
+    i_norm -= i_norm[~np.isinf(i_norm)].min()
+    i_norm[np.isinf(i_norm)] = 0
+    i_norm = i_norm/i_norm.max()
+    print i_norm.min(), i_norm.max()
+    return i_norm
+
+# The number of points per line
+N = 300
+
+# The scalar parameter for each line
+t = np.linspace(-2*np.pi, 2*np.pi, N)
+
+from enthought.mayavi import mlab
+mlab.figure(1, size=(400, 400), bgcolor=(0, 0, 0))
+mlab.clf()
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/kca.mod ===
+
+COMMENT
+26 Ago 2002 Modification of original channel to allow variable time step and to correct an initialization error.
+    Done by Michael Hines(michael.hines@yale.e) and Ruggero Scorcioni(rscorcio@gmu.edu) at EU Advance Course in Computational Neuroscience. Obidos, Portugal
+
+kca.mod
+
+Calcium-dependent potassium channel
+Based on
+Pennefather (1990) -- sympathetic ganglion cells
+taken from
+Reuveni et al (1993) -- neocortical cells
+
+Author: Zach Mainen, Salk Institute, 1995, zach@salk.edu
+	
+ENDCOMMENT
+
+INDEPENDENT {t FROM 0 TO 1 WITH 1 (ms)}
+
+NEURON {
+	SUFFIX kca
+	USEION k READ ek WRITE ik
+	USEION ca READ cai
+	RANGE n, gk, gbar
+	RANGE ninf, ntau
+	GLOBAL Ra, Rb, caix
+	GLOBAL q10, temp, tadj, vmin, vmax
+}
+
+UNITS {
+	(mA) = (milliamp)
+	(mV) = (millivolt)
+	(pS) = (picosiemens)
+	(um) = (micron)
+} 
+
+PARAMETER {
+	gbar = 10   	(pS/um2)	: 0.03 mho/cm2
+	v 		(mV)
+	cai  		(mM)
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/NMDA_Mg.mod ===
+TITLE kinetic NMDA receptor model
+
+COMMENT
+-----------------------------------------------------------------------------
+
+	Kinetic model of NMDA receptors
+	===============================
+
+	10-state gating model:
+	Kampa et al. (2004) J Physiol
+  
+	  U -- Cl  --  O
+         \   | \	    \
+          \  |  \      \
+         UMg --  ClMg - OMg
+		 |	|
+		D1	|
+		 | \	|
+		D2  \	|
+		   \	D1Mg
+		    \	|
+			D2Mg
+-----------------------------------------------------------------------------
+
+  Based on voltage-clamp recordings of NMDA receptor-mediated currents in 
+  nucleated patches of  rat neocortical layer 5 pyramidal neurons (Kampa 2004), 
+  this model was fit with AxoGraph directly to experimental recordings in 
+  order to obtain the optimal values for the parameters.
+
+-----------------------------------------------------------------------------
+
+  This mod file does not include mechanisms for the release and time course
+  of transmitter; it should to be used in conjunction with a sepearate mechanism
+  to describe the release of transmitter and tiemcourse of the concentration
+  of transmitter in the synaptic cleft (to be connected to pointer C here).
+
+-----------------------------------------------------------------------------
+
+  See details of NEURON kinetic models in:
+
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/km.mod ===
+COMMENT
+km.mod
+
+Potassium channel, Hodgkin-Huxley style kinetics
+Based on I-M (muscarinic K channel)
+Slow, noninactivating
+
+Author: Zach Mainen, Salk Institute, 1995, zach@salk.edu
+	
+26 Ago 2002 Modification of original channel to allow 
+variable time step and to correct an initialization error.
+Done by Michael Hines(michael.hines@yale.e) and 
+Ruggero Scorcioni(rscorcio@gmu.edu) at EU Advance Course 
+in Computational Neuroscience. Obidos, Portugal
+
+20110202 made threadsafe by Ted Carnevale
+20120514 fixed singularity in PROCEDURE rates
+
+Special comment:
+
+This mechanism was designed to be run at a single operating 
+temperature--37 deg C--which can be specified by the hoc 
+assignment statement
+celsius = 37
+This mechanism is not intended to be used at other temperatures, 
+or to investigate the effects of temperature changes.
+
+Zach Mainen created this particular model by adapting conductances 
+from lower temperature to run at higher temperature, and found it 
+necessary to reduce the temperature sensitivity of spike amplitude 
+and time course.  He accomplished this by increasing the net ionic 
+conductance through the heuristic of changing the standard HH 
+formula
+  g = gbar*product_of_gating_variables
+to
+  g = tadj*gbar*product_of_gating_variables
+where
+  tadj = q10^((celsius - temp)/10)
+  temp is the "reference temperature" (at which the gating variable
+    time constants were originally determined)
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/iahp2.mod ===
+TITLE Slow Ca-dependent potassium current
+:
+:   Ca++ dependent K+ current IC responsible for slow AHP
+:   Differential equations
+:
+:   Model based on a first order kinetic scheme
+:
+:      <closed> + n cai <-> <open>	(alpha,beta)
+:
+:   Following this model, the activation fct will be half-activated at 
+:   a concentration of Cai = (beta/alpha)^(1/n) = cac (parameter)
+:
+:   The mod file is here written for the case n=2 (2 binding sites)
+:   ---------------------------------------------
+:
+:   This current models the "slow" IK[Ca] (IAHP): 
+:      - potassium current
+:      - activated by intracellular calcium
+:      - NOT voltage dependent
+:
+:   A minimal value for the time constant has been added
+:
+:   Ref: Destexhe et al., J. Neurophysiology 72: 803-818, 1994.
+:
+:   Modifications by Arthur Houweling for use in MyFirstNEURON
+
+
+INDEPENDENT {t FROM 0 TO 1 WITH 1 (ms)}
+
+NEURON {
+	SUFFIX iAHP2
+	USEION k READ ek WRITE ik
+	USEION ca READ cai
+        RANGE gkbar, m_inf, tau_m
+	GLOBAL beta, cac
+	RANGE ik
+}
+
+
+UNITS {
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/iahp.mod ===
+TITLE slow Ca-dependent potassium current (AHP-current)
+
+COMMENT
+        *********************************************
+        reference:      McCormick, Wang & Huguenard (1993) 
+			Cerebral Cortex 3(5), 387-398
+        found in:       bullfrog sympathetic ganglion cells
+        *********************************************
+	Assembled for MyFirstNEURON by Arthur Houweling
+ENDCOMMENT
+
+INDEPENDENT {t FROM 0 TO 1 WITH 1 (ms)}
+
+NEURON {
+	SUFFIX iAHP
+	USEION k READ ek WRITE ik
+	USEION ca READ cai
+        RANGE gkbar, m_inf, tau_m, ik
+}
+
+UNITS {
+	(mA) = (milliamp)
+	(mV) = (millivolt)
+	(mM) = (milli/liter)
+}
+
+PARAMETER {
+	v		(mV)
+	celsius		(degC)
+	dt		(ms)
+	ek		(mV)
+	cai		(mM)
+	gkbar= 0.000807	(mho/cm2)
+:	gkbar= 0.000207	(mho/cm2)
+}
+
+STATE {
+	m
+}
+
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/ia.mod ===
+TITLE transient potassium current (A-current)
+
+COMMENT
+	*********************************************
+	reference:	Huguenard & McCormick (1992) 
+			J.Neurophysiology 68(4), 1373-1383
+	found in:	thalamic relay neurons		 	
+	*********************************************
+	Original by Alain Destexhe
+	Rewritten for MyFirstNEURON by Arthur Houweling
+ENDCOMMENT
+
+INDEPENDENT {t FROM 0 TO 1 WITH 1 (ms)}
+
+NEURON {
+	SUFFIX iA
+	USEION k READ ek WRITE ik 
+        RANGE gkbar, m_inf1, tau_m, h_inf, tau_h1, ik
+}
+
+UNITS {
+	(mA) = (milliamp)
+	(mV) = (millivolt)
+}
+
+PARAMETER {
+	v		(mV)
+	celsius		(degC)
+	dt		(ms)
+	ek		(mV)
+	gkbar= 0.009	(mho/cm2)
+:	gkbar= 0.00345	(mho/cm2)
+}
+
+STATE {
+	m1 h1
+}
+
+ASSIGNED {
+	ik		(mA/cm2)
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/cad.mod ===
+
+:26 Ago 2002 Modification of original channel to allow variable time step and to correct an initialization error.
+:    Done by Michael Hines(michael.hines@yale.e) and Ruggero Scorcioni(rscorcio@gmu.edu) at EU Advance Course in Computational Neuroscience. Obidos, Portugal
+ 
+
+
+
+TITLE decay of internal calcium concentration
+:
+: Internal calcium concentration due to calcium currents and pump.
+: Differential equations.
+:
+: Simple model of ATPase pump with 3 kinetic constants (Destexhe 92)
+:     Cai + P <-> CaP -> Cao + P  (k1,k2,k3)
+: A Michaelis-Menten approximation is assumed, which reduces the complexity
+: of the system to 2 parameters: 
+:       kt = <tot enzyme concentration> * k3  -> TIME CONSTANT OF THE PUMP
+:	kd = k2/k1 (dissociation constant)    -> EQUILIBRIUM CALCIUM VALUE
+: The values of these parameters are chosen assuming a high affinity of 
+: the pump to calcium and a low transport capacity (cfr. Blaustein, 
+: TINS, 11: 438, 1988, and references therein).  
+:
+: Units checked using "modlunit" -> factor 10000 needed in ca entry
+:
+: VERSION OF PUMP + DECAY (decay can be viewed as simplified buffering)
+:
+: All variables are range variables
+:
+:
+: This mechanism was published in:  Destexhe, A. Babloyantz, A. and 
+: Sejnowski, TJ.  Ionic mechanisms for intrinsic slow oscillations in
+: thalamic relay neurons. Biophys. J. 65: 1538-1552, 1993)
+:
+: Written by Alain Destexhe, Salk Institute, Nov 12, 1992
+:
+
+INDEPENDENT {t FROM 0 TO 1 WITH 1 (ms)}
+
+NEURON {
+	SUFFIX cad
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/na.mod ===
+COMMENT
+na.mod
+
+Sodium channel, Hodgkin-Huxley style kinetics.  
+
+Kinetics were fit to data from Huguenard et al. (1988) and Hamill et
+al. (1991)
+
+qi is not well constrained by the data, since there are no points
+between -80 and -55.  So this was fixed at 5 while the thi1,thi2,Rg,Rd
+were optimized using a simplex least square proc
+
+voltage dependencies are shifted approximately from the best
+fit to give higher threshold
+
+Author: Zach Mainen, Salk Institute, 1994, zach@salk.edu
+
+26 Ago 2002 Modification of original channel to allow 
+variable time step and to correct an initialization error.
+Done by Michael Hines(michael.hines@yale.e) and 
+Ruggero Scorcioni(rscorcio@gmu.edu) at EU Advance Course 
+in Computational Neuroscience. Obidos, Portugal
+
+11 Jan 2007 Fixed glitch in trap where (v/th) was where (v-th)/q is. 
+(thanks Ronald van Elburg!)
+
+20110202 made threadsafe by Ted Carnevale
+20120514 replaced vtrap0 with efun, which is a better approximation
+         in the vicinity of a singularity
+
+Special comment:
+
+This mechanism was designed to be run at a single operating 
+temperature--37 deg C--which can be specified by the hoc 
+assignment statement
+celsius = 37
+This mechanism is not intended to be used at other temperatures, 
+or to investigate the effects of temperature changes.
+
+Zach Mainen created this particular model by adapting conductances 
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/release.mod ===
+TITLE transmitter release
+
+COMMENT
+-----------------------------------------------------------------------------
+
+ Simple (minimal?) model of transmitter release
+
+ - single compartment, need calcium influx and efflux
+
+ - Ca++ binds to a "fusion factor" protein F leading to an activated form FA.
+   Assuming a cooperativity factor of 4 (see Augustine & charlton, 
+   J Physiol. 381: 619-640, 1986), one obtains:
+
+	F + 4 Cai <-> FA	(kb,ku)
+
+ - FA binds to presynaptic vesicles and activates them according to:
+
+	FA + V <-> VA		(k1,k2)
+
+   VA represents the "activated vesicle" which is able to bind to the
+   membrane and release transmitter.  Presynaptic vesicles (V) are 
+   considered in excess.
+
+ - VA releases nt transmitter molecules in the synaptic cleft
+
+	VA  ->  nt T		(k3)
+
+   This reaction is the slowest and a constant number of transmitter per 
+   vesicule is considered (nt).  
+
+ - Finally, T is hydrolyzed according to a first-order reaction
+
+	T  ->  ...		(kh)
+
+
+   References:
+
+   Destexhe, A., Mainen, Z.F. and Sejnowski, T.J. Synthesis of models for
+   excitable membranes, synaptic transmission and neuromodulation using a 
+   common kinetic formalism, Journal of Computational Neuroscience 1: 
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/ca.mod ===
+COMMENT
+ca.mod
+Uses fixed eca instead of GHK eqn
+
+HVA Ca current
+Based on Reuveni, Friedman, Amitai and Gutnick (1993)
+J. Neurosci. 13:4609-4621.
+
+Author: Zach Mainen, Salk Institute, 1994, zach@salk.edu
+
+26 Ago 2002 Modification of original channel to allow 
+variable time step and to correct an initialization error.
+Done by Michael Hines(michael.hines@yale.e) and 
+Ruggero Scorcioni(rscorcio@gmu.edu) at EU Advance Course 
+in Computational Neuroscience. Obidos, Portugal
+
+20110202 made threadsafe by Ted Carnevale
+20120514 fixed singularity in PROCEDURE rates
+
+Special comment:
+
+This mechanism was designed to be run at a single operating 
+temperature--37 deg C--which can be specified by the hoc 
+assignment statement
+celsius = 37
+This mechanism is not intended to be used at other temperatures, 
+or to investigate the effects of temperature changes.
+
+Zach Mainen created this particular model by adapting conductances 
+from lower temperature to run at higher temperature, and found it 
+necessary to reduce the temperature sensitivity of spike amplitude 
+and time course.  He accomplished this by increasing the net ionic 
+conductance through the heuristic of changing the standard HH 
+formula
+  g = gbar*product_of_gating_variables
+to
+  g = tadj*gbar*product_of_gating_variables
+where
+  tadj = q10^((celsius - temp)/10)
+  temp is the "reference temperature" (at which the gating variable
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/gabaa5.mod ===
+TITLE detailed model of GABA-A receptors
+
+COMMENT
+-----------------------------------------------------------------------------
+
+	Kinetic model of GABA-A receptors
+	=================================
+
+	5-state gating model from Busch and Sakmann (Cold Spring Harbor
+	Symp. Quant. Biol. 55: 69-80, 1990)
+  
+	C -- C1 -- C2
+	     |     |
+      	     O1    O2
+
+-----------------------------------------------------------------------------
+
+  Based on voltage-clamp recordings of GABAA receptor-mediated currents in rat
+  hippocampal slices (Otis and Mody, Neuroscience 49: 13-32, 1992), this model
+  was fit directly to experimental recordings in order to obtain the optimal
+  values for the parameters (see Destexhe, Mainen and Sejnowski, 1996).
+
+-----------------------------------------------------------------------------
+
+  This mod file does not include mechanisms for the release and time course
+  of transmitter; it is to be used in conjunction with a sepearate mechanism
+  to describe the release of transmitter and that provides the concentration
+  of transmitter in the synaptic cleft (to be connected to pointer C here).
+
+-----------------------------------------------------------------------------
+
+  See details in:
+
+  Destexhe, A., Mainen, Z.F. and Sejnowski, T.J.  Kinetic models of 
+  synaptic transmission.  In: Methods in Neuronal Modeling (2nd edition; 
+  edited by Koch, C. and Segev, I.), MIT press, Cambridge, 1998, pp. 1-25.
+
+  (electronic copy available at http://cns.iaf.cnrs-gif.fr)
+
+
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/capump.mod ===
+TITLE decay of internal calcium concentration
+:
+: Internal calcium concentration due to calcium currents and pump.
+: Differential equations.
+:
+: Simple model of ATPase pump with 3 kinetic constants (Destexhe 92)
+:     Cai + P <-> CaP -> Cao + P  (k1,k2,k3)
+: A Michaelis-Menten approximation is assumed, which reduces the complexity
+: of the system to 2 parameters: 
+:       kt = <tot enzyme concentration> * k3  -> TIME CONSTANT OF THE PUMP
+:	kd = k2/k1 (dissociation constant)    -> EQUILIBRIUM CALCIUM VALUE
+: The values of these parameters are chosen assuming a high affinity of 
+: the pump to calcium and a low transport capacity (cfr. Blaustein, 
+: TINS, 11: 438, 1988, and references therein).  
+:
+: Units checked using "modlunit" -> factor 10000 needed in ca entry
+:
+: VERSION OF PUMP + DECAY (decay can be viewed as simplified buffering)
+:
+: All variables are range variables
+:
+:
+: This mechanism was published in:  Destexhe, A. Babloyantz, A. and 
+: Sejnowski, TJ.  Ionic mechanisms for intrinsic slow oscillations in
+: thalamic relay neurons. Biophys. J. 65: 1538-1552, 1993)
+:
+: (electronic copy available at http://cns.iaf.cnrs-gif.fr)
+:
+: Written by Alain Destexhe, Salk Institute, Nov 12, 1992
+:
+
+INDEPENDENT {t FROM 0 TO 1 WITH 1 (ms)}
+
+NEURON {
+	SUFFIX capump
+	USEION ca READ ica, cai WRITE cai
+	RANGE depth,kt,kd,cainf,taur
+}
+
+UNITS {
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/caL3d.mod ===
+
+COMMENT
+
+High threshold Ca2+ channel
+
+2-state kinetics with sigmoidal voltage-dependence
+
+  C<->O
+
+Goldman-Hodgkin-Katz equations
+
+     # MODEL
+    |   MODEL AUTHOR  : D.A. McCormick & J. Huguenard
+    |   MODEL DATE    : 1992
+    |   MODEL REF     : A model of the electrophysiological properties of 
+thalamocortical relay neurons. J Neurophysiol, 1992 Oct, 68(4):1384-400.
+ 
+    # EXPERIMENT
+    |   EXP AUTHOR    : Kay AR; Wong RK
+    |   EXP DATE      : 1987
+    |   EXP REF       : Journal of Physiology, 1987 Nov, 392:603-16.
+    |   ANIMAL        : guinea-pig
+    |   BRAIN REGION  : hippocampus
+    |   CELL TYPE     : Ca1 pyramidal
+    |   TECHNIQUE     : slices, whole-cell
+    |   RECORDING METHOD  : voltage-clamp
+    |   TEMPERATURE   : 20-22
+ 
+Reference:
+
+   Destexhe, A., Mainen, Z.F. and Sejnowski, T.J. Synthesis of models for
+   excitable membranes, synaptic transmission and neuromodulation using a 
+   common kinetic formalism, Journal of Computational Neuroscience 1: 
+   195-230, 1994.
+
+  (electronic copy available at http://cns.iaf.cnrs-gif.fr)
+
+
+ENDCOMMENT
+
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/Gfluct.mod ===
+TITLE Fluctuating conductances
+
+COMMENT
+-----------------------------------------------------------------------------
+
+	Fluctuating conductance model for synaptic bombardment
+	======================================================
+
+THEORY
+
+  Synaptic bombardment is represented by a stochastic model containing
+  two fluctuating conductances g_e(t) and g_i(t) descibed by:
+
+     Isyn = g_e(t) * [V - E_e] + g_i(t) * [V - E_i]
+     d g_e / dt = -(g_e - g_e0) / tau_e + sqrt(D_e) * Ft
+     d g_i / dt = -(g_i - g_i0) / tau_i + sqrt(D_i) * Ft
+
+  where E_e, E_i are the reversal potentials, g_e0, g_i0 are the average
+  conductances, tau_e, tau_i are time constants, D_e, D_i are noise diffusion
+  coefficients and Ft is a gaussian white noise of unit standard deviation.
+
+  g_e and g_i are described by an Ornstein-Uhlenbeck (OU) stochastic process
+  where tau_e and tau_i represent the "correlation" (if tau_e and tau_i are 
+  zero, g_e and g_i are white noise).  The estimation of OU parameters can
+  be made from the power spectrum:
+
+     S(w) =  2 * D * tau^2 / (1 + w^2 * tau^2)
+
+  and the diffusion coeffient D is estimated from the variance:
+
+     D = 2 * sigma^2 / tau
+
+
+NUMERICAL RESOLUTION
+
+  The numerical scheme for integration of OU processes takes advantage 
+  of the fact that these processes are gaussian, which led to an exact
+  update rule independent of the time step dt (see Gillespie DT, Am J Phys 
+  64: 225, 1996):
+
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/im.mod ===
+TITLE slowly activating potassium current (M-current)
+
+COMMENT
+        *********************************************
+        reference:   	Yamada, Koch & Adams (1989) 
+			Methods in Neuronal Modeling, MIT press
+        found in:       bullfrog sympathetic ganglion cells
+        *********************************************
+	Assembled for MyFirstNEURON by Arthur Houweling
+ENDCOMMENT
+
+INDEPENDENT {t FROM 0 TO 1 WITH 1 (ms)}
+
+NEURON {
+	SUFFIX iM
+	USEION k READ ek WRITE ik 
+        RANGE gkbar, m_inf, tau_m, ik
+}
+
+UNITS {
+	(mA) = (milliamp)
+	(mV) = (millivolt)
+}
+
+PARAMETER {
+	v		(mV)
+	celsius		(degC)
+        dt              (ms)
+	ek		(mV)
+	gkbar= 0.00031	(mho/cm2)
+:	gkbar= 0.0006	(mho/cm2)
+}
+
+STATE {
+	m
+}
+
+ASSIGNED {
+	ik		(mA/cm2)
+	m_inf
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/kv.mod ===
+COMMENT
+kv.mod
+
+Potassium channel, Hodgkin-Huxley style kinetics
+Kinetic rates based roughly on Sah et al. and Hamill et al. (1991)
+
+Author: Zach Mainen, Salk Institute, 1995, zach@salk.edu
+	
+26 Ago 2002 Modification of original channel to allow 
+variable time step and to correct an initialization error.
+Done by Michael Hines(michael.hines@yale.e) and 
+Ruggero Scorcioni(rscorcio@gmu.edu) at EU Advance Course 
+in Computational Neuroscience. Obidos, Portugal
+
+20110202 made threadsafe by Ted Carnevale
+20120514 fixed singularity in PROCEDURE rates
+
+Special comment:
+
+This mechanism was designed to be run at a single operating 
+temperature--37 deg C--which can be specified by the hoc 
+assignment statement
+celsius = 37
+This mechanism is not intended to be used at other temperatures, 
+or to investigate the effects of temperature changes.
+
+Zach Mainen created this particular model by adapting conductances 
+from lower temperature to run at higher temperature, and found it 
+necessary to reduce the temperature sensitivity of spike amplitude 
+and time course.  He accomplished this by increasing the net ionic 
+conductance through the heuristic of changing the standard HH 
+formula
+  g = gbar*product_of_gating_variables
+to
+  g = tadj*gbar*product_of_gating_variables
+where
+  tadj = q10^((celsius - temp)/10)
+  temp is the "reference temperature" (at which the gating variable
+    time constants were originally determined)
+  celsius is the "operating temperature"
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/ih.mod ===
+TITLE hyperpolarization-activated current (H-current) 
+
+COMMENT
+	Two distinct activation gates are assumed with the same asymptotic 
+	opening values, a fast gate (F) and a slow gate (S). The following 
+	kinetic scheme is assumed
+
+	s0  --(Alpha)--> s1 + n Cai  --(k1)--> s2
+           <--(Beta)---             <--(k2)--
+ 
+ 	f0  --(Alpha)--> f1 + n Cai  --(k1)--> f2
+           <--(Beta)---             <--(k2)--
+
+	where s0/f0, s1/f1, and s2/f2 are resp. fraction of closed slow/fast 
+	gates, fraction of open unbound slow/fast gates, and fraction of open 
+	calcium-bound slow/fast	gates, n is taken 2, and k1 = k2*C where 
+	C = (cai/cac)^n and cac is the critical value at which Ca2+ binding 
+	is half-activated.
+	
+	The total current is computed according
+
+	ih = ghbar * (s1+s2) * (f1+f2) * (v-eh)
+
+        *********************************************
+        reference:      Destexhe, Babloyantz & Sejnowski (1993)
+			Biophys.J. 65, 1538-1552
+        found in:       thalamocortical neurons
+        *********************************************
+	Maxim Bazhenov's first mod file
+        Rewritten for MyFirstNEURON by Arthur Houweling 
+ENDCOMMENT
+
+INDEPENDENT {t FROM 0 TO 1 WITH 1 (ms)}
+
+NEURON {
+	SUFFIX iH
+	USEION h READ eh WRITE ih VALENCE 1
+	USEION ca READ cai
+        RANGE ghbar, tau_s, tau_f, tau_c, ih
+	GLOBAL cac
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/x86_64/kv.c ===
+/* Created by Language version: 6.2.0 */
+/* VECTORIZED */
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include "scoplib_ansi.h"
+#undef PI
+#define nil 0
+#include "md1redef.h"
+#include "section.h"
+#include "nrniv_mf.h"
+#include "md2redef.h"
+ 
+#if METHOD3
+extern int _method3;
+#endif
+
+#if !NRNGPU
+#undef exp
+#define exp hoc_Exp
+extern double hoc_Exp(double);
+#endif
+ 
+#define _threadargscomma_ _p, _ppvar, _thread, _nt,
+#define _threadargs_ _p, _ppvar, _thread, _nt
+ 
+#define _threadargsprotocomma_ double* _p, Datum* _ppvar, Datum* _thread, _NrnThread* _nt,
+#define _threadargsproto_ double* _p, Datum* _ppvar, Datum* _thread, _NrnThread* _nt
+ 	/*SUPPRESS 761*/
+	/*SUPPRESS 762*/
+	/*SUPPRESS 763*/
+	/*SUPPRESS 765*/
+	 extern double *getarg();
+ /* Thread safe. No static _p or _ppvar. */
+ 
+#define t _nt->_t
+#define dt _nt->_dt
+#define gbar _p[0]
+#define gk _p[1]
+#define ninf _p[2]
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/x86_64/Gfluct.c ===
+/* Created by Language version: 6.2.0 */
+/* NOT VECTORIZED */
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include "scoplib_ansi.h"
+#undef PI
+#define nil 0
+#include "md1redef.h"
+#include "section.h"
+#include "nrniv_mf.h"
+#include "md2redef.h"
+ 
+#if METHOD3
+extern int _method3;
+#endif
+
+#if !NRNGPU
+#undef exp
+#define exp hoc_Exp
+extern double hoc_Exp(double);
+#endif
+ 
+#define _threadargscomma_ /**/
+#define _threadargs_ /**/
+ 
+#define _threadargsprotocomma_ /**/
+#define _threadargsproto_ /**/
+ 	/*SUPPRESS 761*/
+	/*SUPPRESS 762*/
+	/*SUPPRESS 763*/
+	/*SUPPRESS 765*/
+	 extern double *getarg();
+ static double *_p; static Datum *_ppvar;
+ 
+#define t nrn_threads->_t
+#define dt nrn_threads->_dt
+#define E_e _p[0]
+#define E_i _p[1]
+#define g_e0 _p[2]
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/x86_64/kca.mod ===
+../kca.mod
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/x86_64/NMDA_Mg.c ===
+/* Created by Language version: 6.2.0 */
+/* NOT VECTORIZED */
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include "scoplib_ansi.h"
+#undef PI
+#define nil 0
+#include "md1redef.h"
+#include "section.h"
+#include "nrniv_mf.h"
+#include "md2redef.h"
+ 
+#if METHOD3
+extern int _method3;
+#endif
+
+#if !NRNGPU
+#undef exp
+#define exp hoc_Exp
+extern double hoc_Exp(double);
+#endif
+ 
+#define _threadargscomma_ /**/
+#define _threadargs_ /**/
+ 
+#define _threadargsprotocomma_ /**/
+#define _threadargsproto_ /**/
+ 	/*SUPPRESS 761*/
+	/*SUPPRESS 762*/
+	/*SUPPRESS 763*/
+	/*SUPPRESS 765*/
+	 extern double *getarg();
+ static double *_p; static Datum *_ppvar;
+ 
+#define t nrn_threads->_t
+#define dt nrn_threads->_dt
+#define gmax _p[0]
+#define i _p[1]
+#define g _p[2]
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/x86_64/NMDA_Mg.mod ===
+../NMDA_Mg.mod
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/x86_64/km.mod ===
+../km.mod
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/x86_64/iahp2.mod ===
+../iahp2.mod
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/x86_64/ia.c ===
+/* Created by Language version: 6.2.0 */
+/* VECTORIZED */
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include "scoplib_ansi.h"
+#undef PI
+#define nil 0
+#include "md1redef.h"
+#include "section.h"
+#include "nrniv_mf.h"
+#include "md2redef.h"
+ 
+#if METHOD3
+extern int _method3;
+#endif
+
+#if !NRNGPU
+#undef exp
+#define exp hoc_Exp
+extern double hoc_Exp(double);
+#endif
+ 
+#define _threadargscomma_ _p, _ppvar, _thread, _nt,
+#define _threadargs_ _p, _ppvar, _thread, _nt
+ 
+#define _threadargsprotocomma_ double* _p, Datum* _ppvar, Datum* _thread, _NrnThread* _nt,
+#define _threadargsproto_ double* _p, Datum* _ppvar, Datum* _thread, _NrnThread* _nt
+ 	/*SUPPRESS 761*/
+	/*SUPPRESS 762*/
+	/*SUPPRESS 763*/
+	/*SUPPRESS 765*/
+	 extern double *getarg();
+ /* Thread safe. No static _p or _ppvar. */
+ 
+#define t _nt->_t
+#define dt _nt->_dt
+#define gkbar _p[0]
+#define ik _p[1]
+#define m_inf1 _p[2]
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/x86_64/iahp.mod ===
+../iahp.mod
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/x86_64/ia.mod ===
+../ia.mod
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/x86_64/mod_func.c ===
+#include <stdio.h>
+#include "hocdec.h"
+extern int nrnmpi_myid;
+extern int nrn_nobanner_;
+
+extern void _Gfluct_reg(void);
+extern void _NMDA_Mg_reg(void);
+extern void _ca_reg(void);
+extern void _caL3d_reg(void);
+extern void _cad_reg(void);
+extern void _capump_reg(void);
+extern void _gabaa5_reg(void);
+extern void _ia_reg(void);
+extern void _iahp_reg(void);
+extern void _iahp2_reg(void);
+extern void _ih_reg(void);
+extern void _im_reg(void);
+extern void _kca_reg(void);
+extern void _km_reg(void);
+extern void _kv_reg(void);
+extern void _na_reg(void);
+extern void _nmda5_reg(void);
+extern void _release_reg(void);
+
+void modl_reg(){
+  if (!nrn_nobanner_) if (nrnmpi_myid < 1) {
+    fprintf(stderr, "Additional mechanisms from files\n");
+
+    fprintf(stderr," Gfluct.mod");
+    fprintf(stderr," NMDA_Mg.mod");
+    fprintf(stderr," ca.mod");
+    fprintf(stderr," caL3d.mod");
+    fprintf(stderr," cad.mod");
+    fprintf(stderr," capump.mod");
+    fprintf(stderr," gabaa5.mod");
+    fprintf(stderr," ia.mod");
+    fprintf(stderr," iahp.mod");
+    fprintf(stderr," iahp2.mod");
+    fprintf(stderr," ih.mod");
+    fprintf(stderr," im.mod");
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/x86_64/cad.mod ===
+../cad.mod
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/x86_64/kca.c ===
+/* Created by Language version: 6.2.0 */
+/* NOT VECTORIZED */
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include "scoplib_ansi.h"
+#undef PI
+#define nil 0
+#include "md1redef.h"
+#include "section.h"
+#include "nrniv_mf.h"
+#include "md2redef.h"
+ 
+#if METHOD3
+extern int _method3;
+#endif
+
+#if !NRNGPU
+#undef exp
+#define exp hoc_Exp
+extern double hoc_Exp(double);
+#endif
+ 
+#define _threadargscomma_ /**/
+#define _threadargs_ /**/
+ 
+#define _threadargsprotocomma_ /**/
+#define _threadargsproto_ /**/
+ 	/*SUPPRESS 761*/
+	/*SUPPRESS 762*/
+	/*SUPPRESS 763*/
+	/*SUPPRESS 765*/
+	 extern double *getarg();
+ static double *_p; static Datum *_ppvar;
+ 
+#define t nrn_threads->_t
+#define dt nrn_threads->_dt
+#define gbar _p[0]
+#define gk _p[1]
+#define ninf _p[2]
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/x86_64/gabaa5.c ===
+/* Created by Language version: 6.2.0 */
+/* NOT VECTORIZED */
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include "scoplib_ansi.h"
+#undef PI
+#define nil 0
+#include "md1redef.h"
+#include "section.h"
+#include "nrniv_mf.h"
+#include "md2redef.h"
+ 
+#if METHOD3
+extern int _method3;
+#endif
+
+#if !NRNGPU
+#undef exp
+#define exp hoc_Exp
+extern double hoc_Exp(double);
+#endif
+ 
+#define _threadargscomma_ /**/
+#define _threadargs_ /**/
+ 
+#define _threadargsprotocomma_ /**/
+#define _threadargsproto_ /**/
+ 	/*SUPPRESS 761*/
+	/*SUPPRESS 762*/
+	/*SUPPRESS 763*/
+	/*SUPPRESS 765*/
+	 extern double *getarg();
+ static double *_p; static Datum *_ppvar;
+ 
+#define t nrn_threads->_t
+#define dt nrn_threads->_dt
+#define gmax _p[0]
+#define i _p[1]
+#define g _p[2]
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/x86_64/na.mod ===
+../na.mod
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/x86_64/release.mod ===
+../release.mod
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/x86_64/ca.c ===
+/* Created by Language version: 6.2.0 */
+/* VECTORIZED */
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include "scoplib_ansi.h"
+#undef PI
+#define nil 0
+#include "md1redef.h"
+#include "section.h"
+#include "nrniv_mf.h"
+#include "md2redef.h"
+ 
+#if METHOD3
+extern int _method3;
+#endif
+
+#if !NRNGPU
+#undef exp
+#define exp hoc_Exp
+extern double hoc_Exp(double);
+#endif
+ 
+#define _threadargscomma_ _p, _ppvar, _thread, _nt,
+#define _threadargs_ _p, _ppvar, _thread, _nt
+ 
+#define _threadargsprotocomma_ double* _p, Datum* _ppvar, Datum* _thread, _NrnThread* _nt,
+#define _threadargsproto_ double* _p, Datum* _ppvar, Datum* _thread, _NrnThread* _nt
+ 	/*SUPPRESS 761*/
+	/*SUPPRESS 762*/
+	/*SUPPRESS 763*/
+	/*SUPPRESS 765*/
+	 extern double *getarg();
+ /* Thread safe. No static _p or _ppvar. */
+ 
+#define t _nt->_t
+#define dt _nt->_dt
+#define gbar _p[0]
+#define gca _p[1]
+#define minf _p[2]
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/x86_64/km.c ===
+/* Created by Language version: 6.2.0 */
+/* VECTORIZED */
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include "scoplib_ansi.h"
+#undef PI
+#define nil 0
+#include "md1redef.h"
+#include "section.h"
+#include "nrniv_mf.h"
+#include "md2redef.h"
+ 
+#if METHOD3
+extern int _method3;
+#endif
+
+#if !NRNGPU
+#undef exp
+#define exp hoc_Exp
+extern double hoc_Exp(double);
+#endif
+ 
+#define _threadargscomma_ _p, _ppvar, _thread, _nt,
+#define _threadargs_ _p, _ppvar, _thread, _nt
+ 
+#define _threadargsprotocomma_ double* _p, Datum* _ppvar, Datum* _thread, _NrnThread* _nt,
+#define _threadargsproto_ double* _p, Datum* _ppvar, Datum* _thread, _NrnThread* _nt
+ 	/*SUPPRESS 761*/
+	/*SUPPRESS 762*/
+	/*SUPPRESS 763*/
+	/*SUPPRESS 765*/
+	 extern double *getarg();
+ /* Thread safe. No static _p or _ppvar. */
+ 
+#define t _nt->_t
+#define dt _nt->_dt
+#define gbar _p[0]
+#define gk _p[1]
+#define ninf _p[2]
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/x86_64/ih.c ===
+/* Created by Language version: 6.2.0 */
+/* NOT VECTORIZED */
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include "scoplib_ansi.h"
+#undef PI
+#define nil 0
+#include "md1redef.h"
+#include "section.h"
+#include "nrniv_mf.h"
+#include "md2redef.h"
+ 
+#if METHOD3
+extern int _method3;
+#endif
+
+#if !NRNGPU
+#undef exp
+#define exp hoc_Exp
+extern double hoc_Exp(double);
+#endif
+ 
+#define _threadargscomma_ /**/
+#define _threadargs_ /**/
+ 
+#define _threadargsprotocomma_ /**/
+#define _threadargsproto_ /**/
+ 	/*SUPPRESS 761*/
+	/*SUPPRESS 762*/
+	/*SUPPRESS 763*/
+	/*SUPPRESS 765*/
+	 extern double *getarg();
+ static double *_p; static Datum *_ppvar;
+ 
+#define t nrn_threads->_t
+#define dt nrn_threads->_dt
+#define ghbar _p[0]
+#define ih _p[1]
+#define tau_s _p[2]
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/x86_64/caL3d.c ===
+/* Created by Language version: 6.2.0 */
+/* NOT VECTORIZED */
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include "scoplib_ansi.h"
+#undef PI
+#define nil 0
+#include "md1redef.h"
+#include "section.h"
+#include "nrniv_mf.h"
+#include "md2redef.h"
+ 
+#if METHOD3
+extern int _method3;
+#endif
+
+#if !NRNGPU
+#undef exp
+#define exp hoc_Exp
+extern double hoc_Exp(double);
+#endif
+ 
+#define _threadargscomma_ /**/
+#define _threadargs_ /**/
+ 
+#define _threadargsprotocomma_ /**/
+#define _threadargsproto_ /**/
+ 	/*SUPPRESS 761*/
+	/*SUPPRESS 762*/
+	/*SUPPRESS 763*/
+	/*SUPPRESS 765*/
+	 extern double *getarg();
+ static double *_p; static Datum *_ppvar;
+ 
+#define t nrn_threads->_t
+#define dt nrn_threads->_dt
+#define a _p[0]
+#define b _p[1]
+#define C _p[2]
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/x86_64/ca.mod ===
+../ca.mod
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/x86_64/gabaa5.mod ===
+../gabaa5.mod
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/x86_64/capump.mod ===
+../capump.mod
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/x86_64/caL3d.mod ===
+../caL3d.mod
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/x86_64/iahp.c ===
+/* Created by Language version: 6.2.0 */
+/* VECTORIZED */
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include "scoplib_ansi.h"
+#undef PI
+#define nil 0
+#include "md1redef.h"
+#include "section.h"
+#include "nrniv_mf.h"
+#include "md2redef.h"
+ 
+#if METHOD3
+extern int _method3;
+#endif
+
+#if !NRNGPU
+#undef exp
+#define exp hoc_Exp
+extern double hoc_Exp(double);
+#endif
+ 
+#define _threadargscomma_ _p, _ppvar, _thread, _nt,
+#define _threadargs_ _p, _ppvar, _thread, _nt
+ 
+#define _threadargsprotocomma_ double* _p, Datum* _ppvar, Datum* _thread, _NrnThread* _nt,
+#define _threadargsproto_ double* _p, Datum* _ppvar, Datum* _thread, _NrnThread* _nt
+ 	/*SUPPRESS 761*/
+	/*SUPPRESS 762*/
+	/*SUPPRESS 763*/
+	/*SUPPRESS 765*/
+	 extern double *getarg();
+ /* Thread safe. No static _p or _ppvar. */
+ 
+#define t _nt->_t
+#define dt _nt->_dt
+#define gkbar _p[0]
+#define ik _p[1]
+#define tau_m _p[2]
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/x86_64/iahp2.c ===
+/* Created by Language version: 6.2.0 */
+/* VECTORIZED */
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include "scoplib_ansi.h"
+#undef PI
+#define nil 0
+#include "md1redef.h"
+#include "section.h"
+#include "nrniv_mf.h"
+#include "md2redef.h"
+ 
+#if METHOD3
+extern int _method3;
+#endif
+
+#if !NRNGPU
+#undef exp
+#define exp hoc_Exp
+extern double hoc_Exp(double);
+#endif
+ 
+#define _threadargscomma_ _p, _ppvar, _thread, _nt,
+#define _threadargs_ _p, _ppvar, _thread, _nt
+ 
+#define _threadargsprotocomma_ double* _p, Datum* _ppvar, Datum* _thread, _NrnThread* _nt,
+#define _threadargsproto_ double* _p, Datum* _ppvar, Datum* _thread, _NrnThread* _nt
+ 	/*SUPPRESS 761*/
+	/*SUPPRESS 762*/
+	/*SUPPRESS 763*/
+	/*SUPPRESS 765*/
+	 extern double *getarg();
+ /* Thread safe. No static _p or _ppvar. */
+ 
+#define t _nt->_t
+#define dt _nt->_dt
+#define gkbar _p[0]
+#define ik _p[1]
+#define m_inf _p[2]
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/x86_64/im.c ===
+/* Created by Language version: 6.2.0 */
+/* VECTORIZED */
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include "scoplib_ansi.h"
+#undef PI
+#define nil 0
+#include "md1redef.h"
+#include "section.h"
+#include "nrniv_mf.h"
+#include "md2redef.h"
+ 
+#if METHOD3
+extern int _method3;
+#endif
+
+#if !NRNGPU
+#undef exp
+#define exp hoc_Exp
+extern double hoc_Exp(double);
+#endif
+ 
+#define _threadargscomma_ _p, _ppvar, _thread, _nt,
+#define _threadargs_ _p, _ppvar, _thread, _nt
+ 
+#define _threadargsprotocomma_ double* _p, Datum* _ppvar, Datum* _thread, _NrnThread* _nt,
+#define _threadargsproto_ double* _p, Datum* _ppvar, Datum* _thread, _NrnThread* _nt
+ 	/*SUPPRESS 761*/
+	/*SUPPRESS 762*/
+	/*SUPPRESS 763*/
+	/*SUPPRESS 765*/
+	 extern double *getarg();
+ /* Thread safe. No static _p or _ppvar. */
+ 
+#define t _nt->_t
+#define dt _nt->_dt
+#define gkbar _p[0]
+#define ik _p[1]
+#define m_inf _p[2]
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/x86_64/Gfluct.mod ===
+../Gfluct.mod
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/x86_64/nmda5.c ===
+/* Created by Language version: 6.2.0 */
+/* NOT VECTORIZED */
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include "scoplib_ansi.h"
+#undef PI
+#define nil 0
+#include "md1redef.h"
+#include "section.h"
+#include "nrniv_mf.h"
+#include "md2redef.h"
+ 
+#if METHOD3
+extern int _method3;
+#endif
+
+#if !NRNGPU
+#undef exp
+#define exp hoc_Exp
+extern double hoc_Exp(double);
+#endif
+ 
+#define _threadargscomma_ /**/
+#define _threadargs_ /**/
+ 
+#define _threadargsprotocomma_ /**/
+#define _threadargsproto_ /**/
+ 	/*SUPPRESS 761*/
+	/*SUPPRESS 762*/
+	/*SUPPRESS 763*/
+	/*SUPPRESS 765*/
+	 extern double *getarg();
+ static double *_p; static Datum *_ppvar;
+ 
+#define t nrn_threads->_t
+#define dt nrn_threads->_dt
+#define gmax _p[0]
+#define i _p[1]
+#define g _p[2]
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/x86_64/na.c ===
+/* Created by Language version: 6.2.0 */
+/* VECTORIZED */
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include "scoplib_ansi.h"
+#undef PI
+#define nil 0
+#include "md1redef.h"
+#include "section.h"
+#include "nrniv_mf.h"
+#include "md2redef.h"
+ 
+#if METHOD3
+extern int _method3;
+#endif
+
+#if !NRNGPU
+#undef exp
+#define exp hoc_Exp
+extern double hoc_Exp(double);
+#endif
+ 
+#define _threadargscomma_ _p, _ppvar, _thread, _nt,
+#define _threadargs_ _p, _ppvar, _thread, _nt
+ 
+#define _threadargsprotocomma_ double* _p, Datum* _ppvar, Datum* _thread, _NrnThread* _nt,
+#define _threadargsproto_ double* _p, Datum* _ppvar, Datum* _thread, _NrnThread* _nt
+ 	/*SUPPRESS 761*/
+	/*SUPPRESS 762*/
+	/*SUPPRESS 763*/
+	/*SUPPRESS 765*/
+	 extern double *getarg();
+ /* Thread safe. No static _p or _ppvar. */
+ 
+#define t _nt->_t
+#define dt _nt->_dt
+#define gbar _p[0]
+#define gna _p[1]
+#define minf _p[2]
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/x86_64/im.mod ===
+../im.mod
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/x86_64/capump.c ===
+/* Created by Language version: 6.2.0 */
+/* VECTORIZED */
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include "scoplib_ansi.h"
+#undef PI
+#define nil 0
+#include "md1redef.h"
+#include "section.h"
+#include "nrniv_mf.h"
+#include "md2redef.h"
+ 
+#if METHOD3
+extern int _method3;
+#endif
+
+#if !NRNGPU
+#undef exp
+#define exp hoc_Exp
+extern double hoc_Exp(double);
+#endif
+ 
+#define _threadargscomma_ _p, _ppvar, _thread, _nt,
+#define _threadargs_ _p, _ppvar, _thread, _nt
+ 
+#define _threadargsprotocomma_ double* _p, Datum* _ppvar, Datum* _thread, _NrnThread* _nt,
+#define _threadargsproto_ double* _p, Datum* _ppvar, Datum* _thread, _NrnThread* _nt
+ 	/*SUPPRESS 761*/
+	/*SUPPRESS 762*/
+	/*SUPPRESS 763*/
+	/*SUPPRESS 765*/
+	 extern double *getarg();
+ /* Thread safe. No static _p or _ppvar. */
+ 
+#define t _nt->_t
+#define dt _nt->_dt
+#define depth _p[0]
+#define taur _p[1]
+#define cainf _p[2]
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/x86_64/kv.mod ===
+../kv.mod
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/x86_64/ih.mod ===
+../ih.mod
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/x86_64/release.c ===
+/* Created by Language version: 6.2.0 */
+/* VECTORIZED */
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include "scoplib_ansi.h"
+#undef PI
+#define nil 0
+#include "md1redef.h"
+#include "section.h"
+#include "nrniv_mf.h"
+#include "md2redef.h"
+ 
+#if METHOD3
+extern int _method3;
+#endif
+
+#if !NRNGPU
+#undef exp
+#define exp hoc_Exp
+extern double hoc_Exp(double);
+#endif
+ 
+#define _threadargscomma_ _p, _ppvar, _thread, _nt,
+#define _threadargs_ _p, _ppvar, _thread, _nt
+ 
+#define _threadargsprotocomma_ double* _p, Datum* _ppvar, Datum* _thread, _NrnThread* _nt,
+#define _threadargsproto_ double* _p, Datum* _ppvar, Datum* _thread, _NrnThread* _nt
+ 	/*SUPPRESS 761*/
+	/*SUPPRESS 762*/
+	/*SUPPRESS 763*/
+	/*SUPPRESS 765*/
+	 extern double *getarg();
+ /* Thread safe. No static _p or _ppvar. */
+ 
+#define t _nt->_t
+#define dt _nt->_dt
+#define Ves _p[0]
+#define Fmax _p[1]
+#define b _p[2]
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/x86_64/cad.c ===
+/* Created by Language version: 6.2.0 */
+/* VECTORIZED */
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include "scoplib_ansi.h"
+#undef PI
+#define nil 0
+#include "md1redef.h"
+#include "section.h"
+#include "nrniv_mf.h"
+#include "md2redef.h"
+ 
+#if METHOD3
+extern int _method3;
+#endif
+
+#if !NRNGPU
+#undef exp
+#define exp hoc_Exp
+extern double hoc_Exp(double);
+#endif
+ 
+#define _threadargscomma_ _p, _ppvar, _thread, _nt,
+#define _threadargs_ _p, _ppvar, _thread, _nt
+ 
+#define _threadargsprotocomma_ double* _p, Datum* _ppvar, Datum* _thread, _NrnThread* _nt,
+#define _threadargsproto_ double* _p, Datum* _ppvar, Datum* _thread, _NrnThread* _nt
+ 	/*SUPPRESS 761*/
+	/*SUPPRESS 762*/
+	/*SUPPRESS 763*/
+	/*SUPPRESS 765*/
+	 extern double *getarg();
+ /* Thread safe. No static _p or _ppvar. */
+ 
+#define t _nt->_t
+#define dt _nt->_dt
+#define ca _p[0]
+#define cai _p[1]
+#define Dca _p[2]
+
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/x86_64/nmda5.mod ===
+../nmda5.mod
+
+=== Following is the header of samples/256028/TelenczukEtAl2018/kink_paper-v1.0.zip_extracted/maikia-kink_paper-fffe754/data/morphology/nmda5.mod ===
+TITLE detailed model of glutamate NMDA receptors
+
+COMMENT
+-----------------------------------------------------------------------------
+
+	Kinetic model of NMDA receptors
+	===============================
+
+	5-state gating model:
+	Clements & Westbrook 1991. Neuron 7: 605.
+	Lester & Jahr 1992. J Neurosci 12: 635.
+	Edmonds & Colquhoun 1992. Proc. R. Soc. Lond. B 250: 279.
+	Hessler, Shirke & Malinow. 1993. Nature 366: 569.
+	Clements et al. 1992. Science 258: 1498.
+  
+	C -- C1 -- C2 -- O
+	           |
+      	           D
+
+	Voltage dependence of Mg2+ block:
+	Jahr & Stevens 1990. J Neurosci 10: 1830.
+	Jahr & Stevens 1990. J Neurosci 10: 3178.
+
+-----------------------------------------------------------------------------
+
+  Based on voltage-clamp recordings of NMDA receptor-mediated currents in rat
+  hippocampal slices (Hessler et al., Nature 366: 569-572, 1993), this model 
+  was fit directly to experimental recordings in order to obtain the optimal
+  values for the parameters (see Destexhe, Mainen and Sejnowski, 1996).
+
+-----------------------------------------------------------------------------
+
+  This mod file does not include mechanisms for the release and time course
+  of transmitter; it is to be used in conjunction with a sepearate mechanism
+  to describe the release of transmitter and that provides the concentration
+  of transmitter in the synaptic cleft (to be connected to pointer C here).
+
+-----------------------------------------------------------------------------
+
+  See details in:
+
+

@@ -1,0 +1,774 @@
+=== Following is the header of samples/267184/NetPyNE Model/mStepIClamp.mod ===
+    COMMENT
+    Point process for generation of multiple step currents at different amplitudes over time.
+    ENDCOMMENT
+
+    NEURON {
+        POINT_PROCESS mStepIClamp
+		RANGE ip1, ip2, ip3, ip4, ip5
+		RANGE pon1, pon2, pon3, pon4, pon5
+		RANGE poff1, poff2, poff3, poff4, poff5
+		RANGE i0, s
+        ELECTRODE_CURRENT i
+    }
+
+    UNITS {
+        (nA) = (nanoamp)
+    }
+
+    PARAMETER {
+   		
+		ip1=0.5 (nA)
+		ip2=-0.3 (nA)
+		ip3=0.27 (nA)
+		ip4=0.5 (nA)
+		ip5=-0.37 (nA)
+				
+		pon1=1000 (ms)
+		pon2=3000 (ms)
+		pon3=5000 (ms)
+		pon4=6500 (ms)
+		pon5=9000 (ms)
+			
+		poff1=1300 (ms)
+		poff2=3300 (ms)
+		poff3=9000 (ms)
+		poff4=6800 (ms)
+		poff5=9300 (ms)
+
+		i0=6.78 (nA)
+		s=17
+    }
+
+
+=== Following is the header of samples/267184/NetPyNE Model/network_model_310MUs.py ===
+from netpyne import specs, sim
+
+# SCRIPT =======================================================================
+netParams = specs.NetParams()
+
+## Population parameters
+# Consists of (1) importing each cell from file and (2) creating a population of x number of 
+#  cells. In this model, each population only has one cell because we want each motor 
+#  neuron to have a unique size. Populations could have more than one cell if there were
+#  going to be discrete size levels.
+# (Step 2) Create the population for each cell and have them numbered starting from 1
+netParams.popParams['Kim_pop_1'] = {'cellType': 'MU', 'numCells': 1, 'cellModel': 'Kim_1'}
+netParams.popParams['Kim_pop_2'] = {'cellType': 'MU', 'numCells': 1, 'cellModel': 'Kim_2'}
+netParams.popParams['Kim_pop_3'] = {'cellType': 'MU', 'numCells': 1, 'cellModel': 'Kim_3'}
+netParams.popParams['Kim_pop_4'] = {'cellType': 'MU', 'numCells': 1, 'cellModel': 'Kim_4'}
+netParams.popParams['Kim_pop_5'] = {'cellType': 'MU', 'numCells': 1, 'cellModel': 'Kim_5'}
+netParams.popParams['Kim_pop_6'] = {'cellType': 'MU', 'numCells': 1, 'cellModel': 'Kim_6'}
+netParams.popParams['Kim_pop_7'] = {'cellType': 'MU', 'numCells': 1, 'cellModel': 'Kim_7'}
+netParams.popParams['Kim_pop_8'] = {'cellType': 'MU', 'numCells': 1, 'cellModel': 'Kim_8'}
+netParams.popParams['Kim_pop_9'] = {'cellType': 'MU', 'numCells': 1, 'cellModel': 'Kim_9'}
+netParams.popParams['Kim_pop_10'] = {'cellType': 'MU', 'numCells': 1, 'cellModel': 'Kim_10'}
+netParams.popParams['Kim_pop_11'] = {'cellType': 'MU', 'numCells': 1, 'cellModel': 'Kim_11'}
+netParams.popParams['Kim_pop_12'] = {'cellType': 'MU', 'numCells': 1, 'cellModel': 'Kim_12'}
+netParams.popParams['Kim_pop_13'] = {'cellType': 'MU', 'numCells': 1, 'cellModel': 'Kim_13'}
+netParams.popParams['Kim_pop_14'] = {'cellType': 'MU', 'numCells': 1, 'cellModel': 'Kim_14'}
+netParams.popParams['Kim_pop_15'] = {'cellType': 'MU', 'numCells': 1, 'cellModel': 'Kim_15'}
+netParams.popParams['Kim_pop_16'] = {'cellType': 'MU', 'numCells': 1, 'cellModel': 'Kim_16'}
+netParams.popParams['Kim_pop_17'] = {'cellType': 'MU', 'numCells': 1, 'cellModel': 'Kim_17'}
+netParams.popParams['Kim_pop_18'] = {'cellType': 'MU', 'numCells': 1, 'cellModel': 'Kim_18'}
+netParams.popParams['Kim_pop_19'] = {'cellType': 'MU', 'numCells': 1, 'cellModel': 'Kim_19'}
+netParams.popParams['Kim_pop_20'] = {'cellType': 'MU', 'numCells': 1, 'cellModel': 'Kim_20'}
+netParams.popParams['Kim_pop_21'] = {'cellType': 'MU', 'numCells': 1, 'cellModel': 'Kim_21'}
+netParams.popParams['Kim_pop_22'] = {'cellType': 'MU', 'numCells': 1, 'cellModel': 'Kim_22'}
+netParams.popParams['Kim_pop_23'] = {'cellType': 'MU', 'numCells': 1, 'cellModel': 'Kim_23'}
+netParams.popParams['Kim_pop_24'] = {'cellType': 'MU', 'numCells': 1, 'cellModel': 'Kim_24'}
+netParams.popParams['Kim_pop_25'] = {'cellType': 'MU', 'numCells': 1, 'cellModel': 'Kim_25'}
+netParams.popParams['Kim_pop_26'] = {'cellType': 'MU', 'numCells': 1, 'cellModel': 'Kim_26'}
+netParams.popParams['Kim_pop_27'] = {'cellType': 'MU', 'numCells': 1, 'cellModel': 'Kim_27'}
+netParams.popParams['Kim_pop_28'] = {'cellType': 'MU', 'numCells': 1, 'cellModel': 'Kim_28'}
+netParams.popParams['Kim_pop_29'] = {'cellType': 'MU', 'numCells': 1, 'cellModel': 'Kim_29'}
+
+
+=== Following is the header of samples/267184/NetPyNE Model/KCa.mod ===
+TITLE Ca activated potassium channel
+
+NEURON {
+	SUFFIX KCa
+	USEION ca READ cai
+	USEION k READ ek WRITE ik
+	RANGE gkcabar, ik, i, g
+}
+
+UNITS {
+	(mV)	=	(millivolt)
+	(mA)	=	(milliamp)
+	(molar)	=	(1/liter)
+	(mM)	=	(millimolar)
+	(S)	=	(siemens)
+}
+
+PARAMETER {
+	gkcabar = 0.02		(S/cm2)
+	Kd		= 0.0005		(mM)
+}
+
+ASSIGNED {
+	ik			(mA/cm2)
+	v			(mV)
+	ek			(mV)
+	cai			(mM)
+	i			(mA/cm2)
+	g			(S/cm2)
+}
+
+INITIAL {
+	ik = 0
+}
+
+BREAKPOINT {
+	g = gkcabar * (cai/(cai+Kd))
+	i = g * (v - ek)
+	ik = i
+}
+
+
+=== Following is the header of samples/267184/NetPyNE Model/xm_tracker.txt ===
+0   
+
+
+=== Following is the header of samples/267184/NetPyNE Model/Kim_Model.py ===
+## KIM ET AL. MODEL CONVERTED INTO PYTHON FILE FOR USE WITH FORTRAN SUBROUTINE
+
+from neuron import h
+h.execute('load_file("nrngui.hoc")')
+
+# Run .hoc files created by Kim et al.
+h.execute('load_file("v_e_moto6_export.hoc")')
+h.execute('load_file("add_hil_is.hoc")')
+h.execute('load_file("add_muscle_unit.hoc")')
+h.execute('load_file("mem_mechanism_pass.hoc")')
+h.execute('load_file("mem_mechanism_acti.hoc")')
+h.execute('load_file("mem_mechanism_muscle.hoc")')
+h.execute('load_file("fixnseg.hoc")')
+h.execute('load_file("add_pics_istim.hoc")')
+h.execute('load_file("Xm.hoc")')
+
+# Check sections created above
+#for sec in h.allsec():
+#    h.psection(sec=sec)
+
+# Visualize cells created above
+#shape_window = h.PlotShape()
+
+# Create recording vectors for output information
+v_vec = h.Vector()
+v_vec.record(h.soma(0.5)._ref_v)
+#d_vec = h.Vector()
+#d_vec.record(h.dend[2](0.833)._ref_v)
+
+# Run the full simulation
+h.v_init = -70	#mV
+h.tstop = 100     #ms - time increment of when subroutine is called
+h.run()
+
+# Save the state of the end of the simulation ran
+h.execute('load_file("save_state.hoc")')
+
+# Write output voltage to file
+volt_list = list(v_vec)
+outF = open("voltage_output_results.txt","a+")
+
+
+=== Following is the header of samples/267184/NetPyNE Model/Kim_Model_restore.py ===
+## KIM ET AL. MODEL CONVERTED INTO PYTHON FILE FOR USE WITH FORTRAN SUBROUTINE
+
+from neuron import h
+h.execute('load_file("nrngui.hoc")')
+
+# Run .hoc files created by Kim et al.
+h.execute('load_file("v_e_moto6_export.hoc")')
+h.execute('load_file("add_hil_is.hoc")')
+h.execute('load_file("add_muscle_unit.hoc")')
+h.execute('load_file("mem_mechanism_pass.hoc")')
+h.execute('load_file("mem_mechanism_acti.hoc")')
+h.execute('load_file("mem_mechanism_muscle.hoc")')
+h.execute('load_file("fixnseg.hoc")')
+h.execute('load_file("add_pics_istim.hoc")')
+h.execute('load_file("Xm.hoc")')
+
+# Check sections created above
+#for sec in h.allsec():
+#    h.psection(sec=sec)
+
+# Visualize cells created above
+#shape_window = h.PlotShape()
+
+# Create recording vectors for output information
+v_vec = h.Vector()
+v_vec.record(h.soma(0.5)._ref_v)
+#d_vec = h.Vector()
+#d_vec.record(h.dend[2](0.833)._ref_v)
+
+# Run the full simulation from last state of previous simulation
+h.execute('load_file("restore_state.hoc")')
+h.run()
+
+# Save the state of the end of the simulation ran
+h.execute('load_file("save_state.hoc")')
+
+# Write output voltage to file
+volt_list = list(v_vec)
+outF = open("voltage_output_results.txt","a+")
+for line in volt_list:
+
+
+=== Following is the header of samples/267184/NetPyNE Model/module3.mod ===
+TITLE Modified Hill-Mashima muscle model
+ 
+UNITS {}
+
+NEURON {
+    SUFFIX fHill
+    RANGE a0, b0, c0, d0
+	RANGE p0, g1, g2, g3
+	RANGE Kse, A, Fc, F
+	RANGE xm_init, xm, xce_init, xce
+	USEION mg READ mgi VALENCE 2
+	USEION cl READ cli
+}
+
+PARAMETER {
+	a0 = 2.35		:[N]
+	b0 = 24.35		:[mm*s-1]
+	c0 = -7.4		:[N]
+	d0 = 30.3		:[mm*s-1]
+	p0 = 23			:[N]
+	g1 = -8			:[mm]
+	g2 = 21.4		:[mm]
+	xm_init = -8	:[mm]
+	xce_init = -8	:[mm]
+	Kse = 0.4		:[mm-1]
+}
+
+STATE {
+	A
+	xce
+	xm
+}
+
+ASSIGNED {
+	F
+	Fc
+	mgi		
+	cli		
+}
+
+
+
+=== Following is the header of samples/267184/NetPyNE Model/Xm.mod ===
+TITLE Muscle length variation
+
+NEURON {
+	POINT_PROCESS Xm
+	RANGE amp, cli
+	USEION cl WRITE cli VALENCE 1
+}
+
+UNITS {
+	(nA) = (nanoamp)
+}
+
+PARAMETER {
+	amp = -8	::mm
+}
+
+ASSIGNED {
+    cli (nA)
+}
+
+BREAKPOINT {
+	cli = amp
+}
+
+
+=== Following is the header of samples/267184/NetPyNE Model/RampIClampNoise.mod ===
+    COMMENT
+    Point process for generation of ascending and descending current injection over time.
+
+    Three different stimulation profiles were used in the network model validation with
+        the following parameters:
+        ALL - Random noise with min = 6 (nA) and std = 0.2 (nA)
+        (1) Ramp-up and hold profile
+            dur = 3000 (ms)
+            ramp_dur = 1000 (ms)
+        (2) Ramp-up and hold profile with longer ramp
+            dur = 4000 (ms)
+            ramp_dur = 2000 (ms)
+        (3) Ramp-up and ramp-down profile
+            dur = 4000 (ms)
+            ramp_dur = 2000 (ms)
+    
+    All three stimulation profiles were ran at three different peak amplitudes
+        (10.5, 14.8, and 20 nA) corresponding to 10%, 40%, and 75% MVC. 
+    ENDCOMMENT
+
+    NEURON {
+            POINT_PROCESS RampIClampNoise
+            RANGE del, dur, pkamp, bias, ramp_dur,std
+            ELECTRODE_CURRENT i
+    }
+
+    UNITS {
+            (nA) = (nanoamp)
+          }
+
+    PARAMETER {
+            del=0   (ms)
+            dur=3000   (ms)
+            ramp_dur = 1000 (ms)
+            pkamp=20 (nA)
+            bias=0 (nA)
+			min = 6 (nA)
+            std=0.2 (nA)
+    }
+
+
+
+=== Following is the header of samples/267184/NetPyNE Model/KDr.mod ===
+TITLE Delayed rectifier potassium channel
+
+NEURON {
+	SUFFIX KDr
+	USEION k READ ek WRITE ik
+	RANGE gkdrbar, ik, g, i
+}
+
+UNITS {
+	(mA) = (milliamp)
+	(mV) = (millivolt)
+	(S)  = (siemens)
+}
+
+PARAMETER {
+	gkdrbar 	= .8 	(mho/cm2)
+}
+
+ASSIGNED {
+	v 		(mV)
+	ek          (mV)
+	ik		(mA/cm2)
+	i (mA/cm2)
+	g (S/cm2)
+	ninf ntau
+}
+
+STATE {
+	n
+}
+
+BREAKPOINT {
+	SOLVE states METHOD cnexp
+	g = gkdrbar * n * n * n * n
+	i = g * (v - ek)
+	ik = i
+}
+
+INITIAL {
+	:rates(v)
+
+
+=== Following is the header of samples/267184/NetPyNE Model/Ca_conc.mod ===
+TITLE Intracellular calcium dynamics
+
+NEURON {
+	SUFFIX Ca_conc
+	USEION ca READ ica WRITE cai
+	RANGE cai, cca
+}
+
+UNITS	{
+	(mV) 		= (millivolt)
+	(mA) 		= (milliamp)
+	FARADAY 	= (faraday) (coulombs)
+	(molar) 	= (1/liter)
+	(mM) 		= (millimolar)
+}
+
+PARAMETER {
+	f = 0.004		
+	kCa = 8			(/ms)	
+	alpha = 1    	(mol/C/cm2)
+}
+
+ASSIGNED {
+	cai			(mM)
+	ica			(mA/cm2)
+}
+
+STATE {
+	cca		(mM)
+}
+
+BREAKPOINT {
+	SOLVE state METHOD cnexp
+}
+
+INITIAL {
+	cca = 0.0001
+}
+
+DERIVATIVE state {
+
+
+=== Following is the header of samples/267184/NetPyNE Model/Naf.mod ===
+TITLE Fast Sodium Channel
+
+NEURON {
+	SUFFIX Naf
+	USEION na READ ena WRITE ina
+	RANGE gnafbar, ina, g, i
+}
+
+UNITS {
+	(mA) = (milliamp)
+	(mV) = (millivolt)
+	(S)  = (siemens)
+}
+
+PARAMETER {
+	gnafbar	=0.06 	(mho/cm2) <0,1e9>
+}
+
+ASSIGNED {
+	v (mV)
+	ena (mv)
+	ina (mA/cm2)
+	i (mA/cm2)
+	g (S/cm2)
+	minf mtau
+	hinf htau
+}
+
+STATE {
+	m h
+}
+
+BREAKPOINT {
+	SOLVE states METHOD cnexp
+	g = gnafbar * m * m * m * h
+	i = g * (v - ena)
+	ina = i
+}
+
+INITIAL { 
+
+
+=== Following is the header of samples/267184/NetPyNE Model/Nap.mod ===
+TITLE Persistent Sodium Channel
+
+NEURON {
+	SUFFIX Nap
+	USEION na READ ena WRITE ina
+	RANGE gnapbar, ina, g, i
+}
+
+UNITS {
+	(mA) = (milliamp)
+	(mV) = (millivolt)
+	(S)  = (siemens)
+}
+
+PARAMETER {
+	gnapbar	=0.0008 	(mho/cm2) <0,1e9>
+}
+
+ASSIGNED {
+	v (mV)
+	ena (mv)
+	ina (mA/cm2)
+	i (mA/cm2)
+	g (S/cm2)
+	minf mtau
+}
+
+STATE {
+	m
+}
+
+BREAKPOINT {
+	SOLVE states METHOD cnexp
+	g = gnapbar * m * m * m
+	i = g * (v - ena)
+	ina = i
+}
+
+INITIAL { :Assume v has been constant for a long time
+	rates(v)
+
+
+=== Following is the header of samples/267184/NetPyNE Model/RampIClamp.mod ===
+    COMMENT
+    Point process for generation of ascending and descending current injection over time.
+    ENDCOMMENT
+
+    NEURON {
+            POINT_PROCESS RampIClamp
+            RANGE del, dur, pkamp, bias
+            ELECTRODE_CURRENT i
+    }
+
+    UNITS {
+            (nA) = (nanoamp)
+          }
+
+    PARAMETER {
+            del=0   (ms)
+            dur=10000   (ms)
+            pkamp=20 (nA)
+			bias=0 (nA)
+    }
+
+    ASSIGNED {
+            i (nA)
+    }
+
+    BREAKPOINT {
+           at_time(del)
+           at_time(del + dur)
+
+           if (t < del) {
+          i=0   
+       }else{ 
+                if (t < del+dur/2) {
+               i = (2*pkamp/dur)*t + bias
+          }else{ 
+               i = -(2*pkamp/dur)*(t-dur) + bias
+    }}}
+
+=== Following is the header of samples/267184/NetPyNE Model/force_pkl_file.py ===
+### Extract data from pickle file from simulation and calculate
+###  muscle force.
+
+import pickle
+import math
+import numpy as np
+
+# Open and load pickle file data
+with open('model output_traces.pkl', 'rb') as f:
+	data = pickle.load(f)
+
+# To check keys (names of data) in pickle file
+#keys = data.keys()
+#print(keys)
+
+# Extract data recorded using traces
+tracesData = data['tracesData']		#data is a dict; tracesData is a list
+
+# Create time vector from simulation
+cell_data = [tracesData[0]]
+cell_data_0 = cell_data[0]
+time = cell_data_0['t']
+
+# Extract cli and mgi for each cell from the data
+N = 310     # number of cells in network
+cli = np.zeros([N,len(time)-1])
+mgi = np.zeros([N,len(time)-1])
+
+for i in range(0,N):
+    cell_data_cli = [tracesData[(2*i)]]
+    cell_data_mgi = [tracesData[((2*i)+1)]]
+    cell_data_0_cli = cell_data_cli[0]
+    cell_data_0_mgi = cell_data_mgi[0]
+    cli[i,:] = cell_data_0_cli['cell_'+str(i)+'_cli_musc']
+    mgi[i,:] = cell_data_0_mgi['cell_'+str(i)+'_mgi_musc']
+
+# Calculate force (written from module3.mod [Kim2017])
+a0 = 2.35
+b0 = 24.35
+c0 = -7.4
+
+
+=== Following is the header of samples/267184/NetPyNE Model/module1_2.mod ===
+TITLE Calcium dynamics and cross-bridge formation
+ 
+UNITS { }
+
+NEURON {
+	SUFFIX CaSP
+	
+	::module 1::
+	RANGE k1, k2, k3, k4, k5, k6, k, k5i, k6i 
+	RANGE Umax, Rmax, t1, t2, R, vth
+	RANGE phi0, phi1, phi2, phi3, phi4
+
+	::module 2::
+	RANGE c1, c2, c3, c4, c5 
+	RANGE AMinf, AMtau, SF_AM
+	RANGE acm, alpha, alpha1, alpha2, alpha3, beta, gamma
+
+	::simulation::
+	RANGE t_axon 
+	USEION mg WRITE mgi VALENCE 2
+	USEION cl READ cli
+}
+
+PARAMETER {
+	::module 1::
+	k1 = 3000		: M-1*ms-1
+	k2 = 3			: ms-1
+	k3 = 400		: M-1*ms-1
+	k4 = 1			: ms-1
+	k5i = 4e5		: M-1*ms-1
+	k6i = 150		: ms-1
+	k = 850			: M-1
+	SF_AM = 5
+	Rmax = 10		: ms-1
+	Umax = 2000		: M-1*ms-1
+	t1 = 3			: ms
+	t2 = 25			: ms
+	phi1 = 0.03
+	phi2 = 1.23
+	phi3 = 0.01		
+
+
+=== Following is the header of samples/267184/NetPyNE Model/spk_index_output.txt ===
+0
+
+=== Following is the header of samples/267184/NetPyNE Model/CaN.mod ===
+TITLE N-type Calcium channel
+
+NEURON {
+	SUFFIX CaN
+	USEION ca READ cai, cao WRITE ica
+	RANGE gcanbar, ica, g, i, eca
+}
+
+UNITS {
+	(mA) = (milliamp)
+	(mV) = (millivolt)
+	(S)  = (siemens)
+}
+
+PARAMETER {
+	gcanbar  = .01 (mho/cm2)
+	mtau	= 15	(ms)
+	htau	= 50	(ms)
+	R = 8.31441 (VC/Mol/K)
+	T = 309.15 (k) 
+	Z = 2
+	F = 96485.309 (/C)
+}
+
+ASSIGNED {
+	v 		(mV)
+	eca 	(mv)
+	ica		(mA/cm2)
+	i 		(mA/cm2)
+	g 		(S/cm2)
+	minf hinf
+	cai cao	(mM)
+}
+
+STATE {
+	m h
+}
+
+BREAKPOINT {
+	SOLVE states METHOD cnexp
+
+
+=== Following is the header of samples/267184/NetPyNE Model/CaL.mod ===
+TITLE L-type Calcium channel
+
+NEURON {
+	POINT_PROCESS CaL
+	USEION ca WRITE ica
+	RANGE gcalbar, g, eca, i, ica
+}
+
+UNITS {
+	(nA) = (nanoamp)
+	(mV) = (millivolt)
+	(uS) = (microsiemens)
+}
+
+PARAMETER {
+	gcalbar  = 7e-07 (uS)
+	mtau	 = 60	    (ms)
+	eca      = 60
+}
+
+ASSIGNED {
+	ica		(nA)
+	v		(mV)
+	g		(uS)
+	i		(nA)
+	minf
+}
+
+STATE {
+	m
+}
+
+BREAKPOINT {
+	SOLVE states METHOD cnexp
+	g = gcalbar * m
+	i =  g * (v - eca)
+	ica=i
+}
+
+INITIAL {
+
+
+=== Following is the header of samples/267184/__MACOSX/NetPyNE Model/._module1_2.mod ===
+    Mac OS X            	   2                                               ATTR             <                     <  com.apple.quarantine q/0081;63e12d4e;Chrome;48710CD4-26D9-4148-A725-52FA7F46916D 
+
+=== Following is the header of samples/267184/__MACOSX/NetPyNE Model/._KDr.mod ===
+    Mac OS X            	   2                                               ATTR             <                     <  com.apple.quarantine q/0081;63e12d4e;Chrome;48710CD4-26D9-4148-A725-52FA7F46916D 
+
+=== Following is the header of samples/267184/__MACOSX/NetPyNE Model/._KCa.mod ===
+    Mac OS X            	   2                                               ATTR             <                     <  com.apple.quarantine q/0081;63e12d4e;Chrome;48710CD4-26D9-4148-A725-52FA7F46916D 
+
+=== Following is the header of samples/267184/__MACOSX/NetPyNE Model/._RampIClampNoise.mod ===
+    Mac OS X            	   2                                               ATTR             <                     <  com.apple.quarantine q/0081;63e12d4e;Chrome;48710CD4-26D9-4148-A725-52FA7F46916D 
+
+=== Following is the header of samples/267184/__MACOSX/NetPyNE Model/._Kim_Model_restore.py ===
+    Mac OS X            	   2                                               ATTR             <                     <  com.apple.quarantine q/0081;63e12d4e;Chrome;48710CD4-26D9-4148-A725-52FA7F46916D 
+
+=== Following is the header of samples/267184/__MACOSX/NetPyNE Model/._xm_tracker.txt ===
+    Mac OS X            	   2                                               ATTR             <                     <  com.apple.quarantine q/0081;63e12d4e;Chrome;48710CD4-26D9-4148-A725-52FA7F46916D 
+
+=== Following is the header of samples/267184/__MACOSX/NetPyNE Model/._mStepIClamp.mod ===
+    Mac OS X            	   2                                               ATTR             <                     <  com.apple.quarantine q/0081;63e12d4e;Chrome;48710CD4-26D9-4148-A725-52FA7F46916D 
+
+=== Following is the header of samples/267184/__MACOSX/NetPyNE Model/._force_pkl_file.py ===
+    Mac OS X            	   2                                               ATTR             <                     <  com.apple.quarantine q/0081;63e12d4e;Chrome;48710CD4-26D9-4148-A725-52FA7F46916D 
+
+=== Following is the header of samples/267184/__MACOSX/NetPyNE Model/._spk_index_output.txt ===
+    Mac OS X            	   2                                               ATTR             <                     <  com.apple.quarantine q/0081;63e12d4e;Chrome;48710CD4-26D9-4148-A725-52FA7F46916D 
+
+=== Following is the header of samples/267184/__MACOSX/NetPyNE Model/._CaN.mod ===
+    Mac OS X            	   2                                               ATTR             <                     <  com.apple.quarantine q/0081;63e12d4e;Chrome;48710CD4-26D9-4148-A725-52FA7F46916D 
+
+=== Following is the header of samples/267184/__MACOSX/NetPyNE Model/._Xm.mod ===
+    Mac OS X            	   2                                               ATTR             <                     <  com.apple.quarantine q/0081;63e12d4e;Chrome;48710CD4-26D9-4148-A725-52FA7F46916D 
+
+=== Following is the header of samples/267184/__MACOSX/NetPyNE Model/._CaL.mod ===
+    Mac OS X            	   2                                               ATTR             <                     <  com.apple.quarantine q/0081;63e12d4e;Chrome;48710CD4-26D9-4148-A725-52FA7F46916D 
+
+=== Following is the header of samples/267184/__MACOSX/NetPyNE Model/._Ca_conc.mod ===
+    Mac OS X            	   2                                               ATTR             <                     <  com.apple.quarantine q/0081;63e12d4e;Chrome;48710CD4-26D9-4148-A725-52FA7F46916D 
+
+=== Following is the header of samples/267184/__MACOSX/NetPyNE Model/._RampIClamp.mod ===
+    Mac OS X            	   2                                               ATTR             <                     <  com.apple.quarantine q/0081;63e12d4e;Chrome;48710CD4-26D9-4148-A725-52FA7F46916D 
+
+=== Following is the header of samples/267184/__MACOSX/NetPyNE Model/._Nap.mod ===
+    Mac OS X            	   2                                               ATTR             <                     <  com.apple.quarantine q/0081;63e12d4e;Chrome;48710CD4-26D9-4148-A725-52FA7F46916D 
+
+=== Following is the header of samples/267184/__MACOSX/NetPyNE Model/._Naf.mod ===
+    Mac OS X            	   2                                               ATTR             <                     <  com.apple.quarantine q/0081;63e12d4e;Chrome;48710CD4-26D9-4148-A725-52FA7F46916D 
+
+=== Following is the header of samples/267184/__MACOSX/NetPyNE Model/._network_model_310MUs.py ===
+    Mac OS X            	   2                                               ATTR             <                     <  com.apple.quarantine q/0081;63e12d4e;Chrome;48710CD4-26D9-4148-A725-52FA7F46916D 
+
+=== Following is the header of samples/267184/__MACOSX/NetPyNE Model/._Kim_Model.py ===
+    Mac OS X            	   2                                               ATTR             <                     <  com.apple.quarantine q/0081;63e12d4e;Chrome;48710CD4-26D9-4148-A725-52FA7F46916D 
+
+=== Following is the header of samples/267184/__MACOSX/NetPyNE Model/._module3.mod ===
+    Mac OS X            	   2                                               ATTR             <                     <  com.apple.quarantine q/0081;63e12d4e;Chrome;48710CD4-26D9-4148-A725-52FA7F46916D 
+

@@ -18,7 +18,7 @@ from dotenv import load_dotenv
 ACCEPTABLE_EXTENSIONS = ('.py', '.cpp', '.java', '.m', '.txt', '.h', '.data', 
                             '.html', '.c', '.mod', '.g', '.p', ".ode", ".html")  # Adjust as needed
 
-def concat_files(model_code, file_list, output_path, num_header_lines = 20):
+def concat_files(model_code, file_list, output_path, num_header_lines = 40):
 
     output_file = f'{output_path}/{model_code}_header.txt'
 
@@ -37,15 +37,17 @@ def concat_files(model_code, file_list, output_path, num_header_lines = 20):
 
 
 if __name__ == "__main__":
-    save_model_code_to_json()
+
     model_code_list = get_model_code()
+    samples_path = 'samples'
+    download_and_unzip_files(model_code_list, samples_path, 20)
 
     # create new folder for header-concatenated files
     concat_file_path = 'data/concat_header'
     if os.path.exists(concat_file_path):
         shutil.rmtree(concat_file_path)
     os.makedirs(concat_file_path)
-
+ 
     for model_code in model_code_list[:20]:
         list_of_all_files = []
         path = f'samples/{model_code}'

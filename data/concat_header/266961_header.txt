@@ -1,0 +1,473 @@
+=== Following is the header of samples/266961/TwoCompartmentModel-master/ResponseToStep.m ===
+figure();
+
+% configurations used as 3 "extreme cases"
+WEAK = [.3 .2]; FORWARD = [.8 .2]; STRONG = [.8 .7];
+
+KLTfrac = [ .0 .0];  % fraction of leak conductance that is voltage-gated KLT
+
+% gNa values for each configuration
+gNaWeak = 6291;
+gNaStrong = 2003;
+gNaForward = 398;
+gNa = [gNaWeak gNaForward gNaStrong];
+
+FS = 10;
+
+couple = [WEAK ; FORWARD ; STRONG];
+
+IDC = [1000 2000 3000];
+COLOR{1} = [0 0 1/3 ; 0 0 2/3 ; 0 0 1];
+COLOR{2} = [0 1/6 0 ; 0 1/3 0 ; 0 1/2 0];
+COLOR{3} = [1/3 0 0 ; 2/3 0 0 ; 1 0 0];
+
+POS{1} = [.26  .78  .66  .15];
+POS{2} = [.26  .56  .66 .15];
+POS{3} = [.26  .34  .66  .15];
+POS{4} = [.26  .12  .66  .15];
+
+YMAX = [60 30 30];
+
+Istep = @(t,y) (t>=5).*(t<20).*y;
+
+for c=1:3
+         
+    ParamStruct = getParam(couple(c,1),couple(c,2), KLTfrac); 
+    
+    ParamStruct.gNa = gNa(c);
+
+    for i=1:length(IDC)
+        ParamStruct.step =IDC(i);
+
+
+
+=== Following is the header of samples/266961/TwoCompartmentModel-master/ResponseToAN.m ===
+% This is ResponseToAN
+% It simulates TwoCpt model to 500 Hz inputs and creates figures
+% Top row: simulations have no Sodium current (passive model)
+% Bottom row: simulations have gNa set to reference value (spiking model)
+
+close all
+clear all
+
+seed = 1804; % initial random number generator
+
+figure()
+FS = 10;
+
+POS{1,1} = [.1 .83 .18 .1] + [.02 0 0 0];
+POS{1,2} = [.41 .83 .18 .1]+ [.02 0 0 0];
+POS{1,3} = [.72 .83 .18 .1]+ [.02 0 0 0];
+POS{2,1} = [.08 .51 .22 .23]+ [.02 0 0 0];
+POS{2,2} = [.39 .51 .22 .23]+ [.02 0 0 0];
+POS{2,3} = [.70 .51 .22 .23]+ [.02 0 0 0];
+POS{3,1} = [.08 .11 .22 .23]+ [.02 0 0 0];
+POS{3,2} = [.39 .11 .22 .23]+ [.02 0 0 0];
+POS{3,3} = [.7 .11 .22 .23]+ [.02 0 0 0];
+
+% coupling parameter configurations for three "extreme case" models of weak, forward, and strong coupling
+WEAK = [.3 .2]; FORWARD = [.8 .2]; STRONG = [.8 .7];
+
+KLTfrac = [ 0 0];  % fraction of leak conductance that is voltage-gated KLT
+
+% gNa values for each configuration
+gNaWeak = 6291;
+gNaStrong = 2003;
+gNaForward = 398;
+
+%%% CARTOONS to illustrate coupling configurations %%%
+subplot('position',POS{1,1}), hold all
+    th = linspace(0,2*pi,501);
+    plot(cos(th),sin(th),'color',[0 0 .5],'linewidth',1)
+    plot(3.+.6*cos(th),.6*sin(th),'color',[.25 .5 1],'linewidth',1)
+    text(-.25,0,'V_1','fontsize',FS-1)
+    text(3-.25,0,'V_2','fontsize',FS-1)
+
+
+=== Following is the header of samples/266961/TwoCompartmentModel-master/TwoCptODE.m ===
+function dx = TwoCptODE(t,x,P)
+
+    % Inputs %
+    % t = time [ms]
+    % x = Voltage and gating variables
+    % P = structure of parameter values
+        
+    %%%% votage variables %%%% 
+	V1  = x(1); 
+    V2  = x(2);  
+    
+    %%%%% gating variables %%%% 
+    w1  = x(3);
+    z1  = P.zinf(V1);
+    m   = P.minf(V2);
+    h   = x(4);
+    w2  = x(5);
+    z2  = P.zinf(V2);
+
+    %%%%% INPUT CURRENT TO CPT 1 %%%% 
+    if isfield(P,'step')
+        if ~isfield(P,'startStep'); P.startStep = 5; end; if ~isfield(P,'stopStep'); P.stopStep = 20; end;
+        if (t>=P.startStep && t<P.stopStep); Iapp = P.step; else Iapp = 0; end; 
+    elseif isfield(P,'ramp')
+       if ~isfield(P,'startRamp'); P.startRamp = 5; end;
+       tTop = P.startRamp+(1 / P.ramp);
+       Iapp = (t>=P.startRamp)*(t<=tTop).*P.I.*(t-P.startRamp)*P.ramp;
+    elseif isfield(P,'EPSG')
+        if ~isfield(P,'startEPSG'); tOnset = 5; else tOnset = P.startEPSG; end;  
+        epsg = @(t,G) (G/0.21317) .* ones(size(t)) .* (t>0) .* (exp(-t/.18) - exp(-t/.1) ); % unitary epsg waveform
+        Iapp = P.I.*(0-V1).*(t>=tOnset).*epsg(t-tOnset,1) ;
+    elseif isfield(P,'EPSGpair')
+        if ~isfield(P,'startEPSG'); tOnset = 5; else tOnset = P.startEPSG; end;  
+        epsg = @(t,G) (G/0.21317) .* ones(size(t)) .* (t>0) .* (exp(-t/.18) - exp(-t/.1) ); % unitary epsg waveform
+        Iapp = P.I.*(0-V1).*...
+            (   (t>=tOnset).*epsg(t-tOnset,1) + ...
+                (t>=(tOnset+P.td)).*epsg(t-tOnset-P.td,1)   );
+    end
+    
+    %%%%% Cpt1 currents %%%%%
+
+
+=== Following is the header of samples/266961/TwoCompartmentModel-master/EasyRun.m ===
+% This is EasyRun.m
+clear all; close all;
+
+% Choose coupling strengths between 0 and 1 [close to 0 is weak coupling, close to 1 is strong coupling]
+couple1to2 = 0.7; % Forward coupling
+couple2to1 = 0.5; % Backward coupling
+
+% Choose proportion of leak conductance to convert to dynamic KLT conductance
+% [0 is passive model, 1 converts all leak conductance to dynamic KLT]
+KLTfraction1 = 0.2; % KLT in compartment 1
+KLTfraction2 = 0.1; % KLT in compartment 2
+
+% Parameterize the two-compartment model
+P = getParam(couple1to2, couple2to1, [KLTfraction1 KLTfraction2]);
+
+% Choose the Na conductance
+P.gNa = 1500;
+
+% Choose the stimulus time [options are 'step', 'ramp', 'EPSG', 'EPSGpair', or 'AN']
+stimType = 'EPSG';
+
+% Set stimulus parameters depending on which stimulus you chose:
+switch(stimType)
+    case('step')
+        startStep = 5;    % time at start of step
+        stopStep  =  15;  % time at end of step
+        Istep     = 2000; % current level of step
+    case('ramp')
+        startRamp = 5;    % time at start of ramp
+        stopRamp = 7;     % slope of ramp [pA/ms]
+        IrampMax  = 4000; % maximum current of ramp
+    case('EPSG')
+        startEPSG = 5;    % start of EPSG event
+        gEPSG     = 55;   % amplitude of EPSG event [26.7 is a "unitary EPSG" in the manuscript]
+    case('EPSGpair')
+        startEPSG1 = 5;   % start of first EPSG event
+        startEPSG2 = 5.3; % start of second EPSG event
+        gEPSG      = 35;  % amplitude of EPSG event [26.7 is a "unitary EPSG" in the manuscript]
+    case('AN')
+        Gsyn     = 26.7;  % amplitude of unitary EPSG events
+
+
+=== Following is the header of samples/266961/TwoCompartmentModel-master/TwoCptANode.m ===
+%%% function called by ode solver
+function dx = TwoCptANode(t,x,Q)
+
+	% Parameter Values
+    P = Q.P;
+    
+    % AN input
+    ANin = Q.ANforMSO;
+    
+    % synaptic parameters
+	G = P.Gsyn; 
+    Esyn =0.; 
+
+    %%%% votage variables %%%% 
+	V1  = x(1); 
+    V2  = x(2);  
+    
+    %%%%% gating variables %%%% 
+    w1  = x(3);
+    z1  = P.zinf(V1);
+    m   = P.minf(V2);
+    h   = x(4);
+    w2  = x(5);
+    z2  = P.zinf(V2);
+
+    % Synapses
+    epsg = @(t,G) (G/0.21317) .* ones(size(t)) .* (t>0) .* (exp(-t/.18) - exp(-t/.1) ); % unitary epsg waveform
+    fan = find(ANin(1,:)<t);
+    ANspike = ANin(1,fan);
+    ANweight = ANin(2,fan);
+    Isyn = sum(epsg(t-ANspike, G*ANweight)) * (V1-Esyn);
+
+    %%%%% Cpt1 currents %%%%%
+    Ilk1   = P.glk1 * (V1 - P.Elk);
+    IKLT0  = P.gKLT1 * P.winf(P.Vrest)^4*P.zinf(P.Vrest)*(P.Vrest-P.EK);
+    IKLT1  = P.gKLT1 * w1^4*z1*(V1-P.EK) - IKLT0;
+
+    %%%%% Cpt2 currents %%%%%
+    Ilk2  = P.glk2  * (V2 - P.Elk);
+    INa0  = P.gNa * ( P.minf(P.Vrest)^3*P.hinf(P.Vrest)*(P.Vrest-P.ENa)); % to make Ispike=0 at rest
+
+
+=== Following is the header of samples/266961/TwoCompartmentModel-master/TwoCptAN_func.m ===
+% TwoCpt model with WITH CARNEY MODEL AN INput
+function [t,y,ANforMSO,Sipsi,Scontra] = TwoCptAN_func(ParamStruct)
+
+    % Outputs
+    % t - time (ms)
+    % y - V1, V2, and gating variables
+    % ANforMSO - spike times (ms) and number of occurences
+    % Sipsi, Scontra - Sound waveform, input to AN model
+
+    % Simulation time (ms)
+    t0 =0;
+    ANstruct.tEnd = ParamStruct.tEnd; tEnd = ParamStruct.tEnd;
+
+    % Stimulus
+    ANstruct.Stim = ParamStruct.Stim;
+
+    % Number of AN fibers
+    ANstruct.nAN = ParamStruct.nAN;
+
+    % Generate AN spikes (Ipsi Ear)
+    ANstruct.F0 = ParamStruct.F0;
+    ANstruct.stimdb =ParamStruct.stimdb(1);
+    ANstruct.CF = ParamStruct.CF;
+    [Sipsi,a] = CarneyModel(ANstruct,0);
+    ANipsi(1,:) = a(1,:)*1E3;  % switch to ms
+    ANipsi(2,:) = a(2,:);
+
+    % Generate AN spikes (Contra Ear)
+    ANstruct.stimdb = ParamStruct.stimdb(2);   
+    [Scontra,a] = CarneyModel(ANstruct,ParamStruct.itd);
+    ANcontra(1,:) =  a(1,:)*1E3;  % switch to ms
+    ANcontra(2,:) =  a(2,:);
+
+    ANforMSO = [ANipsi ANcontra];   
+
+    % Get Parameters
+    P = getParam(ParamStruct.a12, ParamStruct.a21,ParamStruct.KLTfrac);
+    P.gNa = ParamStruct.gNa;
+    P.Gsyn = ParamStruct.Gsyn;
+
+
+
+=== Following is the header of samples/266961/TwoCompartmentModel-master/getParam.m ===
+% This is getParam.m
+% User defines coupling parameters, values should >0 and <1, larger values are for stronger coupling
+% User defines fraction of leak current in each compartment that is
+% voltage-gated KLT current.  KLTfrac is a vector 1x2 vector with values between 0 and 1.  KLTfrac(1) is KLT fraction in cpt1, KLTfrac(2) is KLT fraction in cpt2
+%
+% Parameters that represent MSO-like values are set below (not as inputs) these are: areaRatio, input resistance, membrane time constant, and resting potential
+%
+% output is P, a structure containing parameter values
+
+function P = getParam(couple12,couple21,KLTfrac)
+
+    if nargin<2;
+        error('coupling parameters not defined')
+    elseif nargin==2;
+        KLTfrac= [0 0];  % frozen KLT
+    elseif nargin>3; 
+        error('too many inputs')
+    end
+        
+    % Fixed parameters %
+    areaRatio = 0.01; % CPT1 to CPT2 area ratio
+    R1      = 8.5 * 1e-3;    % Input resistance to CPT1 [10^9 Ohm]
+    tauEst  = .34;     % "estimated time constant" [ms]
+    Vrest   = -58;    % resting membrane potential [mV]
+    Elk     = -58;    % leak reversal potential [mV]
+    
+    % Passive parameters %
+    gC    = (1/R1) * couple21 / (1-couple12*couple21); % coupling conductance [nS]
+    glk1  = gC * (1/couple21 - 1); % CPT1 leak conductance [nS]
+    glk2  = gC * (1/couple12 - 1); % CPT2 leak conductance [nS]
+
+    % Passive parameters that require separation of time scales assumption %
+    tau1  = tauEst * (1-couple12*couple21);          % CPT1 time constant [ms]
+    tau2  = tau1 * areaRatio * (couple12/couple21);  % CPT2 time constant [ms]
+    cap1  = tau1 * (glk1 + gC); % CPT1 capacitance [pF]
+    cap2  = tau2 * (glk2 + gC); % CPT2 capacitance [pF]
+
+    %%%%% PARAMETER STRUCTURE %%%%
+    P.couple12 = couple12;
+    P.couple21 = couple21;
+
+
+=== Following is the header of samples/266961/TwoCompartmentModel-master/passiveParamFig.m ===
+% This is passiveParamFig
+% creates a figure relating leak conductance in cpt1, leak conductance in cpt2, and axial conductance to values of the coupling parameters
+
+% Coupling parameters used as 3 "extreme cases"
+WEAK = [.3 .2]; FORWARD = [.8 .2]; STRONG = [.8 .7];
+
+figure(); clf;
+FS = 10;
+POS{1} = [0.11    0.24    0.25    0.62];
+POS{2} = [0.42    0.24    0.25    0.62];
+POS{3} = [0.73    0.24    0.25    0.62];
+
+stoa = linspace(.1,.9);
+atos = linspace(.1,.9);
+[XStoA,XAtoS] = meshgrid(stoa, atos);
+allow = zeros(size(XStoA)); allow(XStoA>=XAtoS)=1;allow(XStoA<XAtoS)=nan;
+
+for i=1:length(stoa)
+    for j=1:i
+        P = getParam(stoa(i),atos(j));
+        TAU1(j,i) = P.tau1;
+        TAU2(j,i) = P.tau2;
+        CAP1(j,i) = P.cap1;
+        CAP2(j,i) = P.cap2;
+        G1(j,i) = P.glk1;
+        G2(j,i) = P.glk2;
+        GC(j,i) = P.gC;
+    end 
+end
+
+subplot('position',POS{1}), hold all
+    contour(XStoA,XAtoS,G1.*allow,[5:5:65 75:5:85 95:5:105 115:5:200],'color','k','linewidth',1);
+    [c,h] = contour(XStoA,XAtoS,G1.*allow,[50:20:110],'k','linewidth',2);
+    plot3(WEAK(1),WEAK(2),300,'p','markersize',16,'markeredge','none','markerfacecolor','b')
+    plot3(FORWARD(1),FORWARD(2),300,'p','markersize',16,'markeredge','none','markerfacecolor',[0 .5 0])
+    plot3(STRONG(1),STRONG(2),300,'p','markersize',16,'markeredge','none','markerfacecolor','r')
+    clabel(c,h,[50:20:110],'fontsize',FS)
+    grid off
+    axis([min(stoa),max(stoa),min(atos),max(atos)])
+    set(gca,'fontsize',FS,'xtick',.1:.1:.9,'xticklabel',{'0.1','','','','0.5','','','','0.9'},'ytick',.1:.1:.9,'yticklabel',{'0.1','','','','0.5','','','','0.9'})
+
+
+=== Following is the header of samples/266961/TwoCompartmentModel-master/ResponseToRamp.m ===
+figure();
+
+% configurations used as 3 "extreme cases"
+WEAK = [.3 .2]; FORWARD = [.8 .2]; STRONG = [.8 .7];
+
+KLTfrac = [ .0 .0];  % fraction of leak conductance that is voltage-gated KLT
+
+% gNa values for each configuration
+gNaWeak = 6291;
+gNaStrong = 2003;
+gNaForward = 398;
+gNa = [gNaWeak gNaForward gNaStrong];
+
+FS = 10;
+
+couple = [WEAK ; FORWARD ; STRONG];
+
+IDC = [1000 2000 3000];
+COLOR{1} = [0 0 1/3 ; 0 0 2/3 ; 0 0 1];
+COLOR{2} = [0 1/6 0 ; 0 1/3 0 ; 0 1/2 0];
+COLOR{3} = [1/3 0 0 ; 2/3 0 0 ; 1 0 0];
+
+POS{1} = [.26  .78  .66  .15];
+POS{2} = [.26  .56  .66 .15];
+POS{3} = [.26  .34  .66  .15];
+POS{4} = [.26  .12  .66  .15];
+
+YMAX = [60 30 30];
+
+Imax = 2500; R = 1./[2.5 5 10]; % denominator is duration of ramp in ms
+Iramp= @(t,y,z) (t>=5).*(t<(5+1/y)).*y.*(t-5)*z;
+
+for c=1:3
+         
+    ParamStruct = getParam(couple(c,1),couple(c,2), KLTfrac); 
+    
+    ParamStruct.gNa = gNa(c);
+    ParamStruct.I = Imax;
+    
+    for i=1:length(R)
+
+
+=== Following is the header of samples/266961/TwoCompartmentModel-master/CarneyModel.m ===
+% Carney AN model    
+function [pin,ANOut] = CarneyModel(ANstruct,itd)
+
+% NOTE: mex code for Zilany-Carney 2009 model must be compiled in path for matlab
+
+% Read parameters from input structure
+tEnd = ANstruct.tEnd;
+stimdb = ANstruct.stimdb;
+
+% model fiber parameters
+CF    = ANstruct.CF; % CF in Hz;   
+cohc  = 1.0;   % normal ohc function
+cihc  = 1.0;   % normal ihc function
+fiberType = 2; % spontaneous rate (in spikes/s) of the fiber BEFORE refractory effects; "1" = Low; "2" = Medium; "3" = High
+implnt = 0;    % "0" for approximate or "1" for actual implementation of the power-law functions in the Synapse
+
+% stimulus parameters
+Fs = 100e3;   % sampling rate in Hz (must be 100, 200 or 500 kHz)
+T = tEnd*1E-3;% stimulus duration
+rt = 1e-3;    % rise/fall time in seconds
+
+% PSTH parameters
+nrep = ANstruct.nAN;% number of AN fibers
+
+t = 0:1/Fs:T-1/Fs; % time vector (s)
+mxpts = length(t);
+irpts = rt*Fs;  % Ramping parameter
+
+% Stimulus
+r = ANstruct.Stim;
+pin = sqrt(2)*20e-6*10^(stimdb/20)*r(t);
+
+% Ramp
+pin(1:irpts)=pin(1:irpts).*(0:(irpts-1))/irpts; 
+pin((mxpts-irpts):mxpts)=pin((mxpts-irpts):mxpts).*(irpts:-1:0)/irpts;
+
+% Shift by ITD amount
+itdShift = max(find(t<itd*1E-3));
+pin(itdShift+1:end) = pin(1:end-itdShift);
+pin(1:itdShift) = 0;
+
+
+=== Following is the header of samples/266961/TwoCompartmentModel-master/ResponseToEPSGpair.m ===
+figure();
+
+% configurations used as 3 "extreme cases"
+WEAK = [.3 .2]; FORWARD = [.8 .2]; STRONG = [.8 .7];
+
+KLTfrac = [ .0 .0];  % fraction of leak conductance that is voltage-gated KLT
+
+% gNa values for each configuration
+gNaWeak = 6291;
+gNaStrong = 2003;
+gNaForward = 398;
+gNa = [gNaWeak gNaForward gNaStrong];
+
+FS = 10;
+
+couple = [WEAK ; FORWARD ; STRONG];
+
+IDC = [1000 2000 3000];
+COLOR{1} = [0 0 1/3 ; 0 0 2/3 ; 0 0 1];
+COLOR{2} = [0 1/6 0 ; 0 1/3 0 ; 0 1/2 0];
+COLOR{3} = [1/3 0 0 ; 2/3 0 0 ; 1 0 0];
+
+POS{1} = [.26  .78  .66  .15];
+POS{2} = [.26  .56  .66 .15];
+POS{3} = [.26  .34  .66  .15];
+POS{4} = [.26  .12  .66  .15];
+
+YMAX = [60 30 30];
+
+R = [1 2 3]; % time delays
+epsg = @(t,G) (G/0.21317) .* ones(size(t)) .* (t>0) .* (exp(-t/.18) - exp(-t/.1) ); % unitary epsg waveform
+Iepsg = @(t,td,I) I.*...
+        (   (t>=5).*epsg(t-5,1) + ...
+            (t>=(5+td)).*epsg(t-5-td,1)   );
+
+for c=1:3
+         
+    ParamStruct = getParam(couple(c,1),couple(c,2), KLTfrac); 
+    
+    ParamStruct.gNa = gNa(c);
+
+

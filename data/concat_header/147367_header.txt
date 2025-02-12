@@ -1,0 +1,430 @@
+=== Following is the header of samples/147367/IP3R_models/run_IP3R_P0.m ===
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Katri Hituri 2013
+% katri.hituri@tut.fi / katri.hituri@gmail.com
+%
+% A script to simulate IP3R models and 
+% 
+% Hituri K, Linne M-L. Comparison of Models for IP3 
+% Receptor Kinetics using Stochastic Simulations.
+% PLOS ONE. 2013
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% This script is cell mode based. You can run each cell individually by 
+% pressing the 'Evaluate cell' button or the whole script by typing 
+% run_IP3R_P0 on MATLAB command line. 
+
+%% Run the simulations
+% You can run the simulations here or on your computers command line. 
+% Please make sure that you have STEPS and NumPy installed.
+% WARNING! These simulations will take several hours in total. 
+
+!python models/sim_doi.py
+!python models/sim_fd.py
+!python models/sim_dli.py
+!python models/sim_ot.py 
+
+
+%% Import the simulations results
+
+op_doi = ... 
+    importdata('ip3r_doi_op_res.dat');
+op_doi_ca_concs = ... 
+    importdata('ip3r_doi_op_ca_concs.dat');
+
+op_fd = ... 
+    importdata('ip3r_fd_op_res.dat');
+
+op_fd_ca_concs = ... 
+    importdata('ip3r_fd_op_ca_concs.dat');
+
+
+=== Following is the header of samples/147367/IP3R_models/models/sim_fd.py ===
+#
+# Katri Hituri
+#
+# Script to simulate open probability of IP3R
+# The model of Fraiman and Dawson 2004
+#
+# 
+
+
+####
+
+import ip3r_model_fd as model
+
+import steps.rng as srng
+import steps.solver as ssolver
+import numpy
+
+####
+
+
+# Ca2+ concentrations in cytosol
+ca_concs = numpy.array([0.001e-6, 0.003e-6, 0.007e-6, 0.01e-6, 0.013e-6, 0.03e-6, 0.10e-6, 0.13e-6, 0.20e-6, 0.27e-6, 0.28e-6, 0.30e-6, 0.33e-6, 0.4e-6, 0.50e-6, 0.6e-6, 0.7e-6, 0.8e-6, 1.00e-6, 1.50e-6, 3.00e-6, 10.00e-6, 30.00e-6, 100.00e-6]) # mol/l
+
+# Solver settings
+r = srng.create('mt19937', 1000)
+r.initialize(2605)
+sim = ssolver.Wmdirect(model.mdl, model.cell, r)
+
+# Number of iterations (defines how many times the model is simulated)
+NITER = 750
+
+tpnt = numpy.arange(0.0, 30.01, 0.01)
+
+# array for simulation results
+res = numpy.zeros([ca_concs.size, tpnt.size])
+
+print 'Simulating the IP3R model of Fraiman and Dawson 2004.'
+
+for i in xrange(ca_concs.size):
+
+
+
+=== Following is the header of samples/147367/IP3R_models/models/sim_ot.py ===
+#
+# Katri Hituri
+#
+# Script to simulate open probability of IP3R
+# Model of Othmer and Tang 1993
+
+
+
+
+####
+import ip3r_model_ot as model
+
+import steps.rng as srng
+import steps.solver as ssolver
+import numpy
+
+####
+
+
+
+#Concentrations for Ca in cytosol
+ca_concs = numpy.array([0.001e-6, 0.003e-6, 0.007e-6, 0.01e-6, 0.013e-6, 0.03e-6, 0.05e-6, 0.06e-6, 0.07e-6, 0.08e-6, 0.09e-6, 0.11e-6, 0.13e-6, 0.15e-6, 0.20e-6, 0.30e-6, 0.50e-6, 0.8e-6, 1.00e-6, 1.50e-6, 3.00e-6, 10.00e-6]) # mol/l
+
+# Solver settings
+r = srng.create('mt19937', 1000)
+r.initialize(26058)
+sim = ssolver.Wmdirect(model.mdl, model.cell, r)
+
+NITER = 12000
+
+tpnt = numpy.arange(0.0, 50.01, 0.01)
+
+# array for simulation results
+res = numpy.zeros([ca_concs.size, tpnt.size])
+
+print 'Simulating the IP3R model of Othmer and Tang 1993.'
+
+for i in xrange(ca_concs.size):
+	
+	print 'Round', i+1, '/', ca_concs.size
+
+
+=== Following is the header of samples/147367/IP3R_models/models/ip3r_model_ot.py ===
+# ip3r_model.py
+#
+# Katri Hituri
+# IP3R model by Othmer and Tang (1993), parameter values from Diambra and Guisoni 2005
+###########
+
+# Import packages
+
+import steps.model as smodel
+import steps.geom as sgeom
+
+
+
+# *MODEL*
+#
+
+mdl = smodel.Model()
+volsys = smodel.Volsys('vsys', mdl) # Volume system
+surfsys = smodel.Surfsys('ssys', mdl) # Surface system
+
+
+# CHEMICaL SPECIES 
+Ca = smodel.Spec('Ca', mdl)				# Calcium
+IP3 = smodel.Spec('IP3', mdl)				# IP3
+
+# IP3 receptor states
+R000 = smodel.Spec('R000', mdl)     #naive state
+R100 = smodel.Spec('R100', mdl)
+Ropen = smodel.Spec('Ropen', mdl) #open state
+R111 = smodel.Spec('R111', mdl)
+
+
+# REACTIONS
+
+
+#1 R000 + IP3 <=> R100
+reac1_f = smodel.SReac('R000_R100', surfsys, olhs=[IP3], slhs=[R000], srhs=[R100])
+reac1_b = smodel.SReac('R110_R000', surfsys, slhs=[R100], orhs=[IP3], srhs=[R000])
+
+#2 R100 + Ca <=> Ropen
+
+
+=== Following is the header of samples/147367/IP3R_models/models/ip3r_model_fd.py ===
+# ip3r_model.py
+#
+# Katri Hituri
+# IP3R model
+###########
+
+# Import packages
+
+import steps.model as smodel
+import steps.geom as sgeom
+
+
+
+# *MODEL*
+#
+
+mdl = smodel.Model()
+volsys = smodel.Volsys('vsys', mdl) # Volume system
+surfsys = smodel.Surfsys('ssys', mdl) # Surface system
+
+
+# CHEMICaL SPECIES 
+Ca = smodel.Spec('Ca', mdl)				# Calcium
+IP3 = smodel.Spec('IP3', mdl)				# IP3
+
+# IP3 receptor states
+A00 = smodel.Spec('A00', mdl)     #naive state
+A01 = smodel.Spec('A01', mdl)
+A10 = smodel.Spec('A10', mdl) #open state
+A11 = smodel.Spec('A11', mdl)
+Pa = smodel.Spec('Pa', mdl)
+Pb = smodel.Spec('Pb', mdl)
+Pc = smodel.Spec('Pc', mdl)
+Sa =  smodel.Spec('Sa', mdl)
+Sb =  smodel.Spec('Sb', mdl)
+Oa =  smodel.Spec('Oa', mdl)
+Ob = smodel.Spec('Ob', mdl)
+Oc = smodel.Spec('Oc', mdl)
+Ia = smodel.Spec('Ia', mdl)
+Ib = smodel.Spec('Ib', mdl)
+
+
+=== Following is the header of samples/147367/IP3R_models/models/ip3r_model_doi.py ===
+# ip3r_model.py
+#
+# Katri Hituri
+# IP3R model by Doi et al. 2005
+###########
+
+# Import packages
+
+import steps.model as smodel
+import steps.geom as sgeom
+
+
+
+# *MODEL*
+#
+
+mdl = smodel.Model()
+volsys = smodel.Volsys('vsys', mdl) # Volume system
+surfsys = smodel.Surfsys('ssys', mdl) # Surface system
+
+
+# CHEMICAL SPECIES 
+Ca = smodel.Spec('Ca', mdl)				# Calcium
+IP3 = smodel.Spec('IP3', mdl)				# IP3
+
+# IP3 receptor states
+R = smodel.Spec('R', mdl)				# IP3 receptor with no bound ligands
+RIP3 = smodel.Spec('RIP3', mdl)				# bound IP3 
+Ropen = smodel.Spec('Ropen', mdl)			# bound IP3 and Ca (open)
+RCa = smodel.Spec('RCa', mdl)				# 1 bound Ca to inactivation site
+RCa2 = smodel.Spec('RCa2', mdl)				# 2 bound Ca to inactivation sites
+RCa3 = smodel.Spec('RCa3', mdl)				# 3 bound Ca to inactivation sites
+RCa4 = smodel.Spec('RCa4', mdl)				# 4 bound Ca to inactivation sites
+
+# REACTIONS
+
+
+# RIP3(s) + Ca <=> Ropen
+RIP3_bind_Ca_f = smodel.SReac('RIP3_bind_Ca_f', surfsys, \
+			      olhs=[Ca], slhs=[RIP3], srhs = [Ropen])
+
+
+=== Following is the header of samples/147367/IP3R_models/models/ip3r_model_dli.py ===
+# ip3r_model.py
+#
+# Katri Hituri
+# IP3R model by Dawson, Lea, Irvine (2003)
+###########
+
+# Import packages
+
+import steps.model as smodel
+import steps.geom as sgeom
+
+
+
+# *MODEL*
+#
+
+mdl = smodel.Model()
+volsys = smodel.Volsys('vsys', mdl) # Volume system
+surfsys = smodel.Surfsys('ssys', mdl) # Surface system
+
+
+# CHEMICaL SPECIES 
+Ca = smodel.Spec('Ca', mdl)				# Calcium
+IP3 = smodel.Spec('IP3', mdl)				# IP3
+
+# IP3 receptor states
+RP = smodel.Spec('RP', mdl)
+
+R = smodel.Spec('R', mdl) #naive state 2
+RI = smodel.Spec('RI', mdl) 
+RI2 = smodel.Spec('RI2', mdl)
+RI3 = smodel.Spec('RI3', mdl)
+
+P = smodel.Spec('P', mdl)     #naive state 1
+PI = smodel.Spec('PI', mdl)
+PI2 = smodel.Spec('PI2', mdl)
+PI3 = smodel.Spec('PI3', mdl)
+
+C1 = smodel.Spec('C1', mdl)
+O1 = smodel.Spec('O1', mdl) # open state 1
+
+
+=== Following is the header of samples/147367/IP3R_models/models/sim_doi.py ===
+#
+# Katri Hituri
+#
+# Script to simulate open probability of IP3R
+# The model of Doi et al. 2005
+#
+
+####
+
+import ip3r_model_doi as model
+
+import steps.rng as srng
+import steps.solver as ssolver
+import numpy
+
+####
+
+# Solver initialization
+r = srng.create('mt19937', 1000)
+r.initialize(26058)
+sim = ssolver.Wmdirect(model.mdl, model.cell, r)
+
+# Number of iterations (defines how many times the model is simulated)
+NITER = 1500
+
+# timepoint array
+tpnt = numpy.arange(0.0, 40.01, 0.01)
+
+#Concentrations for Ca in cytosol
+ca_concs = numpy.array([0.01e-6, 0.02e-6, 0.05e-6, 0.07e-6, 0.10e-6, 0.15e-6, 0.20e-6, 0.25e-6, 0.28e-6, 0.30e-6, 0.33e-6, 0.35e-6, 0.36e-6, 0.38e-6, 0.43e-6, 0.50e-6, 1.00e-6, 1.50e-6, 2.00e-6, 2.50e-6, 5.00e-6]) # mol/l
+
+# array for simulation results
+res = numpy.zeros([ca_concs.size, 2])
+
+
+
+print 'Simulating the IP3R model of Doi et al. 2005.'
+print 'You can abort the simulation by pressing Ctrl + C'
+
+for i in xrange(ca_concs.size):
+
+
+=== Following is the header of samples/147367/IP3R_models/models/sim_dli.py ===
+#
+# Katri Hituri
+#
+# Script to simulate open probability of IP3R
+# Model of Dawson et al. 2003
+#
+
+
+
+
+
+####
+
+import ip3r_model_dli as model
+
+import steps.rng as srng
+import steps.solver as ssolver
+import numpy
+
+####
+
+
+
+#Concentrations for Ca in cytosol
+ca_concs = numpy.array([0.001e-6, 0.003e-6, 0.01e-6, 0.02e-6, 0.05e-6, 0.07e-6, 0.10e-6, 0.15e-6, 0.20e-6, 0.25e-6, \
+                        0.28e-6, 0.30e-6, 0.33e-6, 0.35e-6, 0.36e-6, 0.38e-6, 0.43e-6, 0.50e-6, 1.00e-6, 1.50e-6, 2.00e-6,\
+                        2.50e-6, 5.00e-6, 10.00e-6]) # mol/l
+
+# Solver settings
+r = srng.create('mt19937', 1000)
+r.initialize(2605)
+sim = ssolver.Wmdirect(model.mdl, model.cell, r)
+
+# Number of iterations (defines how many times the model is simulated)
+NITER = 1 #5000
+
+
+tpnt = numpy.arange(0.0, 50.01, 0.01)
+
+# array for simulation results
+
+
+=== Following is the header of samples/147367/IP3R_models/README.txt ===
+Hituri K, Linne M-L (2013) Comparison of Models for IP3 Receptor
+Kinetics Using Stochastic Simulations. PLoS ONE 8(4):
+e59618. doi:10.1371/journal.pone.0059618
+
+We provide scripts for the four models compared in our study:
+
+Othmer HG, Tang Y. Oscillations and waves in a model of
+InsP3-controlled calcium dynamics, London: Plenum Press, volume 259 of
+Experimental and Theoretical Advances in Biological Pattern
+Formation. pp. 277-300, 1993
+
+- Dawson A, Lea E, Irvine R. Kinetic model of the inositol
+  trisphosphate receptor that shows both steady-state and quantal
+  patterns of Ca2+ release from intracellular stores. Biochem J
+  370:621, 2003
+
+- Fraiman D, Dawson SP (2004) A model of IP3 receptor with a luminal
+calcium binding site: stochastic simulations and analysis. Cell
+Calcium 35: 403-413, 2004
+
+- Doi T, Kuroda S, Michikawa T, Kawato M (2005) Inositol
+1,4,5-trisphosphate-dependent Ca2+ threshold dynamics detect spike
+timing in cerebellar Purkinje cells. J Neurosci 25: 950-961, 2005
+
+The work described in the study was done with STEPS version 1.1.2. on
+a Linux computer and has not been tested on newer versions.
+For more information about STEPS, please visit
+http://steps.sourceforge.net/STEPS
+
+The scripts require that you also have NumPy installed.  For more
+information about NumPy, please visit http://www.numpy.org/
+
+The Figures in our publication were plotted with MATLAB. The provided
+MATLAB script (run_IP3R_P0.m) will run the simulations and plot the
+Figure 2A in the our publication. The simulations will take several
+hours. Simulation results are stored in ip3r_MODELNAME_op_res.dat
+files and used Ca2+ concetrations in ip3r_MODELNAME_op_ca_concs.dat
+files. Please read run_IP3R_P0.m for more information about running
+the simulations and plotting the results.
+
+
+

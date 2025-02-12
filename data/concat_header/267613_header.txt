@@ -1,0 +1,507 @@
+=== Following is the header of samples/267613/Place Cell ModelDB/distr.mod ===
+TITLE ...just to store peak membrane voltage
+: M.Migliore June 2001
+
+UNITS {
+	(mA) = (milliamp)
+	(mV) = (millivolt)
+
+}
+
+PARAMETER {
+	v (mV)
+}
+
+
+NEURON {
+	SUFFIX ds
+        RANGE vmax
+}
+
+ASSIGNED {
+	vmax
+}
+
+INITIAL {
+	vmax=v
+}
+
+
+BREAKPOINT {
+	if (v>vmax) {vmax=v}
+}
+
+
+=== Following is the header of samples/267613/Place Cell ModelDB/netstims.mod ===
+: $Id: netstim.mod,v 1.1.1.1 2001/01/01 20:30:37 hines Exp $
+: modified in such a way that the first event will never be before start
+: M.Migliore Dec.2001
+: modified in such a way to have the first event at start
+: M.Migliore Sep. 2003
+
+NEURON	{ 
+  POINT_PROCESS NetStims
+  RANGE y
+  RANGE interval, number, start
+  RANGE noise
+}
+
+PARAMETER {
+	interval	= 10 (ms) <1e-9,1e9>: time between spikes (msec)
+	number	= 10 <0,1e9>	: number of spikes
+	start		= 50 (ms)	: start of first spike
+	noise		= 0 <0,1>	: amount of randomeaness (0.0 - 1.0)
+}
+
+ASSIGNED {
+	y
+	event (ms)
+	on
+	end (ms)
+}
+
+PROCEDURE seed(x) {
+	set_seed(x)
+}
+
+INITIAL {
+	on = 0
+	y = 0
+	if (noise < 0) {
+		noise = 0
+	}
+	if (noise > 1) {
+		noise = 1
+	}
+
+
+=== Following is the header of samples/267613/Place Cell ModelDB/na3n.mod ===
+TITLE na3
+: Na current 
+: modified from Jeff Magee. M.Migliore may97
+: added sh to account for higher threshold M.Migliore, Apr.2002
+
+NEURON {
+	SUFFIX na3
+	USEION na READ ena WRITE ina
+	RANGE  gbar, ar, sh
+	GLOBAL minf, hinf, mtau, htau, sinf, taus,qinf, thinf
+}
+
+PARAMETER {
+	sh   = 0	(mV)
+	gbar = 0.010   	(mho/cm2)	
+								
+	tha  =  -30	(mV)		: v 1/2 for act	
+	qa   = 7.2	(mV)		: act slope (4.5)		
+	Ra   = 0.4	(/ms)		: open (v)		
+	Rb   = 0.124 	(/ms)		: close (v)		
+
+	thi1  = -45	(mV)		: v 1/2 for inact 	
+	thi2  = -45 	(mV)		: v 1/2 for inact 	
+	qd   = 1.5	(mV)	        : inact tau slope
+	qg   = 1.5      (mV)
+	mmin=0.02	
+	hmin=0.5			
+	q10=2
+	Rg   = 0.01 	(/ms)		: inact recov (v) 	
+	Rd   = .03 	(/ms)		: inact (v)	
+	qq   = 10        (mV)
+	tq   = -55      (mV)
+
+	thinf  = -50 	(mV)		: inact inf slope	
+	qinf  = 4 	(mV)		: inact inf slope 
+
+        vhalfs=-60	(mV)		: slow inact.
+        a0s=0.0003	(ms)		: a0s=b0s
+        zetas=12	(1)
+        gms=0.2		(1)
+
+
+=== Following is the header of samples/267613/Place Cell ModelDB/STDPE2Syn2.mod ===
+: STDP by Hines, changed to dual exponential (BPG 6-1-09)
+: Modified by BPG 13-12-08
+: Limited weights: max weight is wmax and min weight is wmin
+: (initial weight is specified by netconn - usually set to wmin)
+: Rhythmic GABAB suppresses conductance and promotes plasticity.
+: When GABAB is low, conductance is high and plasticity is off.
+
+NEURON {
+	POINT_PROCESS STDPE2bis
+	RANGE tau1, tau2, e, i, d, p, dtau, ptau, thresh, wmax, wmin, srcnt1, srcnt2, srcnt3, srcnt4
+	RANGE g, gbdel, gblen, gbint, gscale, factor,dshift,dM,dV,B,C
+	NONSPECIFIC_CURRENT i
+}
+
+UNITS {
+	(nA) = (nanoamp)
+	(mV) = (millivolt)
+	(uS) = (microsiemens)
+}
+
+PARAMETER {
+	srcnt1=0
+	srcnt2=0
+	srcnt3=0
+	srcnt4=0
+	tau1=.5 (ms) <1e-9,1e9>
+	tau2 = 3 (ms) <1e-9,1e9>
+	e = 0	(mV)
+     pi=3.14159
+	wmax = 0.008(uS)
+      :wmax = 0.004 (uS)
+	wmin = 0(uS)	: not used - use netconn weight instead (BPG)
+	d = 0.3 :depression factor (multiplicative to prevent < 0) 0.8
+	p = 1 : potentiation factor (additive, non-saturating) 1
+	
+       dM = -24   (ms) :-22
+       dV= 6.32 :5    (ms)
+	 ptau = 2 (ms) : Nishiyama2000 10
+
+	thresh = -20 (mV)	: postsynaptic voltage threshold
+
+
+=== Following is the header of samples/267613/Place Cell ModelDB/trajectory.txt ===
+55.4525 58.7092 0 0 0
+59.9087 65.5813 0 0 0
+64.2075 72.1325 0 7 0
+68.3134 78.4398 0 7 0
+72.2432 84.3968 0 7 0
+75.9996 81.5807 0 0 0
+79.5471 78.8011 0 0 0
+82.9226 76.2498 0 0 0
+86.0675 73.6764 0 0 0
+89.1186 71.3357 0 0 0
+87.6381 69.0336 0 0 0
+86.321 66.7584 0 0 0
+84.9714 64.6211 0 0 0
+83.7275 62.6984 0 0 0
+82.6184 60.8121 0 0 0
+81.6303 59.0157 0 0 0
+80.673 57.3891 0 0 0
+79.8027 55.8988 0 0 0
+79.0703 54.3057 0 0 0
+78.4017 52.7776 0 0 0
+77.7305 51.1302 0 0 0
+76.9631 49.6109 0 0 0
+76.3349 47.997 0 0 0
+75.6563 46.3783 0 0 0
+75.0618 44.9395 0 0 0
+74.5258 43.4599 0 0 0
+74.2385 42.1315 0 0 0
+74.1489 40.814 0 0 0
+74.21 39.5482 0 0 0
+74.18 38.4235 0 0 0
+74.2039 37.3566 0 0 0
+74.0254 36.3965 0 0 0
+73.7335 35.4232 0 0 0
+73.4738 34.344 0 0 0
+73.0891 33.115 0 0 0
+72.8653 32.0155 0 0 0
+72.8801 30.8866 0 0 0
+72.8353 29.7277 0 0 0
+72.8438 28.6003 0 0 0
+72.9903 27.6154 0 0 0
+
+
+=== Following is the header of samples/267613/Place Cell ModelDB/nmdanet.mod ===
+TITLE simple NMDA receptors
+
+: Modified from the original AMPA.mod, M.Migliore Jan 2003
+: A weight of 0.0035 gives a peak conductance of 1nS in 0Mg
+
+COMMENT
+-----------------------------------------------------------------------------
+
+	Simple model for glutamate AMPA receptors
+	=========================================
+
+  - FIRST-ORDER KINETICS, FIT TO WHOLE-CELL RECORDINGS
+
+    Whole-cell recorded postsynaptic currents mediated by AMPA/Kainate
+    receptors (Xiang et al., J. Neurophysiol. 71: 2552-2556, 1994) were used
+    to estimate the parameters of the present model; the fit was performed
+    using a simplex algorithm (see Destexhe et al., J. Computational Neurosci.
+    1: 195-230, 1994).
+
+  - SHORT PULSES OF TRANSMITTER (0.3 ms, 0.5 mM)
+
+    The simplified model was obtained from a detailed synaptic model that 
+    included the release of transmitter in adjacent terminals, its lateral 
+    diffusion and uptake, and its binding on postsynaptic receptors (Destexhe
+    and Sejnowski, 1995).  Short pulses of transmitter with first-order
+    kinetics were found to be the best fast alternative to represent the more
+    detailed models.
+
+  - ANALYTIC EXPRESSION
+
+    The first-order model can be solved analytically, leading to a very fast
+    mechanism for simulating synapses, since no differential equation must be
+    solved (see references below).
+
+
+
+References
+
+   Destexhe, A., Mainen, Z.F. and Sejnowski, T.J.  An efficient method for
+   computing synaptic conductances based on a kinetic model of receptor binding
+
+
+=== Following is the header of samples/267613/Place Cell ModelDB/naxn.mod ===
+TITLE nax
+: Na current for axon. No slow inact.
+: M.Migliore Jul. 1997
+: added sh to account for higher threshold M.Migliore, Apr.2002
+
+NEURON {
+	SUFFIX nax
+	USEION na READ ena WRITE ina
+	RANGE  gbar, sh
+	GLOBAL minf, hinf, mtau, htau,thinf, qinf
+}
+
+PARAMETER {
+	sh   = 0	(mV)
+	gbar = 0.010   	(mho/cm2)	
+								
+	tha  =  -30	(mV)		: v 1/2 for act	
+	qa   = 7.2	(mV)		: act slope (4.5)		
+	Ra   = 0.4	(/ms)		: open (v)		
+	Rb   = 0.124 	(/ms)		: close (v)		
+
+	thi1  = -45	(mV)		: v 1/2 for inact 	
+	thi2  = -45 	(mV)		: v 1/2 for inact 	
+	qd   = 1.5	(mV)	        : inact tau slope
+	qg   = 1.5      (mV)
+	mmin=0.02	
+	hmin=0.5			
+	q10=2
+	Rg   = 0.01 	(/ms)		: inact recov (v) 	
+	Rd   = .03 	(/ms)		: inact (v)	
+
+	thinf  = -50 	(mV)		: inact inf slope	
+	qinf  = 4 	(mV)		: inact inf slope 
+
+	ena		(mV)            : must be explicitly def. in hoc
+	celsius
+	v 		(mV)
+}
+
+
+
+
+=== Following is the header of samples/267613/Place Cell ModelDB/h.mod ===
+TITLE I-h channel from Magee 1998 for distal dendrites
+
+UNITS {
+	(mA) = (milliamp)
+	(mV) = (millivolt)
+
+}
+
+PARAMETER {
+	v 		(mV)
+        ehd  		(mV)        
+	celsius 	(degC)
+	ghdbar=.0001 	(mho/cm2)
+        vhalfl=-81   	(mV)
+	kl=-8
+        vhalft=-75   	(mV)
+        a0t=0.011      	(/ms)
+        zetat=2.2    	(1)
+        gmt=.4   	(1)
+	q10=4.5
+	qtl=1
+}
+
+
+NEURON {
+	SUFFIX hd
+	NONSPECIFIC_CURRENT i
+        RANGE ghdbar, vhalfl
+        GLOBAL linf,taul
+}
+
+STATE {
+        l
+}
+
+ASSIGNED {
+	i (mA/cm2)
+        linf      
+        taul
+        ghd
+
+
+=== Following is the header of samples/267613/Place Cell ModelDB/kaprox.mod ===
+TITLE K-A channel from Klee Ficker and Heinemann
+: modified to account for Dax A Current --- M.Migliore Jun 1997
+: modified to be used with cvode  M.Migliore 2001
+
+UNITS {
+	(mA) = (milliamp)
+	(mV) = (millivolt)
+
+}
+
+PARAMETER {
+	v (mV)
+	celsius		(degC)
+	gkabar=.008 (mho/cm2)
+        vhalfn=11   (mV)
+        vhalfl=-56   (mV)
+        a0l=0.05      (/ms)
+        a0n=0.05    (/ms)
+        zetan=-1.5    (1)
+        zetal=3    (1)
+        gmn=0.55   (1)
+        gml=1   (1)
+	lmin=2  (mS)
+	nmin=0.1  (mS)
+	pw=-1    (1)
+	tq=-40
+	qq=5
+	q10=5
+	qtl=1
+	ek
+}
+
+
+NEURON {
+	SUFFIX kap
+	USEION k READ ek WRITE ik
+        RANGE gkabar,gka
+        GLOBAL ninf,linf,taul,taun,lmin
+}
+
+
+
+=== Following is the header of samples/267613/Place Cell ModelDB/kdrca1.mod ===
+TITLE K-DR channel
+: from Klee Ficker and Heinemann
+: modified to account for Dax et al.
+: M.Migliore 1997
+
+UNITS {
+	(mA) = (milliamp)
+	(mV) = (millivolt)
+
+}
+
+PARAMETER {
+	v (mV)
+        ek (mV)		: must be explicitely def. in hoc
+	celsius		(degC)
+	gkdrbar=.003 (mho/cm2)
+        vhalfn=13   (mV)
+        a0n=0.02      (/ms)
+        zetan=-3    (1)
+        gmn=0.7  (1)
+	nmax=2  (1)
+	q10=1
+}
+
+
+NEURON {
+	SUFFIX kdr
+	USEION k READ ek WRITE ik
+        RANGE gkdr,gkdrbar
+	GLOBAL ninf,taun
+}
+
+STATE {
+	n
+}
+
+ASSIGNED {
+	ik (mA/cm2)
+        ninf
+        gkdr
+
+
+=== Following is the header of samples/267613/Place Cell ModelDB/kmb.mod ===
+TITLE CA1 KM channel from Mala Shah
+: M. Migliore June 2006
+
+UNITS {
+	(mA) = (milliamp)
+	(mV) = (millivolt)
+
+}
+
+PARAMETER {
+	v 		(mV)
+	ek
+	celsius 	(degC)
+	gbar=.0001 	(mho/cm2)
+        vhalfl=-40   	(mV)
+	kl=-10
+        vhalft=-42   	(mV)
+        a0t=0.003      	(/ms)
+        zetat=7    	(1)
+        gmt=.4   	(1)
+	q10=5
+	b0=60
+	st=1
+	sh =0
+}
+
+
+NEURON {
+	SUFFIX kmb
+	USEION k READ ek WRITE ik
+        RANGE  gbar,ik, sh
+      GLOBAL inf, tau
+}
+
+STATE {
+        m
+}
+
+ASSIGNED {
+	ik (mA/cm2)
+
+
+=== Following is the header of samples/267613/Place Cell ModelDB/kadist.mod ===
+TITLE K-A channel from Klee Ficker and Heinemann
+: modified to account for Dax A Current ----------
+: M.Migliore Jun 1997
+
+UNITS {
+        (mA) = (milliamp)
+        (mV) = (millivolt)
+}
+
+PARAMETER {
+	celsius
+        v (mV)
+        gkabar=.008 (mho/cm2)
+        vhalfn=-1   (mV)
+        vhalfl=-56   (mV)
+        a0l=0.05      (/ms)
+        a0n=.1    (/ms)
+        zetan=-1.8    (1)
+        zetal=3    (1)
+        gmn=0.39   (1)
+        gml=1   (1)
+        lmin=2  (mS)
+        nmin=0.2  (mS)
+        pw=-1    (1)
+        tq=-40
+        qq=5
+        q10=5
+        qtl=1
+	ek
+}
+
+
+NEURON {
+        SUFFIX kad
+        USEION k READ ek WRITE ik
+        RANGE gkabar,gka
+        GLOBAL ninf,linf,taul,taun,lmin
+}
+
+STATE {
+
+

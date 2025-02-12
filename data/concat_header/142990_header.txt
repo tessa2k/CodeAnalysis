@@ -1,0 +1,989 @@
+=== Following is the header of samples/142990/Yarrow2012/fig5_A.m ===
+function [fisher, mSSI, mIsur] = fig5_A(fTau)
+% fig5_A  Reproduce curves from Figure 5A
+% 
+% [fisher, mSSI, mIsur] = fig5_A(fTau) calculates the singleton Fisher information,
+% marginal SSI and marginal specific surprise for:
+% variability F/tau = fTau spikes/s^2
+
+% Stuart Yarrow s.yarrow@ed.ac.uk - 15/11/2011
+
+tic
+
+stderr = 2e-2;      % Target relative error for MC halting
+maxiter = 5e3;      % MC iteration limit
+
+tau = 1.0;          % integration time (s)
+F = fTau .* tau;    % Fano factor
+alpha = 0.5;        % variability exponent
+fmax = 50.0;        % peak firing rate (spikes/s)
+fbg = 10.0;         % background firing rate (spikes/s)
+sigma = 30.0;       % tuning curve width parameter (degrees)
+N = 4;              % population size
+
+% Preferred stimuli
+nrns = [-180 : 360/N : 180-360/N];
+nrn = floor(N/2)+1;
+
+% Define stimulus ensemble and population
+stim = StimulusEnsemble('circular', 360, 360);
+popNrns = CircGaussNeurons(nrns, sigma, fmax, fbg, tau, 'Gaussian-independent', [F alpha]);
+singleNrn = CircGaussNeurons(0.0, sigma, fmax, fbg, tau, 'Gaussian-independent', [F alpha]);
+
+% Compute measures
+fisher = singleNrn.fisher('analytic', stim, 0.0);
+[fullSSI, remSSI, fullIsur, remIsur, iter] = popNrns.ssiss(nrn, 'randMC', stim, [], stderr, maxiter, 1e10);
+mSSI = fullSSI - remSSI;
+mIsur = fullIsur - remIsur;
+
+figure
+plot(stim.ensemble, [max(mSSI).*(fisher./max(fisher)) ; mSSI ; mIsur])
+legend({'Singleton Fisher (normalised)' 'mSSI' 'mI_{sur}'})
+
+
+=== Following is the header of samples/142990/Yarrow2012/fig6_CD.m ===
+function [mSSI, pfr] = fig6_CD(N, c, corrType)
+% fig6_CD  Reproduce points/curves from Figures 6C and 6D
+% 
+% [mSSI, pfr] = fig6_CD(N, c, corrType) calculates the marginal SSI
+% and peak/flank ratio mSSI_peak / mSSI_flank for:
+% population size N
+% noise correlation coefficient or max correlation coefficient c
+% uniform (corrType = 'uni') or localised (corrType = 'loc') noise correlations
+
+% Stuart Yarrow s.yarrow@ed.ac.uk - 15/11/2011
+
+
+tic
+
+stderr = 5e-3;      % Target relative error for MC halting
+maxiter = 5e3;      % MC iteration limit
+
+fTau = 10.0;        % variability F/tau (spikes/s^2)
+tau = 1.0;          % integration time (s)
+F = fTau .* tau;    % Fano factor
+alpha = 0.5;        % variability exponent
+fmax = 50.0;        % peak firing rate (spikes/s)
+fbg = 10.0;         % background firing rate (spikes/s)
+sigma = 30.0;       % tuning curve width parameter (degrees)
+rho = 30.0;         % correlation range parameter (degrees)
+
+% Preferred stimuli
+nrns = [-180 : 360/N : 180-360/N];
+nrn = floor(N/2)+1;
+
+% Define stimulus ensemble and population
+stim = StimulusEnsemble('circular', 360, 360);
+
+switch corrType
+case 'uni'
+    popNrns = CircGaussNeurons(nrns, sigma, fmax, fbg, tau, 'Gaussian-uniform', [F alpha c]);
+    singleNrn = CircGaussNeurons(0.0, sigma, fmax, fbg, tau, 'Gaussian-uniform', [F alpha c]);
+    corrTypeStr = 'uniform';
+case 'loc'
+    popNrns = CircGaussNeurons(nrns, sigma, fmax, fbg, tau, 'Gaussian-exponential', [F alpha c rho]);
+
+
+=== Following is the header of samples/142990/Yarrow2012/fig7.m ===
+function [Imut, Ifisher, fisher, mSSI, mSSIfisher, dI, dmSSI] = fig7(N, fTau, fbg, c, corrType)
+% fig7  Reproduce points/curves from Figure 7
+% 
+% [fisher, mSSI, mSSIfisher, dI, dmSSI] = fig7(N, fTau, fbg, c, corrType) calculates the
+% singleton Fisher information, marginal SSI, marginalSSI_Fisher, delta_Inf
+% and delta_mSSI for:
+% population size N
+% variability F/tau = fTau spikes/s^2
+% background activity f_bg = fbg spikes/s
+% noise correlation coefficient or max correlation coefficient c
+% independent noise (corrType = 'ind'), uniform (corrType = 'uni') or
+% localised (corrType = 'loc') noise correlations
+
+% Stuart Yarrow s.yarrow@ed.ac.uk - 15/11/2011
+
+tic
+
+stderr = 5e-3;      % Target relative error for MC halting
+maxiter = 5e3;      % MC iteration limit
+
+tau = 1.0;          % integration time (s)
+F = fTau .* tau;    % Fano factor
+alpha = 0.5;        % variability exponent
+fmax = 50.0;        % peak firing rate (spikes/s)
+sigma = 30.0;       % tuning curve width parameter (degrees)
+rho = 30.0;         % correlation range parameter (degrees)
+
+% Preferred stimuli
+nrns = [-180 : 360/N : 180-360/N];
+nrn = floor(N/2)+1;
+
+% Define stimulus ensemble and population
+stim = StimulusEnsemble('circular', 360, 360);
+
+switch corrType
+case 'ind'
+    popNrns = CircGaussNeurons(nrns, sigma, fmax, fbg, tau, 'Gaussian-independent', [F alpha]);
+    singleNrn = CircGaussNeurons(0.0, sigma, fmax, fbg, tau, 'Gaussian-independent', [F alpha]);
+    corrTypeStr = 'independent noise';
+case 'uni'
+
+
+=== Following is the header of samples/142990/Yarrow2012/fig3.m ===
+function [Ifish, Imut] = fig3(rho)
+% fig3  Reproduce points from Figure 3
+% 
+% [Ifish, Imut] = fig3(rho) calculates the mutual information and I_Fisher for:
+% correlation range parameter rho, which can be numeric (>= 0) or the string 'inf'
+
+% Stuart Yarrow s.yarrow@ed.ac.uk - 15/11/2011
+
+tic
+
+stderr = 2e-2;      % Target relative error for MC halting
+maxiter = 1e5;      % MC iteration limit
+
+N = 128;            % population size
+c = 0.3;            % max correlation coefficient
+tau = 1.0;          % integration time (s)
+fTau = 5.0;         % variability F/tau (spikes/s^2)
+F = fTau .* tau;    % Fano factor
+alpha = 0.5;        % variability exponent
+fmax = 50.0;        % peak firing rate (spikes/s)
+fbg = 10.0;         % background firing rate (spikes/s)
+sigma = 30.0;       % tuning curve width parameter (degrees)
+
+% Preferred stimuli
+nrns = [-180 : 360/N : 180-360/N];
+
+% Define stimulus ensemble and population
+stim = StimulusEnsemble('circular', 360, 360);
+
+switch rho
+case 0      % independent noise
+    popNrns = CircGaussNeurons(nrns, sigma, fmax, fbg, tau, 'Gaussian-independent', [F alpha]);
+case 'inf'  % uniform correlation
+    popNrns = CircGaussNeurons(nrns, sigma, fmax, fbg, tau, 'Gaussian-uniform', [F alpha c]);
+otherwise   % localised correlation
+    popNrns = CircGaussNeurons(nrns, sigma, fmax, fbg, tau, 'Gaussian-exponential', [F alpha c rho]);
+end
+
+% Compute measures
+Ifish = popNrns.Ifisher(stim);
+
+
+=== Following is the header of samples/142990/Yarrow2012/fig4.m ===
+% fig4  Reproduce Figure 4
+% 
+% Note: this takes a long time to run
+
+% Stuart Yarrow s.yarrow@ed.ac.uk - 15/11/2011
+
+tic
+
+stderr = 2e-3;      % Target relative error for MC halting
+maxiter_SSI = 5e3;  % MC iteration limits
+maxiter_FI = 1e5;
+
+N = 4;              % population size
+tau = 1.0;          % integration time (s)
+fbg = 0.01;         % background firing rate (spikes/s)
+
+% Preferred stimuli
+nrns = [-180 : 360/N : 180-360/N];
+nrn = floor(N/2)+1;
+
+% Define stimulus ensemble and population
+stim = StimulusEnsemble('circular', 360, 360);
+
+A = [1.0 3.0 5.0];
+
+for i = 1 : length(A)
+    add = 0.048 .* A(i);
+    mult = 0.052 .* A(i);
+    
+    singleNrn = CosNeurons(0, fbg, tau, 'cercal', [add mult]);
+    singleNrn.truncate = true;
+    popNrns = CosNeurons(nrns, fbg, tau, 'cercal', [add mult]);
+    popNrns.truncate = true;
+    
+    [ fSSI{i} rSSI{i} fIsur{i} rIsur{i} its(i) ] = popNrns.ssiss(nrn, 'randMC', stim, [], stderr, maxiter_SSI, 1e10);
+    [ SNfSSI{i} SNrSSI{i} SNfIsur{i} SNrIsur{i} SNits(i) ] = singleNrn.ssiss([], 'randMC', stim, [], stderr, maxiter_SSI, 1e10);
+    
+    fisher{i} = popNrns.fisher('randMC', stim, stderr, maxiter_FI);
+    snFI{i} = singleNrn.fisher('randMC', stim, stderr, maxiter_FI);
+end
+
+
+=== Following is the header of samples/142990/Yarrow2012/fig6_AB.m ===
+function [mSSI, pfr] = fig6_AB(N, fTau)
+% fig6_AB  Reproduce points/curves from Figures 6A and 6B
+% 
+% [mSSI, pfr] = fig6_AB(N, fTau) calculates the marginal SSI
+% and peak/flank ratio mSSI_peak / mSSI_flank for:
+% population size N
+% variability F/tau = fTau spikes/s^2
+
+% Stuart Yarrow s.yarrow@ed.ac.uk - 15/11/2011
+
+tic
+
+stderr = 5e-3;      % Target relative error for MC halting
+maxiter = 5e3;      % MC iteration limit
+
+tau = 1.0;          % integration time (s)
+F = fTau .* tau;    % Fano factor
+alpha = 0.5;        % variability exponent
+fmax = 50.0;        % peak firing rate (spikes/s)
+fbg = 10.0;         % background firing rate (spikes/s)
+sigma = 30.0;       % tuning curve width parameter (degrees)
+
+% Preferred stimuli
+nrns = [-180 : 360/N : 180-360/N];
+nrn = floor(N/2)+1;
+
+% Define stimulus ensemble and population
+stim = StimulusEnsemble('circular', 360, 360);
+popNrns = CircGaussNeurons(nrns, sigma, fmax, fbg, tau, 'Gaussian-independent', [F alpha]);
+singleNrn = CircGaussNeurons(0.0, sigma, fmax, fbg, tau, 'Gaussian-independent', [F alpha]);
+
+% Compute measures
+fisher = singleNrn.fisher('analytic', stim, 0.0);
+[dummy, ord1] = max(fisher(1:180));
+[dummy, ord2] = max(fisher(181:end));
+ords = [ord1 180 ord2+180];
+
+mSSI = popNrns.ssiss(nrn, 'randMC', stim, [], stderr, maxiter, 1e10);
+pfr = mSSI(ords(2)) ./ mean(mSSI(ords([1 3])));
+
+
+
+=== Following is the header of samples/142990/Yarrow2012/fig5_B.m ===
+function pfr = fig5_B(fTau, fbg)
+% fig5_B  Reproduce points from Figure 5B
+% 
+% pfr = fig5_B(fTau, fbg) calculates the peak-flank ratio (SSI_peak/SSI_flank), for:
+% variability F/tau = fTau spikes/s^2
+% background activity f_bg = fbg spikes/s
+
+% Stuart Yarrow s.yarrow@ed.ac.uk - 15/11/2011
+
+tic
+
+stderr = 2e-2;      % Target relative error for MC halting
+maxiter = 5e3;      % MC iteration limit
+
+tau = 1.0;          % integration time (s)
+F = fTau .* tau;    % Fano factor
+alpha = 0.5;        % variability exponent
+fmax = 50.0;        % peak firing rate (spikes/s)
+sigma = 30.0;       % tuning curve width parameter (degrees)
+N = 4;              % population size
+
+% Preferred stimuli
+nrns = [-180 : 360/N : 180-360/N];
+nrn = floor(N/2)+1;
+
+% Define stimulus ensemble and population
+stim = StimulusEnsemble('circular', 360, 360);
+popNrns = CircGaussNeurons(nrns, sigma, fmax, fbg, tau, 'Gaussian-independent', [F alpha]);
+singleNrn = CircGaussNeurons(0.0, sigma, fmax, fbg, tau, 'Gaussian-independent', [F alpha]);
+
+% Compute measures
+fisher = singleNrn.fisher('analytic', stim, 0.0);
+[dummy, ord1] = max(fisher(1:180));
+[dummy, ord2] = max(fisher(181:end));
+ords = [ord1 180 ord2+180];
+
+ssi = popNrns.ssiss(nrn, 'randMC', stim, ords, stderr, maxiter, 1e10);
+pfr = ssi(2) ./ mean(ssi([1 3]));
+
+fprintf('fig5_B.m\n')
+
+
+=== Following is the header of samples/142990/Yarrow2012/popcode/CosNeurons.m ===
+classdef CosNeurons < Neurons
+	
+	properties
+        backgroundRate = [];
+    end
+	
+	methods
+		
+		function obj = CosNeurons(varargin)
+		% COSNEURONS/COSNEURONS Constructor for CosNeurons object - population of neurons with raised cosine tuning curves
+		% obj = CosNeurons(preferredStimuli, maxRate, backgroundRate, integrationTime, variabilityScheme, variabilityOpts)
+		%
+		% preferredStimuli - preferred stimulus value
+		% width - tuning curve width (this would be the variance if the curve was a probability distribution)
+		% maxRate - maximum firing rate (Hz)
+		% backgroundRate - background (spontaneous) firing rate (Hz)
+		% integrationTime - spike counting time per trial
+		% variabilityScheme - type of variability model
+		% variabilityOpts - vector of options
+		%
+		% preferredStimulus, maxFiringRate and backgroundFiringRate can be scalars or vectors of length popSize.
+		% CosNeurons accepts only 1-D stimuli at present.
+            
+            switch nargin
+                case 5
+                    preferredStimuli = varargin{1};
+                    backgroundRateIn = varargin{2};
+                    integrationTime = varargin{3};
+                    variabilityScheme = varargin{4};
+                    variabilityOpts = varargin{5};
+                otherwise
+                    error('Wrong number of inputs')
+            end
+            
+			% Superclass constructor
+            obj = obj@Neurons(1, preferredStimuli, integrationTime, variabilityScheme, variabilityOpts);
+            
+            if isscalar(backgroundRateIn) && isnumeric(backgroundRateIn)
+				obj.backgroundRate = double(backgroundRateIn(ones(obj.popSize, 1)));
+			elseif length(backgroundRateIn) == obj.popSize && isvector(backgroundRateIn) && isnumeric(backgroundRateIn)
+
+
+=== Following is the header of samples/142990/Yarrow2012/popcode/GaussNeurons.m ===
+classdef GaussNeurons < Neurons
+	
+	properties
+		width = [];
+        maxRate = [];
+        backgroundRate = [];
+	end
+	
+	methods
+		
+        function obj = GaussNeurons(varargin)
+		% GAUSSNEURONS/GAUSSNEURONS Constructor for GaussNeurons object - population of neurons with Gaussian tuning curves
+		% obj = GaussNeurons(preferredStimuli, width, maxRate, backgroundRate, integrationTime, variabilityScheme, variabilityOpts)
+		%
+		% preferredStimuli - preferred stimulus value
+		% width - tuning curve width (this would be the variance if the curve was a probability distribution)
+		% maxRate - maximum firing rate (Hz)
+		% backgroundRate - background (spontaneous) firing rate (Hz)
+		% integrationTime - spike counting time per trial
+		% variabilityScheme - type of variability model
+		% variabilityOpts - vector of options
+		%
+		% preferredStimulus, width, maxFiringRate and backgroundFiringRate can be scalars or vectors of length popSize.
+		% GaussNeurons accept only 1-D stimuli at present.
+            
+            switch nargin
+                case 7
+                    preferredStimuli = varargin{1};
+                    widthIn = varargin{2};
+                    maxRateIn = varargin{3};
+                    backgroundRateIn = varargin{4};
+                    integrationTime = varargin{5};
+                    variabilityScheme = varargin{6};
+                    variabilityOpts = varargin{7};
+                otherwise
+                    error('Wrong number of inputs')
+            end
+            
+			% Superclass constructor
+            obj = obj@Neurons(1, preferredStimuli, integrationTime, variabilityScheme, variabilityOpts);
+
+
+=== Following is the header of samples/142990/Yarrow2012/popcode/StimulusEnsemble.m ===
+classdef StimulusEnsemble
+    
+    properties
+        circular = false;
+        ensemble = [];
+        width = [];
+        pS = [];
+        lowerLimit = 0;
+        upperLimit = 0;
+    end
+    
+    methods		
+        function obj = StimulusEnsemble(varargin)
+            switch nargin
+            case 3
+				switch varargin{1}
+                case 'circular'
+                    modulo = double(varargin{2});
+                    number = double(varargin{3});
+                    spacing = modulo / number;
+                    obj.circular = modulo;
+                    obj.ensemble = [-modulo/2 + spacing : spacing : modulo/2];
+                    obj.width = spacing * ones(1, number);
+                    obj.pS = 1.0 ./ double(obj.n) .* ones(1, obj.n);
+                    
+                    obj.lowerLimit = -modulo/2;
+                    obj.upperLimit = modulo/2;
+				otherwise
+					error([varargin{1} ' is not a valid option with three args'])
+				end
+
+            case 4
+                bottom = double(varargin{2});
+                top = double(varargin{3});
+                number = floor(varargin{4});
+
+                switch varargin{1}
+                case 'linear'
+                    obj.circular = false;
+                    spacing = (top - bottom) / double(number - 1);
+
+
+=== Following is the header of samples/142990/Yarrow2012/popcode/CircGaussNeurons.m ===
+classdef CircGaussNeurons < Neurons
+	
+	properties
+		width = [];
+        maxRate = [];
+        backgroundRate = [];
+	end
+	
+	methods
+
+		function obj = CircGaussNeurons(varargin)
+		% CIRCGAUSSNEURONS/CIRCGAUSSNEURONS Constructor for CircGaussNeurons object - population of neurons with circular Gaussian tuning curves
+		% obj = CircGaussNeurons(preferredStimuli, width, maxRate, backgroundRate, integrationTime, variabilityScheme, variabilityOpts)
+		%
+		% preferredStimuli - preferred stimulus value
+		% width - tuning curve width (this would be the variance if the curve was a probability distribution)
+		% maxRate - maximum firing rate (Hz)
+		% backgroundRate - background (spontaneous) firing rate (Hz)
+		% integrationTime - spike counting time per trial
+		% variabilityScheme - type of variability model
+		% variabilityOpts - vector of options
+		%
+		% preferredStimulus, width, maxFiringRate and backgroundFiringRate can be scalars or vectors of length popSize.
+		% CircGaussNeurons accepts only 1-D stimuli at present.
+            
+            switch nargin
+                case 7
+                    preferredStimuli = varargin{1};
+                    widthIn = varargin{2};
+                    maxRateIn = varargin{3};
+                    backgroundRateIn = varargin{4};
+                    integrationTime = varargin{5};
+                    variabilityScheme = varargin{6};
+                    variabilityOpts = varargin{7};
+                otherwise
+                    error('Wrong number of inputs')
+            end
+            
+			% Superclass constructor
+            obj = obj@Neurons(1, preferredStimuli, integrationTime, variabilityScheme, variabilityOpts);
+
+
+=== Following is the header of samples/142990/Yarrow2012/popcode/degToRad.m ===
+function out = degToRad(in)
+%
+%
+%
+
+out = pi .* in ./ 180;
+
+=== Following is the header of samples/142990/Yarrow2012/popcode/poisspdfln.m ===
+function y = poisspdfln(x,lambda)
+% Possion log probability function
+
+    if ~isfloat(x)
+       x = double(x);
+    end
+
+    y(lambda < 0) = NaN;
+    y(isnan(x) | isnan(lambda)) = NaN;
+    y(x==0 & lambda==0) = 0;
+
+    k = find(x >= 0 & x == round(x) & lambda > 0);
+
+    if ~isempty(k)
+        x = x(k);
+        lambda = lambda(k);
+
+        smallx = x <= lambda * realmin;
+        y(k(smallx)) = -lambda(smallx);
+
+        largex = lambda < x * realmin;
+        y(k(largex)) = -lambda(largex) + x(largex).*log(lambda(largex)) - gammaln(x(largex)+1);
+
+        other = ~smallx & ~largex;
+        lnsr2pi = 0.9189385332046727; % log(sqrt(2*pi))
+        y(k(other)) = -lnsr2pi -0.5*log(x(other)) - stirlerr(x(other)) - binodeviance(x(other),lambda(other));
+    end
+end
+
+function bd0 = binodeviance(x,np)
+%BINODEVIANCE Deviance term for binomial and Poisson probability calculation.
+%    BD0=BINODEVIANCE(X,NP) calculates the deviance as defined in equation
+%    5.2 in C. Loader, "Fast and Accurate Calculations of Binomial
+%    Probabilities", July 9, 2000. X and NP must be of the same size.
+%
+%    For "x/np" not close to 1:
+%        bd0(x,np) = np*f(x/np) where f(e)=e*log(e)+1-e
+%    For "x/np" close to 1: 
+%         The function is calculated using the formula in Equation 5.2. 
+
+
+
+=== Following is the header of samples/142990/Yarrow2012/popcode/cellsxfun.cpp ===
+//
+// cellsxfun.cpp
+// Copyright Stuart Yarrow 2010/03/24 (s.yarrow@ed.ac.uk)
+// All rights reserved.
+//
+// Based on mAryCellFcn.ccp by Michael Brost (michaelbrost@yahoo.com).
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//
+
+
+#include "mex.h"
+
+// STD includes
+#include <string>
+#include <sstream>
+using namespace std;
+
+void usage(void)
+{
+    mexPrintf("========================================================================================================================\n");
+    mexPrintf("| This function is a cell array-based generalization of bsxfun to arbitrary dimensions using cell arrays.              |\n");
+    mexPrintf("|                                                                                                                      |\n");
+    mexPrintf("| usage: cell_array = cellsxfun(function_handle, cell_array_1, cell_array_2, ..., cell_array_N)                        |\n");
+    mexPrintf("|       where function_handle corresponds to a function which accepts N simultaneous cell array contents as inputs and |\n");
+    mexPrintf("|       which returns at most one matlab object. The dimensions of each array must either match or be singleton e.g:   |\n");
+    mexPrintf("|                                                                                                                      |\n");
+    mexPrintf("|       x = {rand(20), rand(20), rand(20)};             1 x 3 cell array                                               |\n");
+    mexPrintf("|       y = {rand(20)};                                 1 x 1 cell array                                               |\n");
+
+
+=== Following is the header of samples/142990/Yarrow2012/popcode/Neurons.m ===
+classdef Neurons
+	
+	properties
+		dimensionality = 1;
+		popSize = 1;
+		preferredStimulus = 0;
+		integrationTime = 0;
+		distribution = 'Gaussian';
+		a = 1.0;
+		alpha = 0.5;
+		R = [];
+		add = 0.0;
+		exponent = 1.0;
+		truncate = false;
+	end
+	
+	methods
+		
+		function obj = Neurons(varargin)
+		%	NEURONS Neuron population class constructor.
+		%	n = Neurons(dimensionality, preferredStimuli, integrationTime, variabilityScheme, variabilityOpts)
+		%
+		%	dimensionality - stimulus dimensionality (only 1-D stimuli currently supported)
+        %   preferred Stimuli - column vector of (N = popsize) characteristic stimuli
+		%	integrationTime - spike counting time per trial
+		%	variabilityScheme - the type of variablilty model
+        %   variabiltyOpts - an array of arguments specific to the chosen variability model
+        %
+            
+			switch nargin
+			case 5
+				% Standard constructor	
+				if length(varargin{1}) == 1 && isnumeric(varargin{1})
+					obj.dimensionality = varargin{1};
+				else
+					error([inputname(1) ' is not a valid stimulus dimensionality'])
+				end
+				
+				if isnumeric(varargin{2}) && size(varargin{2}, 1) == obj.dimensionality
+					obj.preferredStimulus = varargin{2}';
+
+
+=== Following is the header of samples/142990/Yarrow2012/popcode/bootstrapErrorProp.m ===
+function stderr = bootstrapEP(func, argsmu, argstd, ns)
+% bootstrapErrorProp Error propoagation by bootstrapping
+% 
+% stderr = bootstrapEP(func, argsmu, argstd, ns)
+% func: handle of function with one return value and n args
+% argsmu: cell array of n mean values
+% argstd: cell array of n standard deviations
+% ns: number of samples
+%
+
+% Sample a set of inputs to the function
+args = cellfun(@(a,b) a + b .* randn(size(b)), argsmu, argstd, 'UniformOutput', false);
+
+% Execute function
+retval = func(args{:});
+
+% Use size of returned variable to preallocate array for further output samples
+samps = zeros(size(retval,1), size(retval,2), ns);
+samps(:,:,1) = retval;
+
+for i = 2 : ns
+   % sample inputs
+   args = cellfun(@(a,b) a + b .* randn(size(b)), argsmu, argstd, 'UniformOutput', false);
+   % execute function and store output
+   samps(:,:,i) = func(args{:});
+end
+
+% compute standard deviation
+stderr = std(samps,0,3);
+
+=== Following is the header of samples/142990/Yarrow2012/popcode/OnlineStats.m ===
+classdef OnlineStats < handle
+    % OnlineStats Online computation of mean, variance and SEM
+    %   
+    % Implements the algorithm described in:
+    % Donald E. Knuth (1998). The Art of Computer Programming, volume 2: Seminumerical Algorithms, 3rd edn., p. 232. Boston: Addison-Wesley.
+    
+    properties
+        samples = 0;
+        runMean = 0;
+        runM2 = 0;
+        runVar = 0;
+        runSEM = 0;
+        iter = 0;
+    end
+    
+    methods
+        
+        function obj = OnlineStats(varargin)
+            % OnlineStats class constructor
+            % 
+            % 
+            % Usage obj = OnlineStats(l, maxiter)
+            % l is the length of each sample vector
+            % maxiter is the max number of iterations, for memory preallocation
+            
+            switch nargin
+                case 0
+                    l = 1;
+                    maxiter = 1;
+                case 2
+                    l = varargin{1};
+                    maxiter = varargin{2};
+                otherwise
+                    error('Wrong number of arguments')
+            end
+            
+            obj.samples = zeros(maxiter, l);
+            obj.runMean = zeros(1, l);
+            obj.runM2 = zeros(1, l);
+            obj.iter = 0;
+
+
+=== Following is the header of samples/142990/Yarrow2012/popcode/radToDeg.m ===
+function out = radToDeg(in)
+%
+%
+%
+
+out = 180 .* in ./ pi;
+
+=== Following is the header of samples/142990/Yarrow2012/fig5_C.m ===
+function pfr = fig5_C(fTau, c)
+% fig5_C  Reproduce points from Figure 5C
+% 
+% pfr = fig5_C(fTau, c) calculates the peak-flank ratio (SSI_peak/SSI_flank), for:
+% variability F/tau = fTau spikes/s^2
+% correlation coefficient c
+
+% Stuart Yarrow s.yarrow@ed.ac.uk - 15/11/2011
+
+tic
+
+stderr = 2e-2;      % Target relative error for MC halting
+maxiter = 5e3;      % MC iteration limit
+
+tau = 1.0;          % integration time (s)
+F = fTau .* tau;    % Fano factor
+alpha = 0.5;        % variability exponent
+fmax = 50.0;        % peak firing rate (spikes/s)
+fbg = 10.0;         % background firing rate (spikes/s)
+sigma = 30.0;       % tuning curve width parameter (degrees)
+N = 4;              % population size
+
+% Preferred stimuli
+nrns = [-180 : 360/N : 180-360/N];
+nrn = floor(N/2)+1;
+
+% Define stimulus ensemble and population
+stim = StimulusEnsemble('circular', 360, 360);
+popNrns = CircGaussNeurons(nrns, sigma, fmax, fbg, tau, 'Gaussian-uniform', [F alpha c]);
+singleNrn = CircGaussNeurons(0.0, sigma, fmax, fbg, tau, 'Gaussian-uniform', [F alpha c]);
+
+% Compute measures
+fisher = singleNrn.fisher('analytic', stim, 0.0);
+[dummy, ord1] = max(fisher(1:180));
+[dummy, ord2] = max(fisher(181:end));
+ords = [ord1 180 ord2+180];
+
+ssi = popNrns.ssiss(nrn, 'randMC', stim, ords, stderr, maxiter, 1e10);
+pfr = ssi(2) ./ mean(ssi([1 3]));
+
+
+
+=== Following is the header of samples/142990/Yarrow2012/fig2_CD.m ===
+function [Ifish, Imut] = fig2_CD(N, c)
+% fig2_CD  Reproduce points from Figure 2C and 2D
+% 
+% [Ifish, Imut] = fig2_CD(N, c) calculates the mutual information and I_Fisher for:
+% population size N neurons
+% correlation coefficient c
+
+% Stuart Yarrow s.yarrow@ed.ac.uk - 15/11/2011
+
+tic
+
+stderr = 2e-2;      % Target relative error for MC halting
+maxiter = 4e5;      % MC iteration limit
+
+tau = 1.0;          % integration time (s)
+fTau = 10.0;        % variability F/tau (spikes/s^2)
+F = fTau .* tau;    % Fano factor
+alpha = 0.5;        % variability exponent
+fmax = 50.0;        % peak firing rate (spikes/s)
+fbg = 10.0;         % background firing rate (spikes/s)
+sigma = 30.0;       % tuning curve width parameter (degrees)
+
+% Preferred stimuli
+nrns = [-180 : 360/N : 180-360/N];
+
+% Define stimulus ensemble and population
+stim = StimulusEnsemble('circular', 360, 360);
+popNrns = CircGaussNeurons(nrns, sigma, fmax, fbg, tau, 'Gaussian-uniform', [F alpha c]);
+
+% Compute measures
+Ifish = popNrns.Ifisher(stim);
+[Imut, ImutSEM, ImutSamps] = popNrns.mi('randMC', stim, stderr, maxiter);
+    
+fprintf('fig2_CD.m\n')
+fprintf('Parameters: N = %g neurons, c = %g\n', N, fTau)
+fprintf('I_Fisher = %g bits\n', Ifish)
+fprintf('I_mut = %g bits with StdErr %g bits\n', Imut, ImutSEM)
+fprintf('I_mut - I_Fisher = %g bits\n', Imut - Ifish)
+
+
+=== Following is the header of samples/142990/Yarrow2012/fig1.m ===
+function [Ifish, Imut] = fig1(fTau, fbg)
+% fig1  Reproduce points from Figure 1
+% 
+% [Ifish, Imut] = fig1(fTau, fbg) calculates the mutual information and I_Fisher for:
+% variability F/tau = fTau spikes/s^2
+% background activity f_bg = fbg spikes/s
+
+% Stuart Yarrow s.yarrow@ed.ac.uk - 15/11/2011
+
+tic
+
+stderr = 2e-2;      % Target relative error for MC halting
+maxiter = 1e5;      % MC iteration limit
+
+tau = 1.0;          % integration time
+F = fTau .* tau;    % Fano factor
+alpha = 0.5;        % variability exponent
+fmax = 50.0;        % peak firing rate
+sigma = 30.0;       % tuning curve width parameter
+N = 4;              % population size
+
+% Preferred stimuli
+nrns = [-180 : 360/N : 180-360/N];
+
+% Define stimulus ensemble and population
+stim = StimulusEnsemble('circular', 360, 360);
+popNrns = CircGaussNeurons(nrns, sigma, fmax, fbg, tau, 'Gaussian-independent', [F alpha]);
+
+% Compute measures
+Ifish = popNrns.Ifisher(stim);
+[Imut, ImutSEM, ImutSamps] = popNrns.mi('randMC', stim, stderr, maxiter);
+
+fprintf('fig1.m\n')
+fprintf('Parameters: F/tau = %g spikes/s^2, f_bg = %g spikes/s\n', fTau, fbg)
+fprintf('I_Fisher = %g bits\n', Ifish)
+fprintf('I_mut = %g bits with StdErr %g bits\n', Imut, ImutSEM)
+fprintf('I_mut - I_Fisher = %g bits\n', Imut - Ifish)
+
+=== Following is the header of samples/142990/Yarrow2012/README.txt ===
+Reproduces data points from all figures in:
+S Yarrow, E Challis and P Series,
+Fisher and Shannon information in finite neural populations.
+Neural Computation (in press).
+
+Contact:
+Stuart Yarrow
+s.yarrow@ed.ac.uk
+Institute for Adaptive and Neural Computation / Neuroinformatics DTC
+School of Informatics, University of Edinburgh
+
+Usage:
+
+1)  This code requires the lightspeed toolbox, which can be downloaded from:
+    
+    http://research.microsoft.com/en-us/um/people/minka/software/lightspeed/
+    
+    Note that the lightspeed toolbox contains mex files that must be compiled before
+    use; see the lightspeed README, and comments in install_lightspeed.m, for further
+    information.
+
+2)  Unzip yarrow2012.zip
+
+3)  Prepare the popcode toolbox for use by running install_popcode.m - this compiles
+    the cellsxfun mex file for your system. 
+
+4)  Both the lightspeed and popcode toolbox directories must be on the Matlab path; the
+    install scripts should do this for you, but this is the first thing to check if you
+    have problems with functions not being recognised.
+
+5)  To reproduce a point from a figure, run the appropriate Matlab function
+    (e.g. fig1.m).  Information on the parameters for each function can be found
+    using the help command (e.g. "help fig1").
+
+6)  See figure scripts for further information on parameter values.
+
+7)  Some of the scripts/functions will take a *long* time (maybe a couple of days) to run.
+
+8)  Hopefully the figure functions/scripts, should serve as examples of how to use the popcode
+    toolbox.  See comments in the toolbox files for additional information.  Note, however,
+
+
+=== Following is the header of samples/142990/Yarrow2012/install_popcode.m ===
+% Compile cellsxfun.cpp to mex file
+mex -o popcode/cellsxfun popcode/cellsxfun.cpp
+
+% Add popcode directory to the path
+addpath([pwd '/popcode'])
+
+=== Following is the header of samples/142990/Yarrow2012/fig8.m ===
+function [fisher, ssi, SSIfisher] = fig8(N, beta, sigma_mod, sigma)
+% fig8  Reproduce curves from Figure 8
+% 
+% [fisher, ssi, SSIfisher] = fig8(N, adapt, sigma_adapt, sigma) calculates the
+% population Fisher information, SSI and SSI_Fisher for:
+% population size N
+% adaptation modulation factor beta (in range [0,1])
+% adaptation width sigma_mod (degrees)
+% tuning curve width sigma (degrees)
+
+% Stuart Yarrow s.yarrow@ed.ac.uk - 18/11/2011
+
+tic
+
+stderr = 5e-3;      % Target relative error for MC halting
+maxiter = 2e3;      % MC iteration limit
+
+fTau = 5.0;         % variability F/tau (spikes/s^2)
+tau = 1.0;          % integration time (s)
+F = fTau .* tau;    % Fano factor
+fbg = 10.0;         % background activity (spikes/s)
+alpha = 0.5;        % variability exponent
+fmax = 50.0;        % peak firing rate (spikes/s)
+
+% Preferred stimuli
+nrns = [-180 : 360/N : 180-360/N];
+
+% Define stimulus ensemble and population
+stim = StimulusEnsemble('circular', 360, 360);
+popNrns = CircGaussNeurons(nrns, sigma, fmax, fbg, tau, 'Gaussian-independent', [F alpha]);
+
+% Apply gain modulation
+popNrns = popNrns.gainadapt(sigma_mod, beta, 0.0);
+
+% Compute measures
+fisher = popNrns.fisher('analytic', stim, 0.0);
+SSIfisher =  popNrns.SSIfisher([], 'analytic', stim, 0.0);
+ssi = popNrns.ssiss([], 'randMC', stim, [], stderr, maxiter, 1e10);
+
+% Report results
+
+
+=== Following is the header of samples/142990/Yarrow2012/fig2_EF.m ===
+function [Ifish, Imut] = fig2_EF(N, c)
+% fig2_EF  Reproduce points from Figure 2E and 2F
+% 
+% [Ifish, Imut] = fig2_EF(N, c) calculates the mutual information and I_Fisher for:
+% population size N neurons
+% max correlation coefficient c
+
+% Stuart Yarrow s.yarrow@ed.ac.uk - 15/11/2011
+
+tic
+
+stderr = 2e-2;      % Target relative error for MC halting
+maxiter = 4e5;      % MC iteration limit
+
+tau = 1.0;          % integration time (s)
+fTau = 10.0;        % variability F/tau (spikes/s^2)
+F = fTau .* tau;    % Fano factor
+alpha = 0.5;        % variability exponent
+fmax = 50.0;        % peak firing rate (spikes/s)
+fbg = 10.0;         % background firing rate (spikes/s)
+sigma = 30.0;       % tuning curve width parameter (degrees)
+rho = 30.0;         % correlation range parameter (degrees)
+
+% Preferred stimuli
+nrns = [-180 : 360/N : 180-360/N];
+
+% Define stimulus ensemble and population
+stim = StimulusEnsemble('circular', 360, 360);
+popNrns = CircGaussNeurons(nrns, sigma, fmax, fbg, tau, 'Gaussian-exponential', [F alpha c rho]);
+
+% Compute measures
+Ifish = popNrns.Ifisher(stim);
+[Imut, ImutSEM, ImutSamps] = popNrns.mi('randMC', stim, stderr, maxiter);
+    
+fprintf('fig2_EF.m\n')
+fprintf('Parameters: N = %g neurons, c = %g\n', N, fTau)
+fprintf('I_Fisher = %g bits\n', Ifish)
+fprintf('I_mut = %g bits with StdErr %g bits\n', Imut, ImutSEM)
+fprintf('I_mut - I_Fisher = %g bits\n', Imut - Ifish)
+
+
+=== Following is the header of samples/142990/Yarrow2012/fig2_AB.m ===
+function [Ifish, Imut] = fig2_AB(N, fTau)
+% fig2_AB  Reproduce points from Figure 2A and 2B
+% 
+% [Ifish, Imut] = fig2_AB(N, fTau) calculates the mutual information and I_Fisher for:
+% population size N neurons
+% variability F/tau = fTau spikes/s^2
+
+% Stuart Yarrow s.yarrow@ed.ac.uk - 15/11/2011
+
+tic
+
+stderr = 2e-2;      % Target relative error for MC halting
+maxiter = 1e5;      % MC iteration limit
+
+tau = 1.0;          % integration time (s)
+F = fTau .* tau;    % Fano factor
+alpha = 0.5;        % variability exponent
+fmax = 50.0;        % peak firing rate (spikes/s)
+fbg = 10.0;         % background firing rate (spikes/s)
+sigma = 30.0;       % tuning curve width parameter (degrees)
+
+% Preferred stimuli
+nrns = [-180 : 360/N : 180-360/N];
+
+% Define stimulus ensemble and population
+stim = StimulusEnsemble('circular', 360, 360);
+popNrns = CircGaussNeurons(nrns, sigma, fmax, fbg, tau, 'Gaussian-independent', [F alpha]);
+
+% Compute measures
+Ifish = popNrns.Ifisher(stim);
+[Imut, ImutSEM, ImutSamps] = popNrns.mi('randMC', stim, stderr, maxiter);
+    
+fprintf('fig2_AB.m\n')
+fprintf('Parameters: N = %d neurons, F/tau = %g spikes/s^2\n', N, fTau)
+fprintf('I_Fisher = %g bits\n', Ifish)
+fprintf('I_mut = %g bits with StdErr %g bits\n', Imut, ImutSEM)
+fprintf('I_mut - I_Fisher = %g bits\n', Imut - Ifish)
+

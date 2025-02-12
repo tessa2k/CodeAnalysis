@@ -1,0 +1,535 @@
+=== Following is the header of samples/267598/AGLIF_model/Fig7_ModelDB_nest.py ===
+import numpy as np
+import matplotlib.pyplot as plt
+from run_mds_nest import mds_nest_sim
+
+fig = plt.figure()
+p_time_stamps = []
+p_membrane_voltage = []
+n_time_stamps = []
+n_membrane_voltage = []
+Istim = [400, 500, 600, 700, 800, 1000, 1100]
+sim_length=1000
+campionamento=40
+d_dt=0.005*campionamento
+for i in range(1,8):
+    Istim0 = 0
+    current = np.ones(int(sim_length/d_dt))*Istim0
+    change_cur = 400
+    current[int(change_cur/d_dt):int(sim_length/d_dt) +
+        1] = np.ones(len(current[int(change_cur/d_dt):int(sim_length/d_dt)+1]))*Istim[i-1]
+    change_cur = 800
+    current[int(change_cur/d_dt):int(sim_length/d_dt) +
+        1] = np.ones(len(current[int(change_cur/d_dt):int(sim_length/d_dt)+1]))*Istim0
+    plt.subplot(7,1,i)
+    a, b , n_I_adapt, n_I_dep = mds_nest_sim('corrcost',current,d_dt)
+    p_time_stamps.append(a)
+    p_membrane_voltage.append(b)
+
+    plt.subplot(7,1,i)
+    plt.xlim([0, 1000])
+    if i<7:
+        plt.xticks(color='white')
+    plt.plot(p_time_stamps[i-1], p_membrane_voltage[i-1], 'k', label='python')
+    plt.xlabel('Time (ms)')
+    plt.ylabel(str(Istim[i-1]/1000)+' nA',fontsize=7,rotation='horizontal', ha='right',va="center",weight='bold')
+plt.ylim([-75, -30])
+#plt.show()
+plt.savefig('Model_traces_for_constant_current_injections_NEST.png')
+
+
+=== Following is the header of samples/267598/AGLIF_model/Fig8_ModelDB_nest.py ===
+import numpy as np
+import matplotlib.pyplot as plt
+from run_mds_nest import mds_nest_sim
+from mds_python_model import mds_sim
+
+fig = plt.figure()
+p_time_stamps = []
+p_membrane_voltage = []
+n_time_stamps = []
+n_membrane_voltage = []
+Istim = ['A','B','C','D','E','F']
+sim_length=1000
+campionamento=40
+d_dt=0.005*campionamento
+for i in range(1,7):
+    if Istim[i-1]=='A':
+        Istim0=0
+        Istim1=600
+        Istim2=400
+        Istim3=1000
+        current = np.ones(int(sim_length/d_dt))*Istim0
+        change_cur = 200
+        current[int(change_cur/d_dt):int(sim_length/d_dt) +1] = np.ones(len(current[int(change_cur/d_dt):int(sim_length/d_dt)+1]))*Istim1
+        change_cur = 300
+        current[int(change_cur/d_dt):int(sim_length/d_dt) +1] = np.ones(len(current[int(change_cur/d_dt):int(sim_length/d_dt)+1]))*Istim2
+        change_cur = 500
+        current[int(change_cur/d_dt):int(sim_length/d_dt) +1] = np.ones(len(current[int(change_cur/d_dt):int(sim_length/d_dt)+1]))*Istim3
+        change_cur = 600
+        current[int(change_cur/d_dt):int(sim_length/d_dt) +1] = np.ones(len(current[int(change_cur/d_dt):int(sim_length/d_dt)+1]))*Istim0
+        change_cur = 800
+        current[int(change_cur/d_dt):int(sim_length/d_dt) +1] = np.ones(len(current[int(change_cur/d_dt):int(sim_length/d_dt)+1]))*Istim2
+    if Istim[i-1]=='A':
+        Istim0=0
+        Istim1=600
+        Istim2=400
+        Istim3=1000
+        current = np.ones(int(sim_length/d_dt))*Istim0
+        change_cur = 200
+        current[int(change_cur/d_dt):int(sim_length/d_dt) +1] = np.ones(len(current[int(change_cur/d_dt):int(sim_length/d_dt)+1]))*Istim1
+        change_cur = 300
+
+
+=== Following is the header of samples/267598/AGLIF_model/optimization/plotta_sim_dep_ini_Idip.py ===
+def plot_tr_v3_vect3_dep_ini(Vconvfact,vtm,vrm,a_inc,bet,delta1,alpha3,sc, tao_m, Idep_ini_vr, st_sign, dur_sign,Idep_ini,Ith):
+
+    import pyabf
+    import matplotlib.pyplot as plt
+    import sympy as sym
+    import numpy as np
+    from load_eq import load_v3
+
+    plotta=False
+    n_sp=np.size(a_inc)
+
+    corr = round(alpha3 * sc) / 1000
+
+    tim_aux=np.linspace(0, 1000, 10000)
+
+    #alpha3 = [0.252587 * 4, 0.252587 * 5]
+    t_out = []
+    tr=int(alpha3/sc)+10
+    #cell_num = '95810005'
+
+    t = sym.Symbol('t')
+    delta, Psi, alpha, beta, gamma, IaA0, IdA0, t0, V0 = sym.symbols('delta,Psi,alpha,beta,gamma,IaA0,IdA0,t0,V0')
+
+    [V, Iadap, Idep] = load_v3()
+    psi1 = ((-4) * bet + ((1 + delta1) ** 2)) ** (0.5)
+
+    t0_val=0
+    #vtm=np.mean(vol_tr)/66.35
+    #vrm=-1.0
+    #d_in=st_point_dep1[r]
+    #a_in=st_point_ada1[r]
+    #aux = V.subs(alpha, alpha3).subs(beta, bet).subs(gamma, gam).subs(t0, t0_val).subs(V0, -1).subs(IaA0, a_in).subs(IdA0,d_in)
+    #aux = V.subs(alpha, alpha3).subs(beta, bet).subs(delta, delta1).subs(t0, t0_val).subs(V0, -1).subs(IaA0,a_in).subs(IdA0,d_in).subs(Psi, psi1)
+    if plotta:
+        plt.figure()
+    time=[]
+    voltage=[]
+    t_next=0
+    adap_final=[]
+    for i in range(n_sp+1):
+
+
+=== Following is the header of samples/267598/AGLIF_model/optimization/load_eq.py ===
+def load():
+    import sympy as sym
+    t = sym.Symbol('t')
+    alpha, beta, gamma, IaA0, IdA0, t0, V0 = sym.symbols('alpha,beta,gamma,IaA0,IdA0,t0,V0')
+
+
+    V = (1 / 2) * sym.exp(1) ** ((-1) * t0 * (1 + (-1) * beta) ** (1 / 2) + (-1) * t * ((1 + (-1) * beta) ** (1 / 2) + gamma)) * (1 + (-1) * beta) ** (-3 / 2) * ((-1) + beta + gamma ** 2) ** (-1) * ((-2) * sym.exp(1) ** (t * (1 + (-1) * beta) ** (1 / 2) + t0 * ((1 + (-1) * beta) ** (1 / 2) + gamma)) * IdA0 * (1 + (-1) * beta) ** (3 / 2) * beta * ((-1) + gamma) + 2 * sym.exp(1) ** (t0 * (1 + (-1) * beta) ** (1 / 2) + t * ((1 + (-1) * beta) ** (1 / 2) + gamma)) * (1 + (-1) * beta) ** (1 / 2) * ((-1) + (-1) * alpha + beta) * ((-1) + beta + gamma ** 2) + sym.exp(1) ** (2 * t0 * (1 + (-1) * beta) ** (1 / 2) + t * gamma) * ((-1) * V0 * ((-1) + (1 + (-1) * beta) ** (1 / 2)) * ((-1) + beta) * ((-1) + beta + gamma ** 2) + alpha * ((-1) + (1 + (-1) * beta) ** (1 / 2) + beta) * ((-1) + beta + gamma ** 2) + (-1) * ((-1) + beta) * ((IaA0 + (-1) * IdA0) * beta ** 2 + ((-1) + (1 + (-1) * beta) ** (1 / 2)) * beta * (1 + IdA0 * ((-1) + gamma)) + ((-1) + (1 + (-1) * beta) ** (1 / 2)) * ((-1) + gamma ** 2) + IaA0 * beta * ((-1) + gamma ** 2))) + ( -1) * sym.exp(1) ** (t * (2 * (1 + (-1) * beta) ** (1 / 2) + gamma)) * ((-1) * alpha * (1 + (1 + (-1) * beta) ** (1 / 2) + (-1) * beta) * ((-1) + beta + gamma ** 2) + V0 * (1 + (1 + (-1) * beta) ** (1 / 2)) * ((-1) + beta) * ((-1) + beta + gamma ** 2) + ((-1) + beta) * (((-1) * IaA0 + IdA0) * beta ** 2 + (1 + (1 + (-1) * beta) ** (1 / 2)) * ((-1) + gamma ** 2) + beta * (IaA0 + (1 + (1 + (-1) * beta) ** (1 / 2)) * (1 + IdA0 * ((-1) + gamma)) + (-1) * IaA0 * gamma ** 2))));
+    Iadap = (1 / 2) * sym.exp(1) ** ((-1) * t0 * (1 + (-1) * beta) ** (1 / 2) + (-1) * t * ((1 + (-1) * beta) ** (1 / 2) + gamma)) * (1 + (-1) * beta) ** (-3 / 2) * ((-1) + beta + gamma ** 2) ** (-1) * (2 * sym.exp(1) ** (t * (1 + (-1) * beta) ** (1 / 2) + t0 * ((1 + (-1) * beta) ** (1 / 2) + gamma)) * IdA0 * (1 + (-1) * beta) ** (3 / 2) * beta + (-2) * sym.exp(1) ** (t0 * (1 + (-1) * beta) ** (1 / 2) + t * ((1 + (-1) * beta) ** (1 / 2) + gamma)) * alpha * (1 + (-1) * beta) ** (1 / 2) * ((-1) + beta + gamma ** 2) + (-1) * sym.exp(1) ** (t * (2 * (1 + (-1) * beta) ** (1 / 2) + gamma)) * (1 + alpha * (1 + (-1) * beta) ** (1 / 2) + (-2) * beta + IdA0 * (1 + (-1) * beta) ** (1 / 2) * beta + (-1) * alpha * (1 + (-1) * beta) ** (1 / 2) * beta + beta ** 2 + (-1) * IdA0 * ( 1 + (-1) * beta) ** (1 / 2) * beta ** 2 + (-1) * IdA0 * beta * gamma + IdA0 * beta ** 2 * gamma + (-1) * gamma ** 2 + (-1) * alpha * (1 + (-1) * beta) ** (1 / 2) * gamma ** 2 + beta * gamma ** 2 + IaA0 * (( -1) + (1 + (-1) * beta) ** (1 / 2)) * ((-1) + beta) * ((-1) + beta + gamma ** 2) + V0 * (1 + beta ** 2 + (-1) * gamma ** 2 + beta * ((-2) + gamma ** 2))) + sym.exp(1) ** (2 * t0 * (1 + (-1) * beta) ** (1 / 2) + t * gamma) * (1 + (-1) * alpha * (1 + (-1) * beta) ** (1 / 2) + (-2) * beta + (-1) * IdA0 * (1 + (-1) * beta) ** (1 / 2) * beta + alpha * (1 + (-1) * beta) ** (1 / 2) * beta + beta ** 2 + IdA0 * (1 + (-1) * beta) ** (1 / 2) * beta ** 2 + (-1) * IdA0 * beta * gamma + IdA0 * beta ** 2 * gamma + (-1) * gamma ** 2 + alpha * (1 + (-1) * beta) ** (1 / 2) * gamma ** 2 + beta * gamma ** 2 + (-1) * IaA0 * (1 + (1 + (-1) * beta) ** (1 / 2)) * ((-1) + beta) * ((-1) + beta + gamma ** 2) + V0 * (1 + beta ** 2 + (-1) * gamma ** 2 + beta * ((-2) + gamma ** 2))));
+    Idep = sym.exp(1) ** (((-1) * t + t0) * gamma) * IdA0;
+    return [V,Iadap,Idep]#,t,alpha, beta, gamma, IaA0, IdA0, t0, V0]
+
+def load_V_beta_1():
+    import sympy as sym
+    t = sym.Symbol('t')
+    alpha, beta, gamma, IaA0, IdA0, t0, V0 = sym.symbols('alpha,beta,gamma,IaA0,IdA0,t0,V0')
+
+    V = -t0 + t0*(IaA0 - V0) + V0 + t*(1 - IaA0 + V0) + 0.5*(t - t0)*(2 + t - t0)*alpha - ((-1 + sym.exp((-t + t0)*gamma))*IdA0*(-1+gamma)) / gamma**2 + (IdA0*(t - t0)) / gamma
+
+    return V
+
+def load_eq_gamma_1_beta_1():
+    import sympy as sym
+    t = sym.Symbol('t')
+    alpha, beta, gamma, IaA0, IdA0, t0, V0 = sym.symbols('alpha,beta,gamma,IaA0,IdA0,t0,V0')
+
+    V = IdA0*(t - t0) - t0 + t0*(IaA0 - V0) + V0 + t*(1 - IaA0 + V0) + 1 / 2*(t - t0)*(2 + t - t0)*alpha
+    Iadap = IdA0 * (-1 + sym.exp(1) ** ((-1) * t + t0) + t - t0) + IaA0*(1 - t + t0) + 0.5 * (t - t0) * (2 + 2 * V0 + t * alpha - t0 * alpha)
+    Idep = IdA0 * (sym.exp(1) ** ((-1) * t + t0))
+
+    return [V,Iadap,Idep]
+
+
+def load_time_gamma_1_beta_1():
+    import sympy as sym
+    t = sym.Symbol('t')
+    alpha, beta, gamma, IaA0, IdA0, t0, V0,Vth = sym.symbols('alpha,beta,gamma,IaA0,IdA0,t0,V0,Vth')
+
+    func_t=(-1+IaA0-IdA0-V0+(-1+t0)*alpha+sym.sqrt((1-IaA0+IdA0+V0)**2+2*(1-IaA0+IdA0+Vth)*alpha+alpha**2 ))/alpha
+    return func_t
+
+
+
+=== Following is the header of samples/267598/AGLIF_model/optimization/dati_exp_neuron1.txt ===
+-72.5
+-65
+-52
+400,600,800,1000
+405,419,434,449,466,484,502,523,544,566,590,614,638,664,689,715,741,768,794 
+407,423,441,460,482,505,531,560,592,625,661,699,737,776 
+410,431,455,485,525,587
+419,461
+
+=== Following is the header of samples/267598/AGLIF_model/optimization/plotta_sim_dep_ini.py ===
+def plot_tr(vol_tr,st_point_dep1,st_point_ada1,dep_vec1_2,ada_vec1_2,bet,gam,alpha3,n_sp,r,c):
+    import pyabf
+    import matplotlib.pyplot as plt
+    import sympy as sym
+    import numpy as np
+    from load_eq import load
+
+    import pyabf
+    cell_num = '95810005'
+    abf = pyabf.ABF('C:\\Users\\INA\\Downloads\\PC-cAC\\PC-cAC\\tutti\\' + cell_num + '.abf')
+    abf.setSweep(15)
+    vol_base = -62.86698717948718
+    abf.sweepY = abf.sweepY + vol_base
+
+    t = sym.Symbol('t')
+    alpha,beta,gamma,IaA0,IdA0,t0,V0= sym.symbols('alpha,beta,gamma,IaA0,IdA0,t0,V0')
+
+    [V, Iadap, Idep] = load()
+    #V=(1/2)*sym.exp(1)**((-1)*t0*(1+(-1)*beta)**(1/2)+(-1)*t*((1+(-1)*beta)**(1/2)+gamma))*(1+(-1)*beta)**(-3/2)*((-1)+beta+gamma**2)**(-1)*((-2)*sym.exp(1)**(t*(1+(-1)*beta)**(1/2)+t0*((1+(-1)*beta)**(1/2)+gamma))*IdA0*(1+(-1)*beta)**(3/2)*beta*((-1)+gamma)+(-2)*sym.exp(1)**(t0*(1+(-1)*beta)**(1/2)+t*((1+(-1)*beta)**(1/2)+gamma))*(1+(-1)*beta)**(1/2)*((-1)+alpha+beta)*((-1)+beta+gamma**2)+sym.exp(1)**(2*t0*(1+(-1)*beta)**(1/2)+t*gamma)*((-1)*V0*((-1)+(1+(-1)*beta)**(1/2))*((-1)+beta)*((-1)+beta+gamma**2)+alpha*((-1)+(1+(-1)*beta)**(1/2)+beta)*((-1)+beta+gamma**2)+(-1)*((-1)+beta)*((IaA0+(-1)*IdA0)*beta**2+((-1)+(1+(-1)*beta)**(1/2))*beta*((-1)+IdA0*((-1)+gamma))+(-1)*((-1)+(1+(-1)*beta)**(1/2))*((-1)+gamma**2)+IaA0*beta*((-1)+gamma**2)))+sym.exp(1)**(t*(2*(1+(-1)*beta)**(1/2)+gamma))*(alpha*(1+(1+(-1)*beta)**(1/2)+(-1)*beta)*((-1)+beta+gamma**2)+(-1)*V0*(1+(1+(-1)*beta)**(1/2))*((-1)+beta)*((-1)+beta+gamma**2)+((-1)+beta)*((IaA0+(-1)*IdA0)*beta**2+(-1)*(1+(1+(-1)*beta)**(1/2))*beta*((-1)+IdA0*((-1)+gamma))+(1+(1+(-1)*beta)**(1/2))*((-1)+gamma**2)+IaA0*beta*((-1)+gamma**2))))
+    #Iadap=(1/2)*sym.exp(1)**((-1)*t0*(1+(-1)*beta)**(1/2)+(-1)*t*((1+(-1)*beta)**(1/2)+gamma))*(1+(-1)*beta)**(-3/2)*((-1)+beta+gamma**2)**(-1)*(2*sym.exp(1) **(t*(1+(-1)*beta)**(1/2)+t0*((1+(-1)*beta)**(1/2)+gamma))*IdA0*(1+(-1)*beta)**(3/2)*beta+(-2)*sym.exp(1)**(t0*(1+(-1)*beta)**(1/2)+t*((1+(-1)*beta)**(1/2)+gamma))*alpha*(1+(-1)*beta)**(1/2)*((-1)+beta+gamma**2)+sym.exp(1)**(t*(2*(1+(-1)*beta)**(1/2)+gamma))*(1+(-1)*alpha*(1+(-1)*beta)**(1/2)+(-2)*beta+(-1)*IdA0*(1+(-1)*beta)**(1/2)*beta+alpha*(1+(-1)*beta)**(1/2)*beta+beta**2+IdA0*(1+(-1)*beta)**(1/2)*beta**2+IdA0*beta*gamma+(-1)*IdA0*beta**2*gamma+(-1)*gamma**2+alpha*(1+(-1)*beta)**(1/2)*gamma**2+beta*gamma**2+(-1)*IaA0*((-1)+(1+(-1)*beta)**(1/2))*((-1)+beta)*((-1)+beta+gamma**2)+(-1)*V0*(1+beta**2+(-1)*gamma**2+beta*((-2)+gamma**2)))+sym.exp(1)**(2*t0*(1+(-1)*beta)**(1/2)+t*gamma)*((-1)+(-1)*alpha*(1+(-1)*beta)**(1/2)+2*beta+(-1)*IdA0*(1+(-1)*beta)**(1/2)*beta+alpha*(1+(-1)*beta)**(1/2)*beta+(-1)*beta**2+IdA0*(1+(-1)*beta)**(1/2)*beta**2+(-1)*IdA0*beta*gamma+IdA0*beta**2*gamma+gamma**2+alpha*(1+(-1)*beta)**(1/2)*gamma**2+(-1)*beta*gamma**2+(-1)*IaA0*(1+(1+(-1)*beta)**(1/2))*((-1)+beta)*((-1)+beta+gamma**2)+V0*(1+beta**2+(-1)*gamma**2+beta*((-2)+gamma**2))));
+    #Idep=sym.exp(1)**(((-1)*t+t0)*gamma)*IdA0;
+
+
+
+
+
+    t0_val=0
+    vtm=np.mean(vol_tr)/66.35
+    vrm=-1.0
+    d_in=st_point_dep1[r]
+    a_in=st_point_ada1[r]
+    aux = V.subs(alpha, alpha3[1]).subs(beta, bet).subs(gamma, gam).subs(t0, t0_val).subs(V0, vrm).subs(IaA0, a_in).subs(IdA0,d_in)
+    print('***** dep init ****')
+    print(d_in)
+    print('***** ada init ****')
+    print(a_in)
+
+    lam_x = sym.lambdify(t, aux, modules=['numpy'])
+    x_vals = abf.sweepX * 1000 / 15.58
+    y_vals = lam_x(x_vals)
+
+
+=== Following is the header of samples/267598/AGLIF_model/optimization/plot_genetic_cm_idep_ini2.py ===
+import sympy as sym
+from load_eq import load_v3
+import numpy as np
+from geneticalgorithm import geneticalgorithm as ga
+import pickle
+from plotta_sim_dep_ini_Idip import plot_tr_v3_vect3_dep_ini,plot_tr_from_fit_neuron_rette_dep_ini
+from load_eq import load_v3
+from scipy.optimize import minimize
+from scipy.optimize import Bounds
+import matplotlib.pyplot as plt
+
+def save_plot(neuron_nb,puntini,k):
+    #neuron_nb='95822006'
+    #k=100
+    #neuron_list = []
+    #puntini = False
+    fitting_rule='monod'
+    #puntini=False#True#puntini=True#Idep_ini
+
+    file1 = open('dati_exp_' + neuron_nb + '.txt', 'r')
+    Lines = file1.readlines()
+    spk_time_orig=[]
+    Istm = np.int32(Lines[3].split(','))
+    #durata  e inizio stim nostre simulazioni
+
+    durata_stim=400
+    input_start_time=31.2
+    limite_asse_x=431.2
+    # durata  e inizio stim simulazioni Allen
+    if Allen:
+        durata_stim=1000
+        input_start_time=1020
+        limite_asse_x=1032
+    tempo_finale=np.zeros(len(Istm))
+    tempo_finale_tutti=np.zeros(len(Istm))
+    post_tempo_finale=np.zeros(len(Istm))
+    post_tempo_finale_tutti=np.zeros(len(Istm))
+    corr_sp=0
+    for i in range(len(Istm)):
+        try:
+
+
+=== Following is the header of samples/267598/AGLIF_model/optimization/optimizer_cm_Idep_ini.py ===
+from Genetic_optimization_cm_Idep_ini import runsimulation
+from joblib import Parallel, delayed
+import multiprocessing
+import time
+t = time.time()
+
+prova=['neuron1']
+num_cores = len(prova)
+
+Ltt = Parallel(n_jobs=num_cores, verbose=50)(delayed(runsimulation)(prova[i],False) for i in range(len(prova)))
+
+elapsed = time.time() - t
+
+
+=== Following is the header of samples/267598/AGLIF_model/optimization/Genetic_optimization_cm_Idep_ini.py ===
+import sympy as sym
+from load_eq import load_v3
+import numpy as np
+from geneticalgorithm import geneticalgorithm as ga
+import pickle
+from plotta_sim_dep_ini import plot_tr_v3_vect3_dep_ini2,plot_tr_from_fit_neuron_dep_ini2
+from load_eq import load_v3
+from scipy.optimize import minimize
+from scipy.optimize import Bounds
+import matplotlib.pyplot as plt
+
+def runsimulation(neuron_nb,cm_fixed):
+
+    def exp_cum(x, a, b):
+        return a * (1 - np.exp(-b * x))
+
+
+    def monod(x, a, b, c, alp):
+        return c + (a * np.exp(b) * x) / (alp + x)
+
+
+    def exp_cum3(x, a, b, c):
+        return a * (1 - np.exp(-b * x)) + c
+
+
+    def pol2(x, a, b):
+        return a * x + b * x ** 2
+
+
+    def monod_tot(x):
+        err = []
+        for i in range(corr_sp2):
+            err.append(sum((x[2] + ((x[0] * np.exp(x[1] * Istm[len(Istm) - 1 - i] / 1000).astype(np.float64) * np.array(t_sp_abs_tutti[corr_sp2 - i - 1]).astype(np.float64))) / (x[3] + np.array(t_sp_abs_tutti[corr_sp2 - i - 1]).astype(np.float64)) - np.array(Iada_tutti[corr_sp2 - i - 1]).astype(np.float64)) ** 2))  # *np.array(t_var_tutti[corr_sp2-i-1]).astype(np.float64)))
+        err_tot = sum(err)
+        return err_tot.astype(np.float64)
+
+
+
+    def ida_to_mat(IdA_ex):
+        IdA_ex_tras=(IdA_ex+(-IdA_min))/(IdA_max-IdA_min)*(n-1)
+
+
+=== Following is the header of samples/267598/AGLIF_model/README.html ===
+<html>
+<p>NEST patch and python files for the model:
+<a href="">
+Addolorata Marasco, Emiliano Spera, Vittorio De
+Falco, Annalisa Iuorio, Carmen Alina Lupascu, Sergio
+Solinas and Michele Migliore. An Adaptive Generalized Leaky
+Integrate-and-Fire model for hippocampal
+CA1 pyramidal neurons and interneurons.</a>
+</p>
+<p>We propose an adaptive generalized leaky integrate-and-fire model,
+for hippocampal CA1 neurons and interneurons, in which the nonlinear
+nature of the firing dynamics was successfully reproduced by linear
+ordinary equations equipped with nonlinear and more realistic initial
+and update conditions after each spike event, which strictly depends
+on the external stimulation current.
+</p>
+<p>Dependencies and installation instructions: follow instructions below.<br/>
+</p>
+<p>In order to reproduce Fig. 7 and 8 of the paper run:<br/>
+python -i Fig7_ModelDB.py<br/>
+or<br/>
+python -i Fig8_ModelDB.py
+</p>
+<p>To reproduce the same figures with the NEST model run:<br/>
+  python -i Fig7_ModelDB_nest.py<br/>
+  or<br/>
+  python -i Fig8_ModelDB_nest.py<br/>
+</p>
+<p>
+  The scripts will produce the following images:<br/>
+  Fig7 from python code<br/>
+  <img src="Model_traces_for_constant_current_injections.png" alt="Figure 7">
+</p>
+<p>
+  Fig8 from python code<br/>
+  <img src="Model_traces_for_piecewise_currents.png" alt="Figure 8">
+</p>
+<p>
+  Fig7  from python-NEST code<br/>
+  <img src="Model_traces_for_constant_current_injections_NEST.png" alt="Figure 7 NEST">
+
+
+=== Following is the header of samples/267598/AGLIF_model/run_mds_nest.py ===
+import sys, pprint
+import nest
+import numpy as np
+import matplotlib.pyplot as plt
+import time
+import ipdb
+nest.set_verbosity('M_ALL')
+
+def mds_nest_sim(stim, curr_arr, d_dt):
+    time_stamps = np.arange(0,curr_arr.size*d_dt,d_dt)
+    if stim == 'corrcost':
+        sim_lenght = time_stamps[-1]
+        n_time_steps = int(sim_lenght/d_dt)
+        sim_type = 'corrcost'    
+
+    elif stim == 'corrcostatratti':
+        sim_lenght = time_stamps[-1]
+        n_time_steps = int(sim_lenght/d_dt)
+        sim_type = 'corrcostatratti'
+
+
+    time_step = d_dt
+    sim_time = time_step*n_time_steps
+    t_arr = time_stamps 
+
+    nest.ResetKernel()
+
+    # Set simulation parameters
+    nest.resolution = d_dt
+    
+    # create a step current generator
+    cur_gen = nest.Create("step_current_generator")
+    # set times at which current changes and amplitudes of step current
+    nest.SetStatus(cur_gen, {"amplitude_times": t_arr[t_arr>0],
+                             "amplitude_values": curr_arr[t_arr>0]})
+    
+    neuron = nest.Create('migliore')
+    nest.SetStatus(neuron, {"V_m": -72.5})
+    if stim == 'corrcost':
+        nest.SetStatus(neuron,{"corrcostatratti":0,
+
+
+=== Following is the header of samples/267598/AGLIF_model/Fig7_ModelDB.py ===
+import numpy as np
+import matplotlib.pyplot as plt
+from mds_python_model import mds_sim
+
+fig = plt.figure()
+p_time_stamps = []
+p_membrane_voltage = []
+n_time_stamps = []
+n_membrane_voltage = []
+Istim = [400, 500, 600, 700, 800, 1000, 1100]
+sim_length=1000
+campionamento=40
+d_dt=0.005*campionamento
+for i in range(1,8):
+    Istim0 = 0
+    current = np.ones(int(sim_length/d_dt))*Istim0
+    change_cur = 400
+    current[int(change_cur/d_dt):int(sim_length/d_dt) +
+        1] = np.ones(len(current[int(change_cur/d_dt):int(sim_length/d_dt)+1]))*Istim[i-1]
+    change_cur = 800
+    current[int(change_cur/d_dt):int(sim_length/d_dt) +
+        1] = np.ones(len(current[int(change_cur/d_dt):int(sim_length/d_dt)+1]))*Istim0
+    plt.subplot(7,1,i)
+    a, b , p_I_adapt, p_I_dep, p_monod_plot, p_Iadap0max_plot, p_init_sign_plot = mds_sim('corrcost',current, str(Istim[i-1]),d_dt)
+    p_time_stamps.append(a)
+    p_membrane_voltage.append(b)
+
+    plt.subplot(7,1,i)
+    plt.xlim([0, 1000])
+    if i<7:
+        plt.xticks(color='white')
+    plt.plot(p_time_stamps[i-1], p_membrane_voltage[i-1], 'k', label='python')
+    plt.xlabel('Time (ms)')
+    plt.ylabel(str(Istim[i-1]/1000)+' nA',fontsize=7,rotation='horizontal', ha='right',va="center",weight='bold')
+plt.ylim([-75, -30])
+#plt.show()
+plt.savefig('Model_traces_for_constant_current_injections.png')
+
+
+=== Following is the header of samples/267598/AGLIF_model/mds_python_model.py ===
+import matplotlib.pyplot as plt
+import numpy as np
+import time
+import sys
+
+def tagliorette(corr,sim_type):
+    dur_sign = np.inf
+    vinc_inf = 700
+
+    if corr < vinc_inf and corr > 0:
+        dur_sign = lin_func_inf = 0.68*corr - 190.0
+    if sim_type=='corrcostatratti':
+        vinc_sup = np.inf
+
+        if corr > vinc_sup:
+            dur_sign = lin_func_sup = corr + np.inf
+    elif sim_type == 'corrcost':
+        vinc_sup = 1300
+
+        if corr > vinc_sup:
+            dur_sign = lin_func_sup = 76.86-0.028*corr
+    else:
+        print("#####################!!! Sim_type not defined!!!!#######")
+        return
+    
+    return dur_sign
+
+
+def V(t, delta, Psi, alpha, beta, IaA0, IdA0, t0, V0):
+    t_step = t - t0
+    VV_1 = 0.5 / ((beta -delta) * (pow(beta,2) + (beta-1.0) * delta) * (4.0 * beta - (1.0 + delta) ** 2.0)) * Psi
+    VV_2 = 2.0 * np.exp(-t_step * beta) * (beta-1.0) * beta * (beta - delta) * Psi
+    VV_3 = (pow(beta,2) + ((- 1.0) + beta) * delta) * Psi
+    VV_4 = np.exp((1.0 / 2.0) * t_step * (-1.0 + delta -Psi))
+    VV_5 = beta * (beta -delta) * (-1.0 -delta + beta * (3.0 + delta -Psi) + Psi)
+    VV_6 = (pow(beta,2) -delta + beta * delta)
+    VV_7 = (1.0 + (-2.0) * beta + delta -Psi)
+    VV_8 = np.exp((1.0 / 2.0) * t_step * (-1.0 + delta + Psi))
+    VV_9 = beta * (beta-delta) * (-1.0 -delta -Psi + beta * (3.0 + delta + Psi))
+    VV_10 = (pow(beta,2) - delta + beta * delta)
+
+
+=== Following is the header of samples/267598/AGLIF_model/Fig8_ModelDB.py ===
+import numpy as np
+import matplotlib.pyplot as plt
+from mds_python_model import mds_sim
+
+fig = plt.figure()
+p_time_stamps = []
+p_membrane_voltage = []
+n_time_stamps = []
+n_membrane_voltage = []
+Istim = ['A','B','C','D','E','F']
+sim_length=1000
+campionamento=40
+d_dt=0.005*campionamento
+for i in range(1,7):
+    if Istim[i-1]=='A':
+        Istim0=0
+        Istim1=600
+        Istim2=400
+        Istim3=1000
+        current = np.ones(int(sim_length/d_dt))*Istim0
+        change_cur = 200
+        current[int(change_cur/d_dt):int(sim_length/d_dt) +1] = np.ones(len(current[int(change_cur/d_dt):int(sim_length/d_dt)+1]))*Istim1
+        change_cur = 300
+        current[int(change_cur/d_dt):int(sim_length/d_dt) +1] = np.ones(len(current[int(change_cur/d_dt):int(sim_length/d_dt)+1]))*Istim2
+        change_cur = 500
+        current[int(change_cur/d_dt):int(sim_length/d_dt) +1] = np.ones(len(current[int(change_cur/d_dt):int(sim_length/d_dt)+1]))*Istim3
+        change_cur = 600
+        current[int(change_cur/d_dt):int(sim_length/d_dt) +1] = np.ones(len(current[int(change_cur/d_dt):int(sim_length/d_dt)+1]))*Istim0
+        change_cur = 800
+        current[int(change_cur/d_dt):int(sim_length/d_dt) +1] = np.ones(len(current[int(change_cur/d_dt):int(sim_length/d_dt)+1]))*Istim2
+    if Istim[i-1]=='A':
+        Istim0=0
+        Istim1=600
+        Istim2=400
+        Istim3=1000
+        current = np.ones(int(sim_length/d_dt))*Istim0
+        change_cur = 200
+        current[int(change_cur/d_dt):int(sim_length/d_dt) +1] = np.ones(len(current[int(change_cur/d_dt):int(sim_length/d_dt)+1]))*Istim1
+        change_cur = 300
+        current[int(change_cur/d_dt):int(sim_length/d_dt) +1] = np.ones(len(current[int(change_cur/d_dt):int(sim_length/d_dt)+1]))*Istim2
+
+

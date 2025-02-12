@@ -1,0 +1,275 @@
+=== Following is the header of samples/267617/ZhengKamiya2023/hhmfb.mod ===
+TITLE hhmfb.mod   modified squid sodium, potassium, and leak channels
+
+COMMENT
+  This is a Hodgkin-Huxley treatment for the set of sodium, 
+  potassium, and leakage channels found in the squid giant axon membrane, 
+  adapted to channels in mossy fiber terminals
+  Original: SW Jaslove  6 March, 1992
+  Modified version: P Jonas, 10 March, 2004
+  Modified version: C Schmidt-Hieber, 17 Dec 2007
+  Modified version: C Schmidt-Hieber, 08 Sep 2008
+  Modified version: C Schmidt-Hieber, 17 Apr 2010
+  Revision history: 
+  September 13, 2004: Revised fit - final version
+  Dec 17, 2007: hScale to account for slower inactivation in the soma, CSH
+  Sep 08, 2008: Make rate parameters range variables
+  Apr 17, 2010: global inactivation shift; make vShift (Donnan) global
+ENDCOMMENT
+
+UNITS {
+    (mA) = (milliamp)
+    (mV) = (millivolt)
+}
+ 
+? interface
+NEURON {
+    THREADSAFE
+    SUFFIX hhmfb
+    USEION na READ ena WRITE ina
+    USEION k READ ek WRITE ik
+    NONSPECIFIC_CURRENT il
+    RANGE gnabar, gkbar, gl, el, gna, gk, hScale, am0, am1, am2, bm0, bm1, ah0, ah1, bh0, bh1, bh2
+    GLOBAL minf, hinf, ninf, mtau, htau, ntau, vShift, vShift_inact
+}
+ 
+PARAMETER {
+    : alpha = 93.8285 * vtrap(-(v-105.023-vShift+vLeft), 17.7094)
+    am0  = 9.38285e+1 (/ms)
+    am1  = 1.05023e+2 (mV) : Note that this is used as a positive value here.
+    am2  = 1.77094e+1 (mV)
+    : beta =  0.168396 * exp(-(v-vShift+vLeft)/23.2707)
+
+
+=== Following is the header of samples/267617/ZhengKamiya2023/mfbnca.mod ===
+: Six state kinetic N-type calcium channel gating scheme
+: Ref: Li L, Bischofberger J, Jonas P. 2007
+: Differntial gating and recruitment of P/Q-, N-, and R-type
+: Ca2+ channels in hippocampal mossy fiber boutons.
+: J Neurosci 27:13420-429
+
+NEURON {
+    SUFFIX mfbnca
+    USEION ca READ eca WRITE ica
+    RANGE gca, gcabar
+}
+
+UNITS {
+    (mA) = (milliamp)
+    (mV) = (millivolt)
+    (S) = (siemens)
+}
+
+PARAMETER {
+    gcabar = 0.0032 (S/cm2) 
+    a1o = 4.29 (/ms)    
+    b1o = 5.23 (/ms)
+    V1   = 68.75(mV)
+    a2o = 5.24 (/ms)    
+    b2o = 6.63 (/ms)
+    V2   = 39.53(mV)
+    a3o = 4.98 (/ms)   
+    b3o = 73.89 (/ms)
+    V3   = 281.62(mV)
+    a4o = 772.63 (/ms)    
+    b4o = 692.18 (/ms)
+    V4   = 18.46(mV)
+	a5o = 615.01 (/ms)    
+    b5o = 7.68 (/ms)
+}
+
+ASSIGNED {
+    v    (mV)
+	eca  (mV)
+    gca  (S/cm2)
+
+
+=== Following is the header of samples/267617/ZhengKamiya2023/mfbpqca.mod ===
+: Six state kinetic P/Q-type calcium channel gating scheme
+: Ref: Li L, Bischofberger J, Jonas P. 2007
+: Differntial gating and recruitment of P/Q-, N-, and R-type
+: Ca2+ channels in hippocampal mossy fiber boutons.
+: J Neurosci 27:13420-429
+
+NEURON {
+    SUFFIX mfbpqca
+    USEION ca READ eca WRITE ica
+    RANGE gca, gcabar
+}
+
+UNITS {
+    (mA) = (milliamp)
+    (mV) = (millivolt)
+    (S) = (siemens)
+}
+
+PARAMETER {
+    gcabar = 0.0032 (S/cm2) 
+    a1o = 5.89 (/ms)    
+    b1o = 14.99 (/ms)
+    V1   = 62.61(mV)
+    a2o = 9.21 (/ms)    
+    b2o = 6.63 (/ms)
+    V2   = 33.92(mV)
+    a3o = 5.20 (/ms)   
+    b3o = 132.80 (/ms)
+    V3   = 135.08(mV)
+    a4o = 1823.18 (/ms)    
+    b4o = 248.58 (/ms)
+    V4   = 20.86(mV)
+	a5o = 247.71 (/ms)    
+    b5o = 8.28 (/ms)
+}
+
+ASSIGNED {
+    v    (mV)
+	eca  (mV)
+    gca  (S/cm2)
+
+
+=== Following is the header of samples/267617/ZhengKamiya2023/KIn.mod ===
+TITLE KIn.mod  - modified potassium channels
+ 
+COMMENT
+
+This is a Hodgkin-Huxley model of inactivating K channels 
+modified from hh.mod
+P. Jonas, 12 September 2001
+temperature dependence is given up - Q10 scaling is not used any longer
+Reference: Hines and Carnevale, Expanding NEURON's repertoire of mechanisms with NMODL, Neural Computation 12, 839-851, 2000
+23 October 2001, new version for Faklers Kv1.4 wild type 
+18 November 2001 - final version, as published in Wissmann et al., JBC 278, 16142-16150
+
+ENDCOMMENT
+ 
+UNITS {
+    (mA) = (milliamp)
+    (mV) = (millivolt)
+}
+ 
+? interface
+NEURON {
+    THREADSAFE
+    SUFFIX KIn                                                                                           :   KIn   
+    USEION k READ ek WRITE ik                                                            :   local K may affect ion flux, and ion fluc may affect local K
+    RANGE gkbar, gk, scale_a, scale_i                                                                                  :   functions of position  
+    GLOBAL ninf, ntau, hinf, htau
+}
+ 
+PARAMETER {
+    gkbar = .0 (mho/cm2)	 <0,1e9>   :   so these parameter are viewed and can be changed in GUI 
+    scale_a = 1.0
+    scale_i = 1.0
+}
+ 
+STATE {
+    n h                                :  n for activation, h for inactivation 
+}
+ 
+ASSIGNED {                                   
+    v (mV)                          :  variables given values outside the mod file
+
+
+=== Following is the header of samples/267617/ZhengKamiya2023/readme.txt ===
+This is the readme for the simulation showing the properties of Na, K channels (hhmfb.mod replacing K conductance with KIn.nod, inactivating K model; hhmfb.mod, non-inactivating K model) and Ca channels of P/Q, N, R type (mfbpqca.mod, mfbnca.mod, mfbrca.mod) at hippocampal mossy fiber terminals.   
+We also tested single shocks, 10, 20, and 50Hz train stimuli 50 times for showing use-dependent action potential broadening, accumulation of K channel inactivation, and enhancement of Ca entry during AP train.
+For 20 Hz 50 stimulus, K conductance was changed by 0.5, 1, and 10 times to vary the action potential duration to see if it changes the rate of K channel inactivation during the train stimulus.
+The responses at the en passant boutons and the effect of KV7 M-type K channels (kmb.mod) were also tested.
+
+To run the simulations, follow these steps:
+Compile the mod files using nrnivmodl under Mac OS X and Linux, or mknrndll under Windows.
+Run mosinit.hoc in NEURON.
+Click the buttons in the panel "Demo" and click "Init & Run" in the "RunControl" panel to run simulations.
+
+Questions about this model should be directed to kamiya@med.hokudai.ac.jp.
+
+
+
+
+
+=== Following is the header of samples/267617/ZhengKamiya2023/kmb.mod ===
+TITLE CA1 KM channel from Mala Shah
+: M. Migliore June 2006
+
+UNITS {
+	(mA) = (milliamp)
+	(mV) = (millivolt)
+
+}
+
+PARAMETER {
+	v 		(mV)
+	ek
+	celsius 	(degC)
+	gbar=.0001 	(mho/cm2)
+        vhalfl=-40   	(mV)
+	kl=-10
+        vhalft=-42   	(mV)
+        a0t=0.003      	(/ms)
+        zetat=7    	(1)
+        gmt=.4   	(1)
+	q10=5
+	b0=60
+	st=1
+	sh =0
+}
+
+
+NEURON {
+	SUFFIX kmb
+	USEION k READ ek WRITE ik
+        RANGE  gbar,ik, sh
+      GLOBAL inf, tau
+}
+
+STATE {
+        m
+}
+
+ASSIGNED {
+	ik (mA/cm2)
+
+
+=== Following is the header of samples/267617/ZhengKamiya2023/mfbrca.mod ===
+: Six state kinetic R-type calcium channel gating scheme
+: Ref: Li L, Bischofberger J, Jonas P. 2007
+: Differntial gating and recruitment of P/Q-, N-, and R-type
+: Ca2+ channels in hippocampal mossy fiber boutons.
+: J Neurosci 27:13420-429
+
+NEURON {
+    SUFFIX mfbrca
+    USEION ca READ eca WRITE ica
+    RANGE gca, gcabar
+}
+
+UNITS {
+    (mA) = (milliamp)
+    (mV) = (millivolt)
+    (S) = (siemens)
+}
+
+PARAMETER {
+    gcabar = 0.0032 (S/cm2) 
+    a1o = 9911.36 (/ms)    
+    b1o = 60.62 (/ms)
+    V1   = 67.75(mV)
+    a2o = 4.88 (/ms)    
+    b2o = 21.91 (/ms)
+    V2   = 50.94(mV)
+    a3o = 4.00 (/ms)   
+    b3o = 51.30 (/ms)
+    V3   = 173.29(mV)
+    a4o = 256.41 (/ms)    
+    b4o = 116.97 (/ms)
+    V4   = 16.92(mV)
+	a5o = 228.83 (/ms)    
+    b5o = 1.78 (/ms)
+}
+
+ASSIGNED {
+    v    (mV)
+	eca  (mV)
+    gca  (S/cm2)
+
+
