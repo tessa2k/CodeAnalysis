@@ -49,7 +49,7 @@ def _api_request(url, method = 'GET', headers=None, params=None, json_data=None)
 
     return None
 
-def save_model_code_to_json():
+def __save_model_code_to_json():
     """
     Fetches a list of model codes from an API and saves them as a JSON file.
 
@@ -202,4 +202,4 @@ def download_and_unzip_files(file_code_list, sample_folder, num_file):
             print(f"Failed to download {zip_filename}")
 
 if __name__ == "__main__":
-    save_model_code_to_json()
+    __save_model_code_to_json()
