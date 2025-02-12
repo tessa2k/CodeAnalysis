@@ -3,6 +3,8 @@ import os
 import json
 import requests
 import zipfile
+import msal
+import shutil
 from dotenv import load_dotenv
 
 MODEL_CODE_FILE_PATH = "data/model_id_list.json"
@@ -93,3 +95,51 @@ def traverse_folder(path, file_list):
         elif entry.lower().endswith(ACCEPTABLE_EXTENSIONS):
             file_list.append(full_path)
 
+def __connect_onedrive():
+    load_dotenv()
+
+    # Azure application client info
+    client_id = os.getenv('CLIENT_ID')
+    client_secret = os.getenv('CLIENT_SECRET')
+    tenant_id = os.getenv('TENANT_ID')
+    # redirect_uri = 'https://login.microsoftonline.com/common/oauth2/nativeclient'
+
+    # Get access token
+    authority = f'https://login.microsoftonline.com/{tenant_id}'
+    scopes = ['Files.Read', 'User.Read', 'Files.ReadWrite']
+    app = msal.PublicClientApplication(client_id, authority=authority)
+
+    # Request token
+    result = app.acquire_token_interactive(scopes=scopes)
+
+    if "access_token" in result:
+        access_token = result["access_token"]
+        headers = {'Authorization': f'Bearer {access_token}'}
+    return headers
+
+def download_and_unzip_files(file_code_list, sample_folder, num_file):
+    headers = __connect_onedrive()
+    if os.path.exists(sample_folder):
+        shutil.rmtree(sample_folder)
+    os.makedirs(sample_folder)
+
+    for code in file_code_list[:num_file]:
+        code = str(code)
+        zip_filename = f"{code}.zip"
+        local_path = os.path.join(sample_folder, zip_filename)
+        extract_path = os.path.join(sample_folder, code)
+
+        # download zip file into local directory
+        download_endpoint = f'https://graph.microsoft.com/v1.0/me/drive/root:/modeldb-code-analysis/modeldb-zips/{code}.zip:/content'
+        response = requests.get(download_endpoint, headers=headers)
+        
+        if response.status_code == 200:
+            with open(local_path, 'wb') as file:
+                file.write(response.content)
+            print(f"Downloaded {zip_filename} to {local_path}")
+            
+            with zipfile.ZipFile(local_path, 'r') as zip_ref:
+                zip_ref.extractall(extract_path)
+            print(f"Unzip {zip_filename} to {extract_path}")
+        else:
+            print(f"Failed to download {zip_filename}")
