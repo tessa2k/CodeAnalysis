@@ -3,7 +3,7 @@ import os
 from tqdm import tqdm
 from openai import OpenAI
 import pandas as pd
-from prepare import save_model_code_to_json, get_model_code, traverse_folder
+from prepare import *
 import io
 import zipfile
 import json

@@ -5,6 +5,7 @@ import requests
 import zipfile
 import msal
 import shutil
+import random
 from dotenv import load_dotenv
 
 MODEL_CODE_FILE_PATH = "data/model_id_list.json"
@@ -49,9 +50,22 @@ def _api_request(url, method = 'GET', headers=None, params=None, json_data=None)
     return None
 
 def save_model_code_to_json():
+    """
+    Fetches a list of model codes from an API and saves them as a JSON file.
+
+    - Retrieves the model code list from the API endpoint.
+    - If an existing JSON file is found, it is removed before writing the new data.
+    - Saves the model code list in "data/model_id_list.json".
+
+    Raises:
+        Exception: If the API request fails.
+    """
+
     model_url = "/api/v1/models"
     MODEL_CODE_FILE_PATH = "data/model_id_list.json"
     model_code_list = _api_request(model_url, method = 'GET')
+    random.seed(10)
+    random.shuffle(model_code_list)
     # print(len(model_id_list))
     if os.path.exists(MODEL_CODE_FILE_PATH):
         os.remove(MODEL_CODE_FILE_PATH)
@@ -60,6 +74,17 @@ def save_model_code_to_json():
 
 
 def get_model_code():
+    """
+    Reads and returns the model code list from a JSON file.
+
+    Returns:
+        list: A list of model codes loaded from "data/model_id_list.json".
+
+    Raises:
+        FileNotFoundError: If the JSON file does not exist.
+        JSONDecodeError: If the JSON file is not formatted correctly.
+    """
+
     with open(MODEL_CODE_FILE_PATH, "r") as f:
         model_code_list = json.load(f)
     return model_code_list
@@ -96,6 +121,20 @@ def traverse_folder(path, file_list):
             file_list.append(full_path)
 
 def __connect_onedrive():
+    """
+    Authenticates and connects to Microsoft OneDrive using MSAL (Microsoft Authentication Library).
+
+    - Loads client credentials from environment variables.
+    - Requests an access token for reading and writing files in OneDrive.
+    - Returns an authorization header with the access token.
+
+    Returns:
+        dict: Authorization headers for API requests.
+
+    Raises:
+        Exception: If authentication fails.
+    """
+
     load_dotenv()
 
     # Azure application client info
@@ -118,6 +157,24 @@ def __connect_onedrive():
     return headers
 
 def download_and_unzip_files(file_code_list, sample_folder, num_file):
+    """
+    Downloads and extracts ZIP files from OneDrive based on a list of file codes.
+
+    Args:
+        file_code_list (list): List of file codes to download.
+        sample_folder (str): Local directory to store the downloaded files.
+        num_file (int): Number of files to download from the list.
+
+    Behavior:
+        - Authenticates to OneDrive.
+        - Downloads ZIP files using the given file codes.
+        - Extracts the ZIP files into separate folders named after their file codes.
+        - Deletes and recreates the `sample_folder` before downloading files.
+
+    Raises:
+        Exception: If the download request fails.
+    """
+
     headers = __connect_onedrive()
     if os.path.exists(sample_folder):
         shutil.rmtree(sample_folder)
@@ -143,3 +200,6 @@ def download_and_unzip_files(file_code_list, sample_folder, num_file):
             print(f"Unzip {zip_filename} to {extract_path}")
         else:
             print(f"Failed to download {zip_filename}")
+
+if __name__ == "__main__":
+    save_model_code_to_json()
