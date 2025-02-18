@@ -7,14 +7,18 @@ Items Improved:
 - Process File by File instead of Line by Line in _traverse_file()
 - Map to Sets in self.type_mapping (quicker to check __contain__)
 - Optional for Parallel Traversing
+
+Problems:
+- Skip hoc files to avoid too many hoc
 '''
 
 import os
 import json
 import re
-from tqdm import tqdm
+import argparse
 import pprint
-from prepare.utils import _api_request, get_model_code
+import tqdm
+from prepare.utils import _api_request
 from concurrent.futures import ThreadPoolExecutor, as_completed  # Uncomment for parallelization
 
 class RuleBased:
@@ -25,17 +29,22 @@ class RuleBased:
     _TYPE_TO_NAME = {
         "celltypes": "neurons",
         "currents": "currents",
-        "genes": "genes",
+        "simenvironments": "modeling_application",
         "modelconcepts": "model_concept",
         "modeltypes": "model_type",
         "receptors": "receptors",
         "regions": "region"
     }
-    
-    def __init__(self, parallel: bool = False):
+
+    def __init__(self, parallel: bool = False, batch: bool = True, batch_size: int = 50, max_num: int = 100):
         self.parallel = parallel # True if apply parallel approach
         self.metadata_types = _api_request(self._CAT_URL)
-        self.model_id_list = get_model_code()
+        self.model_id_list = [d for d in os.listdir(self._DATA_FOLDER)
+                         if os.path.isdir(os.path.join(self._DATA_FOLDER, d))]
+        self.batch_size = batch_size
+        self.batch = batch
+        self.max_num = max_num
+
         # Convert type mapping values to sets for faster membership tests:
         self.type_mapping = {k: set(v) for k, v in self._fetch_type_mapping().items()}
         self.regex_mapping = self._get_regex_mapping()  # precompiled regex mapping
@@ -51,7 +60,8 @@ class RuleBased:
         directory = os.path.join(self._DATA_FOLDER, str(model_id))
         matched_categories = set()
         for root, _, files in os.walk(directory):
-            for file in files:
+            for file in tqdm.tqdm(files):
+                if file.startswith('.'): continue # skip any file in __MACOSX
                 file_path = os.path.join(root, file)
                 file_extension = os.path.splitext(file_path)[1]
                 self.file_extensions.add(file_extension) # collect file extensions
@@ -59,6 +69,8 @@ class RuleBased:
                     with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
                         # Read entire file content (adjust if files are huge)
                         content = f.read()
+                    # remove any numerical values larger than 100
+                    content = re.sub(r'\b\d{3,}\b', '', content)
                     matched_categories.update(self._search_regex(content))
                 except Exception as e:
                     print(f"Error reading {file_path}: {e}")
@@ -78,6 +90,86 @@ class RuleBased:
                     matched.update(categories)
         return matched
     
+    # TODO: scan files in batches
+    def _process_single_folder(self, model_id): 
+        """
+        Process a single model folder: traverse its files and match results.
+        
+        Returns:
+            dict: The classification results for this model folder.
+        """
+        matched_categories = self._traverse_file(model_id)
+        return self._match_results(matched_categories)
+    
+    def _scan_all_files_batches(self, retry_errors: bool = False,
+                               errors_file: str = "errors.json",
+                               results_file: str = "results_partial.json"):
+        """
+        Process all model folders in batches. If retry_errors is True, only process folders that previously errored.
+        
+        Args:
+            retry_errors (bool): If True, read errors_file to process only errored folders.
+            errors_file (str): File path to store errors.
+            results_file (str): File path to store intermediate results.
+        
+        Returns:
+            dict: Mapping each model_id (folder) to its classified categories.
+        """
+        # Get all model folder IDs.
+        all_model_ids = [d for d in os.listdir(self._DATA_FOLDER)
+                         if os.path.isdir(os.path.join(self._DATA_FOLDER, d))]
+        
+        # If retry_errors is enabled, load the error model IDs.
+        if retry_errors:
+            try:
+                with open(errors_file, "r") as f:
+                    errors_data = json.load(f)
+                error_model_ids = list(errors_data.keys())
+                print("Retrying error model ids:", error_model_ids)
+                all_model_ids = error_model_ids
+            except Exception as e:
+                print(f"Could not load {errors_file}: {e}")
+                print("Processing all folders instead.")
+        
+        results_dict = {}  # To store successful results.
+        errors_dict = {}   # To record errors.
+
+        total = min(len(all_model_ids), self.max_num) # TODO: handle the lower bond
+        
+        for i in range(0, total, self.batch_size):
+            batch = all_model_ids[i: i + self.batch_size]
+            print(f"\n--- Processing batch {i // self.batch_size + 1} (folders: {batch}) ---")
+            if self.parallel:
+                with ThreadPoolExecutor() as executor:
+                    future_to_model = {executor.submit(self._process_single_folder, model_id): model_id 
+                                       for model_id in batch}
+                    for future in as_completed(future_to_model):
+                        model_id = future_to_model[future]
+                        try:
+                            results = future.result()
+                            results_dict[model_id] = results
+                        except Exception as e:
+                            errors_dict[model_id] = str(e)
+                            print(f"Error processing model id {model_id}: {e}")
+            else:
+                for model_id in tqdm.tqdm(batch, desc=f"Processing batch {i // self.batch_size + 1}"):
+                    try:
+                        print(f"Processing {model_id}")
+                        results = self._process_single_folder(model_id)
+                        results_dict[model_id] = results
+                    except Exception as e:
+                        errors_dict[model_id] = str(e)
+                        print(f"Error processing model id {model_id}: {e}")
+            
+            # Write intermediate results and errors.
+            with open(results_file, "w") as f:
+                json.dump(results_dict, f, indent=2)
+            with open(errors_file, "w") as f:
+                json.dump(errors_dict, f, indent=2)
+            print(f"Batch {i // self.batch_size + 1} complete. Results and errors saved.")
+        
+        return results_dict
+    
     def _scan_all_files_sequential(self):
         """
         Scans all model folders in the dataset directory and applies `_traverse_file` 
@@ -86,7 +178,10 @@ class RuleBased:
             dict: mapping each model_id (folder) to its classified categories.
         """
         all_results = {}
-        for model_id in tqdm(os.listdir(self._DATA_FOLDER)):
+        dir_list = os.listdir(self._DATA_FOLDER)
+        total = min(len(dir_list), self.max_num)
+        dir_list = dir_list[:total]
+        for model_id in dir_list:
             model_path = os.path.join(self._DATA_FOLDER, model_id)
             if os.path.isdir(model_path):
                 print(f"Scanning folder: {model_id}...")
@@ -109,6 +204,8 @@ class RuleBased:
             d for d in os.listdir(self._DATA_FOLDER)
             if os.path.isdir(os.path.join(self._DATA_FOLDER, d))
         ]
+        total = min(len(model_dirs), self.max_num)
+        model_dirs = model_dirs[:total]
         with ThreadPoolExecutor() as executor:
             future_to_model = {executor.submit(self._traverse_file, model_id): model_id 
                                for model_id in model_dirs}
@@ -123,7 +220,7 @@ class RuleBased:
                     print(f"Error scanning {model_id}: {e}")
         return all_results
 
-    def _scan_all_files(self):
+    def scan_all_files(self):
         """
         Scans all model folders in the dataset directory and applies `_traverse_file` 
         to each one, aggregating results.
@@ -131,7 +228,9 @@ class RuleBased:
         Returns:
             dict: Mapping each model_id (folder) to its classified categories.
         """
-        if self.parallel:
+        if self.batch:
+            return self._scan_all_files_batches()
+        elif self.parallel:
             return self._scan_all_files_parallel()
         else:
             return self._scan_all_files_sequential()
@@ -207,14 +306,22 @@ class RuleBased:
             json.dump(results, f, indent=2)
 
 if __name__ == '__main__':
-    # some local tests
+    # tests for single id
     model = RuleBased(True)
-    model._DATA_FOLDER = "sampleAlzheimer"  # Set your folder here
-    
-    model_id = 21329
+    model._DATA_FOLDER = "../ALL_Data"  # Set your folder here
+    parser = argparse.ArgumentParser(
+        description="Run RuleBased Model for a single id."
+    )
+    parser.add_argument(
+        "-d", type=int, default=142990,
+        help="Single model id."
+    )
+    args = parser.parse_args()
+    model_id = args.d
+    print(f"Run rule-based model for id = {model_id}")
     matched_categories = model._traverse_file(model_id)
     print("Matched Categories:")
-    print(matched_categories)
+    # print(matched_categories)
     pprint.pprint(model._match_results(matched_categories))
     print()
 
