@@ -102,8 +102,8 @@ class RuleBased:
         return self._match_results(matched_categories)
     
     def _scan_all_files_batches(self, retry_errors: bool = False,
-                               errors_file: str = "errors.json",
-                               results_file: str = "results_partial.json"):
+                               errors_file: str = "rule_based/errors.json",
+                               results_file: str = "rule_based/results_partial.json"):
         """
         Process all model folders in batches. If retry_errors is True, only process folders that previously errored.
         

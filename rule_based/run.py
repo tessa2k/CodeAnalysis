@@ -57,7 +57,7 @@ def main():
         results = model.scan_all_files()
 
     # Write the final results to a JSON file.
-    output_file = "rule_based_results.json"
+    output_file = "rule_based/rule_based_results.json"
     with open(output_file, "w") as f:
         json.dump(results, f, indent=2)
     print(f"Processing complete. Results written to {output_file}.")
