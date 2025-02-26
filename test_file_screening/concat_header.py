@@ -48,7 +48,7 @@ if __name__ == "__main__":
         shutil.rmtree(concat_file_path)
     os.makedirs(concat_file_path)
  
-    for model_code in model_code_list[:20]:
+    for model_code in model_code_list[:100]:
         list_of_all_files = []
         path = f'samples/{model_code}'
         traverse_folder(path, list_of_all_files)

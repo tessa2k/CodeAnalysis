@@ -5,11 +5,21 @@ import json
 import zipfile
 import random
 import requests
+from prepare import *
 from dotenv import load_dotenv
 
 # GLOBAL VARIABLES
-ACCEPTABLE_EXTENSIONS = ('.py', '.cpp', '.java', '.m', '.txt', '.h', '.data', 
-                            '.html', '.c', '.mod', '.g', '.p', ".ode", ".html")  #.mdl
+ACCEPTABLE_EXTENSIONS = (
+    ".md", ".csv", ".inp", ".f", ".g", ".conf", ".sample", ".cpp~",
+    ".par", ".hoc", ".spikes", ".h", ".npy", ".pyc", ".dat", ".asc",
+    ".new", ".rtf", ".m", ".ac", ".swc", ".p~", ".dlist", ".cpp",
+    ".makefile", ".html", ".cfg", ".pro", ".patch", ".net", ".doc",
+    ".nml", ".g~", ".py", ".txt", ".p", ".m~", ".m4", ".in", ".h5",
+    ".data", ".dll", ".ses", ".pdf", ".htm", ".spk", ".set", ".asv",
+    ".html~", ".diff", ".log", ".sbatch", ".css", ".pl", ".jl", ".nb",
+    ".mat", ".json", ".sh", ".xml", ".c", ".bat", ".inc", ".ipy",
+    ".ode", ".db", ".plot", ".o"
+)
             
 def connect_onedrive():
     load_dotenv()
@@ -85,43 +95,80 @@ def dwn_files(sample_folder, file_code_id, headers, file_code_list, num_file=20)
         else:
             print(f"Failed to download {zip_filename}")
 
+import os
+import zipfile
+
 def traverse_folder_extract_comments_variables(path, model_code, extracted_data):
     """
-    Traverse through all files in a directory, extract comments and variables from each file.
+    Traverse all files in the directory, extracting comments and variables from each file.
+    If a ZIP file is encountered, extract and process its contents.
     """
     for entry in os.listdir(path):
         full_path = os.path.join(path, entry)
+
         if os.path.isdir(full_path):
-            print(f'Traverse folder: {full_path}')
+            print(f'Traversing folder: {full_path}')
             traverse_folder_extract_comments_variables(full_path, model_code, extracted_data)
-        else:
-            if not entry.lower().endswith(ACCEPTABLE_EXTENSIONS):
-                continue
-            
+
+        elif entry.lower().endswith('.zip'):
+            extract_path = os.path.join(path, f"{entry}_extracted")
+
+            if not os.path.exists(extract_path):
+                os.makedirs(extract_path)
+                with zipfile.ZipFile(full_path, 'r') as zip_ref:
+                    zip_ref.extractall(extract_path)
+                    print(f"Extracted {full_path} to {extract_path}")
+
+            traverse_folder_extract_comments_variables(extract_path, model_code, extracted_data)
+
+        elif entry.lower().endswith(ACCEPTABLE_EXTENSIONS):
             with open(full_path, 'r', encoding='utf-8', errors='ignore') as f:
                 content = f.read()
                 comments = extract_comments(content, entry)
                 variables = extract_variables(content)
                 file_name = os.path.basename(full_path)
+                if model_code not in extracted_data:
+                    extracted_data[model_code] = {}
                 extracted_data[model_code][file_name] = {"comments": comments, "variables": variables}
 
+
 def extract_comments(content, filename):
-    file_extension = os.path.splitext(filename)[1] 
-    comment_patterns = {
+    file_extension = os.path.splitext(filename)[1]
+    comment_patterns = {ext: r'(?m)^#.*' for ext in ACCEPTABLE_EXTENSIONS}
+    comment_patterns.update({
         '.py': r'#.*',
         '.cpp': r'//.*|/\*.*?\*/',
         '.java': r'//.*|/\*.*?\*/',
         '.c': r'//.*|/\*.*?\*/',
         '.h': r'//.*|/\*.*?\*/',
-        '.html': r'<!--.*?-->'  ,
-        '.mod': r'COMMENT(.*?)ENDCOMMENT' ,#need to change
+        '.html': r'<!--.*?-->',
+        '.mod': r'COMMENT(.*?)ENDCOMMENT',
         '.ode': r'%.*',
         '.txt': r'.*',
-        '.m': r'%.*' ,
-        '.g': r'//.*|/\*.*?\*/' 
-    }
+        '.m': r'%.*',
+        '.g': r'//.*|/\*.*?\*/',
+        '.md': r'<!--.*?-->',
+        '.sh': r'#.*',
+        '.xml': r'<!--.*?-->',
+        '.json': r'//.*|/\*.*?\*/',
+        '.csv': r'(?m)^#.*',
+        '.cfg': r'(?m)^#.*|;.*',
+        '.ini': r'(?m)^#.*|;.*',
+        '.pl': r'#.*',
+        '.jl': r'#.*',
+        '.bat': r'::.*|REM.*',
+        '.m4': r'\#.*',
+        '.makefile': r'(?m)^#.*',
+        '.tex': r'%.*',
+        '.hoc': r'//.*|/\*.*?\*/|".*?"',
+        '.f': r'(?m)^C.*|!.*',
+        '.patch': r'(?m)^#.*',
+        '.css': r'/\*.*?\*/',
+        '.conf': r'(?m)^#.*|;.*',
+    })
     pattern = comment_patterns.get(file_extension, r'')
-    return re.findall(pattern, content, re.DOTALL) if pattern else []
+    comments = re.findall(pattern, content, re.DOTALL) if pattern else []
+    return [re.sub(r'\b\d{3,}\b', '', comment) for comment in comments]
 
 
 def extract_variables(content):
@@ -135,7 +182,7 @@ def process_files(sample_folder, output_file_folder, file_code_list, num_extract
     os.makedirs(output_file_folder, exist_ok=True)
     extracted_data = {}
     for code in file_code_list[:num_extracted_files]:
-        path = os.path.join(sample_folder, code)
+        path = os.path.join(sample_folder, str(code))
         if os.path.isdir(path):
             extracted_data[code] = {}
             traverse_folder_extract_comments_variables(path, code, extracted_data)
@@ -145,10 +192,13 @@ def process_files(sample_folder, output_file_folder, file_code_list, num_extract
 
 if __name__ == "__main__":
     # get the file_model_id
-    file_code_path = "/Users/mengmengdu/Desktop/CodeAnalysis/samples/file_code_list.json"
+    file_code_path = "/Users/mengmengdu/Desktop/CodeAnalysis/data/model_id_list.json"
     with open(file_code_path, "r") as f:
         file_code_list = json.load(f)
     print(f"Total number of files is {len(file_code_list)}")
+    samples_path = 'samples'
+    #download_and_unzip_files(file_code_list, samples_path, 100)
+
     sample_folder = '/Users/mengmengdu/Desktop/CodeAnalysis/samples'
 
     # file screening
@@ -156,5 +206,7 @@ if __name__ == "__main__":
     output_file_folder = '/Users/mengmengdu/Desktop/CodeAnalysis/data/extracted_data'
     if os.path.exists(output_file_folder):
         shutil.rmtree(output_file_folder)
-    process_files(sample_folder, output_file_folder, file_code_list, 20)
+    process_files(sample_folder, output_file_folder, file_code_list, 100)
+
+
    

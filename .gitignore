@@ -4,4 +4,5 @@ samples/
 sampleParkinsons/
 sampleAlzheimer/
 
-**/__pycache__/
+data/concat_header/
+data/extracted_data/
