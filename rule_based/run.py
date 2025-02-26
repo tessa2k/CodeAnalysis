@@ -6,7 +6,8 @@ import os
 import json
 import argparse
 from tqdm import tqdm
-from rule_based import RuleBased
+# from rule_based import RuleBased
+from rule_based_kgram import RuleBased # rule-based v2.0
 
 def main():
     parser = argparse.ArgumentParser(
@@ -46,13 +47,13 @@ def main():
     args = parser.parse_args()
 
     # Instantiate the RuleBased model with the specified settings.
-    model = RuleBased(parallel=args.parallel, batch_size=args.batch_size, batch=args.batch)
+    model = RuleBased(parallel=args.parallel, batch_size=args.batch_size, batch=args.batch, max_num = 300) 
     model._DATA_FOLDER = args.data_folder
 
     print("Starting processing using scan_all_files() ...")
     if args.retry_errors:
         # If retrying, pass the retry_errors flag so only errored folders are reprocessed.
-        results = model._scan_all_files_batches(retry_errors=True)
+        results = model.scan_all_files_batches(retry_errors=True)
     else:
         results = model.scan_all_files()
 

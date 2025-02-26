@@ -1,4 +1,4 @@
-from prepare import download_and_unzip_files, get_model_code
+from prepare import download_and_unzip_files, filter_models_by_year
 import os
 
 def delete_zip_files(directory):
@@ -20,8 +20,9 @@ def delete_zip_files(directory):
                     print(f"Error deleting {file_path}: {e}")
 
 def main():
-    file_code_list = get_model_code()
-    sample_folder = '../All_Data'
+    file_code_list = filter_models_by_year() # min_year = 2020 by default
+    print("Total number of models after 2020:", len(file_code_list))
+    sample_folder = '../2020_Data'
     num_file = len(file_code_list)
     download_and_unzip_files(file_code_list, sample_folder, num_file)
     delete_zip_files(sample_folder)

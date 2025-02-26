@@ -101,7 +101,7 @@ class RuleBased:
         matched_categories = self._traverse_file(model_id)
         return self._match_results(matched_categories)
     
-    def _scan_all_files_batches(self, retry_errors: bool = False,
+    def scan_all_files_batches(self, retry_errors: bool = False,
                                errors_file: str = "rule_based/errors.json",
                                results_file: str = "rule_based/results_partial.json"):
         """
@@ -229,7 +229,7 @@ class RuleBased:
             dict: Mapping each model_id (folder) to its classified categories.
         """
         if self.batch:
-            return self._scan_all_files_batches()
+            return self.scan_all_files_batches()
         elif self.parallel:
             return self._scan_all_files_parallel()
         else:
@@ -308,12 +308,12 @@ class RuleBased:
 if __name__ == '__main__':
     # tests for single id
     model = RuleBased(True)
-    model._DATA_FOLDER = "../ALL_Data"  # Set your folder here
+    model._DATA_FOLDER = "../2020_Data"  # Set your folder here
     parser = argparse.ArgumentParser(
         description="Run RuleBased Model for a single id."
     )
     parser.add_argument(
-        "-d", type=int, default=142990,
+        "-d", type=int, default=182129,
         help="Single model id."
     )
     args = parser.parse_args()
