@@ -192,12 +192,13 @@ def process_files(sample_folder, output_file_folder, file_code_list, num_extract
 
 if __name__ == "__main__":
     # get the file_model_id
-    file_code_path = "/Users/mengmengdu/Desktop/CodeAnalysis/data/model_id_list.json"
-    with open(file_code_path, "r") as f:
-        file_code_list = json.load(f)
+    # file_code_path = "/Users/mengmengdu/Desktop/CodeAnalysis/data/model_id_list.json"
+    # with open(file_code_path, "r") as f:
+    #     file_code_list = json.load(f)
+    file_code_list=filter_models_by_year(min_year=2020)
     print(f"Total number of files is {len(file_code_list)}")
     samples_path = 'samples'
-    #download_and_unzip_files(file_code_list, samples_path, 100)
+    download_and_unzip_files(file_code_list, samples_path, 100)
 
     sample_folder = '/Users/mengmengdu/Desktop/CodeAnalysis/samples'
 

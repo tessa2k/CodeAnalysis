@@ -75,13 +75,21 @@ def process_file(file_folder, exact_file, client, category, result_key_prefix):
 
     mapped_category_name = CATEGORY_NAME_MAPPING.get(category, category)
 
-    prompt = (
-       f"""You are an expert in computational neursocience, reviewing model repositories. This database includes computational models written in any programming language for any tool, but they all must have a mechanistic component for getting insight into the function individual neurons, networks of neurons, or of the nervous system in health or disease.
+    # prompt = (
+    #    f"""You are an expert in computational neursocience, reviewing model repositories. This database includes computational models written in any programming language for any tool, but they all must have a mechanistic component for getting insight into the function individual neurons, networks of neurons, or of the nervous system in health or disease.
     
-    We will give you contents in the model repositories, and you will identify any highly relavent {mapped_category_name} in a list of choice. If a concept is mentioned but not very significant, please do not mention it in the answer. Just list them separated by commas, DO NOT analyze. Example: item1, item2, ...
-    Choice: {category_items}
-    Content: {file_content}
-    """
+    # We will give you contents in the model repositories, and you will identify any highly relavent {mapped_category_name} in a list of choice. If a concept is mentioned but not very significant, please do not mention it in the answer. Just list them separated by commas, DO NOT analyze. Example: item1, item2, ...
+    # Choice: {category_items}
+    # Content: {file_content}
+    # """
+    # )
+    prompt = (
+    f"You are a neuroscience expert specializing in {mapped_category_name} analysis. "
+    f"Given the following content:\n\n{file_content}\n\n"
+    f"Please identify the most relevant {mapped_category_name} from the following list: {category_items}. "
+    f"Just list them separated by commas, DO NOT analyze. "
+    f"If none are relevant, respond with 'none'. "
+    f"Example: item1, item2, ..."
     )
 
     chat_completion = client.chat.completions.create(
@@ -133,3 +141,6 @@ if __name__ == "__main__":
     args = parser.parse_args()
     main(args.input_folder, args.output_file, args.n, args.category, args.result_key_prefix)
 #python ./test_file_screening/gptinference.py ./data/extracted_data ./evaluation/results/celltype_result.json 3 celltypes com_var
+#python ./test_file_screening/gptinference.py ./data/concat_header ./evaluation/results/celltype_result.json 3 celltypes header
+#python ./test_file_screening/gptinference.py ./data/extracted_data ./evaluation/results/receptors_result.json 3 receptors com_var
+#python ./test_file_screening/gptinference.py ./data/concat_header ./evaluation/results/receptors_result.json 3 receptors header

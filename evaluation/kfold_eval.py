@@ -6,24 +6,41 @@ from prepare import _api_request
 from pprint import pprint
 from collections import defaultdict
 import numpy as np
+from itertools import combinations
 
 API_HEAD = "/api/v1/"
 TOPIC_NAMES_DICT = {
     'neurons': 'celltypes',
-    'model_concept': 'modelconcepts'
+    'model_concept': 'modelconcepts',
+    'receptors': 'receptors'
 }
 
+
 def jaccard_similarity(sets):
-    """ Compute Jaccard similarity for multiple sets """
-    intersection = set.intersection(*sets) if sets else set()
-    union = set.union(*sets) if sets else set()
-    return len(intersection) / len(union) if len(union) > 0 else 1
+    """ Compute average Jaccard similarity for all pairwise sets """
+    if len(sets) < 2:
+        return 1  
+    
+    pairwise_similarities = []
+    for s1, s2 in combinations(sets, 2):  
+        intersection = len(s1 & s2)
+        union = len(s1 | s2)
+        pairwise_similarities.append(intersection / union if union > 0 else 1)
+
+    return sum(pairwise_similarities) / len(pairwise_similarities)
 
 def dice_similarity(sets):
-    """ Compute Dice coefficient for multiple sets """
-    intersection = set.intersection(*sets) if sets else set()
-    total_size = sum(len(s) for s in sets)
-    return (2 * len(intersection)) / total_size if total_size > 0 else 1
+    """ Compute average Dice coefficient for all pairwise sets """
+    if len(sets) < 2:
+        return 1  
+
+    pairwise_similarities = []
+    for s1, s2 in combinations(sets, 2):
+        intersection = len(s1 & s2)
+        total_size = len(s1) + len(s2)
+        pairwise_similarities.append((2 * intersection) / total_size if total_size > 0 else 1)
+
+    return sum(pairwise_similarities) / len(pairwise_similarities)
 
 def process_result(id_list, metadata, output, type, test_types):
     """ Extract true labels and predicted labels for each test_type """

@@ -38,9 +38,11 @@ def concat_files(model_code, file_list, output_path, num_header_lines = 40):
 
 if __name__ == "__main__":
 
-    model_code_list = get_model_code()
-    samples_path = 'samples'
-    download_and_unzip_files(model_code_list, samples_path, 20)
+    #model_code_list = get_model_code()
+    model_code_list=filter_models_by_year(min_year=2020)
+    print(model_code_list[:100])
+    # samples_path = 'samples'
+    #download_and_unzip_files(model_code_list, samples_path, 100)
 
     # create new folder for header-concatenated files
     concat_file_path = 'data/concat_header'
@@ -51,5 +53,13 @@ if __name__ == "__main__":
     for model_code in model_code_list[:100]:
         list_of_all_files = []
         path = f'samples/{model_code}'
+        if not os.path.exists(path):
+            print(f"Skipping {model_code}: No directory found in samples/")
+            continue
+
         traverse_folder(path, list_of_all_files)
+        if not list_of_all_files:
+            print(f"Skipping {model_code}: No valid files found in {path}")
+            continue
+
         concat_files(model_code, list_of_all_files, concat_file_path)
