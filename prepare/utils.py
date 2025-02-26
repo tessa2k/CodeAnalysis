@@ -1,13 +1,11 @@
 # utils
 import os
-import re
 import json
 import requests
 import zipfile
 import msal
 import shutil
 import random
-from tqdm import tqdm
 from dotenv import load_dotenv
 
 MODEL_CODE_FILE_PATH = "data/model_id_list.json"
@@ -90,50 +88,6 @@ def get_model_code():
     with open(MODEL_CODE_FILE_PATH, "r") as f:
         model_code_list = json.load(f)
     return model_code_list
-
-def filter_models_by_year(min_year=2020):
-    """
-    Filters model codes based on the year in parentheses at the end of the model's name.
-
-    Parameters:
-    - min_year (int): Minimum year to filter the models (default is 2020).
-
-    Returns:
-    - list: A list containing model codes with years >= min_year.
-
-    Usage:
-    - Make sure current directory is root, filtered_model_code_list = filter_models_by_year(min_year=2022)
-    """
-    filtered_models = []  # List to store valid model codes
-    model_codes = get_model_code()
-    for model_id in tqdm(model_codes, desc="Processing Models", unit="model"):
-        model_url = f"https://modeldb.science/api/v1/models/{model_id}"
-        response = requests.get(model_url)
-
-        if response.status_code != 200:
-            print(f"Failed to fetch model {model_id}: HTTP {response.status_code}")
-            continue  # Skip this model if API request fails
-
-        model_data = response.json()
-        model_name = model_data.get("name", "")
-
-        # Extract year from the last four digits before the last closing parenthesis
-        match = re.search(r'\((?:[^()]*\b(\d{4})\b[^()]*)\)$', model_name)
-
-        # if match:
-        #     model_year = int(match.group(1))
-        #     if model_year >= min_year:
-        #         filtered_models.append(model_id)
-        #         print(f"Model {model_id} included: {model_name} ({model_year})")
-        #     else:
-        #         print(f"Model {model_id} excluded: {model_name} ({model_year})")
-        # else:
-        #     print(f"Model {model_id} has no valid year format: {model_name}")
-        if match:
-            model_year = int(match.group(1))
-            if model_year >= min_year:
-                filtered_models.append(model_id)
-    return filtered_models
 
 def traverse_folder(path, file_list):
     """
