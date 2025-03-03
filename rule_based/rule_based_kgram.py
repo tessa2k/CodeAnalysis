@@ -206,12 +206,31 @@ class RuleBased:
         '''
         directory = os.path.join(self._DATA_FOLDER, str(model_id))
         matched_categories = set()
+        skip_extensions = {
+        # Image formats.
+        '.gif', '.jpg', '.jpeg', '.bmp', '.png', '.tiff', '.tif', '.ico', '.webp',
+        # Multimedia (audio/video).
+        '.mp3', '.mp4', '.avi', '.mkv', '.mov', '.flv', '.wmv', '.ogg', '.wav',
+        # Archives / compressed files.
+        '.zip', '.rar', '.7z', '.tar', '.gz', '.bz2', '.tgz',
+        # Binary/executable files.
+        '.exe', '.bin', '.dll', '.so', '.obj', '.pyc', '.class', '.npy',
+        # Data files.
+        '.csv', '.tsv', '.xlsx', '.xls', '.jsonl',
+        # Other non-text binary files.
+        '.iso', '.img', '.apk', '.msi'
+        }
         for root, _, files in os.walk(directory):
             for file in tqdm.tqdm(files):
-                if file.startswith('.'): continue # skip any file in __MACOSX
+                if file.startswith('.'): 
+                    continue # skip any file in __MACOSX
                 file_path = os.path.join(root, file)
                 file_extension = os.path.splitext(file_path)[1]
                 self.file_extensions.add(file_extension) # collect file extensions
+
+                if file_extension in skip_extensions:
+                    continue
+
                 try:
                     with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
                         # Read entire file content (adjust if files are huge)
@@ -269,7 +288,7 @@ class RuleBased:
     def _scan_all_files_parallel(self):
         """
         Scans all model folders in parallel.
-        
+
         Returns:
             dict: Mapping each model_id (folder) to its classified categories.
         """
