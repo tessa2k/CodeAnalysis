@@ -3,5 +3,5 @@
 samples/
 sampleParkinsons/
 sampleAlzheimer/
-
+test.ipynb
 **/__pycache__/

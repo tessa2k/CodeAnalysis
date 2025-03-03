@@ -11,6 +11,7 @@ from tqdm import tqdm
 from dotenv import load_dotenv
 
 MODEL_CODE_FILE_PATH = "data/model_id_list.json"
+MODEL_FILEID_PATH = "data/model_fileid.json"
 ACCEPTABLE_EXTENSIONS = ('.py', '.cpp', '.java', '.m', '.txt', '.h', '.data', 
                          '.html', '.c', '.mod', '.g', '.p', ".ode", ".html", ".zip")  # Now includes .zip
 
@@ -73,7 +74,6 @@ def __save_model_code_to_json():
         os.remove(MODEL_CODE_FILE_PATH)
     with open(MODEL_CODE_FILE_PATH, "w") as f:
         json.dump(model_code_list, f)
-
 
 def get_model_code():
     """
@@ -166,7 +166,7 @@ def traverse_folder(path, file_list):
         elif entry.lower().endswith(ACCEPTABLE_EXTENSIONS):
             file_list.append(full_path)
 
-def __connect_onedrive():
+def _connect_onedrive():
     """
     Authenticates and connects to Microsoft OneDrive using MSAL (Microsoft Authentication Library).
 
@@ -202,6 +202,34 @@ def __connect_onedrive():
         headers = {'Authorization': f'Bearer {access_token}'}
     return headers
 
+def _save_file_id_to_json():
+    # Access "modeldb-code-analysis/modeldb-zips"
+    headers = _connect_onedrive()
+    endpoint = 'https://graph.microsoft.com/v1.0/me/drive/root:/modeldb-code-analysis/modeldb-zips:/children'
+    file_code_id = {}
+    while endpoint:
+        response = requests.get(endpoint, headers=headers)
+        if response.status_code == 200:
+            files_in_subfolder = response.json().get('value', [])
+            for file in files_in_subfolder:
+                file_code = file['name'][:-4]
+                if file_code.isdigit():
+                    file_code_id[file_code] = file['id']
+                # print(f"File Name: {file['name']} - File ID: {file['id']}")
+            endpoint = response.json().get('@odata.nextLink')
+        else:
+            print(f"Error: {response.status_code} - {response.text}")
+            break
+    if os.path.exists(MODEL_FILEID_PATH):
+        os.remove(MODEL_FILEID_PATH)
+    with open(MODEL_FILEID_PATH, "w") as f:
+        json.dump(file_code_id, f)
+
+def _get_file_id():
+    with open(MODEL_FILEID_PATH, "r") as f:
+        model_fileId_dict = json.load(f)
+    return model_fileId_dict
+
 def download_and_unzip_files(file_code_list, sample_folder, num_file):
     """
     Downloads and extracts ZIP files from OneDrive based on a list of file codes.
@@ -221,7 +249,7 @@ def download_and_unzip_files(file_code_list, sample_folder, num_file):
         Exception: If the download request fails.
     """
 
-    headers = __connect_onedrive()
+    headers = _connect_onedrive()
     if os.path.exists(sample_folder):
         shutil.rmtree(sample_folder)
     os.makedirs(sample_folder)
@@ -249,3 +277,4 @@ def download_and_unzip_files(file_code_list, sample_folder, num_file):
 
 if __name__ == "__main__":
     __save_model_code_to_json()
+    _save_file_id_to_json()
