@@ -87,7 +87,7 @@ def process_file(file_folder, exact_file, client, category, result_key_prefix):
     f"You are a neuroscience expert specializing in {mapped_category_name} analysis. "
     f"Given the following content:\n\n{file_content}\n\n"
     f"Please identify the most relevant {mapped_category_name} from the following list: {category_items}. "
-    f"Just list them separated by commas, DO NOT analyze. "
+    f"Just list them as strings separated by commas, DO NOT analyze. "
     f"If none are relevant, respond with 'none'. "
     f"Example: item1, item2, ..."
     )
