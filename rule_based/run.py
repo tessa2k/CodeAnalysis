@@ -43,12 +43,22 @@ def main():
         default=False,
         help="Retry processing folders that previously encountered errors."
     )
+    parser.add_argument(
+        "--start",
+        type=int,
+        default=0,
+        help="Model Index to start."
+    )
 
     args = parser.parse_args()
 
     # Instantiate the RuleBased model with the specified settings.
-    model = RuleBased(parallel=args.parallel, batch_size=args.batch_size, batch=args.batch, max_num = 300) 
-    model._DATA_FOLDER = args.data_folder
+    model = RuleBased(data_folder=args.data_folder, 
+                      idx_start= args.start, 
+                      parallel=args.parallel, 
+                      batch_size=args.batch_size, 
+                      batch=args.batch, 
+                      max_num = 300) 
 
     print("Starting processing using scan_all_files() ...")
     if args.retry_errors:

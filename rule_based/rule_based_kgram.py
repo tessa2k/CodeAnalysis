@@ -15,6 +15,7 @@ import re
 import argparse
 import pprint
 import tqdm
+import time
 from prepare.utils import _api_request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
@@ -22,7 +23,6 @@ class RuleBased:
     _MODEL_IDS_URL = "/api/v1/models"
     _CAT_URL = "/api/v1/"
     _REG_EX = "manual_classifier_rules.json"
-    _DATA_FOLDER = "../2020_Data"  # current plan: only 2020+
     _TYPE_TO_NAME = {
         "celltypes": "neurons",
         "currents": "currents",
@@ -33,8 +33,9 @@ class RuleBased:
         "regions": "region"
     }
     _TOKEN = re.compile("[a-zA-Z0-9]+")
+    _DATA_FOLDER = None
 
-    def __init__(self, k=5, parallel: bool = False, batch: bool = True, batch_size: int = 50, max_num: int = 300):
+    def __init__(self, data_folder, idx_start=0, k=5, parallel: bool = False, batch: bool = True, batch_size: int = 50, max_num: int = 300):
         '''
         Parameter:
             k: determine the number of grams to search for regex
@@ -47,8 +48,6 @@ class RuleBased:
         self.k = k # k gram
         self.parallel = parallel # True if apply parallel approach
         self.metadata_types = _api_request(self._CAT_URL)
-        self.model_id_list = [d for d in os.listdir(self._DATA_FOLDER)
-                         if os.path.isdir(os.path.join(self._DATA_FOLDER, d))]
         self.batch_size = batch_size
         self.batch = batch
         self.max_num = max_num
@@ -59,7 +58,15 @@ class RuleBased:
         self.type_list = list(self._TYPE_TO_NAME.keys())
         self.file_extensions = set()
 
-    
+        self.add_model_id_list(data_folder, idx_start)
+
+
+    def add_model_id_list(self, data_folder, idx_start):
+        self._DATA_FOLDER = data_folder
+        self.model_id_list = [d for d in os.listdir(data_folder)
+                         if os.path.isdir(os.path.join(data_folder, d))]
+        self.model_id_list = self.model_id_list[idx_start:]
+
     def get_extentions(self):
         '''
         Get the set of file extension among all models
@@ -128,8 +135,6 @@ class RuleBased:
             # Write intermediate results and errors.
             with open(results_file, "w") as f:
                 json.dump(results_dict, f, indent=2)
-            with open(errors_file, "w") as f:
-                json.dump(errors_dict, f, indent=2)
             print(f"Batch {batch_idx} complete. Results and errors saved.")
         
         return results_dict
@@ -198,7 +203,7 @@ class RuleBased:
                     results[metadata_type].append(item)
         return results
 
-    def _traverse_file(self, model_id):
+    def _traverse_file(self, model_id, errors_file="rule_based/kgram_results/errors.json"):
         '''
         Traverse the folder given a model id and classify them based on regex mapping.
         Returns:
@@ -220,26 +225,49 @@ class RuleBased:
         # Other non-text binary files.
         '.iso', '.img', '.apk', '.msi'
         }
+        # Load existing errors (so we append rather than overwrite).
+        if os.path.exists(errors_file):
+            with open(errors_file, 'r') as f:
+                try:
+                    errors_dict = json.load(f)
+                except json.JSONDecodeError:
+                    errors_dict = {}
+        else:
+            errors_dict = {}
+
         for root, _, files in os.walk(directory):
             for file in tqdm.tqdm(files):
-                if file.startswith('.'): 
-                    continue # skip any file in __MACOSX
+                if file.startswith('.'):
+                    continue  # Skip hidden files
                 file_path = os.path.join(root, file)
                 file_extension = os.path.splitext(file_path)[1]
-                self.file_extensions.add(file_extension) # collect file extensions
+
+                self.file_extensions.add(file_extension)
 
                 if file_extension in skip_extensions:
                     continue
 
                 try:
                     with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
-                        # Read entire file content (adjust if files are huge)
                         content = f.read()
-                    # remove any numerical values larger than 100
-                    content = re.sub(r'\b\d{3,}\b', '', content)
-                    matched_categories.update(self._search_regex(content))
+
+                    # Remove numbers >= 100 including decimals (e.g., 123.45)
+                    content = re.sub(r'\b\d{3,}(\.\d+)?\b', '', content)
+
+                    # This is where _search_regex might raise a TimeoutError
+                    file_matched_categories = self._search_regex(content)
+                    matched_categories.update(file_matched_categories)
+                except TimeoutError as te:
+                    print(f"Timeout: {te}")
+                    errors_dict.setdefault(str(model_id), []).append(f"Timeout on file: {file}")
                 except Exception as e:
-                    print(f"Error reading {file_path}: {e}")
+                    print(f"Error: {e}")
+                    errors_dict.setdefault(str(model_id), []).append(f"Error processing file: {file} - {e}")    
+
+        # Save errors after processing all files in the folder.
+        with open(errors_file, 'w') as f:
+            json.dump(errors_dict, f, indent=2)
+
         return matched_categories
 
     def _process_single_folder(self, model_id): 
@@ -285,7 +313,7 @@ class RuleBased:
                 print(f"Error processing model id {model_id}: {e}")
         return results_dict
 
-    def _scan_all_files_parallel(self):
+    def _scan_all_files_parallel(self, errors_file="rule_based/kgram_results/errors.json"):
         """
         Scans all model folders in parallel.
 
@@ -293,7 +321,15 @@ class RuleBased:
             dict: Mapping each model_id (folder) to its classified categories.
         """
         results_dict = {}
-        errors_dict = {}
+        # Load existing errors (so we append rather than overwrite).
+        if os.path.exists(errors_file):
+            with open(errors_file, 'r') as f:
+                try:
+                    errors_dict = json.load(f)
+                except json.JSONDecodeError:
+                    errors_dict = {}
+        else:
+            errors_dict = {}
         total = min(len(self.model_id_list), self.max_num)
         with ThreadPoolExecutor() as executor:
             future_to_model = {executor.submit(self._process_single_folder, model_id): model_id 
@@ -324,11 +360,14 @@ class RuleBased:
         '''
         Search for patterns in the provided text using precompiled regex objects.
         '''
+        start_time = time.time()
         matched = set()
         tokens = self._tokenize(text)
         n_grams = self._get_n_grams_with_spaces(tokens, self.k)
         for key, (compiled, categories) in self.regex_mapping.items():
             for item in n_grams:
+                if time.time() - start_time > 60:
+                    raise TimeoutError("File processing exceeded 60 seconds")
                 if isinstance(compiled, list):
                     if all(comp.search(item) for comp in compiled):
                         matched.update(categories)
@@ -339,8 +378,6 @@ class RuleBased:
 
 if __name__ == "__main__":
     # tests for single id
-    model = RuleBased(True)
-    model._DATA_FOLDER = "../2020_Data"  # Set your folder here
     parser = argparse.ArgumentParser(
         description="Run RuleBased Model for a single id."
     )
@@ -348,8 +385,13 @@ if __name__ == "__main__":
         "-d", type=int, default=182129,
         help="Single model id."
     )
+    parser.add_argument(
+        "-f", type=str, default="../2022_Data",
+        help="Data Folder."
+    )
     args = parser.parse_args()
     model_id = args.d
+    model = RuleBased(data_folder = args.f)
     print(f"Run rule-based model for id = {model_id}")
     matched_categories = model._traverse_file(model_id)
     print("Matched Categories:")

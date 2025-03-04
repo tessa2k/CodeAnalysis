@@ -25,7 +25,6 @@ class RuleBased:
     _MODEL_IDS_URL = "/api/v1/models"
     _CAT_URL = "/api/v1/"
     _REG_EX = "manual_classifier_rules.json"
-    _DATA_FOLDER = "../All_Data"  # Set this to your models directory
     _TYPE_TO_NAME = {
         "celltypes": "neurons",
         "currents": "currents",
@@ -36,11 +35,9 @@ class RuleBased:
         "regions": "region"
     }
 
-    def __init__(self, parallel: bool = False, batch: bool = True, batch_size: int = 50, max_num: int = 100):
+    def __init__(self, data_folder, idx_start:int =0, parallel: bool = False, batch: bool = True, batch_size: int = 50, max_num: int = 100):
         self.parallel = parallel # True if apply parallel approach
         self.metadata_types = _api_request(self._CAT_URL)
-        self.model_id_list = [d for d in os.listdir(self._DATA_FOLDER)
-                         if os.path.isdir(os.path.join(self._DATA_FOLDER, d))]
         self.batch_size = batch_size
         self.batch = batch
         self.max_num = max_num
@@ -50,6 +47,15 @@ class RuleBased:
         self.regex_mapping = self._get_regex_mapping()  # precompiled regex mapping
         self.type_list = list(self._TYPE_TO_NAME.keys())
         self.file_extensions = set()
+
+
+        self.add_model_id_list(data_folder, idx_start)
+
+
+    def add_model_id_list(self, data_folder, idx_start):
+        self.model_id_list = [d for d in os.listdir(data_folder)
+                         if os.path.isdir(os.path.join(data_folder, d))]
+        self.model_id_list = self.model_id_list[idx_start:]
 
     def _traverse_file(self, model_id):
         '''
