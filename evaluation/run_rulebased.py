@@ -50,7 +50,7 @@ def main():
     metadata_file_path = 'evaluation/model_metadata.json'
 
     # rule-based results path
-    rulebased_result_path = "rule_based/kgram_results/results_partial.json"
+    rulebased_result_path = "rule_based/rule_based_results.json"
 
     results = run(metadata_file_path, rulebased_result_path)
     print(results)
