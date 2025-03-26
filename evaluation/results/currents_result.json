@@ -1,0 +1,799 @@
+{
+    "267598": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "2015953": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'I Na,t', 'I K', 'I M', 'I h'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "2017403": {
+        "com_var1": "'I K,leak', 'I Calcium', 'I K', 'I Na,leak'",
+        "com_var2": "'I L high threshold', 'I K,leak', 'I K', 'I K', 'I Calcium', 'I Na, leak', 'I Cl, leak'",
+        "com_var3": "'I K,leak'",
+        "header1": "'I K', 'I K,Ca', 'I Sodium', 'I Calcium', 'I Potassium'",
+        "header2": "'I Sodium', 'I Calcium', 'I Potassium', 'I K,Ca', 'I Na,Ca', 'IK Skca', 'IK Bkca'",
+        "header3": "'I K', 'I K,Ca'"
+    },
+    "267357": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'I Na,p', 'I Na,t', 'I N', 'I T low threshold', 'I p,q', 'I K', 'I K,leak', 'I K,Ca', 'I K,Na'",
+        "header1": "'Na/K pump', 'Ca pump'",
+        "header2": "'Na/K pump', 'Na/Ca exchanger'",
+        "header3": "'Na/K pump'"
+    },
+    "2014832": {
+        "com_var1": "'I A', 'I K', 'I K,Ca', 'I M', 'I h', 'I Na,p', 'I Na,t', 'I T low threshold', 'I L high threshold'",
+        "com_var2": "'I Na,t', 'I N', 'I T low threshold', 'I A', 'I K', 'I K,leak', 'I h', 'I K,Ca', 'I A, slow', 'I_KHT', 'I_KLT', 'Late Na', 'I_K,Na'",
+        "com_var3": "'I Na,t', 'I T low threshold', 'I K', 'I h', 'I K,Ca', 'I Sodium', 'I Calcium', 'I Potassium'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "2016658": {
+        "com_var1": "'I A', 'I Na', 'I K'",
+        "com_var2": "'I Na,t', 'I K', 'I A', 'I Sodium', 'I Potassium'",
+        "com_var3": "'I A', 'I K', 'I Na,p'",
+        "header1": "'I A', 'I K'",
+        "header2": "'I Na,t', 'I A', 'I K', 'I K,leak'",
+        "header3": "'I A', 'I Potassium'"
+    },
+    "266844": {
+        "com_var1": "'I K,Ca', 'I Sodium', 'I Calcium', 'I A'",
+        "com_var2": "'I K,Ca', 'I Na', 'I Sodium', 'I Potassium', 'I Calcium', 'I A'",
+        "com_var3": "'I K,Ca', 'I Na', 'I Calcium', 'I Sodium'",
+        "header1": "'I K,Ca', 'I M', 'I Sodium', 'I Calcium'",
+        "header2": "'I K,Ca', 'I M', 'I Sodium'",
+        "header3": "'I K,Ca', 'I M', 'I Sodium', 'I Na,Ca', 'Ca pump'"
+    },
+    "267088": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'I Na,t', 'I Sodium'"
+    },
+    "267329": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'I Na,t', 'I Sodium', 'I Potassium', 'I K', 'I K,leak', 'I Na, leak'",
+        "header2": "'I Na', 'I K', 'I K,leak', 'I Na,leak'",
+        "header3": "'I Na,t', 'I K', 'I K,leak', 'I Na, leak'"
+    },
+    "267728": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'I Na,p', 'I K', 'I h'",
+        "header2": "'I Na,p', 'I K', 'I Na, slow inactivation', 'I h'",
+        "header3": "'I Na,p', 'I K', 'I h'"
+    },
+    "2015412": {
+        "com_var1": "'I Na', 'I K', 'I K,Ca', 'I Calcium', 'I Sodium', 'I trp'",
+        "com_var2": "'I K,Ca', 'I Na', 'I K', 'I Calcium', 'I Sodium', 'I trp'",
+        "com_var3": "'I Na,p', 'I Na,t', 'I L high threshold', 'I T low threshold', 'I K,Ca', 'I K', 'I Na, leak', 'I Ca,p'",
+        "header1": "'I Na', 'I K', 'I K,Ca', 'I Calcium', 'I trp'",
+        "header2": "'I trp', 'I K', 'I K,Ca', 'I Calcium'",
+        "header3": "'I Na', 'I K,Ca', 'I trp', 'I Na, leak'"
+    },
+    "267253": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'I Na,p', 'I Na,t', 'I L high threshold', 'I T low threshold', 'I h', 'I K', 'I K,leak', 'Na/K pump'",
+        "header2": "'I h', 'Na/K pump', 'I Na, leak', 'I Cl, leak', 'KCC2', 'NKCC1'",
+        "header3": "'I h', 'Na/K pump'"
+    },
+    "2014821": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'I Na,p', 'I Na,t', 'I Sodium', 'I Potassium', 'I K', 'I K,leak', 'Late Na', 'Na/Ca exchanger', 'I Na,Ca', 'Na/K pump', 'I h', 'I A', 'I K,Ca', 'I_KLT', 'I_KHT', 'I M', 'I_KD'",
+        "header1": "'I M', 'I T low threshold', 'I K', 'I AHP'",
+        "header2": "'I M', 'I T low threshold', 'I AHP'",
+        "header3": "'I M', 'I T low threshold', 'I AHP'"
+    },
+    "267252": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'I Calcium', 'I K,Ca'",
+        "header1": "'I Calcium'",
+        "header2": "'none'",
+        "header3": "'I K', 'I p,q', 'I A', 'I K,Ca', 'I Calcium', 'Na/Ca exchanger', 'Na/K pump'"
+    },
+    "267646": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'I L high threshold', 'I A', 'I Calcium', 'I Potassium'",
+        "header2": "'I Calcium', 'I Potassium', 'I A'",
+        "header3": "'I L high threshold', 'I A', 'I K', 'I Calcium', 'I Potassium'"
+    },
+    "267596": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "267583": {
+        "com_var1": "'I Calcium', 'I Potassium', 'I Na,t', 'I T low threshold', 'I A', 'I K,Ca', 'I h', 'I K,leak', 'I Sodium', 'I Mixed'",
+        "com_var2": "'I Na,t', 'I T low threshold', 'I A', 'I K,Ca', 'I h', 'I K,leak', 'I K'",
+        "com_var3": "'I Na,t', 'I T low threshold', 'I A', 'I K,Ca', 'I h', 'I K,leak', 'I Na, leak'",
+        "header1": "'I Na,t', 'I T low threshold', 'I A', 'I K,Ca', 'I h', 'I K,leak'",
+        "header2": "'I Na,t', 'I T low threshold', 'I A', 'I K,Ca', 'I h'",
+        "header3": "'I Na,t', 'I T low threshold', 'I A', 'I K,Ca', 'I h', 'I K'"
+    },
+    "267561": {
+        "com_var1": "'I K', 'I K,leak', 'I K,Ca'",
+        "com_var2": "'I Calcium', 'I K', 'I K,Ca'",
+        "com_var3": "'I Calcium', 'I K,Ca', 'I K'",
+        "header1": "'I K', 'I K,leak', 'I K,Ca', 'I Calcium', 'I Potassium'",
+        "header2": "'I K', 'I K,leak', 'I K,Ca', 'I K,Na', 'I Na, leak', 'I Ca,p'",
+        "header3": "'I K', 'I K,leak', 'I K,Ca', 'I Calcium'"
+    },
+    "2017405": {
+        "com_var1": "'I K', 'I Na', 'I K,leak', 'I M', 'I Na, leak'",
+        "com_var2": "'I Sodium', 'I Potassium', 'I K,leak', 'I Na,leak'",
+        "com_var3": "'I Na', 'I K', 'I K,leak', 'I M', 'I Na, leak'",
+        "header1": "'I Na,t', 'I K', 'I K,leak', 'I M', 'I K,Ca'",
+        "header2": "'I Na,t', 'I K', 'I K,leak', 'I M', 'I h', 'I K,Ca', 'I_CAN', 'ATP-senstive potassium current', 'I_KHT', 'I_KLT', 'I_HERG', 'Late Na', 'I_Na,Ca', 'I_Ks', 'I_K,Na', 'Na/K pump', 'I Cl, leak', 'I_Na, leak', 'I_AHP', 'Kir', 'Kir2 leak', 'I Na, slow inactivation', 'IK Bkca', 'IK Skca'",
+        "header3": "'I Na,t', 'I K', 'I K,leak', 'I M', 'I h', 'I K,Ca'"
+    },
+    "2015414": {
+        "com_var1": "'none'",
+        "com_var2": "'I K,Ca', 'I Potassium', 'I Calcium', 'I M', 'I A'",
+        "com_var3": "'I K,Ca', 'I Sodium', 'I Potassium', 'I Calcium'",
+        "header1": "'I K', 'I K,leak', 'I K,Ca', 'I Calcium', 'I Potassium'",
+        "header2": "'I K', 'I K,leak', 'I K,Ca', 'I Sodium', 'I Calcium'",
+        "header3": "'I K', 'I K,Ca'"
+    },
+    "2016659": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'plasticity_off', 'presynaptically_gated', 'postsynaptically_gated'",
+        "header3": "'none'"
+    },
+    "2014833": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "267599": {
+        "com_var1": "'I CAN', 'I Na', 'I Trpm4'",
+        "com_var2": "'I CAN', 'I Na,p', 'I Sodium', 'I trp', 'I Na, slow inactivation', 'I TRPM4'",
+        "com_var3": "'I CAN', 'I TRPM4'",
+        "header1": "'I L high threshold', 'I K,Ca', 'I M', 'I AHP'",
+        "header2": "'I L high threshold', 'I K,Ca', 'I M', 'I AHP'",
+        "header3": "'I L high threshold', 'I T low threshold', 'I K,Ca', 'I M', 'I AHP'"
+    },
+    "267566": {
+        "com_var1": "'I Calcium', 'I Potassium'",
+        "com_var2": "'I K, I K,leak', 'I h, I K,Ca', 'I Calcium', 'Ca pump', 'IK Bkca'",
+        "com_var3": "'I Calcium', 'I Potassium', 'IK Bkca'",
+        "header1": "'I K', 'I K,leak', 'I K,Ca', 'I Calcium', 'I Potassium', 'Ca pump'",
+        "header2": "'I Calcium', 'I Potassium', 'I K,Ca', 'I K,leak', 'Ca pump', 'IK Bkca'",
+        "header3": "'I K', 'I K,leak', 'I K,Ca', 'I Calcium', 'I Potassium', 'Ca pump'"
+    },
+    "2015571": {
+        "com_var1": "'I Na,t', 'I K', 'I K,leak', 'I Sodium', 'I Potassium'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'I Na,t', 'I K'",
+        "header2": "'I Sodium', 'I Potassium', 'I Na, leak', 'I K,leak'",
+        "header3": "'I Sodium', 'I Potassium', 'I Na, leak', 'I K, leak'"
+    },
+    "267586": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "267564": {
+        "com_var1": "'I K', 'I K,Ca', 'ATP-senstive potassium current', 'I_KD'",
+        "com_var2": "'ATP-senstive potassium current', 'I_Bkca', 'I_K,Ca', 'I_KLT', 'I_KHT', 'I_SERCA', 'Na/Ca exchanger'",
+        "com_var3": "'I K', 'I K,Ca', 'I Na', 'ATP-senstive potassium current', 'Na/Ca exchanger', 'I_SERCA', 'Na/K pump', 'Ca pump'",
+        "header1": "'ATP-senstive potassium current', 'Na/Ca exchanger', 'I_SERCA'",
+        "header2": "'ATP-senstive potassium current', 'I_SERCA'",
+        "header3": "'ATP-senstive potassium current', 'Na/Ca exchanger', 'I_SERCA', 'Ca pump'"
+    },
+    "267018": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "267250": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "267221": {
+        "com_var1": "'I Chloride', 'I Na,t', 'I K', 'I K,leak', 'I M', 'I h', 'I K,Ca', 'I Sodium', 'I Calcium', 'I Potassium'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'I Na,t', 'I K', 'I Na, leak', 'I Calcium', 'I K,leak', 'I Sodium'",
+        "header2": "'I Na,t', 'I K', 'I K,leak', 'I Sodium', 'I Calcium'",
+        "header3": "'I Sodium', 'I Potassium', 'I Na,t', 'I Na, leak', 'I K,leak', 'I Calcium'"
+    },
+    "2015411": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'I_K', 'I_K,leak', 'I_K,Ca', 'I_Na,t', 'I_M', 'I h'"
+    },
+    "267620": {
+        "com_var1": "'I Na,p', 'I Na,t', 'I K,leak', 'I_Ks', 'I Na, leak'",
+        "com_var2": "'I Na,t', 'I K,leak', 'I Na, leak', 'I_Ks'",
+        "com_var3": "'I Na,t', 'I K,leak', 'I_Ks', 'I Na, leak', 'Na/K pump', 'I_AHP'",
+        "header1": "'I Na,p', 'I_Ks', 'Na/K pump'",
+        "header2": "'I Na,p', 'I K', 'I_Ks', 'Na/K pump'",
+        "header3": "'I Na,p', 'I K', 'Na/K pump'"
+    },
+    "267563": {
+        "com_var1": "'I_K', 'I_Ks', 'I_K,Na', 'Na/K pump', 'I_Na,Ca', 'I_CaNa'",
+        "com_var2": "'I Na,p', 'I Na, slow inactivation', 'I_L high threshold', 'I N', 'I_K', 'I_K,leak', 'I_Ks', 'Na/Ca exchanger', 'Na/K pump', 'I_K,Na', 'I_K, slow', 'ATP-sensitive potassium current', 'I_SERCA', 'Late Na', 'I Ca,p'",
+        "com_var3": "'I K', 'I_Ks', 'I_K,Na', 'Na/K pump', 'Na/Ca exchanger'",
+        "header1": "'I K', 'I K1', 'Na/Ca exchanger', 'Na/K pump'",
+        "header2": "'I K', 'I Sodium', 'Na/Ca exchanger', 'Na/K pump'",
+        "header3": "'I K', 'ATP-senstive potassium current', 'I_KHT', 'I_KLT', 'Late Na', 'Na/Ca exchanger', 'I_Na,Ca', 'Na/K pump', 'I_Ks', 'I SERCA'"
+    },
+    "267512": {
+        "com_var1": "'I Na,t', 'I p,q', 'I K', 'I Calcium'",
+        "com_var2": "'I Na,t', 'I K', 'I p,q', 'I Calcium'",
+        "com_var3": "'I Na,t', 'I K', 'I Calcium', 'I Sodium'",
+        "header1": "'I Na,t', 'I K', 'I K,leak', 'I N', 'I p,q'",
+        "header2": "'I Sodium', 'I Potassium', 'I Na,t', 'I N', 'I p,q', 'I Na, leak', 'I K,leak', 'I Calcium', 'I R', 'I A'",
+        "header3": "'I Sodium', 'I Potassium', 'I N', 'I p,q', 'I Calcium', 'I Na, leak'"
+    },
+    "267589": {
+        "com_var1": "'I Na,p', 'I L high threshold', 'I T low threshold', 'I A', 'I K,leak', 'I h', 'I K,Ca', 'I A, slow', 'I_KHT', 'I_KLT'",
+        "com_var2": "'I Na,p', 'I T low threshold', 'I A', 'I K,leak', 'I h'",
+        "com_var3": "'I Na,p', 'I A', 'I T low threshold', 'I h', 'I K,leak', 'I Herg'",
+        "header1": "'I Na,p', 'I Na,t', 'I L high threshold', 'I T low threshold', 'I A', 'I K', 'I K,leak', 'I M', 'I h', 'I K,Ca', 'I Sodium', 'I Potassium', 'I A, slow', 'I_KHT', 'I_KLT', 'I_KD'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "267562": {
+        "com_var1": "'Na/Ca exchanger', 'I_SERCA', 'ATP-senstive potassium current'",
+        "com_var2": "'Ionic', 'I K,Ca', 'Na/Ca exchanger', 'I_SERCA', 'I_HCO3', 'Ca pump'",
+        "com_var3": "'I Na,Ca', 'I SERCA', 'I K,Ca'",
+        "header1": "'I K,Ca', 'I_K', 'I Na', 'I Calcium', 'I SERCA', 'I KCa', 'ATP-senstive potassium current'",
+        "header2": "'I K,Ca', 'I SERCA', 'I Na', 'I Ca', 'I K', 'I K,leak'",
+        "header3": "'I SERCA', 'I K,Ca'"
+    },
+    "267259": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "2014822": {
+        "com_var1": "none",
+        "com_var2": "'I h', 'I K', 'I K,leak', 'I Na,t', 'I Calcium', 'I Sodium', 'I Calcium', 'I Potassium'",
+        "com_var3": "'none'",
+        "header1": "'I K,Ca', 'I AHP', 'I T low threshold', 'I Na'",
+        "header2": "'I K,Ca', 'I T low threshold', 'I_AHP', 'I N'",
+        "header3": "'I K,Ca', 'I AHP', 'I T low threshold', 'I Sodium'"
+    },
+    "260015": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "I am unable to determine the most relevant currents from the provided content. Therefore, the result is: 'none'.",
+        "header1": "'none'",
+        "header2": "'I Na,p', 'I Na,t', 'I L high threshold', 'I N', 'I T low threshold', 'I p,q', 'I A', 'I K,leak', 'I M', 'I K,Ca', 'I CAN', 'I Sodium', 'I Potassium', 'ATP-senstive potassium current', 'I_KHT', 'I_KLT', 'Late Na', 'Na/Ca exchanger', 'I SERCA', 'I_K,Na', 'Na/K pump', 'I AHP', 'I Cl, leak', 'I Na, leak', 'I_KD', 'I Ca SOCC', 'IK Skca'",
+        "header3": "'I Na,t', 'I L high threshold', 'I N', 'I T low threshold', 'I A', 'I K,leak', 'I M', 'I h', 'I Cl,Ca', 'I K,Ca', 'I Calcium', 'I Potassium', 'Na/Ca exchanger', 'I_KD', 'Na+-glutamate transporter', 'IK Bkca', 'IK Skca'"
+    },
+    "267595": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'I Na,t', 'I L high threshold', 'I T low threshold', 'I K', 'I K,leak', 'I Calcium', 'I Potassium', 'I K,Ca'",
+        "header1": "'I K,Ca', 'I Sodium', 'I Potassium'",
+        "header2": "'I K,Ca', 'I K', 'I Sodium', 'I Calcium'",
+        "header3": "'I K,Ca', 'I Potassium'"
+    },
+    "267621": {
+        "com_var1": "'I h', 'I K,Ca', 'I Sodium', 'I Potassium', 'I_KD'",
+        "com_var2": "'I Na,t', 'I K,leak', 'I K,Ca', 'I Sodium', 'I Calcium', 'I Potassium', 'I_KD'",
+        "com_var3": "'I Na', 'I K', 'I K,leak', 'I K,Ca', 'I h', 'I K,Ca', 'I Na, leak', 'I_KD', 'I_K',Na, 'I_KHT', 'I_KLT'",
+        "header1": "'I K,Ca'",
+        "header2": "'I K,Ca', 'I Sodium', 'I Potassium'",
+        "header3": "'I K,Ca', 'I Sodium', 'I Potassium', 'I Na, leak'"
+    },
+    "2015410": {
+        "com_var1": "'IK Bkca', 'IK Skca', 'I CAN'",
+        "com_var2": "'I K,Ca', 'IK Bkca', 'IK Skca'",
+        "com_var3": "'IK Bkca', 'IK Skca'",
+        "header1": "'I M', 'I K,Ca', 'I Sodium', 'I Potassium', 'I N', 'I T low threshold', 'I L high threshold'",
+        "header2": "'I M', 'I K,Ca', 'I Sodium'",
+        "header3": "'I M', 'I K,Ca', 'I Sodium', 'I K,AHP', 'IK Skca'"
+    },
+    "267565": {
+        "com_var1": "'ATP-senstive potassium current', 'I_K,Ca', 'I_SERCA', 'Na/Ca exchanger', 'Na/K pump'",
+        "com_var2": "'I K', 'I K,leak', 'I M', 'I K,Ca', 'ATP-senstive potassium current', 'I_KHT', 'I_KLT', 'I SERCA'",
+        "com_var3": "'I K,Ca', 'I SERCA', 'ATP-senstive potassium current'",
+        "header1": "'I K', 'I K,leak', 'ATP-senstive potassium current'",
+        "header2": "'Late Na', 'Na/Ca exchanger', 'I_Na,Ca', 'I_SERCA', 'Na/K pump'",
+        "header3": "'I K', 'I K,leak', 'I M', 'I K,Ca', 'ATP-senstive potassium current', 'I Na,Ca', 'I_SERCA'"
+    },
+    "267339": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "267501": {
+        "com_var1": "'I Na,t', 'I L high threshold', 'I T low threshold', 'I K', 'I K,leak', 'I h', 'I Cl,Ca', 'I K,Ca', 'I CAN', 'I Sodium', 'I Calcium', 'I Potassium', 'I A, slow', 'I_Na,Ca', 'Na/K pump', 'I A'",
+        "com_var2": "'I Na,t', 'I Calcium', 'I K', 'I K,leak', 'I Na, leak', 'I Cl, leak'",
+        "com_var3": "'I Na,t', 'I K', 'I K,leak', 'I h', 'I K,Ca', 'I M'",
+        "header1": "'I K,Ca', 'I M', 'I T low threshold', 'I Sodium', 'I Calcium'",
+        "header2": "'I K,Ca', 'I M', 'I T low threshold'",
+        "header3": "'I K,Ca', 'I M', 'I T low threshold', 'I Sodium', 'I Calcium'"
+    },
+    "267499": {
+        "com_var1": "'I Na,p', 'I Sodium', 'Na/K pump'",
+        "com_var2": "'I Na,p', 'I Na,leak', 'I K,leak', 'I K,Ca', 'I Sodium', 'I Calcium', 'I Potassium', 'Na/K pump'",
+        "com_var3": "'none'",
+        "header1": "'I M', 'I K', 'I K,Ca', 'I Na,t'",
+        "header2": "'I M', 'I AHP', 'I K,Ca'",
+        "header3": "'I M', 'I K', 'I K,Ca', 'Na/Ca exchanger', 'Na/K pump', 'I AHP', 'I HCO3', 'I Na,t', 'I K,leak', 'I Na, leak'"
+    },
+    "267355": {
+        "com_var1": "'I Na,p', 'I Na,t', 'I K,Ca', 'I h', 'I Sodium', 'I Calcium', 'IK Skca'",
+        "com_var2": "'I K,Ca', 'I Na', 'I Calcium', 'I Sodium'",
+        "com_var3": "'I_K,Ca', 'I Na', 'I Na,t', 'I h'",
+        "header1": "'I K,Ca', 'I Sodium', 'I Calcium', 'I Potassium'",
+        "header2": "'I K,Ca', 'I Sodium', 'I Calcium', 'I Potassium', 'I T low threshold'",
+        "header3": "'I Calcium', 'I K,Ca', 'I Sodium', 'I T low threshold'"
+    },
+    "267754": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'I M', 'I K'",
+        "header2": "'IK Bkca', 'I_KHT', 'I_KLT', 'I_HERG'",
+        "header3": "'IK Bkca', 'IK Skca', 'I K', 'I M', 'I Calcium', 'I Sodium'"
+    },
+    "267509": {
+        "com_var1": "'none'",
+        "com_var2": "'I Na,t', 'I K', 'I Na, leak', 'I K,leak'",
+        "com_var3": "'none'",
+        "header1": "'I T low threshold', 'I K,Ca'",
+        "header2": "'I T low threshold', 'I K,Ca'",
+        "header3": "'I T low threshold', 'I K,Ca', 'I Ks'"
+    },
+    "2014830": {
+        "com_var1": "'none'",
+        "com_var2": "'Na/K pump', 'Osmosis-driven water flux', 'I Chloride', 'I Na,p', 'I Na,t', 'I L high threshold', 'I N', 'I T low threshold', 'I p,q', 'I A', 'I K,leak', 'I M', 'I Cl,Ca', 'I K,Ca', 'I CNG', 'I CAN', 'I Sodium', 'I Calcium', 'I Potassium', 'ATP-senstive potassium current', 'I_KHT', 'I_KLT', 'Late Na', 'Na/Ca exchanger', 'I_Na,Ca', 'I_SERCA', 'I_Ks', 'I R', 'I Q', 'I_K,Na', 'I_KD', 'I Cl, leak', 'I Na, leak', 'I Ca,p', 'I ANO2', 'I trp', 'I HCO3', 'Kir', 'I MI', 'I Cl', 'I Ca SOCC', 'Kir Skca', 'KCC1', 'NBC', 'I TRPM4'",
+        "com_var3": "'none'",
+        "header1": "'Na/K pump', 'Osmosis-driven water flux'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "2016216": {
+        "com_var1": "'I Na,p', 'I Na,t', 'I A', 'I K', 'I K,leak', 'I K,Ca', 'I M', 'I A, slow', 'I_KHT', 'I_KLT', 'Late Na', 'Na/Ca exchanger', 'I_Na,Ca', 'KCNQ1', 'I_Ks', 'I R', 'I Q', 'I_K,Na', 'Na/K pump', 'I_AHP', 'I ANO2', 'I Na, slow inactivation', 'IK Bkca', 'IK Skca', 'I Na, leak', 'I_KD', 'Na+-glutamate transporter'",
+        "com_var2": "'I Na,p', 'I Na,t', 'I L high threshold', 'I A', 'I K', 'I M', 'I h', 'I K,Ca', 'I Calcium', 'I Potassium', 'I A, slow', 'I_KHT', 'I_KLT', 'I_K,Na', 'I_AHP'",
+        "com_var3": "'I Na,t', 'I T low threshold', 'I K', 'I K,Ca', 'I Na', 'I Calcium', 'I Potassium'",
+        "header1": "'I Na,p', 'I Sodium', 'I Potassium'",
+        "header2": "'I Na,p', 'I Sodium', 'I K', 'I Na'",
+        "header3": "'I Na,p', 'I Sodium', 'I Na,t', 'I K'"
+    },
+    "267551": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "267295": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "267694": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'I Na,p', 'I Na,t', 'I L high threshold', 'I N', 'I T low threshold', 'I p,q', 'I A', 'I K', 'I K,leak', 'I M', 'I h', 'I K,Ca', 'I CAN', 'I Sodium', 'I Calcium', 'I Potassium', 'I_KHT', 'I_KLT', 'I R', 'I Q', 'I ANO2'",
+        "header2": "'I Na,p', 'I Na,t', 'I L high threshold', 'I K', 'I K,leak', 'I T low threshold'",
+        "header3": "'I Na,p', 'I Na,t', 'I K', 'I K,leak', 'I K,Ca', 'I Calcium', 'I Sodium', 'I Potassium'"
+    },
+    "267768": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "267310": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "267686": {
+        "com_var1": "'none'",
+        "com_var2": "'I Na,p', 'I Na,t', 'I A', 'I K', 'I K,Ca', 'I CAN'",
+        "com_var3": "'I K,Ca', 'I Na, leak', 'I K,leak', 'I Calcium', 'I Sodium', 'I Potassium'",
+        "header1": "'I AHP', 'I K,Ca'",
+        "header2": "'I K,Ca', 'I AHP', 'I Calcium'",
+        "header3": "'I AHP', 'I K,Ca', 'I T low threshold'"
+    },
+    "267391": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'I Na,p', 'I T low threshold', 'I Calcium', 'Ca pump'",
+        "header2": "'I Na,p', 'I T low threshold', 'Ca pump'",
+        "header3": "'I Na,p', 'I T low threshold', 'I K,Ca', 'Ca pump'"
+    },
+    "2014816": {
+        "com_var1": "'I Na,t', 'I K,Ca'",
+        "com_var2": "'I M', 'I K,Ca'",
+        "com_var3": "'Kad', 'Kca', 'cat', 'K', 'Na', 'Ca', 'Na3', 'Kmb', 'Cal'",
+        "header1": "'I T low threshold', 'I K,Ca', 'I AHP'",
+        "header2": "'I AHP', 'I K,Ca', 'I N', 'I T low threshold', 'I Calcium', 'I Sodium'",
+        "header3": "'I AHP', 'I K,Ca', 'I T low threshold', 'I N', 'I Sodium', 'I Calcium'"
+    },
+    "266796": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'I K', 'I Na', 'I K,leak', 'I CAN'",
+        "header2": "'I_K', 'I_K,leak', 'I_CAN', 'I_Na', 'I_SynE', 'I_SynExt', 'I_SynHipp', 'I_SynI', 'I_leak'",
+        "header3": "'I_K', 'I_K,leak', 'I_CAN', 'I_Sodium', 'I_Potassium', 'I_Na,Ca', 'I_Na,leak', 'I_Ca,p'"
+    },
+    "2016219": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "185864": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'I Na,t', 'I Na,p', 'I K'",
+        "header3": "'I Na,t', 'I A', 'I K', 'I K,leak', 'I M', 'I h', 'I K,Ca', 'I Sodium', 'I Potassium'"
+    },
+    "2016137": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'I h', 'I Chloride', 'I Ca,p'",
+        "header3": "'I K,leak', 'I h', 'I Na, leak', 'I Cl, leak'"
+    },
+    "267614": {
+        "com_var1": "'none'",
+        "com_var2": "'I Na,p', 'I Na,t', 'I L high threshold', 'I T low threshold', 'I K', 'I K,Ca', 'I Calcium', 'I Potassium', 'I ERG', 'I Na, slow inactivation'",
+        "com_var3": "'none'",
+        "header1": "'I Na,t', 'I K,Ca', 'I Sodium', 'I Calcium', 'I A'",
+        "header2": "'I Na,t', 'I K', 'I K,Ca', 'I Calcium', 'I Potassium', 'I Na, leak', 'I Cl, leak'",
+        "header3": "'I Na,t', 'I K', 'I K,Ca', 'I Calcium', 'I Sodium', 'I Cl, leak'"
+    },
+    "267293": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'I h', 'I Na', 'I K', 'I K,Ca', 'I L high threshold', 'I T low threshold', 'I A'",
+        "header2": "'I h', 'I K,Ca', 'IK Bkca'",
+        "header3": "'I h', 'I K,Ca', 'I Sodium', 'I Calcium', 'I Mixed', 'I Potassium', 'I A, slow', 'I Na,t', 'I L high threshold', 'I T low threshold', 'I p,q', 'I K'"
+    },
+    "263719": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "2015422": {
+        "com_var1": "'i Na,p', 'i A', 'i K', 'i K,leak', 'i T,low threshold', 'i h', 'i K,Ca', 'i Na', 'i Na,t', 'i Calcium', 'i Sodium'",
+        "com_var2": "'i Na,p', 'i A', 'i K', 'i K,leak', 'i K,Ca', 'i T low threshold', 'i h'",
+        "com_var3": "'I Na,p', 'I A', 'I K', 'I K,leak', 'I T low threshold', 'I h', 'I K,Ca', 'I Sodium', 'I Potassium', 'I Na, leak'",
+        "header1": "'I Na,p', 'I K,Ca', 'I Na, leak'",
+        "header2": "'I Na,p', 'I K,Ca', 'I HVA'",
+        "header3": "'I Na,p', 'I K,Ca', 'iKCa', 'iNaP'"
+    },
+    "267613": {
+        "com_var1": "'I K', 'I M', 'I K,leak', 'I h', 'I Na', 'I Na, slow inactivation'",
+        "com_var2": "'I Na,p', 'I Na,t', 'I K', 'I M', 'I h', 'I_KHT', 'I_KLT', 'I Na, leak', 'I Ca,p'",
+        "com_var3": "'I A', 'I K', 'I M', 'I h'",
+        "header1": "'Na/Ca exchanger', 'Na/K pump'",
+        "header2": "'I Na,t', 'I Sodium', 'I Na, slow inactivation', 'Na/Ca exchanger', 'I Na,Ca'",
+        "header3": "'none'"
+    },
+    "267311": {
+        "com_var1": "'I Na,t', 'I L high threshold', 'I T low threshold', 'I A', 'I K', 'I M', 'I h', 'I K,Ca'",
+        "com_var2": "none",
+        "com_var3": "'I Na,t', 'I L high threshold', 'I N', 'I T low threshold', 'I K,Ca', 'I CAN', 'I Calcium', 'I Potassium', 'I_KHT', 'I_KLT', 'I_KD'",
+        "header1": "'I Calcium', 'I CAN', 'I h', 'I Cl,Ca', 'I K,Ca', 'I Mixed'",
+        "header2": "'I Calcium', 'I T low threshold', 'I h', 'I Na,t', 'I Sodium', 'I CAN', 'Na/Ca exchanger', 'I Ca,p', 'Ca pump', 'I_K,Ca'",
+        "header3": "'I Calcium', 'I h', 'Ca pump'"
+    },
+    "267710": {
+        "com_var1": "'I Na,p', 'I Na,t', 'I L high threshold', 'I T low threshold', 'I K', 'I K,leak', 'I M', 'I h', 'I K,Ca'",
+        "com_var2": "'none'",
+        "com_var3": "'I Chloride', 'I Na,p', 'I Na,t', 'I L high threshold', 'I N', 'I T low threshold', 'I A', 'I K', 'I K,leak', 'I M', 'I h', 'I Cl,Ca', 'I K,Ca', 'I Sodium', 'I Calcium', 'I Potassium', 'KCNQ1', 'I AHP'",
+        "header1": "'I Na,p', 'I Sodium', 'I Potassium', 'I K,Ca'",
+        "header2": "'I Na,p', 'I Sodium', 'I Calcium', 'I K'",
+        "header3": "'I Na,p', 'Late Na', 'I Sodium', 'I Na, slow inactivation', 'I K', 'I K,Ca', 'IK Skca', 'IK Bkca', 'I Calcium'"
+    },
+    "267695": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "267680": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "267550": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "267382": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "2016138": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'I T low threshold', 'I Na', 'I Sodium', 'I Calcium'",
+        "header2": "'I Na,p', 'I Sodium', 'I T low threshold', 'I Calcium', 'I K', 'I A'",
+        "header3": "'I Na,t', 'I T low threshold', 'I Sodium'"
+    },
+    "267306": {
+        "com_var1": "'I Na,t', 'I K,Ca', 'I h'",
+        "com_var2": "'I Na,t', 'I h', 'I K,Ca', 'I Sodium', 'I Calcium', 'I Potassium'",
+        "com_var3": "'I Na,t', 'I A', 'I h', 'I K,Ca', 'I Sodium', 'I Calcium', 'I Potassium', 'I_KLT', 'I_KD'",
+        "header1": "'I K', 'I K,leak', 'I K,Ca', 'I Sodium'",
+        "header2": "'I K', 'I K,Ca', 'I Sodium'",
+        "header3": "'I K', 'I K,Ca', 'I Sodium'"
+    },
+    "2015420": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "267611": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'"
+    },
+    "2016670": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'I K,Ca'",
+        "header2": "'IKCa_RE', 'ICa'",
+        "header3": "'IKCa', 'IK', 'ICa'"
+    },
+    "267619": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'I Na', 'I K', 'I AR', 'I app', 'I L'",
+        "header2": "'INa', 'IK', 'IL', 'IAR', 'Iapp'",
+        "header3": "'I Na,t', 'I A', 'I K', 'I Sodium'"
+    },
+    "267395": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "2014998": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "267033": {
+        "com_var1": "'I Na,p', 'I h', 'I K,Ca', 'I Sodium', 'I Calcium', 'I Potassium'",
+        "com_var2": "'I K', 'I Na,t', 'I T low threshold', 'I A', 'I K,leak', 'I M', 'I h', 'I Na,Ca', 'I Sodium', 'I Calcium', 'I Potassium'",
+        "com_var3": "'none'",
+        "header1": "'I Chloride', 'I Na,p', 'I Na,t', 'I L high threshold', 'I N', 'I T low threshold', 'I A', 'I K', 'I K,leak', 'I M', 'I h', 'I Cl,Ca', 'I K,Ca', 'I Sodium', 'I Calcium', 'I Potassium', 'I A, slow', 'I K,Na', 'I Na, leak'",
+        "header2": "'none'",
+        "header3": "'I Na,p', 'I Na,t', 'I K,leak', 'I K,Ca', 'I Sodium', 'I Potassium', 'Na/Ca exchanger', 'Na/K pump'"
+    },
+    "267309": {
+        "com_var1": "'I Na,t', 'I K', 'I K,leak', 'I M', 'I AHP'",
+        "com_var2": "'I Na', 'I K', 'I M', 'I AHP'",
+        "com_var3": "'I Na,t', 'I K', 'I K,leak', 'I M', 'I AHP'",
+        "header1": "'I AHP', 'I M', 'I Na', 'I K', 'I K,leak', 'I Na,leak'",
+        "header2": "'I M', 'I AHP'",
+        "header3": "'I Sodium', 'I Na, leak', 'I K', 'I K, leak', 'I M', 'I AHP'"
+    },
+    "2017143": {
+        "com_var1": "'I Na,t', 'I A', 'I K', 'I M', 'I K,Ca'",
+        "com_var2": "'I Na,t', 'I K', 'I M', 'I K,Ca', 'I CAN', 'I Sodium', 'I Calcium', 'I Potassium', 'I K,leak', 'I A, slow', 'Kir'",
+        "com_var3": "'I Na,t', 'I CAN', 'I K,Ca', 'I K', 'Kir'",
+        "header1": "'I Na,p', 'I Na,t', 'I Calcium', 'I A', 'I K', 'I K,leak', 'I M', 'I h', 'I Cl,Ca', 'I K,Ca', 'I CAN', 'I Sodium', 'I Potassium', 'I_KHT', 'I_KLT'",
+        "header2": "'I Sodium', 'I Calcium', 'I Potassium'",
+        "header3": "'I Na,t', 'I K', 'I K,leak', 'I Sodium', 'I Calcium', 'I Potassium', 'I_KHT', 'I_KLT', 'I_HERG', 'I_Ks', 'Late Na', 'I_K,Na', 'Na/K pump'"
+    },
+    "2016663": {
+        "com_var1": "'I AHP', 'I Sodium', 'I Potassium'",
+        "com_var2": "'I Na,p', 'I Na,t', 'I M', 'I Sodium', 'I Potassium', 'I AHP', 'I Na, leak'",
+        "com_var3": "'INaV1p3', 'INaV1p7', 'INaV1p8', 'IKdr', 'IKm', 'ILeak', 'IAHP'",
+        "header1": "'I AHP', 'I M', 'I Sodium', 'I Potassium', 'I K,leak'",
+        "header2": "'I K,leak', 'I Sodium', 'I AHP'",
+        "header3": "'I Na,t', 'I Sodium', 'I K', 'I K,leak', 'I AHP'"
+    },
+    "267056": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'I M', 'I p,q', 'I Q'",
+        "header1": "'I Na,p'",
+        "header2": "'I Na,p'",
+        "header3": "'I Na,p', 'I CaL'"
+    },
+    "267691": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'IK Bkca', 'IK Skca'",
+        "header2": "'I K', 'I Ca,p', 'I K,Ca'",
+        "header3": "'I K', 'I Calcium', 'I Potassium'"
+    },
+    "267617": {
+        "com_var1": "'ica', 'ik'",
+        "com_var2": "'ica', 'ik'",
+        "com_var3": "'ica', 'ik'",
+        "header1": "'I Sodium', 'I Potassium', 'I Na,t', 'I N', 'I p,q', 'I K'",
+        "header2": "'I Na,t', 'I N', 'I p,q', 'I A', 'I K', 'I Na, leak'",
+        "header3": "'I Sodium', 'I Potassium', 'I N', 'I p,q'"
+    },
+    "2014999": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "2014814": {
+        "com_var1": "'I Na,p', 'I K', 'I K,leak', 'I Na, leak', 'I K,Na'",
+        "com_var2": "'I Na,p', 'I K', 'I K,leak', 'I Sodium'",
+        "com_var3": "'I Na,p', 'I K', 'I K,leak', 'I Sodium', 'I Potassium', 'I Na, leak'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'I Chloride', 'I Na,p', 'I Na,t', 'I L high threshold', 'I T low threshold', 'I K', 'I K,leak', 'I M', 'I Cl,Ca', 'I K,Ca', 'I Sodium', 'I Calcium', 'I Potassium', 'I K,Na', 'Na/K pump', 'I Na, leak', 'I Ca,p', 'I_KD', 'I Na, slow inactivation'"
+    },
+    "267267": {
+        "com_var1": "'none'",
+        "com_var2": "'I Sodium', 'I Potassium', 'I K', 'I Na', 'Kir'",
+        "com_var3": "'I Na,p', 'I Sodium', 'I Calcium', 'I K,', 'I K,Ca', 'I Na,Ca', 'Na/Ca exchanger', 'Kir'",
+        "header1": "'Kir', 'I Na,p'",
+        "header2": "'Kir'",
+        "header3": "'Kir', 'I Na,p'"
+    },
+    "2014996": {
+        "com_var1": "'I Na,p', 'I Na,t', 'I K', 'I K,leak'",
+        "com_var2": "'none'",
+        "com_var3": "'I Na,p', 'I Na,t', 'I Sodium'",
+        "header1": "'I Na,p', 'I K', 'I K,leak', 'I Na,leak'",
+        "header2": "'I Na,p', 'I K', 'I K,leak', 'I Na, leak'",
+        "header3": "'I Na,p', 'I K', 'I K,leak', 'I Na, leak'"
+    },
+    "267669": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'CaT', 'KCNQ', 'Kv3', 'Kv2', 'Kv4f', 'Kv4s', 'CaH'",
+        "header3": "'none'"
+    },
+    "267696": {
+        "com_var1": "'Kir'",
+        "com_var2": "'Kir', 'I_K', 'I_K,leak'",
+        "com_var3": "'Kir'",
+        "header1": "'Kir'",
+        "header2": "'Kir'",
+        "header3": "'Kir'"
+    },
+    "2015421": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "267661": {
+        "com_var1": "'I Na,p', 'I Na,t'",
+        "com_var2": "'I Na,p', 'I A', 'I K'",
+        "com_var3": "'I Na,p', 'I Sodium'",
+        "header1": "'I Sodium', 'I Potassium', 'I L high threshold', 'I Na,t', 'I K'",
+        "header2": "'I Na,t', 'I L high threshold', 'I Potassium', 'I K'",
+        "header3": "'I Na,t', 'I L high threshold', 'I Sodium', 'I Potassium'"
+    },
+    "267260": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'ATP-senstive potassium current', 'I_KHT', 'I_KLT', 'I_HERG', 'KCNQ1', 'I_Ks', 'I_Kr', 'I_K,Na', 'Na/K pump', 'KCC2', 'NKCC1', 'Kir', 'TASK channel'",
+        "header2": "'ATP-senstive potassium current', 'I_KHT', 'I_KLT', 'I_HERG', 'Late Na', 'Na/Ca exchanger', 'I_Na,Ca', 'I_SERCA', 'KCNQ1', 'I_Ks', 'I Krp', 'I R', 'I Q', 'Na/K pump', 'I_AHP', 'I ANO2', 'I trp', 'I Na, slow inactivation', 'Kir', 'inactivating', 'I TRPM4'",
+        "header3": "'Na/K pump', 'I Na, leak', 'I K,leak'"
+    },
+    "2016995": {
+        "com_var1": "'Ih', 'I Na'",
+        "com_var2": "'I Na,t', 'I A', 'I h', 'I Sodium', 'I Calcium'",
+        "com_var3": "'I Na,p', 'I Na,t', 'I A', 'I h'",
+        "header1": "'I h', 'I Mixed'",
+        "header2": "'I h'",
+        "header3": "'I h'"
+    },
+    "267363": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'I Na', 'I K', 'I CAN', 'I AHP', 'I GIRK', 'I TRPC'",
+        "header2": "'I CAN', 'I AHP', 'Kir'",
+        "header3": "'I Sodium', 'I Potassium', 'I Calcium', 'I CAN', 'I A', 'I AHP'"
+    }
+}

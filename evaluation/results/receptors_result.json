@@ -1,778 +1,799 @@
 {
     "267598": {
-        "com_var1": "none",
-        "com_var2": "none",
-        "com_var3": "none",
-        "header1": "mGluR1, mGluR2, mGluR3, mGluR4, mGluR5, mGluR6, mGluR7, mGluR8, Muscarinic, GabaA, GabaB, AMPA, NMDA, Kainate",
-        "header2": "NMDA, AMPA, Kainate, mGluR, mGluR1, mGluR2, mGluR3, mGluR4, mGluR5, mGluR6, mGluR7, mGluR8",
-        "header3": "Nicotinic, AMPA, NMDA"
-    },
-    "261466": {
-        "com_var1": "None",
-        "com_var2": "none",
-        "com_var3": "none",
-        "header1": "None",
-        "header2": "None",
-        "header3": "Nicotinic, M1, M3, M4, M5, M2, Muscarinic, Cholinergic Receptors."
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
     },
     "2015953": {
-        "com_var1": "mGluR2, AMPA",
-        "com_var2": "mGluR2, AMPA",
-        "com_var3": "mGluR2, AMPA",
-        "header1": "mGluR2",
-        "header2": "mGluR2",
-        "header3": "mGluR2"
+        "com_var1": "'mGluR2', 'AMPA'",
+        "com_var2": "'mGluR2', 'AMPA'",
+        "com_var3": "'mGluR2', 'AMPA'",
+        "header1": "'mGluR2'",
+        "header2": "'mGluR2'",
+        "header3": "'mGluR2'"
     },
-    "267184": {
-        "com_var1": "None",
-        "com_var2": "none",
-        "com_var3": "none",
-        "header1": "none",
-        "header2": "none",
-        "header3": "none"
+    "2017403": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
     },
-    "266851": {
-        "com_var1": "mGluR1, mGluR5, NMDA, AMPA, Kainate",
-        "com_var2": "none",
-        "com_var3": "NMDA, AMPA, Kainate, mGluR",
-        "header1": "mGluR, AMPA, NMDA, Gaba",
-        "header2": "none",
-        "header3": "mGluR, Gaba"
+    "267357": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
     },
-    "260192": {
-        "com_var1": "AMPA",
-        "com_var2": "AMPA",
-        "com_var3": "AMPA",
-        "header1": "none",
-        "header2": "None",
-        "header3": "none"
+    "2014832": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'AMPA', 'NMDA', 'mGluR', 'GabaA', 'GabaB', 'Cholinergic Receptors'",
+        "header3": "'NMDA', 'AMPA', 'GabaA', 'GabaB', 'Cholinergic Receptors', 'Muscarinic'"
+    },
+    "2016658": {
+        "com_var1": "'AMPA', 'GabaA'",
+        "com_var2": "'AMPA', 'GabaA'",
+        "com_var3": "'AMPA', 'GabaA'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "266844": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Muscarinic', 'AMPA', 'NMDA', 'Glutamate'",
+        "header2": "'NMDA', 'AMPA', 'Glutamate'",
+        "header3": "'NMDA', 'AMPA', 'Gaba', 'Glutamate'"
     },
     "267088": {
-        "com_var1": "none",
-        "com_var2": "None",
-        "com_var3": "None",
-        "header1": "NMDA, AMPA, GabaA, GabaB, mGluR",
-        "header2": "NMDA, AMPA, mGluR, mGluR1",
-        "header3": "AMPA, NMDA, mGluR"
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'AMPA', 'NMDA', 'mGluR'"
     },
-    "2015954": {
-        "com_var1": "none",
-        "com_var2": "none",
-        "com_var3": "none",
-        "header1": "none",
-        "header2": "Nicotinic, M4, M5, mGluR4, mGluR5, mGluR6, mGluR7, Alpha, Alpha1, Alpha2, Beta, D1, D2, 5-HT1, 5-HT2, 5-HT4, H2, GabaA, GabaB, Muscarinic, AMPA, NMDA, mGluR, 5-HT3, Kainate, Monoamine Receptors, Glutamate, Gaba, Adrenergic, Serotonin, Histamine, Cholinergic Receptors, Amino Acid Receptors, Peptide Receptors, H1, Ion Receptors, Zn2+, TrpM3.",
-        "header3": "none"
-    },
-    "267013": {
-        "com_var1": "NMDA, AMPA, Kainate",
-        "com_var2": "NMDA, AMPA",
-        "com_var3": "AMPA, NMDA",
-        "header1": "mGluR1, mGluR2, mGluR3, mGluR4, mGluR5, mGluR6, mGluR7, mGluR8, NMDA, AMPA, Kainate, Glutamate",
-        "header2": "NMDA, AMPA, mGluR",
-        "header3": "mGluR, AMPA, NMDA, Kainate"
-    },
-    "266726": {
-        "com_var1": "Nicotinic, mGluR, Gaba, Adrenergic, Serotonin, Cholinergic Receptors, Ion Receptors.",
-        "com_var2": "Ion Receptors",
-        "com_var3": "Ion Receptors",
-        "header1": "none",
-        "header2": "none",
-        "header3": "none"
+    "267329": {
+        "com_var1": "'AMPA', 'NMDA', 'Kainate', 'mGluR'",
+        "com_var2": "'AMPA', 'NMDA', 'GabaA', 'GabaB', 'Glutamate', 'Gaba'",
+        "com_var3": "'AMPA', 'NMDA', 'mGluR', 'GabaA', 'GabaB', 'Cholinergic Receptors'",
+        "header1": "'AMPA', 'NMDA', 'GabaA', 'GabaB'",
+        "header2": "'AMPA', 'NMDA', 'Kainate'",
+        "header3": "'none'"
     },
     "267728": {
-        "com_var1": "none",
-        "com_var2": "none",
-        "com_var3": "none",
-        "header1": "none",
-        "header2": "none",
-        "header3": "none"
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
     },
-    "267183": {
-        "com_var1": "none",
-        "com_var2": "none",
-        "com_var3": "none",
-        "header1": "none",
-        "header2": "none",
-        "header3": "none"
+    "2015412": {
+        "com_var1": "'TrpM3'",
+        "com_var2": "'TrpM3'",
+        "com_var3": "'TrpM3'",
+        "header1": "'TrpM3'",
+        "header2": "'TrpM3'",
+        "header3": "'TrpM3'"
     },
-    "262356": {
-        "com_var1": "AMPA.",
-        "com_var2": "AMPA",
-        "com_var3": "AMPA",
-        "header1": "AMPA, NMDA",
-        "header2": "AMPA, NMDA, mGluR, Glutamate",
-        "header3": "None"
+    "267253": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Nicotinic', 'Muscarinic', 'NMDA', 'AMPA', 'Kainate', 'Glutamate', 'mGluR', 'Cholinergic Receptors', 'GabaA', 'GabaB'",
+        "header2": "'mGluR1', 'mGluR2', 'mGluR3', 'mGluR4', 'mGluR5', 'mGluR6', 'mGluR7', 'mGluR8'",
+        "header3": "'none'"
+    },
+    "2014821": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "267252": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "267646": {
+        "com_var1": "'Opsins'",
+        "com_var2": "'Opsins', 'Nicotinic', 'Muscarinic', 'mGluR'",
+        "com_var3": "'Opsins'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
     },
     "267596": {
-        "com_var1": "none",
-        "com_var2": "none",
-        "com_var3": "none",
-        "header1": "GabaA, AMPA",
-        "header2": "GabaA, AMPA",
-        "header3": "GabaA, AMPA"
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'GabaA', 'AMPA'",
+        "header2": "'GabaA', 'AMPA'",
+        "header3": "'GabaA', 'AMPA'"
     },
-    "266732": {
-        "com_var1": "Nicotinic, Muscarinic, Cholinergic Receptors",
-        "com_var2": "Nicotinic, Muscarinic",
-        "com_var3": "none",
-        "header1": "none",
-        "header2": "none",
-        "header3": "none"
+    "267583": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
     },
-    "261460": {
-        "com_var1": "Ca_HVA, SKv3_1, SK_E2, Ca_LVAst, Ih, NaTs2_t, CaDynamics_E2, Nap_Et2, K_Pst, K_Tst, NaTa_t",
-        "com_var2": "GabaA, GabaB, AMPA, NMDA, Glutamate, Gaba",
-        "com_var3": "None",
-        "header1": "GabaA, GabaB, AMPA, NMDA, mGluR, Glutamate, Gaba",
-        "header2": "AMPA, NMDA, GabaA, GabaB",
-        "header3": "mGluR1, mGluR2, mGluR3, mGluR4, mGluR5, mGluR6, mGluR7, mGluR8, AMPA, NMDA, Kainate, Glutamate, Gaba, GabaA, GabaB"
-    },
-    "262465": {
-        "com_var1": "NMDA, AMPA, mGluR",
-        "com_var2": "AMPA, NMDA",
-        "com_var3": "NMDA, AMPA, mGluR",
-        "header1": "NMDA, AMPA, Glutamate, Gaba, GabaA",
-        "header2": "NMDA, AMPA, mGluR",
-        "header3": "NMDA, AMPA, mGluR, Gaba"
+    "267561": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
     },
     "2017405": {
-        "com_var1": "AMPA, NMDA, GabaA, GabaB, mGluR, Glutamate",
-        "com_var2": "mGluR1, mGluR3, D1, D2, GabaA, GabaB, AMPA, NMDA, mGluR, Glutamate, Gaba",
-        "com_var3": "AMPA, NMDA, Glutamate, Gaba, GabaA, GabaB",
-        "header1": "D1, D2, AMPA, NMDA, Kainate, mGluR",
-        "header2": "mGluR1, mGluR4, mGluR5, mGluR8, D1, D2, AMPA, NMDA",
-        "header3": "M1, M3, M4, M5, M2, mGluR1, mGluR5, D1, D2, AMPA, NMDA, mGluR, Glutamate, Gaba, Dopaminergic Receptor."
+        "com_var1": "'AMPA', 'NMDA', 'Kainate', 'mGluR'",
+        "com_var2": "'NMDA', 'AMPA', 'Kainate', 'GabaA', 'GabaB', 'D1', 'D2'",
+        "com_var3": "'NMDA', 'GabaA', 'GabaB', 'AMPA', 'Kainate', 'mGluR', 'Dopaminergic Receptor', 'D1', 'D2'",
+        "header1": "'D1', 'D2', 'AMPA', 'NMDA', 'GabaA', 'GabaB'",
+        "header2": "'D1', 'D2', 'AMPA', 'NMDA', 'Kainate', 'GabaA', 'GabaB', 'mGluR', 'Glutamate', 'Gaba', 'Cholinergic Receptors'",
+        "header3": "'D1', 'D2', 'GabaA', 'GabaB', 'NMDA', 'AMPA'"
     },
-    "267093": {
-        "com_var1": "none",
-        "com_var2": "none",
-        "com_var3": "none",
-        "header1": "none",
-        "header2": "AMPA, NMDA, Kainate, mGluR",
-        "header3": "none"
+    "2015414": {
+        "com_var1": "'D1', 'Gaba', 'Glycine'",
+        "com_var2": "'D1', 'Gaba', 'Glycine'",
+        "com_var3": "'D1', 'Gaba', 'Glycine'",
+        "header1": "'D1', 'Gaba', 'Glycine'",
+        "header2": "'D1', 'GabaA', 'Glycine'",
+        "header3": "'D1', 'Gaba', 'Glycine'"
     },
-    "262081": {
-        "com_var1": "none",
-        "com_var2": "none",
-        "com_var3": "Ion Receptors",
-        "header1": "none",
-        "header2": "none",
-        "header3": "none"
+    "2016659": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'AMPA', 'NMDA'"
     },
-    "266842": {
-        "com_var1": "Nicotinic, M1, M2, mGluR1, mGluR2, mGluR4, mGluR5, D1, D2, 5-HT1, 5-HT2, GabaA, GabaB, AMPA, NMDA, mGluR, Glutamate, Gaba, Adrenergic, Serotonin, Cholinergic Receptors, Dopaminergic Receptor.",
-        "com_var2": "NMDA, AMPA, GabaA, GabaB, Glutamate, Ion Receptors",
-        "com_var3": "Glutamate, Gaba, AMPA, NMDA, mGluR, GabaA",
-        "header1": "mGluR2, mGluR3, mGluR4, mGluR5, GabaA, GabaB, NMDA, AMPA, Kainate, Ion Receptors",
-        "header2": "Ion Receptors, Glutamate, Gaba",
-        "header3": "ION Receptors, Ion Receptors"
+    "2014833": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
     },
     "267599": {
-        "com_var1": "NMDA",
-        "com_var2": "M4, NMDA, TrpM3",
-        "com_var3": "TrpM3, NMDA",
-        "header1": "Cholinergic Receptors, Muscarinic",
-        "header2": "Cholinergic Receptors, Muscarinic",
-        "header3": "Cholinergic Receptors, Muscarinic"
+        "com_var1": "'none'",
+        "com_var2": "'TrpM3'",
+        "com_var3": "'none'",
+        "header1": "'Cholinergic Receptors'",
+        "header2": "'none'",
+        "header3": "'none'"
     },
-    "266925": {
-        "com_var1": "AMPA, Glutamate",
-        "com_var2": "AMPA, Glutamate",
-        "com_var3": "AMPA, Glutamate",
-        "header1": "AMPA, Glutamate",
-        "header2": "AMPA, Glutamate",
-        "header3": "AMPA, Glutamate"
+    "267566": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
     },
-    "266577": {
-        "com_var1": "AMPA, NMDA, mGluR.",
-        "com_var2": "mGluR1, mGluR2, mGluR3, mGluR4, mGluR5, mGluR6, mGluR7, mGluR8, mGluR",
-        "com_var3": "AMPA, NMDA",
-        "header1": "mGluR, AMPA, NMDA, Gaba, Glutamate",
-        "header2": "Nicotinic, M1, M3, M4, M5, M2, Alpha, Alpha1, Alpha2, Beta, Muscarinic, Cholinergic Receptors.",
-        "header3": "mGluR1, mGluR5, AMPA, NMDA, mGluR, Glutamate"
+    "2015571": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
     },
     "267586": {
-        "com_var1": "Nicotinic, M1, M3, M4, M5, M2, Muscarinic, Cholinergic Receptors.",
-        "com_var2": "none",
-        "com_var3": "none",
-        "header1": "Nicotinic, M1, M3, M4, M5, M2, mGluR1, mGluR2, mGluR3, mGluR4, mGluR5, mGluR6, mGluR7, mGluR8, Alpha, Alpha1, Alpha2, Beta, D1, D2, 5-HT1, 5-HT2, 5-HT4, H2, GabaA, GabaB, Muscarinic, AMPA, NMDA, mGluR, 5-HT3, Kainate, Monoamine Receptors, Glutamate, Gaba, Adrenergic, Serotonin, Histamine, Cholinergic Receptors, Amino Acid Receptors, Dopaminergic Receptor, Glycine",
-        "header2": "Nicotinic, M1, M3, M4, M5, M2, AMPA, NMDA, mGluR1, mGluR2, mGluR3, mGluR4, mGluR5, mGluR6, mGluR7, mGluR8, Alpha, Alpha1, Alpha2, Beta, D1, D2, 5-HT1, 5-HT2, 5-HT4, GabaA, GabaB, Muscarinic.",
-        "header3": "M1, M2, M3, M4, M5, mGluR1, mGluR2, mGluR3, mGluR4, mGluR5, mGluR6, mGluR7, mGluR8, Alpha, Alpha1, Alpha2, Beta, D1, D2, 5-HT1, 5-HT2, 5-HT3, 5-HT4, H2, GabaA, GabaB, AMPA, NMDA, Kainate, Adrenergic, Serotonin, Histamine, Glycine, Dopaminergic Receptor, Ion Receptors, P2X3."
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
     },
-    "267066": {
-        "com_var1": "none",
-        "com_var2": "none",
-        "com_var3": "none",
-        "header1": "none",
-        "header2": "none",
-        "header3": "none"
+    "267564": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "267018": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "267250": {
+        "com_var1": "'Opsins'",
+        "com_var2": "'Opsins'",
+        "com_var3": "'Opsins'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
     },
     "267221": {
-        "com_var1": "AMPA",
-        "com_var2": "AMPA",
-        "com_var3": "AMPA",
-        "header1": "Nicotinic, M1, M3, M4, M5, M2, AMPA, NMDA, mGluR, GabaA, GabaB, mGluR1, Adrenergic, Dopaminergic Receptor, Glutamate, Serotonin, Histamine, Cholinergic Receptors, Ion Receptors, Glycine.",
-        "header2": "Nicotinic, M1, M2, AMPA, NMDA, GabaA, GabaB, Muscarinic, mGluR, Glutamate, Gaba, Cholinergic Receptors, Glycine.",
-        "header3": "GabaA, GabaB, AMPA, NMDA, mGluR"
+        "com_var1": "'AMPA'",
+        "com_var2": "'AMPA'",
+        "com_var3": "'AMPA'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'GabaA', 'GabaB', 'AMPA', 'NMDA', 'mGluR'"
     },
-    "263259": {
-        "com_var1": "None",
-        "com_var2": "none",
-        "com_var3": "none",
-        "header1": "Nicotinic, M1, M3, M4, M5, M2, mGluR1, mGluR2, mGluR3, mGluR4, mGluR5, mGluR6, mGluR7, mGluR8, Alpha, Alpha1, Alpha2, Beta, D1, D2, 5-HT1, 5-HT2, 5-HT4, H2, GabaA, GabaB, Muscarinic, AMPA, NMDA, Kainate, Glutamate, Gaba, Adrenergic, Serotonin, Histamine, Cholinergic Receptors, Amino Acid Receptors, Sensory Receptors, Olfactory Receptors, Opsins, Dopaminergic Receptor, Glycine, Gaseous Receptors, Peptide Receptors.",
-        "header2": "AMPA, NMDA, GabaA, GabaB",
-        "header3": "AMPA, NMDA, Gaba, GabaA, GabaB"
+    "2015411": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'nicotine', 'GabaA', 'GabaB', 'AMPA', 'NMDA', 'mGluR', 'Cholinergic Receptors', 'Glycine'",
+        "header3": "'GabaA', 'GabaB', 'NMDA', 'AMPA'"
     },
-    "266836": {
-        "com_var1": "M1, M2, M3, M4, M5, AMPA, NMDA, mGluR, Beta",
-        "com_var2": "mGluR1, mGluR2, mGluR3, mGluR4, mGluR5, mGluR6, mGluR7, mGluR8, AMPA, NMDA, Kainate, Glutamate, Gaba",
-        "com_var3": "none",
-        "header1": "mGluR1, mGluR5, NMDA, AMPA, GabaA, GabaB, Muscarinic, Dopaminergic Receptor, Serotonin",
-        "header2": "M1, M3, M4, M5, M2, NMDA, AMPA, mGluR1, mGluR5, Dopaminergic Receptor",
-        "header3": "NMDA, AMPA"
+    "267620": {
+        "com_var1": "'none'",
+        "com_var2": "'Muscarinic', 'AMPA', 'NMDA', 'mGluR', 'Gaba', 'Cholinergic Receptors', 'Amino Acid Receptors'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
     },
-    "266578": {
-        "com_var1": "GabaA, AMPA",
-        "com_var2": "AMPA, GabaA",
-        "com_var3": "GabaA, AMPA",
-        "header1": "none",
-        "header2": "none",
-        "header3": "none"
+    "267563": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'Beta'",
+        "header3": "'none'"
     },
-    "267189": {
-        "com_var1": "GabaA, AMPA, NMDA, Gaba",
-        "com_var2": "GabaA, AMPA, NMDA, Gaba",
-        "com_var3": "GabaA, AMPA, NMDA",
-        "header1": "AMPA, NMDA, Gaba",
-        "header2": "AMPA, NMDA, GabaA",
-        "header3": "GabaA, AMPA, NMDA"
+    "267512": {
+        "com_var1": "'GabaA', 'GabaB', 'Gaba', 'AMPA'",
+        "com_var2": "'GabaA', 'GabaB', 'AMPA'",
+        "com_var3": "'GabaA', 'GabaB', 'Gaba'",
+        "header1": "'AMPA'",
+        "header2": "'AMPA'",
+        "header3": "'AMPA'"
+    },
+    "267589": {
+        "com_var1": "'NMDA'",
+        "com_var2": "'NMDA'",
+        "com_var3": "'NMDA'",
+        "header1": "'AMPA', 'NMDA', 'GabaA', 'GabaB', 'Glutamate', 'Gaba'",
+        "header2": "'AMPA', 'NMDA', 'mGluR'",
+        "header3": "'NMDA', 'AMPA', 'GabaA', 'GabaB', 'Cholinergic Receptors', 'Glutamate'"
+    },
+    "267562": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
     },
     "267259": {
-        "com_var1": "none",
-        "com_var2": "none",
-        "com_var3": "NMDA, AMPA, Kainate",
-        "header1": "Nicotinic, M1, M3, M4, M5, M2, AMPA, NMDA, mGluR, Glutamate, Cholinergic Receptors.",
-        "header2": "Nicotinic, M1, M3, M4, M5, M2, mGluR1, mGluR2, mGluR3, mGluR4, mGluR5, mGluR6, mGluR7, mGluR8, AMPA, NMDA, mGluR, Kainate, Glutamate, GabaA, GabaB, Gaba, Cholinergic Receptors, Dopaminergic Receptor, Glycine",
-        "header3": "Nicotinic, M1, M3, M4, M5, M2, AMPA, NMDA, Kainate, Alpha, Alpha1, Alpha2, Beta, D1, D2, 5-HT1, 5-HT2, 5-HT3, 5-HT4, GabaA, GabaB, Glutamate, Gaba, Cholinergic Receptors, Dopaminergic Receptor, Adrenergic, Serotonin"
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "2014822": {
+        "com_var1": "'NMDA', 'AMPA'",
+        "com_var2": "'NMDA'",
+        "com_var3": "'NMDA'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "260015": {
+        "com_var1": "'GabaA', 'GabaB', 'AMPA', 'NMDA', 'mGluR'",
+        "com_var2": "'AMPA', 'NMDA', 'mGluR'",
+        "com_var3": "'GabaA', 'GabaB', 'NMDA', 'AMPA'",
+        "header1": "'M1'",
+        "header2": "'M1'",
+        "header3": "'M1'"
     },
     "267595": {
-        "com_var1": "AMPA, NMDA",
-        "com_var2": "AMPA, NMDA",
-        "com_var3": "AMPA, NMDA",
-        "header1": "NMDA",
-        "header2": "AMPA, NMDA",
-        "header3": "AMPA, NMDA"
+        "com_var1": "'AMPA', 'NMDA'",
+        "com_var2": "'AMPA', 'NMDA'",
+        "com_var3": "'AMPA', 'NMDA'",
+        "header1": "'AMPA', 'NMDA'",
+        "header2": "'AMPA', 'NMDA'",
+        "header3": "'GabaA', 'NMDA', 'AMPA'"
     },
-    "266498": {
-        "com_var1": "Mechanoreceptors",
-        "com_var2": "None",
-        "com_var3": "none",
-        "header1": "Glutamate",
-        "header2": "none",
-        "header3": "Nicotinic, Muscarinic"
+    "267621": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
     },
     "2015410": {
-        "com_var1": "none",
-        "com_var2": "none",
-        "com_var3": "none",
-        "header1": "none",
-        "header2": "none",
-        "header3": "None"
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
     },
-    "266933": {
-        "com_var1": "none",
-        "com_var2": "none",
-        "com_var3": "Nicotinic, M1, M3, M4, M5, M2, Muscarinic, Adrenergic, Cholinergic Receptors",
-        "header1": "Nicotinic, M1, M3, M4, M5, M2, mGluR1, mGluR2, mGluR3, mGluR4, mGluR5, mGluR6, mGluR7, mGluR8, Alpha, Alpha1, Alpha2, Beta, D1, D2, 5-HT1, 5-HT2, 5-HT4, H2, GabaA, GabaB, Muscarinic, AMPA, NMDA, mGluR, 5-HT3, Kainate, Monoamine Receptors, Glutamate, Gaba, Adrenergic, Serotonin, Histamine, Cholinergic Receptors, Amino Acid Receptors, Sensory Receptors, Olfactory Receptors, Opsins, Dopaminergic Receptor, Glycine, Gaseous Receptors, NO, Peptide Receptors, Dynorphin, H1, Ion Receptors, Zn2+, CO, Mechanoreceptors, IP3, TrpM3, H3R, AT1R, D5, P2X3",
-        "header2": "Sensory Receptors",
-        "header3": "Sensory Receptors"
+    "267565": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
     },
-    "262060": {
-        "com_var1": "mGluR1, mGluR5, AMPA, NMDA, Kainate, Glutamate, Gaba",
-        "com_var2": "None.",
-        "com_var3": "AMPA, NMDA, Kainate, mGluR",
-        "header1": "Nicotinic, M1, M3, M4, M5, M2, mGluR1, mGluR2, mGluR3, mGluR4, mGluR5, mGluR6, mGluR7, mGluR8, Alpha, Alpha1, Alpha2, Beta, D1, D2, 5-HT1, 5-HT2, 5-HT4, H2, GabaA, GabaB, Muscarinic, AMPA, NMDA, mGluR, 5-HT3, Kainate, Glutamate, Gaba, Adrenergic, Serotonin, Histamine, Cholinergic Receptors, Amino Acid Receptors, Dopaminergic Receptor, Glycine, Peptide Receptors, H1, Ion Receptors, IP3, D5",
-        "header2": "NMDA, AMPA, Kainate, mGluR, mGluR1, mGluR2, mGluR3, mGluR4, mGluR5, mGluR6, mGluR7, mGluR8, Glutamate",
-        "header3": "Nicotinic, M1, M3, M4, M5, M2, Muscarinic, AMPA, NMDA, mGluR, mGluR1, mGluR2, mGluR3, mGluR4, mGluR5, mGluR6, mGluR7, mGluR8, GabaA, GabaB, Glutamate, Gaba, Cholinergic Receptors, Amino Acid Receptors, Dopaminergic Receptor, Glycine, Ion Receptors, Zn2+, AT1R, D5."
+    "267339": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
     },
     "267501": {
-        "com_var1": "mGluR1, mGluR, Glutamate",
-        "com_var2": "none",
-        "com_var3": "mGluR1, mGluR5, mGluR, Glutamate",
-        "header1": "M1, Muscarinic",
-        "header2": "M1, Muscarinic",
-        "header3": "M1, Muscarinic"
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'AMPA', 'NMDA', 'mGluR'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'Muscarinic'"
     },
     "267499": {
-        "com_var1": "none",
-        "com_var2": "none",
-        "com_var3": "none",
-        "header1": "Ion Receptors",
-        "header2": "none",
-        "header3": "GabaA, AMPA, NMDA, Kainate"
-    },
-    "265584": {
-        "com_var1": "none",
-        "com_var2": "GabaA, NMDA",
-        "com_var3": "none",
-        "header1": "AMPA, NMDA",
-        "header2": "AMPA, NMDA, Kainate",
-        "header3": "AMPA, NMDA"
-    },
-    "265591": {
-        "com_var1": "Dopaminergic Receptor",
-        "com_var2": "D1, D2, Dopaminergic Receptor",
-        "com_var3": "Dopaminergic Receptor",
-        "header1": "D1, D2, Dopaminergic Receptor",
-        "header2": "Dopaminergic Receptor",
-        "header3": "Dopaminergic Receptor"
-    },
-    "261624": {
-        "com_var1": "M1, M2, D1, 5-HT1, D2, 5-HT2, AMPA",
-        "com_var2": "M1, M2, M3, M4, mGluR8, D1, GabaA, Muscarinic, mGluR, Glutamate, Gaba, CO.",
-        "com_var3": "M1, M3, M4, M5, M2, D1, D2, GabaA, Muscarinic, NMDA, mGluR, mGluR1, mGluR4, Glutamate, Gaba, D5",
-        "header1": "D1, D2, Cholinergic Receptors, Dopaminergic Receptor",
-        "header2": "D1, D2, Cholinergic Receptors",
-        "header3": "Nicotinic, Cholinergic Receptors, Dopaminergic Receptor, D1, D2, Gaba, GabaA, Muscarinic"
+        "com_var1": "'Gaba', 'Ion Receptors'",
+        "com_var2": "'GabaA', 'GabaB', 'Ion Receptors'",
+        "com_var3": "'Gaba', 'mGluR'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
     },
     "267355": {
-        "com_var1": "none",
-        "com_var2": "none",
-        "com_var3": "none",
-        "header1": "none",
-        "header2": "none",
-        "header3": "none"
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'GabaA', 'GabaB', 'Glutamate', 'NMDA', 'AMPA', 'mGluR'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "267754": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "267509": {
+        "com_var1": "'NMDA', 'AMPA'",
+        "com_var2": "'NMDA', 'AMPA'",
+        "com_var3": "'NMDA', 'AMPA'",
+        "header1": "'AMPA', 'NMDA'",
+        "header2": "'AMPA', 'NMDA'",
+        "header3": "'AMPA', 'NMDA'"
     },
     "2014830": {
-        "com_var1": "none",
-        "com_var2": "Ion Receptors",
-        "com_var3": "Ion Receptors",
-        "header1": "M1, M3, M2",
-        "header2": "M1, M3, M2",
-        "header3": "M1, M3, M2"
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'M1', 'M3', 'M2'",
+        "header2": "'M1', 'M3', 'M2'",
+        "header3": "'M1', 'M2', 'M3'"
     },
-    "267046": {
-        "com_var1": "Nicotinic, M1, M3, M4, M5, M2, mGluR1, mGluR2, mGluR3, mGluR4, mGluR5, mGluR6, mGluR7, mGluR8, Alpha, Alpha1, Alpha2, Beta, D1, D2, 5-HT1, 5-HT2, 5-HT4, H2, GabaA, GabaB, Muscarinic, AMPA, NMDA, mGluR, 5-HT3, Kainate, Monoamine Receptors, Glutamate, Gaba, Adrenergic, Serotonin, Histamine, Cholinergic Receptors, Amino Acid Receptors, Sensory Receptors, Olfactory Receptors, Opsins, Dopaminergic Receptor, Glycine, Gaseous Receptors, NO, Peptide Receptors, Dynorphin, H1, Ion Receptors, Zn2+, CO, Mechanoreceptors, IP3, TrpM3, H3R, AT1R, D5, P2X3",
-        "com_var2": "Nicotinic, M1, M3, M4, M5, M2, mGluR1, mGluR2, mGluR3, mGluR4, mGluR5, mGluR6, mGluR7, mGluR8, Alpha, Alpha1, Alpha2, Beta, D1, D2, 5-HT1, 5-HT2, 5-HT4, H2, GabaA, GabaB, Muscarinic, AMPA, NMDA, mGluR, 5-HT3, Kainate, Monoamine Receptors, Glutamate, Gaba, Adrenergic, Serotonin, Histamine, Cholinergic Receptors, Amino Acid Receptors, Glycine, Dopaminergic Receptor",
-        "com_var3": "Nicotinic, M1, M3, M4, M5, M2, mGluR1, mGluR2, mGluR3, mGluR4, mGluR5, mGluR6, mGluR7, mGluR8, AMPA, NMDA, mGluR, Kainate",
-        "header1": "Nicotinic, M1, M3, M4, M5, M2, mGluR1, mGluR2, mGluR3, mGluR4, mGluR5, mGluR6, mGluR7, mGluR8, D1, D2, AMPA, NMDA, Kainate",
-        "header2": "Nicotinic, M1, M3, M4, M5, M2, mGluR1, mGluR2, mGluR3, mGluR4, mGluR5, mGluR6, mGluR7, mGluR8, AMPA, NMDA, Kainate, Glycine, GabaA, GabaB",
-        "header3": "Nicotinic, M1, M2, M3, M4, M5, GabaA, AMPA, NMDA, mGluR, Gaba."
+    "2016216": {
+        "com_var1": "'none'",
+        "com_var2": "'Muscarinic', 'mGluR1', 'mGluR5', 'NMDA', 'AMPA'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "267551": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'AMPA', 'NMDA', 'GabaA', 'GabaB'",
+        "header2": "'Nicotinic', 'AMPA', 'NMDA', 'mGluR', 'GabaA', 'GabaB'",
+        "header3": "'none'"
     },
     "267295": {
-        "com_var1": "NMDA, Gaba, AMPA",
-        "com_var2": "AMPA, NMDA, GabaA, GabaB",
-        "com_var3": "AMPA, NMDA, GabaA, GabaB",
-        "header1": "AMPA, NMDA, GabaA, GabaB",
-        "header2": "AMPA, NMDA, GabaA",
-        "header3": "NMDA, Gaba, AMPA"
+        "com_var1": "'AMPA', 'NMDA', 'GabaA', 'Gaba'",
+        "com_var2": "'NMDA', 'Gaba', 'AMPA', 'GabaA'",
+        "com_var3": "'NMDA', 'GabaA', 'AMPA'",
+        "header1": "'NMDA', 'GabaA', 'AMPA'",
+        "header2": "'Gaba', 'AMPA', 'NMDA', 'GabaA'",
+        "header3": "'NMDA', 'AMPA', 'GabaA', 'Gaba', 'Glutamate'"
     },
-    "263705": {
-        "com_var1": "GabaA, AMPA, NMDA",
-        "com_var2": "GabaA, AMPA, NMDA",
-        "com_var3": "GabaA, AMPA, NMDA",
-        "header1": "mGluR, GabaA, GabaB, AMPA, NMDA, Glutamate, Gaba",
-        "header2": "GabaA, GabaB, AMPA, NMDA, mGluR",
-        "header3": "GabaA, GabaB, mGluR, AMPA, NMDA, Kainate"
+    "267694": {
+        "com_var1": "'Purkinje'",
+        "com_var2": "'AMPA', 'NMDA', 'mGluR'",
+        "com_var3": "'none'",
+        "header1": "'AMPA'",
+        "header2": "'AMPA'",
+        "header3": "'AMPA'"
     },
-    "266799": {
-        "com_var1": "none",
-        "com_var2": "none",
-        "com_var3": "none",
-        "header1": "None.",
-        "header2": "none",
-        "header3": "AMPA, NMDA"
+    "267768": {
+        "com_var1": "'AMPA', 'Gaba', 'GABA'",
+        "com_var2": "'AMPA', 'Gaba', 'GABA'",
+        "com_var3": "'AMPA', 'Gaba', 'GabaA', 'GABA', 'GabaB'",
+        "header1": "'GabaA', 'Gaba', 'AMPA'",
+        "header2": "'AMPA', 'Gaba', 'GabaA', 'Cholinergic Receptors', 'Glutamate'",
+        "header3": "'AMPA', 'Gaba', 'GabaA', 'GabaB'"
     },
-    "266868": {
-        "com_var1": "mGluR",
-        "com_var2": "NMDA, AMPA",
-        "com_var3": "NMDA, AMPA, mGluR",
-        "header1": "NMDA, AMPA, mGluR",
-        "header2": "NMDA, AMPA, mGluR1, mGluR5",
-        "header3": "mGluR1, mGluR5, AMPA, NMDA"
+    "267310": {
+        "com_var1": "'mGluR1', 'mGluR2', 'mGluR3', 'mGluR4', 'mGluR5', 'mGluR6', 'mGluR7', 'mGluR8', 'GabaA', 'GabaB', 'AMPA', 'NMDA', 'Glutamate', 'Gaba', 'Ion Receptors'",
+        "com_var2": "'none'",
+        "com_var3": "'GabaA', 'NMDA', 'AMPA', 'mGluR'",
+        "header1": "'AMPA', 'NMDA', 'GabaA', 'GabaB', 'Glutamate', 'Gaba'",
+        "header2": "'none'",
+        "header3": "'mGluR', 'GabaA', 'GabaB', 'AMPA', 'NMDA', 'Glutamate', 'Gaba', 'Cholinergic Receptors', 'Amino Acid Receptors'"
     },
-    "261864": {
-        "com_var1": "Olfactory Receptors",
-        "com_var2": "Olfactory Receptors",
-        "com_var3": "Olfactory Receptors",
-        "header1": "Nicotinic, Muscarinic, Cholinergic Receptors, Olfactory Receptors.",
-        "header2": "Nicotinic, M1, M3, M4, M5, M2, Muscarinic, Cholinergic Receptors, Olfactory Receptors.",
-        "header3": "Olfactory Receptors"
+    "267686": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'GabaA', 'GabaB'",
+        "header2": "'GabaA', 'GabaB'",
+        "header3": "'GabaA', 'GabaB'"
     },
-    "254217": {
-        "com_var1": "none",
-        "com_var2": "None.",
-        "com_var3": "none",
-        "header1": "AMPA, NMDA, Gaba",
-        "header2": "AMPA, NMDA, Gaba",
-        "header3": "AMPA, NMDA, Gaba"
-    },
-    "266526": {
-        "com_var1": "Ion Receptors",
-        "com_var2": "Ion Receptors",
-        "com_var3": "Ion Receptors",
-        "header1": "NMDA, AMPA, Kainate",
-        "header2": "NMDA, AMPA, Kainate, mGluR1, mGluR2, mGluR3, mGluR4, mGluR5, mGluR6, mGluR7, mGluR8, mGluR",
-        "header3": "mGluR, Glutamate, AMPA, NMDA, Kainate, Ion Receptors"
-    },
-    "266774": {
-        "com_var1": "None.",
-        "com_var2": "None",
-        "com_var3": "None",
-        "header1": "None",
-        "header2": "AMPA, NMDA, mGluR",
-        "header3": "none"
-    },
-    "257609": {
-        "com_var1": "GabaA, GabaB, AMPA, NMDA, mGluR, Glutamate, Gaba",
-        "com_var2": "AMPA, NMDA",
-        "com_var3": "AMPA, NMDA",
-        "header1": "AMPA, NMDA, mGluR",
-        "header2": "AMPA, NMDA",
-        "header3": "AMPA, NMDA, mGluR, Glutamate."
-    },
-    "262046": {
-        "com_var1": "NMDA, AMPA, GabaA, GabaB, Dopaminergic Receptor, mGluR",
-        "com_var2": "NMDA, AMPA, mGluR, GabaA, GabaB, Dopaminergic Receptor, Adrenergic, Cholinergic Receptors.",
-        "com_var3": "NMDA, AMPA, Nicotinic, Glycine, GabaA, GabaB",
-        "header1": "M1, M2, mGluR1, mGluR5, D1, D2, GabaA, GabaB, AMPA, NMDA, mGluR, Glutamate, Gaba, Dopaminergic Receptor",
-        "header2": "M1, M2, D1, D2, AMPA, NMDA, GabaA, GabaB, Cholinergic Receptors, Dopaminergic Receptor",
-        "header3": "Cortical Pyramidal Cell Axon, Cortical Pyramidal Cell Soma, Cortical Interneurons, STN Neurons, GP Neurons, AMPA, NMDA"
-    },
-    "266718": {
-        "com_var1": "none",
-        "com_var2": "none",
-        "com_var3": "none",
-        "header1": "M1, M3, M4, M5, M2, Glutamate, NMDA, AMPA, Kainate, mGluR1, mGluR2, mGluR3, mGluR4, mGluR5, Cholinergic Receptors, Muscarinic",
-        "header2": "mGluR1, mGluR5, NMDA, AMPA",
-        "header3": "mGluR1, mGluR2, mGluR3, mGluR4, mGluR5, mGluR6, mGluR7, mGluR8, AMPA, NMDA, Kainate, Glutamate"
-    },
-    "261714": {
-        "com_var1": "none",
-        "com_var2": "none",
-        "com_var3": "none",
-        "header1": "Zn2+",
-        "header2": "Zn2+",
-        "header3": "Zn2+"
+    "267391": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'AMPA', 'NMDA'",
+        "header3": "'none'"
     },
     "2014816": {
-        "com_var1": "none",
-        "com_var2": "none",
-        "com_var3": "none",
-        "header1": "none",
-        "header2": "none",
-        "header3": "none"
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'Ion Receptors'",
+        "header3": "'none'"
     },
-    "265540": {
-        "com_var1": "none",
-        "com_var2": "none",
-        "com_var3": "M1, M2, mGluR, D1, D2",
-        "header1": "D1, D2, AMPA, NMDA, mGluR, Gaba, Glutamate",
-        "header2": "D1, D2, GabaA, GabaB, AMPA, NMDA, mGluR, mGluR1, mGluR2, mGluR3, mGluR4, mGluR5",
-        "header3": "D1, D2, GabaA, GabaB, NMDA, AMPA, mGluR1, mGluR5, mGluR, Dopaminergic Receptor"
+    "266796": {
+        "com_var1": "GabaA, NMDA",
+        "com_var2": "'none'",
+        "com_var3": "'AMPA', 'NMDA', 'GabaA', 'GabaB'",
+        "header1": "'GabaA', 'GabaB', 'AMPA', 'NMDA', 'mGluR', 'Glutamate', 'Gaba'",
+        "header2": "'NMDA', 'AMPA', 'GabaA', 'GabaB'",
+        "header3": "'NMDA'"
     },
     "2016219": {
-        "com_var1": "none",
-        "com_var2": "none",
-        "com_var3": "none",
-        "header1": "none",
-        "header2": "none",
-        "header3": "none"
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
     },
-    "261877": {
-        "com_var1": "Olfactory Receptors",
-        "com_var2": "Olfactory Receptors",
-        "com_var3": "Olfactory Receptors",
-        "header1": "Olfactory Receptors",
-        "header2": "Olfactory Receptors",
-        "header3": "Olfactory Receptors"
+    "185864": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
     },
-    "261616": {
-        "com_var1": "D1, D2, GabaA, GabaB, AMPA, NMDA.",
-        "com_var2": "D1",
-        "com_var3": "D1, GabaA, GabaB",
-        "header1": "D1, D2",
-        "header2": "D1, D2",
-        "header3": "D1, D2"
+    "2016137": {
+        "com_var1": "'H2'",
+        "com_var2": "'H2'",
+        "com_var3": "'H2'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
     },
-    "245071": {
-        "com_var1": "NMDA, AMPA, Gaba",
-        "com_var2": "AMPA, NMDA, GabaA",
-        "com_var3": "GabaA, NMDA, AMPA",
-        "header1": "Nicotinic, M1, M3, M4, M5, M2, Muscarinic, Cholinergic Receptors",
-        "header2": "Nicotinic, M1, M3, M4, M5, Retigabine",
-        "header3": "Nicotinic, M1, M2, mGluR1, mGluR2, mGluR5, GabaA, AMPA, NMDA, Glutamate, Gaba, Cholinergic Receptors, Muscarinic, Adrenergic, 5-HT1, 5-HT2"
+    "267614": {
+        "com_var1": "'AMPA', 'NMDA'",
+        "com_var2": "'AMPA', 'NMDA'",
+        "com_var3": "'AMPA', 'NMDA'",
+        "header1": "'AMPA', 'NMDA'",
+        "header2": "'AMPA', 'NMDA'",
+        "header3": "'AMPA', 'NMDA'"
+    },
+    "267293": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'AMPA', 'NMDA'",
+        "header2": "'AMPA', 'NMDA'",
+        "header3": "'AMPA', 'NMDA'"
     },
     "263719": {
-        "com_var1": "D1, D2",
-        "com_var2": "D1, D2",
-        "com_var3": "D1, D2",
-        "header1": "D1, D2",
-        "header2": "D1, D2, Dopaminergic Receptor",
-        "header3": "D1, D2"
-    },
-    "263053": {
-        "com_var1": "none",
-        "com_var2": "none",
-        "com_var3": "none",
-        "header1": "none",
-        "header2": "none",
-        "header3": "none"
+        "com_var1": "'D1', 'D2'",
+        "com_var2": "'D1', 'D2'",
+        "com_var3": "'D1', 'D2', 'Dopaminergic Receptor'",
+        "header1": "'D1', 'D2', 'Dopaminergic Receptor'",
+        "header2": "'D1', 'D2', 'NMDA'",
+        "header3": "'D1', 'D2', 'Dopaminergic Receptor'"
     },
     "2015422": {
-        "com_var1": "GabaA, GabaB, AMPA, NMDA",
-        "com_var2": "AMPA, NMDA, GabaA, GabaB",
-        "com_var3": "AMPA, NMDA, GabaA, GabaB",
-        "header1": "AMPA, NMDA, Kainate",
-        "header2": "Nicotinic, M1, M3, M4, M5, M2, mGluR1, mGluR2, mGluR3, mGluR4, mGluR5, mGluR6, mGluR7, mGluR8, Muscarinic, AMPA, NMDA, mGluR, Glutamate, Gaba, Adrenergic, Cholinergic Receptors, Amino Acid Receptors, Dopaminergic Receptor.",
-        "header3": "iNaP_PYdr_JB12, NMDA, AMPA, Gaba, mGluR"
+        "com_var1": "'GabaA', 'GabaB', 'AMPA', 'NMDA'",
+        "com_var2": "'GabaA', 'GabaB', 'AMPA', 'NMDA'",
+        "com_var3": "'GabaA', 'GabaB', 'AMPA', 'NMDA'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
     },
     "267613": {
-        "com_var1": "none",
-        "com_var2": "none",
-        "com_var3": "Nicotinic, M1, M2, M3, M4, M5, mGluR1, mGluR2, mGluR3, mGluR4, mGluR5, mGluR6, mGluR7, mGluR8, Alpha, Alpha1, Alpha2, Beta, D1, D2, 5-HT1, 5-HT2, 5-HT4, H2, GabaA, GabaB, Muscarinic, AMPA, NMDA, mGluR, 5-HT3, Kainate, Monoamine Receptors, Glutamate, Gaba, Adrenergic, Serotonin, Histamine, Cholinergic Receptors, Amino Acid Receptors, Glycine, Ion Receptors",
-        "header1": "AMPA, NMDA",
-        "header2": "NMDA",
-        "header3": "AMPA, NMDA"
+        "com_var1": "'nmda'",
+        "com_var2": "'nmda'",
+        "com_var3": "'NMDA', 'mGluR', 'mGluR1'",
+        "header1": "'AMPA', 'NMDA'",
+        "header2": "'AMPA', 'NMDA', 'GabaB'",
+        "header3": "'GabaB', 'AMPA', 'NMDA'"
+    },
+    "267311": {
+        "com_var1": "'NMDA'",
+        "com_var2": "'NMDA'",
+        "com_var3": "'NMDA'",
+        "header1": "'none'",
+        "header2": "'Zn2+'",
+        "header3": "'none'"
     },
     "267710": {
-        "com_var1": "mGluR, mGluR5, Neuromodulatory Receptors (indicated by terms like physiology, behavior, simulation), NMDA, AMPA.",
-        "com_var2": "5-HT1, 5-HT2, GabaA, GabaB, AMPA, NMDA, mGluR, Glutamate, Gaba",
-        "com_var3": "Nicotine, M1, M3, M4, M5, M2, mGluR1, mGluR2, mGluR3, mGluR4, mGluR5, mGluR6, mGluR7, mGluR8, Alpha, Alpha1, Alpha2, Beta, D1, D2, 5-HT1, 5-HT2, 5-HT4, H2, GabaA, GabaB, Muscarinic, AMPA, NMDA, mGluR, 5-HT3, Kainate, Monoamine Receptors, Glutamate, Gaba, Adrenergic, Serotonin, Histamine, Cholinergic Receptors, Amino Acid Receptors, Glycine, Dopaminergic Receptor",
-        "header1": "none",
-        "header2": "None",
-        "header3": "AMPA, NMDA, Glycine"
+        "com_var1": "'none'",
+        "com_var2": "'Alpha', 'Beta', 'Ca2', 'Gaba', 'Monoamine Receptors', 'Glutamate', 'Adrenergic', 'Serotonin', 'Dopaminergic Receptor', 'Peptide Receptors', 'GabaA', 'GabaB', 'Glutamate', 'Neuroscience', 'phase', 'stepping', 'affect', 'Response'",
+        "com_var3": "'GabaA', 'GabaB', 'AMPA', 'NMDA', 'Kainate', 'mGluR', 'mGluR1', 'mGluR2', 'mGluR3', 'mGluR4', 'mGluR5', 'mGluR6', 'mGluR7', 'mGluR8', 'Glutamate', 'Gaba', 'Ion Receptors'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
     },
     "267695": {
-        "com_var1": "5-HT1, 5-HT2, 5-HT4, AMPA, NMDA, mGluR, 5-HT3",
-        "com_var2": "5-HT1, 5-HT2",
-        "com_var3": "5-HT1, 5-HT2",
-        "header1": "none",
-        "header2": "none",
-        "header3": "none"
+        "com_var1": "'5-HT1', '5-HT2'",
+        "com_var2": "'5-HT1', '5-HT2', '5-HT4'",
+        "com_var3": "'5-HT1', '5-HT2'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
     },
-    "238959": {
-        "com_var1": "GabaA, GabaB, AMPA, Ach, NMDA",
-        "com_var2": "GabaA, GabaB, AMPA, NMDA, Ach",
-        "com_var3": "GabaA, GabaB, AMPA, NMDA, Cholinergic Receptors",
-        "header1": "GabaA, GabaB, AMPA, NMDA, Ach",
-        "header2": "GabaA, GabaB, AMPA, NMDA, Cholinergic Receptors",
-        "header3": "GabaA, GabaB, AMPA"
+    "267680": {
+        "com_var1": "'AMPA', 'NMDA'",
+        "com_var2": "'AMPA', 'NMDA'",
+        "com_var3": "'AMPA', 'NMDA'",
+        "header1": "'AMPA', 'NMDA'",
+        "header2": "'AMPA', 'NMDA', 'mGluR'",
+        "header3": "'AMPA', 'NMDA'"
     },
-    "266798": {
-        "com_var1": "Mechanoreceptors",
-        "com_var2": "Nicotinic, Sensory Receptors, Mechanoreceptors",
-        "com_var3": "Sensory Receptors, Mechanoreceptors",
-        "header1": "Mechanoreceptors",
-        "header2": "Mechanoreceptors",
-        "header3": "Mechanoreceptors"
+    "267550": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'AMPA', 'NMDA', 'mGluR', 'Glutamate'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
     },
-    "182129": {
-        "com_var1": "None",
-        "com_var2": "none",
-        "com_var3": "none",
-        "header1": "GabaA, GabaB",
-        "header2": "GabaA, GabaB",
-        "header3": "GabaA, GabaB"
+    "267382": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
     },
-    "262138": {
-        "com_var1": "none",
-        "com_var2": "none",
-        "com_var3": "NMDA, Glutamate, Cholinergic Receptors",
-        "header1": "none",
-        "header2": "none",
-        "header3": "none"
+    "2016138": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'AMPA', 'NMDA', 'mGluR'",
+        "header2": "'AMPA', 'NMDA'",
+        "header3": "'AMPA', 'NMDA', 'mGluR', 'Glutamate', 'Gaba', 'GabaA', 'GabaB'"
     },
-    "2001735": {
-        "com_var1": "M3",
-        "com_var2": "M3, M2, mGluR3",
-        "com_var3": "M3",
-        "header1": "none",
-        "header2": "Nicotinic, M1, M3, M4, M5, M2, Muscarinic, Cholinergic Receptors.",
-        "header3": "none"
+    "267306": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'D1', 'D2', 'Dopaminergic Receptor'"
     },
-    "266770": {
-        "com_var1": "Glutamate, Gaba",
-        "com_var2": "AMPA, NMDA, mGluR",
-        "com_var3": "Glutamate, Gaba",
-        "header1": "Alpha, NMDA, AMPA, Gaba",
-        "header2": "Alpha, mGluR, Glutamate",
-        "header3": "NMDA, AMPA"
+    "2015420": {
+        "com_var1": "'AMPA', 'NMDA', 'GabaA', 'GabaB', 'mGluR'",
+        "com_var2": "'AMPA', 'NMDA', 'mGluR'",
+        "com_var3": "'AMPA', 'NMDA'",
+        "header1": "'none'",
+        "header2": "'GabaA', 'NMDA', 'AMPA'",
+        "header3": "'none'"
+    },
+    "267611": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'"
+    },
+    "2016670": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Alpha', 'Beta'",
+        "header2": "'GabaB', 'Beta', 'Alpha'",
+        "header3": "'GabaB', 'Beta'"
+    },
+    "267619": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'AMPA', 'NMDA', 'mGluR', 'GabaA', 'GabaB'",
+        "header1": "'AMPA', 'NMDA', 'GabaA', 'GabaB'",
+        "header2": "'AMPA', 'NMDA', 'GabaA', 'GabaB'",
+        "header3": "'AMPA', 'NMDA', 'mGluR'"
     },
     "267395": {
-        "com_var1": "AMPA, GabaA, GabaB",
-        "com_var2": "AMPA, GabaA, GabaB",
-        "com_var3": "AMPA, GabaA, GabaB",
-        "header1": "GabaA, GabaB, AMPA",
-        "header2": "GabaA, GabaB, AMPA",
-        "header3": "GabaA, GabaB, AMPA"
-    },
-    "267146": {
-        "com_var1": "Nicotinic, M1, M3, M4, M5, M2, Muscarinic",
-        "com_var2": "none",
-        "com_var3": "AMPA, NMDA, Kainate, mGluR, mGluR1, mGluR2, mGluR3, mGluR4, mGluR5, mGluR6, mGluR7, mGluR8, Glutamate",
-        "header1": "Nicotinic, M1, M3, M4, M5, M2, AMPA, NMDA, GabaA, GabaB, mGluR1, mGluR2, mGluR3, mGluR4, mGluR5, mGluR6, mGluR7, mGluR8",
-        "header2": "Nicotinic, Cholinergic Receptors",
-        "header3": "Nicotinic, Muscarinic, AMPA, NMDA, mGluR, Cholinergic Receptors, Gaba, Adrenergic, Serotonin, Glutamate."
+        "com_var1": "'AMPA', 'GabaA', 'GabaB', 'Gaba'",
+        "com_var2": "'AMPA', 'GabaA', 'GabaB'",
+        "com_var3": "'AMPA', 'GabaA', 'GabaB'",
+        "header1": "'GabaA', 'GabaB', 'AMPA'",
+        "header2": "'GabaA', 'GabaB', 'AMPA'",
+        "header3": "'GabaA', 'GabaB', 'AMPA'"
     },
     "2014998": {
-        "com_var1": "Nicotinic, M1, M3, M4, M5, M2, mGluR1, mGluR2, mGluR3, mGluR4, mGluR5, mGluR6, mGluR7, mGluR8, AMPA, NMDA, mGluR, GabaA, GabaB, Cholinergic Receptors, Glutamate, Gaba",
-        "com_var2": "Nicotinic, M1, M3, M4, M5, M2, mGluR1, mGluR2, mGluR3, mGluR4, mGluR5, mGluR6, mGluR7, mGluR8, AMPA, NMDA, Kainate, GabaA, GabaB, 5-HT1, 5-HT2, 5-HT4, H2, Monoamine Receptors, Glutamate, Gaba, Adrenergic, Serotonin, Histamine, Cholinergic Receptors, Amino Acid Receptors, Dopaminergic Receptor",
-        "com_var3": "Nicotinic, D1, D2, NMDA, AMPA, mGluR1, mGluR2, mGluR3, mGluR5, GabaA, GabaB, Glutamate, Muscarinic, Adrenergic, Dopaminergic Receptor, Serotonin",
-        "header1": "GranuleCell, MossyCell",
-        "header2": "GranuleCell, MossyCell",
-        "header3": "Nicotinic, mGluR1, mGluR2, mGluR3, mGluR4, mGluR5, mGluR6, mGluR7, mGluR8, AMPA, NMDA, Kainate, Glutamate, Gaba, GabaA, GabaB, Adrenergic, Serotonin, Cholinergic Receptors, Amino Acid Receptors."
-    },
-    "266864": {
-        "com_var1": "none",
-        "com_var2": "none",
-        "com_var3": "None",
-        "header1": "none",
-        "header2": "None",
-        "header3": "none"
-    },
-    "257027": {
-        "com_var1": "AMPA, NMDA",
-        "com_var2": "AMPA, NMDA",
-        "com_var3": "AMPA, NMDA",
-        "header1": "mGluR, AMPA, NMDA, Kainate",
-        "header2": "none",
-        "header3": "Glutamate, Gaba, AMPA, NMDA, Kainate, mGluR"
+        "com_var1": "'NMDA', 'AMPA'",
+        "com_var2": "'AMPA', 'NMDA', 'Kainate', 'Glutamate'",
+        "com_var3": "'AMPA', 'NMDA', 'GabaA', 'GabaB', 'D1', 'D2'",
+        "header1": "'AMPA', 'NMDA', 'Kainate', 'mGluR'",
+        "header2": "'AMPA', 'NMDA', 'GabaA', 'GabaB', 'Glutamate', 'Gaba'",
+        "header3": "'NMDA', 'AMPA', 'GabaA', 'GabaB', 'mGluR', 'Cholinergic Receptors', 'Glutamate', 'Gaba'"
     },
     "267033": {
-        "com_var1": "GabaA, GabaB, AMPA, NMDA, Glutamate, Gaba",
-        "com_var2": "GabaA, GabaB, AMPA, NMDA",
-        "com_var3": "GabaA, GabaB, AMPA, NMDA, mGluR",
-        "header1": "GabaA, GabaB, Gaba, Glutamate, AMPA, NMDA, mGluR",
-        "header2": "GabaA, GabaB, Gaba, AMPA, NMDA",
-        "header3": "GabaA, GabaB, AMPA, NMDA, mGluR"
+        "com_var1": "'GabaA', 'GabaB', 'Glutamate'",
+        "com_var2": "'GabaA', 'GabaB', 'Glutamate'",
+        "com_var3": "'GabaA', 'GabaB', 'AMPA', 'NMDA'",
+        "header1": "'GabaA', 'GabaB'",
+        "header2": "'GabaA', 'GabaB', 'AMPA', 'NMDA', 'Gaba', 'Glutamate'",
+        "header3": "'GabaA', 'GabaB', 'AMPA', 'NMDA', 'Glutamate', 'Gaba'"
+    },
+    "267309": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
     },
     "2017143": {
-        "com_var1": "none",
-        "com_var2": "none",
-        "com_var3": "none",
-        "header1": "NMDA",
-        "header2": "NMDA",
-        "header3": "NMDA"
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'NMDA', 'AMPA'",
+        "header2": "'NMDA', 'Mg$^{2+}$', 'AMPA'",
+        "header3": "'NMDA'"
     },
-    "267027": {
-        "com_var1": "none",
-        "com_var2": "none",
-        "com_var3": "none",
-        "header1": "none",
-        "header2": "none",
-        "header3": "none"
+    "2016663": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
     },
     "267056": {
-        "com_var1": "Mechanoreceptors",
-        "com_var2": "none",
-        "com_var3": "Mechanoreceptors",
-        "header1": "GabaB",
-        "header2": "GabaB",
-        "header3": "GabaB"
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'GabaB'",
+        "header2": "'GabaB'",
+        "header3": "'GabaB', 'Gaba', 'Dynorphin'"
     },
-    "266814": {
-        "com_var1": "Nicotinic, M1, M2, M3, M4, M5, Muscarinic, AMPA, NMDA, 5-HT1, 5-HT2, 5-HT3, 5-HT4, GabaA, GabaB, mGluR, Adrenergic, Cholinergic Receptors",
-        "com_var2": "NMDA, AMPA, Kainate, mGluR",
-        "com_var3": "AMPA, NMDA, Kainate, mGluR, Glutamate, GabaA, GabaB, Cholinergic Receptors.",
-        "header1": "NMDA, GabaA, AMPA",
-        "header2": "NMDA, GabaA, AMPA",
-        "header3": "NMDA, GabaA"
-    },
-    "267298": {
-        "com_var1": "None",
-        "com_var2": "None",
-        "com_var3": "None",
-        "header1": "Nicotinic, Muscarinic, AMPA, NMDA, Cholinergic Receptors",
-        "header2": "Nicotinic, M1, M3, M4, M5, M2, AMPA, NMDA, Cholinergic Receptors",
-        "header3": "Nicotinic, M1, M3, M4, M5, M2, Muscarinic, AMPA, NMDA, mGluR, Cholinergic Receptors."
-    },
-    "258854": {
-        "com_var1": "none",
-        "com_var2": "cck, PV",
-        "com_var3": "Cholinergic Receptors, mGluR5, mGluR, Gaba, AMPA, NMDA, Dynorphin, GabaA, GabaB, Glutamate",
-        "header1": "Nicotinic, M1, M3, M4, M5, M2, mGluR1, mGluR2, mGluR3, mGluR4, mGluR5, mGluR6, mGluR7, mGluR8, AMPA, NMDA, Kainate, Glutamate, GabaA, GabaB, Adrenergic, Serotonin, Cholinergic Receptors, Dopaminergic Receptor.",
-        "header2": "mGluR1, mGluR2, mGluR3, mGluR4, mGluR5, mGluR6, mGluR7, mGluR8, Nicotinic, GabaA, GabaB, AMPA, NMDA, Kainate, Glutamate, Gaba, Cholinergic Receptors",
-        "header3": "Nicotinic, M1, M3, M4, M5, M2, mGluR1, mGluR2, mGluR3, mGluR4, mGluR5, mGluR6, mGluR7, mGluR8, Alpha, Alpha1, Alpha2, Beta, D1, D2, 5-HT1, 5-HT2, 5-HT4, H2, GabaA, GabaB, Muscarinic, AMPA, NMDA, mGluR, 5-HT3, Kainate, Monoamine Receptors, Glutamate, Gaba, Adrenergic, Serotonin, Histamine, Cholinergic Receptors, Amino Acid Receptors, Dopaminergic Receptor, Glycine"
+    "267691": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'AMPA', 'NMDA'",
+        "header2": "'AMPA', 'NMDA'",
+        "header3": "'AMPA', 'NMDA'"
     },
     "267617": {
-        "com_var1": "none",
-        "com_var2": "none",
-        "com_var3": "AMPA, NMDA, mGluR",
-        "header1": "None",
-        "header2": "none",
-        "header3": "none"
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
     },
     "2014999": {
-        "com_var1": "Nicotinic, M1, M3, M4, M5, M2, Alpha, Beta, GabaA, GabaB, Muscarinic, Adrenergic, Cholinergic Receptors",
-        "com_var2": "Nicotinic, Alpha, Alpha1, Alpha2, Beta, M1, M3, M4, M5, M2, Muscarinic, Cholinergic Receptors, Adrenergic",
-        "com_var3": "Nicotinic, Alpha, Alpha1, Alpha2, Beta, Adrenergic, Cholinergic Receptors.",
-        "header1": "Nicotinic, M1, M2, Alpha, Alpha1, Alpha2, Beta, Muscarinic, Adrenergic, Cholinergic Receptors.",
-        "header2": "Nicotinic, M3, M2, Alpha, Beta, Cholinergic Receptors, Adrenergic.",
-        "header3": "Nicotinic, M1, M3, Alpha, Beta, Muscarinic, Adrenergic, Cholinergic Receptors."
+        "com_var1": "'Nicotinic', 'Muscarinic', 'Cholinergic Receptors', 'Adrenergic'",
+        "com_var2": "'Nicotinic', 'Muscarinic', 'M1', 'M3', 'Cholinergic Receptors'",
+        "com_var3": "'Nicotinic', 'M1', 'M2', 'Cholinergic Receptors'",
+        "header1": "'Alpha', 'Beta', 'Adrenergic'",
+        "header2": "'Nicotinic', 'M1', 'M3', 'M2', 'Beta', 'Adrenergic', 'Cholinergic Receptors'",
+        "header3": "'Alpha', 'Beta', 'Adrenergic', 'Cholinergic Receptors', 'Nicotinic', 'Muscarinic'"
     },
-    "267139": {
-        "com_var1": "none",
-        "com_var2": "none",
-        "com_var3": "GabaA, GabaB, Na",
-        "header1": "Na, K, Cl",
-        "header2": "Na, K, Cl",
-        "header3": "GabaA, GabaB, AMPA, NMDA, Kainate, mGluR"
+    "2014814": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "267267": {
+        "com_var1": "'AMPA', 'NMDA'",
+        "com_var2": "'AMPA', 'NMDA'",
+        "com_var3": "'AMPA', 'NMDA'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "2014996": {
+        "com_var1": "'H2'",
+        "com_var2": "'H2'",
+        "com_var3": "'H2'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'GabaA', 'GabaB', 'AMPA', 'NMDA', 'mGluR'"
     },
     "267669": {
-        "com_var1": "none",
-        "com_var2": "none",
-        "com_var3": "None",
-        "header1": "none",
-        "header2": "none",
-        "header3": "none"
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
     },
     "267696": {
-        "com_var1": "none",
-        "com_var2": "none",
-        "com_var3": "none",
-        "header1": "none",
-        "header2": "none",
-        "header3": "none"
-    },
-    "267219": {
-        "com_var1": "none",
-        "com_var2": "Ion Receptors",
-        "com_var3": "none",
-        "header1": "Glutamate, Cholinergic Receptors, Dopaminergic Receptor, Serotonin, Adrenergic, Gaba, NMDA, AMPA, mGluR, mGluR1, mGluR2, mGluR3, mGluR4, mGluR5, mGluR6, mGluR7, mGluR8, Nicotinic, Muscarinic, GabaA, GabaB",
-        "header2": "Nicotinic, M1, M3, M4, M5, M2, mGluR1, mGluR2, mGluR3, mGluR4, mGluR5, mGluR6, mGluR7, mGluR8, Alpha, Alpha1, Alpha2, Beta, D1, D2, 5-HT1, 5-HT2, 5-HT4, GabaA, GabaB, Muscarinic, AMPA, NMDA, mGluR, 5-HT3, Kainate, Glutamate, Gaba, Adrenergic, Serotonin, Cholinergic Receptors, Amino Acid Receptors, Dopaminergic Receptor, Glycine, Ion Receptors, P2X3",
-        "header3": "Nicotinic, M1, M3, M4, M5, M2, mGluR1, mGluR2, mGluR3, mGluR4, mGluR5, mGluR6, mGluR7, mGluR8, Alpha, Alpha1, Alpha2, Beta, D1, D2, 5-HT1, 5-HT2, 5-HT4, H2, GabaA, GabaB, Muscarinic, AMPA, NMDA, mGluR, 5-HT3, Kainate, Monoamine Receptors, Glutamate, Gaba, Adrenergic, Serotonin, Histamine, Cholinergic Receptors, Glycine, Ion Receptors, IP3, D5, P2X3"
+        "com_var1": "'none'",
+        "com_var2": "'Glutamate', 'Gaba', 'AMPA', 'NMDA', 'Kainate'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
     },
     "2015421": {
-        "com_var1": "BDNF",
-        "com_var2": "BDNF",
-        "com_var3": "mGluR, AMPA, NMDA, Kainate, Glutamate",
-        "header1": "AMPA, NMDA, mGluR, Glutamate.",
-        "header2": "AMPA, NMDA, mGluR",
-        "header3": "none"
+        "com_var1": "'none'",
+        "com_var2": "'BDNF'",
+        "com_var3": "'none'",
+        "header1": "'AMPA', 'NMDA', 'mGluR'",
+        "header2": "'AMPA', 'NMDA', 'mGluR'",
+        "header3": "'AMPA', 'NMDA', 'mGluR', 'Glutamate'"
+    },
+    "267661": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
     },
     "267260": {
-        "com_var1": "NMDA, AMPA",
-        "com_var2": "GabaA, GabaB, NMDA, AMPA, mGluR, Muscarinic, Nicotinic",
-        "com_var3": "AMPA, NMDA, mGluR",
-        "header1": "Nicotinic, M1, M3, M4, M5, M2, mGluR1, mGluR2, mGluR3, mGluR4, mGluR5, mGluR6, mGluR7, mGluR8, AMPA, NMDA, mGluR, Kainate, Glutamate, Cholinergic Receptors, Glycine",
-        "header2": "AMPA, NMDA, GabaA, GabaB, mGluR1, mGluR2, mGluR3, mGluR4, mGluR5, mGluR6, mGluR7, mGluR8",
-        "header3": "Nicotinic, M1, M3, M4, M5, M2, GabaA, GabaB, AMPA, NMDA, mGluR, Kainate, Glutamate, Gaba, Cholinergic Receptors, Amino Acid Receptors, Dopaminergic Receptor."
+        "com_var1": "'none'",
+        "com_var2": "'GabaA', 'GabaB', 'AMPA', 'NMDA', 'mGluR'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'Nicotinic', 'M1', 'M2', 'Muscarinic', 'Cholinergic Receptors'",
+        "header3": "'AMPA', 'NMDA', 'mGluR', 'GabaA'"
     },
     "2016995": {
-        "com_var1": "TRPV1",
-        "com_var2": "TRPV1",
-        "com_var3": "TRPV1, HCN",
-        "header1": "HCN",
-        "header2": "none",
-        "header3": "none"
+        "com_var1": "'none'",
+        "com_var2": "'NMDA', 'Gaba', 'Ion Receptors'",
+        "com_var3": "'5-HT1', '5-HT2', '5-HT3', '5-HT4', 'Adrenergic', 'Amino Acid Receptors', 'Cholinergic Receptors', 'Gaba', 'GabaA', 'GabaB', 'Glutamate', 'Histamine', 'Ion Receptors', 'Monoamine Receptors', 'Muscarinic', 'Serotonin'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
     },
     "267363": {
-        "com_var1": "TrpM3",
-        "com_var2": "TRPC, GIRK",
-        "com_var3": "TRPC, GIRK",
-        "header1": "TRPC, GIRK",
-        "header2": "TrpM3, Muscarinic",
-        "header3": "TrpM3"
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
     }
 }

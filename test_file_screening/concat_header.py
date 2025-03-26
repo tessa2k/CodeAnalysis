@@ -39,8 +39,8 @@ def concat_files(model_code, file_list, output_path, num_header_lines = 40):
 if __name__ == "__main__":
 
     #model_code_list = get_model_code()
-    model_code_list=filter_models_by_year(min_year=2020)
-    print(model_code_list[:100])
+    model_code_list=filter_models_by_year(min_year=2022)
+    print(model_code_list[:106])
     # samples_path = 'samples'
     #download_and_unzip_files(model_code_list, samples_path, 100)
 
@@ -50,7 +50,7 @@ if __name__ == "__main__":
         shutil.rmtree(concat_file_path)
     os.makedirs(concat_file_path)
  
-    for model_code in model_code_list[:100]:
+    for model_code in model_code_list:
         list_of_all_files = []
         path = f'samples/{model_code}'
         if not os.path.exists(path):

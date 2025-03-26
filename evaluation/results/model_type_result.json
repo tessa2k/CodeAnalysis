@@ -1,0 +1,799 @@
+{
+    "267598": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Spiking neural network'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Spiking neural network'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Spiking neural network'",
+        "header1": "'Neuron or other electrically excitable cell', 'Spiking neural network'",
+        "header2": "'Neuron or other electrically excitable cell', 'Spiking neural network'",
+        "header3": "'Neuron or other electrically excitable cell', 'Spiking neural network'"
+    },
+    "2015953": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor'",
+        "header1": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Synapse', 'Extracellular'",
+        "header2": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Synapse', 'Extracellular'",
+        "header3": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Extracellular'"
+    },
+    "2017403": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "header1": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "header2": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "header3": "'Neuron or other electrically excitable cell', 'Channel/Receptor'"
+    },
+    "267357": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Electrogenic pump'",
+        "header2": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Electrogenic pump'",
+        "header3": "'Channel/Receptor', 'Electrogenic pump'"
+    },
+    "2014832": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Dendrite', 'Axon'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Dendrite', 'Channel/Receptor'",
+        "header1": "'Neuron or other electrically excitable cell', 'Synapse', 'Realistic Network'",
+        "header2": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Synapse'",
+        "header3": "'Neuron or other electrically excitable cell', 'Synapse', 'Realistic Network'"
+    },
+    "2016658": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor'",
+        "header1": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "header2": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "header3": "'Neuron or other electrically excitable cell', 'Channel/Receptor'"
+    },
+    "266844": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Dendrite', 'Channel/Receptor', 'Synapse', 'Axon'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Dendrite', 'Channel/Receptor', 'Axon'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Dendrite'",
+        "header1": "'Channel/Receptor', 'Electrogenic pump', 'Synapse'",
+        "header2": "'Channel/Receptor', 'Synapse', 'Electrogenic pump'",
+        "header3": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Synapse', 'Electrogenic pump'"
+    },
+    "267088": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Dendrite'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Axon', 'Dendrite', 'Synapse'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Axon', 'Dendrite', 'Synapse'",
+        "header1": "'Neuron or other electrically excitable cell', 'Axon', 'Channel/Receptor'",
+        "header2": "'Neuron or other electrically excitable cell', 'Axon', 'Channel/Receptor'",
+        "header3": "'Axon', 'Neuron or other electrically excitable cell', 'Channel/Receptor'"
+    },
+    "267329": {
+        "com_var1": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor', 'Spiking neural network'",
+        "com_var2": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Synapse', 'Spiking neural network'",
+        "com_var3": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor', 'Spiking neural network'",
+        "header1": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Synapse'",
+        "header2": "'Neuron or other electrically excitable cell', 'Realistic Network', 'Synapse', 'Channel/Receptor', 'Spiking neural network'",
+        "header3": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor'"
+    },
+    "267728": {
+        "com_var1": "'Axon', 'Neuron or other electrically excitable cell', 'Extracellular'",
+        "com_var2": "'Axon', 'Neuron or other electrically excitable cell', 'Extracellular'",
+        "com_var3": "'Axon', 'Neuron or other electrically excitable cell', 'Extracellular'",
+        "header1": "'Axon', 'Channel/Receptor', 'Extracellular'",
+        "header2": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Axon', 'Extracellular'",
+        "header3": "'Neuron or other electrically excitable cell', 'Channel/Receptor'"
+    },
+    "2015412": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "header1": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "header2": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "header3": "'Channel/Receptor', 'Neuron or other electrically excitable cell'"
+    },
+    "267253": {
+        "com_var1": "'Neuron or other electrically excitable cell'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "com_var3": "'Neuron or other electrically excitable cell'",
+        "header1": "'Neuron or other electrically excitable cell', 'Electrogenic pump'",
+        "header2": "'Neuron or other electrically excitable cell', 'Electrogenic pump'",
+        "header3": "'Neuron or other electrically excitable cell', 'Electrogenic pump'"
+    },
+    "2014821": {
+        "com_var1": "'Axon', 'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "com_var2": "'Axon', 'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "com_var3": "'Axon', 'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "header1": "'Channel/Receptor'",
+        "header2": "'Channel/Receptor', 'Neuron or other electrically excitable cell'",
+        "header3": "'Channel/Receptor'"
+    },
+    "267252": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor', 'Molecular Network'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Synapse', 'Molecular Network'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor', 'Molecular Network'",
+        "header1": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Molecular Network'",
+        "header2": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor'",
+        "header3": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Synapse'"
+    },
+    "267646": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor', 'Realistic Network', 'Spiking neural network'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Synapse', 'Network growth', 'Spiking neural network'",
+        "com_var3": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor', 'Dendrite', 'Spiking neural network'",
+        "header1": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Synapse'",
+        "header2": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Synapse'",
+        "header3": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Channel/Receptor'"
+    },
+    "267596": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor', 'Axon'",
+        "header2": "'Neuron or other electrically excitable cell', 'Synapse', 'Axon', 'Dendrite'",
+        "header3": "'Neuron or other electrically excitable cell', 'Synapse'"
+    },
+    "267583": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "header1": "'Neuron or other electrically excitable cell'",
+        "header2": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "header3": "'Neuron or other electrically excitable cell', 'Channel/Receptor'"
+    },
+    "267561": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Realistic Network', 'Channel/Receptor'",
+        "com_var2": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "com_var3": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "header1": "'Realistic Network', 'Neuron or other electrically excitable cell'",
+        "header2": "'Realistic Network', 'Neuron or other electrically excitable cell'",
+        "header3": "'Neuron or other electrically excitable cell', 'Realistic Network'"
+    },
+    "2017405": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Axon', 'Channel/Receptor'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Axon', 'Channel/Receptor'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Axon'",
+        "header1": "'Neuron or other electrically excitable cell', 'Axon', 'Synapse', 'Channel/Receptor'",
+        "header2": "'Neuron or other electrically excitable cell', 'Axon', 'Channel/Receptor', 'Spiking neural network'",
+        "header3": "'Neuron or other electrically excitable cell', 'Axon'"
+    },
+    "2015414": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor'",
+        "header1": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor'",
+        "header2": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "header3": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Synapse'"
+    },
+    "2016659": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Realistic Network', 'Spiking neural network', 'Synapse'",
+        "header2": "'Realistic Network', 'Spiking neural network', 'Synapse', 'Neuron or other electrically excitable cell'",
+        "header3": "'Realistic Network', 'Spiking neural network'"
+    },
+    "2014833": {
+        "com_var1": "'Connectionist Network'",
+        "com_var2": "'Connectionist Network', 'Statistical learning model'",
+        "com_var3": "'Connectionist Network', 'Statistical learning model'",
+        "header1": "'Connectionist Network', 'Statistical learning model'",
+        "header2": "'Connectionist Network', 'Statistical learning model'",
+        "header3": "'Connectionist Network'"
+    },
+    "267599": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Dendrite'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Dendrite'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Dendrite'",
+        "header1": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "header2": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "header3": "'Channel/Receptor', 'Neuron or other electrically excitable cell'"
+    },
+    "267566": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "header1": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "header2": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "header3": "'Neuron or other electrically excitable cell', 'Channel/Receptor'"
+    },
+    "2015571": {
+        "com_var1": "'Axon', 'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "com_var2": "'Axon', 'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "com_var3": "'Axon', 'Channel/Receptor', 'Neuron or other electrically excitable cell'",
+        "header1": "'Channel/Receptor', 'Neuron or other electrically excitable cell', 'Axon'",
+        "header2": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "header3": "'Neuron or other electrically excitable cell', 'Channel/Receptor'"
+    },
+    "267586": {
+        "com_var1": "'Statistical learning model', 'Agent-based model'",
+        "com_var2": "'Predictive Coding Network', 'Statistical learning model', 'Agent-based model'",
+        "com_var3": "'Predictive Coding Network', 'Statistical learning model', 'Agent-based model'",
+        "header1": "'Statistical learning model'",
+        "header2": "'Statistical learning model'",
+        "header3": "'Statistical learning model'"
+    },
+    "267564": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Electrogenic pump', 'Molecular Network'",
+        "com_var2": "'Molecular Network', 'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Electrogenic pump'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Electrogenic pump', 'Molecular Network'",
+        "header1": "'Neuron or other electrically excitable cell', 'Molecular Network'",
+        "header2": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Molecular Network'",
+        "header3": "'Neuron or other electrically excitable cell', 'Molecular Network'"
+    },
+    "267018": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Synapse', 'Dendrite', 'Extracellular'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Synapse', 'Dendrite', 'Extracellular'",
+        "com_var3": "'Synapse', 'Neuron or other electrically excitable cell', 'Extracellular'",
+        "header1": "'Neuron or other electrically excitable cell', 'Synapse', 'Dendrite', 'Channel/Receptor', 'Molecular Network', 'Extracellular'",
+        "header2": "'Neuron or other electrically excitable cell', 'Dendrite', 'Synapse', 'Molecular Network', 'Extracellular'",
+        "header3": "'Neuron or other electrically excitable cell', 'Dendrite', 'Synapse', 'Channel/Receptor'"
+    },
+    "267250": {
+        "com_var1": "'none'",
+        "com_var2": "'Neuron or other electrically excitable cell'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Circadian rhythm model'",
+        "header1": "'none'",
+        "header2": "'molecular network'",
+        "header3": "'Molecular Network'"
+    },
+    "267221": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Synapse', 'Dendrite'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Synapse'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Synapse', 'Dendrite'",
+        "header1": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Dendrite'",
+        "header2": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Synapse'",
+        "header3": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Synapse', 'Realistic Network'"
+    },
+    "2015411": {
+        "com_var1": "'Spiking neural network'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Spiking neural network'",
+        "com_var3": "'Spiking neural network'",
+        "header1": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Synapse', 'Spiking neural network'",
+        "header2": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Spiking neural network', 'Muscle model and vibrissa biomechanics'",
+        "header3": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Spiking neural network'"
+    },
+    "267620": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Electrogenic pump'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Electrogenic pump'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Electrogenic pump'",
+        "header1": "'Neuron or other electrically excitable cell', 'Electrogenic pump'",
+        "header2": "'Neuron or other electrically excitable cell', 'Electrogenic pump'",
+        "header3": "'Neuron or other electrically excitable cell', 'Electrogenic pump'"
+    },
+    "267563": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Electrogenic pump', 'Muscle model and vibrissa biomechanics'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Electrogenic pump', 'Muscle model and vibrissa biomechanics'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Electrogenic pump', 'Channel/Receptor', 'Muscle model and vibrissa biomechanics'",
+        "header1": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "header2": "'Neuron or other electrically excitable cell'",
+        "header3": "'Neuron or other electrically excitable cell'"
+    },
+    "267512": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor', 'Axon'",
+        "header1": "'Axon', 'Channel/Receptor', 'Synapse'",
+        "header2": "'Neuron or other electrically excitable cell', 'Axon', 'Synapse', 'Channel/Receptor'",
+        "header3": "'Neuron or other electrically excitable cell', 'Axon', 'Synapse', 'Channel/Receptor'"
+    },
+    "267589": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Synapse'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Axon', 'Synapse', 'Channel/Receptor'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "header1": "'Neuron or other electrically excitable cell', 'Axon', 'Synapse'",
+        "header2": "'Neuron or other electrically excitable cell', 'Axon', 'Synapse'",
+        "header3": "'Neuron or other electrically excitable cell', 'Synapse', 'Realistic Network', 'Axon'"
+    },
+    "267562": {
+        "com_var1": "'Electrogenic pump', 'Molecular Network'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Electrogenic pump', 'Molecular Network'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Electrogenic pump', 'Molecular Network'",
+        "header1": "'Electrogenic pump', 'Molecular Network'",
+        "header2": "'Electrogenic pump', 'Molecular Network'",
+        "header3": "'Realistic Network', 'Electrogenic pump', 'Molecular Network'"
+    },
+    "267259": {
+        "com_var1": "'Dendrite', 'Neuron or other electrically excitable cell'",
+        "com_var2": "'Dendrite', 'Neuron or other electrically excitable cell'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Dendrite'",
+        "header1": "'Neuron or other electrically excitable cell', 'Dendrite', 'Extracellular'",
+        "header2": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Dendrite', 'Extracellular'",
+        "header3": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Dendrite', 'Extracellular'"
+    },
+    "2014822": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor', 'Molecular Network'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Synapse', 'Realistic Network'",
+        "header1": "'Channel/Receptor', 'Neuron or other electrically excitable cell'",
+        "header2": "'Channel/Receptor', 'Neuron or other electrically excitable cell'",
+        "header3": "'Channel/Receptor', 'Neuron or other electrically excitable cell'"
+    },
+    "260015": {
+        "com_var1": "'Realistic Network', 'Spiking neural network'",
+        "com_var2": "'Realistic Network', 'Spiking neural network'",
+        "com_var3": "'Realistic Network', 'Spiking neural network'",
+        "header1": "'Realistic Network', 'Spiking neural network', 'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "header2": "'Realistic Network', 'Spiking neural network'",
+        "header3": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Spiking neural network'"
+    },
+    "267595": {
+        "com_var1": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Synapse', 'Extracellular'",
+        "com_var2": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Synapse', 'Extracellular', 'Spiking neural network'",
+        "com_var3": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Synapse', 'Extracellular', 'Spiking neural network'",
+        "header1": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Synapse'",
+        "header2": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor', 'Extracellular'",
+        "header3": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor'"
+    },
+    "267621": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Axon', 'Synapse', 'Channel/Receptor'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Axon', 'Synapse', 'Channel/Receptor', 'Dendrite'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor', 'Axon'",
+        "header1": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor'",
+        "header2": "'Synapse', 'Channel/Receptor', 'Neuron or other electrically excitable cell'",
+        "header3": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Synapse'"
+    },
+    "2015410": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Dendrite', 'Synapse', 'Axon'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Dendrite'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Dendrite', 'Synapse', 'Electrogenic pump'",
+        "header1": "'Channel/Receptor', 'Neuron or other electrically excitable cell'",
+        "header2": "'Channel/Receptor', 'Neuron or other electrically excitable cell'",
+        "header3": "'Channel/Receptor'"
+    },
+    "267565": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Electrogenic pump', 'Molecular Network'",
+        "com_var2": "'Molecular Network', 'Electrogenic pump', 'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "com_var3": "'Molecular Network', 'Electrogenic pump', 'Channel/Receptor'",
+        "header1": "'Neuron or other electrically excitable cell', 'Molecular Network'",
+        "header2": "'Neuron or other electrically excitable cell', 'Molecular Network'",
+        "header3": "'Neuron or other electrically excitable cell', 'Molecular Network'"
+    },
+    "267339": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'Agent-based model', 'Connectionist Network'",
+        "header1": "'Spiking neural network', 'Agent-based model'",
+        "header2": "'Spiking neural network', 'Agent-based model'",
+        "header3": "'Spiking neural network', 'Agent-based model'"
+    },
+    "267501": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Dendrite'",
+        "com_var2": "'Dendrite', 'Neuron or other electrically excitable cell', 'Synapse'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Dendrite'",
+        "header1": "'Channel/Receptor', 'Electrogenic pump'",
+        "header2": "'Channel/Receptor', 'Electrogenic pump'",
+        "header3": "'Channel/Receptor', 'Electrogenic pump'"
+    },
+    "267499": {
+        "com_var1": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor', 'Dendrite', 'Electrogenic pump', 'Extracellular', 'Spiking neural network'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor', 'Electrogenic pump', 'Extracellular'",
+        "com_var3": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor', 'Electrogenic pump', 'Extracellular'",
+        "header1": "'Channel/Receptor'",
+        "header2": "'Channel/Receptor'",
+        "header3": "'Channel/Receptor'"
+    },
+    "267355": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Axon', 'Channel/Receptor'",
+        "com_var2": "'Channel/Receptor', 'Neuron or other electrically excitable cell', 'Axon'",
+        "com_var3": "'Channel/Receptor', 'Axon'",
+        "header1": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Electrogenic pump'",
+        "header2": "'Channel/Receptor', 'Neuron or other electrically excitable cell', 'Electrogenic pump'",
+        "header3": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Electrogenic pump'"
+    },
+    "267754": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "com_var3": "'Neuron or other electrically excitable cell'",
+        "header1": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "header2": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "header3": "'Neuron or other electrically excitable cell', 'Channel/Receptor'"
+    },
+    "267509": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Synapse', 'Dendrite', 'Channel/Receptor'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor', 'Dendrite'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Synapse', 'Dendrite', 'Channel/Receptor'",
+        "header1": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor'",
+        "header2": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor'",
+        "header3": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor'"
+    },
+    "2014830": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Extracellular', 'Glia'",
+        "com_var2": "'Extracellular', 'Neuron or other electrically excitable cell'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Extracellular'",
+        "header1": "'Glia', 'Extracellular'",
+        "header2": "'Neuron or other electrically excitable cell', 'Glia', 'Extracellular'",
+        "header3": "'Extracellular', 'Glia', 'Electrogenic pump'"
+    },
+    "2016216": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Spiking neural network'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Spiking neural network'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Spiking neural network'",
+        "header1": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "header2": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "header3": "'Neuron or other electrically excitable cell', 'Channel/Receptor'"
+    },
+    "267551": {
+        "com_var1": "'Realistic Network', 'Synapse', 'Spiking neural network'",
+        "com_var2": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Synapse', 'Spiking neural network'",
+        "com_var3": "'Realistic Network', 'Synapse', 'Spiking neural network'",
+        "header1": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Synapse', 'Spiking neural network'",
+        "header2": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Synapse', 'Spiking neural network'",
+        "header3": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Synapse', 'Spiking neural network'"
+    },
+    "267295": {
+        "com_var1": "'Realistic Network', 'Spiking neural network'",
+        "com_var2": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Synapse', 'Spiking neural network'",
+        "com_var3": "'Realistic Network', 'Spiking neural network', 'Neuron or other electrically excitable cell', 'Synapse', 'Connectionist Network'",
+        "header1": "'Realistic Network', 'Spiking neural network', 'Predictive Coding Network'",
+        "header2": "'Realistic Network', 'Spiking neural network'",
+        "header3": "'Realistic Network', 'Spiking neural network'"
+    },
+    "267694": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Dendrite', 'Synapse', 'Spiking neural network'",
+        "com_var2": "'Dendrite', 'Neuron or other electrically excitable cell', 'Computer model', 'Synapse', 'Spiking neural network'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Synapse', 'Dendrite', 'Spiking neural network', 'Electrophysiological'",
+        "header1": "'Neuron or other electrically excitable cell', 'Synapse', 'Dendrite'",
+        "header2": "'Neuron or other electrically excitable cell', 'Synapse'",
+        "header3": "'Neuron or other electrically excitable cell', 'Synapse', 'Dendrite'"
+    },
+    "267768": {
+        "com_var1": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Synapse'",
+        "com_var2": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor', 'Connectionist Network', 'Spiking neural network'",
+        "com_var3": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor', 'Spiking neural network'",
+        "header1": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Spiking neural network', 'Synapse'",
+        "header2": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Spiking neural network'",
+        "header3": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Synapse', 'Spiking neural network'"
+    },
+    "267310": {
+        "com_var1": "'Neural mass', 'Glia'",
+        "com_var2": "'Realistic Network', 'Neural mass', 'Glia'",
+        "com_var3": "'Glia', 'Neural mass'",
+        "header1": "'Neural mass', 'Spiking neural network', 'Glia'",
+        "header2": "'Neural mass', 'Spiking neural network', 'Glia'",
+        "header3": "'Neural mass', 'Spiking neural network', 'Glia'"
+    },
+    "267686": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Dendrite', 'Axon', 'Synapse'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Axon', 'Dendrite', 'Channel/Receptor'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Dendrite', 'Axon'",
+        "header1": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Synapse'",
+        "header2": "'Channel/Receptor', 'Neuron or other electrically excitable cell', 'Synapse'",
+        "header3": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Synapse'"
+    },
+    "267391": {
+        "com_var1": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor', 'Dendrite', 'Extracellular', 'Spiking neural network'",
+        "com_var2": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Spiking neural network'",
+        "com_var3": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor', 'Dendrite', 'Spiking neural network'",
+        "header1": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor', 'Electrogenic pump'",
+        "header2": "'Channel/Receptor', 'Synapse', 'Electrogenic pump', 'Neuron or other electrically excitable cell'",
+        "header3": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor', 'Electrogenic pump'"
+    },
+    "2014816": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Axon', 'Channel/Receptor', 'Dendrite'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Axon', 'Channel/Receptor', 'Dendrite'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Axon', 'Channel/Receptor', 'Dendrite'",
+        "header1": "'Channel/Receptor'",
+        "header2": "'Channel/Receptor'",
+        "header3": "'Channel/Receptor'"
+    },
+    "266796": {
+        "com_var1": "'Spiking neural network', 'Realistic Network', 'Neuron or other electrically excitable cell', 'Synapse'",
+        "com_var2": "'Realistic Network', 'Spiking neural network'",
+        "com_var3": "'Spiking neural network', 'Realistic Network'",
+        "header1": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Spiking neural network'",
+        "header2": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor', 'Spiking neural network'",
+        "header3": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Spiking neural network'"
+    },
+    "2016219": {
+        "com_var1": "'Statistical learning model', 'Spiking neural network'",
+        "com_var2": "'Statistical learning model'",
+        "com_var3": "'Statistical learning model', 'Spiking neural network'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "185864": {
+        "com_var1": "'Axon', 'Neuron or other electrically excitable cell', 'Realistic Network'",
+        "com_var2": "'Axon', 'Neuron or other electrically excitable cell'",
+        "com_var3": "'Axon', 'Neuron or other electrically excitable cell'",
+        "header1": "'Axon', 'Channel/Receptor'",
+        "header2": "'Axon', 'Channel/Receptor', 'Neuron or other electrically excitable cell'",
+        "header3": "'Axon', 'Channel/Receptor'"
+    },
+    "2016137": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Synapse', 'Dendrite', 'Channel/Receptor', 'Axon'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Dendrite', 'Axon', 'Synapse', 'Channel/Receptor'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Dendrite', 'Axon', 'Synapse', 'Channel/Receptor'",
+        "header1": "'Channel/Receptor'",
+        "header2": "'Channel/Receptor', 'Neuron or other electrically excitable cell'",
+        "header3": "'Channel/Receptor'"
+    },
+    "267614": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor', 'Neuron or other electrically excitable cell', 'Synapse'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor'",
+        "header1": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor'",
+        "header2": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor'",
+        "header3": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor'"
+    },
+    "267293": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Dendrite'",
+        "header2": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor'",
+        "header3": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Dendrite', 'Synapse'"
+    },
+    "263719": {
+        "com_var1": "'Connectionist Network'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Spiking neural network'",
+        "header2": "'Spiking neural network', 'Realistic Network'",
+        "header3": "'Realistic Network', 'Connectionist Network', 'Spiking neural network'"
+    },
+    "2015422": {
+        "com_var1": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor', 'Spiking neural network'",
+        "com_var2": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor', 'Spiking neural network'",
+        "com_var3": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor', 'Spiking neural network'",
+        "header1": "'Realistic Network', 'Spiking neural network', 'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "header2": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor', 'Spiking neural network'",
+        "header3": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor', 'Spiking neural network'"
+    },
+    "267613": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Axon', 'Synapse', 'Channel/Receptor', 'Dendrite'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Dendrite', 'Axon', 'Synapse'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Dendrite', 'Axon', 'Synapse', 'Channel/Receptor'",
+        "header1": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor'",
+        "header2": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor'",
+        "header3": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Synapse'"
+    },
+    "267311": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor', 'Dendrite', 'Axon', 'Extracellular'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Dendrite'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Dendrite', 'Channel/Receptor'",
+        "header1": "'Neuron or other electrically excitable cell', 'Electrogenic pump', 'Channel/Receptor'",
+        "header2": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Electrogenic pump'",
+        "header3": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Electrogenic pump'"
+    },
+    "267710": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Dendrite', 'Channel/Receptor'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Dendrite', 'Channel/Receptor'",
+        "com_var3": "'Dendrite', 'Neuron or other electrically excitable cell'",
+        "header1": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Dendrite'",
+        "header2": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Dendrite'",
+        "header3": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Dendrite'"
+    },
+    "267695": {
+        "com_var1": "'Molecular Network'",
+        "com_var2": "'Molecular Network', 'Neuron or other electrically excitable cell'",
+        "com_var3": "'molecular network'",
+        "header1": "'Molecular Network'",
+        "header2": "'Molecular Network'",
+        "header3": "'Molecular Network'"
+    },
+    "267680": {
+        "com_var1": "'Synapse', 'Channel/Receptor', 'Neuron or other electrically excitable cell'",
+        "com_var2": "'Synapse', 'Channel/Receptor'",
+        "com_var3": "'Synapse', 'Channel/Receptor'",
+        "header1": "'Synapse'",
+        "header2": "'Synapse'",
+        "header3": "'Synapse', 'Neuron or other electrically excitable cell'"
+    },
+    "267550": {
+        "com_var1": "'Spiking neural network', 'Muscle model and vibrissa biomechanics'",
+        "com_var2": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Spiking neural network', 'Muscle model and vibrissa biomechanics'",
+        "com_var3": "'Realistic Network', 'Spiking neural network'",
+        "header1": "'Realistic Network', 'Spiking neural network', 'Muscle model and vibrissa biomechanics'",
+        "header2": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Spiking neural network'",
+        "header3": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Synapse', 'Spiking neural network'"
+    },
+    "267382": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Spiking neural network'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Neural mass', 'Spiking neural network'",
+        "header2": "'Neuron or other electrically excitable cell', 'Realistic Network', 'Spiking neural network'",
+        "header3": "'Realistic Network', 'Spiking neural network', 'Neural mass'"
+    },
+    "2016138": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Axon', 'Synapse', 'Channel/Receptor'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Synapse', 'Dendrite', 'Channel/Receptor'",
+        "header1": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Synapse'",
+        "header2": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Synapse'",
+        "header3": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor', 'Dendrite'"
+    },
+    "267306": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Axon'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Axon', 'Channel/Receptor'",
+        "header1": "'Channel/Receptor', 'Neuron or other electrically excitable cell'",
+        "header2": "'Channel/Receptor', 'Neuron or other electrically excitable cell'",
+        "header3": "'Channel/Receptor', 'Neuron or other electrically excitable cell'"
+    },
+    "2015420": {
+        "com_var1": "'Spiking neural network', 'Neuron or other electrically excitable cell'",
+        "com_var2": "'Spiking neural network', 'Neuron or other electrically excitable cell', 'Synapse'",
+        "com_var3": "'Spiking neural network', 'Neuron or other electrically excitable cell', 'Synapse'",
+        "header1": "'Neuron or other electrically excitable cell', 'Spiking neural network'",
+        "header2": "'Spiking neural network'",
+        "header3": "'Spiking neural network'"
+    },
+    "267611": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'"
+    },
+    "2016670": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "header2": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "header3": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Channel/Receptor'"
+    },
+    "267619": {
+        "com_var1": "'Realistic Network', 'Spiking neural network'",
+        "com_var2": "'Realistic Network', 'Spiking neural network'",
+        "com_var3": "'Realistic Network', 'Spiking neural network'",
+        "header1": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Spiking neural network'",
+        "header2": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Spiking neural network'",
+        "header3": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Spiking neural network'"
+    },
+    "267395": {
+        "com_var1": "'Realisitic Network', 'Channel/Receptor', 'Neuron or other electrically excitable cell'",
+        "com_var2": "'Realiistic Network', 'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor'",
+        "com_var3": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor'",
+        "header1": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor', 'Extracellular'",
+        "header2": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor', 'Extracellular'",
+        "header3": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor', 'Extracellular'"
+    },
+    "2014998": {
+        "com_var1": "'Spiking neural network', 'Realistic Network', 'Neuron or other electrically excitable cell', 'Statistical learning model'",
+        "com_var2": "'Realistic Network', 'Spiking neural network'",
+        "com_var3": "'Realistic Network', 'Spiking neural network'",
+        "header1": "'Neuron or other electrically excitable cell', 'Realistic Network', 'Synapse', 'Channel/Receptor'",
+        "header2": "'Neuron or other electrically excitable cell', 'Realistic Network', 'Spiking neural network'",
+        "header3": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor'"
+    },
+    "267033": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Synapse'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Synapse'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor'",
+        "header1": "'Neuron or other electrically excitable cell', 'Spiking neural network'",
+        "header2": "'Neuron or other electrically excitable cell', 'Spiking neural network'",
+        "header3": "'Neuron or other electrically excitable cell', 'Realistic Network', 'Spiking neural network'"
+    },
+    "267309": {
+        "com_var1": "'Neuron or other electrically excitable cell'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "header1": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "header2": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "header3": "'Neuron or other electrically excitable cell', 'Channel/Receptor'"
+    },
+    "2017143": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Dendrite', 'Axon', 'Channel/Receptor', 'Synapse'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Axon', 'Channel/Receptor', 'Dendrite'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Axon', 'Dendrite', 'Channel/Receptor'",
+        "header1": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor', 'Dendrite'",
+        "header2": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor', 'Dendrite'",
+        "header3": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor', 'Dendrite'"
+    },
+    "2016663": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Spiking neural network'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "header1": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "header2": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "header3": "'Neuron or other electrically excitable cell', 'Channel/Receptor'"
+    },
+    "267056": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Synapse'",
+        "header2": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Synapse'",
+        "header3": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Synapse'"
+    },
+    "267691": {
+        "com_var1": "'Neuron or other electrically excitable cell'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Synapse', 'Dendrite'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Synapse', 'Dendrite'",
+        "header1": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Synapse'",
+        "header2": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Synapse'",
+        "header3": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Synapse'"
+    },
+    "267617": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor'",
+        "header1": "'Channel/Receptor', 'Neuron or other electrically excitable cell', 'Axon'",
+        "header2": "'Channel/Receptor', 'Neuron or other electrically excitable cell', 'Axon'",
+        "header3": "'Channel/Receptor'"
+    },
+    "2014999": {
+        "com_var1": "'Realistic Network', 'Connectionist Network', 'Spiking neural network'",
+        "com_var2": "'Realistic Network', 'Connectionist Network', 'Network growth'",
+        "com_var3": "'Realistic Network', 'Connectionist Network', 'Network growth'",
+        "header1": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Synapse', 'Connectionist Network', 'Spiking neural network'",
+        "header2": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Synapse', 'Spiking neural network'",
+        "header3": "'Realistic Network', 'Synapse', 'Spiking neural network'"
+    },
+    "2014814": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor'",
+        "header1": "'Neuron or other electrically excitable cell', 'Muscle model and vibrissa biomechanics'",
+        "header2": "'Neuron or other electrically excitable cell', 'Muscle model and vibrissa biomechanics'",
+        "header3": "'Neuron or other electrically excitable cell', 'Muscle model and vibrissa biomechanics'"
+    },
+    "267267": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Axon', 'Synapse', 'Channel/Receptor', 'Dendrite', 'Electrogenic pump'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor', 'Dendrite', 'Electrogenic pump'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor', 'Dendrite', 'Electrogenic pump'",
+        "header1": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "header2": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "header3": "'Neuron or other electrically excitable cell', 'Channel/Receptor'"
+    },
+    "2014996": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Synapse', 'Axon'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor', 'Neural mass', 'Extracellular', 'Spiking neural network'",
+        "com_var3": "'none'",
+        "header1": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Synapse', 'Realistic Network', 'Spiking neural network'",
+        "header2": "'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor'",
+        "header3": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Synapse'"
+    },
+    "267669": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Synapse', 'Realistic Network'",
+        "com_var2": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Synapse', 'Channel/Receptor', 'Network growth', 'Spiking neural network'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "header1": "'Channel/Receptor', 'Neuron or other electrically excitable cell'",
+        "header2": "'Channel/Receptor'",
+        "header3": "'Channel/Receptor'"
+    },
+    "267696": {
+        "com_var1": "'Glia', 'Extracellular'",
+        "com_var2": "'Extracellular', 'Glia', 'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Glia', 'Extracellular'",
+        "header1": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Glia', 'Extracellular'",
+        "header2": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Glia', 'Extracellular'",
+        "header3": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Glia', 'Extracellular'"
+    },
+    "2015421": {
+        "com_var1": "'Spiking neural network'",
+        "com_var2": "'Realistic Network', 'Spiking neural network'",
+        "com_var3": "'Realistic Network', 'Spiking neural network'",
+        "header1": "'Spiking neural network'",
+        "header2": "'Spiking neural network', 'Realistic Network', 'Neuron or other electrically excitable cell'",
+        "header3": "'Neuron or other electrically excitable cell', 'Realistic Network', 'Spiking neural network'"
+    },
+    "267661": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "header1": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Synapse'",
+        "header2": "'Channel/Receptor', 'Neuron or other electrically excitable cell'",
+        "header3": "'Neuron or other electrically excitable cell', 'Channel/Receptor'"
+    },
+    "267260": {
+        "com_var1": "'Spiking neural network'",
+        "com_var2": "'Spiking neural network', 'Neuron or other electrically excitable cell', 'Realistic Network'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Spiking neural network'",
+        "header1": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Spiking neural network'",
+        "header2": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Spiking neural network'",
+        "header3": "'Realistic Network', 'Neuron or other electrically excitable cell', 'Spiking neural network'"
+    },
+    "2016995": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "com_var3": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "header1": "'Channel/Receptor', 'Neuron or other electrically excitable cell'",
+        "header2": "'Channel/Receptor', 'Neuron or other electrically excitable cell'",
+        "header3": "'Neuron or other electrically excitable cell', 'Channel/Receptor'"
+    },
+    "267363": {
+        "com_var1": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "com_var2": "'Neuron or other electrically excitable cell', 'Channel/Receptor'",
+        "com_var3": "'none'",
+        "header1": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Synapse'",
+        "header2": "'Neuron or other electrically excitable cell', 'Channel/Receptor', 'Synapse'",
+        "header3": "'Neuron or other electrically excitable cell', 'Channel/Receptor'"
+    }
+}

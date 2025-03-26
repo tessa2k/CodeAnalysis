@@ -1,0 +1,799 @@
+{
+    "267598": {
+        "com_var1": "'Neocortex'",
+        "com_var2": "'Generic', 'Unknown'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "2015953": {
+        "com_var1": "'Generic'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Hippocampus', 'Cerebellum', 'Thalamus'",
+        "header2": "'Hippocampus', 'Cerebellum', 'Thalamus'",
+        "header3": "'Hippocampus', 'Cerebellum', 'Thalamus'"
+    },
+    "2017403": {
+        "com_var1": "'Generic'",
+        "com_var2": "'none'",
+        "com_var3": "'Spinal motoneuron', 'Enteric nervous system', 'Generic', 'Unknown'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "267357": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'Generic', 'Unknown'",
+        "header3": "'none'"
+    },
+    "2014832": {
+        "com_var1": "'Neocortex', 'Thalamus', 'Cortex', 'Hippocampus'",
+        "com_var2": "'Neocortex', 'Thalamus', 'Entorhinal cortex', 'Striatum'",
+        "com_var3": "'Neocortex', 'Thalamus'",
+        "header1": "'Thalamus'",
+        "header2": "'Thalamus'",
+        "header3": "'Thalamus', 'Generic'"
+    },
+    "2016658": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Hippocampus'",
+        "header2": "'Hippocampus'",
+        "header3": "'Hippocampus'"
+    },
+    "266844": {
+        "com_var1": "'Generic', 'Unknown'",
+        "com_var2": "'Generic'",
+        "com_var3": "'none'",
+        "header1": "'Neocortex', 'Thalamus'",
+        "header2": "'Neocortex', 'Thalamus'",
+        "header3": "'Neocortex', 'Thalamus'"
+    },
+    "267088": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'Neocortex', 'Cerebellum', 'Spinal motoneuron', 'Spinal cord', 'Brainstem'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "267329": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'Generic', 'Unknown'",
+        "header1": "'Generic', 'Unknown'",
+        "header2": "'Generic'",
+        "header3": "'generic'"
+    },
+    "267728": {
+        "com_var1": "'Spinal cord'",
+        "com_var2": "'Spinal cord', 'Spinal motoneuron'",
+        "com_var3": "'Spinal motoneuron', 'Spinal cord'",
+        "header1": "'Spinal motoneuron', 'Spinal cord', 'Human'",
+        "header2": "'Spinal cord', 'Human'",
+        "header3": "'Spinal cord', 'Human'"
+    },
+    "2015412": {
+        "com_var1": "'Drosophila'",
+        "com_var2": "'Drosophila'",
+        "com_var3": "'Drosophila'",
+        "header1": "'Drosophila'",
+        "header2": "'Drosophila'",
+        "header3": "'Drosophila'"
+    },
+    "267253": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Mouse', 'Spinal cord'",
+        "header2": "'Mouse', 'Spinal cord'",
+        "header3": "'Mouse', 'Spinal cord'"
+    },
+    "2014821": {
+        "com_var1": "'Neocortex', 'PyramidalAxon', 'Human', 'Membrane'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'Hippocampus'",
+        "header3": "'Hippocampus', 'Neocortex'"
+    },
+    "267252": {
+        "com_var1": "'Brainstem'",
+        "com_var2": "'Brainstem', 'Stomatogastric ganglion'",
+        "com_var3": "'Brainstem', 'Respiratory networks', 'Neural oscillators'",
+        "header1": "'Generic'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "267646": {
+        "com_var1": "'Retina'",
+        "com_var2": "'Retina', 'Neocortex'",
+        "com_var3": "'Retina'",
+        "header1": "'Retina', 'Mouse'",
+        "header2": "'Retina', 'Mouse'",
+        "header3": "'Retina'"
+    },
+    "267596": {
+        "com_var1": "'Neocortex', 'Dentate gyrus', 'Olfactory cortex', 'Olfactory bulb', 'Thalamus', 'Basal ganglia', 'Cerebellum', 'Spinal motoneuron', 'Enteric nervous system', 'Subthalamic Nucleus', 'Superior colliculus', 'Entorhinal cortex', 'Striatum', 'Amygdala', 'Prefrontal cortex (PFC)', 'Spinal cord', 'Brainstem', 'Medial Septum', 'Visual cortex'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Cerebellum'",
+        "header2": "'Generic', 'Cerebellum'",
+        "header3": "'Cerebellum'"
+    },
+    "267583": {
+        "com_var1": "'Stomatogastric ganglion'",
+        "com_var2": "'Stomatogastric ganglion'",
+        "com_var3": "'Stomatogastric ganglion'",
+        "header1": "'Stomatogastric ganglion'",
+        "header2": "'Stomatogastric ganglion'",
+        "header3": "'Stomatogastric ganglion'"
+    },
+    "267561": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'Pituitary cells'"
+    },
+    "2017405": {
+        "com_var1": "'Neocortex', 'Thalamus', 'Basal ganglia', 'Subthalamic Nucleus', 'Globus pallidus externa (GPe)'",
+        "com_var2": "'Neocortex', 'Thalamus', 'Basal ganglia', 'Subthalamic Nucleus', 'Globus pallidus externa (GPe)'",
+        "com_var3": "'Neocortex', 'Basal ganglia', 'Subthalamic Nucleus', 'Globus pallidus externa (GPe)', 'Thalamus'",
+        "header1": "'Neocortex', 'Basal ganglia', 'Subthalamic Nucleus', 'Globus pallidus externa (GPe)'",
+        "header2": "'Neocortex', 'Basal ganglia', 'Subthalamic Nucleus', 'Globus pallidus externa (GPe)'",
+        "header3": "'Neocortex', 'Basal ganglia', 'Thalamus', 'Subthalamic Nucleus', 'Globus pallidus externa (GPe)'"
+    },
+    "2015414": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Turtle cortex', 'Spinal motoneuron', 'Goldfish'",
+        "header2": "'Mauthner-cell parameters', 'Goldfish'",
+        "header3": "'Mauthner-cell', 'Turtle vestibular system'"
+    },
+    "2016659": {
+        "com_var1": "'Generic'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Hippocampus', 'Entorhinal cortex'",
+        "header2": "'Hippocampus', 'Entorhinal cortex'",
+        "header3": "'Hippocampus', 'Entorhinal cortex'"
+    },
+    "2014833": {
+        "com_var1": "'Neocortex', 'Hippocampus', 'Thalamus', 'Basal ganglia', 'Cerebellum', 'Striatum', 'Prefrontal cortex (PFC)', 'Human'",
+        "com_var2": "'Prefrontal cortex (PFC)', 'Thalamus', 'Basal ganglia', 'Cerebellum'",
+        "com_var3": "'Neocortex', 'Hippocampus', 'Basal ganglia', 'Prefrontal cortex (PFC)'",
+        "header1": "'Neocortex', 'Hippocampus', 'Thalamus', 'Basal ganglia', 'Cerebellum', 'Prefrontal cortex (PFC)', 'Amygdala', 'Human'",
+        "header2": "'Prefrontal cortex (PFC)', 'Neocortex'",
+        "header3": "'Neocortex', 'Prefrontal cortex (PFC)', 'Thalamus', 'Basal ganglia', 'Striatum', 'Cerebellum', 'Hippocampus'"
+    },
+    "267599": {
+        "com_var1": "'none'",
+        "com_var2": "'Neocortex', 'Hippocampus', 'Dentate gyrus', 'Entorhinal cortex'",
+        "com_var3": "'none'",
+        "header1": "'Generic'",
+        "header2": "'Hippocampus', 'CA1', 'Generic'",
+        "header3": "'Hippocampus', 'CA1'"
+    },
+    "267566": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "2015571": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Hippocampus', 'Dentate gyrus'",
+        "header2": "'Hippocampus', 'Dentate gyrus', 'Human', 'Mouse'",
+        "header3": "'Hippocampus', 'Dentate gyrus', 'Human', 'Mouse'"
+    },
+    "267586": {
+        "com_var1": "'none'",
+        "com_var2": "'None'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'Neocortex', 'Cerebellum', 'Basal ganglia', 'Striatum', 'Spinal cord', 'Superior colliculus', 'Subthalamic Nucleus', 'Entorhinal cortex', 'Prefrontal cortex (PFC)', 'Thalamus', 'Auditory cortex', 'Visual cortex', 'Hippocampus', 'Amygdala', 'Retina', 'Brainstem'",
+        "header3": "'none'"
+    },
+    "267564": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Pancreatic Beta-Cells'",
+        "header2": "'Pancreatic Beta-Cells', 'Neocortex'",
+        "header3": "'Generic'"
+    },
+    "267018": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'Generic'",
+        "header1": "'Generic', 'Unknown'",
+        "header2": "'Generic'",
+        "header3": "'Generic'"
+    },
+    "267250": {
+        "com_var1": "'Mouse'",
+        "com_var2": "'Mouse'",
+        "com_var3": "'Mouse'",
+        "header1": "'Mouse'",
+        "header2": "'Mouse'",
+        "header3": "'Mouse'"
+    },
+    "267221": {
+        "com_var1": "'Hippocampus', 'Entorhinal cortex'",
+        "com_var2": "'Hippocampus', 'Entorhinal cortex'",
+        "com_var3": "'Hippocampus', 'Entorhinal cortex'",
+        "header1": "'Neocortex', 'Hippocampus', 'Dentate gyrus'",
+        "header2": "'Generic'",
+        "header3": "'Neocortex', 'Hippocampus', 'Dentate gyrus', 'Olfactory cortex', 'Striatum', 'Amygdala', 'Prefrontal cortex (PFC)', 'Barrel cortex', 'Visual cortex'"
+    },
+    "2015411": {
+        "com_var1": "'none'",
+        "com_var2": "'Generic'",
+        "com_var3": "'none'",
+        "header1": "'Spinal motoneuron', 'Spinal cord'",
+        "header2": "'Spinal motoneuron', 'Spinal cord'",
+        "header3": "'Spinal motoneuron', 'Spinal cord'"
+    },
+    "267620": {
+        "com_var1": "'Drosophila', 'Spinal motoneuron'",
+        "com_var2": "'Drosophila', 'Spinal motoneuron'",
+        "com_var3": "'Spinal motoneuron', 'Drosophila'",
+        "header1": "'Drosophila'",
+        "header2": "'Drosophila', 'Spinal motoneuron'",
+        "header3": "'Drosophila', 'Generic'"
+    },
+    "267563": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "267512": {
+        "com_var1": "'Dentate gyrus'",
+        "com_var2": "'Dentate gyrus'",
+        "com_var3": "'Dentate gyrus'",
+        "header1": "'Hippocampus'",
+        "header2": "'Hippocampus', 'Dentate gyrus'",
+        "header3": "'Hippocampus', 'Dentate gyrus'"
+    },
+    "267589": {
+        "com_var1": "'Thalamus', 'dLGN', 'Neocortex', 'Olfactory cortex', 'Auditory cortex'",
+        "com_var2": "'Thalamus', 'dLGN', 'cortex'",
+        "com_var3": "'Thalamus', 'Neocortex', 'Cortex', 'Spinal cord', 'dLGN'",
+        "header1": "'Thalamus', 'Visual cortex', 'Retina', 'Mouse'",
+        "header2": "'Thalamus', 'Visual cortex', 'Mouse'",
+        "header3": "'dLGN', 'Thalamus', 'Visual cortex', 'Retina'"
+    },
+    "267562": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Generic', 'Unknown'",
+        "header2": "'Generic', 'Unknown'",
+        "header3": "'none'"
+    },
+    "267259": {
+        "com_var1": "'Neocortex', 'Brainstem'",
+        "com_var2": "'Neocortex', 'Brainstem'",
+        "com_var3": "'Neocortex', 'Brainstem'",
+        "header1": "'Neocortex', 'Hippocampus', 'Brainstem'",
+        "header2": "'Neocortex', 'Hippocampus', 'Dentate gyrus', 'Brainstem'",
+        "header3": "'Neocortex', 'Hippocampus'"
+    },
+    "2014822": {
+        "com_var1": "'Hippocampus', 'CA3', 'CA1'",
+        "com_var2": "'Hippocampus', 'CA1', 'CA3'",
+        "com_var3": "'Hippocampus', 'CA3', 'CA1'",
+        "header1": "'Hippocampus'",
+        "header2": "'Hippocampus', 'Neocortex', 'Generic'",
+        "header3": "'Generic'"
+    },
+    "260015": {
+        "com_var1": "'Neocortex', 'Prefrontal cortex (PFC)', 'Barrel cortex', 'Mouse', 'Visual cortex'",
+        "com_var2": "'Neocortex', 'SOM L2-6', 'PV L2-6'",
+        "com_var3": "'Neocortex', 'SOM', 'PV'",
+        "header1": "'Neocortex', 'Thalamus', 'Basal ganglia', 'Striatum', 'Motor Cortex (M1)'",
+        "header2": "'Neocortex', 'Thalamus', 'Basal ganglia', 'Striatum'",
+        "header3": "'Neocortex', 'Thalamus', 'Striatum', 'Basal ganglia'"
+    },
+    "267595": {
+        "com_var1": "'Neocortex', 'Hippocampus'",
+        "com_var2": "'Neocortex', 'Hippocampus'",
+        "com_var3": "'Neocortex', 'Hippocampus', 'Thalamus'",
+        "header1": "'Neocortex'",
+        "header2": "'Neocortex', 'Barrel cortex'",
+        "header3": "'Neocortex', 'Hippocampus', 'Entorhinal cortex'"
+    },
+    "267621": {
+        "com_var1": "'Stomatogastric ganglion', 'Generic'",
+        "com_var2": "'Stomatogastric ganglion'",
+        "com_var3": "'Stomatogastric ganglion'",
+        "header1": "'Stomatogastric ganglion'",
+        "header2": "'Stomatogastric ganglion'",
+        "header3": "'Stomatogastric ganglion'"
+    },
+    "2015410": {
+        "com_var1": "'Neocortex', 'Hippocampus', 'Spinal motoneuron', 'Generic'",
+        "com_var2": "'Neocortex', 'Hippocampus', 'Dentate gyrus', 'Striatum', 'Amygdala', 'Auditory cortex', 'Prefrontal cortex (PFC)', 'Barrel cortex', 'Visual cortex'",
+        "com_var3": "'Neocortex', 'Hippocampus', 'Dentate gyrus', 'Thalamus', 'Cerebellum', 'Spinal motoneuron', 'Retina', 'Entorhinal cortex', 'Striatum', 'Amygdala', 'Prefrontal cortex (PFC)', 'Spinal cord', 'Brainstem', 'Human', 'Visual cortex'",
+        "header1": "'Neocortex', 'Dentate gyrus'",
+        "header2": "'Neocortex', 'Dentate gyrus', 'Mouse'",
+        "header3": "'Neocortex', 'Dentate gyrus', 'Mouse'"
+    },
+    "267565": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'Generic', 'Unknown'",
+        "header1": "'none'",
+        "header2": "'Generic'",
+        "header3": "'none'"
+    },
+    "267339": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'Entorhinal cortex', 'Hippocampus'"
+    },
+    "267501": {
+        "com_var1": "'none'",
+        "com_var2": "'Neocortex', 'Pyramidal', 'Apical', 'Basal'",
+        "com_var3": "'Neocortex', 'Hippocampus', 'Basal ganglia', 'Spinal motoneuron', 'Brainstem', 'Human', 'Mouse'",
+        "header1": "'Neocortex', 'Thalamus'",
+        "header2": "'Neocortex', 'Thalamus'",
+        "header3": "'Neocortex', 'Thalamus'"
+    },
+    "267499": {
+        "com_var1": "'Hippocampus', 'CA1', 'Somjen'",
+        "com_var2": "'Hippocampus', 'CA1'",
+        "com_var3": "'Neocortex', 'Hippocampus', 'Dentate gyrus', 'Generic', 'Unknown'",
+        "header1": "'Neocortex', 'Hippocampus', 'Dentate gyrus', 'Turtle cortex', 'Thalamus', 'Cerebellum', 'Spinal motoneuron'",
+        "header2": "'Hippocampus', 'Neocortex', 'Olfactory bulb'",
+        "header3": "'Hippocampus'"
+    },
+    "267355": {
+        "com_var1": "'Generic'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Neocortex', 'Thalamus', 'Mouse'",
+        "header2": "'Neocortex', 'Thalamus', 'Mouse'",
+        "header3": "'Neocortex', 'Thalamus', 'Mouse'"
+    },
+    "267754": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Hippocampus', 'Dentate gyrus'",
+        "header2": "'Hippocampus', 'Dentate gyrus'",
+        "header3": "'Hippocampus', 'Dentate gyrus'"
+    },
+    "267509": {
+        "com_var1": "'Auditory cortex', 'Prefrontal cortex (PFC)'",
+        "com_var2": "'none'",
+        "com_var3": "'Neocortex', 'Pyramidal', 'ACC', 'L5', 'A1_RS', 'ACC_IB', 'A1_IB'",
+        "header1": "'Neocortex', 'Thalamus', 'Auditory cortex', 'Visual cortex'",
+        "header2": "'Neocortex', 'Thalamus'",
+        "header3": "'Neocortex', 'Thalamus', 'Auditory cortex', 'Auditory brainstem'"
+    },
+    "2014830": {
+        "com_var1": "'Generic'",
+        "com_var2": "'none'",
+        "com_var3": "'Generic', 'Unknown'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'Generic'"
+    },
+    "2016216": {
+        "com_var1": "'Brainstem'",
+        "com_var2": "'Generic'",
+        "com_var3": "'none'",
+        "header1": "'Brainstem', 'Respiratory neurons'",
+        "header2": "'Brainstem', 'Spinal cord'",
+        "header3": "'Brainstem', 'Respiratory neurons', 'Generic'"
+    },
+    "267551": {
+        "com_var1": "'Barrel cortex'",
+        "com_var2": "'Barrel cortex'",
+        "com_var3": "'Barrel cortex'",
+        "header1": "'Neocortex', 'Barrel cortex'",
+        "header2": "'Neocortex', 'Barrel cortex', 'Mouse'",
+        "header3": "'Neocortex', 'Barrel cortex', 'Mouse'"
+    },
+    "267295": {
+        "com_var1": "'Neocortex', 'Prefrontal cortex (PFC)'",
+        "com_var2": "'Neocortex', 'Visual cortex', 'Prefrontal cortex (PFC)'",
+        "com_var3": "'Neocortex', 'Prefrontal cortex (PFC)', 'Visual cortex'",
+        "header1": "'Neocortex', 'Visual cortex', 'Prefrontal cortex (PFC)'",
+        "header2": "'Neocortex', 'Thalamus', 'Cerebellum', 'Hippocampus', 'Visual cortex'",
+        "header3": "'Neocortex', 'Superior colliculus', 'Entorhinal cortex', 'Amygdala', 'Auditory cortex', 'Prefrontal cortex (PFC)', 'Visual cortex'"
+    },
+    "267694": {
+        "com_var1": "'Cerebellum', 'Human', 'Mouse'",
+        "com_var2": "'Neocortex', 'Hippocampus', 'Cerebellum', 'Human', 'Mouse'",
+        "com_var3": "'Cerebellum', 'Mouse', 'Human'",
+        "header1": "'Mouse', 'Cerebellum'",
+        "header2": "'Mouse', 'Cerebellum'",
+        "header3": "'Mouse', 'Cerebellum'"
+    },
+    "267768": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'Spinal cord', 'Spinal motoneuron', 'Generic'",
+        "header3": "'none'"
+    },
+    "267310": {
+        "com_var1": "'Neocortex', 'Cortical', 'Generic'",
+        "com_var2": "'Neocortex'",
+        "com_var3": "'Neocortex'",
+        "header1": "'Neocortex', 'Visual cortex'",
+        "header2": "'Neocortex', 'Generic'",
+        "header3": "'Neocortex', 'Cortex', 'Spinal cord'"
+    },
+    "267686": {
+        "com_var1": "'Hippocampus'",
+        "com_var2": "'Hippocampus'",
+        "com_var3": "'Neocortex', 'Hippocampus'",
+        "header1": "'Hippocampus', 'Cerebellum'",
+        "header2": "'Neocortex', 'Hippocampus'",
+        "header3": "'Neocortex', 'Hippocampus', 'Dentate gyrus', 'Olfactory cortex', 'Thalamus', 'Basal ganglia', 'Cerebellum', 'Spinal cord', 'Spinal motoneuron', 'Enteric nervous system', 'Subthalamic Nucleus', 'Amygdala', 'Auditory brainstem', 'Auditory cortex', 'Inferior Colliculus', 'Prefrontal cortex (PFC)', 'Medial Septum', 'Brainstem', 'Human', 'Barrel cortex', 'Visual cortex'"
+    },
+    "267391": {
+        "com_var1": "'none'",
+        "com_var2": "'Generic', 'Unknown'",
+        "com_var3": "'none'",
+        "header1": "'Retina', 'Human'",
+        "header2": "'Retina', 'Human'",
+        "header3": "'Retina', 'Human'"
+    },
+    "2014816": {
+        "com_var1": "'Hippocampus', 'Neocortex'",
+        "com_var2": "'Generic'",
+        "com_var3": "'Hippocampus', 'Generic'",
+        "header1": "'Generic'",
+        "header2": "'none'",
+        "header3": "'Neocortex', 'Hippocampus', 'Dentate gyrus'"
+    },
+    "266796": {
+        "com_var1": "'Hippocampus', 'Dentate gyrus', 'Entorhinal cortex'",
+        "com_var2": "'Dentate gyrus', 'Hippocampus', 'Entorhinal cortex'",
+        "com_var3": "'Hippocampus', 'Dentate gyrus', 'Entorhinal cortex'",
+        "header1": "'Hippocampus', 'Dentate gyrus', 'Entorhinal cortex'",
+        "header2": "'Hippocampus', 'Dentate gyrus', 'Entorhinal cortex'",
+        "header3": "'Hippocampus'"
+    },
+    "2016219": {
+        "com_var1": "'Hippocampus', 'Entorhinal cortex'",
+        "com_var2": "'Hippocampus', 'Entorhinal cortex', 'Neocortex'",
+        "com_var3": "'Hippocampus', 'Entorhinal cortex'",
+        "header1": "'Hippocampus', 'Entorhinal cortex'",
+        "header2": "'Entorhinal cortex'",
+        "header3": "'Hippocampus', 'Entorhinal cortex'"
+    },
+    "185864": {
+        "com_var1": "'Generic'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'Generic', 'Unknown'",
+        "header3": "'Generic', 'Unknown'"
+    },
+    "2016137": {
+        "com_var1": "'Hippocampus', 'Entorhinal cortex'",
+        "com_var2": "'Hippocampus'",
+        "com_var3": "'Hippocampus'",
+        "header1": "'Hippocampus', 'CA1 pyramid cell'",
+        "header2": "'Hippocampus', 'CA1 pyramid cell', 'CA1'",
+        "header3": "'Hippocampus', 'CA1 pyramid cell'"
+    },
+    "267614": {
+        "com_var1": "'Spinal motoneuron', 'Spinal cord'",
+        "com_var2": "'Spinal cord'",
+        "com_var3": "'Spinal cord'",
+        "header1": "'Spinal cord', 'Mouse'",
+        "header2": "'Spinal cord', 'Mouse'",
+        "header3": "'Spinal cord'"
+    },
+    "267293": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'None'"
+    },
+    "263719": {
+        "com_var1": "'Subthalamic Nucleus', 'Basal ganglia', 'Striatum', 'Globus pallidus externa (GPe)'",
+        "com_var2": "'Basal ganglia', 'Subthalamic Nucleus', 'Striatum'",
+        "com_var3": "'Basal ganglia', 'Subthalamic Nucleus', 'Striatum'",
+        "header1": "'Basal ganglia', 'Subthalamic Nucleus', 'Globus pallidus externa (GPe)'",
+        "header2": "'Basal ganglia', 'Subthalamic Nucleus', 'Globus pallidus externa (GPe)', 'Striatum'",
+        "header3": "'Basal ganglia', 'Subthalamic Nucleus', 'Globus pallidus externa (GPe)'"
+    },
+    "2015422": {
+        "com_var1": "'Neocortex', 'Thalamus'",
+        "com_var2": "'Neocortex', 'Thalamus'",
+        "com_var3": "'Neocortex', 'Thalamus'",
+        "header1": "'Thalamus', 'Cortex'",
+        "header2": "'Neocortex', 'Thalamus'",
+        "header3": "'Neocortex', 'Thalamus'"
+    },
+    "267613": {
+        "com_var1": "'Hippocampus', 'Place Cell model', 'Generic'",
+        "com_var2": "'Generic', 'Unknown'",
+        "com_var3": "'Hippocampus', 'Generic', 'Unknown'",
+        "header1": "'Hippocampus'",
+        "header2": "'Generic'",
+        "header3": "'Hippocampus', 'Dentate gyrus', 'Generic'"
+    },
+    "267311": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'Generic', 'Unknown'",
+        "header1": "'Thalamus', 'Hippocampus'",
+        "header2": "'Hippocampus', 'Thalamus', 'Entorhinal cortex', 'Generic', 'Turtle cortex'",
+        "header3": "'Thalamus', 'Hippocampus'"
+    },
+    "267710": {
+        "com_var1": "'Spinal motoneuron', 'Spinal cord'",
+        "com_var2": "'Spinal motoneuron', 'Spinal cord'",
+        "com_var3": "'Spinal motoneuron', 'Spinal cord'",
+        "header1": "'Spinal motoneuron', 'Spinal cord'",
+        "header2": "'Spinal motoneuron'",
+        "header3": "'Spinal motoneuron', 'Spinal cord'"
+    },
+    "267695": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "267680": {
+        "com_var1": "'Hippocampus'",
+        "com_var2": "'Hippocampus'",
+        "com_var3": "'Hippocampus'",
+        "header1": "'Hippocampus', 'CA3-CA1 synapses'",
+        "header2": "'Hippocampus'",
+        "header3": "'Hippocampus'"
+    },
+    "267550": {
+        "com_var1": "'Thalamus', 'Barrel cortex', 'Neocortex'",
+        "com_var2": "'Thalamus', 'Barrel cortex'",
+        "com_var3": "'Thalamus', 'Barrel cortex'",
+        "header1": "'Neocortex', 'Thalamus', 'Barrel cortex', 'Mouse'",
+        "header2": "'Neocortex', 'Thalamus', 'Barrel cortex'",
+        "header3": "'Neocortex', 'Thalamus', 'Barrel cortex', 'Mouse'"
+    },
+    "267382": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'Generic'",
+        "header3": "'Generic', 'Unknown'"
+    },
+    "2016138": {
+        "com_var1": "'Cerebellum'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Cerebellum'",
+        "header2": "'Cerebellum'",
+        "header3": "'Cerebellum'"
+    },
+    "267306": {
+        "com_var1": "'Spinal motoneuron', 'Generic'",
+        "com_var2": "'none'",
+        "com_var3": "'Generic'",
+        "header1": "'Basal ganglia', 'Subthalamic Nucleus', 'Striatum'",
+        "header2": "'none'",
+        "header3": "'Basal ganglia', 'Subthalamic Nucleus', 'Striatum'"
+    },
+    "2015420": {
+        "com_var1": "'none'",
+        "com_var2": "'Generic'",
+        "com_var3": "'Generic'",
+        "header1": "'Generic'",
+        "header2": "'Generic'",
+        "header3": "'Generic'"
+    },
+    "267611": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'"
+    },
+    "2016670": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Neocortex'",
+        "header2": "'Neocortex'",
+        "header3": "'Neocortex'"
+    },
+    "267619": {
+        "com_var1": "'Neocortex', 'Prefrontal cortex (PFC)'",
+        "com_var2": "'Neocortex', 'Prefrontal cortex (PFC)', 'Superior colliculus'",
+        "com_var3": "'Neocortex', 'Prefrontal cortex (PFC)'",
+        "header1": "'Neocortex', 'Thalamus', 'Prefrontal cortex (PFC)'",
+        "header2": "'Neocortex', 'Thalamus', 'Prefrontal cortex (PFC)'",
+        "header3": "'Neocortex', 'Thalamus'"
+    },
+    "267395": {
+        "com_var1": "'none'",
+        "com_var2": "'Generic'",
+        "com_var3": "'none'",
+        "header1": "'Neocortex', 'Spinal motoneuron'",
+        "header2": "'Spinal motoneuron', 'Neocortex'",
+        "header3": "'Neocortex', 'Spinal motoneuron', 'GABA', 'Superior colliculus', 'Basal ganglia'"
+    },
+    "2014998": {
+        "com_var1": "'Dentate gyrus'",
+        "com_var2": "'Dentate gyrus', 'Hippocampus', 'Entorhinal cortex'",
+        "com_var3": "'Dentate gyrus', 'Hippocampus', 'Generic'",
+        "header1": "'Dentate gyrus'",
+        "header2": "'Dentate gyrus'",
+        "header3": "'Dentate gyrus'"
+    },
+    "267033": {
+        "com_var1": "'Neocortex', 'Hippocampus', 'Generic', 'Unknown'",
+        "com_var2": "'Neocortex', 'Hippocampus', 'Dentate gyrus', 'Generic'",
+        "com_var3": "'Neocortex', 'Hippocampus', 'Dentate gyrus', 'Generic', 'Unknown'",
+        "header1": "'Neocortex', 'Hippocampus', 'Dentate gyrus', 'Thalamus', 'Basal ganglia', 'Cerebellum', 'Striatum', 'Amygdala', 'Prefrontal cortex (PFC)'",
+        "header2": "'Neocortex', 'Hippocampus', 'Dentate gyrus', 'Thalamus', 'Basal ganglia', 'Cerebellum', 'Subthalamic Nucleus', 'Striatum', 'Amygdala', 'Auditory brainstem', 'Auditory cortex', 'Inferior Colliculus', 'Prefrontal cortex (PFC)', 'Brainstem', 'Medial Septum', 'Visual cortex'",
+        "header3": "'Neocortex', 'Hippocampus', 'Dentate gyrus', 'Thalamus', 'Basal ganglia', 'Cerebellum', 'Spinal motoneuron', 'Enteric nervous system', 'Subthalamic Nucleus', 'Superior colliculus', 'Retina', 'Entorhinal cortex', 'Amygdala', 'Prefrontal cortex (PFC)', 'Spinal cord', 'Brainstem', 'Medial Septum', 'Striatum', 'Visual cortex'"
+    },
+    "267309": {
+        "com_var1": "'Generic'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Generic', 'Unknown'",
+        "header2": "'Generic', 'Unknown'",
+        "header3": "'none'"
+    },
+    "2017143": {
+        "com_var1": "'Basal ganglia', 'Striatum'",
+        "com_var2": "'Basal ganglia', 'Striatum'",
+        "com_var3": "'Basal ganglia', 'Striatum'",
+        "header1": "'Basal ganglia', 'Striatum'",
+        "header2": "'Basal ganglia', 'Striatum'",
+        "header3": "'Striatum', 'Basal ganglia'"
+    },
+    "2016663": {
+        "com_var1": "'Spinal motoneuron', 'Spinal cord'",
+        "com_var2": "'Spinal motoneuron'",
+        "com_var3": "'Spinal motoneuron'",
+        "header1": "'Spinal cord'",
+        "header2": "'Spinal cord'",
+        "header3": "'spinal motoneuron', 'spinal cord'"
+    },
+    "267056": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'Generic'",
+        "header3": "'none'"
+    },
+    "267691": {
+        "com_var1": "'Neocortex'",
+        "com_var2": "'Neocortex'",
+        "com_var3": "'Neocortex', 'Mouse'",
+        "header1": "'Neocortex'",
+        "header2": "'Neocortex'",
+        "header3": "'Neocortex'"
+    },
+    "267617": {
+        "com_var1": "'Generic'",
+        "com_var2": "'Generic', 'Unknown'",
+        "com_var3": "'none'",
+        "header1": "'Hippocampus', 'Dentate gyrus'",
+        "header2": "'Hippocampus', 'Dentate gyrus'",
+        "header3": "'Hippocampus', 'Dentate gyrus'"
+    },
+    "2014999": {
+        "com_var1": "'Enteric nervous system'",
+        "com_var2": "'Enteric nervous system', 'Basal ganglia', 'Spinal cord'",
+        "com_var3": "'Spinal motoneuron', 'Enteric nervous system', 'Basal ganglia', 'Spinal cord'",
+        "header1": "'none'",
+        "header2": "'Enteric nervous system', 'Stellate ganglia'",
+        "header3": "'Enteric nervous system', 'Basal ganglia'"
+    },
+    "2014814": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'Stomatogastric ganglion'"
+    },
+    "267267": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Neocortex', 'Hippocampus', 'Dentate gyrus', 'Thalamus', 'Cerebellum', 'Spinal motoneuron', 'Striatum', 'Amygdala', 'Auditory brainstem', 'Auditory cortex', 'Prefrontal cortex (PFC)', 'Spinal cord', 'Brainstem', 'Superior colliculus', 'Retina', 'Entorhinal cortex', 'Barrel cortex', 'Visual cortex'",
+        "header2": "'Generic'",
+        "header3": "'none'"
+    },
+    "2014996": {
+        "com_var1": "'none'",
+        "com_var2": "'Generic', 'Unknown'",
+        "com_var3": "'none'",
+        "header1": "'Brainstem'",
+        "header2": "'Brainstem'",
+        "header3": "'Brainstem'"
+    },
+    "267669": {
+        "com_var1": "'Subthalamic Nucleus', 'Globus pallidus externa (GPe)'",
+        "com_var2": "'Subthalamic Nucleus', 'Globus pallidus externa (GPe)'",
+        "com_var3": "'Subthalamic Nucleus', 'Globus pallidus externa (GPe)'",
+        "header1": "'Subthalamic Nucleus', 'Globus pallidus externa (GPe)'",
+        "header2": "'Basal ganglia', 'Subthalamic Nucleus', 'Globus pallidus externa (GPe)'",
+        "header3": "'Basal ganglia', 'Subthalamic Nucleus', 'Globus pallidus externa (GPe)'"
+    },
+    "267696": {
+        "com_var1": "'Generic'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "2015421": {
+        "com_var1": "'Hippocampus', 'Neocortex', 'Entorhinal cortex'",
+        "com_var2": "'Hippocampus', 'Neocortex'",
+        "com_var3": "'none'",
+        "header1": "'Neocortex', 'Hippocampus', 'Thalamus', 'Basal ganglia', 'Cerebellum', 'Spinal motoneuron', 'Enteric nervous system', 'Striatum', 'Amygdala', 'Auditory brainstem', 'Auditory cortex', 'Prefrontal cortex (PFC)', 'Spinal cord', 'Brainstem', 'Medial Septum', 'Visual cortex'",
+        "header2": "'Neocortex', 'Hippocampus', 'Dentate gyrus', 'Striatum', 'Amygdala', 'Visual cortex', 'Entorhinal cortex', 'Prefrontal cortex (PFC)', 'Barrel cortex', 'Olfactory cortex', 'Auditory cortex'",
+        "header3": "'Neocortex', 'Hippocampus', 'Dentate gyrus', 'Olfactory cortex', 'Thalamus', 'Basal ganglia', 'Cerebellum', 'Striatum', 'Amygdala', 'Prefrontal cortex (PFC)', 'Barrel cortex', 'Visual cortex'"
+    },
+    "267661": {
+        "com_var1": "'none'",
+        "com_var2": "'Generic'",
+        "com_var3": "'Spinal motoneuron', 'Generic', 'Unknown'",
+        "header1": "'Spinal motoneuron', 'Mouse'",
+        "header2": "'mouse'",
+        "header3": "'Mouse'"
+    },
+    "267260": {
+        "com_var1": "'Generic', 'Unknown'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'Generic'",
+        "header3": "'Generic', 'Unknown'"
+    },
+    "2016995": {
+        "com_var1": "'Mouse'",
+        "com_var2": "'Mouse'",
+        "com_var3": "'Human', 'Mouse'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "267363": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'Generic'",
+        "header1": "'Generic'",
+        "header2": "'Neocortex', 'Hippocampus', 'Thalamus', 'Basal ganglia'",
+        "header3": "'Generic'"
+    }
+}

@@ -132,40 +132,56 @@ def traverse_folder_extract_comments_variables(path, model_code, extracted_data)
                 extracted_data[model_code][file_name] = {"comments": comments, "variables": variables}
 
 
+
 def extract_comments(content, filename):
     file_extension = os.path.splitext(filename)[1]
-    comment_patterns = {ext: r'(?m)^#.*' for ext in ACCEPTABLE_EXTENSIONS}
-    comment_patterns.update({
+    comment_patterns = {
         '.py': r'#.*',
         '.cpp': r'//.*|/\*.*?\*/',
         '.java': r'//.*|/\*.*?\*/',
         '.c': r'//.*|/\*.*?\*/',
         '.h': r'//.*|/\*.*?\*/',
-        '.html': r'<!--.*?-->',
-        '.mod': r'COMMENT(.*?)ENDCOMMENT',
-        '.ode': r'%.*',
-        '.txt': r'.*',
+        '.js': r'//.*|/\*.*?\*/',
+        '.ts': r'//.*|/\*.*?\*/',
+        '.php': r'//.*|/\*.*?\*/',
+        '.go': r'//.*|/\*.*?\*/',
+        '.r': r'#.*',
         '.m': r'%.*',
-        '.g': r'//.*|/\*.*?\*/',
-        '.md': r'<!--.*?-->',
-        '.sh': r'#.*',
-        '.xml': r'<!--.*?-->',
-        '.json': r'//.*|/\*.*?\*/',
-        '.csv': r'(?m)^#.*',
-        '.cfg': r'(?m)^#.*|;.*',
-        '.ini': r'(?m)^#.*|;.*',
-        '.pl': r'#.*',
         '.jl': r'#.*',
+        '.pl': r'#.*',
+        '.lua': r'--.*',
+        '.f': r'(?m)^C.*|!.*',
+        '.rb': r'#.*',
+        '.sh': r'#.*',
         '.bat': r'::.*|REM.*',
-        '.m4': r'\#.*',
         '.makefile': r'(?m)^#.*',
         '.tex': r'%.*',
-        '.hoc': r'//.*|/\*.*?\*/|".*?"',
-        '.f': r'(?m)^C.*|!.*',
-        '.patch': r'(?m)^#.*',
-        '.css': r'/\*.*?\*/',
+
+        '.html': r'<!--.*?-->',
+        '.xml': r'<!--.*?-->',
+        '.md': r'<!--.*?-->',
+        '.rst': r'^\.\..*',
+
+        '.json': r'//.*', 
+        '.csv': r'(?m)^#.*',  
+        '.ini': r'(?m)^#.*|;.*',
+        '.cfg': r'(?m)^#.*|;.*',
         '.conf': r'(?m)^#.*|;.*',
-    })
+        '.log': r'(?m)^#.*|//.*|;.*',
+        '.diff': r'(?m)^#.*|//.*',
+        '.sbatch': r'(?m)^#.*',
+        '.patch': r'(?m)^#.*',
+        '.pro': r'(?m)^#.*',
+        '.net': r'(?m)^#.*',
+        '.inc': r'(?m)^#.*|;.*',
+        '.plot': r'(?m)^#.*',
+        '.inp': r'(?m)^#.*|;.*',
+        '.sample': r'(?m)^#.*|//.*',
+
+        '.txt': r'(?m)^(#|//|;|REM).*',
+        '.rtf': r'(?m)^(#|//|;|REM).*',
+    }
+
     pattern = comment_patterns.get(file_extension, r'')
     comments = re.findall(pattern, content, re.DOTALL) if pattern else []
     return [re.sub(r'\b\d{3,}\b', '', comment) for comment in comments]
@@ -195,10 +211,10 @@ if __name__ == "__main__":
     # file_code_path = "/Users/mengmengdu/Desktop/CodeAnalysis/data/model_id_list.json"
     # with open(file_code_path, "r") as f:
     #     file_code_list = json.load(f)
-    file_code_list=filter_models_by_year(min_year=2020)
+    file_code_list=filter_models_by_year(min_year=2022)
     print(f"Total number of files is {len(file_code_list)}")
     samples_path = 'samples'
-    download_and_unzip_files(file_code_list, samples_path, 100)
+    download_and_unzip_files(file_code_list, samples_path, len(file_code_list))
 
     sample_folder = '/Users/mengmengdu/Desktop/CodeAnalysis/samples'
 
@@ -207,7 +223,7 @@ if __name__ == "__main__":
     output_file_folder = '/Users/mengmengdu/Desktop/CodeAnalysis/data/extracted_data'
     if os.path.exists(output_file_folder):
         shutil.rmtree(output_file_folder)
-    process_files(sample_folder, output_file_folder, file_code_list, 100)
+    process_files(sample_folder, output_file_folder, file_code_list, len(file_code_list))
 
 
    

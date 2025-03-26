@@ -1,0 +1,799 @@
+{
+    "267598": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'Abstract integrate-and-fire leaky neuron', 'Abstract integrate-and-fire adaptive exponential (AdEx) neuron', 'Abstract Hindmarsh-Rose neuron', 'Abstract Izhikevich neuron', 'Abstract integrate-and-fire leaky neuron with exponential post-synaptic current', 'Abstract integrate-and-fire fractional leaky neuron', 'Abstract integrate-and-fire neuron', 'Abstract integrate-and-fire leaky neuron with dendritic subunits', 'Abstract rate-based neuron', 'Abstract Rulkov-Bazhenov map neurons', 'Abstract single compartment conductance based cell', 'Abstract Morris-Lecar neuron', 'Abstract quadratic integrate-and-fire', 'Abstract theta neuron', 'Hodgkin-Huxley neuron', 'Multi-timescale adaptive threshold non-resetting leaky integrate and fire'"
+    },
+    "2015953": {
+        "com_var1": "'none'",
+        "com_var2": "'Dentate gyrus granule GLU cell', 'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Thalamus geniculate nucleus/lateral principal GLU cell', 'Thalamus reticular nucleus GABA cell', 'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell', 'Cerebellum Purkinje GABA cell'",
+        "com_var3": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Thalamus geniculate nucleus/lateral principal GLU cell', 'Thalamus reticular nucleus GABA cell', 'Cerebellum Purkinje GABA cell', 'Hippocampus CA1 interneuron basket GABA cell', 'Hippocampus CA3 interneuron basket GABA cell'",
+        "header1": "'Hippocampus CA1 pyramidal GLU cell', 'Cerebellum interneuron granule GLU cell', 'Thalamus geniculate nucleus/lateral principal GLU cell'",
+        "header2": "'Hippocampus CA1 pyramidal GLU cell', 'Cerebellum interneuron granule GLU cell', 'Thalamus geniculate nucleus/lateral principal GLU cell'",
+        "header3": "'Hippocampus CA1 pyramidal GLU cell', 'Cerebellum Purkinje GABA cell', 'Thalamus reticular nucleus GABA cell', 'Hippocampus CA3 pyramidal GLU cell', 'Cerebellum interneuron granule GLU cell'"
+    },
+    "2017403": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "267357": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "2014832": {
+        "com_var1": "'Neocortex V1 interneuron basket PV GABA cell', 'Thalamus reticular nucleus GABA cell', 'Neocortex V1 interneuron bipolar VIP/CR GABA cell'",
+        "com_var2": "'Thalamus reticular nucleus GABA cell', 'Neocortex V1 interneuron basket PV GABA cell', 'Neocortex V1 interneuron bipolar VIP/CR GABA cell'",
+        "com_var3": "'Neocortex V1 interneuron basket PV GABA cell', 'Thalamus reticular nucleus GABA cell', 'Neocortex V1 interneuron bipolar VIP/CR GABA cell'",
+        "header1": "'Thalamus reticular nucleus GABA cell'",
+        "header2": "'Thalamus reticular nucleus GABA cell'",
+        "header3": "'Thalamus reticular nucleus GABA cell'"
+    },
+    "2016658": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Neocortex V1 interneuron basket PV GABA cell', 'Hippocampus CA1 interneuron basket GABA cell', 'Hippocampus CA3 interneuron basket GABA cell', 'Neostriatum interneuron gaba/parvalbumin GABA cell', 'Neocortex M1 interneuron basket PV GABA cell', 'Neocortex U1 interneuron basket PV GABA cell'",
+        "header2": "'Neocortex V1 interneuron basket PV GABA cell', 'Neostriatum interneuron gaba/parvalbumin GABA cell', 'Hippocampus CA1 interneuron basket GABA cell', 'Neocortex M1 interneuron basket PV GABA cell', 'Neocortex U1 interneuron basket PV GABA cell'",
+        "header3": "'Hippocampus CA1 interneuron basket GABA cell', 'Neocortex V1 interneuron basket PV GABA cell', 'Neocortex M1 interneuron basket PV GABA cell', 'Neocortex U1 interneuron basket PV GABA cell'"
+    },
+    "266844": {
+        "com_var1": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Dentate gyrus granule GLU cell'",
+        "com_var2": "'Hippocampus CA1 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell', 'Neocortex L5/6 pyramidal GLU cell', 'Neocortex V1 L5B pyramidal pyramidal tract GLU cell', 'Neocortex M1 L5B pyramidal pyramidal tract GLU cell', 'Neocortex U1 L5B pyramidal pyramidal tract GLU cell', 'Neocortex M1 L2/6 pyramidal intratelencephalic GLU cell', 'Neocortex U1 L2/6 pyramidal intratelencephalic GLU cell', 'Neocortex M1 L6 pyramidal corticothalamic GLU cell', 'Neocortex U1 L6 pyramidal corticalthalamic GLU cell'",
+        "com_var3": "'Dentate gyrus granule GLU cell', 'Hippocampus CA1 pyramidal GLU cell', 'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell'",
+        "header1": "'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell'",
+        "header2": "'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell', 'Neocortex V1 interneuron basket PV GABA cell', 'Neocortex V1 interneuron chandelier SOM GABA cell', 'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Thalamus geniculate nucleus/lateral principal GLU cell'",
+        "header3": "'Dentate gyrus granule GLU cell', 'Neocortex L5/6 pyramidal GLU cell'"
+    },
+    "267088": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell'",
+        "header2": "'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell'",
+        "header3": "'none'"
+    },
+    "267329": {
+        "com_var1": "'Abstract Wang-Buzsaki neuron'",
+        "com_var2": "'Abstract Wang-Buzsaki neuron'",
+        "com_var3": "'Abstract Wang-Buzsaki neuron'",
+        "header1": "'Abstract Wang-Buzsaki neuron'",
+        "header2": "'Abstract Wang-Buzsaki neuron'",
+        "header3": "'Abstract Wang-Buzsaki neuron'"
+    },
+    "267728": {
+        "com_var1": "'none'",
+        "com_var2": "'Myelinated neuron'",
+        "com_var3": "'none'",
+        "header1": "'Spinal cord lumbar motor neuron alpha ACh cell'",
+        "header2": "'Spinal cord lumbar motor neuron alpha ACh cell', 'Myelinated neuron'",
+        "header3": "'Spinal cord lumbar motor neuron alpha ACh cell'"
+    },
+    "2015412": {
+        "com_var1": "'Drosophila antennal lobe DM1 projection neuron'",
+        "com_var2": "'none'",
+        "com_var3": "'Drosophila antennal lobe DM1 projection neuron'",
+        "header1": "'Antennal lobe olfactory projection neuron (insect)', 'Drosophila antennal lobe DM1 projection neuron', 'Drosophila dendritic arborization neurons', 'Drosophila ventral lateral neuron (LNV)'",
+        "header2": "'Drosophila antennal lobe DM1 projection neuron'",
+        "header3": "'Drosophila antennal lobe DM1 projection neuron'"
+    },
+    "267253": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Spinal cord lumbar Interneuron 1a GLY cell', 'Spinal cord lumbar motor neuron alpha ACh cell'",
+        "header2": "'Spinal cord lumbar Interneuron 1a GLY cell', 'Spinal cord lumbar motor neuron alpha ACh cell'",
+        "header3": "'Spinal cord lumbar Interneuron 1a GLY cell', 'Spinal cord lumbar motor neuron alpha ACh cell', 'Spinal cord motor neuron slow twitch', 'Spinal cord motor neuron fatigue resistant', 'Spinal cord motor neuron fast fatiguing', 'Spinal cord Ib interneuron', 'Spinal cord renshaw cell', 'Spinal cord lamina I neuron', 'Spinal cord lamina I-III interneuron', 'Spinal cord sympathetic preganglionic neuron', 'Spinal cord Ia interneuron'"
+    },
+    "2014821": {
+        "com_var1": "'Neocortex L2/3 pyramidal GLU cell', 'Neocortex L5/6 pyramidal GLU cell', 'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Hodgkin-Huxley neuron', 'Myelinated neuron'",
+        "com_var2": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell', 'Neocortex V1 interneuron basket PV GABA cell', 'Subthalamus nucleus projection neuron', 'Neocortex layer 5 interneuron'",
+        "com_var3": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell'",
+        "header1": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell'",
+        "header2": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell'",
+        "header3": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell'"
+    },
+    "267252": {
+        "com_var1": "'PreBotzinger complex neuron'",
+        "com_var2": "'PreBotzinger complex neuron'",
+        "com_var3": "'PreBotzinger complex neuron'",
+        "header1": "'PreBotzinger complex neuron'",
+        "header2": "'PreBotzinger complex neuron'",
+        "header3": "'PreBotzinger complex neuron'"
+    },
+    "267646": {
+        "com_var1": "'Retina photoreceptor cone GLU cell', 'Retina photoreceptor rod GLU cell', 'Retina ganglion GLU cell', 'Retina horizontal GABA cell', 'Retina bipolar GLU cell', 'Retina amacrine ACh cell', 'Retina amacrine cell', 'Retina horizontal cell'",
+        "com_var2": "'Retina ganglion GLU cell', 'Retina photoreceptor cone GLU cell', 'Retina photoreceptor rod GLU cell', 'Retina bipolar GLU cell', 'Retina horizontal GABA cell', 'Retina amacrine ACh cell', 'Retina amacrine cell', 'Retina horizontal cell', 'Insect photoreceptor'",
+        "com_var3": "'Retina ganglion GLU cell', 'Retina photoreceptor cone GLU cell', 'Retina photoreceptor rod GLU cell', 'Retina bipolar GLU cell', 'Retina horizontal GABA cell', 'Retina amacrine ACh cell', 'Retina horizontal cell', 'Retina amacrine cell'",
+        "header1": "'Retina ganglion GLU cell', 'Retina photoreceptor cone GLU cell', 'Retina photoreceptor rod GLU cell', 'Retina bipolar GLU cell', 'Retina horizontal GABA cell', 'Retina amacrine cell'",
+        "header2": "'Retina ganglion GLU cell', 'Retina photoreceptor cone GLU cell', 'Retina bipolar GLU cell', 'Retina photoreceptor rod GLU cell', 'Retina horizontal GABA cell', 'Retina amacrine cell'",
+        "header3": "'Retina ganglion GLU cell', 'Retina photoreceptor cone GLU cell', 'Retina bipolar GLU cell', 'Retina photoreceptor rod GLU cell', 'Retina horizontal GABA cell', 'Retina amacrine ACh cell', 'Retina horizontal cell', 'Retina amacrine cell'"
+    },
+    "267596": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Dentate gyrus granule GLU cell', 'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell', 'Piriform cortex anterior pyramidal layer II GLU cell', 'Cerebellum Purkinje GABA cell', 'Cochlear nucleus bushy GLU cell', 'Cochlear nucleus pyramidal/fusiform GLU cell', 'Neocortex V1 L5B pyramidal pyramidal tract GLU cell', 'Hippocampus CA3 interneuron basket GABA cell', 'Neostriatum medium spiny direct pathway GABA cell', 'Neostriatum medium spiny indirect pathway GABA cell'",
+        "header2": "'Cerebellum Purkinje GABA cell', 'Dentate gyrus granule GLU cell'",
+        "header3": "'none'"
+    },
+    "267583": {
+        "com_var1": "'Hodgkin-Huxley neuron'",
+        "com_var2": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell'",
+        "com_var3": "'Stomatogastric Ganglion (STG) Modulatory commissural neuron 1 (MCN1)', 'Stomatogastric Ganglion (STG) interneuron 1 (Int1)', 'Stomatogastric Ganglion (STG) Lateral Gastric (LG) cell', 'Stomatogastric Ganglion (STG) Lateral Pyloric (LP) cell', 'Stomatogastric Ganglion (STG) Gastric Mill (GM) cell', 'Stomatogastric Ganglion (STG) pyloric dilator (PD) neuron', 'Stomatogastric Ganglion (STG) pyloric neuron', 'Neocortex layer 5 pyramidal cell', 'Pinsky-Rinzel CA1/3 pyramidal cell'",
+        "header1": "'Stomatogastric Ganglion (STG) Modulatory commissural neuron 1 (MCN1)', 'Stomatogastric Ganglion (STG) Lateral Gastric (LG) cell', 'Stomatogastric Ganglion (STG) interneuron 1 (Int1)', 'Stomatogastric Ganglion (STG) Lateral Pyloric (LP) cell', 'Stomatogastric ganglion (STG) pyloric dilator (PD) neuron', 'Stomatogastric ganglion (STG) pyloric neuron', 'Abstract Morris-Lecar neuron'",
+        "header2": "'Stomatogastric Ganglion (STG) Modulatory commissural neuron 1 (MCN1)', 'Stomatogastric Ganglion (STG) interneuron 1 (Int1)', 'Stomatogastric Ganglion (STG) Lateral Gastric (LG) cell', 'Stomatogastric Ganglion (STG) Lateral Pyloric (LP) cell', 'Stomatogastric ganglion (STG) pyloric dilator (PD) neuron', 'Stomatogastric ganglion (STG) pyloric neuron'",
+        "header3": "'Dentate gyrus granule GLU cell', 'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell'"
+    },
+    "267561": {
+        "com_var1": "'Pituitary cell'",
+        "com_var2": "'Pituitary cell'",
+        "com_var3": "'Pituitary cell'",
+        "header1": "'Pituitary cell'",
+        "header2": "'Pituitary cell'",
+        "header3": "'Pituitary cell'"
+    },
+    "2017405": {
+        "com_var1": "'Neocortex L5/6 pyramidal GLU cell', 'Thalamus geniculate nucleus/lateral principal GLU cell', 'Subthalamic nucleus principal GABA cell', 'Globus pallidus principal GABA cell'",
+        "com_var2": "'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell', 'Subthalamic nucleus principal GABA cell', 'Globus pallidus principal GABA cell', 'Thalamus geniculate nucleus/lateral principal GLU cell', 'Hodgkin-Huxley neuron'",
+        "com_var3": "'Neocortex L5/6 pyramidal GLU cell', 'Thalamus geniculate nucleus/lateral principal GLU cell', 'Subthalamic nucleus principal GABA cell', 'Subthalamus nucleus projection neuron', 'Globus pallidus principal GABA cell'",
+        "header1": "'Neocortex L5/6 pyramidal GLU cell', 'Subthalamic nucleus principal GABA cell', 'Globus pallidus principal GABA cell'",
+        "header2": "'Neocortex L5/6 pyramidal GLU cell', 'Globus pallidus principal GABA cell', 'Subthalamic nucleus principal GABA cell'",
+        "header3": "'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell', 'Globus pallidus principal GABA cell', 'Subthalamic nucleus principal GABA cell'"
+    },
+    "2015414": {
+        "com_var1": "'Neostriatum medium spiny direct pathway GABA cell', 'Substantia nigra pars compacta DA cell', 'Neostriatum medium spiny indirect pathway GABA cell'",
+        "com_var2": "'Substantia nigra pars compacta DA cell', 'Subthalamic nucleus principal GABA cell', 'Neostriatum medium spiny indirect pathway GABA cell', 'Neostriatum medium spiny direct pathway GABA cell'",
+        "com_var3": "'Dopaminergic substantia nigra neuron', 'Mauthner cell'",
+        "header1": "'Mauthner cell', 'Dopaminergic substantia nigra neuron'",
+        "header2": "'Mauthner cell'",
+        "header3": "'Mauthner cell'"
+    },
+    "2016659": {
+        "com_var1": "'none'",
+        "com_var2": "'Dentate gyrus granule GLU cell', 'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell'",
+        "com_var3": "'none'",
+        "header1": "'Dentate gyrus granule GLU cell', 'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell'",
+        "header2": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Dentate gyrus granule GLU cell'",
+        "header3": "'Dentate gyrus granule GLU cell', 'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell'"
+    },
+    "2014833": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "267599": {
+        "com_var1": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell'",
+        "com_var2": "'Dentate gyrus granule GLU cell', 'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Hippocampus CA4 pyramidal GLU cell', 'Hippocampus CA1 interneuron basket GABA cell', 'Hippocampus CA1 stratum radiatum interneuron', 'Hippocampus CA1 stratum oriens lacunosum-moleculare interneuron', 'Hippocampus CA3 stratum oriens lacunosum-moleculare interneuron', 'Hippocampus CA3 stratum radiatum lacunosum-moleculare interneuron', 'Hippocampus septum medial GABAergic neuron', 'Hippocampus dissociated neuron', 'Hippocampal CA1 CR/VIP cell'",
+        "com_var3": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell'",
+        "header1": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell'",
+        "header2": "'Hippocampus CA1 pyramidal GLU cell'",
+        "header3": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell'"
+    },
+    "267566": {
+        "com_var1": "'Pituitary cell'",
+        "com_var2": "'Pituitary cell'",
+        "com_var3": "'Pituitary cell'",
+        "header1": "'Pituitary cell'",
+        "header2": "'Pituitary cell'",
+        "header3": "'Pituitary cell'"
+    },
+    "2015571": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Hodgkin-Huxley neuron'",
+        "header1": "'Dentate gyrus granule GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Hippocampus CA1 pyramidal GLU cell'",
+        "header2": "'Dentate gyrus granule GLU cell', 'Dentate gyrus mossy cell', 'Dentate gyrus basket cell'",
+        "header3": "'Dentate gyrus mossy cell'"
+    },
+    "267586": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "267564": {
+        "com_var1": "'Pancreatic Beta Cell'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Pancreatic Beta Cell'",
+        "header2": "'Pancreatic Beta Cell'",
+        "header3": "'Pancreatic Beta Cell'"
+    },
+    "267018": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "267250": {
+        "com_var1": "'Retina ganglion GLU cell', 'Suprachiasmatic nucleus (SCN) neuron'",
+        "com_var2": "'Retina ganglion GLU cell', 'Retina photoreceptor cone GLU cell', 'Retina photoreceptor rod GLU cell', 'Retina amacrine ACh cell', 'Retina horizontal GABA cell', 'Retina bipolar GLU cell', 'Olfactory bulb main mitral GLU cell', 'Olfactory bulb main interneuron periglomerular GABA cell', 'Olfactory bulb main interneuron granule MC GABA cell', 'Olfactory receptor GLU cell', 'Suprachiasmatic nucleus (SCN) neuron'",
+        "com_var3": "'Retina ganglion GLU cell', 'Retina photoreceptor cone GLU cell', 'Retina photoreceptor rod GLU cell', 'Retina bipolar GLU cell', 'Retina horizontal GABA cell', 'Retina amacrine ACh cell', 'Suprachiasmatic nucleus (SCN) neuron'",
+        "header1": "'Retina ganglion GLU cell', 'Retina photoreceptor cone GLU cell', 'Retina photoreceptor rod GLU cell', 'Suprachiasmatic nucleus (SCN) neuron'",
+        "header2": "'Retina ganglion GLU cell', 'Retina photoreceptor cone GLU cell', 'Retina photoreceptor rod GLU cell', 'Suprachiasmatic nucleus (SCN) neuron'",
+        "header3": "'Retina ganglion GLU cell', 'Retina photoreceptor cone GLU cell', 'Retina photoreceptor rod GLU cell', 'Suprachiasmatic nucleus (SCN) neuron'"
+    },
+    "267221": {
+        "com_var1": "'Neocortex V1 interneuron bipolar VIP/CR GABA cell', 'Neocortex U1 interneuron bipolar VIP/CR GABA cell', 'Neocortex M1 interneuron bipolar VIP/CR GABA cell'",
+        "com_var2": "'Neocortex V1 interneuron bipolar VIP/CR GABA cell', 'Neocortex M1 interneuron bipolar VIP/CR GABA cell', 'Neocortex U1 interneuron bipolar VIP/CR GABA cell'",
+        "com_var3": "'Neocortex V1 interneuron bipolar VIP/CR GABA cell', 'Neocortex M1 interneuron bipolar VIP/CR GABA cell', 'Neocortex U1 interneuron bipolar VIP/CR GABA cell'",
+        "header1": "'Hippocampus CA1 pyramidal GLU cell', 'Neocortex V1 interneuron bipolar VIP/CR GABA cell', 'Neocortex V1 interneuron chandelier SOM GABA cell'",
+        "header2": "'Neocortex V1 interneuron bipolar VIP/CR GABA cell', 'Neocortex M1 interneuron bipolar VIP/CR GABA cell', 'Neocortex U1 interneuron bipolar VIP/CR GABA cell'",
+        "header3": "'Neocortex V1 interneuron bipolar VIP/CR GABA cell', 'Hippocampus CA1 pyramidal GLU cell'"
+    },
+    "2015411": {
+        "com_var1": "'Dentate gyrus granule GLU cell', 'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Thalamus geniculate nucleus/lateral principal GLU cell', 'Thalamus reticular nucleus GABA cell', 'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell', 'Cerebellum Purkinje GABA cell', 'Piriform cortex anterior pyramidal layer II GLU cell', 'Neocortex V1 interneuron basket PV GABA cell', 'Hippocampus CA4 pyramidal GLU cell', 'Hippocampus CA1 interneuron basket GABA cell', 'Neostriatum interneuron gaba/parvalbumin GABA cell', 'Neostriatum fast spiking interneuron'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Spinal cord lumbar Interneuron 1a GLY cell', 'Spinal cord lumbar motor neuron alpha ACh cell'",
+        "header2": "'Spinal cord lumbar motor neuron alpha ACh cell', 'Spinal cord lumbar Interneuron 1a GLY cell'",
+        "header3": "'Spinal cord lumbar Interneuron 1a GLY cell', 'Spinal cord lumbar motor neuron alpha ACh cell'"
+    },
+    "267620": {
+        "com_var1": "'Spinal cord lumbar motor neuron alpha ACh cell'",
+        "com_var2": "'Fly lobular plate vertical system cell'",
+        "com_var3": "'Spinal cord lumbar motor neuron alpha ACh cell'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "267563": {
+        "com_var1": "'Cardiac atrial cell', 'Heart cell', 'Cardiac ventricular cell'",
+        "com_var2": "'Cardiac atrial cell', 'Cardiac ventricular cell', 'Heart cell'",
+        "com_var3": "'Cardiac atrial cell', 'Heart cell', 'Cardiac ventricular cell'",
+        "header1": "'Cardiac atrial cell', 'Cardiac ventricular cell'",
+        "header2": "'Cardiac ventricular cell'",
+        "header3": "'Cardiac atrial cell', 'Cardiac ventricular cell'"
+    },
+    "267512": {
+        "com_var1": "'Dentate gyrus granule GLU cell'",
+        "com_var2": "'Dentate gyrus granule GLU cell', 'Neocortex M1 L5B pyramidal pyramidal tract GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Neocortex M1 L2/6 pyramidal intratelencephalic GLU cell', 'Neocortex V1 L5B pyramidal pyramidal tract GLU cell', 'Neocortex M1 L6 pyramidal corticothalamic GLU cell', 'Neocortex V1 L5/6 pyramidal GLU cell', 'Neocortex L5/6 pyramidal GLU cell', 'Hippocampus CA1 pyramidal GLU cell', 'Neocortex M1 L4 stellate GLU cell'",
+        "com_var3": "'Dentate gyrus granule GLU cell'",
+        "header1": "'Dentate gyrus granule GLU cell', 'Dentate gyrus mossy cell'",
+        "header2": "'Dentate gyrus granule GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Dentate gyrus mossy cell'",
+        "header3": "'Dentate gyrus granule GLU cell'"
+    },
+    "267589": {
+        "com_var1": "'Thalamus geniculate nucleus/lateral principal GLU cell', 'Thalamus reticular nucleus GABA cell', 'Neocortex V1 interneuron basket PV GABA cell'",
+        "com_var2": "'Thalamus geniculate nucleus/lateral principal GLU cell'",
+        "com_var3": "'Thalamus geniculate nucleus/lateral principal GLU cell', 'Thalamus reticular nucleus GABA cell', 'dLGN-connectivity query'",
+        "header1": "'Thalamus geniculate nucleus/lateral principal GLU cell', 'Retina ganglion GLU cell', 'Thalamus reticular nucleus GABA cell', 'Thalamus lateral geniculate nucleus interneuron'",
+        "header2": "'Thalamus geniculate nucleus/lateral principal GLU cell'",
+        "header3": "'Thalamus geniculate nucleus/lateral principal GLU cell', 'Retina ganglion GLU cell'"
+    },
+    "267562": {
+        "com_var1": "'none'",
+        "com_var2": "'Pancreatic Beta Cell'",
+        "com_var3": "'Pancreatic Beta Cell'",
+        "header1": "'Pancreatic Beta Cell'",
+        "header2": "'Pancreatic Beta Cell'",
+        "header3": "'Pancreatic Beta Cell'"
+    },
+    "267259": {
+        "com_var1": "'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell', 'Neocortex V1 interneuron basket PV GABA cell'",
+        "com_var2": "'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell'",
+        "com_var3": "'Brainstem neuron'",
+        "header1": "'Dentate gyrus granule GLU cell', 'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell'",
+        "header2": "'Dentate gyrus granule GLU cell', 'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell'",
+        "header3": "'Dentate gyrus granule GLU cell', 'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell'"
+    },
+    "2014822": {
+        "com_var1": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell'",
+        "com_var2": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Hippocampus CA1 interneuron oriens alveus GABA cell', 'Hippocampus CA3 interneuron basket GABA cell', 'Hippocampus CA1 interneuron basket GABA cell'",
+        "com_var3": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell'",
+        "header1": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Hippocampus CA1 interneuron oriens alveus GABA cell', 'Hippocampus CA3 interneuron basket GABA cell'",
+        "header2": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell'",
+        "header3": "'Hippocampus CA1 pyramidal GLU cell'"
+    },
+    "260015": {
+        "com_var1": "'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell'",
+        "com_var2": "'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell', 'Neocortex V1 interneuron basket PV GABA cell', 'Neocortex V1 interneuron chandelier SOM GABA cell'",
+        "com_var3": "'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell', 'Neocortex V1 interneuron basket PV GABA cell'",
+        "header1": "'Neocortex M1 L2/6 pyramidal intratelencephalic GLU cell', 'Neocortex M1 L6 pyramidal corticothalamic GLU cell', 'Neocortex M1 L5B pyramidal pyramidal tract GLU cell', 'Neocortex M1 interneuron basket PV GABA cell', 'Neocortex V1 L5B pyramidal pyramidal tract GLU cell', 'Neocortex V1 L4 stellate GLU cell'",
+        "header2": "'Neocortex M1 L2/6 pyramidal intratelencephalic GLU cell', 'Neocortex M1 L6 pyramidal corticothalamic GLU cell', 'Neocortex M1 L5B pyramidal pyramidal tract GLU cell', 'Neocortex M1 interneuron basket PV GABA cell', 'Neocortex M1 interneuron bipolar VIP/CR GABA cell', 'Neocortex M1 interneuron chandelier SOM GABA cell', 'Neocortex M1 L4 stellate GLU cell'",
+        "header3": "'Neocortex M1 L2/6 pyramidal intratelencephalic GLU cell', 'Neocortex M1 L6 pyramidal corticothalamic GLU cell', 'Neocortex M1 L5B pyramidal pyramidal tract GLU cell', 'Neocortex M1 interneuron basket PV GABA cell', 'Neocortex M1 L4 stellate GLU cell', 'Neocortex M1 interneuron bipolar VIP/CR GABA cell', 'Neocortex M1 interneuron chandelier SOM GABA cell'"
+    },
+    "267595": {
+        "com_var1": "'Hippocampus CA1 pyramidal GLU cell', 'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell'",
+        "com_var2": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Neocortex L5/6 pyramidal GLU cell'",
+        "com_var3": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell', 'Neocortex M1 L2/6 pyramidal intratelencephalic GLU cell', 'Neocortex M1 L6 pyramidal corticothalamic GLU cell', 'Neocortex M1 L5B pyramidal pyramidal tract GLU cell', 'Neocortex V1 L5B pyramidal pyramidal tract GLU cell', 'Hippocampus CA3 interneuron basket GABA cell'",
+        "header1": "'Neocortex L2/3 pyramidal GLU cell'",
+        "header2": "'Neocortex L2/3 pyramidal GLU cell'",
+        "header3": "'Neocortex L2/3 pyramidal GLU cell'"
+    },
+    "267621": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Stomatogastric Ganglion (STG) Lateral Pyloric (LP) cell'",
+        "header2": "'Stomatogastric Ganglion (STG) Lateral Pyloric (LP) cell'",
+        "header3": "'Stomatogastric Ganglion (STG) Lateral Pyloric (LP) cell'"
+    },
+    "2015410": {
+        "com_var1": "'Neocortex L5/6 pyramidal GLU cell'",
+        "com_var2": "'Hippocampus CA1 pyramidal GLU cell', 'Neocortex L5/6 pyramidal GLU cell'",
+        "com_var3": "'Neocortex L5/6 pyramidal GLU cell'",
+        "header1": "'Neocortex L5/6 pyramidal GLU cell'",
+        "header2": "'Neocortex L5/6 pyramidal GLU cell', 'Hippocampus CA1 pyramidal GLU cell', 'Dentate gyrus granule GLU cell', 'Hippocampus CA3 pyramidal GLU cell'",
+        "header3": "'Neocortex L5/6 pyramidal GLU cell', 'Dentate gyrus granule GLU cell'"
+    },
+    "267565": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Pancreatic Beta Cell'",
+        "header2": "'Pancreatic Beta Cell'",
+        "header3": "'Pancreatic Beta Cell'"
+    },
+    "267339": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "267501": {
+        "com_var1": "'Neocortex L2/3 pyramidal GLU cell'",
+        "com_var2": "'Neocortex L2/3 pyramidal GLU cell'",
+        "com_var3": "'Neocortex L2/3 pyramidal GLU cell'",
+        "header1": "'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell', 'Thalamus geniculate nucleus/lateral principal GLU cell', 'Thalamus reticular nucleus GABA cell', 'Neocortex V1 L5B pyramidal pyramidal tract GLU cell', 'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell'",
+        "header2": "'Hippocampus CA1 pyramidal GLU cell', 'Neocortex L5/6 pyramidal GLU cell', 'Thalamus reticular nucleus GABA cell'",
+        "header3": "'Dentate gyrus granule GLU cell', 'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Thalamus geniculate nucleus/lateral principal GLU cell', 'Thalamus reticular nucleus GABA cell', 'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell', 'Olfactory bulb main mitral GLU cell', 'Piriform cortex anterior pyramidal layer II GLU cell'"
+    },
+    "267499": {
+        "com_var1": "'none'",
+        "com_var2": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Hippocampus CA1 interneuron oriens alveus GABA cell', 'Hippocampus CA1 interneuron basket GABA cell', 'Hippocampus CA3 interneuron basket GABA cell'",
+        "com_var3": "'none'",
+        "header1": "'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell', 'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Hippocampus CA1 interneuron basket GABA cell', 'Hippocampus CA3 interneuron basket GABA cell', 'Hippocampus CA1 interneuron oriens alveus GABA cell', 'Hippocampus CA3 interneuron oriens alveus GABA cell', 'Neocortex fast spiking (FS) interneuron'",
+        "header2": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell'",
+        "header3": "'Dentate gyrus granule GLU cell', 'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Neostriatum medium spiny direct pathway GABA cell', 'Thalamus reticular nucleus GABA cell', 'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell', 'Neocortex U1 L5B pyramidal pyramidal tract GLU cell', 'Neocortex U1 L2/6 pyramidal intratelencephalic GLU cell', 'Hippocampus CA1 interneuron oriens alveus GABA cell'"
+    },
+    "267355": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Thalamus geniculate nucleus/lateral principal GLU cell', 'Thalamus reticular nucleus GABA cell', 'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell', 'Neocortex V1 L5B pyramidal pyramidal tract GLU cell', 'Neocortex V1 L4 stellate GLU cell', 'Neocortex V1 interneuron bipolar VIP/CR GABA cell', 'Neocortex V1 interneuron chandelier SOM GABA cell'",
+        "header2": "'Neocortex L5/6 pyramidal GLU cell'",
+        "header3": "'Neocortex L5/6 pyramidal GLU cell'"
+    },
+    "267754": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Hippocampus CA3 interneuron basket GABA cell', 'Hippocampus CA1 interneuron oriens alveus GABA cell', 'Hippocampus CA1 basket cell'",
+        "header2": "'Hippocampus CA1 interneuron oriens alveus GABA cell', 'Hippocampus CA3 interneuron basket GABA cell', 'Dentate gyrus basket cell'",
+        "header3": "'Hippocampus CA1 interneuron oriens alveus GABA cell', 'Hippocampus CA3 interneuron basket GABA cell', 'Hippocampus CA1 basket cell', 'Dentate gyrus basket cell', 'Hippocampus CA1 stratum radiatum interneuron', 'Hippocampus CA3 stratum oriens lacunosum-moleculare interneuron', 'Hippocampus CA3 stratum radiatum lacunosum-moleculare interneuron', 'Hippocampus CA1 stratum oriens lacunosum-moleculare interneuron', 'Hippocampus CA1 bistratified cell', 'Hippocampus CA1 axo-axonic cell', 'Hippocampus CA1 PV+ fast-firing interneuron', 'Hippocampus CA4 pyramidal GLU cell'"
+    },
+    "267509": {
+        "com_var1": "'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell', 'Neocortex M1 L2/6 pyramidal intratelencephalic GLU cell', 'Neocortex M1 L6 pyramidal corticothalamic GLU cell', 'Neocortex M1 L5B pyramidal pyramidal tract GLU cell', 'Neocortex V1 L5B pyramidal pyramidal tract GLU cell'",
+        "com_var2": "'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell'",
+        "com_var3": "'Hippocampus CA1 pyramidal GLU cell', 'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell'",
+        "header1": "'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell'",
+        "header2": "'Thalamus geniculate nucleus/lateral principal GLU cell', 'Thalamus reticular nucleus GABA cell', 'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell', 'Neocortex V1 L5B pyramidal pyramidal tract GLU cell', 'Neocortex M1 L5B pyramidal pyramidal tract GLU cell', 'Neocortex V1 L4 stellate GLU cell'",
+        "header3": "'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell'"
+    },
+    "2014830": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'Astrocyte'"
+    },
+    "2016216": {
+        "com_var1": "'PreBotzinger complex neuron'",
+        "com_var2": "'PreBotzinger complex neuron'",
+        "com_var3": "'PreBotzinger complex neuron'",
+        "header1": "'PreBotzinger complex neuron'",
+        "header2": "'Respiratory column neuron', 'PreBotzinger complex neuron'",
+        "header3": "'PreBotzinger complex neuron'"
+    },
+    "267551": {
+        "com_var1": "'none'",
+        "com_var2": "'Abstract Izhikevich neuron'",
+        "com_var3": "'Abstract Izhikevich neuron'",
+        "header1": "'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell', 'Barrel cortex L2/3 pyramidal cell'",
+        "header2": "'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell'",
+        "header3": "'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell', 'Barrel cortex L2/3 pyramidal cell'"
+    },
+    "267295": {
+        "com_var1": "'Dentate gyrus granule GLU cell', 'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell', 'Neocortex V1 interneuron basket PV GABA cell', 'Neocortex U1 L5B pyramidal pyramidal tract GLU cell', 'Neocortex U1 L2/6 pyramidal intratelencephalic GLU cell', 'Neocortex U1 L6 pyramidal corticalthalamic GLU cell', 'Neocortex V1 interneuron chandelier SOM GABA cell', 'Neocortex M1 L2/6 pyramidal intratelencephalic GLU cell', 'Neocortex M1 L6 pyramidal corticothalamic GLU cell', 'Neocortex M1 L5B pyramidal pyramidal tract GLU cell', 'Neocortex V1 L5B pyramidal pyramidal tract GLU cell', 'Neocortex M1 interneuron basket PV GABA cell', 'Neocortex U1 interneuron basket PV GABA cell', 'Neocortex M1 interneuron chandelier SOM GABA cell', 'Neocortex U1 interneuron chandelier SOM GABA cell'",
+        "com_var2": "'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell'",
+        "com_var3": "'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell'",
+        "header1": "'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell', 'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell'",
+        "header2": "'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell'",
+        "header3": "'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell', 'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Neocortex V1 interneuron basket PV GABA cell', 'Olfactory bulb main interneuron granule MC GABA cell', 'Hippocampus CA1 interneuron oriens alveus GABA cell'"
+    },
+    "267694": {
+        "com_var1": "'Cerebellum Purkinje GABA cell'",
+        "com_var2": "'Cerebellum Purkinje GABA cell'",
+        "com_var3": "'Cerebellum Purkinje GABA cell'",
+        "header1": "'Cerebellum Purkinje GABA cell'",
+        "header2": "'Cerebellum Purkinje GABA cell'",
+        "header3": "'Cerebellum Purkinje GABA cell'"
+    },
+    "267768": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Abstract integrate-and-fire leaky neuron'",
+        "header2": "'none'",
+        "header3": "'Abstract integrate-and-fire leaky neuron'"
+    },
+    "267310": {
+        "com_var1": "'Astrocyte', 'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell'",
+        "com_var2": "'Astrocyte', 'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell'",
+        "com_var3": "'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell', 'Astrocyte'",
+        "header1": "'Astrocyte', 'Neocortex L2/3 pyramidal GLU cell', 'Neocortex L5/6 pyramidal GLU cell'",
+        "header2": "'Astrocyte'",
+        "header3": "'Astrocyte', 'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell'"
+    },
+    "267686": {
+        "com_var1": "'none'",
+        "com_var2": "'Hippocampus CA1 pyramidal GLU cell'",
+        "com_var3": "'Hippocampus CA1 pyramidal GLU cell'",
+        "header1": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell'",
+        "header2": "'Dentate gyrus granule GLU cell', 'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell'",
+        "header3": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell', 'Neocortex V1 L5B pyramidal pyramidal tract GLU cell', 'Hippocampus CA1 interneuron oriens alveus GABA cell', 'Hippocampus CA3 interneuron oriens alveus GABA cell', 'Hippocampus CA1 basket cell', 'Hippocampus CA3 interneuron basket GABA cell'"
+    },
+    "267391": {
+        "com_var1": "'Dentate gyrus granule GLU cell', 'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell', 'Dentate gyrus basket cell'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Retina ganglion GLU cell'",
+        "header2": "'Retina ganglion GLU cell', 'Retina bipolar GLU cell', 'Retina photoreceptor cone GLU cell', 'Retina photoreceptor rod GLU cell', 'Retina horizontal GABA cell'",
+        "header3": "'Retina ganglion GLU cell'"
+    },
+    "2014816": {
+        "com_var1": "'Hippocampus CA1 pyramidal GLU cell'",
+        "com_var2": "'Hippocampus CA1 pyramidal GLU cell'",
+        "com_var3": "'Hippocampus CA1 pyramidal GLU cell'",
+        "header1": "'Dentate gyrus granule GLU cell', 'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell'",
+        "header2": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Hippocampus CA1 interneuron oriens alveus GABA cell', 'Hippocampus CA3 interneuron basket GABA cell'",
+        "header3": "'Dentate gyrus granule GLU cell', 'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell', 'Olfactory bulb main mitral GLU cell', 'Piriform cortex anterior pyramidal layer II GLU cell'"
+    },
+    "266796": {
+        "com_var1": "'Dentate gyrus granule GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Hippocampus CA1 pyramidal GLU cell'",
+        "com_var2": "'Dentate gyrus granule GLU cell', 'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell'",
+        "com_var3": "'Dentate gyrus granule GLU cell', 'Hippocampus CA3 pyramidal GLU cell'",
+        "header1": "'Dentate gyrus granule GLU cell', 'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Hippocampus CA1 interneuron oriens alveus GABA cell', 'Hippocampus CA3 interneuron basket GABA cell', 'Hippocampus CA4 pyramidal GLU cell', 'Hippocampus CA1 interneuron basket GABA cell', 'Dentate gyrus basket cell', 'Dentate gyrus mossy cell', 'Dentate gyrus hilar cell', 'Hippocampus CA1 stratum radiatum interneuron', 'Hippocampus CA3 stratum oriens lacunosum-moleculare interneuron', 'Hippocampus CA3 stratum radiatum lacunosum-moleculare interneuron', 'Hippocampus septum medial GABAergic neuron', 'Hippocampus CA1 bistratified cell', 'Hippocampus CA1 axo-axonic cell', 'Hippocampus CA3 axo-axonic cells', 'Hippocampus CA1 stratum oriens lacunosum-moleculare interneuron', 'Hippocampus CA1 PV+ fast-firing interneuron', 'Hippocampus CA1 basket cell - CCK/VIP', 'Hippocampal CA1 CR/VIP cell'",
+        "header2": "'Dentate gyrus granule GLU cell', 'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Hippocampus CA1 interneuron oriens alveus GABA cell', 'Hippocampus CA3 interneuron basket GABA cell', 'Hippocampus CA4 pyramidal GLU cell', 'Hippocampus CA1 interneuron basket GABA cell', 'Hippocampus CA1 basket cell', 'Hippocampus CA3 stratum oriens lacunosum-moleculare interneuron', 'Hippocampus CA3 stratum radiatum lacunosum-moleculare interneuron', 'Hippocampus CA1 PV+ fast-firing interneuron', 'Hippocampus CA1 axo-axonic cell', 'Hippocampus CA1 bistratified cell', 'Hippocampus CA3 axo-axonic cells', 'Hippocampus CA1 stratum oriens lacunosum-moleculare interneuron', 'Hippocampus dissociated neuron', 'Dentate gyrus basket cell', 'Dentate gyrus mossy cell', 'Dentate gyrus hilar cell', 'Dentate gyrus MOPP cell', 'Dentate gyrus HIPP cell', 'Pinsky-Rinzel CA1/3 pyramidal cell'",
+        "header3": "'Dentate gyrus granule GLU cell', 'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell'"
+    },
+    "2016219": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'Dentate gyrus granule GLU cell', 'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell', 'Hippocampus CA1 interneuron oriens alveus GABA cell', 'Hippocampus CA3 interneuron basket GABA cell', 'Hippocampus CA1 interneuron basket GABA cell'"
+    },
+    "185864": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "2016137": {
+        "com_var1": "'Hippocampus CA1 interneuron oriens alveus GABA cell', 'Hippocampus CA3 interneuron oriens alveus GABA cell'",
+        "com_var2": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA1 interneuron oriens alveus GABA cell', 'Hippocampus CA1 basket cell'",
+        "com_var3": "'Hippocampus CA1 interneuron oriens alveus GABA cell'",
+        "header1": "'Hippocampus CA1 pyramidal GLU cell'",
+        "header2": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Hippocampus CA1 interneuron oriens alveus GABA cell', 'Hippocampus CA3 interneuron basket GABA cell'",
+        "header3": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Hippocampus CA1 interneuron oriens alveus GABA cell', 'Hippocampus CA3 interneuron basket GABA cell'"
+    },
+    "267614": {
+        "com_var1": "'Spinal cord lumbar Interneuron 1a GLY cell', 'Spinal cord lumbar motor neuron alpha ACh cell'",
+        "com_var2": "'Spinal cord lumbar Interneuron 1a GLY cell', 'Spinal cord lumbar motor neuron alpha ACh cell', 'Hodgkin-Huxley neuron'",
+        "com_var3": "'Spinal cord lumbar Interneuron 1a GLY cell', 'Spinal cord lumbar motor neuron alpha ACh cell'",
+        "header1": "'Spinal cord lamina I neuron', 'Spinal cord lumbar Interneuron 1a GLY cell', 'Spinal cord Ia interneuron', 'Spinal cord lamina I-III interneuron'",
+        "header2": "'Spinal cord lamina I neuron', 'Neocortex V1 interneuron basket PV GABA cell', 'Neostriatum interneuron gaba/parvalbumin GABA cell'",
+        "header3": "'Spinal cord lumbar Interneuron 1a GLY cell', 'Neocortex V1 interneuron basket PV GABA cell', 'Spinal cord lamina I-III interneuron', 'Spinal cord Ia interneuron'"
+    },
+    "267293": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "263719": {
+        "com_var1": "'Substantia nigra pars compacta DA cell'",
+        "com_var2": "'Substantia nigra pars compacta DA cell'",
+        "com_var3": "'Substantia nigra pars compacta DA cell'",
+        "header1": "'Substantia nigra pars compacta DA cell'",
+        "header2": "'Substantia nigra pars compacta DA cell', 'Globus pallidus principal GABA cell', 'Subthalamic nucleus principal GABA cell'",
+        "header3": "'Substantia nigra pars compacta DA cell', 'Globus pallidus principal GABA cell', 'Subthalamus nucleus projection neuron'"
+    },
+    "2015422": {
+        "com_var1": "'Thalamus geniculate nucleus/lateral principal GLU cell', 'Thalamus reticular nucleus GABA cell', 'Neocortex L5/6 pyramidal GLU cell'",
+        "com_var2": "'Neocortex L2/3 pyramidal GLU cell', 'Neocortex L5/6 pyramidal GLU cell', 'Thalamus geniculate nucleus/lateral principal GLU cell', 'Thalamus reticular nucleus GABA cell'",
+        "com_var3": "'Thalamus geniculate nucleus/lateral principal GLU cell', 'Thalamus reticular nucleus GABA cell', 'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell'",
+        "header1": "'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell'",
+        "header2": "'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell'",
+        "header3": "'Thalamus geniculate nucleus/lateral principal GLU cell', 'Thalamus reticular nucleus GABA cell', 'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell'"
+    },
+    "267613": {
+        "com_var1": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell'",
+        "com_var2": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell'",
+        "com_var3": "'none'",
+        "header1": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Dentate gyrus granule GLU cell'",
+        "header2": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell'",
+        "header3": "'Hippocampus CA1 pyramidal GLU cell'"
+    },
+    "267311": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'Dentate gyrus granule GLU cell', 'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA1 interneuron oriens alveus GABA cell', 'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell', 'Neocortex V1 L5B pyramidal pyramidal tract GLU cell', 'Neocortex V1 interneuron basket PV GABA cell', 'Neocortex V1 interneuron chandelier SOM GABA cell', 'Neocortex M1 L5B pyramidal pyramidal tract GLU cell', 'Neocortex M1 L2/6 pyramidal intratelencephalic GLU cell', 'Neocortex M1 L4 stellate GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Hippocampus CA1 basket cell', 'Cerebellum Purkinje GABA cell', 'Substantia nigra pars compacta DA cell', 'Thalamus geniculate nucleus/lateral principal GLU cell', 'Thalamus reticular nucleus GABA cell', 'Cerebellum interneuron stellate GABA cell', 'Cerebellum interneuron Golgi GABA cell', 'Cerebellum interneuron granule GLU cell'",
+        "header1": "'Hippocampus CA3 pyramidal GLU cell', 'Thalamus geniculate nucleus/lateral principal GLU cell', 'Dentate gyrus granule GLU cell', 'Thalamus reticular nucleus GABA cell'",
+        "header2": "'Hippocampus CA1 pyramidal GLU cell', 'Thalamus reticular nucleus GABA cell'",
+        "header3": "'Hippocampus CA1 pyramidal GLU cell', 'Thalamus geniculate nucleus/lateral principal GLU cell', 'Thalamus reticular nucleus GABA cell'"
+    },
+    "267710": {
+        "com_var1": "'Spinal cord lumbar motor neuron alpha ACh cell', 'motoneurons'",
+        "com_var2": "'Spinal cord lumbar motor neuron alpha ACh cell', 'motoneuron', 'motoneurons'",
+        "com_var3": "'Spinal cord lumbar motor neuron alpha ACh cell'",
+        "header1": "'Spinal cord lumbar motor neuron alpha ACh cell'",
+        "header2": "'Spinal cord lumbar motor neuron alpha ACh cell'",
+        "header3": "'Spinal cord lumbar motor neuron alpha ACh cell'"
+    },
+    "267695": {
+        "com_var1": "'Dentate gyrus granule GLU cell', 'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell'",
+        "com_var2": "'Raphe nuclei principal 5HT cell'",
+        "com_var3": "'Raphe nuclei principal 5HT cell'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "267680": {
+        "com_var1": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell'",
+        "com_var2": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell'",
+        "com_var3": "'Hippocampus CA3 pyramidal GLU cell', 'Hippocampus CA1 pyramidal GLU cell'",
+        "header1": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell'",
+        "header2": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell'",
+        "header3": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell'"
+    },
+    "267550": {
+        "com_var1": "'Thalamus geniculate nucleus/lateral principal GLU cell', 'Neocortex L2/3 pyramidal GLU cell'",
+        "com_var2": "'Thalamus geniculate nucleus/lateral principal GLU cell', 'Thalamus reticular nucleus GABA cell', 'Neocortex L2/3 pyramidal GLU cell'",
+        "com_var3": "'Thalamus geniculate nucleus/lateral principal GLU cell', 'Neocortex L2/3 pyramidal GLU cell'",
+        "header1": "'Thalamus geniculate nucleus/lateral principal GLU cell', 'Neocortex L2/3 pyramidal GLU cell'",
+        "header2": "'Thalamus geniculate nucleus/lateral principal GLU cell', 'Thalamus reticular nucleus GABA cell', 'Neocortex L2/3 pyramidal GLU cell', 'Neocortex L5/6 pyramidal GLU cell'",
+        "header3": "'Thalamus geniculate nucleus/lateral principal GLU cell', 'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell', 'Neocortex M1 L2/6 pyramidal intratelencephalic GLU cell', 'Neocortex V1 interneuron bipolar VIP/CR GABA cell', 'Thalamus reticular nucleus GABA cell'"
+    },
+    "267382": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'Dentate gyrus granule GLU cell', 'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell', 'Neocortex V1 L5B pyramidal pyramidal tract GLU cell', 'Neocortex M1 L5B pyramidal pyramidal tract GLU cell'",
+        "header1": "'Abstract Izhikevich neuron'",
+        "header2": "'Abstract Izhikevich neuron'",
+        "header3": "'Abstract Izhikevich neuron'"
+    },
+    "2016138": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Cerebellum Purkinje GABA cell'",
+        "header2": "'Cerebellum Purkinje GABA cell'",
+        "header3": "'Cerebellum Purkinje GABA cell'"
+    },
+    "267306": {
+        "com_var1": "'none'",
+        "com_var2": "'Neocortex spiking regular (RS) neuron'",
+        "com_var3": "'none'",
+        "header1": "'Substantia nigra pars compacta DA cell', 'Dopaminergic substantia nigra neuron'",
+        "header2": "'Substantia nigra pars compacta DA cell'",
+        "header3": "'Substantia nigra pars compacta DA cell'"
+    },
+    "2015420": {
+        "com_var1": "'Abstract integrate-and-fire leaky neuron', 'Neocortex fast spiking (FS) interneuron'",
+        "com_var2": "'Abstract integrate-and-fire leaky neuron', 'Neocortex fast spiking (FS) interneuron'",
+        "com_var3": "'Neocortex fast spiking (FS) interneuron'",
+        "header1": "'Abstract integrate-and-fire leaky neuron'",
+        "header2": "'none'",
+        "header3": "'Abstract integrate-and-fire leaky neuron', 'Abstract theta neuron'"
+    },
+    "267611": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'"
+    },
+    "2016670": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell'",
+        "header2": "'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell'",
+        "header3": "'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell'"
+    },
+    "267619": {
+        "com_var1": "'Neocortex fast spiking (FS) interneuron', 'Neocortex spiny stellate cell', 'Neocortex U1 L5B pyramidal pyramidal tract GLU cell', 'Neocortex U1 L2/6 pyramidal intratelencephalic GLU cell', 'Neocortex V1 L5B pyramidal pyramidal tract GLU cell', 'Neocortex V1 interneuron basket PV GABA cell', 'Neocortex V1 interneuron chandelier SOM GABA cell', 'Hippocampus CA1 pyramidal GLU cell'",
+        "com_var2": "'Neocortex fast spiking (FS) interneuron', 'Neocortex V1 interneuron basket PV GABA cell', 'Neocortex V1 interneuron chandelier SOM GABA cell', 'Neocortex M1 interneuron basket PV GABA cell', 'Neocortex U1 interneuron basket PV GABA cell', 'Neocortex M1 interneuron bipolar VIP/CR GABA cell', 'Neocortex U1 interneuron bipolar VIP/CR GABA cell', 'Neocortex M1 interneuron chandelier SOM GABA cell', 'Neocortex U1 interneuron chandelier SOM GABA cell'",
+        "com_var3": "'Neocortex L5/6 pyramidal GLU cell', 'Neocortex V1 interneuron basket PV GABA cell', 'Neocortex fast spiking (FS) interneuron', 'Neostriatum fast spiking interneuron'",
+        "header1": "'Neocortex fast spiking (FS) interneuron', 'Neocortex spiking regular (RS) neuron'",
+        "header2": "'Neocortex spiking regular (RS) neuron', 'Neocortex fast spiking (FS) interneuron'",
+        "header3": "'Neocortex spiking regular (RS) neuron', 'Neocortex fast spiking (FS) interneuron', 'Neocortex V1 interneuron bipolar VIP/CR GABA cell'"
+    },
+    "267395": {
+        "com_var1": "'none'",
+        "com_var2": "'Dentate gyrus granule GLU cell', 'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell'",
+        "com_var3": "'Dentate gyrus granule GLU cell', 'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Neostriatum medium spiny direct pathway GABA cell', 'Thalamus reticular nucleus GABA cell', 'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell'",
+        "header1": "'Spinal cord lumbar motor neuron alpha ACh cell'",
+        "header2": "'Neocortex L5/6 pyramidal GLU cell', 'Spinal cord lumbar motor neuron alpha ACh cell', 'Neocortex M1 L2/6 pyramidal intratelencephalic GLU cell', 'Neocortex M1 L6 pyramidal corticothalamic GLU cell', 'Neocortex M1 L5B pyramidal pyramidal tract GLU cell'",
+        "header3": "'Spinal cord lumbar motor neuron alpha ACh cell'"
+    },
+    "2014998": {
+        "com_var1": "'Dentate gyrus granule GLU cell', 'Dentate gyrus basket cell', 'Dentate gyrus mossy cell', 'Dentate gyrus hilar cell', 'Dentate gyrus MOPP cell', 'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Hippocampus CA1 basket cell', 'Hippocampus CA3 axo-axonic cells', 'Hippocampus CA3 stratum radiatum lacunosum-moleculare interneuron', 'Substantia nigra pars compacta DA cell', 'Hippocampus CA1 stratum radiatum interneuron', 'Hippocampus CA3 interneuron oriens alveus GABA cell', 'Hippocampus CA1 stratum oriens lacunosum-moleculare interneuron', 'Hippocampus CA1 PV+ fast-firing interneuron', 'Hippocampus CA1 basket cell - CCK/VIP', 'Hippocampus CA1 axo-axonic cell', 'Hippocampus CA1 bistratified cell', 'Hippocampus CA4 pyramidal GLU cell', 'Hippocampal CA1 CR/VIP cell', 'Hippocampus septum medial GABAergic neuron', 'Olfactory bulb main mitral GLU cell', 'Olfactory bulb main interneuron granule MC GABA cell', 'Olfactory bulb main interneuron granule TC GABA cell', 'Piriform cortex anterior pyramidal layer II GLU cell', 'Piriform cortex anterior pyramidal deep GLU cell', 'Piriform cortex anterior interneuron superficial GABA cell', 'Piriform cortex anterior interneuron deep layer GABA cell', 'Piriform cortex anterior interneuron layer II GABA cell', 'Piriform cortex anterior semilunar GLU cell', 'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell', 'Neocortex V1 interneuron basket PV GABA cell', 'Neocortex V1 L5B pyramidal pyramidal tract GLU cell', 'Neocortex U1 L5B pyramidal pyramidal tract GLU cell', 'Neocortex U1 L2/6 pyramidal intratelencephalic GLU cell', 'Neocortex U1 L6 pyramidal corticalthalamic GLU cell', 'Neocortex M1 L2/6 pyramidal intratelencephalic GLU cell', 'Neocortex M1 L6 pyramidal corticothalamic GLU cell', 'Neocortex M1 L5B pyramidal pyramidal tract GLU cell', 'Neocortex V1 L4 stellate GLU cell', 'Neocortex M1 interneuron basket PV GABA cell', 'Neocortex U1 interneuron basket PV GABA cell', 'Neocortex M1 L4 stellate GLU cell', 'Neocortex U1 L4 stellate GLU cell', 'Neocortex M1 interneuron bipolar VIP/CR GABA cell', 'Neocortex U1 interneuron bipolar VIP/CR GABA cell', 'Neocortex M1 interneuron chandelier SOM GABA cell', 'Neocortex U1 interneuron chandelier SOM GABA cell', 'Neocortex U1 L6 pyramidal cortical-thalamic GLU cell', 'Neocortex M1 L5B pyramidal pyramidal tract GLU cell', 'Neocortex M1 L2/6 pyramidal intratelencephalic GLU cell', 'Neocortex M1 pyramidal pyramidal tract GLU cell', 'Neocortex M1 L2 pyramidal intratelencephalic GLU cell', 'Neocortex M1 L6 pyramidal corticothalamic GLU cell', 'Neocortex V1 pyramidal pyramidal tract GLU cell'",
+        "com_var2": "'Dentate gyrus granule GLU cell', 'Hippocampus CA1 pyramidal GLU cell', 'Dentate gyrus mossy cell', 'Hippocampus CA3 pyramidal GLU cell', 'Dentate gyrus basket cell', 'Hippocampus CA1 interneuron oriens alveus GABA cell', 'Hippocampus CA4 pyramidal GLU cell', 'Hippocampus CA1 interneuron basket GABA cell', 'Hippocampus CA3 interneuron basket GABA cell', 'Dentate gyrus hilar cell', 'Dentate gyrus HIPP cell', 'Hippocampus CA1 stratum radiatum interneuron', 'Hippocampus CA3 stratum oriens lacunosum-moleculare interneuron', 'Hippocampus CA3 stratum radiatum lacunosum-moleculare interneuron'",
+        "com_var3": "'Dentate gyrus granule GLU cell', 'Dentate gyrus basket cell', 'Dentate gyrus mossy cell', 'Dentate gyrus hilar cell', 'Dentate gyrus MOPP cell', 'Dentate gyrus HIPP cell'",
+        "header1": "'Dentate gyrus granule GLU cell', 'Dentate gyrus mossy cell'",
+        "header2": "'Dentate gyrus granule GLU cell', 'Dentate gyrus mossy cell'",
+        "header3": "'Dentate gyrus granule GLU cell', 'Dentate gyrus mossy cell'"
+    },
+    "267033": {
+        "com_var1": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA1 interneuron oriens alveus GABA cell', 'Hippocampus CA1 interneuron basket GABA cell', 'Hippocampus CA3 pyramidal GLU cell', 'Hippocampus CA3 interneuron basket GABA cell'",
+        "com_var2": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Hippocampus CA1 interneuron oriens alveus GABA cell', 'Hippocampus CA3 interneuron basket GABA cell'",
+        "com_var3": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA1 interneuron oriens alveus GABA cell', 'Hippocampus CA1 interneuron basket GABA cell'",
+        "header1": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Neocortex L5/6 pyramidal GLU cell', 'Hippocampus CA1 interneuron oriens alveus GABA cell', 'Hippocampus CA3 interneuron basket GABA cell', 'Neocortex V1 interneuron basket PV GABA cell', 'Neocortex U1 L5B pyramidal pyramidal tract GLU cell', 'Neocortex U1 L2/6 pyramidal intratelencephalic GLU cell', 'Neocortex U1 L6 pyramidal corticalthalamic GLU cell', 'Neocortex M1 L2/6 pyramidal intratelencephalic GLU cell', 'Neocortex M1 L6 pyramidal corticothalamic GLU cell', 'Neocortex M1 L5B pyramidal pyramidal tract GLU cell', 'Neocortex V1 L5B pyramidal pyramidal tract GLU cell', 'Neocortex M1 interneuron basket PV GABA cell', 'Neocortex U1 interneuron basket PV GABA cell'",
+        "header2": "'Hippocampus CA1 pyramidal GLU cell', 'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell'",
+        "header3": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Neocortex L5/6 pyramidal GLU cell'"
+    },
+    "267309": {
+        "com_var1": "'none'",
+        "com_var2": "'Abstract Morris-Lecar neuron'",
+        "com_var3": "'Hippocampus CA1 pyramidal GLU cell', 'Hodgkin-Huxley neuron'",
+        "header1": "'Hodgkin-Huxley neuron', 'Abstract Morris-Lecar neuron'",
+        "header2": "'Hodgkin-Huxley neuron', 'Abstract Morris-Lecar neuron'",
+        "header3": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Abstract Morris-Lecar neuron', 'Hodgkin-Huxley neuron'"
+    },
+    "2017143": {
+        "com_var1": "'Neostriatum medium spiny direct pathway GABA cell'",
+        "com_var2": "'Neostriatum medium spiny direct pathway GABA cell', 'Neostriatum medium spiny indirect pathway GABA cell'",
+        "com_var3": "'Neostriatum medium spiny direct pathway GABA cell', 'Neostriatum medium spiny indirect pathway GABA cell'",
+        "header1": "'Neostriatum medium spiny direct pathway GABA cell'",
+        "header2": "'Neostriatum medium spiny direct pathway GABA cell', 'Neostriatum medium spiny indirect pathway GABA cell'",
+        "header3": "'Neostriatum medium spiny direct pathway GABA cell', 'Neostriatum medium spiny indirect pathway GABA cell'"
+    },
+    "2016663": {
+        "com_var1": "'Urinary Bladder small-diameter DRG neuron', 'Dorsal Root Ganglion (DRG) cell'",
+        "com_var2": "'Dorsal Root Ganglion (DRG) cell'",
+        "com_var3": "'Dorsal Root Ganglion (DRG) cell'",
+        "header1": "'Dorsal Root Ganglion (DRG) cell'",
+        "header2": "'Dorsal Root Ganglion (DRG) cell', 'Urinary Bladder small-diameter DRG neuron', 'Dorsal Root Ganglion cell: cold sensing', 'Dorsal Root Ganglion cell: Spinal cord muscle spindle type Ia sensory fiber', 'Dorsal Root Ganglion cell: Spinal cord muscle spindle type II sensory fiber'",
+        "header3": "'Dorsal Root Ganglion (DRG) cell', 'Urinary Bladder small-diameter DRG neuron', 'Dorsal Root Ganglion cell: Spinal cord muscle spindle type Ia sensory fiber', 'Dorsal Root Ganglion cell: Spinal cord muscle spindle type II sensory fiber'"
+    },
+    "267056": {
+        "com_var1": "'Leech pressure (P) mechanosensory neuron', 'Neocortex spiking regular (RS) neuron', 'Neocortex spiking low threshold (LTS) neuron'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell'",
+        "header2": "'Substantia nigra pars reticulata principal GABA cell', 'Substantia nigra pars compacta DA cell', 'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Hippocampus CA4 pyramidal GLU cell'",
+        "header3": "'none'"
+    },
+    "267691": {
+        "com_var1": "'none'",
+        "com_var2": "'Neocortex L2/3 pyramidal GLU cell', 'Neocortex L4 stellate GLU cell'",
+        "com_var3": "'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell'",
+        "header1": "'Neocortex L2/3 pyramidal GLU cell'",
+        "header2": "'Neocortex L2/3 pyramidal GLU cell'",
+        "header3": "'Neocortex L2/3 pyramidal GLU cell'"
+    },
+    "267617": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'Dentate gyrus granule GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Dentate gyrus mossy cell'",
+        "header3": "'Dentate gyrus mossy cell'"
+    },
+    "2014999": {
+        "com_var1": "'Spinal cord sympathetic preganglionic neuron'",
+        "com_var2": "'none'",
+        "com_var3": "'Spinal cord sympathetic preganglionic neuron'",
+        "header1": "'Spinal cord sympathetic preganglionic neuron'",
+        "header2": "'Spinal cord sympathetic preganglionic neuron'",
+        "header3": "'Spinal cord sympathetic preganglionic neuron'"
+    },
+    "2014814": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "267267": {
+        "com_var1": "'Dentate gyrus granule GLU cell', 'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell'",
+        "com_var2": "'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell'",
+        "com_var3": "'Dentate gyrus granule GLU cell', 'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell', 'Neocortex M1 L2/6 pyramidal intratelencephalic GLU cell', 'Neocortex M1 L6 pyramidal corticothalamic GLU cell', 'Neocortex M1 L5B pyramidal pyramidal tract GLU cell', 'Neocortex V1 L5B pyramidal pyramidal tract GLU cell', 'Tritonia swim interneuron dorsal', 'Hippocampus CA3 axo-axonic cells', 'Hippocampus CA1 PV+ fast-firing interneuron'",
+        "header1": "'none'",
+        "header2": "'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell', 'Neocortex V1 L5B pyramidal pyramidal tract GLU cell', 'Neocortex U1 L5B pyramidal pyramidal tract GLU cell', 'Neocortex U1 L2/6 pyramidal intratelencephalic GLU cell', 'Neocortex U1 L6 pyramidal corticalthalamic GLU cell', 'Neocortex M1 L2/6 pyramidal intratelencephalic GLU cell', 'Neocortex M1 L6 pyramidal corticothalamic GLU cell', 'Neocortex M1 L5B pyramidal pyramidal tract GLU cell'",
+        "header3": "'none'"
+    },
+    "2014996": {
+        "com_var1": "Given the content and the context provided, the most relevant cell types appear to be related to neurons involved in respiratory and synaptic functions, possibly linked to the content mentioning neurons like \"PreBotzinger complex neuron,\" which is involved in respiratory rhythm generation. Therefore, the most relevant cell types from your list are:\n\n'PreBotzinger complex neuron'\n\nIf additional cell types within the constraints provided are needed for selection or if a broader analysis is desired, further detailed content from the dataset may be required.",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'PreBotzinger complex neuron'",
+        "header2": "'Respiratory column neuron', 'PreBotzinger complex neuron'",
+        "header3": "'PreBotzinger complex neuron'"
+    },
+    "267669": {
+        "com_var1": "'Subthalamic nucleus principal GABA cell'",
+        "com_var2": "'Subthalamic nucleus principal GABA cell', 'Globus pallidus principal GABA cell', 'Substantia nigra pars reticulata principal GABA cell'",
+        "com_var3": "'Subthalamic nucleus principal GABA cell'",
+        "header1": "'Subthalamic nucleus principal GABA cell', 'Globus pallidus principal GABA cell'",
+        "header2": "'Subthalamic nucleus principal GABA cell', 'Globus pallidus principal GABA cell', 'Substantia nigra pars reticulata principal GABA cell'",
+        "header3": "'Subthalamic nucleus principal GABA cell', 'Globus pallidus principal GABA cell'"
+    },
+    "267696": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'Astrocyte'",
+        "header1": "'Globus pallidus principal GABA cell', 'Spinal cord renshaw cell', 'Hippocampus septum medial GABAergic neuron', 'Hippocampus CA1 PV+ fast-firing interneuron', 'Multi-timescale adaptive threshold non-resetting leaky integrate and fire'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "2015421": {
+        "com_var1": "'none'",
+        "com_var2": "'Dentate gyrus granule GLU cell', 'Hippocampus CA1 pyramidal GLU cell', 'Hippocampus CA3 pyramidal GLU cell', 'Neocortex L5/6 pyramidal GLU cell', 'Neocortex L2/3 pyramidal GLU cell'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "267661": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Dorsal Root Ganglion (DRG) cell', 'Hippocampus dissociated neuron'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "267260": {
+        "com_var1": "'none'",
+        "com_var2": "'Abstract integrate-and-fire adaptive exponential (AdEx) neuron'",
+        "com_var3": "'Abstract integrate-and-fire adaptive exponential (AdEx) neuron'",
+        "header1": "'Abstract integrate-and-fire leaky neuron', 'Abstract integrate-and-fire adaptive exponential (AdEx) neuron', 'Abstract Izhikevich neuron', 'Abstract integrate-and-fire leaky neuron with exponential post-synaptic current', 'Abstract quadratic integrate-and-fire'",
+        "header2": "'Abstract integrate-and-fire adaptive exponential (AdEx) neuron'",
+        "header3": "'Abstract integrate-and-fire adaptive exponential (AdEx) neuron', 'Abstract integrate-and-fire leaky neuron'"
+    },
+    "2016995": {
+        "com_var1": "'Pituitary cell'",
+        "com_var2": "'Pituitary cell'",
+        "com_var3": "'Pituitary cell'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    },
+    "267363": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'none'"
+    }
+}

@@ -87,9 +87,10 @@ def process_file(file_folder, exact_file, client, category, result_key_prefix):
     f"You are a neuroscience expert specializing in {mapped_category_name} analysis. "
     f"Given the following content:\n\n{file_content}\n\n"
     f"Please identify the most relevant {mapped_category_name} from the following list: {category_items}. "
-    f"Just list them as strings separated by commas, DO NOT analyze. "
-    f"If none are relevant, respond with 'none'. "
-    f"Example: item1, item2, ..."
+    f"Output the result as individual strings enclosed in single quotes (''), separated by commas. "
+    f"DO NOT analyze or include any additional text."
+    f"If none are relevant, respond with exactly: 'none'. "
+    f"Example output:\n'item1', 'item2', 'item3'\nOR\n'none'"
     )
 
     chat_completion = client.chat.completions.create(
@@ -140,7 +141,23 @@ if __name__ == "__main__":
     
     args = parser.parse_args()
     main(args.input_folder, args.output_file, args.n, args.category, args.result_key_prefix)
-#python ./test_file_screening/gptinference.py ./data/extracted_data ./evaluation/results/celltype_result.json 3 celltypes com_var
-#python ./test_file_screening/gptinference.py ./data/concat_header ./evaluation/results/celltype_result.json 3 celltypes header
+#python ./test_file_screening/gptinference.py ./data/extracted_data ./evaluation/results/neurons_result.json 3 celltypes com_var
+#python ./test_file_screening/gptinference.py ./data/concat_header ./evaluation/results/neurons_result.json 3 celltypes header
+
 #python ./test_file_screening/gptinference.py ./data/extracted_data ./evaluation/results/receptors_result.json 3 receptors com_var
 #python ./test_file_screening/gptinference.py ./data/concat_header ./evaluation/results/receptors_result.json 3 receptors header
+
+#python ./test_file_screening/gptinference.py ./data/extracted_data ./evaluation/results/currents_result.json 3 currents com_var
+#python ./test_file_screening/gptinference.py ./data/concat_header ./evaluation/results/currents_result.json 3 currents header
+
+#python ./test_file_screening/gptinference.py ./data/extracted_data ./evaluation/results/simenvironments_result.json 3 simenvironments com_var
+#python ./test_file_screening/gptinference.py ./data/concat_header ./evaluation/results/simenvironments_result.json 3 simenvironments header
+
+#python ./test_file_screening/gptinference.py ./data/extracted_data ./evaluation/results/model_concept_result.json 3 modelconcepts com_var
+#python ./test_file_screening/gptinference.py ./data/concat_header ./evaluation/results/model_concept_result.json 3 modelconcepts header
+
+#python ./test_file_screening/gptinference.py ./data/extracted_data ./evaluation/results/model_type_result.json 3 modeltypes com_var
+#python ./test_file_screening/gptinference.py ./data/concat_header ./evaluation/results/model_type_result.json 3 modeltypes header
+
+#python ./test_file_screening/gptinference.py ./data/extracted_data ./evaluation/results/regions.json 3 regions com_var
+#python ./test_file_screening/gptinference.py ./data/concat_header ./evaluation/results/regions.json 3 regions header

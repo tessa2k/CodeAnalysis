@@ -1,0 +1,799 @@
+{
+    "267598": {
+        "com_var1": "'NEST', 'Python'",
+        "com_var2": "'NEST', 'Python'",
+        "com_var3": "'NEST', 'Python'",
+        "header1": "'NEST', 'Python'",
+        "header2": "'NEST', 'Python'",
+        "header3": "'NEST', 'Python'"
+    },
+    "2015953": {
+        "com_var1": "'NEURON'",
+        "com_var2": "'NEURON'",
+        "com_var3": "'NEURON'",
+        "header1": "'NEURON'",
+        "header2": "'NEURON'",
+        "header3": "'NEURON'"
+    },
+    "2017403": {
+        "com_var1": "'NEURON'",
+        "com_var2": "'NEURON'",
+        "com_var3": "'NEURON', 'Python'",
+        "header1": "'NEURON', 'Python'",
+        "header2": "'NEURON', 'Python'",
+        "header3": "'NEURON', 'Python'"
+    },
+    "267357": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'Python'",
+        "header1": "'NEURON', 'Python', 'MATLAB', 'C or C++ program'",
+        "header2": "'NEURON', 'GENESIS', 'XPPAUT', 'MATLAB', 'Python'",
+        "header3": "'NEURON', 'Python'"
+    },
+    "2014832": {
+        "com_var1": "'NEURON'",
+        "com_var2": "'NEURON'",
+        "com_var3": "'NEURON'",
+        "header1": "'NEURON', 'Python'",
+        "header2": "'NEURON'",
+        "header3": "'NEURON', 'Python'"
+    },
+    "2016658": {
+        "com_var1": "'NEURON', 'Python'",
+        "com_var2": "'NEURON', 'Python'",
+        "com_var3": "'NEURON', 'Python'",
+        "header1": "'NEURON', 'Python'",
+        "header2": "'NEURON', 'Python'",
+        "header3": "'NEURON', 'Python'"
+    },
+    "266844": {
+        "com_var1": "'NEURON'",
+        "com_var2": "'NEURON'",
+        "com_var3": "'NEURON', 'Python'",
+        "header1": "'NEURON'",
+        "header2": "'NEURON'",
+        "header3": "'NEURON'"
+    },
+    "267088": {
+        "com_var1": "'NEURON', 'GENESIS', 'MATLAB'",
+        "com_var2": "'NEURON', 'GENESIS', 'NEST', 'Python', 'MATLAB'",
+        "com_var3": "'NEURON', 'GENESIS', 'NEST', 'MATLAB', 'Python', 'neurolib'",
+        "header1": "'Python'",
+        "header2": "'Python'",
+        "header3": "'Python'"
+    },
+    "267329": {
+        "com_var1": "'MATLAB'",
+        "com_var2": "'MATLAB'",
+        "com_var3": "'MATLAB'",
+        "header1": "'MATLAB'",
+        "header2": "'MATLAB'",
+        "header3": "'MATLAB'"
+    },
+    "267728": {
+        "com_var1": "'NEURON'",
+        "com_var2": "'NEURON'",
+        "com_var3": "'NEURON'",
+        "header1": "'NEURON'",
+        "header2": "'NEURON', 'Python'",
+        "header3": "'NEURON'"
+    },
+    "2015412": {
+        "com_var1": "'MATLAB'",
+        "com_var2": "'MATLAB'",
+        "com_var3": "'MATLAB'",
+        "header1": "'MATLAB'",
+        "header2": "'MATLAB'",
+        "header3": "'MATLAB'"
+    },
+    "267253": {
+        "com_var1": "'MATLAB'",
+        "com_var2": "'MATLAB'",
+        "com_var3": "'MATLAB'",
+        "header1": "'MATLAB', 'C or C++ program'",
+        "header2": "'MATLAB', 'C or C++ program'",
+        "header3": "'C or C++ program', 'MATLAB'"
+    },
+    "2014821": {
+        "com_var1": "'NEURON', 'NEURON (web link to model)'",
+        "com_var2": "'NEURON'",
+        "com_var3": "'NEURON', 'NEURON (web link to model)'",
+        "header1": "'NEURON'",
+        "header2": "'NEURON'",
+        "header3": "'NEURON'"
+    },
+    "267252": {
+        "com_var1": "'XPPAUT', 'MATLAB'",
+        "com_var2": "'XPPAUT', 'MATLAB'",
+        "com_var3": "'XPPAUT', 'MATLAB'",
+        "header1": "'MATLAB', 'ODE', 'MATLAB (web link to model)'",
+        "header2": "'MATLAB'",
+        "header3": "'MATLAB'"
+    },
+    "267646": {
+        "com_var1": "'NEURON', 'MATLAB'",
+        "com_var2": "'NEURON', 'MATLAB', 'Python'",
+        "com_var3": "'NEURON'",
+        "header1": "'NEURON'",
+        "header2": "'NEURON'",
+        "header3": "'NEURON'"
+    },
+    "267596": {
+        "com_var1": "'NEURON', 'GENESIS', 'MATLAB', 'C or C++ program', 'FORTRAN', 'Java', 'Python'",
+        "com_var2": "'NeuronC'",
+        "com_var3": "'none'",
+        "header1": "'NEURON', 'MATLAB'",
+        "header2": "'NEURON', 'MATLAB'",
+        "header3": "'NEURON', 'MATLAB'"
+    },
+    "267583": {
+        "com_var1": "'Python'",
+        "com_var2": "'Python'",
+        "com_var3": "'Python'",
+        "header1": "'Python'",
+        "header2": "'Python'",
+        "header3": "'Python'"
+    },
+    "267561": {
+        "com_var1": "'Python'",
+        "com_var2": "'Python'",
+        "com_var3": "'Python'",
+        "header1": "'Python'",
+        "header2": "'Python'",
+        "header3": "'Python', 'NumPy', 'matplotlib', 'networkx', 'seaborn'"
+    },
+    "2017405": {
+        "com_var1": "'NEURON', 'PyNN', 'Python'",
+        "com_var2": "'NEURON', 'PyNN', 'Python'",
+        "com_var3": "'NEURON', 'PyNN'",
+        "header1": "'NEURON'",
+        "header2": "'NEURON', 'Python'",
+        "header3": "'NEURON', 'MATLAB', 'C or C++ program'"
+    },
+    "2015414": {
+        "com_var1": "'XPPAUT', 'MATLAB'",
+        "com_var2": "'XPPAUT', 'MATLAB'",
+        "com_var3": "'XPPAUT'",
+        "header1": "'XPPAUT', 'Matlab', 'FORTRAN', 'Python'",
+        "header2": "'XPPAUT', 'Python'",
+        "header3": "'C or C++ program', 'C or C++ program (web link to model)', 'FORTRAN', 'FORTRAN (web link to a model)', 'Python', 'Python (web link to model)'"
+    },
+    "2016659": {
+        "com_var1": "'C or C++ program'",
+        "com_var2": "'C or C++ program'",
+        "com_var3": "'C or C++ program'",
+        "header1": "'C or C++ program'",
+        "header2": "'C or C++ program'",
+        "header3": "'C or C++ program'"
+    },
+    "2014833": {
+        "com_var1": "'MATLAB'",
+        "com_var2": "'MATLAB'",
+        "com_var3": "'MATLAB'",
+        "header1": "'MATLAB'",
+        "header2": "'MATLAB'",
+        "header3": "'MATLAB'"
+    },
+    "267599": {
+        "com_var1": "'NEURON'",
+        "com_var2": "'NEURON'",
+        "com_var3": "'NEURON'",
+        "header1": "'NEURON'",
+        "header2": "'NEURON'",
+        "header3": "'NEURON'"
+    },
+    "267566": {
+        "com_var1": "'MATLAB'",
+        "com_var2": "'MATLAB'",
+        "com_var3": "'MATLAB'",
+        "header1": "'MATLAB'",
+        "header2": "'MATLAB'",
+        "header3": "'MATLAB'"
+    },
+    "2015571": {
+        "com_var1": "'NEURON'",
+        "com_var2": "'NEURON'",
+        "com_var3": "'NEURON'",
+        "header1": "'NEURON'",
+        "header2": "'NEURON'",
+        "header3": "'NEURON'"
+    },
+    "267586": {
+        "com_var1": "'MATLAB'",
+        "com_var2": "'MATLAB'",
+        "com_var3": "'MATLAB'",
+        "header1": "'MATLAB'",
+        "header2": "'MATLAB'",
+        "header3": "'MATLAB'"
+    },
+    "267564": {
+        "com_var1": "'XPPAUT'",
+        "com_var2": "'none'",
+        "com_var3": "'Simulink', 'MATLAB', 'XPPAUT'",
+        "header1": "'XPPAUT', 'MATLAB'",
+        "header2": "'FORTRAN', 'C or C++ program', 'MATLAB', 'XPPAUT'",
+        "header3": "'Matlab', 'XPPAUT'"
+    },
+    "267018": {
+        "com_var1": "'NEURON', 'Python', 'PyNN'",
+        "com_var2": "'NEURON', 'Python'",
+        "com_var3": "'NEURON', 'Python'",
+        "header1": "'NEURON', 'Python'",
+        "header2": "'NEURON', 'Python'",
+        "header3": "'NEURON'"
+    },
+    "267250": {
+        "com_var1": "'MATLAB'",
+        "com_var2": "'MATLAB'",
+        "com_var3": "'MATLAB'",
+        "header1": "'MATLAB'",
+        "header2": "'MATLAB'",
+        "header3": "'MATLAB'"
+    },
+    "267221": {
+        "com_var1": "'NEURON', 'Python'",
+        "com_var2": "'NEURON', 'Python'",
+        "com_var3": "'NEURON', 'Python'",
+        "header1": "'NEURON', 'Python'",
+        "header2": "'NEURON', 'Python'",
+        "header3": "'NEURON', 'Python'"
+    },
+    "2015411": {
+        "com_var1": "'MATLAB'",
+        "com_var2": "'MATLAB'",
+        "com_var3": "'MATLAB'",
+        "header1": "'NEURON', 'MATLAB', 'NetPyNE', 'Python'",
+        "header2": "'NEURON', 'Python', 'NetPyNE', 'MATLAB'",
+        "header3": "'NEURON', 'Python', 'MATLAB', 'NetPyNE'"
+    },
+    "267620": {
+        "com_var1": "'Python', 'Python (web link to model)'",
+        "com_var2": "'Python'",
+        "com_var3": "'Python'",
+        "header1": "'Python'",
+        "header2": "'Python'",
+        "header3": "'Python'"
+    },
+    "267563": {
+        "com_var1": "'XPPAUT'",
+        "com_var2": "'XPPAUT'",
+        "com_var3": "'XPPAUT'",
+        "header1": "'XPPAUT', 'MATLAB', 'FORTRAN'",
+        "header2": "'XPPAUT'",
+        "header3": "'XPPAUT'"
+    },
+    "267512": {
+        "com_var1": "'NEURON'",
+        "com_var2": "'NEURON'",
+        "com_var3": "'NEURON'",
+        "header1": "'NEURON'",
+        "header2": "'NEURON', 'MATLAB'",
+        "header3": "'NEURON', 'MATLAB'"
+    },
+    "267589": {
+        "com_var1": "'NEURON', 'GENESIS', 'MATLAB', 'Python'",
+        "com_var2": "'NEURON', 'MATLAB', 'Python'",
+        "com_var3": "'NEURON', 'MATLAB', 'Python'",
+        "header1": "'NEURON', 'Python', 'Cython', 'Brian 2'",
+        "header2": "'NEURON', 'Python', 'Brian 2', 'Cython'",
+        "header3": "'NEURON', 'Python', 'Brian 2'"
+    },
+    "267562": {
+        "com_var1": "'Matlab', 'FORTRAN', 'C or C++ program'",
+        "com_var2": "'XPPAUT', 'MATLAB', 'FORTRAN'",
+        "com_var3": "'XPPAUT', 'Matlab'",
+        "header1": "'XPPAUT'",
+        "header2": "'XPPAUT'",
+        "header3": "'XPPAUT'"
+    },
+    "267259": {
+        "com_var1": "'Python'",
+        "com_var2": "'Python'",
+        "com_var3": "'Python'",
+        "header1": "'Python'",
+        "header2": "'Python', 'MATLAB', 'Scilab', 'NumPy', 'MOOSE/PyMOOSE', 'SciPy'",
+        "header3": "'Python', 'Matplotlib', 'NumPy', 'SciPy', 'Multiprocessing', 'ImageIO'"
+    },
+    "2014822": {
+        "com_var1": "'NEURON', 'Python'",
+        "com_var2": "'NEURON', 'Python'",
+        "com_var3": "'NEURON', 'Python'",
+        "header1": "'NEURON'",
+        "header2": "'NEURON'",
+        "header3": "'NEURON'"
+    },
+    "260015": {
+        "com_var1": "'NetPyNE', 'Python'",
+        "com_var2": "'Python', 'NetPyNE'",
+        "com_var3": "'Python', 'NetPyNE'",
+        "header1": "'NEURON', 'NetPyNE', 'Python'",
+        "header2": "'NetPyNE', 'NEURON', 'Python', 'UMAP'",
+        "header3": "'Python', 'NetPyNE', 'NEURON'"
+    },
+    "267595": {
+        "com_var1": "'NEURON', 'LFPy', 'Python'",
+        "com_var2": "'NEURON', 'LFPy', 'Python'",
+        "com_var3": "'NEURON', 'LFPy', 'Python'",
+        "header1": "'NEURON', 'LFPy'",
+        "header2": "'NEURON', 'NEURON (web link to model)', 'Python', 'Python (web link to model)', 'LFPy'",
+        "header3": "'NEURON', 'LFPy'"
+    },
+    "267621": {
+        "com_var1": "'NEURON', 'MCell'",
+        "com_var2": "'NEURON', 'MCell', 'MATLAB', 'Python'",
+        "com_var3": "'NEURON', 'MCell'",
+        "header1": "'NEURON'",
+        "header2": "'NEURON'",
+        "header3": "'NEURON'"
+    },
+    "2015410": {
+        "com_var1": "'NEURON'",
+        "com_var2": "'NEURON', 'MOOSE/PyMOOSE'",
+        "com_var3": "'NEURON', 'MOOSE/PyMOOSE'",
+        "header1": "'NEURON'",
+        "header2": "'NEURON'",
+        "header3": "'NEURON'"
+    },
+    "267565": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'XPPAUT', 'MATLAB', 'FORTRAN'",
+        "header2": "'XPPAUT', 'XPPAUT (web link to model)', 'MATLAB', 'MATLAB (web link to model)'",
+        "header3": "'XPPAUT'"
+    },
+    "267339": {
+        "com_var1": "'Python'",
+        "com_var2": "'Python'",
+        "com_var3": "'Python'",
+        "header1": "'none'",
+        "header2": "'none'",
+        "header3": "'Python', 'PyNN'"
+    },
+    "267501": {
+        "com_var1": "'NEURON'",
+        "com_var2": "'NEURON'",
+        "com_var3": "'NEURON', 'MATLAB'",
+        "header1": "'NEURON'",
+        "header2": "'NEURON'",
+        "header3": "'NEURON'"
+    },
+    "267499": {
+        "com_var1": "'NEURON', 'GENESIS', 'NEST', 'MATLAB'",
+        "com_var2": "'NEURON'",
+        "com_var3": "'NEURON'",
+        "header1": "'NEURON'",
+        "header2": "'NEURON'",
+        "header3": "'NEURON'"
+    },
+    "267355": {
+        "com_var1": "'NEURON', 'C or C++ program'",
+        "com_var2": "'NEURON', 'C or C++ program'",
+        "com_var3": "'NEURON', 'C or C++ program', 'MATLAB'",
+        "header1": "'NEURON'",
+        "header2": "'NEURON'",
+        "header3": "'NEURON', 'C or C++ program'"
+    },
+    "267754": {
+        "com_var1": "'Python'",
+        "com_var2": "'Python'",
+        "com_var3": "'Python'",
+        "header1": "'NEURON', 'Python'",
+        "header2": "'NEURON', 'Python'",
+        "header3": "'NEURON', 'Python'"
+    },
+    "267509": {
+        "com_var1": "'NEURON'",
+        "com_var2": "'NEURON', 'MATLAB'",
+        "com_var3": "'NEURON'",
+        "header1": "'NEURON'",
+        "header2": "'NEURON'",
+        "header3": "'NEURON'"
+    },
+    "2014830": {
+        "com_var1": "'Python', 'MOOSE/PyMOOSE', 'COMSOL'",
+        "com_var2": "'none'",
+        "com_var3": "'Python', 'FEniCS'",
+        "header1": "'Python'",
+        "header2": "'Python', 'dolfin'",
+        "header3": "'Python'"
+    },
+    "2016216": {
+        "com_var1": "'MATLAB'",
+        "com_var2": "'MATLAB'",
+        "com_var3": "'MATLAB'",
+        "header1": "'MATLAB', 'XPPAUT'",
+        "header2": "'MATLAB'",
+        "header3": "'MATLAB'"
+    },
+    "267551": {
+        "com_var1": "'NetPyNE', 'MATLAB'",
+        "com_var2": "'NetPyNE', 'MATLAB'",
+        "com_var3": "'NEURON', 'MATLAB', 'NetPyNE', 'Python'",
+        "header1": "'NEURON', 'NetPyNE', 'Python', 'MATLAB'",
+        "header2": "'NEURON', 'Python', 'MATLAB', 'NetPyNE'",
+        "header3": "'NEURON', 'MATLAB', 'NetPyNE', 'Python'"
+    },
+    "267295": {
+        "com_var1": "'MATLAB'",
+        "com_var2": "'MATLAB'",
+        "com_var3": "'MATLAB', 'C or C++ program'",
+        "header1": "'MATLAB'",
+        "header2": "'MATLAB'",
+        "header3": "'MATLAB'"
+    },
+    "267694": {
+        "com_var1": "'NEURON', 'Python'",
+        "com_var2": "'NEURON', 'Python', 'MATLAB', 'C', 'FORTRAN'",
+        "com_var3": "'Python'",
+        "header1": "'NEURON', 'Python'",
+        "header2": "'NEURON', 'Python', 'MATLAB'",
+        "header3": "'NEURON', 'Python'"
+    },
+    "267768": {
+        "com_var1": "'NEURON', 'Python', 'NetPyNE'",
+        "com_var2": "'Python', 'NetPyNE'",
+        "com_var3": "'NEURON', 'NetPyNE'",
+        "header1": "'NEURON', 'Python', 'NetPyNE'",
+        "header2": "'NEURON', 'Python', 'NetPyNE'",
+        "header3": "'NEURON', 'NetPyNE'"
+    },
+    "267310": {
+        "com_var1": "'MATLAB'",
+        "com_var2": "'MATLAB'",
+        "com_var3": "'MATLAB', 'Octave'",
+        "header1": "'MATLAB'",
+        "header2": "'MATLAB'",
+        "header3": "'MATLAB'"
+    },
+    "267686": {
+        "com_var1": "'NEURON', 'BluePyOpt'",
+        "com_var2": "'NEURON', 'BluePyOpt'",
+        "com_var3": "'NEURON'",
+        "header1": "'NEURON'",
+        "header2": "'NEURON', 'NEURON (web link to model)'",
+        "header3": "'NEURON'"
+    },
+    "267391": {
+        "com_var1": "'NEURON'",
+        "com_var2": "'NEURON'",
+        "com_var3": "'NEURON', 'MATLAB'",
+        "header1": "'NEURON'",
+        "header2": "'NEURON'",
+        "header3": "'NEURON'"
+    },
+    "2014816": {
+        "com_var1": "'NEURON'",
+        "com_var2": "'NEURON'",
+        "com_var3": "'NEURON'",
+        "header1": "'NEURON'",
+        "header2": "'NEURON'",
+        "header3": "'NEURON'"
+    },
+    "266796": {
+        "com_var1": "'Brian'",
+        "com_var2": "'Brian 2', 'Python'",
+        "com_var3": "'Brian 2', 'Python'",
+        "header1": "'Brian 2', 'Python'",
+        "header2": "'Brian 2'",
+        "header3": "'Brian 2', 'Python'"
+    },
+    "2016219": {
+        "com_var1": "'MATLAB'",
+        "com_var2": "'MATLAB'",
+        "com_var3": "'MATLAB'",
+        "header1": "'MATLAB'",
+        "header2": "'MATLAB'",
+        "header3": "'MATLAB'"
+    },
+    "185864": {
+        "com_var1": "'NEURON'",
+        "com_var2": "'NEURON'",
+        "com_var3": "'NEURON'",
+        "header1": "'MATLAB'",
+        "header2": "'MATLAB'",
+        "header3": "'MATLAB'"
+    },
+    "2016137": {
+        "com_var1": "'NEURON'",
+        "com_var2": "'NEURON'",
+        "com_var3": "'NEURON'",
+        "header1": "'NEURON', 'neuroConstruct'",
+        "header2": "'NEURON', 'GENESIS', 'neuroConstruct'",
+        "header3": "'NEURON', 'GENESIS', 'neuroConstruct'"
+    },
+    "267614": {
+        "com_var1": "'MATLAB'",
+        "com_var2": "'MATLAB'",
+        "com_var3": "'MATLAB', 'R'",
+        "header1": "'MATLAB', 'XPPAUT'",
+        "header2": "'XPPAUT', 'MATLAB'",
+        "header3": "'MATLAB', 'XPPAUT'"
+    },
+    "267293": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'NEURON', 'Python'",
+        "header2": "'none'",
+        "header3": "'NEURON', 'Python'"
+    },
+    "263719": {
+        "com_var1": "'MATLAB'",
+        "com_var2": "'MATLAB'",
+        "com_var3": "'MATLAB'",
+        "header1": "'MATLAB'",
+        "header2": "'MATLAB'",
+        "header3": "'MATLAB'"
+    },
+    "2015422": {
+        "com_var1": "'DynaSim', 'MATLAB'",
+        "com_var2": "'DynaSim', 'MATLAB'",
+        "com_var3": "'DynaSim', 'MATLAB'",
+        "header1": "'DynaSim', 'MATLAB'",
+        "header2": "'DynaSim', 'MATLAB'",
+        "header3": "'DynaSim', 'MATLAB'"
+    },
+    "267613": {
+        "com_var1": "'NEURON', 'MCell'",
+        "com_var2": "'NEURON', 'MCell'",
+        "com_var3": "'NEURON', 'MCell'",
+        "header1": "'NEURON'",
+        "header2": "'NEURON'",
+        "header3": "'NEURON'"
+    },
+    "267311": {
+        "com_var1": "'NEURON', 'Python'",
+        "com_var2": "'NEURON', 'Python'",
+        "com_var3": "'NEURON', 'Python'",
+        "header1": "'NEURON'",
+        "header2": "'NEURON'",
+        "header3": "'NEURON', 'Python'"
+    },
+    "267710": {
+        "com_var1": "'NEURON', 'XPPAUT', 'Python'",
+        "com_var2": "'XPPAUT', 'Python', 'NEURON'",
+        "com_var3": "'NEURON', 'XPPAUT', 'Python'",
+        "header1": "'NEURON', 'XPPAUT', 'Python'",
+        "header2": "'NEURON', 'XPPAUT'",
+        "header3": "'NEURON', 'XPPAUT', 'Python'"
+    },
+    "267695": {
+        "com_var1": "'XPPAUT'",
+        "com_var2": "'none'",
+        "com_var3": "'XPPAUT', 'Mathematica'",
+        "header1": "'XPPAUT', 'MATLAB'",
+        "header2": "'XPPAUT', 'MATLAB', 'MATLAB (web link to model)'",
+        "header3": "'XPPAUT', 'MATLAB'"
+    },
+    "267680": {
+        "com_var1": "'Python'",
+        "com_var2": "'Python'",
+        "com_var3": "'Python'",
+        "header1": "'Python', 'matplotlib'",
+        "header2": "'Python'",
+        "header3": "'Python'"
+    },
+    "267550": {
+        "com_var1": "'MATLAB'",
+        "com_var2": "'MATLAB'",
+        "com_var3": "'MATLAB'",
+        "header1": "'MATLAB'",
+        "header2": "'MATLAB'",
+        "header3": "'MATLAB'"
+    },
+    "267382": {
+        "com_var1": "'XPPAUT', 'MATLAB'",
+        "com_var2": "'XPPAUT', 'MATLAB'",
+        "com_var3": "'XPPAUT', 'MATLAB'",
+        "header1": "'XPPAUT', 'MATLAB'",
+        "header2": "'XPPAUT', 'MATLAB'",
+        "header3": "'XPPAUT', 'MATLAB'"
+    },
+    "2016138": {
+        "com_var1": "'NEURON', 'MATLAB'",
+        "com_var2": "'NEURON', 'MATLAB'",
+        "com_var3": "'MATLAB'",
+        "header1": "'NEURON', 'MATLAB'",
+        "header2": "'MATLAB', 'NEURON'",
+        "header3": "'NEURON', 'MATLAB'"
+    },
+    "267306": {
+        "com_var1": "'NEURON'",
+        "com_var2": "'NEURON'",
+        "com_var3": "'NEURON'",
+        "header1": "'NEURON'",
+        "header2": "'NEURON'",
+        "header3": "'NEURON'"
+    },
+    "2015420": {
+        "com_var1": "'MATLAB'",
+        "com_var2": "'MATLAB'",
+        "com_var3": "'MATLAB'",
+        "header1": "'MATLAB'",
+        "header2": "'MATLAB'",
+        "header3": "'MATLAB'"
+    },
+    "267611": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'"
+    },
+    "2016670": {
+        "com_var1": "'C or C++ program'",
+        "com_var2": "'C or C++ program'",
+        "com_var3": "'none'",
+        "header1": "'C or C++ program'",
+        "header2": "'C or C++ program'",
+        "header3": "'C or C++ program'"
+    },
+    "267619": {
+        "com_var1": "'Brian'",
+        "com_var2": "'Brian 2', 'Python'",
+        "com_var3": "'Brian'",
+        "header1": "'Brian 2'",
+        "header2": "'Brian', 'Python'",
+        "header3": "'Brian 2', 'Python'"
+    },
+    "267395": {
+        "com_var1": "'C or C++ program'",
+        "com_var2": "'C or C++ program'",
+        "com_var3": "'C or C++ program'",
+        "header1": "'C or C++ program', 'IGOR Pro'",
+        "header2": "'C or C++ program', 'IGOR Pro'",
+        "header3": "'C or C++ program', 'IGOR Pro'"
+    },
+    "2014998": {
+        "com_var1": "'Python', 'Julia'",
+        "com_var2": "'Julia', 'Python', 'PyNN'",
+        "com_var3": "'Python', 'Julia'",
+        "header1": "'NEURON', 'Python', 'NetPyNE'",
+        "header2": "'NEURON', 'Python', 'NetPyNE'",
+        "header3": "'NEURON', 'Python', 'NetPyNE'"
+    },
+    "267033": {
+        "com_var1": "'FORTRAN', 'MPI Fortran'",
+        "com_var2": "'FORTRAN'",
+        "com_var3": "'FORTRAN'",
+        "header1": "'FORTRAN'",
+        "header2": "'FORTRAN'",
+        "header3": "'FORTRAN'"
+    },
+    "267309": {
+        "com_var1": "'MATLAB'",
+        "com_var2": "'MATLAB'",
+        "com_var3": "'MATLAB'",
+        "header1": "'MATLAB'",
+        "header2": "'MATLAB'",
+        "header3": "'MATLAB'"
+    },
+    "2017143": {
+        "com_var1": "'NEURON', 'Python'",
+        "com_var2": "'NEURON', 'Python'",
+        "com_var3": "'NEURON'",
+        "header1": "'NEURON', 'Python'",
+        "header2": "'NEURON', 'Python'",
+        "header3": "'NEURON'"
+    },
+    "2016663": {
+        "com_var1": "'MATLAB'",
+        "com_var2": "'MATLAB', 'Python'",
+        "com_var3": "'MATLAB'",
+        "header1": "'MATLAB'",
+        "header2": "'MATLAB'",
+        "header3": "'MATLAB'"
+    },
+    "267056": {
+        "com_var1": "'Python'",
+        "com_var2": "'none'",
+        "com_var3": "'Python'",
+        "header1": "'NEURON', 'NEURON (web link to model)'",
+        "header2": "'NEURON', 'GENESIS', 'MATLAB'",
+        "header3": "'NEURON'"
+    },
+    "267691": {
+        "com_var1": "'NEURON', 'Python'",
+        "com_var2": "'NEURON', 'Python'",
+        "com_var3": "'NEURON', 'Python'",
+        "header1": "'NEURON', 'Python'",
+        "header2": "'NEURON', 'Python'",
+        "header3": "'NEURON', 'Python'"
+    },
+    "267617": {
+        "com_var1": "'NEURON'",
+        "com_var2": "'NEURON'",
+        "com_var3": "'NEURON'",
+        "header1": "'NEURON'",
+        "header2": "'NEURON', 'NEURON (web link to model)'",
+        "header3": "'NEURON'"
+    },
+    "2014999": {
+        "com_var1": "'C or C++ program'",
+        "com_var2": "'C or C++ program'",
+        "com_var3": "'C or C++ program'",
+        "header1": "'C or C++ program'",
+        "header2": "'C or C++ program'",
+        "header3": "'C or C++ program'"
+    },
+    "2014814": {
+        "com_var1": "'NEURON', 'Python'",
+        "com_var2": "'NEURON', 'Python'",
+        "com_var3": "'NEURON', 'Python'",
+        "header1": "'NEURON', 'Python'",
+        "header2": "'NEURON', 'Python'",
+        "header3": "'NEURON', 'Python'"
+    },
+    "267267": {
+        "com_var1": "'NEURON'",
+        "com_var2": "'NEURON'",
+        "com_var3": "'NEURON'",
+        "header1": "'NEURON'",
+        "header2": "'NEURON'",
+        "header3": "'NEURON', 'MATLAB'"
+    },
+    "2014996": {
+        "com_var1": "'XPPAUT'",
+        "com_var2": "'XPPAUT', 'MATLAB', 'FORTRAN'",
+        "com_var3": "'none'",
+        "header1": "'XPPAUT'",
+        "header2": "'XPPAUT'",
+        "header3": "'XPPAUT'"
+    },
+    "267669": {
+        "com_var1": "'NEURON'",
+        "com_var2": "'none'",
+        "com_var3": "'NEURON'",
+        "header1": "'NEURON'",
+        "header2": "'NEURON', 'C or C++ program'",
+        "header3": "'NEURON', 'NEURON (web link to model)'"
+    },
+    "267696": {
+        "com_var1": "'XPPAUT', 'MATLAB'",
+        "com_var2": "'none'",
+        "com_var3": "'XPPAUT', 'MATLAB'",
+        "header1": "'XPPAUT'",
+        "header2": "'XPPAUT'",
+        "header3": "'XPPAUT'"
+    },
+    "2015421": {
+        "com_var1": "'MATLAB'",
+        "com_var2": "'MATLAB'",
+        "com_var3": "'MATLAB'",
+        "header1": "'MATLAB', 'Python'",
+        "header2": "'MATLAB', 'Python'",
+        "header3": "'MATLAB'"
+    },
+    "267661": {
+        "com_var1": "'NEURON', 'NEURON (web link to model)', 'NEURONPM (web link to tool)'",
+        "com_var2": "'NEURON', 'C or C++ program', 'FORTRAN', 'GNU'",
+        "com_var3": "'NEURON'",
+        "header1": "'NEURON'",
+        "header2": "'NEURON'",
+        "header3": "'NEURON'"
+    },
+    "267260": {
+        "com_var1": "'MATLAB'",
+        "com_var2": "'MATLAB'",
+        "com_var3": "'MATLAB'",
+        "header1": "'MATLAB'",
+        "header2": "'MATLAB'",
+        "header3": "'MATLAB'"
+    },
+    "2016995": {
+        "com_var1": "'XPPAUT'",
+        "com_var2": "'XPPAUT'",
+        "com_var3": "'XPPAUT'",
+        "header1": "'XPPAUT'",
+        "header2": "'XPPAUT'",
+        "header3": "'XPPAUT', 'Matlab'"
+    },
+    "267363": {
+        "com_var1": "'MATLAB'",
+        "com_var2": "'MATLAB'",
+        "com_var3": "'MATLAB'",
+        "header1": "'MATLAB'",
+        "header2": "'MATLAB'",
+        "header3": "'MATLAB'"
+    }
+}

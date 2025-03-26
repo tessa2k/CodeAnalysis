@@ -1,0 +1,799 @@
+{
+    "267598": {
+        "com_var1": "'Parameter Fitting', 'Simplified Models', 'Spike Frequency Adaptation'",
+        "com_var2": "'Simplified Models', 'Parameter Fitting'",
+        "com_var3": "'Simplified Models', 'Parameter Fitting', 'Spike Frequency Adaptation', 'Detailed Neuronal Models'",
+        "header1": "'Action Potentials', 'Parameter Fitting', 'Simplified Models', 'Spike Frequency Adaptation', 'Membrane Properties', 'Excitability'",
+        "header2": "'Pattern Recognition', 'Activity Patterns', 'Parameter Fitting', 'Spike Frequency Adaptation', 'Simplified Models', 'Parameter sensitivity'",
+        "header3": "'Ion Channel Kinetics', 'Parameter Fitting', 'Simplified Models', 'Spike Frequency Adaptation', 'Parameter sensitivity'"
+    },
+    "2015953": {
+        "com_var1": "'Action Potentials', 'Depolarization block', 'Connectivity matrix', 'Synaptic Integration', 'Ion Channel Kinetics'",
+        "com_var2": "'Action Potentials', 'Synaptic Integration', 'Connectivity matrix', 'Ion Channel Kinetics'",
+        "com_var3": "'Ion Channel Kinetics', 'Oscillations', 'Depolarization block', 'Synaptic Integration', 'Synaptic Plasticity', 'Connectivity matrix'",
+        "header1": "'Action Potentials', 'Ion Channel Kinetics', 'Synaptic Integration', 'Reaction-diffusion'",
+        "header2": "'Action Potentials', 'Ion Channel Kinetics', 'Bursting', 'Synaptic Integration', 'Reaction-diffusion'",
+        "header3": "'Action Potentials', 'Ion Channel Kinetics', 'Synaptic Integration', 'Reaction-diffusion', 'G-protein coupled'"
+    },
+    "2017403": {
+        "com_var1": "'Ion Channel Kinetics', 'Invertebrate', 'Detailed Neuronal Models', 'Methods'",
+        "com_var2": "'Ion Channel Kinetics', 'Detailed Neuronal Models', 'Invertebrate', 'Parameter Fitting', 'Methods'",
+        "com_var3": "'Action Potentials', 'Ion Channel Kinetics', 'Detailed Neuronal Models', 'Invertebrate', 'Methods'",
+        "header1": "'Ion Channel Kinetics', 'Calcium dynamics', 'Invertebrate', 'Detailed Neuronal Models'",
+        "header2": "'Ionic Channel Kinetics', 'Calcium dynamics', 'Detailed Neuronal Models', 'Intracellular Calcium', 'Invertebrate', 'Synaptic Integration'",
+        "header3": "'Ion Channel Kinetics', 'Calcium dynamics', 'Detailed Neuronal Models', 'Invertebrate'"
+    },
+    "267357": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'Ion Channel Kinetics', 'Parameter Fitting', 'Simplified Models', 'Methods', 'Parametersensitivity', 'Calibration'",
+        "header1": "'Ion Channel Kinetics', 'Simplified Models', 'Sodium pump'",
+        "header2": "'action Potentials', 'Ion Channel Kinetics', 'Simplified Models', 'Sodium pump'",
+        "header3": "'Ion Channel Kinetics', 'Simplified Models', 'Sodium pump', 'Phases', 'Action Potentials'"
+    },
+    "2014832": {
+        "com_var1": "'Ion Channel Kinetics', 'Simplified Models', 'Calcium dynamics', 'Depolarization block'",
+        "com_var2": "'Ian Channel Kinetics', 'Dendritic Action Potentials', 'Calcium dynamics', 'Active Dendrites', 'Simplified Models', 'Detailed Neuronal Models', 'Dendritic Bistability', 'Oscillations', 'Bursts', 'Temporal Pattern Generation', 'Spatio-temporal Activity Patterns', 'Parameter Fitting',  'Intrinsic plasticity', 'Calcium waves', 'Synaptic Integration', 'Homeostasis', 'Membrane Properties', 'Connectivity matrix', 'Neuromodulation'",
+        "com_var3": "'Ion Channel Kinetics', 'Action Potentials', 'Dendritic Action Potentials', 'Detailed Neuronal Models', 'Calcium dynamics'",
+        "header1": "'Detailed Neuronal Models', 'Synaptic Plasticity', 'Synaptic Integration', 'Influence of Dendritic Geometry'",
+        "header2": "'Influence of Dendritic Geometry', 'Detailed Neuronal Models', 'Synaptic Integration', 'Conductance distributions'",
+        "header3": "'Active Dendrites', 'Detailed Neuronal Models', 'Synaptic Integration'"
+    },
+    "2016658": {
+        "com_var1": "'Ion Channel Kinetics', 'Detailed Neuronal Models', 'Synaptic Integration'",
+        "com_var2": "'Ion Channel Kinetics', 'Synaptic Integration', 'Detailed Neuronal Models'",
+        "com_var3": "'Action Potential Initiation', 'Ion Channel Kinetics', 'Synaptic Integration', 'Detailed Neuronal Models'",
+        "header1": "'Ion Channel Kinetics', 'Detailed Neuronal Models', 'Synaptic Integration', 'Temperature', 'Action Potentials', 'Membrane Properties', 'Excitability'",
+        "header2": "'Ion Channel Kinetics', 'Detailed Neuronal Models'",
+        "header3": "'Ion Channel Kinetics', 'Detailed Neuronal Models', 'Membrane Properties', 'Temperature'"
+    },
+    "266844": {
+        "com_var1": "'Detailed Neuronal Models', 'Dendritic Action Potentials', 'Ion Channel Kinetics', 'Calcium dynamics', 'Active Dendrites', 'Synaptic Integration'",
+        "com_var2": "'Dendritic Action Potentials', 'Ion Channel Kinetics', 'Active Dendrites', 'Calcium dynamics'",
+        "com_var3": "'Dendritic Action Potentials', 'Ion Channel Kinetics', 'Action Potentials', 'Calcium dynamics', 'Synaptic Integration', 'Detailed Neuronal Models', 'Active Dendrites'",
+        "header1": "'Ion Channel Kinetics', 'Calcium dynamics', 'Synaptic Plasticity', 'Depression', 'Detailed Neuronal Models', 'Short-term Synaptic Plasticity'",
+        "header2": "'Ion Channel Kinetics', 'Calcium dynamics', 'Synaptic Plasticity', 'Short-term Synaptic Plasticity', 'Depression'",
+        "header3": "'Ion Channel Kinetics', 'Calcium dynamics', 'Synaptic Plasticity', 'Depression'"
+    },
+    "267088": {
+        "com_var1": "'Action Potential Initiation', 'Dendritic Action Potentials', 'Ion Channel Kinetics', 'Synaptic Plasticity', 'Synchronization', 'Depolarization block', 'Coincidence Detection', 'Temporal Pattern Generation', 'Parameter Fitting', 'Simplified Models', 'Active Dendrites', 'Detailed Neuronal Models', 'Short-term Synaptic Plasticity', 'Axonal Action Potentials', 'Electrotonus', 'Synaptic Integration', 'Calibration', 'Activity Patterns', 'Intrinsic plasticity', 'Spatio-temporal Activity Patterns'",
+        "com_var2": "'Action Potential Initiation', 'Dendritic Action Potentials', 'Ion Channel Kinetics', 'Active Dendrites', 'Detailed Neuronal Models', 'Parameter Fitting'",
+        "com_var3": "'Dendritic Action Potentials', 'Coincidence Detection', 'Active Dendrites'",
+        "header1": "'Action Potential Initiation', 'Axonal Action Potentials', 'Detailed Neuronal Models', 'Ion Channel Kinetics'",
+        "header2": "'Action Potential Initiation', 'Ion Channel Kinetics', 'Axonal Action Potentials', 'Action Potentials', 'Detailed Neuronal Models'",
+        "header3": "'Action Potential Initiation', 'Axonal Action Potentials', 'Action Potentials', 'Ion Channel Kinetics', 'Detailed Neuronal Models'"
+    },
+    "267329": {
+        "com_var1": "'Connectivity matrix', 'Ion Channel Kinetics', 'Spatio-temporal Activity Patterns', 'Oscillations', 'Synchronization'",
+        "com_var2": "'Connectivity matrix', 'Spatio-temporal Activity Patterns', 'Activity Patterns', 'Synchronization'",
+        "com_var3": "'Connectivity matrix', 'Spatio-temporal Activity Patterns', 'Ion Channel Kinetics', 'Synchronization', 'Oscillations', 'Activity Patterns'",
+        "header1": "'Ion Channel Kinetics', 'Oscillations', 'Synchronization', 'Spatio-temporal Activity Patterns', 'Connectivity matrix', 'Synaptic Integration'",
+        "header2": "'Ion Channel Kinetics', 'Synchronization', 'Oscillations', 'Spatio-temporal Activity Patterns', 'Connectivity matrix'",
+        "header3": "'Connectivity matrix', 'Ion Channel Kinetics', 'Spatio-temporal Activity Patterns', 'Oscillations', 'Synchronization'"
+    },
+    "267728": {
+        "com_var1": "'Axonal Action Potentials', 'Extracellular Fields', 'Detailed Neuronal Models'",
+        "com_var2": "'Action Potential Initiation', 'Axonal Action Potentials', 'Extracellular Fields', 'Detailed Neuronal Models'",
+        "com_var3": "'Action Potentials', 'Axonal Action Potentials', 'Extracellular Fields', 'Excitability', 'Therapeutics'",
+        "header1": "'Ion Channel Kinetics', 'Action Potentials', 'Axonal Action Potentials', 'Temperature', 'Depolarization block'",
+        "header2": "'Action Potentials', 'Axonal Action Potentials', 'Ion Channel Kinetics', 'Excitability'",
+        "header3": "'Action Potentials', 'Axonal Action Potentials', 'Ion Channel Kinetics', 'Excitability'"
+    },
+    "2015412": {
+        "com_var1": "'Bursting', 'Ion Channel Kinetics', 'Temperature', 'Calcium dynamics', 'Sensory coding'",
+        "com_var2": "'Bursting', 'Ion Channel Kinetics', 'Temperature', 'Sensory processing', 'Calcium dynamics'",
+        "com_var3": "'Bursting', 'Ion Channel Kinetics', 'Temperature'",
+        "header1": "'Sensory coding', 'Bursting', 'Ion Channel Kinetics', 'Temperature', 'Calcium dynamics'",
+        "header2": "'Bursting', 'Ion Channel Kinetics', 'Calcium dynamics', 'Temperature', 'Sensory coding', 'Invertebrate'",
+        "header3": "'Bursting', 'Ion Channel Kinetics', 'Temperature', 'Sensory coding', 'Invertebrate', 'Calcium dynamics'"
+    },
+    "267253": {
+        "com_var1": "'Activity Patterns', 'Parameter Fitting', 'Simplified Models'",
+        "com_var2": "'Parameter Fitting'",
+        "com_var3": "'none'",
+        "header1": "'Oscillations', 'Bursting', 'Temporal Pattern Generation', 'Parameter Fitting'",
+        "header2": "'Activity Patterns', 'Bursting', 'Temporal Pattern Generation', 'Oscillations', 'Synchronization', 'Parameter Fitting'",
+        "header3": "'Bursting', 'Oscillations', 'Temporal Pattern Generation', 'Parameter Fitting'"
+    },
+    "2014821": {
+        "com_var1": "'Action Potentials', 'Axonal Action Potentials', 'Detailed Neuronal Models', 'Ion Channel Kinetics', 'Synaptic Integration'",
+        "com_var2": "'Ion Channel Kinetics', 'Axonal Action Potentials', 'Conductances estimation', 'Parameter sensitivity', 'Membrane Properties'",
+        "com_var3": "'Action Potentials', 'Axonal Action Potentials', 'Ion Channel Kinetics', 'Detailed Neuronal Models', 'Methods'",
+        "header1": "'Ion Channel Kinetics', 'Calcium dynamics', 'Parameter Fitting', 'Voltage transfer ratio'",
+        "header2": "'Ion Channel Kinetics', 'Calcium dynamics', 'Synchronization', 'Detailed Neuronal Models', 'Parameter Fitting'",
+        "header3": "'Ion Channel Kinetics', 'Calcium dynamics', 'Parameter Fitting', 'Detailed Neuronal Models', 'Pathophysiology', 'Multiple sclerosis'"
+    },
+    "267252": {
+        "com_var1": "'Oscillations', 'Calcium dynamics', 'Synchronization', 'Spike Frequency Adaptation', 'Respiratory control'",
+        "com_var2": "'Oscillations', 'Calcium dynamics', 'Respiratory control', 'Short-term Synaptic Plasticity', 'Intrinsic plasticity'",
+        "com_var3": "'Calcium dynamics', 'Oscillations', 'Respiratory control', 'Activity Patterns'",
+        "header1": "'Oscillations', 'Calcium dynamics', 'Respiratory control'",
+        "header2": "'Calcium dynamics', 'Oscillations', 'Respiratory control', 'Simplified Models'",
+        "header3": "'Calcium dynamics', 'Respiratory control', 'Oscillations'"
+    },
+    "267646": {
+        "com_var1": "'Pattern Recognition', 'Activity Patterns', 'Synaptic Plasticity', 'Therapeutics', 'Connectivity matrix'",
+        "com_var2": "'Pattern Recognition', 'Activity Patterns', 'Spatio-temporal Activity Patterns', 'Connectivity matrix'",
+        "com_var3": "'Pattern Recognition', 'Parameter Fitting', 'Simplified Models', 'Connectivity matrix'",
+        "header1": "'Action Potentials', 'Ion Channel Kinetics', 'Oscillations', 'Calcium dynamics', 'Pathophysiology', 'Pattern Separation'",
+        "header2": "'Ion Channel Kinetics', 'Oscillations', 'Calcium dynamics', 'Detailed Neuronal Models', 'Pattern Recognition', 'Spatio-temporal Activity Patterns', 'Intrinsic plasticity'",
+        "header3": "'Activity Patterns', 'Ion Channel Kinetics', 'Oscillations', 'Calibration', 'Dendritic Action Potentials', 'Synaptic Integration', 'Calcium dynamics', 'Connectivity matrix', 'Temporal Coding'"
+    },
+    "267596": {
+        "com_var1": "'Pattern Recognition', 'Activity Patterns', 'Temporal Pattern Generation', 'Parameter Fitting', 'Simplified Models', 'Detailed Neuronal Models', 'Methods', 'Parameter sensitivity', 'Bifurcation', 'Stochastic simulation'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Action Potentials', 'Axonal Action Potentials', 'Synaptic Integration', 'Simplified Models', 'Learning', 'Tutorial/Teaching', 'Synaptic Plasticity', 'Activity Patterns'",
+        "header2": "'Synaptic Integration', 'Action Potentials', 'Axonal Action Potentials', 'Synaptic Plasticity', 'Short-term Synaptic Plasticity', 'Active Dendrites', 'Simplified Models', 'Electrotonus', 'Learning'",
+        "header3": "'Action Potential Initiation', 'Dendritic Action Potentials', 'Ion Channel Kinetics', 'Synaptic Integration', 'Learning', 'Memory', 'Synaptic Plasticity', 'Rate-coding model neurons', 'Simple Models', 'Detailed Neuronal Models', 'Methods', 'Synaptic Amplification', 'Synaptic Convergence'"
+    },
+    "267583": {
+        "com_var1": "'Ion Channel Kinetics', 'Calcium dynamics', 'Spike Frequency Adaptation', 'Membrane Properties'",
+        "com_var2": "'Ion Channel Kinetics', 'Calcium dynamics', 'Membrane Properties'",
+        "com_var3": "'Ion Channel Kinetics', 'Action Potentials', 'Calcium dynamics', 'Membrane Properties'",
+        "header1": "'Ion Channel Kinetics', 'Parameter Fitting', 'Calcium dynamics', 'Conductances estimation'",
+        "header2": "'Ion Channel Kinetics', 'Parameter Fitting', 'Detailed Neuronal Models', 'Calcium dynamics', 'Conductances estimation'",
+        "header3": "'Ion Channel Kinetics', 'Parameter Fitting', 'Calcium dynamics', 'Conductances estimation'"
+    },
+    "267561": {
+        "com_var1": "'Bursting', 'Ion Channel Kinetics', 'Oscillations', 'Synchronization', 'Calcium dynamics'",
+        "com_var2": "'Bursting', 'Ion Channel Kinetics', 'Synchronization', 'Oscillations'",
+        "com_var3": "'Bursting', 'Ion Channel Kinetics', 'Oscillations', 'Synchronization', 'Calcium dynamics'",
+        "header1": "'Bursting', 'Ion Channel Kinetics', 'Oscillations', 'Synchronization', 'Electrotonus'",
+        "header2": "'Bursting', 'Ion Channel Kinetics', 'Oscillations', 'Synchronization', 'Simplified Models'",
+        "header3": "'Bursting', 'Ion Channel Kinetics', 'Oscillations', 'Synchronization', 'Parameter Fitting', 'Simplified Models', 'Calcium dynamics', 'Conductance distributions'"
+    },
+    "2017405": {
+        "com_var1": "'Action Potential Initiation', 'Axonal Action Potentials', 'Ion Channel Kinetics', 'Deep brain stimulation', 'Activity Patterns', 'Simplified Models', 'Detailed Neuronal Models'",
+        "com_var2": "'Action Potentials', 'Ion Channel Kinetics', 'Deep brain stimulation', 'Activity Patterns', 'Simplified Models'",
+        "com_var3": "'Simplified Models', 'Detailed Neuronal Models', 'Deep brain stimulation', 'Activity Patterns', 'Conductance distributions', 'Ion Channel Kinetics'",
+        "header1": "'Action Potential Initiation', 'Activity Patterns', 'Ion Channel Kinetics', 'Synchronization', 'Spatio-temporal Activity Patterns', 'Simplified Models', 'Axonal Action Potentials'",
+        "header2": "'Simplified Models', 'Activity Patterns', 'Conductance distributions', 'Axonal Action Potentials'",
+        "header3": "'Simplified Models', 'Action Potentials', 'Activity Patterns', 'Conductance distributions'"
+    },
+    "2015414": {
+        "com_var1": "'Signaling pathways', 'Ion Channel Kinetics', 'Neuromodulation', 'Synaptic Integration', 'Synaptic Plasticity', 'Detailed Neuronal Models', 'Neurotransmitter dynamics'",
+        "com_var2": "'Ion Channel Kinetics', 'Signaling pathways', 'Synaptic Integration', 'Synaptic Plasticity', 'Neuromodulation'",
+        "com_var3": "'Ion Channel Kinetics', 'Synaptic Integration', 'Neuromodulation', 'Calcium dynamics', 'Signaling pathways', 'Synaptic Plasticity'",
+        "header1": "'Neuromodulation', 'Calcium dynamics', 'Synaptic Plasticity'",
+        "header2": "'Action Potential Initiation', 'Ion Channel Kinetics', 'Calcium dynamics', 'Neuromodulation', 'Synaptic Integration'",
+        "header3": "'Action Potential Initiation', 'Ion Channel Kinetics', 'Calcium dynamics', 'Neuromodulation'"
+    },
+    "2016659": {
+        "com_var1": "'Parameter Fitting'",
+        "com_var2": "'Parameter Fitting'",
+        "com_var3": "'Parameter Fitting', 'Simplified Models'",
+        "header1": "'Spatial Navigation', 'Grid cell', 'Synaptic Plasticity', 'Learning'",
+        "header2": "'Spatial Navigation', 'Synaptic Plasticity', 'Grid cell', 'Place cell/field'",
+        "header3": "'Grid cell', 'Synaptic Plasticity', 'Long-term Synaptic Plasticity', 'Spatial Navigation'"
+    },
+    "2014833": {
+        "com_var1": "'Learning', 'Pattern Recognition', 'Reinforcement Learning', 'Unsupervised Learning', 'Synaptic Plasticity'",
+        "com_var2": "'Learning', 'Reinforcement Learning', 'Unsupervised Learning', 'Pattern Recognition', 'Parameter Fitting', 'Synaptic Integration', 'Memory', 'Sensory processing', 'Pattern Separation', 'Memory', 'Storage/recall', 'Sequence learning', 'Structural plasticity'",
+        "com_var3": "'Pattern Recognition', 'Learning', 'Reinforcement Learning', 'Unsupervised Learning', 'Attractor Neural Network', 'Winner-take-all', 'Synaptic Integration'",
+        "header1": "'Pattern Recognition', 'Learning', 'Reinforcement Learning', 'Unsupervised Learning', 'Memory', 'Activity Patterns'",
+        "header2": "'Pattern Recognition', 'Learning', 'Reinforcement Learning', 'Unsupervised Learning', 'Action Selection/Decision Making', 'Memory', 'Perceptual Categories'",
+        "header3": "'Pattern Recognition', 'Learning', 'Perceptual Categories', 'Action Selection/Decision Making'"
+    },
+    "267599": {
+        "com_var1": "'Action Potentials', 'Detailed Neuronal Models', 'Simplified Models', 'Calcium dynamics', 'Ion Channel Kinetics'",
+        "com_var2": "'Action Potential Initiation', 'Ion Channel Kinetics', 'Dendritic Action Potentials', 'Calcium dynamics', 'Detailed Neuronal Models', 'Synaptic Integration', 'Active Dendrites', 'Influence of Dendritic Geometry'",
+        "com_var3": "'Ion Channel Kinetics', 'Dendritic Action Potentials', 'Calcium dynamics', 'Detailed Neuronal Models', 'Synaptic Integration', 'Active Dendrites', 'Influence of Dendritic Geometry'",
+        "header1": "'Ion Channel Kinetics', 'Calcium dynamics'",
+        "header2": "'Ion Channel Kinetics', 'Calcium dynamics', 'Dendritic Action Potentials', 'Active Dendrites'",
+        "header3": "'Ion Channel Kinetics', 'Calcium dynamics', 'Dendritic Action Potentials', 'Detailed Neuronal Models'"
+    },
+    "267566": {
+        "com_var1": "'Ion Channel Kinetics', 'Bursting', 'Calcium dynamics'",
+        "com_var2": "'Bursting', 'Ion Channel Kinetics', 'Calcium dynamics'",
+        "com_var3": "'Bursting', 'Ion Channel Kinetics', 'Calcium dynamics', 'Oscillations'",
+        "header1": "'Bursting', 'Ion Channel Kinetics', 'Calcium dynamics', 'Membrane Properties'",
+        "header2": "'Bursting', 'Ion Channel Kinetics', 'Calcium dynamics'",
+        "header3": "'Bursting', 'Ion Channel Kinetics', 'Calcium dynamics'"
+    },
+    "2015571": {
+        "com_var1": "'Action Potential Initiation', 'Axonal Action Potentials', 'Detailed Neuronal Models', 'Tutorial/Teaching', 'Ion Channel Kinetics'",
+        "com_var2": "'Action Potentials', 'Axonal Action Potentials', 'Action Potential Initiation'",
+        "com_var3": "'Action Potentials', 'Axonal Action Potentials', 'Ion Channel Kinetics', 'Tutorial/Teaching', 'Detailed Neuronal Models', 'Spatio-temporal Activity Patterns'",
+        "header1": "'Ion Channel Kinetics', 'Detailed Neuronal Models', 'Parameter Fitting'",
+        "header2": "'Ion Channel Kinetics', 'Parameter Fitting', 'Detailed Neuronal Models'",
+        "header3": "'Ion Channel Kinetics', 'Parameter Fitting', 'Detailed Neuronal Models'"
+    },
+    "267586": {
+        "com_var1": "'Parameter Fitting', 'Simplified Models', 'Learning', 'Reinforcement Learning'",
+        "com_var2": "'Parameter Fitting', 'Reinforcement Learning', 'Simplified Models'",
+        "com_var3": "'Parameter Fitting', 'Simplified Models', 'Methods', 'Motor control', 'Learning', 'Reinforcement Learning', 'Memory', 'Synaptic Integration'",
+        "header1": "'Parameter Fitting', 'Simplified Models', 'Methods'",
+        "header2": "'Parameter Fitting', 'Simplified Models', 'Learning', 'Motor control'",
+        "header3": "'Parameter Fitting', 'Simplified Models', 'Methods'"
+    },
+    "267564": {
+        "com_var1": "'Oscillations', 'Calcium dynamics', 'Calcium waves'",
+        "com_var2": "'Oscillations', 'Calcium dynamics', 'Synaptic Integration', 'Channel'",
+        "com_var3": "'Oscillations', 'Electrotonus', 'Calcium dynamics'",
+        "header1": "'Oscillations', 'Calcium dynamics'",
+        "header2": "'Ion Channel Kinetics', 'Oscillations', 'Calcium dynamics'",
+        "header3": "'Oscillations', 'Calcium dynamics'"
+    },
+    "267018": {
+        "com_var1": "'Synaptic Integration', 'Reaction-diffusion', 'Calcium dynamics'",
+        "com_var2": "'none'",
+        "com_var3": "'Reaction-diffusion', 'Calcium dynamics', 'Synaptic Integration', 'Spatio-temporal Activity Patterns', 'Detailed Neuronal Models', 'Methods'",
+        "header1": "'Reaction-diffusion', 'Cellular volume dynamics', 'Calcium dynamics', 'Calcium waves', 'Detailed Neuronal Models', 'Synaptic Integration', 'Methods'",
+        "header2": "'Reaction-diffusion', 'Calcium dynamics', 'Detailed Neuronal Models', 'Methods'",
+        "header3": "'Reaction-diffusion', 'Calcium dynamics', 'Detailed Neuronal Models', 'Methods', 'Dendritic Bistability'"
+    },
+    "267250": {
+        "com_var1": "'Circadian Rhythms', 'Phase Response Curves'",
+        "com_var2": "'Phase Response Curves', 'Circadian Rhythms'",
+        "com_var3": "'Circadian Rhythms', 'Phase Response Curves'",
+        "header1": "'Phase Response Curves', 'Circadian Rhythms'",
+        "header2": "'Circadian Rhythms', 'Phase Response Curves'",
+        "header3": "'Circadian Rhythms', 'Oscillations', 'Phase Response Curves'"
+    },
+    "267221": {
+        "com_var1": "'Synaptic Plasticity', 'Synaptic Integration', 'Detailed Neuronal Models', 'Synaptic-input statistic'",
+        "com_var2": "'Synaptic Integration', 'Detailed Neuronal Models', 'Synaptic Plasticity', 'Dendritic Action Potentials'",
+        "com_var3": "'Synaptic Integration', 'Synaptic Plasticity', 'Detailed Neuronal Models', 'Short-term Synaptic Plasticity'",
+        "header1": "'Ion Channel Kinetics', 'Dendritic Action Potentials', 'Synaptic Integration', 'Detailed Neuronal Models', 'Calcium dynamics'",
+        "header2": "'Detailed Neuronal Models', 'Synaptic Integration', 'Ion Channel Kinetics', 'Synaptic Plasticity'",
+        "header3": "'Dendritic Action Potentials', 'Synaptic Integration', 'Ion Channel Kinetics', 'Calcium dynamics', 'Detailed Neuronal Models'"
+    },
+    "2015411": {
+        "com_var1": "'Spike Frequency Adaptation', 'Temporal Pattern Generation', 'Oscillations', 'Synchronization', 'Spatio-temporal Activity Patterns', 'Parameter Fitting', 'Synaptic Integration', 'Bursting'",
+        "com_var2": "'Activity Patterns', 'Synchronization', 'Spatio-temporal Activity Patterns', 'Parameter Fitting', 'Simplified Models', 'Detailed Neuronal Models', 'Methods', 'Connectivity matrix'",
+        "com_var3": "none",
+        "header1": "'Action Potentials', 'Synaptic Integration', 'Motor control', 'Spike Frequency Adaptation', 'Pattern Recognition', 'Activity Patterns', 'Simplified Models'",
+        "header2": "'Action Potentials', 'Motor control', 'Spike Frequency Adaptation', 'Synchronization', 'Temporal Pattern Generation', 'Simplified Models'",
+        "header3": "'Action Potentials', 'Motor control', 'Synchronization', 'Simplified Models', 'Spatio-temporal Activity Patterns'"
+    },
+    "267620": {
+        "com_var1": "'Ion Channel Kinetics', 'Action Potentials', 'Sodium pump', 'Depolarization block'",
+        "com_var2": "'Ion Channel Kinetics', 'Action Potentials', 'Detailed Neuronal Models', 'Sodium pump'",
+        "com_var3": "'Action Potentials', 'Ion Channel Kinetics', 'Sodium pump', 'Spike Frequency Adaptation', 'Conductances estimation'",
+        "header1": "'Ion Channel Kinetics', 'Invertebrate', 'Sodium pump'",
+        "header2": "'Invertebrate', 'Ion Channel Kinetics', 'Sodium pump', 'Action Potentials'",
+        "header3": "'Action Potentials', 'Ion Channel Kinetics', 'Invertebrate', 'Simplified Models', 'Sodium pump'"
+    },
+    "267563": {
+        "com_var1": "'Ion Channel Kinetics', 'Calcium dynamics', 'Heart disease', 'Cardiac pacemaking', 'Electrotonus'",
+        "com_var2": "'Calcium dynamics', 'Cardiac pacemaking'",
+        "com_var3": "'Ion Channel Kinetics', 'Calcium dynamics', 'Cardiac pacemaking'",
+        "header1": "'Cardiac pacemaking', 'Calcium dynamics', 'Ion Channel Kinetics', 'Heart disease', 'Triggered activity'",
+        "header2": "'Ion Channel Kinetics', 'Calcium dynamics', 'Triggering activity', 'Cardiac pacemaking'",
+        "header3": "'Action Potentials', 'Ion Channel Kinetics', 'Calcium dynamics', 'Cardiac pacemaking', 'Heart disease', 'Bifurcation'"
+    },
+    "267512": {
+        "com_var1": "'Action Potentials', 'Axonal Action Potentials', 'Ion Channel Kinetics', 'Detailed Neuronal Models', 'Synaptic Plasticity'",
+        "com_var2": "'Action Potentials', 'Ion Channel Kinetics', 'Axonal Action Potentials', 'Detailed Neuronal Models', 'Synaptic Integration', 'Intrinsic plasticity'",
+        "com_var3": "'Action Potentials', 'Ion Channel Kinetics', 'Axonal Action Potentials', 'Synaptic Integration'",
+        "header1": "'Ion Channel Kinetics', 'Calcium dynamics', 'Axonal Action Potentials', 'Subthreshold signaling'",
+        "header2": "'Ion Channel Kinetics', 'Action Potentials', 'Subthreshold signaling', 'Axonal Action Potentials', 'Axonal Action Potentials'",
+        "header3": "'Axonal Action Potentials', 'Ion Channel Kinetics', 'Subthreshold signaling', 'Calcium dynamics'"
+    },
+    "267589": {
+        "com_var1": "'Ion Channel Kinetics', 'Synaptic Plasticity', 'Temperature'",
+        "com_var2": "'Ion Channel Kinetics', 'Temperature', 'Spatio-temporal Activity Patterns', 'Parameter Fitting', 'Detailed Neuronal Models', 'Homeostasis'",
+        "com_var3": "'Ion Channel Kinetics', 'Detailed Neuronal Models', 'Parameter Fitting', 'Temperature', 'Homeostasis'",
+        "header1": "'Parameter Fitting', 'Development', 'Vision', 'Synaptic Integration', 'Detailed Neuronal Models', 'Temperature'",
+        "header2": "'Action Potential Initiation', 'Parameter Fitting', 'Development', 'Detailed Neuronal Models'",
+        "header3": "'Parameter Fitting', 'Detailed Neuronal Models', 'Development', 'Vision'"
+    },
+    "267562": {
+        "com_var1": "'Calcium dynamics', 'Parameter sensitivity', 'Synaptic Amplification'",
+        "com_var2": "'Parameter Fitting', 'Calcium dynamics', 'Pathophysiology'",
+        "com_var3": "'Calcium dynamics', 'Secretion', 'Ion Channel Kinetics', 'Parameter Fitting', 'Intrinsic plasticity'",
+        "header1": "'Ion Channel Kinetics', 'Oscillations', 'Calcium dynamics', 'Parameter sensitivity'",
+        "header2": "'Calcium dynamics', 'Oscillations', 'Synchronization', 'Parameter sensitivity', 'Negative feedback'",
+        "header3": "'Oscillations', 'Calcium dynamics', 'Ion Channel Kinetics'"
+    },
+    "267259": {
+        "com_var1": "'Influence of Dendritic Geometry'",
+        "com_var2": "'Active Dendrites', 'Influence of Dendritic Geometry', 'Detailed Neuronal Models'",
+        "com_var3": "'Influence of Dendritic Geometry', 'Detailed Neuronal Models'",
+        "header1": "'Spreading depression', 'Dendritic Bistability', 'Influence of Dendritic Geometry', 'Detailed Neuronal Models', 'Synaptic Integration', 'Parameter Fitting', 'Spatio-temporal Activity Patterns'",
+        "header2": "'Influence of Dendritic Geometry', 'Detailed Neuronal Models', 'Anoxic depolarization', 'Spreading depression'",
+        "header3": "'Spreading depression', 'Dendritic Action Potentials', 'Influence of Dendritic Geometry', 'Detailed Neuronal Models', 'Synaptic Integration', 'Extracellular Fields', 'Depolarization block', 'Anoxic depolarization', 'Soma-dendrite cross-talk', 'Dynamic extracellular concentrations'"
+    },
+    "2014822": {
+        "com_var1": "'Synaptic Plasticity', 'Long-term Synaptic Plasticity', 'Aging/Alzheimer`s', 'Intrinsic plasticity'",
+        "com_var2": "'Long-term Synaptic Plasticity', 'Alzheimer`s', 'Synaptic Plasticity', 'Aging/Alzheimer`s'",
+        "com_var3": "'Synaptic Plasticity', 'Long-term Synaptic Plasticity', 'Aging/Alzheimer`s', 'Pathophysiology'",
+        "header1": "'Ion Channel Kinetics', 'Calcium dynamics', 'Spatio-temporal Activity Patterns', 'Detailed Neuronal Models'",
+        "header2": "'Ion Channel Kinetics', 'Calcium dynamics', 'Dendritic Action Potentials'",
+        "header3": "'Ion Channel Kinetics', 'Calcium dynamics', 'Spike Frequency Adaptation', 'Detailed Neuronal Models'"
+    },
+    "260015": {
+        "com_var1": "'Activity Patterns', 'Synchronization', 'Spatio-temporal Activity Patterns'",
+        "com_var2": "'Activity Patterns', 'Spatio-temporal Activity Patterns', 'Synchronization', 'Rate-coding model neurons', 'Laminar Connectivity'",
+        "com_var3": "'Activity Patterns', 'Synchronizations', 'Spatio-temporal Activity Patterns', 'Detailed Neuronal Models'",
+        "header1": "'Pattern Recognition', 'Activity Patterns', 'Spatio-temporal Activity Patterns', 'Connectivity matrix', 'UMAP'",
+        "header2": "'Pattern Recognition', 'Activity Patterns', 'Oscillations', 'Spatio-temporal Activity Patterns', 'Synchronization', 'Unsupervised Learning'",
+        "header3": "'Spatio-temporal Activity Patterns', 'Synchronization', 'Pattern Recognition', 'Activity Patterns', 'Unsupervised Learning', 'Spike Frequency Adaptation', 'Synaptic Integration', 'Connectivity matrix'"
+    },
+    "267595": {
+        "com_var1": "'Synchronization', 'Connectivity matrix', 'Synaptic Plasticity', 'Short-term Synaptic Plasticity', 'Depression', 'Facilitation', 'Detailed Neuronal Models', 'Extracellular Fields', 'Parameter sensitivity', 'Conductance distributions', 'Neuron models', 'Multiscale', 'Dynamic extracellular concentrations'",
+        "com_var2": "'Action Potential Initiation', 'Detailed Neuronal Models', 'Synaptic Plasticity', 'Short-term Synaptic Plasticity', 'Facilitation', 'Depression', 'Connectivity matrix'",
+        "com_var3": "'Short-term Synaptic Plasticity', 'Facilitation', 'Depression', 'Connectivity matrix', 'Extracellular Fields', 'Major Depression Disease (MDD)'",
+        "header1": "'Ion Channel Kinetics', 'Synaptic Plasticity', 'Short-term Synaptic Plasticity', 'Detailed Neuronal Models'",
+        "header2": "'Ion Channel Kinetics', 'Synaptic Plasticity', 'Short-term Synaptic Plasticity', 'Detailed Neuronal Models', 'Calcium dynamics'",
+        "header3": "'Ion Channel Kinetics', 'Short-term Synaptic Plasticity', 'Synaptic Plasticity', 'Dendritic Bistability', 'Detailed Neuronal Models', 'Calcium dynamics'"
+    },
+    "267621": {
+        "com_var1": "'Action Potentials', 'Parameter Fitting', 'Oscillations'",
+        "com_var2": "'Oscillations', 'Bursting', 'Parameter Fitting', 'Detailed Neuronal Models', 'Calcium dynamics', 'Ion Channel Kinetics', 'Connectivity matrix', 'Synaptic Integration'",
+        "com_var3": "'Bursting', 'Ion Channel Kinetics', 'Dendritic Action Potentials', 'Parameter Fitting', 'Detailed Neuronal Models', 'Calcium dynamics', 'Synaptic Integration', 'Depolarization block', 'Conductances estimation'",
+        "header1": "'Detailed Neuronal Models', 'Ion Channel Kinetics', 'Pathophysiology', 'Invertebrate'",
+        "header2": "'Ion Channel Kinetics', 'Oscillations', 'Synchronization', 'Detailed Neuronal Models', 'Invertebrate', 'Pathophysiology'",
+        "header3": "'Ion Channel Kinetics', 'Oscillations', 'Synchronization', 'Detailed Neuronal Models'"
+    },
+    "2015410": {
+        "com_var1": "'Ion Channel Kinetics', 'Dendritic Action Potentials', 'Synaptic Plasticity', 'Calcium dynamics', 'Active Dendrites', 'Detailed Neuronal Models'",
+        "com_var2": "'Detailed Neuronal Models', 'Ion Channel Kinetics', 'Calcium dynamics', 'Synaptic Integration', 'Active Dendrites'",
+        "com_var3": "'Ion Channel Kinetics', 'Dendritic Action Potentials', 'Action Potentials', 'Synaptic Integration', 'Parameter Fitting', 'Calcium dynamics', 'Active Dendrites', 'Membrane Properties'",
+        "header1": "'Ion Channel Kinetics', 'Calcium dynamics'",
+        "header2": "'Ion Channel Kinetics', 'Calcium dynamics', 'Detailed Neuronal Models', 'Parameter Fitting'",
+        "header3": "'Ion Channel Kinetics', 'Calcium dynamics', 'Detailed Neuronal Models'"
+    },
+    "267565": {
+        "com_var1": "'Ion Channel Kinetics', 'Oscillations', 'Calcium dynamics'",
+        "com_var2": "'Oscillations', 'Calcium dynamics'",
+        "com_var3": "'Oscillations', 'Synaptic Integration', 'Calcium dynamics', 'Agent-Based Models', 'Biofeedback', 'Spreading depression', 'Memory', 'Action Potentials', 'Bursting', 'Ion Channel Kinetics', 'Depolarization block'",
+        "header1": "'Oscillations', 'Calcium dynamics'",
+        "header2": "'Calcium dynamics', 'Oscillations', 'Bursting'",
+        "header3": "'Oscillations', 'Calcium dynamics'"
+    },
+    "267339": {
+        "com_var1": "'Pattern Recognition', 'Direction Selectivity', 'Motion Detection', 'Sensory coding', 'Spatial Navigation'",
+        "com_var2": "'Pattern Recognition', 'Motion Detection'",
+        "com_var3": "'Temporal Pattern Generation', 'Action Selection/Decision Making', 'Direction Selectivity', 'Posture and locomotion', 'Motor control'",
+        "header1": "'Pattern Recognition', 'Activity Patterns', 'Spatial Navigation'",
+        "header2": "'Pattern Recognition', 'Spatial Navigation', 'Learning', 'Action Selection/Decision Making'",
+        "header3": "'Learning', 'Pattern Recognition', 'Spatial Navigation', 'Synaptic Integration', 'Action Selection/Decision Making'"
+    },
+    "267501": {
+        "com_var1": "'Action Potentials', 'Dendritic Action Potentials', 'Calcium dynamics', 'Electrotonus', 'Synaptic Integration', 'Apical Dendrites'",
+        "com_var2": "'Dendritic Action Potentials', 'Electrotonus', 'Calcium dynamics', 'Detailed Neuronal Models', 'Synaptic Integration'",
+        "com_var3": "'Dendritic Action Potentials', 'Bursting', 'Electrotonus', 'Calcium dynamics'",
+        "header1": "'Ion Channel Kinetics', 'Calcium dynamics', 'Oscillations'",
+        "header2": "'Ion Channel Kinetics', 'Calcium dynamics'",
+        "header3": "'Ion Channel Kinetics', 'Calcium dynamics'"
+    },
+    "267499": {
+        "com_var1": "'Ion Channel Kinetics', 'External', 'Synchronization', 'Scaling', 'Calcium dynamics', 'Synaptic Integration', 'Sodium pump', 'Chloride regulation', 'Volume transmission', 'Reaction-diffusion'",
+        "com_var2": "'Ion Channel Kinetics', 'Sodium pump', 'Oscillations', 'Extracellular Fields', 'Calcium dynamics', 'Conductance distributions', 'Diffusion', 'Dendritic Action Potentials', 'Synaptic Integration', 'Nonlinear Dynamics', 'Biofeedback', 'Spatial Navigation', 'Synaptic Plasticity', 'Chloride regulation', 'Spatio-temporal Activity Patterns', 'Volume transmission'",
+        "com_var3": "'Action Potentials', 'Ion Channel Kinetics', 'Sodium pump', 'Calcium dynamics', 'Potassium buffering', 'Depolarization block', 'Synaptic Integration', 'Membrane Properties'",
+        "header1": "'Ion Channel Kinetics', 'Potassium buffering', 'Calcium dynamics', 'Cellular volume dynamics'",
+        "header2": "'Ion Channel Kinetics', 'Calcium dynamics', 'Potassium buffering', 'Dynamic extracellular concentrations'",
+        "header3": "'Ion Channel Kinetics', 'Epilepsy', 'Calcium dynamics', 'Potassium buffering', 'Cellular volume dynamics', 'Dynamic extracellular concentrations'"
+    },
+    "267355": {
+        "com_var1": "'Ion Channel Kinetics', 'Detailed Neuronal Models'",
+        "com_var2": "'Ion Channel Kinetics', 'Axonal Action Potentials', 'Calcium dynamics', 'Detailed Neuronal Models'",
+        "com_var3": "'Ionic Channel Kinetics', 'Axonal Action Potentials', 'Simulation', 'Detailed Neuronal Models'",
+        "header1": "'Ion Channel Kinetics', 'Calcium dynamics', 'Detailed Neuronal Models', 'Parameter Fitting', 'Calcium waves', 'Reaction-diffusion'",
+        "header2": "'Calcium dynamics', 'Ion Channel Kinetics', 'Detailed Neuronal Models', 'Parameter Fitting'",
+        "header3": "'Calcium dynamics', 'Ion Channel Kinetics', 'Action Potentials'"
+    },
+    "267754": {
+        "com_var1": "'Activity Patterns', 'Ion Channel Kinetics', 'Spatio-temporal Activity Patterns', 'Synaptic Integration', 'Conductance distributions', 'Sensory processing', 'Current Dipole'",
+        "com_var2": "'Action Potentials', 'Ion Channel Kinetics', 'Spatio-temporal Activity Patterns', 'Detailed Neuronal Models', 'Methods', 'Current Dipole'",
+        "com_var3": "'Activity Patterns', 'Ion Channel Kinetics', 'Spatio-temporal Activity Patterns', 'Methods', 'Electrotonus', 'Spike Frequency Adaptation', 'Conductance distributions', 'Information transfer', 'Membrane Properties'",
+        "header1": "'Action Potentials', 'Ion Channel Kinetics', 'Dendritic Action Potentials', 'Axonal Action Potentials', 'Detailed Neuronal Models'",
+        "header2": "'Ion Channel Kinetics', 'Action Potentials'",
+        "header3": "'Ion Channel Kinetics', 'Dendritic Action Potentials', 'Detailed Neuronal Models', 'Action Potentials'"
+    },
+    "267509": {
+        "com_var1": "'Coincidence Detection', 'Synaptic Integration', 'Dendritic Action Potentials', 'Detailed Neuronal Models', 'Active Dendrites'",
+        "com_var2": "'Dendritic Action Potentials', 'Coincidence Detection', 'Synaptic Integration', 'Active Dendrites', 'Detailed Neuronal Models', 'Synaptic Plasticity', 'Parameter Fitting'",
+        "com_var3": "'Coincidence Detection', 'Detailed Neuronal Models', 'Synaptic Integration', 'Dendritic Action Potentials', 'Action Potentials'",
+        "header1": "'Synaptic Integration', 'Short-term Synaptic Plasticity', 'Facilitation', 'Ion Channel Kinetics'",
+        "header2": "'Synaptic Integration', 'Ion Channel Kinetics', 'Facilitation', 'Short-term Synaptic Plasticity'",
+        "header3": "'Ion Channel Kinetics', 'Facilitation', 'Synaptic Integration'"
+    },
+    "2014830": {
+        "com_var1": "'Cellular volume dynamics', 'Electrodiffusion', 'Dynamic extracellular concentrations'",
+        "com_var2": "'Cellular volume dynamics', 'Electrodiffusion', 'Dynamic extracellular concentrations'",
+        "com_var3": "'Ion Channel Kinetics', 'Detailed Neuronal Models', 'Membrane Properties', 'Electrodiffusion'",
+        "header1": "'Electrodiffusion', 'Dynamic extracellular concentrations', 'Cellular volume dynamics'",
+        "header2": "'Electrodiffusion', 'Dynamic extracellular concentrations', 'Cellular volume dynamics'",
+        "header3": "'Electrodiffusion', 'Cellular volume dynamics', 'Dynamic extracellular concentrations'"
+    },
+    "2016216": {
+        "com_var1": "'Action Potentials', 'Bursting', 'Depolarization block', 'Oscillations', 'Pattern Recognition', 'Temporal Pattern Generation', 'Spatio-temporal Activity Patterns', 'Activity Patterns'",
+        "com_var2": "'Bursting', 'Ramp-up Bursts', 'Depolarization block', 'Temporal Pattern Generation', 'Activity Patterns', 'Pattern Recognition', 'Respiratory control'",
+        "com_var3": "'Pattern Recognition', 'Bursting', 'Intrinsic plasticity', 'Spike Frequency Adaptation', 'Depolarization block', 'Respiratory control'",
+        "header1": "'Bursting', 'Parameter Fitting', 'Respiratory control'",
+        "header2": "'Action Potentials', 'Bursting', 'Ion Channel Kinetics', 'Parameter Fitting', 'Ramping', 'Respiratory control'",
+        "header3": "'Bursting', 'Ion Channel Kinetics', 'Parameter Fitting', 'Respiratory control'"
+    },
+    "267551": {
+        "com_var1": "'Synaptic Plasticity', 'Short-term Synaptic Plasticity', 'Simulation', 'Detailed Neuronal Models'",
+        "com_var2": "'Short-term Synaptic Plasticity', 'Simplified Models'",
+        "com_var3": "'none'",
+        "header1": "'Activity Patterns', 'Spatio-temporal Activity Patterns', 'Synaptic Plasticity', 'Short-term Synaptic Plasticity', 'Connectivity matrix'",
+        "header2": "'Activity Patterns', 'Detailed Neuronal Models', 'Sensory processing', 'Touch'",
+        "header3": "'Activity Patterns', 'Spatio-temporal Activity Patterns', 'Connectivity matrix', 'Sensory processing', 'Whisking'"
+    },
+    "267295": {
+        "com_var1": "'Parameter Fitting', 'Simplified Models', 'Connectivity matrix', 'Delay', 'Laminar Connectivity', 'Spatial connectivity'",
+        "com_var2": "'Parameter Fitting', 'Connectivity matrix', 'Laminar Connectivity', 'Homeostasis', 'Spatial connectivity', 'Balanced networks'",
+        "com_var3": "'Parameter Fitting', 'Connectivity matrix', 'Delay', 'Laminar Connectivity', 'Gradient', 'Spatio-temporal Activity Patterns', 'Synaptic Integration', 'Recurrent Discharge', 'Persistent activity', 'Spatial connectivity'",
+        "header1": "'Activity Patterns', 'Synchronization', 'Spatio-temporal Activity Patterns', 'Rate-coding model neurons', 'Connectivity matrix', 'Noise Sensitivity'",
+        "header2": "'Rate-coding model neurons', 'Brain Rhythms', 'Spatio-temporal Activity Patterns', 'Connectivity matrix', 'Parameter Fitting', 'Simplified Models'",
+        "header3": "'Activity Patterns', 'Oscillations', 'Rate-coding model neurons', 'Connectivity matrix', 'Persistent activity', 'Spatial connectivity'"
+    },
+    "267694": {
+        "com_var1": "'Dendritic Action Potentials', 'Bursting', 'Synaptic Integration', 'Electrophysiological', 'Detailed Neuronal Models', 'Neuronal Models', 'Active Dendrites', 'Intracortical Microstimulation', 'Dendritic Geometry', 'Synaptic Plasticity', 'Intrinsic plasticity', 'Spatio-temporal Activity Patterns'",
+        "com_var2": "'Dendritic Action Potentials', 'Bursting', 'Synaptic Integration', 'Detailed Neuronal Models', 'Dendritic Bistability', 'Influence of Dendritic Geometry', 'Synaptic Plasticity', 'Intrinsic plasticity', 'Model Maintenance', 'Computational Methods'",
+        "com_var3": "'Bursting', 'Dendritic Action Potentials', 'Detailed Neuronal Models', 'Synaptic Integration', 'Intrinsic plasticity'",
+        "header1": "'Detailed Neuronal Models', 'Short-term Synaptic Plasticity', 'Synaptic Integration', 'Facilitation'",
+        "header2": "'Detailed Neuronal Models', 'Synaptic Plasticity', 'Short-term Synaptic Plasticity', 'Electrotonus', 'Synaptic Integration'",
+        "header3": "'Detailed Neuronal Models', 'Synaptic Plasticity', 'Short-term Synaptic Plasticity', 'Synaptic Integration'"
+    },
+    "267768": {
+        "com_var1": "'Action Potentials', 'Synaptic Integration', 'Voltage transfer ratio', 'Excitability', 'Synaptic noise', 'Membrane Properties'",
+        "com_var2": "'none'",
+        "com_var3": "'Parameter Fitting', 'Simplified Models', 'Detailed Neuronal Models', 'Synaptic Integration'",
+        "header1": "'Simplified Models', 'Parameter Fitting', 'Network Model', 'Simulation', 'Therapeutics', 'Connectivity matrix', 'Synaptic Integration', 'Population Parameters', 'Cell Parameters'",
+        "header2": "'Simplified Models', 'Synaptic Integration', 'Parameter Fitting', 'Connectivity matrix', 'Neuron Model'",
+        "header3": "'Simplified Models', 'Detailed Neuronal Models', 'Synaptic Integration', 'Parametric Fitting', 'Simulation', 'Connectivity matrix'"
+    },
+    "267310": {
+        "com_var1": "'Activity Patterns', 'Rate-coding model neurons', 'Simplified Models', 'Oscillations', 'Synchronization', 'Parameter Fitting', 'Parameter sensitivity', 'Connectivity matrix'",
+        "com_var2": "'Rate-coding model neurons', 'Oscillations', 'Synchronization', 'Simplified Models', 'Parameter sensitivity'",
+        "com_var3": "'Rate-coding model neurons', 'Simplified Models', 'Oscillations', 'Parameter Fitting', 'Activity Patterns', 'Synchronization', 'Bifurcation', 'Parameter sensitivity', 'Spatio-temporal Activity Patterns'",
+        "header1": "'Rate-coding model neurons', 'Calcium dynamics', 'Up-Down state switching', 'Bifurcation'",
+        "header2": "'Rate-coding model neurons', 'Simplified Models', 'Parameter Fitting', 'Calcium dynamics', 'Oscillations', 'Synchronization', 'Spatio-temporal Activity Patterns'",
+        "header3": "'Activity Patterns', 'Rate-coding model neurons', 'Oscillations', 'Spike Frequency Adaptation', 'Calcium dynamics', 'Parameter Fitting', 'Simplified Models'"
+    },
+    "267686": {
+        "com_var1": "'Detailed Neuronal Models', 'Ion Channel Kinetics', 'Simplified Models', 'Parameter Fitting', 'Active Dendrites', 'Influence of Dendritic Geometry'",
+        "com_var2": "'Detailed Neuronal Models', 'Ion Channel Kinetics', 'Active Dendrites', 'Influence of Dendritic Geometry', 'Parameter Fitting', 'Synaptic Integration'",
+        "com_var3": "'Detailed Neuronal Models', 'Ion Channel Kinetics', 'Active Dendrites', 'Synaptic Integration', 'Influence of Dendritic Geometry'",
+        "header1": "'Ion Channel Kinetics', 'Synaptic Plasticity', 'Short-term Synaptic Plasticity', 'Calcium dynamics', 'Intrinsic plasticity'",
+        "header2": "'Ion Channel Kinetics', 'Short-term Synaptic Plasticity', 'Calcium dynamics'",
+        "header3": "'Ion Channel Kinetics', 'Calcium dynamics', 'Short-term Synaptic Plasticity'"
+    },
+    "267391": {
+        "com_var1": "'Parameter Fitting', 'Graph', 'Visualization', 'Simulations'",
+        "com_var2": "'Action Potentials', 'Parameter Fitting', 'Detailed Neuronal Models', 'Synaptic Integration', 'Electrotonus', 'Methods', 'Connectivity matrix', 'Sodium pump', 'Depolarization block', 'Conductances estimation'",
+        "com_var3": "'Action Potentials', 'Synaptic Integration', 'Active Dendrites', 'Detailed Neuronal Models', 'Tutorial/Teaching'",
+        "header1": "'Action Potential Initiation', 'Ion Channel Kinetics', 'Calcium dynamics', 'Parameter Fitting', 'Detailed Neuronal Models'",
+        "header2": "'Ion Channel Kinetics', 'Calcium dynamics', 'Detailed Neuronal Models', 'Parameter Fitting'",
+        "header3": "'Ion Channel Kinetics', 'Calcium dynamics', 'Parameter Fitting', 'Detailed Neuronal Models'"
+    },
+    "2014816": {
+        "com_var1": "'Ion Channel Kinetics', 'Axonal Action Potentials', 'Detailed Neuronal Models'",
+        "com_var2": "'Detailed Neuronal Models', 'Ion Channel Kinetics', 'Axonal Action Potentials', 'Active Dendrites', 'Long-term Synaptic Plasticity', 'Synaptic Integration', 'Influence of Dendritic Geometry'",
+        "com_var3": "'Ion Channel Kinetics', 'Detailed Neuronal Models', 'Methods'",
+        "header1": "'Ion Channel Kinetics', 'Calcium dynamics', 'Potassium buffering'",
+        "header2": "'Ion Channel Kinetics', 'Action Potentials', 'Calcium dynamics'",
+        "header3": "'Ion Channel Kinetics', 'Calcium dynamics'"
+    },
+    "266796": {
+        "com_var1": "'Multiple sclerosis', 'Sleep'",
+        "com_var2": "'Multiple sclerosis', 'Sleep'",
+        "com_var3": "'Sleep', 'Multiple sclerosis', 'Connectivity matrix'",
+        "header1": "'Ion Channel Kinetics', 'Spatio-temporal Activity Patterns', 'Synaptic Plasticity', 'Synaptic Integration', 'Noise Sensitivity'",
+        "header2": "'Ion Channel Kinetics', 'Noise Sensitivity', 'Synaptic Integration', 'Spatio-temporal Activity Patterns'",
+        "header3": "'Oscillations', 'Synchronization', 'Spatio-temporal Activity Patterns', 'Synaptic Plasticity', 'Noise Sensitivity', 'Synaptic Integration', 'Action Potentials', 'Memory'"
+    },
+    "2016219": {
+        "com_var1": "'Pattern Recognition', 'Spatio-temporal Activity Patterns', 'Grid cell'",
+        "com_var2": "'Pattern Recognition', 'Spatio-temporal Activity Patterns', 'Place cell/field', 'Grid cell'",
+        "com_var3": "'Pattern Recognition', 'Spatio-temporal Activity Patterns', 'Place cell/field', 'Grid cell'",
+        "header1": "'Pattern Recognition', 'Activity Patterns', 'Spatio-temporal Activity Patterns', 'Grid cell', 'Spatial Navigation'",
+        "header2": "'Pattern Recognition', 'Spatial Navigation', 'Grid cell'",
+        "header3": "'Pattern Recognition', 'Spatio-temporal Activity Patterns', 'Grid cell', 'Spatial Navigation'"
+    },
+    "185864": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'Action Potentials', 'Axonal Action Potentials', 'Detailed Neuronal Models'",
+        "header1": "'Axonal Action Potentials', 'Delay', 'Aging/Alzheimer`s'",
+        "header2": "'Axonal Action Potentials', 'Aging/Alzheimer`s', 'Delay'",
+        "header3": "'Axonal Action Potentials', 'Action Potentials', 'Aging/Alzheimer`s'"
+    },
+    "2016137": {
+        "com_var1": "'Synaptic Plasticity', 'Detailed Neuronal Models', 'Synaptic Integration', 'Electrotonus', 'Parameter Fitting', 'Dendritic Action Potentials'",
+        "com_var2": "'Parameter Fitting', 'Detailed Neuronal Models', 'Synaptic Integration', 'Influence of Dendritic Geometry', 'Ion Channel Kinetics'",
+        "com_var3": "'Ion Channel Kinetics', 'Influence of Dendritic Geometry', 'Detailed Neuronal Models', 'Synaptic Integration', 'Electrotonus'",
+        "header1": "'Ion Channel Kinetics', 'Simplified Models', 'Detailed Neuronal Models'",
+        "header2": "'Ion Channel Kinetics', 'Simplified Models', 'Detailed Neuronal Models', 'Calcium dynamics'",
+        "header3": "'Ion Channel Kinetics', 'Simplified Models', 'Calcium dynamics', 'Conductance distributions', 'Membrane Properties'"
+    },
+    "267614": {
+        "com_var1": "'Bifurcation', 'Calcium dynamics', 'Conductances estimation', 'Synaptic Integration', 'Oscillations', 'Action Potentials'",
+        "com_var2": "'Action Potentials', 'Ion Channel Kinetics', 'Bifurcation', 'Spiking', 'Conductances estimation', 'Neural Circuit'",
+        "com_var3": "'Action Potentials', 'Synaptic Integration', 'Bifurcation', 'Calcium dynamics'",
+        "header1": "'Calcium dynamics', 'Bifurcation', 'Ion Channel Kinetics', 'Pain processing', 'Excitability', 'Intrinsic plasticity', 'Nociception'",
+        "header2": "'Action Potential Initiation', 'Activity Patterns', 'Ion Channel Kinetics', 'Calcium dynamics', 'Bifurcation', 'Nociception', 'Pain processing'",
+        "header3": "'Action Potentials', 'Calcium dynamics', 'Bifurcation', 'Pain processing', 'Excitability', 'Intrinsic plasticity', 'Ion Channel Kinetics'"
+    },
+    "267293": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Ion Channel Kinetics', 'Detailed Neuronal Models', 'Calcium dynamics'",
+        "header2": "'Ion Channel Kinetics', 'Dendritic Action Potentials', 'Action Potentials', 'Detailed Neuronal Models'",
+        "header3": "'Ion Channel Kinetics', 'Dendritic Action Potentials', 'Detailed Neuronal Models'"
+    },
+    "263719": {
+        "com_var1": "'Connectivity matrix', 'Pattern Recognition', 'Temporal Pattern Generation', 'Synchronization', 'Parameter Fitting', 'Simplified Models', 'Methods', 'Parkinson's'",
+        "com_var2": "'Connectivity matrix', 'Parkinson's', 'Deep brain stimulation'",
+        "com_var3": "'Connectivity matrix', 'Parkinson's'",
+        "header1": "'Connectivity matrix', 'Synchronization', 'Spatio-temporal Activity Patterns', 'Parkinson's'",
+        "header2": "'Synchronization', 'Connectivity matrix', 'Parkinson's'",
+        "header3": "'Synchronization', 'Parkinson's', 'Connectivity matrix'"
+    },
+    "2015422": {
+        "com_var1": "'Action Potential Initiation', 'Ion Channel Kinetics', 'Oscillations', 'Synchronization', 'Spatio-temporal Activity Patterns', 'Calcium dynamics', 'Synaptic Integration', 'Connectivity matrix'",
+        "com_var2": "'Action Potential Initiation', 'Ion Channel Kinetics', 'Synaptic Integration', 'Oscillations', 'Synchronization', 'Spatio-temporal Activity Patterns', 'Connectivity matrix'",
+        "com_var3": "'Action Potential Initiation', 'Ion Channel Kinetics', 'Synchronization', 'Oscillations', 'Synaptic Integration', 'Calcium dynamics', 'Connectivity matrix', 'Intrinsic plasticity', 'Synaptic Plasticity', 'Noise Sensitivity', 'Parameter sensitivity', 'Gamma oscillations', 'Theta oscillations'",
+        "header1": "'Ion Channel Kinetics', 'Synchronization', 'Connectivity matrix', 'Parameter sensitivity', 'Noise Sensitivity', 'Brain Rhythms', 'Network Connectivity', 'Temporal Coding', 'Neurite growth', 'Neurite loss', 'Structural plasticity', 'Homeostatic plasticity', 'Dynamic extracellular concentrations'",
+        "header2": "'Action Potential Initiation', 'Ion Channel Kinetics', 'Synchronization', 'Connectivity matrix', 'Calcium dynamics', 'Parameter sensitivity'",
+        "header3": "'Ion Channel Kinetics', 'Connectivity matrix', 'Parameter sensitivity'"
+    },
+    "267613": {
+        "com_var1": "'Active Dendrites', 'Influence of Dendritic Geometry', 'Detailed Neuronal Models', 'Synaptic Plasticity', 'Place cell/field', 'Spatial Navigation'",
+        "com_var2": "'Detailed Neuronal Models', 'Synaptic Plasticity', 'Active Dendrites', 'Place cell/field'",
+        "com_var3": "'Detailed Neuronal Models', 'Synaptic Plasticity', 'Place cell/field', 'Ion Channel Kinetics', 'Dendritic Action Potentials', 'Active Dendrites', 'Influence of Dendritic Geometry'",
+        "header1": "'Ion Channel Kinetics', 'Synaptic Plasticity', 'Long-term Synaptic Plasticity', 'Place cell/field', 'STDP'",
+        "header2": "'Ion Channel Kinetics', 'Synaptic Plasticity', 'Place cell/field', 'STDP', 'Action Potentials'",
+        "header3": "'Ion Channel Kinetics', 'Synaptic Plasticity', 'Spatio-temporal Activity Patterns', 'Activity Patterns', 'Place cell/field', 'STDP'"
+    },
+    "267311": {
+        "com_var1": "'Ion Channel Kinetics', 'Detailed Neuronal Models', 'Parameter Fitting', 'Methods', 'Synaptic Integration'",
+        "com_var2": "'Parameter Fitting', 'Detailed Neuronal Models', 'Intrinsic plasticity', 'Ion Channel Kinetics'",
+        "com_var3": "'Detailed Neuronal Models', 'Parameter Fitting', 'Ion Channel Kinetics', 'Synaptic Integration'",
+        "header1": "'Ion Channel Kinetics', 'Calcium dynamics', 'Markov-type model'",
+        "header2": "'Ion Channel Kinetics', 'Calcium dynamics'",
+        "header3": "'Ion Channel Kinetics', 'Calcium dynamics', 'Detailed Neuronal Models', 'Markov-type model'"
+    },
+    "267710": {
+        "com_var1": "'Bifurcation'",
+        "com_var2": "'Bifurcation', 'Dendritic Action Potentials', 'Simplified Models', 'Detailed Neuronal Models', 'Excitability'",
+        "com_var3": "'Simplified Models', 'Bifurcation', 'Excitability', 'Dendritic Bistability'",
+        "header1": "'Bifurcation', 'Ion Channel Kinetics', 'Calcium dynamics', 'Excitability', 'Detailed Neuronal Models'",
+        "header2": "'Bifurcation', 'Ion Channel Kinetics', 'Calcium dynamics', 'Detailed Neuronal Models', 'Excitability'",
+        "header3": "'Bifurcation', 'Ion Channel Kinetics', 'Calcium dynamics', 'Detailed Neuronal Models', 'Excitability'"
+    },
+    "267695": {
+        "com_var1": "'Signaling pathways', 'CREB'",
+        "com_var2": "'Signaling pathways', 'CREB'",
+        "com_var3": "'Signaling pathways', 'Synaptic Plasticity', 'CREB'",
+        "header1": "'Signaling pathways'",
+        "header2": "'Signaling pathways', 'Parameter Fitting'",
+        "header3": "'Signaling pathways'"
+    },
+    "267680": {
+        "com_var1": "'Synaptic Plasticity', 'Long-term Synaptic Plasticity', 'Short-term Synaptic Plasticity', 'Synaptic Integration'",
+        "com_var2": "'Synaptic Plasticity', 'Long-term Synaptic Plasticity'",
+        "com_var3": "'Synaptic Plasticity', 'Synaptic Integration', 'Long-term Synaptic Plasticity'",
+        "header1": "'Synaptic Plasticity', 'Long-term Synaptic Plasticity', 'STDP', 'Synaptic Integration', 'Parameter Fitting', 'Phenomenological Model', 'Synaptic Noise'",
+        "header2": "'Synaptic Plasticity', 'Long-term Synaptic Plasticity', 'STDP'",
+        "header3": "'Synaptic Plasticity', 'Long-term Synaptic Plasticity', 'STDP', 'Synaptic Integration'"
+    },
+    "267550": {
+        "com_var1": "'Activity Patterns', 'Synaptic Plasticity', 'Connectivity matrix', 'Information transfer', 'Sensory processing', 'Whisking', 'Spatial connectivity'",
+        "com_var2": "'Spatio-temporal Activity Patterns', 'Synaptic Plasticity', 'STDP', 'Sensory processing', 'Whisking'",
+        "com_var3": "'Synchronization', 'Connectivity matrix', 'Oscillations'",
+        "header1": "'Spatio-temporal Activity Patterns', 'Synaptic Plasticity', 'STDP', 'Connectivity matrix', 'Sensory processing', 'Whisking', 'Spatial connectivity'",
+        "header2": "'Activity Patterns', 'STDP', 'Connectivity matrix', 'Whisking', 'Sensory processing', 'Spatial connectivity'",
+        "header3": "'Whisking', 'Synaptic Plasticity', 'Connectivity matrix', 'Sensory processing', 'STDP', 'Spatial connectivity'"
+    },
+    "267382": {
+        "com_var1": "'Bifurcation'",
+        "com_var2": "'Bifurcation'",
+        "com_var3": "'Bifurcation', 'Oscillations', 'Parameter Fitting', 'Tutorial/Teaching'",
+        "header1": "'Bifurcation', 'Rate-coding model neurons', 'Simplified Models'",
+        "header2": "'Bifurcation', 'Oscillations', 'Rate-coding model neurons', 'Simplified Models'",
+        "header3": "'Bifurcation', 'Rate-coding model neurons', 'Simplified Models'"
+    },
+    "2016138": {
+        "com_var1": "'Dendritic Action Potentials', 'Detailed Neuronal Models', 'Active Dendrites', 'Synaptic Integration'",
+        "com_var2": "'Dendritic Action Potentials', 'Synaptic Integration', 'Active Dendrites', 'Influence of Dendritic Geometry', 'Detailed Neuronal Models'",
+        "com_var3": "'Action Potential Initiation', 'Dendritic Action Potentials', 'Synaptic Integration', 'Active Dendrites', 'Influence of Dendritic Geometry', 'Peak Amplitude', 'Detailed Neuronal Models'",
+        "header1": "'Dendritic Action Potentials', 'Ion Channel Kinetics', 'Synaptic Integration', 'Calcium dynamics', 'Detailed Neuronal Models'",
+        "header2": "'Dendritic Action Potentials', 'Ion Channel Kinetics', 'Synaptic Integration', 'Calcium dynamics', 'Detailed Neuronal Models', 'Conductance distributions'",
+        "header3": "'Action Potentials', 'Dendritic Action Potentials', 'Ion Channel Kinetics', 'Synaptic Integration', 'Calcium dynamics', 'Membrane Properties', 'Model Neurons', 'Detailed Neuronal Models'"
+    },
+    "267306": {
+        "com_var1": "'Ion Channel Kinetics', 'Detailed Neuronal Models', 'Action Potentials'",
+        "com_var2": "'Ion Channel Kinetics', 'Action Potentials', 'Detailed Neuronal Models'",
+        "com_var3": "'Action Potentials', 'Detailed Neuronal Models', 'Ion Channel Kinetics'",
+        "header1": "'Action Potentials', 'Ion Channel Kinetics', 'Detailed Neuronal Models', 'Spike Frequency Adaptation', 'Conductances estimation'",
+        "header2": "'Action Potentials', 'Ion Channel Kinetics', 'Spike Frequency Adaptation', 'Detailed Neuronal Models', 'Conductance distributions', 'Parameter sensitivity'",
+        "header3": "'Ion Channel Kinetics', 'Action Potentials', 'Detailed Neuronal Models', 'Membrane Properties', 'Parameter sensitivity'"
+    },
+    "2015420": {
+        "com_var1": "'Activity Patterns', 'Long-term Synaptic Plasticity', 'Calcium dynamics', 'Rate-coding model neurons', 'Spike Frequency Adaptation', 'Synaptic Plasticity', 'Noise Sensitivity', 'Pattern Recognition'",
+        "com_var2": "'Activity Patterns', 'Synaptic Plasticity', 'Spatio-temporal Activity Patterns', 'Rate-coding model neurons', 'Calcium dynamics', 'Spike Frequency Adaptation', 'Noise Sensitivity'",
+        "com_var3": "'Action Potential Initiation', 'Activity Patterns', 'Temporal Pattern Generation', 'Spatio-temporal Activity Patterns', 'Rate-coding model neurons', 'Calcium dynamics', 'Synaptic Plasticity', 'Long-term Synaptic Plasticity', 'Spike Frequency Adaptation', 'Noise Sensitivity', 'Hebbian plasticity', 'Context integration'",
+        "header1": "'Calcium dynamics', 'Rate-coding model neurons', 'Spike Frequency Adaptation'",
+        "header2": "'Calcium dynamics', 'Rate-coding model neurons'",
+        "header3": "'Calcium dynamics', 'Short-term Synaptic Plasticity', 'Synaptic Integration', 'Spike Frequency Adaptation'"
+    },
+    "267611": {
+        "com_var1": "I'm sorry, I cannot identify relevant model concepts without the content being provided. Could you please provide the content you would like analyzed?",
+        "com_var2": "'none'",
+        "com_var3": "'none'"
+    },
+    "2016670": {
+        "com_var1": "'Parameter Fitting', 'Simplified Models'",
+        "com_var2": "'Parameter Fitting', 'Simplified Models', 'Methods'",
+        "com_var3": "'Parameter Fitting', 'Simplified Models', 'Methods'",
+        "header1": "'Ion Channel Kinetics', 'Calcium dynamics', 'Conductance distributions'",
+        "header2": "'Ion Channel Kinetics', 'Calcium dynamics', 'Conductance distributions', 'Oscillations', 'Synchronization', 'Network Geometry'",
+        "header3": "'Ion Channel Kinetics', 'Calcium dynamics', 'Oscillations', 'Synchronization'"
+    },
+    "267619": {
+        "com_var1": "'Oscillations', 'Activity Patterns', 'Spatio-temporal Activity Patterns', 'Parameter Fitting', 'Simplified Models', 'Connectivity matrix', 'Theta oscillations', 'Persistent activity'",
+        "com_var2": "'Synchronization', 'Spatio-temporal Activity Patterns', 'Oscillations', 'Activity Patterns', 'Parameter Fitting', 'Simplified Models', 'Working memory', 'Memory', 'Pattern Recognition', 'Connectivity matrix', 'Brain Rhythms'",
+        "com_var3": "'Oscillations', 'Synchronization', 'Working memory', 'Simulation', 'Connectivity matrix'",
+        "header1": "'Ion Channel Kinetics', 'Oscillations', 'Synchronization', 'Spatio-temporal Activity Patterns', 'Detailed Neuronal Models', 'Synaptic Integration', 'Sensory processing'",
+        "header2": "'Detailed Neuronal Models', 'Ion Channel Kinetics', 'Oscillations', 'Synchronization'",
+        "header3": "'Ion Channel Kinetics', 'Oscillations', 'Synchronization', 'Spatio-temporal Activity Patterns', 'Detailed Neuronal Models', 'Parameter Fitting', 'Theta oscillations'"
+    },
+    "267395": {
+        "com_var1": "'Action Potentials', 'Ion Channel Kinetics', 'Synaptic Integration', 'Oscillations', 'Synchronization', 'Delay', 'Calcium dynamics', 'Synaptic Plasticity', 'Parameter Fitting'",
+        "com_var2": "'Action Potential Initiation', 'Ion Channel Kinetics', 'Temporal Pattern Generation', 'Synchronization', 'Dendritic Action Potentials', 'Oscillations', 'Spatio-temporal Activity Patterns'",
+        "com_var3": "'Action Potentials', 'Ion Channel Kinetics', 'Oscillations', 'Synchronization', 'Synaptic Integration', 'Parameter Fitting', 'Temporal Pattern Generation', 'Spatio-temporal Activity Patterns'",
+        "header1": "'Activity Patterns', 'Motor control', 'Spatio-temporal Activity Patterns', 'Synchronization'",
+        "header2": "'Action Potentials', 'Motor control', 'Dendritic Action Potentials', 'Oscillations', 'Coincidence Detection', 'Synchronization', 'Spatio-temporal Activity Patterns', 'Dynamic extracellular concentrations', 'Synaptic Integration', 'Memory'",
+        "header3": "'Action Potentials', 'Motor control', 'Sensory processing', 'Synchronization', 'Spatio-temporal Activity Patterns'"
+    },
+    "2014998": {
+        "com_var1": "'Pattern Recognition', 'Activity Patterns', 'Spatio-temporal Activity Patterns', 'Pattern Separation'",
+        "com_var2": "'Pattern Recognition', 'Activity Patterns', 'Spatio-temporal Activity Patterns', 'Pattern Separation', 'Synchronization', 'Temporal Pattern Generation', 'Parameter Fitting'",
+        "com_var3": "'Pattern Recognition', 'Activity Patterns', 'Pattern Separation', 'Spatio-temporal Activity Patterns', 'Parameter Fitting', 'Methods', 'Statistical Analysis'",
+        "header1": "'Action Potentials', 'Oscillations', 'Spike Frequency Adaptation', 'Synchronization', 'Membrane Properties', 'Detailed Neuronal Models', 'Ion Channel Kinetics'",
+        "header2": "'Oscillations', 'Electrophysiological Phenotype', 'Action Potentials', 'Rate-coding model neurons', 'Intrinsic plasticity'",
+        "header3": "'Oscillations', 'Detailed Neuronal Models', 'Electrotonus', 'Synchronization'"
+    },
+    "267033": {
+        "com_var1": "'Ion Channel Kinetics', 'Synaptic Integration', 'Oscillations', 'Synchronization', 'Detailed Neuronal Models'",
+        "com_var2": "'Ion Channel Kinetics', 'Oscillations', 'Synchronization', 'Detailed Neuronal Models', 'Calcium dynamics', 'Conductance distributions'",
+        "com_var3": "'Action Potentials', 'Ion Channel Kinetics', 'Synaptic Integration', 'Calibration', 'Calcium dynamics', 'Neurotransmitter dynamics'",
+        "header1": "'Action Potential Initiation', 'Synchronization', 'Oscillations', 'Detailed Neuronal Models', 'Parameter Fitting', 'Spike Frequency Adaptation'",
+        "header2": "'Action Potential Initiation', 'Activity Patterns', 'Oscillations', 'Synchronization', 'Spatio-temporal Activity Patterns', 'Parameter Fitting', 'Detailed Neuronal Models', 'Spike Frequency Adaptation'",
+        "header3": "'Oscillations', 'Synchronization', 'Detailed Neuronal Models', 'Parameter Fitting', 'Simplified Models', 'Neuronal Models', 'Spike Frequency Adaptation', 'Interneurons', 'Pyramidal Cells'"
+    },
+    "267309": {
+        "com_var1": "'Action Potential Initiation', 'Ion Channel Kinetics', 'Detailed Neuronal Models', 'Spike Frequency Adaptation'",
+        "com_var2": "'Action Potential Initiation', 'Ion Channel Kinetics', 'Detailed Neuronal Models'",
+        "com_var3": "'Ion Channel Kinetics', 'Action Potentials', 'Membrane Properties', 'Detailed Neuronal Models'",
+        "header1": "'Action Potential Initiation', 'Ion Channel Kinetics', 'Parameter Fitting', 'Spike Frequency Adaptation', 'Conductances estimation'",
+        "header2": "'Action Potential Initiation', 'Ion Channel Kinetics', 'Parameter Fitting', 'Detailed Neuronal Models', 'Rate-coding model neurons'",
+        "header3": "'Action Potential Initiation', 'Ion Channel Kinetics', 'Parameter Fitting', 'Detailed Neuronal Models', 'Spike Frequency Adaptation'"
+    },
+    "2017143": {
+        "com_var1": "'Ion Channel Kinetics', 'Active Dendrites', 'Detailed Neuronal Models', 'Calcium dynamics', 'Synaptic Integration', 'Membrane Properties'",
+        "com_var2": "'Ion Channel Kinetics', 'Detailed Neuronal Models', 'Active Dendrites', 'Calcium dynamics', 'Synaptic Integration'",
+        "com_var3": "'Detailed Neuronal Models', 'Ion Channel Kinetics', 'Active Dendrites', 'Synaptic Integration', 'Electrotonus', 'Calcium dynamics'",
+        "header1": "'Ion Channel Kinetics', 'Parameter Fitting', 'Synaptic Integration', 'Detailed Neuronal Models'",
+        "header2": "'Ion Channel Kinetics', 'Parameter Fitting', 'Detailed Neuronal Models', 'Synaptic Integration'",
+        "header3": "'Detailed Neuronal Models', 'Ion Channel Kinetics', 'Synaptic Integration', 'Parameter Fitting'"
+    },
+    "2016663": {
+        "com_var1": "'Action Potential Initiation', 'Ion Channel Kinetics', 'Detailed Neuronal Models', 'Noise Sensitivity'",
+        "com_var2": "'Ion Channel Kinetics', 'Detailed Neuronal Models'",
+        "com_var3": "'Ion Channel Kinetics', 'Detailed Neuronal Models', 'Noise Sensitivity'",
+        "header1": "'Action Potentials', 'Ion Channel Kinetics', 'Membrane Properties', 'Excitability'",
+        "header2": "'Action Potential Initiation', 'Ion Channel Kinetics', 'Detailed Neuronal Models', 'Membrane Properties', 'Excitability', 'Conductances estimation'",
+        "header3": "'Action Potential Initiation', 'Ion Channel Kinetics', 'Membrane Properties', 'Excitability'"
+    },
+    "267056": {
+        "com_var1": "'none'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Ion Channel Kinetics', 'Detailed Neuronal Models', 'Calcium dynamics'",
+        "header2": "'Ion Channel Kinetics', 'Calcium dynamics', 'Depolarization block', 'Conductance distributions'",
+        "header3": "'Ion Channel Kinetics', 'Detailed Neuronal Models', 'Calcium dynamics', 'Calcium waves', 'Synaptic Integration'"
+    },
+    "267691": {
+        "com_var1": "'Detailed Neuronal Models', 'Synaptic Integration', 'Action Potentials', 'Current-clamp'",
+        "com_var2": "'Detailed Neuronal Models', 'Synaptic Integration', 'Ion Channel Kinetics'",
+        "com_var3": "'Detailed Neuronal Models', 'Synaptic Integration', 'Action Potentials'",
+        "header1": "'Ion Channel Kinetics', 'Synaptic Plasticity', 'Short-term Synaptic Plasticity', 'Calcium dynamics', 'Intrinsic plasticity', 'Detailed Neuronal Models', 'Synaptic Integration'",
+        "header2": "'Ion Channel Kinetics', 'Short-term Synaptic Plasticity', 'Synaptic Plasticity', 'Calcium dynamics', 'Detailed Neuronal Models'",
+        "header3": "'Ion Channel Kinetics', 'Short-term Synaptic Plasticity', 'Synaptic Plasticity', 'Calcium dynamics'"
+    },
+    "267617": {
+        "com_var1": "'none'",
+        "com_var2": "'Ion Channel Kinetics', 'Detailed Neuronal Models', 'Parameter Fitting', 'Tutorial/Teaching', 'Methods', 'Intracortical Microstimulation', 'Spike Frequency Adaptation'",
+        "com_var3": "'none'",
+        "header1": "'Ion Channel Kinetics', 'Calcium dynamics', 'Action Potentials', 'Parameter Fitting', 'Detailed Neuronal Models'",
+        "header2": "'Ion Channel Kinetics', 'Detailed Neuronal Models', 'Parameter Fitting'",
+        "header3": "'Ion Channel Kinetics', 'Action Potentials', 'Calcium dynamics', 'Detailed Neuronal Models', 'Parameter Fitting'"
+    },
+    "2014999": {
+        "com_var1": "'Connectivity matrix', 'Simplified Models', 'Pattern Recognition', 'Spatio-temporal Activity Patterns'",
+        "com_var2": "'Connectivity matrix', 'Synchronization', 'Spatio-temporal Activity Patterns', 'Simplified Models'",
+        "com_var3": "'Connectivity matrix', 'Erdös-Rényi', 'Weak synaptic coupling', 'Circuit modeling', 'Network structure'",
+        "header1": "'Activity Patterns', 'Synchronization', 'Connectivity matrix', 'Spatio-temporal Activity Patterns', 'Stochastic simulation'",
+        "header2": "'Connectivity matrix', 'Oscillations', 'Spatio-temporal Activity Patterns', 'Synaptic Integration', 'Temporal Pattern Generation', 'Pattern Recognition', 'Stochastic simulation'",
+        "header3": "'Synchronization', 'Activity Patterns', 'Connectivity matrix', 'Oscillations', 'Network structure'"
+    },
+    "2014814": {
+        "com_var1": "'Ian Channel Kinetics', 'Detailed Neuronal Models', 'Respiratory control'",
+        "com_var2": "'Respiratory control'",
+        "com_var3": "'Respiratory control', 'Detailed Neuronal Models'",
+        "header1": "'Oscillations', 'Motor control', 'Pattern Recognition'",
+        "header2": "'Oscillations', 'Synchronization', 'Motor control', 'Pattern Generation'",
+        "header3": "'Pattern Recognition', 'Oscillations', 'Synchronization', 'Motor control', 'Feedback', 'Coupled Oscillators'"
+    },
+    "267267": {
+        "com_var1": "'Action Potentials', 'Synaptic Integration', 'Calcium dynamics', 'Membrane Properties', 'Ion Channel Kinetics', 'Synaptic Plasticity', 'Detailed Neuronal Models', 'Tutorial/Teaching', 'Dendritic Action Potentials'",
+        "com_var2": "'Ion Channel Kinetics', 'Synaptic Integration', 'Calcium dynamics', 'Detailed Neuronal Models'",
+        "com_var3": "'Ion Channel Kinetics', 'Calcium dynamics', 'Synaptic Integration', 'Depolarization block', 'Calcium waves'",
+        "header1": "'Ion Channel Kinetics', 'Detailed Neuronal Models'",
+        "header2": "'Ion Channel Kinetics', 'Detailed Neuronal Models', 'Parameter Fitting'",
+        "header3": "'Ion Channel Kinetics', 'Detailed Neuronal Models', 'Parameter Fitting'"
+    },
+    "2014996": {
+        "com_var1": "'Ion Channel Kinetics', 'Oscillations', 'Parameter Fitting', 'Simplified Models', 'Noise Sensitivity', 'Respiratory control'",
+        "com_var2": "'Action Potential Initiation', 'Bursting', 'Ion Channel Kinetics', 'Temporal Pattern Generation', 'Oscillations', 'Synchronization', 'Parameter Fitting', 'Depolarization block', 'Noise Sensitivity'",
+        "com_var3": "'Action Potentials', 'Ion Channel Kinetics', 'Noise Sensitivity', 'Oscillations', 'Respiratory control', 'Parameter sensitivity', 'Synaptic Integration'",
+        "header1": "'Ion Channel Kinetics', 'Oscillations', 'Parameter Fitting', 'Noise Sensitivity'",
+        "header2": "'Oscillations', 'Ion Channel Kinetics', 'Noise Sensitivity', 'Respiratory control'",
+        "header3": "'Ion Channel Kinetics', 'Noise Sensitivity', 'Respiratory control'"
+    },
+    "267669": {
+        "com_var1": "'Pattern Recognition', 'Activity Patterns', 'Oscillations', 'Synchronization', 'Spatio-temporal Activity Patterns', 'Tutorial/Teaching'",
+        "com_var2": "'none'",
+        "com_var3": "'none'",
+        "header1": "'Ion Channel Kinetics'",
+        "header2": "'Ion Channel Kinetics'",
+        "header3": "'Ion Channel Kinetics', 'Dendritic Action Potentials', 'Activity Patterns', 'Oscillations', 'Synchronization', 'Spatio-temporal Activity Patterns', 'Detailed Neuronal Models', 'Calcium dynamics', 'Intrinsic plasticity', 'Membrane Properties', 'Depolarization block', 'Conductances estimation'"
+    },
+    "267696": {
+        "com_var1": "'Ion Channel Kinetics', 'Parameter Fitting'",
+        "com_var2": "'Ion Channel Kinetics', 'Parameter Fitting', 'Detailed Neuronal Models'",
+        "com_var3": "'Ion Channel Kinetics', 'Parameter Fitting'",
+        "header1": "'Ion Channel Kinetics', 'Bifurcation', 'Potassium buffering'",
+        "header2": "'Ion Channel Kinetics', 'Extracellular Fields', 'Bifurcation', 'Dynamic extracellular concentrations', 'Parameter Fitting'",
+        "header3": "'Ion Channel Kinetics', 'Bifurcation', 'Astrocyte functions', 'Conductance distributions'"
+    },
+    "2015421": {
+        "com_var1": "'Homeostasis', 'Spatio-temporal Activity Patterns', 'Activity Patterns'",
+        "com_var2": "'Spatio-temporal Activity Patterns', 'Homeostasis', 'Synchronization'",
+        "com_var3": "'Activity Patterns', 'Homeostasis', 'Spatio-temporal Activity Patterns', 'Methods'",
+        "header1": "'Spatio-temporal Activity Patterns', 'Homeostasis', 'Synchronization', 'Activity Patterns'",
+        "header2": "'Homeostasis', 'Spatio-temporal Activity Patterns', 'Activity Patterns', 'Synaptic Integration'",
+        "header3": "'Spatio-temporal Activity Patterns', 'Homeostasis', 'Synchronization'"
+    },
+    "267661": {
+        "com_var1": "'Ion Channel Kinetics', 'Detailed Neuronal Models'",
+        "com_var2": "'none'",
+        "com_var3": "'Ion Channel Kinetics', 'Detailed Neuronal Models'",
+        "header1": "'Ion Channel Kinetics', 'Temperature', 'Markov-type model'",
+        "header2": "'Ion Channel Kinetics', 'Temperature'",
+        "header3": "'Ion Channel Kinetics', 'Temperature', 'Markov-type model'"
+    },
+    "267260": {
+        "com_var1": "'Action Potential Initiation', 'Synchronizations', 'Parameter Fitting', 'Bifurcation', 'Activity Patterns', 'Spike Frequency Adaptation'",
+        "com_var2": "'Action Potential Initiation', 'Bifurcation', 'Parameter Fitting', 'Activity Patterns', 'Oscillations', 'Synchronization', 'Spatio-temporal Activity Patterns', 'Coincidence Detection'",
+        "com_var3": "'Bifurcation', 'Parameter Fitting', 'Synaptic Integration', 'Oscillations', 'Synchronization', 'Spike Frequency Adaptation', 'Mean-field Model', 'Neural Circuit Models', 'Computational Simulation', 'Neural Dynamics', 'Mathematical Modeling', 'Inhibitory Control', 'Network Analysis', 'Computational Neuroscience', 'Neural Network Theory', 'Dynamical Systems Theory', 'Neuronal Microcircuits', 'Excitatory-Inhibitory Balance', 'Neuronal Interactions', 'Modeling Networks', 'Neural Computation', 'Rheobase', 'Mean Activity', 'Determination of Firing Rates', 'Neural Simulation', 'Electrophysiology Simulation', 'Computational Methods in Neuroscience', 'Neural Modeling Techniques'",
+        "header1": "'Action Potentials', 'Spike Frequency Adaptation', 'Bifurcation', 'Synchronization', 'Parameter Fitting', 'Simplified Models', 'Synaptic Integration', 'Oscillations'",
+        "header2": "'Action Potential Initiation', 'Parameter Fitting', 'Bifurcation', 'Spike Frequency Adaptation', 'Synchronization', 'Oscillations'",
+        "header3": "'Action Potential Initiation', 'Spike Frequency Adaptation', 'Bifurcation', 'Parameter Fitting', 'Synchronization', 'Oscillations', 'Rate-coding model neurons', 'Synaptic Integration', 'Connectivity matrix', 'Neuron Models', 'Mean Field Theory', 'Electrophysiology'"
+    },
+    "2016995": {
+        "com_var1": "'Ion Channel Kinetics', 'Therapeutics', 'Intrinsic plasticity', 'Methods', 'Pathophysiology', 'Rate-coding model neurons', 'Synaptic Integration', 'Sodium pump', 'Depolarization block', 'Noise Sensitivity', 'Parameter sensitivity', 'Mixed mode', 'Bifurcation', 'Markov-type model', 'Stochastic simulation', 'Neuromodulation', 'Conductances estimation', 'Synaptic noise', 'Excitability'",
+        "com_var2": "'Ion Channel Kinetics', 'Intrinsic plasticity', 'Action Potentials'",
+        "com_var3": "'Ion Channel Kinetics', 'Parameter Fitting', 'Detailed Neuronal Models', 'Pathophysiology', 'Intrinsic plasticity', 'Condition failure', 'Sodium pump', 'Depolarization block', 'Sensitivity', 'Spike Frequency Adaptation', 'Parameter sensitivity', 'Bifurcation', 'Excitability', 'Conductances estimation', 'Effective Optokinetic Response (OKR)'",
+        "header1": "'Ion Channel Kinetics', 'Heart disease', 'Markov-type model', 'Cardiac pacemaking'",
+        "header2": "'Ion Channel Kinetics', 'Cardiac pacemaking', 'Markov-type model', 'Stochastic simulation'",
+        "header3": "'Ion Channel Kinetics', 'Markov-type model', 'Cardiac pacemaking'"
+    },
+    "267363": {
+        "com_var1": "'Parameter Fitting', 'Ion Channel Kinetics', 'Spatio-temporal Activity Patterns'",
+        "com_var2": "'Parameter Fitting'",
+        "com_var3": "'Ion Channel Kinetics', 'Parameter Fitting'",
+        "header1": "'Action Potentials', 'Bursting', 'Ion Channel Kinetics', 'Oscillations', 'Spike Frequency Adaptation', 'Parameter sensitivity', 'Calcium dynamics'",
+        "header2": "'Ion Channel Kinetics', 'Oscillations', 'Spatio-temporal Activity Patterns', 'Parameter Fitting', 'Calcium dynamics'",
+        "header3": "'Action Potentials', 'Ion Channel Kinetics', 'Parameter Fitting', 'Calcium dynamics', 'Spike Frequency Adaptation'"
+    }
+}
