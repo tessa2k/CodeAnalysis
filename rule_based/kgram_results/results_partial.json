@@ -1,0 +1,6701 @@
+{
+  "185864": {
+    "celltypes": [
+      "Cerebellum deep nucleus neuron",
+      "Medial Superior Olive (MSO) cell",
+      "Lateral Superior Olive (LSO) cell",
+      "Auditory nerve",
+      "Ventral cochlear nucleus T stellate (chopper) neuron",
+      "Leech S cell",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I K",
+      "I_KD",
+      "I Potassium",
+      "I L high threshold",
+      "I MI",
+      "I Na,p",
+      "I N",
+      "I p,q",
+      "I CAN",
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I trp",
+      "I h",
+      "I T low threshold",
+      "I Chloride",
+      "I Mixed",
+      "I Q",
+      "I M",
+      "I R",
+      "I Na,t"
+    ],
+    "simenvironments": [
+      "IDL",
+      "NCS",
+      "SPLIT",
+      "Lua",
+      "MATLAB",
+      "STEPS",
+      "Network",
+      "Mathematica",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Reaction-diffusion",
+      "Depression",
+      "unscented Kalman filter",
+      "Phase Response Curves",
+      "Simplified Models",
+      "Synaptic Plasticity",
+      "Influence of Dendritic Geometry",
+      "Detailed Neuronal Models",
+      "Ion Channel Kinetics",
+      "Invertebrate",
+      "Delay",
+      "Aging/Alzheimer`s",
+      "Action Potentials",
+      "Sensory coding",
+      "Deep brain stimulation",
+      "Temperature",
+      "Parkinson's",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Axon",
+      "Synapse"
+    ],
+    "receptors": [
+      "Serotonin",
+      "Zn2+",
+      "Glutamate",
+      "CO",
+      "NMDA",
+      "Kainate",
+      "M3",
+      "M2",
+      "AMPA",
+      "M1",
+      "M5",
+      "M4",
+      "NO"
+    ],
+    "regions": [
+      "Thalamus",
+      "Prefrontal cortex (PFC)",
+      "Basal ganglia",
+      "Olfactory bulb",
+      "Leech",
+      "Stomatogastric ganglion",
+      "Superior colliculus"
+    ]
+  },
+  "2014814": {
+    "celltypes": [
+      "Auditory nerve",
+      "Medial Superior Olive (MSO) cell",
+      "Lateral Superior Olive (LSO) cell"
+    ],
+    "currents": [
+      "I CAN",
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I K",
+      "I Potassium",
+      "I h",
+      "I Chloride",
+      "I L high threshold",
+      "I MI",
+      "I Na,p",
+      "I Mixed",
+      "I N",
+      "I M",
+      "Channelrhodopsin (ChR)",
+      "I R",
+      "I Na,t"
+    ],
+    "simenvironments": [
+      "STEPS",
+      "SPLIT",
+      "NEURON",
+      "Python"
+    ],
+    "modelconcepts": [
+      "Oscillations",
+      "Invertebrate",
+      "Delay",
+      "Tutorial/Teaching",
+      "Activity Patterns",
+      "Temporal Pattern Generation",
+      "Parkinson's",
+      "Timothy Syndrome",
+      "Motor control",
+      "Calcium dynamics"
+    ],
+    "modeltypes": [
+      "Axon",
+      "Synapse"
+    ],
+    "receptors": [
+      "Alpha1",
+      "Alpha2",
+      "CO",
+      "NO"
+    ],
+    "regions": [
+      "Subthalamic Nucleus",
+      "Aplysia",
+      "Superior colliculus"
+    ]
+  },
+  "2014816": {
+    "celltypes": [
+      "Auditory nerve",
+      "Myelinated neuron",
+      "Leech S cell",
+      "Lateral Superior Olive (LSO) cell",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I p,q",
+      "I K",
+      "I Potassium",
+      "I T low threshold",
+      "I h",
+      "I Chloride",
+      "I L high threshold",
+      "I MI",
+      "I Mixed",
+      "I N",
+      "I Q",
+      "Kir",
+      "I M",
+      "I K,Ca",
+      "Channelrhodopsin (ChR)",
+      "I R",
+      "I Na,t",
+      "I_AHP"
+    ],
+    "simenvironments": [
+      "Lua",
+      "XML (web link to model)",
+      "STEPS",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Invertebrate",
+      "Temperature",
+      "Parkinson's",
+      "Timothy Syndrome",
+      "Calcium dynamics"
+    ],
+    "modeltypes": [
+      "Axon"
+    ],
+    "receptors": [
+      "Zn2+",
+      "M3",
+      "M2",
+      "M1",
+      "M5",
+      "CO",
+      "M4",
+      "NO"
+    ],
+    "regions": [
+      "Leech",
+      "Subthalamic Nucleus",
+      "Basal ganglia",
+      "Superior colliculus",
+      "Hippocampus"
+    ]
+  },
+  "2014821": {
+    "celltypes": [
+      "Cerebellum deep nucleus neuron",
+      "Myelinated neuron",
+      "Suprachiasmatic nucleus (SCN) neuron",
+      "Lateral Superior Olive (LSO) cell",
+      "Vestibular neuron",
+      "Auditory nerve",
+      "Aplysia R15 bursting neuron",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I K",
+      "I_KD",
+      "I Potassium",
+      "I Ca,p",
+      "I L high threshold",
+      "I MI",
+      "I Na,p",
+      "I N",
+      "Channelrhodopsin (ChR)",
+      "I p,q",
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I h",
+      "I T low threshold",
+      "I Chloride",
+      "I_AHP",
+      "I Mixed",
+      "I Q",
+      "I M",
+      "I K,Ca",
+      "I R",
+      "I_Ks",
+      "I Na,t"
+    ],
+    "simenvironments": [
+      "IDL",
+      "SPLIT",
+      "Python",
+      "Emergent/PDP++",
+      "Lua",
+      "MATLAB",
+      "Network",
+      "NEURON",
+      "FORTRAN",
+      "ERNST (Event Related Neuronal Simulation Tool) (web link to model)"
+    ],
+    "modelconcepts": [
+      "Reaction-diffusion",
+      "Oscillations",
+      "unscented Kalman filter",
+      "Circadian Rhythms",
+      "Phase Response Curves",
+      "Simplified Models",
+      "Synaptic Plasticity",
+      "Calcium dynamics",
+      "Ion Channel Kinetics",
+      "Working memory",
+      "Multiple sclerosis",
+      "Delay",
+      "Short-term Synaptic Plasticity",
+      "Aging/Alzheimer`s",
+      "Action Potentials",
+      "Parkinson's",
+      "Axonal Action Potentials",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Axon",
+      "Synapse",
+      "Neuron or other electrically excitable cell",
+      "Extracellular"
+    ],
+    "receptors": [
+      "Serotonin",
+      "Zn2+",
+      "CO",
+      "NMDA",
+      "M3",
+      "AMPA",
+      "M2",
+      "M1",
+      "M5",
+      "M4",
+      "NO",
+      "Gaba"
+    ],
+    "regions": [
+      "Thalamus",
+      "Prefrontal cortex (PFC)",
+      "Basal ganglia",
+      "Subthalamic Nucleus",
+      "Superior colliculus"
+    ]
+  },
+  "2014822": {
+    "celltypes": [
+      "Myelinated neuron",
+      "Lateral Superior Olive (LSO) cell",
+      "Auditory nerve",
+      "Aplysia R15 bursting neuron",
+      "Leech S cell",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I K",
+      "I Potassium",
+      "I Ca,p",
+      "I L high threshold",
+      "I MI",
+      "I Na,p",
+      "I N",
+      "Channelrhodopsin (ChR)",
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I T low threshold",
+      "I h",
+      "I Chloride",
+      "I Mixed",
+      "I M",
+      "I K,Ca",
+      "I R",
+      "I Na,t",
+      "I_AHP"
+    ],
+    "simenvironments": [
+      "SPLIT",
+      "Python",
+      "Lua",
+      "Network",
+      "STEPS",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Depression",
+      "Synaptic Plasticity",
+      "STDP",
+      "Detailed Neuronal Models",
+      "Bursting",
+      "Calcium dynamics",
+      "Ion Channel Kinetics",
+      "Invertebrate",
+      "Long-term Synaptic Plasticity",
+      "Aging/Alzheimer`s",
+      "Synchronization",
+      "Temperature",
+      "Facilitation",
+      "Parkinson's",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Axon",
+      "Synapse"
+    ],
+    "receptors": [
+      "CO",
+      "NMDA",
+      "AMPA",
+      "M2",
+      "NO",
+      "Gaba"
+    ],
+    "regions": [
+      "Hippocampus",
+      "Leech",
+      "Superior colliculus"
+    ]
+  },
+  "2014830": {
+    "celltypes": [
+      "Auditory nerve",
+      "Astrocyte",
+      "Lateral Superior Olive (LSO) cell"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I K",
+      "I Potassium",
+      "I T low threshold",
+      "I Chloride",
+      "Na/K pump",
+      "I N",
+      "Kir",
+      "I M",
+      "I R"
+    ],
+    "simenvironments": [
+      "Network",
+      "SPLIT"
+    ],
+    "modelconcepts": [
+      "Reaction-diffusion",
+      "Temperature",
+      "Parkinson's",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Extracellular"
+    ],
+    "receptors": [
+      "M3",
+      "M2",
+      "M1",
+      "CO",
+      "NO"
+    ],
+    "regions": [
+      "Superior colliculus"
+    ]
+  },
+  "2014832": {
+    "celltypes": [
+      "Leech C interneuron",
+      "Medial Superior Olive (MSO) cell",
+      "Lateral Superior Olive (LSO) cell",
+      "Abstract integrate-and-fire leaky neuron",
+      "Heart cell",
+      "Auditory nerve",
+      "Aplysia R15 bursting neuron",
+      "Leech S cell",
+      "Superior paraolivary nucleus neuron",
+      "Squid axon",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I K",
+      "I_KD",
+      "I Potassium",
+      "I Ca,p",
+      "I L high threshold",
+      "I MI",
+      "I Na,p",
+      "I N",
+      "Channelrhodopsin (ChR)",
+      "I CAN",
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I_Ks",
+      "I h",
+      "I T low threshold",
+      "I Chloride",
+      "Ca pump",
+      "I Mixed",
+      "I Q",
+      "I M",
+      "I_Na,Ca",
+      "I K,Ca",
+      "I R",
+      "I Na,t",
+      "I_AHP"
+    ],
+    "simenvironments": [
+      "IDL",
+      "SPLIT",
+      "MCell",
+      "Python",
+      "Lua",
+      "Network",
+      "STEPS",
+      "NEURON",
+      "ERNST (Event Related Neuronal Simulation Tool) (web link to model)"
+    ],
+    "modelconcepts": [
+      "Reaction-diffusion",
+      "Depression",
+      "Oscillations",
+      "Homeostasis",
+      "Sleep",
+      "Learning",
+      "Activity Patterns",
+      "Simplified Models",
+      "STDP",
+      "Detailed Neuronal Models",
+      "Spatio-temporal Activity Patterns",
+      "Bursting",
+      "Calcium dynamics",
+      "Ion Channel Kinetics",
+      "Invertebrate",
+      "Delay",
+      "Aging/Alzheimer`s",
+      "Action Potentials",
+      "Synchronization",
+      "Deep brain stimulation",
+      "Temperature",
+      "Parkinson's",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Glia",
+      "Axon",
+      "Synapse",
+      "Channel/Receptor"
+    ],
+    "receptors": [
+      "Serotonin",
+      "GabaA",
+      "Alpha2",
+      "CO",
+      "NMDA",
+      "IP3",
+      "Muscarinic",
+      "GabaB",
+      "M3",
+      "AMPA",
+      "M2",
+      "M1",
+      "M5",
+      "M4",
+      "NO",
+      "Gaba"
+    ],
+    "regions": [
+      "Neocortex",
+      "Thalamus",
+      "Hippocampus",
+      "Prefrontal cortex (PFC)",
+      "Basal ganglia",
+      "Olfactory bulb",
+      "Leech",
+      "Subthalamic Nucleus",
+      "Stomatogastric ganglion",
+      "Superior colliculus"
+    ]
+  },
+  "2014833": {
+    "celltypes": [
+      "Cerebellum deep nucleus neuron",
+      "Suprachiasmatic nucleus (SCN) neuron",
+      "Medial Superior Olive (MSO) cell",
+      "Lateral Superior Olive (LSO) cell",
+      "Vestibular neuron",
+      "Auditory nerve",
+      "Aplysia R15 bursting neuron",
+      "Leech S cell",
+      "Superior paraolivary nucleus neuron",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I K",
+      "I Potassium",
+      "I MI",
+      "I N",
+      "I p,q",
+      "I CAN",
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I_Ks",
+      "I h",
+      "I T low threshold",
+      "I Chloride",
+      "I Mixed",
+      "I Q",
+      "I M",
+      "I R",
+      "I Na,t"
+    ],
+    "simenvironments": [
+      "XML (web link to model)",
+      "SPLIT",
+      "Lua",
+      "MATLAB",
+      "Network"
+    ],
+    "modelconcepts": [
+      "Depression",
+      "Oscillations",
+      "Circadian Rhythms",
+      "Learning",
+      "Activity Patterns",
+      "STDP",
+      "Invertebrate",
+      "Temporal Pattern Generation",
+      "Parkinson's",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Neuron or other electrically excitable cell"
+    ],
+    "receptors": [
+      "Zn2+",
+      "CO",
+      "M3",
+      "M2",
+      "M1",
+      "M5",
+      "M4",
+      "NO"
+    ],
+    "regions": [
+      "Thalamus",
+      "Basal ganglia",
+      "Leech",
+      "Subthalamic Nucleus",
+      "Superior colliculus",
+      "Hippocampus"
+    ]
+  },
+  "2014996": {
+    "celltypes": [
+      "Auditory nerve"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I Na,p",
+      "I K",
+      "I M",
+      "I Potassium"
+    ],
+    "simenvironments": [
+      "Mathematica"
+    ],
+    "modelconcepts": [],
+    "modeltypes": [],
+    "receptors": [
+      "CO",
+      "NO"
+    ],
+    "regions": [
+      "Superior colliculus"
+    ]
+  },
+  "2014998": {
+    "celltypes": [
+      "Medial Superior Olive (MSO) cell",
+      "Lateral Superior Olive (LSO) cell",
+      "Nucleus accumbens spiny projection neuron",
+      "Auditory nerve",
+      "Leech S cell",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I K",
+      "I Potassium",
+      "I L high threshold",
+      "I MI",
+      "I Na,p",
+      "I N",
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I_K,Na",
+      "I_Ks",
+      "I h",
+      "I T low threshold",
+      "I Chloride",
+      "I Mixed",
+      "I Q",
+      "Kir",
+      "I M",
+      "I K,Ca",
+      "I R",
+      "I Na,t"
+    ],
+    "simenvironments": [
+      "NCS",
+      "MCell",
+      "Lua",
+      "STEPS",
+      "Network",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Reaction-diffusion",
+      "Oscillations",
+      "Homeostasis",
+      "Pattern Separation",
+      "Epilepsy",
+      "Activity Patterns",
+      "Gamma oscillations",
+      "Development",
+      "Bursting",
+      "Calcium dynamics",
+      "Ion Channel Kinetics",
+      "Invertebrate",
+      "Beta oscillations",
+      "Delay",
+      "Action Potentials",
+      "Temperature",
+      "Parkinson's",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Axon",
+      "Synapse",
+      "Neuron or other electrically excitable cell"
+    ],
+    "receptors": [
+      "Serotonin",
+      "GabaA",
+      "Gaba",
+      "CO",
+      "M2",
+      "AMPA",
+      "M1",
+      "NO"
+    ],
+    "regions": [
+      "Basal ganglia",
+      "Leech",
+      "Dentate gyrus",
+      "Superior colliculus",
+      "Hippocampus"
+    ]
+  },
+  "2014999": {
+    "celltypes": [
+      "Lateral Superior Olive (LSO) cell",
+      "Heart cell",
+      "Auditory nerve",
+      "Aplysia R15 bursting neuron",
+      "Leech S cell",
+      "Cardiac ventricular cell",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I K",
+      "I Potassium",
+      "I Ca,p",
+      "I L high threshold",
+      "I MI",
+      "Na/K pump",
+      "I Na,p",
+      "I N",
+      "Channelrhodopsin (ChR)",
+      "I CAN",
+      "I Calcium",
+      "Na/Ca exchanger",
+      "KCNQ1",
+      "I Sodium",
+      "I A",
+      "I_SERCA",
+      "I_Ks",
+      "I trp",
+      "I h",
+      "I T low threshold",
+      "I Chloride",
+      "Ca pump",
+      "I Mixed",
+      "I Q",
+      "I M",
+      "I Cl,Ca",
+      "I_Na,Ca",
+      "I K,Ca",
+      "I R",
+      "I Na,t"
+    ],
+    "simenvironments": [
+      "IDL",
+      "XML (web link to model)",
+      "NCS",
+      "Python",
+      "Virtual Cell (web link to model)",
+      "Lua",
+      "MATLAB",
+      "Network",
+      "NEURON",
+      "ERNST (Event Related Neuronal Simulation Tool) (web link to model)"
+    ],
+    "modelconcepts": [
+      "Reaction-diffusion",
+      "Simplified Models",
+      "Bursting",
+      "Calcium dynamics",
+      "Invertebrate",
+      "Delay",
+      "Aging/Alzheimer`s",
+      "Sensory coding",
+      "Temperature",
+      "Parkinson's",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Glia",
+      "Synapse",
+      "Neuron or other electrically excitable cell",
+      "Extracellular"
+    ],
+    "receptors": [
+      "Zn2+",
+      "CO",
+      "IP3",
+      "Muscarinic",
+      "M3",
+      "M2",
+      "M1",
+      "M5",
+      "M4",
+      "NO",
+      "Adrenergic"
+    ],
+    "regions": [
+      "Basal ganglia",
+      "Leech",
+      "Superior colliculus",
+      "Hippocampus"
+    ]
+  },
+  "2015410": {
+    "celltypes": [
+      "Myelinated neuron",
+      "Medial Superior Olive (MSO) cell",
+      "Lateral Superior Olive (LSO) cell",
+      "Auditory nerve",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I K",
+      "I_KD",
+      "I Potassium",
+      "I Ca,p",
+      "I L high threshold",
+      "I MI",
+      "I Na,p",
+      "I N",
+      "Channelrhodopsin (ChR)",
+      "I CAN",
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I T low threshold",
+      "I h",
+      "I Chloride",
+      "Ca pump",
+      "I Mixed",
+      "I Q",
+      "I M",
+      "I K,Ca",
+      "I Na,t",
+      "I R",
+      "I_AHP"
+    ],
+    "simenvironments": [
+      "Lua",
+      "STEPS",
+      "Network",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Reaction-diffusion",
+      "Calcium dynamics",
+      "Action Potential Initiation",
+      "Delay",
+      "Action Potentials",
+      "Temperature",
+      "Axonal Action Potentials",
+      "Parkinson's",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Axon",
+      "Synapse"
+    ],
+    "receptors": [
+      "CO",
+      "M3",
+      "M2",
+      "M1",
+      "NO"
+    ],
+    "regions": [
+      "Neocortex",
+      "Cerebellum",
+      "Dentate gyrus",
+      "Superior colliculus",
+      "Hippocampus"
+    ]
+  },
+  "2015411": {
+    "celltypes": [
+      "Spinal cord sympathetic preganglionic neuron",
+      "Suprachiasmatic nucleus (SCN) neuron",
+      "Medial Superior Olive (MSO) cell",
+      "Lateral Superior Olive (LSO) cell",
+      "Abstract integrate-and-fire leaky neuron",
+      "Auditory nerve",
+      "Leech S cell",
+      "Superior paraolivary nucleus neuron",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I K",
+      "I Potassium",
+      "I Ca,p",
+      "I L high threshold",
+      "I Na,p",
+      "I N",
+      "I CAN",
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I h",
+      "I Chloride",
+      "I Mixed",
+      "I Q",
+      "I M",
+      "I K,Ca",
+      "I R",
+      "I Na,t",
+      "I_AHP"
+    ],
+    "simenvironments": [
+      "NCS",
+      "MCell",
+      "Python",
+      "Lua",
+      "MATLAB",
+      "Network",
+      "STEPS",
+      "NEURON",
+      "ERNST (Event Related Neuronal Simulation Tool) (web link to model)"
+    ],
+    "modelconcepts": [
+      "Reaction-diffusion",
+      "Oscillations",
+      "Circadian Rhythms",
+      "Activity Patterns",
+      "Calcium dynamics",
+      "Invertebrate",
+      "Action Potential Initiation",
+      "Delay",
+      "Action Potentials",
+      "Temperature",
+      "Axonal Action Potentials",
+      "Parkinson's",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Axon",
+      "Synapse",
+      "Neuron or other electrically excitable cell",
+      "Extracellular"
+    ],
+    "receptors": [
+      "Zn2+",
+      "Alpha2",
+      "CO",
+      "M3",
+      "M2",
+      "AMPA",
+      "M1",
+      "M5",
+      "M4",
+      "NO"
+    ],
+    "regions": [
+      "Thalamus",
+      "Basal ganglia",
+      "Leech",
+      "Subthalamic Nucleus",
+      "Superior colliculus",
+      "Hippocampus"
+    ]
+  },
+  "2015412": {
+    "celltypes": [
+      "Auditory nerve",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I K",
+      "I Potassium",
+      "I trp",
+      "I h",
+      "I T low threshold",
+      "I Chloride",
+      "I Ca,p",
+      "I L high threshold",
+      "I MI",
+      "I Na,p",
+      "I Mixed",
+      "I N",
+      "I Q",
+      "I M",
+      "I R"
+    ],
+    "simenvironments": [
+      "MATLAB",
+      "LCG",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Oscillations",
+      "Invertebrate",
+      "Sensory coding",
+      "Activity Patterns",
+      "Deep brain stimulation",
+      "Temperature",
+      "Parkinson's",
+      "Bursting",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [],
+    "receptors": [
+      "Zn2+",
+      "M3",
+      "M2",
+      "M1",
+      "M5",
+      "CO",
+      "M4",
+      "NO"
+    ],
+    "regions": [
+      "Basal ganglia",
+      "Superior colliculus"
+    ]
+  },
+  "2015420": {
+    "celltypes": [
+      "Auditory nerve"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I Na,p",
+      "I K",
+      "I N",
+      "I Potassium",
+      "I R"
+    ],
+    "simenvironments": [
+      "Network",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Synaptic Plasticity",
+      "Timothy Syndrome",
+      "Calcium dynamics"
+    ],
+    "modeltypes": [
+      "Synapse"
+    ],
+    "receptors": [
+      "Serotonin",
+      "CO",
+      "NO"
+    ],
+    "regions": [
+      "Thalamus",
+      "Superior colliculus"
+    ]
+  },
+  "2015421": {
+    "celltypes": [
+      "Auditory nerve",
+      "Leech S cell",
+      "Lateral Superior Olive (LSO) cell"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I K",
+      "I Potassium",
+      "I h",
+      "I MI",
+      "I Na,p",
+      "I N",
+      "I Q",
+      "I Mixed",
+      "I M",
+      "I K,Ca",
+      "I R",
+      "I Na,t"
+    ],
+    "simenvironments": [
+      "MATLAB",
+      "Network",
+      "STEPS",
+      "SPLIT",
+      "NEURON",
+      "Python"
+    ],
+    "modelconcepts": [
+      "Depression",
+      "Homeostasis",
+      "Invertebrate",
+      "Delay",
+      "Short-term Synaptic Plasticity",
+      "Connectivity matrix",
+      "Spike Frequency Adaptation",
+      "Synaptic Plasticity",
+      "STDP",
+      "Facilitation",
+      "Parkinson's",
+      "Bursting",
+      "Timothy Syndrome",
+      "Calcium dynamics"
+    ],
+    "modeltypes": [
+      "Synapse"
+    ],
+    "receptors": [
+      "Glutamate",
+      "Gaba",
+      "AMPA",
+      "M2",
+      "CO",
+      "NO",
+      "NMDA"
+    ],
+    "regions": [
+      "Leech",
+      "Superior colliculus"
+    ]
+  },
+  "2015422": {
+    "celltypes": [
+      "Leech C interneuron",
+      "Suprachiasmatic nucleus (SCN) neuron",
+      "Lateral Superior Olive (LSO) cell",
+      "Auditory nerve",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I K",
+      "I K,leak",
+      "I Potassium",
+      "I L high threshold",
+      "I MI",
+      "I Na,p",
+      "I N",
+      "Channelrhodopsin (ChR)",
+      "I p,q",
+      "I CAN",
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I_K,Na",
+      "I h",
+      "I T low threshold",
+      "I Chloride",
+      "I Mixed",
+      "I Q",
+      "Kir",
+      "I M",
+      "I K,Ca",
+      "I Na,t",
+      "I_Ks",
+      "I R"
+    ],
+    "simenvironments": [
+      "IDL",
+      "NCS",
+      "SPLIT",
+      "MCell",
+      "Lua",
+      "MATLAB",
+      "Network",
+      "STEPS",
+      "Mathematica",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Depression",
+      "Reaction-diffusion",
+      "Oscillations",
+      "Sleep",
+      "Circadian Rhythms",
+      "Phase Response Curves",
+      "Activity Patterns",
+      "Synaptic Plasticity",
+      "Gamma oscillations",
+      "Development",
+      "Spatio-temporal Activity Patterns",
+      "Bursting",
+      "Calcium dynamics",
+      "Working memory",
+      "Delay",
+      "Tutorial/Teaching",
+      "Short-term Synaptic Plasticity",
+      "Connectivity matrix",
+      "Aging/Alzheimer`s",
+      "Action Potentials",
+      "Synchronization",
+      "Temperature",
+      "Parkinson's",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Synapse",
+      "Neuron or other electrically excitable cell"
+    ],
+    "receptors": [
+      "mGluR1",
+      "Zn2+",
+      "GabaA",
+      "mGluR",
+      "CO",
+      "NMDA",
+      "GabaB",
+      "M3",
+      "AMPA",
+      "M2",
+      "M1",
+      "M5",
+      "M4",
+      "NO",
+      "Gaba"
+    ],
+    "regions": [
+      "Neocortex",
+      "Thalamus",
+      "Basal ganglia",
+      "Subthalamic Nucleus",
+      "Superior colliculus"
+    ]
+  },
+  "2015423": {
+    "celltypes": [
+      "Auditory nerve",
+      "Lateral Superior Olive (LSO) cell",
+      "Abstract integrate-and-fire leaky neuron"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I K",
+      "I Potassium",
+      "I T low threshold",
+      "I h",
+      "I Chloride",
+      "I L high threshold",
+      "I MI",
+      "I Na,p",
+      "I Mixed",
+      "I N",
+      "I Q",
+      "I M",
+      "Channelrhodopsin (ChR)",
+      "I R",
+      "I Na,t"
+    ],
+    "simenvironments": [
+      "Lua",
+      "Network",
+      "STEPS",
+      "SPLIT",
+      "NEURON",
+      "Cython",
+      "Python"
+    ],
+    "modelconcepts": [
+      "Delay",
+      "Parkinson's",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Neuron or other electrically excitable cell",
+      "Glia",
+      "Axon",
+      "Synapse"
+    ],
+    "receptors": [
+      "M3",
+      "AMPA",
+      "M2",
+      "M1",
+      "M5",
+      "CO",
+      "M4",
+      "NO"
+    ],
+    "regions": [
+      "Superior colliculus",
+      "Hippocampus"
+    ]
+  },
+  "2015571": {
+    "celltypes": [
+      "Auditory nerve",
+      "Squid axon"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I K",
+      "I Potassium",
+      "I h",
+      "I T low threshold",
+      "I Chloride",
+      "I Mixed",
+      "I N",
+      "I M",
+      "I Na,t",
+      "I R"
+    ],
+    "simenvironments": [
+      "STEPS",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Action Potentials",
+      "Temperature",
+      "Parkinson's",
+      "Timothy Syndrome",
+      "Bursting"
+    ],
+    "modeltypes": [
+      "Axon"
+    ],
+    "receptors": [
+      "M3",
+      "M2",
+      "M1",
+      "M5",
+      "CO",
+      "M4",
+      "NO"
+    ],
+    "regions": [
+      "Superior colliculus",
+      "Hippocampus"
+    ]
+  },
+  "2015953": {
+    "celltypes": [
+      "Auditory nerve",
+      "Lateral Superior Olive (LSO) cell"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I K",
+      "I Potassium",
+      "I h",
+      "I L high threshold",
+      "I MI",
+      "I Na,p",
+      "I Mixed",
+      "I N",
+      "I M",
+      "I R",
+      "I Na,t"
+    ],
+    "simenvironments": [
+      "Lua",
+      "Network",
+      "STEPS",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Reaction-diffusion",
+      "Delay",
+      "Action Potentials",
+      "Activity Patterns",
+      "Temporal Pattern Generation",
+      "Detailed Neuronal Models",
+      "Parkinson's",
+      "Timothy Syndrome",
+      "Bursting"
+    ],
+    "modeltypes": [
+      "Synapse",
+      "Extracellular"
+    ],
+    "receptors": [
+      "Glutamate",
+      "GabaB",
+      "AMPA",
+      "M2",
+      "mGluR2",
+      "CO",
+      "NO",
+      "NMDA",
+      "Gaba",
+      "mGluR"
+    ],
+    "regions": [
+      "Thalamus",
+      "Hippocampus",
+      "Cerebellum",
+      "Superior colliculus"
+    ]
+  },
+  "2015954": {
+    "celltypes": [
+      "Auditory nerve",
+      "Lateral Superior Olive (LSO) cell"
+    ],
+    "currents": [
+      "I L high threshold",
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I Na,p",
+      "I K",
+      "I N",
+      "I Potassium",
+      "I Na,t",
+      "I R"
+    ],
+    "simenvironments": [],
+    "modelconcepts": [
+      "Oscillations",
+      "Activity Patterns",
+      "Temporal Pattern Generation",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [],
+    "receptors": [
+      "M2",
+      "CO",
+      "NO"
+    ],
+    "regions": []
+  },
+  "2016137": {
+    "celltypes": [
+      "Auditory nerve",
+      "Leech S cell"
+    ],
+    "currents": [
+      "I K",
+      "I_KD",
+      "I Potassium",
+      "I L high threshold",
+      "I MI",
+      "I Na,p",
+      "I N",
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I h",
+      "I T low threshold",
+      "I Mixed",
+      "I M",
+      "I K,Ca",
+      "I R",
+      "Ca pump",
+      "I Na,t"
+    ],
+    "simenvironments": [
+      "GENESIS",
+      "XML (web link to model)",
+      "Python",
+      "Lua",
+      "neuroConstruct",
+      "STEPS",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Reaction-diffusion",
+      "Activity Patterns",
+      "Simplified Models",
+      "Detailed Neuronal Models",
+      "Bursting",
+      "Calcium dynamics",
+      "Ion Channel Kinetics",
+      "Invertebrate",
+      "Parameter Fitting",
+      "Delay",
+      "Action Potentials",
+      "Parkinson's",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Axon",
+      "Synapse",
+      "Channel/Receptor",
+      "Neuron or other electrically excitable cell"
+    ],
+    "receptors": [
+      "Serotonin",
+      "GabaA",
+      "Glutamate",
+      "CO",
+      "NMDA",
+      "M3",
+      "AMPA",
+      "M2",
+      "NO",
+      "Gaba"
+    ],
+    "regions": [
+      "Hippocampus",
+      "Leech",
+      "Dentate gyrus",
+      "Superior colliculus"
+    ]
+  },
+  "2016219": {
+    "celltypes": [
+      "Cerebellum deep nucleus neuron",
+      "Suprachiasmatic nucleus (SCN) neuron",
+      "Medial Superior Olive (MSO) cell",
+      "Lateral Superior Olive (LSO) cell",
+      "Vestibular neuron",
+      "Auditory nerve",
+      "Aplysia R15 bursting neuron",
+      "Leech S cell",
+      "Superior paraolivary nucleus neuron",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I K",
+      "I_KD",
+      "I Potassium",
+      "I L high threshold",
+      "I MI",
+      "I Na,p",
+      "I N",
+      "Channelrhodopsin (ChR)",
+      "I p,q",
+      "I CAN",
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I_KLT",
+      "I_K,Na",
+      "I trp",
+      "I h",
+      "I Chloride",
+      "I Mixed",
+      "I Q",
+      "Kir",
+      "I M",
+      "I K,Ca",
+      "I R",
+      "I_Ks",
+      "I Na,t"
+    ],
+    "simenvironments": [
+      "IDL",
+      "XML (web link to model)",
+      "NCS",
+      "Java",
+      "SPLIT",
+      "Emergent/PDP++",
+      "Lua",
+      "QuB",
+      "MATLAB",
+      "LCG",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Depression",
+      "Oscillations",
+      "unscented Kalman filter",
+      "Circadian Rhythms",
+      "Phase Response Curves",
+      "Activity Patterns",
+      "Calcium dynamics",
+      "Invertebrate",
+      "CREB",
+      "Delay",
+      "Place cell/field",
+      "Sensory coding",
+      "Deep brain stimulation",
+      "Temperature",
+      "Temporal Pattern Generation",
+      "Parkinson's",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Neuron or other electrically excitable cell"
+    ],
+    "receptors": [
+      "Serotonin",
+      "Zn2+",
+      "CO",
+      "IP3",
+      "M3",
+      "M2",
+      "M1",
+      "M5",
+      "M4",
+      "NO"
+    ],
+    "regions": [
+      "Thalamus",
+      "Prefrontal cortex (PFC)",
+      "Basal ganglia",
+      "Leech",
+      "Subthalamic Nucleus",
+      "Stomatogastric ganglion",
+      "Superior colliculus",
+      "Hippocampus"
+    ]
+  },
+  "2016658": {
+    "celltypes": [
+      "Medial Superior Olive (MSO) cell",
+      "Auditory nerve",
+      "Leech S cell"
+    ],
+    "currents": [
+      "I K",
+      "I Potassium",
+      "I L high threshold",
+      "I MI",
+      "I Na,p",
+      "I N",
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I T low threshold",
+      "I h",
+      "I Chloride",
+      "I Mixed",
+      "I Q",
+      "I M",
+      "I R",
+      "I Na,t"
+    ],
+    "simenvironments": [
+      "MCell",
+      "Python",
+      "Network",
+      "STEPS",
+      "Mathematica",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Reaction-diffusion",
+      "Stuttering",
+      "Bifurcation",
+      "Activity Patterns",
+      "Dendritic Bistability",
+      "Bursting",
+      "Ion Channel Kinetics",
+      "Invertebrate",
+      "Delay",
+      "Temperature",
+      "Parkinson's",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Axon",
+      "Synapse",
+      "Neuron or other electrically excitable cell"
+    ],
+    "receptors": [
+      "GabaA",
+      "Gaba",
+      "CO",
+      "M2",
+      "AMPA",
+      "M1",
+      "NO"
+    ],
+    "regions": [
+      "Leech",
+      "Superior colliculus",
+      "Hippocampus"
+    ]
+  },
+  "2016659": {
+    "celltypes": [
+      "Auditory nerve",
+      "Leech S cell",
+      "Lateral Superior Olive (LSO) cell",
+      "Globus pallidus neuron",
+      "Abstract integrate-and-fire leaky neuron"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I K",
+      "I Potassium",
+      "I h",
+      "I T low threshold",
+      "I Chloride",
+      "I MI",
+      "I Na,p",
+      "I Mixed",
+      "I N",
+      "I Q",
+      "I Na,t",
+      "I R"
+    ],
+    "simenvironments": [
+      "NCS",
+      "Network",
+      "STEPS",
+      "VERTEX",
+      "SPLIT",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Invertebrate",
+      "Delay",
+      "Place cell/field",
+      "Learning",
+      "Synaptic Plasticity",
+      "Parkinson's",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Axon",
+      "Synapse"
+    ],
+    "receptors": [
+      "M3",
+      "AMPA",
+      "M2",
+      "M1",
+      "CO",
+      "NO"
+    ],
+    "regions": [
+      "Leech",
+      "Superior colliculus",
+      "Hippocampus"
+    ]
+  },
+  "2016663": {
+    "celltypes": [
+      "Auditory nerve",
+      "Leech S cell"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I K",
+      "I_KD",
+      "I Potassium",
+      "I T low threshold",
+      "I h",
+      "I L high threshold",
+      "Late Na",
+      "I Mixed",
+      "I N",
+      "I M",
+      "I R",
+      "I Na,t",
+      "I_AHP"
+    ],
+    "simenvironments": [
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Invertebrate",
+      "Delay",
+      "Parkinson's",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [],
+    "receptors": [
+      "M3",
+      "M2",
+      "CO",
+      "NO"
+    ],
+    "regions": [
+      "Leech",
+      "Superior colliculus"
+    ]
+  },
+  "2016995": {
+    "celltypes": [
+      "Heart cell",
+      "Auditory nerve",
+      "Cardiac atrial cell",
+      "Leech S cell",
+      "Superior paraolivary nucleus neuron",
+      "Cardiac ventricular cell",
+      "Lateral Superior Olive (LSO) cell",
+      "Pituitary cell",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I p,q",
+      "I K",
+      "I Potassium",
+      "I trp",
+      "I h",
+      "I L high threshold",
+      "I MI",
+      "I Na,p",
+      "I Mixed",
+      "I N",
+      "I Q",
+      "I M",
+      "I_Na,Ca",
+      "I Na,t",
+      "I R"
+    ],
+    "simenvironments": [
+      "Lua",
+      "QuB",
+      "XML (web link to model)",
+      "Mathematica",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Ion Channel Kinetics",
+      "Invertebrate",
+      "unscented Kalman filter",
+      "Action Potentials",
+      "Sensory coding",
+      "Temperature",
+      "Parkinson's",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Channel/Receptor"
+    ],
+    "receptors": [
+      "Zn2+",
+      "M3",
+      "M2",
+      "M1",
+      "M5",
+      "CO",
+      "M4",
+      "NO"
+    ],
+    "regions": [
+      "Leech",
+      "Subthalamic Nucleus",
+      "Basal ganglia",
+      "Superior colliculus"
+    ]
+  },
+  "2017143": {
+    "celltypes": [
+      "Astrocyte",
+      "Myelinated neuron",
+      "Medial Superior Olive (MSO) cell",
+      "Lateral Superior Olive (LSO) cell",
+      "Nucleus accumbens spiny projection neuron",
+      "Auditory nerve",
+      "Aplysia R15 bursting neuron",
+      "Leech S cell",
+      "Superior paraolivary nucleus neuron",
+      "Neuroblastoma",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I K",
+      "I_KD",
+      "I Potassium",
+      "I Ca,p",
+      "I L high threshold",
+      "I MI",
+      "I Na,p",
+      "I N",
+      "Channelrhodopsin (ChR)",
+      "I p,q",
+      "I CAN",
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I trp",
+      "I h",
+      "I T low threshold",
+      "I Chloride",
+      "I Mixed",
+      "I Q",
+      "I CNG",
+      "Kir",
+      "I M",
+      "I_Na,Ca",
+      "I K,Ca",
+      "I R",
+      "I Na,t"
+    ],
+    "simenvironments": [
+      "GENESIS",
+      "NCS",
+      "Python",
+      "Lua",
+      "Network",
+      "STEPS",
+      "LCG",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Depression",
+      "Reaction-diffusion",
+      "Oscillations",
+      "unscented Kalman filter",
+      "Learning",
+      "Phase Response Curves",
+      "Activity Patterns",
+      "Simplified Models",
+      "Synaptic Plasticity",
+      "STDP",
+      "Development",
+      "Detailed Neuronal Models",
+      "Bursting",
+      "Calcium dynamics",
+      "Ion Channel Kinetics",
+      "Invertebrate",
+      "Action Potential Initiation",
+      "Delay",
+      "Short-term Synaptic Plasticity",
+      "Aging/Alzheimer`s",
+      "Action Potentials",
+      "Sensory coding",
+      "Synchronization",
+      "Temperature",
+      "Facilitation",
+      "Parkinson's",
+      "Axonal Action Potentials",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Axon",
+      "Synapse",
+      "Neuron or other electrically excitable cell",
+      "Extracellular"
+    ],
+    "receptors": [
+      "Serotonin",
+      "Zn2+",
+      "Glutamate",
+      "CO",
+      "NMDA",
+      "Kainate",
+      "M3",
+      "M2",
+      "AMPA",
+      "M1",
+      "M5",
+      "M4",
+      "NO",
+      "Gaba"
+    ],
+    "regions": [
+      "Neocortex",
+      "Thalamus",
+      "Hippocampus",
+      "Cerebellum",
+      "Basal ganglia",
+      "Leech",
+      "Striatum",
+      "Superior colliculus"
+    ]
+  },
+  "2017403": {
+    "celltypes": [
+      "Auditory nerve"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I K",
+      "I Potassium",
+      "I h",
+      "I T low threshold",
+      "I Chloride",
+      "I L high threshold",
+      "I MI",
+      "I Mixed",
+      "I N",
+      "Kir",
+      "I M",
+      "I K,Ca",
+      "I R",
+      "I Na,t"
+    ],
+    "simenvironments": [
+      "NEURON",
+      "Python"
+    ],
+    "modelconcepts": [
+      "Reaction-diffusion",
+      "Ion Channel Kinetics",
+      "Invertebrate",
+      "Parameter Fitting",
+      "Delay",
+      "Action Potentials",
+      "Parkinson's",
+      "Timothy Syndrome",
+      "Calcium dynamics"
+    ],
+    "modeltypes": [],
+    "receptors": [
+      "Serotonin",
+      "Alpha1",
+      "M3",
+      "M2",
+      "M1",
+      "CO",
+      "M4",
+      "NO"
+    ],
+    "regions": [
+      "Cerebellum",
+      "Superior colliculus",
+      "Hippocampus"
+    ]
+  },
+  "2017405": {
+    "celltypes": [
+      "Myelinated neuron",
+      "Lateral Superior Olive (LSO) cell",
+      "Auditory nerve",
+      "Aplysia R15 bursting neuron",
+      "Leech S cell",
+      "Subthalamus nucleus projection neuron",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I K",
+      "I_KD",
+      "I Potassium",
+      "I L high threshold",
+      "I MI",
+      "I Na,p",
+      "I N",
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I T low threshold",
+      "I h",
+      "I Chloride",
+      "I Mixed",
+      "I M",
+      "I K,Ca",
+      "I Na,t",
+      "I R",
+      "I_AHP"
+    ],
+    "simenvironments": [
+      "PyNN",
+      "SPLIT",
+      "MCell",
+      "Python",
+      "Lua",
+      "MATLAB",
+      "Network",
+      "STEPS",
+      "NEURON",
+      "ERNST (Event Related Neuronal Simulation Tool) (web link to model)"
+    ],
+    "modelconcepts": [
+      "Reaction-diffusion",
+      "Oscillations",
+      "Depression",
+      "Activity Patterns",
+      "Simplified Models",
+      "Synaptic Plasticity",
+      "STDP",
+      "Detailed Neuronal Models",
+      "Bursting",
+      "Calcium dynamics",
+      "Invertebrate",
+      "Parameter Fitting",
+      "Delay",
+      "Action Potentials",
+      "Deep brain stimulation",
+      "Temperature",
+      "Facilitation",
+      "Parkinson's",
+      "Synaptic noise",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Glia",
+      "Axon",
+      "Synapse",
+      "Extracellular"
+    ],
+    "receptors": [
+      "GabaA",
+      "Glutamate",
+      "Ion Receptors",
+      "CO",
+      "Kainate",
+      "M2",
+      "AMPA",
+      "M1",
+      "NO",
+      "Gaba"
+    ],
+    "regions": [
+      "Spinal motoneuron",
+      "Neocortex",
+      "Thalamus",
+      "Basal ganglia",
+      "Leech",
+      "Striatum",
+      "Subthalamic Nucleus",
+      "Superior colliculus"
+    ]
+  },
+  "260015": {
+    "celltypes": [
+      "Locus Coeruleus neuron",
+      "Cerebellum deep nucleus neuron",
+      "Medial Superior Olive (MSO) cell",
+      "Lateral Superior Olive (LSO) cell",
+      "Auditory nerve",
+      "Aplysia R15 bursting neuron",
+      "Squid axon",
+      "Globus pallidus neuron",
+      "Aplysia interneuron",
+      "Leech S cell",
+      "Superior paraolivary nucleus neuron"
+    ],
+    "currents": [
+      "I K",
+      "I L high threshold",
+      "I MI",
+      "I N",
+      "Channelrhodopsin (ChR)",
+      "I p,q",
+      "I CAN",
+      "I Sodium",
+      "I trp",
+      "I h",
+      "I Q",
+      "Kir",
+      "I M",
+      "I K,Ca",
+      "I R",
+      "Ca pump",
+      "I_KD",
+      "I Potassium",
+      "I Ca,p",
+      "I Na,p",
+      "I Calcium",
+      "I A",
+      "I T low threshold",
+      "I Chloride",
+      "I Mixed",
+      "I Na,t",
+      "I_Ks"
+    ],
+    "simenvironments": [
+      "SPLIT",
+      "MCell",
+      "Python",
+      "Lua",
+      "STEPS",
+      "XML (web link to model)",
+      "NCS",
+      "MATLAB",
+      "Network",
+      "NEURON",
+      "ERNST (Event Related Neuronal Simulation Tool) (web link to model)"
+    ],
+    "modelconcepts": [
+      "Reaction-diffusion",
+      "Homeostasis",
+      "Sleep",
+      "Detailed Neuronal Models",
+      "Calcium dynamics",
+      "Invertebrate",
+      "Delay",
+      "Aging/Alzheimer`s",
+      "Action Potentials",
+      "Sensory coding",
+      "Temperature",
+      "Parkinson's",
+      "Depression",
+      "Oscillations",
+      "Activity Patterns",
+      "Simplified Models",
+      "Influence of Dendritic Geometry",
+      "Spatio-temporal Activity Patterns",
+      "Bursting",
+      "Ion Channel Kinetics",
+      "Tutorial/Teaching",
+      "Connectivity matrix",
+      "Synchronization",
+      "Temporal Pattern Generation",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Glia",
+      "Axon",
+      "Synapse"
+    ],
+    "receptors": [
+      "GabaA",
+      "Glutamate",
+      "Alpha2",
+      "CO",
+      "IP3",
+      "GabaB",
+      "M1",
+      "Gaba",
+      "Serotonin",
+      "Zn2+",
+      "NMDA",
+      "Muscarinic",
+      "M3",
+      "M2",
+      "AMPA",
+      "M5",
+      "M4",
+      "NO"
+    ],
+    "regions": [
+      "Thalamus",
+      "Aplysia",
+      "Basal ganglia",
+      "Striatum",
+      "Superior colliculus",
+      "Neocortex",
+      "Prefrontal cortex (PFC)",
+      "Cerebellum",
+      "Olfactory bulb",
+      "Leech",
+      "Subthalamic Nucleus",
+      "Hippocampus"
+    ]
+  },
+  "263719": {
+    "celltypes": [
+      "Auditory nerve",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I K",
+      "I_KD",
+      "I Potassium",
+      "I trp",
+      "I h",
+      "I L high threshold",
+      "I Na,p",
+      "I Mixed",
+      "I N",
+      "I Q",
+      "Kir",
+      "I M",
+      "I K,Ca",
+      "Channelrhodopsin (ChR)",
+      "I R",
+      "I_Ks"
+    ],
+    "simenvironments": [
+      "NCS",
+      "Network",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Action Potentials",
+      "Sensory coding",
+      "Synchronization",
+      "Temperature",
+      "Apoptosis",
+      "Parkinson's",
+      "Timothy Syndrome",
+      "Bursting",
+      "Calcium dynamics"
+    ],
+    "modeltypes": [
+      "Synapse",
+      "Extracellular"
+    ],
+    "receptors": [
+      "Glutamate",
+      "Gaba",
+      "AMPA",
+      "M2",
+      "M1",
+      "CO",
+      "NO",
+      "NMDA"
+    ],
+    "regions": [
+      "Subthalamic Nucleus",
+      "Basal ganglia",
+      "Superior colliculus"
+    ]
+  },
+  "266796": {
+    "celltypes": [
+      "Suprachiasmatic nucleus (SCN) neuron",
+      "Dentate gyrus mossy cell",
+      "Vestibular neuron",
+      "Auditory nerve",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I K",
+      "I Potassium",
+      "I L high threshold",
+      "I MI",
+      "I Na,p",
+      "I N",
+      "I p,q",
+      "I CAN",
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I h",
+      "I T low threshold",
+      "I Chloride",
+      "I Mixed",
+      "I Q",
+      "I M",
+      "I R",
+      "I_Ks"
+    ],
+    "simenvironments": [
+      "SPLIT",
+      "Python",
+      "Network",
+      "NEURON",
+      "Cython"
+    ],
+    "modelconcepts": [
+      "Oscillations",
+      "Sleep",
+      "Circadian Rhythms",
+      "Epilepsy",
+      "Activity Patterns",
+      "Delay",
+      "Parkinson's",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Synapse",
+      "Neuron or other electrically excitable cell"
+    ],
+    "receptors": [
+      "Zn2+",
+      "Alpha2",
+      "CO",
+      "M3",
+      "M2",
+      "AMPA",
+      "M1",
+      "M5",
+      "M4",
+      "NO"
+    ],
+    "regions": [
+      "Basal ganglia",
+      "Dentate gyrus",
+      "Superior colliculus",
+      "Hippocampus",
+      "Entorhinal cortex"
+    ]
+  },
+  "266844": {
+    "celltypes": [
+      "Myelinated neuron",
+      "Auditory nerve"
+    ],
+    "currents": [
+      "I K",
+      "I Potassium",
+      "I L high threshold",
+      "I MI",
+      "I Na,p",
+      "I N",
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I T low threshold",
+      "I h",
+      "I Mixed",
+      "I Q",
+      "I M",
+      "I K,Ca",
+      "I R",
+      "I Na,t"
+    ],
+    "simenvironments": [
+      "STEPS",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Reaction-diffusion",
+      "Oscillations",
+      "Depression",
+      "Active Dendrites",
+      "Bifurcation",
+      "Activity Patterns",
+      "Calcium dynamics",
+      "Dendritic Action Potentials",
+      "Action Potentials",
+      "Temperature",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Axon",
+      "Synapse"
+    ],
+    "receptors": [
+      "Glutamate",
+      "CO",
+      "NMDA",
+      "Muscarinic",
+      "M2",
+      "AMPA",
+      "M1",
+      "NO"
+    ],
+    "regions": [
+      "Neocortex",
+      "Thalamus",
+      "Superior colliculus"
+    ]
+  },
+  "267018": {
+    "celltypes": [
+      "Auditory nerve",
+      "Leech S cell",
+      "Lateral Superior Olive (LSO) cell",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I_SERCA",
+      "I K",
+      "I_HERG",
+      "I Potassium",
+      "I h",
+      "I Chloride",
+      "I L high threshold",
+      "I MI",
+      "I N",
+      "I Q",
+      "I Mixed",
+      "I M",
+      "Channelrhodopsin (ChR)",
+      "I R",
+      "I Na,t"
+    ],
+    "simenvironments": [
+      "XML (web link to model)",
+      "NCS",
+      "Network",
+      "STEPS",
+      "SPLIT",
+      "Mathematica",
+      "NEURON",
+      "Python",
+      "Virtual Cell (web link to model)"
+    ],
+    "modelconcepts": [
+      "Reaction-diffusion",
+      "Ion Channel Kinetics",
+      "Invertebrate",
+      "Delay",
+      "Dendritic Bistability",
+      "Parkinson's",
+      "Timothy Syndrome",
+      "Calcium dynamics"
+    ],
+    "modeltypes": [
+      "Glia",
+      "Axon"
+    ],
+    "receptors": [
+      "IP3",
+      "Nicotinic",
+      "M3",
+      "M2",
+      "AMPA",
+      "CO",
+      "NO"
+    ],
+    "regions": [
+      "Leech",
+      "Hippocampus",
+      "Prefrontal cortex (PFC)",
+      "Superior colliculus"
+    ]
+  },
+  "267033": {
+    "celltypes": [
+      "Auditory nerve",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I CAN",
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "KCC2",
+      "I K",
+      "NKCC1",
+      "I Potassium",
+      "I h",
+      "I Chloride",
+      "Na/K pump",
+      "I Na,p",
+      "I Mixed",
+      "I N",
+      "I M",
+      "I K,Ca",
+      "I R",
+      "I_AHP"
+    ],
+    "simenvironments": [
+      "Lua",
+      "STEPS",
+      "NEURON",
+      "FORTRAN"
+    ],
+    "modelconcepts": [
+      "Temperature",
+      "Parkinson's",
+      "Timothy Syndrome",
+      "Calcium dynamics"
+    ],
+    "modeltypes": [
+      "Neuron or other electrically excitable cell",
+      "Extracellular",
+      "Synapse"
+    ],
+    "receptors": [
+      "GabaA",
+      "Glutamate",
+      "M3",
+      "M2",
+      "M1",
+      "CO",
+      "M4",
+      "NO",
+      "Gaba"
+    ],
+    "regions": [
+      "Superior colliculus"
+    ]
+  },
+  "267056": {
+    "celltypes": [
+      "Spinal cord sympathetic preganglionic neuron",
+      "Suprachiasmatic nucleus (SCN) neuron",
+      "Lateral Superior Olive (LSO) cell",
+      "Auditory nerve",
+      "Leech S cell",
+      "Superior paraolivary nucleus neuron",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I K",
+      "I Potassium",
+      "I Ca,p",
+      "I L high threshold",
+      "I Na,p",
+      "I N",
+      "I CAN",
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I trp",
+      "I h",
+      "I T low threshold",
+      "I Mixed",
+      "I M",
+      "I K,Ca",
+      "I R",
+      "I Na,t",
+      "I_AHP"
+    ],
+    "simenvironments": [
+      "MCell",
+      "Python",
+      "Lua",
+      "Network",
+      "NEURON",
+      "ERNST (Event Related Neuronal Simulation Tool) (web link to model)"
+    ],
+    "modelconcepts": [
+      "Reaction-diffusion",
+      "Oscillations",
+      "Circadian Rhythms",
+      "Activity Patterns",
+      "Synaptic Plasticity",
+      "Calcium dynamics",
+      "Ion Channel Kinetics",
+      "Invertebrate",
+      "Action Potential Initiation",
+      "Delay",
+      "Short-term Synaptic Plasticity",
+      "Connectivity matrix",
+      "Action Potentials",
+      "Sensory coding",
+      "Temperature",
+      "Facilitation",
+      "Axonal Action Potentials",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Axon",
+      "Synapse",
+      "Neuron or other electrically excitable cell",
+      "Extracellular"
+    ],
+    "receptors": [
+      "GabaA",
+      "Alpha2",
+      "Glycine",
+      "CO",
+      "NMDA",
+      "IP3",
+      "GabaB",
+      "M3",
+      "AMPA",
+      "M2",
+      "M1",
+      "NO",
+      "Gaba"
+    ],
+    "regions": [
+      "Thalamus",
+      "Hippocampus",
+      "Leech",
+      "Subthalamic Nucleus",
+      "Stomatogastric ganglion",
+      "Superior colliculus"
+    ]
+  },
+  "267088": {
+    "celltypes": [
+      "Myelinated neuron",
+      "Medial Superior Olive (MSO) cell",
+      "Nucleus accumbens spiny projection neuron",
+      "Vestibular neuron",
+      "Auditory nerve",
+      "Ventral cochlear nucleus T stellate (chopper) neuron",
+      "Aplysia R15 bursting neuron",
+      "Leech S cell",
+      "Superior paraolivary nucleus neuron",
+      "Squid axon",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I K",
+      "I_KD",
+      "I Potassium",
+      "I L high threshold",
+      "I MI",
+      "I Na,p",
+      "Na/K pump",
+      "I N",
+      "Channelrhodopsin (ChR)",
+      "I p,q",
+      "I CAN",
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I h",
+      "I T low threshold",
+      "I Chloride",
+      "I Mixed",
+      "I Q",
+      "I M",
+      "I K,Ca",
+      "I Na,t",
+      "I_Ks",
+      "I R"
+    ],
+    "simenvironments": [
+      "IDL",
+      "NCS",
+      "Java",
+      "SPLIT",
+      "Python",
+      "Emergent/PDP++",
+      "Lua",
+      "QuB",
+      "Network",
+      "LCG",
+      "NEURON",
+      "ERNST (Event Related Neuronal Simulation Tool) (web link to model)"
+    ],
+    "modelconcepts": [
+      "Depression",
+      "Oscillations",
+      "Reaction-diffusion",
+      "Active Dendrites",
+      "Bifurcation",
+      "unscented Kalman filter",
+      "Phase Response Curves",
+      "Activity Patterns",
+      "Influence of Dendritic Geometry",
+      "Detailed Neuronal Models",
+      "Calcium dynamics",
+      "Ion Channel Kinetics",
+      "Invertebrate",
+      "Action Potential Initiation",
+      "Dendritic Action Potentials",
+      "Multiple sclerosis",
+      "Delay",
+      "Action Potentials",
+      "Temperature",
+      "Temporal Pattern Generation",
+      "Parkinson's",
+      "Axonal Action Potentials",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Axon",
+      "Neuron or other electrically excitable cell",
+      "Extracellular"
+    ],
+    "receptors": [
+      "Serotonin",
+      "Zn2+",
+      "GabaA",
+      "5-HT1",
+      "Alpha2",
+      "CO",
+      "NMDA",
+      "IP3",
+      "M3",
+      "M2",
+      "M1",
+      "M5",
+      "M4",
+      "NO",
+      "Gaba"
+    ],
+    "regions": [
+      "Neocortex",
+      "Prefrontal cortex (PFC)",
+      "Basal ganglia",
+      "Leech",
+      "Superior colliculus"
+    ]
+  },
+  "267120": {
+    "celltypes": [
+      "Auditory nerve",
+      "Lateral Superior Olive (LSO) cell",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I p,q",
+      "I K",
+      "I Potassium",
+      "I trp",
+      "I h",
+      "I L high threshold",
+      "I MI",
+      "I Na,p",
+      "I Mixed",
+      "I N",
+      "I Q",
+      "I M",
+      "I K,Ca",
+      "I R",
+      "I Na,t"
+    ],
+    "simenvironments": [
+      "MATLAB",
+      "Network",
+      "NEURON",
+      "Python"
+    ],
+    "modelconcepts": [
+      "Delay",
+      "Sensory coding",
+      "Temperature",
+      "Parkinson's",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Synapse"
+    ],
+    "receptors": [
+      "Zn2+",
+      "M3",
+      "M2",
+      "M1",
+      "M5",
+      "CO",
+      "M4",
+      "NO"
+    ],
+    "regions": [
+      "Basal ganglia",
+      "Superior colliculus"
+    ]
+  },
+  "267221": {
+    "celltypes": [
+      "Lateral Superior Olive (LSO) cell",
+      "Auditory nerve",
+      "Leech S cell",
+      "Superior paraolivary nucleus neuron",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I K",
+      "I Potassium",
+      "I L high threshold",
+      "I Na,p",
+      "I N",
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I T low threshold",
+      "I h",
+      "I Chloride",
+      "Ca pump",
+      "I_AHP",
+      "I Mixed",
+      "I Q",
+      "I M",
+      "I K,Ca",
+      "I R",
+      "I_Ks",
+      "I Na,t"
+    ],
+    "simenvironments": [
+      "MCell",
+      "Python",
+      "Lua",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Reaction-diffusion",
+      "Calcium dynamics",
+      "Ion Channel Kinetics",
+      "Invertebrate",
+      "Action Potential Initiation",
+      "Delay",
+      "Action Potentials",
+      "Temperature",
+      "Parkinson's",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Axon",
+      "Synapse",
+      "Neuron or other electrically excitable cell",
+      "Extracellular"
+    ],
+    "receptors": [
+      "GabaA",
+      "Gaba",
+      "CO",
+      "NMDA",
+      "Muscarinic",
+      "GabaB",
+      "AMPA",
+      "M2",
+      "M1",
+      "NO"
+    ],
+    "regions": [
+      "Leech",
+      "Dentate gyrus",
+      "Superior colliculus",
+      "Hippocampus"
+    ]
+  },
+  "267250": {
+    "celltypes": [
+      "Auditory nerve"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I Potassium",
+      "I R"
+    ],
+    "simenvironments": [
+      "MATLAB"
+    ],
+    "modelconcepts": [
+      "Oscillations",
+      "Phase Response Curves",
+      "Activity Patterns",
+      "Temporal Pattern Generation",
+      "Circadian Rhythms",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [],
+    "receptors": [
+      "CO",
+      "NO"
+    ],
+    "regions": []
+  },
+  "267252": {
+    "celltypes": [
+      "Auditory nerve"
+    ],
+    "currents": [
+      "I Calcium",
+      "I A",
+      "I MI",
+      "I Na,p",
+      "I K",
+      "I N",
+      "I M",
+      "I Potassium",
+      "I R"
+    ],
+    "simenvironments": [
+      "MATLAB"
+    ],
+    "modelconcepts": [
+      "Depression",
+      "Oscillations",
+      "Activity Patterns",
+      "Calcium dynamics"
+    ],
+    "modeltypes": [
+      "Synapse"
+    ],
+    "receptors": [
+      "M2",
+      "CO",
+      "NO"
+    ],
+    "regions": [
+      "Superior colliculus"
+    ]
+  },
+  "267253": {
+    "celltypes": [
+      "Auditory nerve",
+      "Lateral Superior Olive (LSO) cell"
+    ],
+    "currents": [
+      "I Calcium",
+      "I CAN",
+      "I Sodium",
+      "I A",
+      "I K",
+      "I Potassium",
+      "I h",
+      "I Chloride",
+      "I Ca,p",
+      "I MI",
+      "I Na,p",
+      "I Mixed",
+      "I N",
+      "I Q",
+      "I M",
+      "I R",
+      "I Na,t"
+    ],
+    "simenvironments": [
+      "MATLAB",
+      "Network",
+      "STEPS",
+      "SPLIT",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Oscillations",
+      "Activity Patterns",
+      "Temporal Pattern Generation",
+      "Parkinson's",
+      "Axonal Action Potentials",
+      "Bursting",
+      "Timothy Syndrome",
+      "Calcium dynamics"
+    ],
+    "modeltypes": [],
+    "receptors": [
+      "Glutamate",
+      "M2",
+      "CO",
+      "NO"
+    ],
+    "regions": [
+      "Superior colliculus"
+    ]
+  },
+  "267259": {
+    "celltypes": [
+      "Brainstem neuron",
+      "Lateral Superior Olive (LSO) cell",
+      "Auditory nerve",
+      "Leech S cell",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I K",
+      "NKCC1",
+      "I Potassium",
+      "I L high threshold",
+      "I MI",
+      "Na/K pump",
+      "I Na,p",
+      "I N",
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "KCC2",
+      "I h",
+      "I Chloride",
+      "I Mixed",
+      "I M",
+      "I R",
+      "I_Ks"
+    ],
+    "simenvironments": [
+      "NCS",
+      "SPLIT",
+      "Python",
+      "Network",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Reaction-diffusion",
+      "Depression",
+      "Spreading depression",
+      "Epilepsy",
+      "Ion Channel Kinetics",
+      "Invertebrate",
+      "Delay",
+      "Parkinson's",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Glia",
+      "Extracellular"
+    ],
+    "receptors": [
+      "Serotonin",
+      "Alpha1",
+      "Alpha2",
+      "CO",
+      "M2",
+      "NO"
+    ],
+    "regions": [
+      "Neocortex",
+      "Brainstem",
+      "Leech",
+      "Superior colliculus",
+      "Hippocampus"
+    ]
+  },
+  "267260": {
+    "celltypes": [
+      "Auditory nerve",
+      "Aplysia R15 bursting neuron",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I K",
+      "I Potassium",
+      "I h",
+      "I T low threshold",
+      "I L high threshold",
+      "I MI",
+      "I Na,p",
+      "I Mixed",
+      "I N",
+      "I Q",
+      "I M",
+      "I R"
+    ],
+    "simenvironments": [
+      "MATLAB",
+      "NCS",
+      "Network",
+      "STEPS",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Bifurcation",
+      "Deep brain stimulation",
+      "Parkinson's",
+      "Timothy Syndrome",
+      "Calcium dynamics"
+    ],
+    "modeltypes": [
+      "Synapse"
+    ],
+    "receptors": [
+      "Zn2+",
+      "IP3",
+      "Glutamate",
+      "M3",
+      "M2",
+      "M1",
+      "M5",
+      "CO",
+      "M4",
+      "NO"
+    ],
+    "regions": [
+      "Prefrontal cortex (PFC)",
+      "Basal ganglia",
+      "Superior colliculus"
+    ]
+  },
+  "267267": {
+    "celltypes": [
+      "Lateral Superior Olive (LSO) cell",
+      "Nucleus accumbens spiny projection neuron",
+      "Auditory nerve",
+      "Aplysia R15 bursting neuron",
+      "Leech S cell",
+      "Neuroblastoma"
+    ],
+    "currents": [
+      "I K",
+      "I_KD",
+      "I Potassium",
+      "I L high threshold",
+      "I Ca,p",
+      "I MI",
+      "I Na,p",
+      "I N",
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I h",
+      "I T low threshold",
+      "I Mixed",
+      "Kir",
+      "I M",
+      "I K,Ca",
+      "I R",
+      "Ca pump",
+      "I Na,t"
+    ],
+    "simenvironments": [
+      "SPLIT",
+      "MCell",
+      "Lua",
+      "STEPS",
+      "Network",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Reaction-diffusion",
+      "Oscillations",
+      "Activity Patterns",
+      "Bursting",
+      "Calcium dynamics",
+      "Ion Channel Kinetics",
+      "Invertebrate",
+      "Delay",
+      "Action Potentials",
+      "Temperature",
+      "Parkinson's",
+      "Timothy Syndrome",
+      "Synaptic Integration"
+    ],
+    "modeltypes": [
+      "Glia",
+      "Axon",
+      "Synapse",
+      "Neuron or other electrically excitable cell",
+      "Extracellular"
+    ],
+    "receptors": [
+      "Serotonin",
+      "GabaA",
+      "Glutamate",
+      "CO",
+      "NMDA",
+      "M3",
+      "AMPA",
+      "M2",
+      "NO",
+      "Gaba"
+    ],
+    "regions": [
+      "Neocortex",
+      "Thalamus",
+      "Hippocampus",
+      "Aplysia",
+      "Basal ganglia",
+      "Leech",
+      "Striatum",
+      "Dentate gyrus",
+      "Superior colliculus",
+      "Entorhinal cortex"
+    ]
+  },
+  "267293": {
+    "celltypes": [
+      "Myelinated neuron",
+      "Auditory nerve",
+      "Aplysia R15 bursting neuron",
+      "Leech S cell",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I K",
+      "I Potassium",
+      "I Ca,p",
+      "I L high threshold",
+      "I MI",
+      "I Na,p",
+      "I N",
+      "Channelrhodopsin (ChR)",
+      "I CAN",
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I h",
+      "I T low threshold",
+      "I Chloride",
+      "I Mixed",
+      "I Q",
+      "I M",
+      "I K,Ca",
+      "I R",
+      "I Na,t",
+      "I_AHP"
+    ],
+    "simenvironments": [
+      "SPLIT",
+      "MCell",
+      "Python",
+      "Lua",
+      "Network",
+      "STEPS",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Depression",
+      "Reaction-diffusion",
+      "Oscillations",
+      "Sleep",
+      "Phase Response Curves",
+      "Activity Patterns",
+      "Synaptic Plasticity",
+      "Bursting",
+      "Calcium dynamics",
+      "Ion Channel Kinetics",
+      "Invertebrate",
+      "Delay",
+      "Short-term Synaptic Plasticity",
+      "Action Potentials",
+      "Temperature",
+      "Facilitation",
+      "Parkinson's",
+      "Axonal Action Potentials",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Axon",
+      "Synapse",
+      "Neuron or other electrically excitable cell"
+    ],
+    "receptors": [
+      "CO",
+      "NMDA",
+      "M3",
+      "AMPA",
+      "M2",
+      "M1",
+      "M5",
+      "NO",
+      "Gaba"
+    ],
+    "regions": [
+      "Neocortex",
+      "Thalamus",
+      "Cerebellum",
+      "Leech",
+      "Superior colliculus"
+    ]
+  },
+  "267295": {
+    "celltypes": [
+      "Auditory nerve",
+      "Aplysia R15 bursting neuron",
+      "Lateral Superior Olive (LSO) cell",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I K",
+      "I Potassium",
+      "I MI",
+      "I Na,p",
+      "I N",
+      "I Na,t",
+      "I R"
+    ],
+    "simenvironments": [
+      "Lua",
+      "MATLAB",
+      "Network",
+      "VERTEX"
+    ],
+    "modelconcepts": [
+      "Bifurcation",
+      "Working memory",
+      "Delay",
+      "Dendritic Bistability",
+      "Parkinson's",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Synapse"
+    ],
+    "receptors": [
+      "M3",
+      "AMPA",
+      "M2",
+      "M1",
+      "CO",
+      "NO",
+      "NMDA",
+      "Gaba"
+    ],
+    "regions": [
+      "Neocortex",
+      "Basal ganglia",
+      "Superior colliculus"
+    ]
+  },
+  "267306": {
+    "celltypes": [
+      "Auditory nerve",
+      "Leech S cell",
+      "Lateral Superior Olive (LSO) cell"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I K",
+      "I Potassium",
+      "I T low threshold",
+      "I h",
+      "I Chloride",
+      "I Ca,p",
+      "I L high threshold",
+      "I MI",
+      "I Mixed",
+      "I N",
+      "I M",
+      "I K,Ca",
+      "I R",
+      "I Na,t"
+    ],
+    "simenvironments": [
+      "STEPS",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Reaction-diffusion",
+      "Invertebrate",
+      "Action Potentials",
+      "Activity Patterns",
+      "Axonal Action Potentials",
+      "Timothy Syndrome",
+      "Calcium dynamics"
+    ],
+    "modeltypes": [
+      "Neuron or other electrically excitable cell",
+      "Axon"
+    ],
+    "receptors": [
+      "M2",
+      "CO",
+      "NO"
+    ],
+    "regions": [
+      "Leech",
+      "Superior colliculus"
+    ]
+  },
+  "267309": {
+    "celltypes": [
+      "Suprachiasmatic nucleus (SCN) neuron",
+      "Lateral Superior Olive (LSO) cell",
+      "Abstract Morris-Lecar neuron",
+      "Auditory nerve",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I K",
+      "I Potassium",
+      "I L high threshold",
+      "I MI",
+      "Na/K pump",
+      "I Na,p",
+      "I N",
+      "I CAN",
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I h",
+      "I T low threshold",
+      "I Chloride",
+      "I Mixed",
+      "I Q",
+      "Kir",
+      "I M",
+      "I K,Ca",
+      "I R",
+      "I_Ks",
+      "I_AHP",
+      "I Na,t"
+    ],
+    "simenvironments": [
+      "IDL",
+      "MATLAB",
+      "LCG",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Oscillations",
+      "Homeostasis",
+      "unscented Kalman filter",
+      "Circadian Rhythms",
+      "Activity Patterns",
+      "Calcium dynamics",
+      "Parkinson's",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Neuron or other electrically excitable cell"
+    ],
+    "receptors": [
+      "Serotonin",
+      "Zn2+",
+      "CO",
+      "IP3",
+      "M3",
+      "M2",
+      "M1",
+      "M5",
+      "M4",
+      "NO"
+    ],
+    "regions": [
+      "Basal ganglia",
+      "Superior colliculus"
+    ]
+  },
+  "267310": {
+    "celltypes": [
+      "Cerebellum deep nucleus neuron",
+      "Suprachiasmatic nucleus (SCN) neuron",
+      "Medial Nucleus of the Trapezoid Body (MNTB) neuron",
+      "Medial Superior Olive (MSO) cell",
+      "Lateral Superior Olive (LSO) cell",
+      "Nucleus accumbens spiny projection neuron",
+      "Vestibular neuron",
+      "Auditory nerve",
+      "Aplysia R15 bursting neuron",
+      "Globus pallidus neuron",
+      "Astrocyte",
+      "Ventral cochlear nucleus T stellate (chopper) neuron",
+      "Leech S cell",
+      "Superior paraolivary nucleus neuron",
+      "Locust Lobula Giant Movement Detector (LGMD) neuron"
+    ],
+    "currents": [
+      "I K",
+      "I L high threshold",
+      "I MI",
+      "I N",
+      "Channelrhodopsin (ChR)",
+      "I p,q",
+      "I CAN",
+      "I Sodium",
+      "I trp",
+      "I h",
+      "I_HCO3",
+      "I Q",
+      "Kir",
+      "I M",
+      "I_Na,Ca",
+      "I K,Ca",
+      "I R",
+      "I_AHP",
+      "I_KD",
+      "I Potassium",
+      "I Ca,p",
+      "I Na,p",
+      "I Calcium",
+      "I A",
+      "I_K,Na",
+      "I Chloride",
+      "I Mixed",
+      "I Krp",
+      "I Na,t",
+      "I_Ks"
+    ],
+    "simenvironments": [
+      "MySQL (web link to model)",
+      "PyNN",
+      "Python",
+      "Emergent/PDP++",
+      "Lua",
+      "STEPS",
+      "LCG",
+      "IDL",
+      "CSIM",
+      "XML (web link to model)",
+      "NCS",
+      "QuB",
+      "MATLAB"
+    ],
+    "modelconcepts": [
+      "Calcium dynamics",
+      "Invertebrate",
+      "CREB",
+      "Delay",
+      "Sensory coding",
+      "Temperature",
+      "Parkinson's",
+      "Depression",
+      "Oscillations",
+      "unscented Kalman filter",
+      "Circadian Rhythms",
+      "Phase Response Curves",
+      "Activity Patterns",
+      "Deep brain stimulation",
+      "Temporal Pattern Generation",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Neuron or other electrically excitable cell",
+      "Neuromuscular Junction"
+    ],
+    "receptors": [
+      "CO",
+      "IP3",
+      "M1",
+      "Gaba",
+      "Zn2+",
+      "M3",
+      "M2",
+      "M5",
+      "M4",
+      "NO"
+    ],
+    "regions": [
+      "Thalamus",
+      "Basal ganglia",
+      "Stomatogastric ganglion",
+      "Superior colliculus",
+      "Prefrontal cortex (PFC)",
+      "Leech",
+      "Subthalamic Nucleus",
+      "Hippocampus"
+    ]
+  },
+  "267311": {
+    "celltypes": [
+      "Lateral Superior Olive (LSO) cell",
+      "Auditory nerve",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I K",
+      "I Potassium",
+      "I Ca,p",
+      "I L high threshold",
+      "I MI",
+      "I Na,p",
+      "I N",
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I T low threshold",
+      "I h",
+      "I Chloride",
+      "I Mixed",
+      "I Q",
+      "I M",
+      "I K,Ca",
+      "I R",
+      "I Na,t"
+    ],
+    "simenvironments": [
+      "SPLIT",
+      "VERTEX",
+      "Python",
+      "Lua",
+      "STEPS",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Depression",
+      "Oscillations",
+      "Activity Patterns",
+      "Simplified Models",
+      "Synaptic Plasticity",
+      "Detailed Neuronal Models",
+      "Calcium dynamics",
+      "Ion Channel Kinetics",
+      "Parameter Fitting",
+      "Delay",
+      "Action Potentials",
+      "Temperature",
+      "Parkinson's",
+      "Electrotonus",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Synapse",
+      "Neuron or other electrically excitable cell",
+      "Extracellular"
+    ],
+    "receptors": [
+      "Zn2+",
+      "Alpha2",
+      "CO",
+      "IP3",
+      "M3",
+      "AMPA",
+      "M2",
+      "M1",
+      "NO"
+    ],
+    "regions": [
+      "Thalamus",
+      "Basal ganglia",
+      "Superior colliculus",
+      "Hippocampus"
+    ]
+  },
+  "267329": {
+    "celltypes": [
+      "Auditory nerve"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I Na,p",
+      "I K",
+      "I Potassium",
+      "Channelrhodopsin (ChR)",
+      "I R"
+    ],
+    "simenvironments": [
+      "Network",
+      "NEURON",
+      "MATLAB"
+    ],
+    "modelconcepts": [
+      "Synchronization",
+      "Timothy Syndrome",
+      "Connectivity matrix"
+    ],
+    "modeltypes": [
+      "Synapse"
+    ],
+    "receptors": [
+      "CO",
+      "NO"
+    ],
+    "regions": [
+      "Subthalamic Nucleus",
+      "Superior colliculus"
+    ]
+  },
+  "267339": {
+    "celltypes": [
+      "Auditory nerve",
+      "Aplysia R15 bursting neuron",
+      "Leech S cell",
+      "Lateral Superior Olive (LSO) cell",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I K",
+      "I Potassium",
+      "I h",
+      "I MI",
+      "I Na,p",
+      "I Mixed",
+      "I N",
+      "I M",
+      "Channelrhodopsin (ChR)",
+      "I Na,t",
+      "I R"
+    ],
+    "simenvironments": [
+      "PyNN",
+      "IDL",
+      "XML (web link to model)",
+      "Network",
+      "STEPS",
+      "NEURON",
+      "Python"
+    ],
+    "modelconcepts": [
+      "Reaction-diffusion",
+      "Depression",
+      "Invertebrate",
+      "Delay",
+      "Place cell/field",
+      "Learning",
+      "STDP",
+      "Spatial Navigation",
+      "Parkinson's",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Synapse"
+    ],
+    "receptors": [
+      "AMPA",
+      "CO",
+      "NO"
+    ],
+    "regions": [
+      "Leech",
+      "Basal ganglia",
+      "Superior colliculus",
+      "Hippocampus"
+    ]
+  },
+  "267355": {
+    "celltypes": [
+      "Auditory nerve",
+      "Myelinated neuron",
+      "Lateral Superior Olive (LSO) cell"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I K",
+      "I_KD",
+      "I Potassium",
+      "I T low threshold",
+      "I h",
+      "I Ca,p",
+      "I L high threshold",
+      "Ca pump",
+      "I MI",
+      "I Mixed",
+      "I N",
+      "I Q",
+      "I Na,p",
+      "I M",
+      "I K,Ca",
+      "Channelrhodopsin (ChR)",
+      "I R",
+      "I Na,t",
+      "I_AHP"
+    ],
+    "simenvironments": [
+      "Lua",
+      "STEPS",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Reaction-diffusion",
+      "Action Potential Initiation",
+      "Delay",
+      "Action Potentials",
+      "Temperature",
+      "Axonal Action Potentials",
+      "Parkinson's",
+      "Timothy Syndrome",
+      "Calcium dynamics"
+    ],
+    "modeltypes": [
+      "Neuron or other electrically excitable cell",
+      "Axon",
+      "Synapse"
+    ],
+    "receptors": [
+      "M3",
+      "M2",
+      "M1",
+      "CO",
+      "NO"
+    ],
+    "regions": [
+      "Neocortex",
+      "Thalamus",
+      "Cerebellum",
+      "Superior colliculus",
+      "Hippocampus"
+    ]
+  },
+  "267357": {
+    "celltypes": [
+      "Auditory nerve",
+      "Leech S cell",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I K",
+      "I Potassium",
+      "I Ca,p",
+      "I L high threshold",
+      "I MI",
+      "Na/K pump",
+      "I Na,p",
+      "I N",
+      "Channelrhodopsin (ChR)",
+      "I CAN",
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I T low threshold",
+      "I h",
+      "I Chloride",
+      "I Mixed",
+      "I Q",
+      "I M",
+      "I K,Ca",
+      "I Na,t",
+      "Ca pump",
+      "I R"
+    ],
+    "simenvironments": [
+      "NCS",
+      "Python",
+      "Lua",
+      "STEPS",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Reaction-diffusion",
+      "Oscillations",
+      "Bifurcation",
+      "Activity Patterns",
+      "Simplified Models",
+      "Dendritic Bistability",
+      "Detailed Neuronal Models",
+      "Bursting",
+      "Calcium dynamics",
+      "Ion Channel Kinetics",
+      "Invertebrate",
+      "Delay",
+      "Temperature",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Axon",
+      "Synapse",
+      "Neuron or other electrically excitable cell",
+      "Extracellular"
+    ],
+    "receptors": [
+      "Zn2+",
+      "GabaA",
+      "CO",
+      "NMDA",
+      "GabaB",
+      "M3",
+      "AMPA",
+      "M2",
+      "NO",
+      "Gaba"
+    ],
+    "regions": [
+      "Hippocampus",
+      "Leech",
+      "Superior colliculus"
+    ]
+  },
+  "267363": {
+    "celltypes": [
+      "Auditory nerve"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I K",
+      "I Potassium",
+      "I trp",
+      "I T low threshold",
+      "I h",
+      "I L high threshold",
+      "I Mixed",
+      "I N",
+      "I M",
+      "I R"
+    ],
+    "simenvironments": [
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Sensory coding",
+      "Activity Patterns",
+      "Temperature",
+      "Parkinson's",
+      "Axonal Action Potentials",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [],
+    "receptors": [
+      "M2",
+      "CO",
+      "NO"
+    ],
+    "regions": [
+      "Superior colliculus"
+    ]
+  },
+  "267382": {
+    "celltypes": [
+      "Abstract Izhikevich neuron",
+      "Cerebellum deep nucleus neuron",
+      "Suprachiasmatic nucleus (SCN) neuron",
+      "Medial Superior Olive (MSO) cell",
+      "Lateral Superior Olive (LSO) cell",
+      "Olfactory bulb main juxtaglomerular cell",
+      "Vibrissa motoneuron",
+      "Abstract integrate-and-fire leaky neuron",
+      "Vestibular neuron",
+      "Auditory nerve",
+      "Ventral cochlear nucleus T stellate (chopper) neuron",
+      "Aplysia R15 bursting neuron",
+      "Leech S cell",
+      "Superior paraolivary nucleus neuron",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I_KHT",
+      "I K",
+      "I_KD",
+      "I Potassium",
+      "I L high threshold",
+      "I Ca,p",
+      "I MI",
+      "I Na,p",
+      "I N",
+      "Channelrhodopsin (ChR)",
+      "I p,q",
+      "I CAN",
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I_Ks",
+      "I trp",
+      "I h",
+      "I_K,Na",
+      "I Chloride",
+      "I Mixed",
+      "I Q",
+      "Kir",
+      "I M",
+      "I K,Ca",
+      "I Na,t",
+      "I R"
+    ],
+    "simenvironments": [
+      "IDL",
+      "XML (web link to model)",
+      "SBML",
+      "NCS",
+      "SPLIT",
+      "Emergent/PDP++",
+      "Lua",
+      "QuB",
+      "MATLAB",
+      "Network",
+      "LCG",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Depression",
+      "Oscillations",
+      "Bifurcation",
+      "unscented Kalman filter",
+      "Circadian Rhythms",
+      "Phase Response Curves",
+      "Activity Patterns",
+      "Influence of Dendritic Geometry",
+      "Detailed Neuronal Models",
+      "Bursting",
+      "Calcium dynamics",
+      "Invertebrate",
+      "Delay",
+      "Sensory coding",
+      "Deep brain stimulation",
+      "Temperature",
+      "Temporal Pattern Generation",
+      "Parkinson's",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Glia",
+      "Synapse",
+      "Neuron or other electrically excitable cell"
+    ],
+    "receptors": [
+      "Serotonin",
+      "Zn2+",
+      "CO",
+      "IP3",
+      "M3",
+      "M2",
+      "AMPA",
+      "M1",
+      "M5",
+      "M4",
+      "NO"
+    ],
+    "regions": [
+      "Thalamus",
+      "Prefrontal cortex (PFC)",
+      "Basal ganglia",
+      "Leech",
+      "Subthalamic Nucleus",
+      "Stomatogastric ganglion",
+      "Superior colliculus",
+      "Hippocampus"
+    ]
+  },
+  "267391": {
+    "celltypes": [
+      "Lateral Superior Olive (LSO) cell",
+      "Auditory nerve",
+      "Leech S cell",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I K",
+      "I_KD",
+      "I Potassium",
+      "I L high threshold",
+      "I MI",
+      "I Na,p",
+      "I N",
+      "I CAN",
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I h",
+      "I T low threshold",
+      "I Chloride",
+      "I Mixed",
+      "I Q",
+      "I M",
+      "I R",
+      "Ca pump",
+      "I Na,t"
+    ],
+    "simenvironments": [
+      "XML (web link to model)",
+      "SPLIT",
+      "VERTEX",
+      "Python",
+      "Lua",
+      "MATLAB",
+      "Network",
+      "STEPS",
+      "Mathematica",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Oscillations",
+      "Phase Response Curves",
+      "Activity Patterns",
+      "Simplified Models",
+      "Detailed Neuronal Models",
+      "Calcium dynamics",
+      "Invertebrate",
+      "Action Potential Initiation",
+      "Delay",
+      "Aging/Alzheimer`s",
+      "Action Potentials",
+      "Parkinson's",
+      "Axonal Action Potentials",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Axon",
+      "Synapse",
+      "Neuron or other electrically excitable cell",
+      "Extracellular"
+    ],
+    "receptors": [
+      "CO",
+      "IP3",
+      "M3",
+      "AMPA",
+      "M2",
+      "M1",
+      "M5",
+      "M4",
+      "NO",
+      "Gaba"
+    ],
+    "regions": [
+      "Thalamus",
+      "Hippocampus",
+      "Retina",
+      "Basal ganglia",
+      "Leech",
+      "Stomatogastric ganglion",
+      "Superior colliculus"
+    ]
+  },
+  "267395": {
+    "celltypes": [
+      "Auditory nerve",
+      "Lateral Superior Olive (LSO) cell",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I K",
+      "I Potassium",
+      "I T low threshold",
+      "I h",
+      "I L high threshold",
+      "I Mixed",
+      "I N",
+      "I M",
+      "I R"
+    ],
+    "simenvironments": [
+      "IGOR Pro",
+      "IDL",
+      "Network",
+      "NEURON",
+      "C or C++ program"
+    ],
+    "modelconcepts": [
+      "Delay",
+      "Action Potentials",
+      "Activity Patterns",
+      "Development",
+      "Parkinson's",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Synapse",
+      "Extracellular"
+    ],
+    "receptors": [
+      "GabaA",
+      "Glutamate",
+      "GabaB",
+      "M3",
+      "AMPA",
+      "M2",
+      "M1",
+      "M5",
+      "CO",
+      "M4",
+      "NO",
+      "Gaba"
+    ],
+    "regions": [
+      "Spinal motoneuron",
+      "Superior colliculus"
+    ]
+  },
+  "267499": {
+    "celltypes": [
+      "Lateral Superior Olive (LSO) cell",
+      "Auditory nerve",
+      "Leech S cell"
+    ],
+    "currents": [
+      "I K",
+      "I_KD",
+      "I Potassium",
+      "I Ca,p",
+      "I L high threshold",
+      "I MI",
+      "Na/K pump",
+      "I Na,p",
+      "I N",
+      "I CAN",
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "KCC2",
+      "I h",
+      "I T low threshold",
+      "I Chloride",
+      "I_HCO3",
+      "I Cl, leak",
+      "I Mixed",
+      "I M",
+      "I K,Ca",
+      "I Na,t",
+      "Ca pump",
+      "I_AHP",
+      "I R"
+    ],
+    "simenvironments": [
+      "STEPS",
+      "NEURON",
+      "ERNST (Event Related Neuronal Simulation Tool) (web link to model)"
+    ],
+    "modelconcepts": [
+      "Reaction-diffusion",
+      "Chloride regulation",
+      "Potassium buffering",
+      "Epilepsy",
+      "Calcium dynamics",
+      "Invertebrate",
+      "Delay",
+      "Temperature",
+      "Parkinson's",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Synapse",
+      "Neuron or other electrically excitable cell",
+      "Extracellular"
+    ],
+    "receptors": [
+      "GabaA",
+      "CO",
+      "M3",
+      "M2",
+      "AMPA",
+      "M1",
+      "M4",
+      "NO",
+      "Gaba"
+    ],
+    "regions": [
+      "Hippocampus",
+      "Leech",
+      "Superior colliculus"
+    ]
+  },
+  "267501": {
+    "celltypes": [
+      "Lateral Superior Olive (LSO) cell",
+      "Auditory nerve",
+      "Leech S cell"
+    ],
+    "currents": [
+      "I K",
+      "I Potassium",
+      "I L high threshold",
+      "I MI",
+      "I Na,p",
+      "I N",
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I T low threshold",
+      "I h",
+      "I Chloride",
+      "I Mixed",
+      "I Q",
+      "I M",
+      "I K,Ca",
+      "I Na,t",
+      "I R"
+    ],
+    "simenvironments": [
+      "SPLIT",
+      "Python",
+      "STEPS",
+      "Mathematica",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Depression",
+      "Reaction-diffusion",
+      "Oscillations",
+      "Orientation selectivity",
+      "Activity Patterns",
+      "Simplified Models",
+      "Detailed Neuronal Models",
+      "Bursting",
+      "Calcium dynamics",
+      "Invertebrate",
+      "Parameter Fitting",
+      "Delay",
+      "Action Potentials",
+      "Temperature",
+      "Parkinson's",
+      "Electrotonus",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Axon",
+      "Synapse"
+    ],
+    "receptors": [
+      "GabaA",
+      "Glutamate",
+      "CO",
+      "NMDA",
+      "Muscarinic",
+      "Kainate",
+      "GabaB",
+      "AMPA",
+      "M2",
+      "M1",
+      "NO",
+      "Gaba"
+    ],
+    "regions": [
+      "Neocortex",
+      "Thalamus",
+      "Hippocampus",
+      "Basal ganglia",
+      "Leech",
+      "Superior colliculus"
+    ]
+  },
+  "267509": {
+    "celltypes": [
+      "Lateral Superior Olive (LSO) cell",
+      "Auditory nerve",
+      "Leech S cell",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I K",
+      "I Potassium",
+      "I L high threshold",
+      "I MI",
+      "I Na,p",
+      "I N",
+      "I CAN",
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I h",
+      "I T low threshold",
+      "I Chloride",
+      "I Mixed",
+      "I Q",
+      "I M",
+      "I K,Ca",
+      "I R",
+      "I_Ks",
+      "I Na,t"
+    ],
+    "simenvironments": [
+      "Lua",
+      "Network",
+      "STEPS",
+      "NEURON",
+      "ERNST (Event Related Neuronal Simulation Tool) (web link to model)"
+    ],
+    "modelconcepts": [
+      "Synaptic Integration",
+      "Activity Patterns",
+      "Bursting",
+      "Calcium dynamics",
+      "Invertebrate",
+      "Delay",
+      "Action Potentials",
+      "Facilitation",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Synapse"
+    ],
+    "receptors": [
+      "GabaA",
+      "CO",
+      "NMDA",
+      "AMPA",
+      "M2",
+      "NO",
+      "Gaba"
+    ],
+    "regions": [
+      "Neocortex",
+      "Thalamus",
+      "Leech",
+      "Superior colliculus"
+    ]
+  },
+  "267512": {
+    "celltypes": [
+      "Auditory nerve",
+      "Ventral cochlear nucleus T stellate (chopper) neuron"
+    ],
+    "currents": [
+      "I CAN",
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I K",
+      "I Potassium",
+      "I h",
+      "I T low threshold",
+      "I Chloride",
+      "I Ca,p",
+      "I Na,p",
+      "I Mixed",
+      "I N",
+      "I M",
+      "I Na,t",
+      "I R"
+    ],
+    "simenvironments": [
+      "STEPS",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Action Potentials",
+      "Parkinson's",
+      "Timothy Syndrome",
+      "Calcium dynamics"
+    ],
+    "modeltypes": [
+      "Axon",
+      "Synapse"
+    ],
+    "receptors": [
+      "AMPA",
+      "M2",
+      "CO",
+      "NO",
+      "Gaba"
+    ],
+    "regions": [
+      "Hippocampus",
+      "Superior colliculus"
+    ]
+  },
+  "267531": {
+    "celltypes": [],
+    "currents": [],
+    "simenvironments": [],
+    "modelconcepts": [],
+    "modeltypes": [],
+    "receptors": [],
+    "regions": []
+  },
+  "267550": {
+    "celltypes": [
+      "Medial Superior Olive (MSO) cell",
+      "Lateral Superior Olive (LSO) cell",
+      "Auditory nerve",
+      "Aplysia R15 bursting neuron",
+      "Leech S cell",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I K",
+      "I Potassium",
+      "I L high threshold",
+      "I MI",
+      "I Na,p",
+      "I N",
+      "Channelrhodopsin (ChR)",
+      "I p,q",
+      "I CAN",
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I_Ks",
+      "I h",
+      "I Chloride",
+      "I Mixed",
+      "I Q",
+      "I M",
+      "I K,Ca",
+      "I R",
+      "I Na,t"
+    ],
+    "simenvironments": [
+      "IDL",
+      "Lua",
+      "MATLAB",
+      "Network",
+      "STEPS",
+      "Mathematica",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Depression",
+      "Oscillations",
+      "Learning",
+      "Activity Patterns",
+      "Synaptic Plasticity",
+      "STDP",
+      "Bursting",
+      "Calcium dynamics",
+      "Ion Channel Kinetics",
+      "Invertebrate",
+      "Delay",
+      "Short-term Synaptic Plasticity",
+      "Connectivity matrix",
+      "Aging/Alzheimer`s",
+      "Action Potentials",
+      "Synchronization",
+      "Temporal Pattern Generation",
+      "Parkinson's",
+      "Information transfer",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Glia",
+      "Axon",
+      "Synapse"
+    ],
+    "receptors": [
+      "Serotonin",
+      "Zn2+",
+      "Glutamate",
+      "CO",
+      "M3",
+      "AMPA",
+      "M2",
+      "M1",
+      "M5",
+      "M4",
+      "NO"
+    ],
+    "regions": [
+      "Thalamus",
+      "Basal ganglia",
+      "Leech",
+      "Subthalamic Nucleus",
+      "Superior colliculus",
+      "Entorhinal cortex"
+    ]
+  },
+  "267551": {
+    "celltypes": [
+      "Auditory nerve",
+      "Abstract Izhikevich neuron",
+      "Aplysia R15 bursting neuron",
+      "Leech S cell",
+      "Neocortex spiking low threshold (LTS) neuron",
+      "Lateral Superior Olive (LSO) cell"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I K",
+      "I Potassium",
+      "I h",
+      "I L high threshold",
+      "I Na,p",
+      "I N",
+      "I Mixed",
+      "I Q",
+      "I R"
+    ],
+    "simenvironments": [
+      "MATLAB",
+      "Network",
+      "Mathematica",
+      "MCell",
+      "NEURON",
+      "Python"
+    ],
+    "modelconcepts": [
+      "Reaction-diffusion",
+      "Invertebrate",
+      "Delay",
+      "Short-term Synaptic Plasticity",
+      "Learning",
+      "Action Potentials",
+      "Activity Patterns",
+      "Synaptic Plasticity",
+      "Parkinson's",
+      "Timothy Syndrome",
+      "Bursting"
+    ],
+    "modeltypes": [
+      "Synapse"
+    ],
+    "receptors": [
+      "M2",
+      "CO",
+      "NO"
+    ],
+    "regions": [
+      "Leech",
+      "Thalamus",
+      "Stomatogastric ganglion",
+      "Superior colliculus"
+    ]
+  },
+  "267561": {
+    "celltypes": [
+      "Auditory nerve",
+      "Pituitary cell"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I K",
+      "I Mixed",
+      "I N",
+      "I_KD",
+      "I Potassium",
+      "I R",
+      "I h"
+    ],
+    "simenvironments": [
+      "Network",
+      "Python"
+    ],
+    "modelconcepts": [
+      "Bursting"
+    ],
+    "modeltypes": [],
+    "receptors": [
+      "CO",
+      "NO"
+    ],
+    "regions": [
+      "Superior colliculus"
+    ]
+  },
+  "267562": {
+    "celltypes": [
+      "Auditory nerve"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I_SERCA",
+      "I K",
+      "I Potassium",
+      "I_K,Na",
+      "I Chloride",
+      "I Ca,p",
+      "I L high threshold",
+      "I MI",
+      "I N",
+      "I M",
+      "I K,Ca",
+      "I Na,t",
+      "Ca pump",
+      "I R"
+    ],
+    "simenvironments": [],
+    "modelconcepts": [
+      "Oscillations",
+      "Ion Channel Kinetics",
+      "Activity Patterns",
+      "Parkinson's",
+      "Timothy Syndrome",
+      "Calcium dynamics"
+    ],
+    "modeltypes": [],
+    "receptors": [
+      "M3",
+      "M2",
+      "M1",
+      "M5",
+      "CO",
+      "M4",
+      "NO"
+    ],
+    "regions": [
+      "Superior colliculus"
+    ]
+  },
+  "267563": {
+    "celltypes": [
+      "Heart cell",
+      "Vestibular neuron",
+      "Auditory nerve"
+    ],
+    "currents": [
+      "I CAN",
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I K",
+      "I Mixed",
+      "I N",
+      "I_Na,Ca",
+      "I Potassium",
+      "I_K,Na",
+      "I R",
+      "I_Ks"
+    ],
+    "simenvironments": [],
+    "modelconcepts": [
+      "Action Potentials",
+      "Timothy Syndrome",
+      "Calcium dynamics"
+    ],
+    "modeltypes": [
+      "Neuron or other electrically excitable cell"
+    ],
+    "receptors": [
+      "CO",
+      "NO"
+    ],
+    "regions": [
+      "Superior colliculus"
+    ]
+  },
+  "267564": {
+    "celltypes": [
+      "Auditory nerve",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I Calcium",
+      "I L high threshold",
+      "Na/Ca exchanger",
+      "I Sodium",
+      "I A",
+      "I_SERCA",
+      "I K",
+      "I N",
+      "I M",
+      "I K,Ca",
+      "I Potassium",
+      "I R"
+    ],
+    "simenvironments": [],
+    "modelconcepts": [
+      "Oscillations",
+      "Activity Patterns",
+      "Parkinson's",
+      "Delay",
+      "Timothy Syndrome",
+      "Calcium dynamics"
+    ],
+    "modeltypes": [],
+    "receptors": [
+      "M3",
+      "M2",
+      "M1",
+      "M5",
+      "CO",
+      "M4"
+    ],
+    "regions": [
+      "Superior colliculus"
+    ]
+  },
+  "267565": {
+    "celltypes": [
+      "Auditory nerve",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I Calcium",
+      "I L high threshold",
+      "Na/Ca exchanger",
+      "I Sodium",
+      "I A",
+      "I_SERCA",
+      "I K",
+      "I N",
+      "I M",
+      "I K,Ca",
+      "I Potassium",
+      "I R"
+    ],
+    "simenvironments": [],
+    "modelconcepts": [
+      "Oscillations",
+      "Activity Patterns",
+      "Parkinson's",
+      "Delay",
+      "Timothy Syndrome",
+      "Calcium dynamics"
+    ],
+    "modeltypes": [],
+    "receptors": [
+      "M3",
+      "M2",
+      "M1",
+      "M5",
+      "CO",
+      "M4"
+    ],
+    "regions": [
+      "Superior colliculus"
+    ]
+  },
+  "267566": {
+    "celltypes": [
+      "Vestibular neuron",
+      "Auditory nerve",
+      "Pituitary cell"
+    ],
+    "currents": [
+      "I Calcium",
+      "I L high threshold",
+      "I A",
+      "Ca pump",
+      "I K",
+      "I N",
+      "Kir",
+      "I_KD",
+      "I M",
+      "I K,Ca",
+      "I Potassium",
+      "Channelrhodopsin (ChR)",
+      "I T low threshold",
+      "I R"
+    ],
+    "simenvironments": [
+      "STEPS",
+      "ERNST (Event Related Neuronal Simulation Tool) (web link to model)"
+    ],
+    "modelconcepts": [
+      "Delay",
+      "Bursting",
+      "Timothy Syndrome",
+      "Calcium dynamics"
+    ],
+    "modeltypes": [],
+    "receptors": [
+      "Zn2+",
+      "CO",
+      "NO"
+    ],
+    "regions": [
+      "Superior colliculus"
+    ]
+  },
+  "267583": {
+    "celltypes": [
+      "Auditory nerve",
+      "Lateral Superior Olive (LSO) cell",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I K",
+      "I_KD",
+      "I Potassium",
+      "I T low threshold",
+      "I h",
+      "I Chloride",
+      "I L high threshold",
+      "I Mixed",
+      "I N",
+      "I M",
+      "I K,Ca",
+      "I Na,t",
+      "I R"
+    ],
+    "simenvironments": [
+      "STEPS",
+      "NEURON",
+      "ERNST (Event Related Neuronal Simulation Tool) (web link to model)"
+    ],
+    "modelconcepts": [
+      "Activity Patterns",
+      "Temperature",
+      "Parkinson's",
+      "Bursting",
+      "Timothy Syndrome",
+      "Calcium dynamics"
+    ],
+    "modeltypes": [
+      "Neuron or other electrically excitable cell",
+      "Extracellular"
+    ],
+    "receptors": [
+      "CO",
+      "NO"
+    ],
+    "regions": [
+      "Superior colliculus"
+    ]
+  },
+  "267586": {
+    "celltypes": [
+      "Auditory nerve"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I MI",
+      "I N",
+      "I Q",
+      "I M",
+      "I Potassium",
+      "I Na,t",
+      "I T low threshold",
+      "I R",
+      "I Chloride"
+    ],
+    "simenvironments": [
+      "IDL"
+    ],
+    "modelconcepts": [
+      "Learning",
+      "Parkinson's",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [],
+    "receptors": [
+      "CO",
+      "NO"
+    ],
+    "regions": [
+      "Superior colliculus"
+    ]
+  },
+  "267587": {
+    "celltypes": [
+      "Cerebellum deep nucleus neuron",
+      "Leech C interneuron",
+      "Suprachiasmatic nucleus (SCN) neuron",
+      "Medial Superior Olive (MSO) cell",
+      "Lateral Superior Olive (LSO) cell",
+      "Vibrissa motoneuron",
+      "Vestibular neuron",
+      "Auditory nerve",
+      "Globus pallidus neuron",
+      "Myelinated neuron",
+      "Ventral cochlear nucleus T stellate (chopper) neuron",
+      "Leech S cell",
+      "Superior paraolivary nucleus neuron"
+    ],
+    "currents": [
+      "I K",
+      "I L high threshold",
+      "I MI",
+      "I N",
+      "Channelrhodopsin (ChR)",
+      "I p,q",
+      "I CAN",
+      "I Sodium",
+      "I trp",
+      "I h",
+      "I Q",
+      "I M",
+      "I K,Ca",
+      "I R",
+      "I_KD",
+      "I Potassium",
+      "I Ca,p",
+      "I Na,p",
+      "I Calcium",
+      "I A",
+      "I T low threshold",
+      "I Chloride",
+      "I Mixed",
+      "I Na,t",
+      "I_Ks"
+    ],
+    "simenvironments": [
+      "MCell",
+      "Python",
+      "Emergent/PDP++",
+      "Lua",
+      "STEPS",
+      "LCG",
+      "IDL",
+      "XML (web link to model)",
+      "NCS",
+      "NeuroML",
+      "QuB",
+      "Network",
+      "NEURON",
+      "FORTRAN",
+      "Cython"
+    ],
+    "modelconcepts": [
+      "Reaction-diffusion",
+      "Sleep",
+      "STDP",
+      "Calcium dynamics",
+      "Invertebrate",
+      "Delay",
+      "Aging/Alzheimer`s",
+      "Action Potentials",
+      "Sensory coding",
+      "Temperature",
+      "Facilitation",
+      "Parkinson's",
+      "Depression",
+      "Oscillations",
+      "unscented Kalman filter",
+      "Circadian Rhythms",
+      "Learning",
+      "Phase Response Curves",
+      "Activity Patterns",
+      "Synaptic Plasticity",
+      "Development",
+      "Ion Channel Kinetics",
+      "Tutorial/Teaching",
+      "Short-term Synaptic Plasticity",
+      "Deep brain stimulation",
+      "Temporal Pattern Generation",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Glia",
+      "Axon",
+      "Neuron or other electrically excitable cell",
+      "Synapse",
+      "Extracellular"
+    ],
+    "receptors": [
+      "CO",
+      "IP3",
+      "M1",
+      "Gaba",
+      "Zn2+",
+      "NMDA",
+      "M3",
+      "AMPA",
+      "M2",
+      "M5",
+      "M4",
+      "NO"
+    ],
+    "regions": [
+      "Thalamus",
+      "Basal ganglia",
+      "Stomatogastric ganglion",
+      "Superior colliculus",
+      "Neocortex",
+      "Prefrontal cortex (PFC)",
+      "Leech",
+      "Subthalamic Nucleus",
+      "Hippocampus"
+    ]
+  },
+  "267595": {
+    "celltypes": [
+      "Auditory nerve",
+      "Myelinated neuron",
+      "Leech S cell",
+      "Medial Superior Olive (MSO) cell",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I K",
+      "I Potassium",
+      "I h",
+      "I Chloride",
+      "I Ca,p",
+      "I L high threshold",
+      "I MI",
+      "I Na,p",
+      "I Mixed",
+      "I N",
+      "I Q",
+      "I M",
+      "I K,Ca",
+      "I R"
+    ],
+    "simenvironments": [
+      "Network",
+      "MCell",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Depression",
+      "Reaction-diffusion",
+      "Invertebrate",
+      "Delay",
+      "Short-term Synaptic Plasticity",
+      "Synaptic Plasticity",
+      "Temperature",
+      "Facilitation",
+      "Parkinson's",
+      "Timothy Syndrome",
+      "Calcium dynamics"
+    ],
+    "modeltypes": [
+      "Neuron or other electrically excitable cell",
+      "Axon",
+      "Extracellular",
+      "Synapse"
+    ],
+    "receptors": [
+      "AMPA",
+      "M2",
+      "CO",
+      "NO",
+      "NMDA",
+      "Gaba"
+    ],
+    "regions": [
+      "Leech",
+      "Neocortex",
+      "Superior colliculus"
+    ]
+  },
+  "267596": {
+    "celltypes": [
+      "Helix pacemaker bursting neuron (RPa1)",
+      "Cerebellum deep nucleus neuron",
+      "Suprachiasmatic nucleus (SCN) neuron",
+      "Medial Superior Olive (MSO) cell",
+      "Lateral Superior Olive (LSO) cell",
+      "Vibrissa motoneuron",
+      "Vestibular neuron",
+      "Auditory nerve",
+      "Aplysia R15 bursting neuron",
+      "Globus pallidus neuron",
+      "Ventral cochlear nucleus T stellate (chopper) neuron",
+      "Leech S cell",
+      "Superior paraolivary nucleus neuron"
+    ],
+    "currents": [
+      "I K",
+      "I L high threshold",
+      "I MI",
+      "I N",
+      "Channelrhodopsin (ChR)",
+      "I p,q",
+      "I CAN",
+      "I Sodium",
+      "I trp",
+      "I h",
+      "I Q",
+      "Kir",
+      "I M",
+      "I K,Ca",
+      "I R",
+      "I_KHT",
+      "I_KD",
+      "I Potassium",
+      "I Ca,p",
+      "I Na,p",
+      "I Calcium",
+      "I A",
+      "I_KLT",
+      "I T low threshold",
+      "I Chloride",
+      "I Mixed",
+      "I Na,t",
+      "I_Ks"
+    ],
+    "simenvironments": [
+      "SPLIT",
+      "Python",
+      "Emergent/PDP++",
+      "Lua",
+      "STEPS",
+      "LCG",
+      "IDL",
+      "XML (web link to model)",
+      "NCS",
+      "QuB",
+      "Network",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Calcium dynamics",
+      "Invertebrate",
+      "Delay",
+      "Aging/Alzheimer`s",
+      "Sensory coding",
+      "Temperature",
+      "Parkinson's",
+      "Depression",
+      "Oscillations",
+      "unscented Kalman filter",
+      "Circadian Rhythms",
+      "Learning",
+      "Phase Response Curves",
+      "Activity Patterns",
+      "Deep brain stimulation",
+      "Temporal Pattern Generation",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Axon",
+      "Neuron or other electrically excitable cell",
+      "Neuromuscular Junction",
+      "Synapse"
+    ],
+    "receptors": [
+      "GabaA",
+      "Glutamate",
+      "CO",
+      "IP3",
+      "M1",
+      "Gaba",
+      "Serotonin",
+      "Zn2+",
+      "Kainate",
+      "M3",
+      "AMPA",
+      "M2",
+      "M5",
+      "M4",
+      "NO"
+    ],
+    "regions": [
+      "Thalamus",
+      "Basal ganglia",
+      "Stomatogastric ganglion",
+      "Superior colliculus",
+      "Prefrontal cortex (PFC)",
+      "Cerebellum",
+      "Leech",
+      "Subthalamic Nucleus",
+      "Hippocampus"
+    ]
+  },
+  "267598": {
+    "celltypes": [
+      "Auditory nerve",
+      "Lateral Superior Olive (LSO) cell",
+      "Abstract integrate-and-fire leaky neuron"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I K",
+      "I Potassium",
+      "I T low threshold",
+      "I h",
+      "I Chloride",
+      "I L high threshold",
+      "I MI",
+      "I Na,p",
+      "I Mixed",
+      "I N",
+      "I Q",
+      "I M",
+      "Channelrhodopsin (ChR)",
+      "I R"
+    ],
+    "simenvironments": [
+      "Network",
+      "STEPS",
+      "SPLIT",
+      "NEURON",
+      "Cython",
+      "Python"
+    ],
+    "modelconcepts": [
+      "Delay",
+      "Parkinson's",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Neuron or other electrically excitable cell",
+      "Glia",
+      "Synapse"
+    ],
+    "receptors": [
+      "M3",
+      "M2",
+      "AMPA",
+      "M1",
+      "M5",
+      "CO",
+      "M4",
+      "NO"
+    ],
+    "regions": [
+      "Superior colliculus",
+      "Hippocampus"
+    ]
+  },
+  "267599": {
+    "celltypes": [
+      "Medial Superior Olive (MSO) cell",
+      "Lateral Superior Olive (LSO) cell",
+      "Auditory nerve",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I K",
+      "I_KD",
+      "I Potassium",
+      "I Ca,p",
+      "I L high threshold",
+      "I MI",
+      "I Na,p",
+      "I N",
+      "Channelrhodopsin (ChR)",
+      "I p,q",
+      "I CAN",
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I_SERCA",
+      "I trp",
+      "I T low threshold",
+      "I h",
+      "I Chloride",
+      "I Mixed",
+      "I Q",
+      "Kir",
+      "I M",
+      "I K,Ca",
+      "I R",
+      "Ca pump",
+      "I Na,t",
+      "I_AHP"
+    ],
+    "simenvironments": [
+      "IDL",
+      "NCS",
+      "Lua",
+      "STEPS",
+      "LCG",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Reaction-diffusion",
+      "Oscillations",
+      "Activity Patterns",
+      "Simplified Models",
+      "Detailed Neuronal Models",
+      "Bursting",
+      "Calcium dynamics",
+      "Ion Channel Kinetics",
+      "Action Potential Initiation",
+      "Delay",
+      "Action Potentials",
+      "Sensory coding",
+      "Temperature",
+      "Parkinson's",
+      "Axonal Action Potentials",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Axon",
+      "Synapse",
+      "Neuron or other electrically excitable cell",
+      "Extracellular"
+    ],
+    "receptors": [
+      "Serotonin",
+      "Zn2+",
+      "Glutamate",
+      "Alpha2",
+      "CO",
+      "NMDA",
+      "IP3",
+      "Kainate",
+      "M3",
+      "M2",
+      "AMPA",
+      "M1",
+      "M5",
+      "M4",
+      "NO"
+    ],
+    "regions": [
+      "Thalamus",
+      "Basal ganglia",
+      "Superior colliculus",
+      "Hippocampus"
+    ]
+  },
+  "267611": {
+    "celltypes": [
+      "Auditory nerve",
+      "Lateral Superior Olive (LSO) cell",
+      "Hodgkin-Huxley neuron"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I MI",
+      "I K",
+      "I N",
+      "I M",
+      "I Potassium",
+      "Channelrhodopsin (ChR)",
+      "I Na,t",
+      "I R"
+    ],
+    "simenvironments": [
+      "STEPS",
+      "Mathematica",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Oscillations",
+      "Action Potentials",
+      "Activity Patterns",
+      "Parkinson's",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [],
+    "receptors": [
+      "Alpha1",
+      "CO",
+      "NO"
+    ],
+    "regions": [
+      "Superior colliculus"
+    ]
+  },
+  "267613": {
+    "celltypes": [
+      "Auditory nerve",
+      "Leech S cell",
+      "Medial Superior Olive (MSO) cell",
+      "Lateral Superior Olive (LSO) cell"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I K",
+      "I Potassium",
+      "I h",
+      "I Chloride",
+      "I L high threshold",
+      "I MI",
+      "I Na,p",
+      "I Mixed",
+      "I N",
+      "I M",
+      "I R",
+      "I Na,t"
+    ],
+    "simenvironments": [
+      "NCS",
+      "MCell",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Reaction-diffusion",
+      "Depression",
+      "Ion Channel Kinetics",
+      "Invertebrate",
+      "Place cell/field",
+      "Simplified Models",
+      "Synaptic Plasticity",
+      "STDP",
+      "Detailed Neuronal Models",
+      "Parkinson's",
+      "Timothy Syndrome",
+      "Bursting"
+    ],
+    "modeltypes": [
+      "Axon",
+      "Synapse"
+    ],
+    "receptors": [
+      "Glutamate",
+      "Kainate",
+      "GabaB",
+      "M3",
+      "M2",
+      "AMPA",
+      "CO",
+      "M4",
+      "NO",
+      "NMDA",
+      "Gaba"
+    ],
+    "regions": [
+      "Leech",
+      "Hippocampus",
+      "Superior colliculus"
+    ]
+  },
+  "267614": {
+    "celltypes": [
+      "Leech C interneuron",
+      "Spinal cord sympathetic preganglionic neuron",
+      "Suprachiasmatic nucleus (SCN) neuron",
+      "Medial Superior Olive (MSO) cell",
+      "Lateral Superior Olive (LSO) cell",
+      "Vestibular neuron",
+      "Auditory nerve",
+      "Ventral cochlear nucleus T stellate (chopper) neuron",
+      "Leech S cell",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I K",
+      "I_KD",
+      "I Potassium",
+      "I L high threshold",
+      "I MI",
+      "I Na,p",
+      "I N",
+      "Channelrhodopsin (ChR)",
+      "I p,q",
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I_Ks",
+      "I h",
+      "I T low threshold",
+      "I Chloride",
+      "I Mixed",
+      "I Q",
+      "I M",
+      "I K,Ca",
+      "I Na,t",
+      "I R",
+      "I_AHP"
+    ],
+    "simenvironments": [
+      "IDL",
+      "XML (web link to model)",
+      "NCS",
+      "MATLAB",
+      "Network",
+      "STEPS",
+      "LCG",
+      "Mathematica",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Depression",
+      "Oscillations",
+      "Bifurcation",
+      "Circadian Rhythms",
+      "Phase Response Curves",
+      "Activity Patterns",
+      "Calcium dynamics",
+      "Invertebrate",
+      "Delay",
+      "Action Potentials",
+      "Deep brain stimulation",
+      "Parkinson's",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Synapse",
+      "Neuron or other electrically excitable cell"
+    ],
+    "receptors": [
+      "Serotonin",
+      "Zn2+",
+      "CO",
+      "NMDA",
+      "M3",
+      "AMPA",
+      "M2",
+      "M1",
+      "M5",
+      "M4",
+      "NO",
+      "Gaba"
+    ],
+    "regions": [
+      "Prefrontal cortex (PFC)",
+      "Basal ganglia",
+      "Leech",
+      "Striatum",
+      "Superior colliculus"
+    ]
+  },
+  "267617": {
+    "celltypes": [
+      "Auditory nerve",
+      "Ventral cochlear nucleus T stellate (chopper) neuron",
+      "Lateral Superior Olive (LSO) cell",
+      "Squid axon"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I K",
+      "I Potassium",
+      "I h",
+      "I T low threshold",
+      "I Chloride",
+      "I Mixed",
+      "I N",
+      "I M",
+      "I Na,t",
+      "I R"
+    ],
+    "simenvironments": [
+      "STEPS",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Action Potentials",
+      "Temperature",
+      "Parkinson's",
+      "Timothy Syndrome",
+      "Calcium dynamics"
+    ],
+    "modeltypes": [
+      "Axon"
+    ],
+    "receptors": [
+      "M2",
+      "AMPA",
+      "M1",
+      "M5",
+      "CO",
+      "NO"
+    ],
+    "regions": [
+      "Superior colliculus",
+      "Hippocampus"
+    ]
+  },
+  "267619": {
+    "celltypes": [
+      "Auditory nerve",
+      "Leech S cell",
+      "Lateral Superior Olive (LSO) cell",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I K",
+      "I Potassium",
+      "I h",
+      "I Chloride",
+      "I MI",
+      "I Na,p",
+      "I Mixed",
+      "I N",
+      "I M",
+      "I K,Ca",
+      "I Na,t",
+      "I R"
+    ],
+    "simenvironments": [
+      "XML (web link to model)",
+      "Network",
+      "NEURON",
+      "FORTRAN",
+      "Cython",
+      "Python"
+    ],
+    "modelconcepts": [
+      "Invertebrate",
+      "Delay",
+      "Aging/Alzheimer`s",
+      "Activity Patterns",
+      "Temporal Pattern Generation",
+      "Parkinson's",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Axon",
+      "Synapse"
+    ],
+    "receptors": [
+      "M3",
+      "AMPA",
+      "M2",
+      "M1",
+      "CO",
+      "M4",
+      "NO",
+      "NMDA"
+    ],
+    "regions": [
+      "Leech",
+      "Subthalamic Nucleus",
+      "Basal ganglia",
+      "Superior colliculus"
+    ]
+  },
+  "267620": {
+    "celltypes": [
+      "Auditory nerve"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I K",
+      "I K,leak",
+      "I Potassium",
+      "I_Ks",
+      "I T low threshold",
+      "I h",
+      "I L high threshold",
+      "I MI",
+      "Na/K pump",
+      "I Na,p",
+      "I Mixed",
+      "I N",
+      "I M",
+      "I Na,t",
+      "I R",
+      "I_AHP"
+    ],
+    "simenvironments": [
+      "STEPS",
+      "NEURON",
+      "ERNST (Event Related Neuronal Simulation Tool) (web link to model)",
+      "Python",
+      "Virtual Cell (web link to model)"
+    ],
+    "modelconcepts": [
+      "Delay",
+      "Action Potentials",
+      "Activity Patterns",
+      "Temperature",
+      "Axonal Action Potentials",
+      "Parkinson's",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [],
+    "receptors": [
+      "CO",
+      "NO"
+    ],
+    "regions": [
+      "Superior colliculus"
+    ]
+  },
+  "267621": {
+    "celltypes": [
+      "Auditory nerve",
+      "Aplysia R15 bursting neuron",
+      "Lateral Superior Olive (LSO) cell",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I K",
+      "I Potassium",
+      "I h",
+      "I T low threshold",
+      "I Ca,p",
+      "I MI",
+      "I Na,p",
+      "I Mixed",
+      "I N",
+      "I M",
+      "I K,Ca",
+      "I R"
+    ],
+    "simenvironments": [
+      "STEPS",
+      "MCell",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Reaction-diffusion",
+      "Delay",
+      "Activity Patterns",
+      "Simplified Models",
+      "Parkinson's",
+      "Bursting",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Axon",
+      "Synapse"
+    ],
+    "receptors": [
+      "M3",
+      "M2",
+      "CO",
+      "NO"
+    ],
+    "regions": [
+      "Subthalamic Nucleus",
+      "Superior colliculus"
+    ]
+  },
+  "267646": {
+    "celltypes": [
+      "Suprachiasmatic nucleus (SCN) neuron",
+      "Auditory nerve",
+      "Aplysia R15 bursting neuron",
+      "Leech S cell",
+      "Superior paraolivary nucleus neuron",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I K",
+      "I Potassium",
+      "I L high threshold",
+      "I MI",
+      "I Na,p",
+      "I N",
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I h",
+      "I Chloride",
+      "Ca pump",
+      "I Mixed",
+      "I Q",
+      "I M",
+      "I K,Ca",
+      "I R",
+      "I Na,t"
+    ],
+    "simenvironments": [
+      "XML (web link to model)",
+      "Lua",
+      "Network",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Depression",
+      "Oscillations",
+      "Reaction-diffusion",
+      "unscented Kalman filter",
+      "Circadian Rhythms",
+      "Phase Response Curves",
+      "Activity Patterns",
+      "Simplified Models",
+      "Bursting",
+      "Calcium dynamics",
+      "Invertebrate",
+      "Delay",
+      "Action Potentials",
+      "Temporal Pattern Generation",
+      "Parkinson's",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Synapse",
+      "Neuron or other electrically excitable cell"
+    ],
+    "receptors": [
+      "Zn2+",
+      "Glutamate",
+      "Gaba",
+      "CO",
+      "M3",
+      "M2",
+      "AMPA",
+      "M1",
+      "M5",
+      "M4",
+      "NO"
+    ],
+    "regions": [
+      "Neocortex",
+      "Thalamus",
+      "Retina",
+      "Basal ganglia",
+      "Leech",
+      "Stomatogastric ganglion",
+      "Superior colliculus",
+      "Hippocampus"
+    ]
+  },
+  "267661": {
+    "celltypes": [
+      "Heart cell",
+      "Auditory nerve",
+      "Aplysia R15 bursting neuron",
+      "Medial Superior Olive (MSO) cell",
+      "Cardiac ventricular cell",
+      "Lateral Superior Olive (LSO) cell"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I K",
+      "I Potassium",
+      "I h",
+      "I T low threshold",
+      "I Chloride",
+      "I L high threshold",
+      "Late Na",
+      "I MI",
+      "I Na,p",
+      "I Mixed",
+      "I N",
+      "I M",
+      "I Na,t",
+      "I R"
+    ],
+    "simenvironments": [
+      "Network",
+      "STEPS",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Nociception",
+      "Delay",
+      "Action Potentials",
+      "Sensory coding",
+      "Temperature",
+      "Parkinson's",
+      "Timothy Syndrome",
+      "Calcium dynamics"
+    ],
+    "modeltypes": [
+      "Neuron or other electrically excitable cell",
+      "Axon",
+      "Synapse"
+    ],
+    "receptors": [
+      "M2",
+      "CO",
+      "NO"
+    ],
+    "regions": [
+      "Cerebellum",
+      "Superior colliculus"
+    ]
+  },
+  "267669": {
+    "celltypes": [
+      "Auditory nerve",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I K",
+      "I Potassium",
+      "I h",
+      "I T low threshold",
+      "I Chloride",
+      "I Na,p",
+      "I Mixed",
+      "I M",
+      "I K,Ca",
+      "I R"
+    ],
+    "simenvironments": [
+      "STEPS",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Ion Channel Kinetics",
+      "Parkinson's",
+      "Timothy Syndrome",
+      "Calcium dynamics"
+    ],
+    "modeltypes": [],
+    "receptors": [
+      "M2",
+      "M1",
+      "CO",
+      "NO"
+    ],
+    "regions": [
+      "Subthalamic Nucleus",
+      "Superior colliculus"
+    ]
+  },
+  "267680": {
+    "celltypes": [
+      "Auditory nerve"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I K",
+      "I_KD",
+      "I Potassium",
+      "I Chloride",
+      "I MI",
+      "I Na,p",
+      "I N",
+      "I R",
+      "I_AHP"
+    ],
+    "simenvironments": [
+      "STEPS",
+      "NEURON",
+      "Python"
+    ],
+    "modelconcepts": [
+      "Depression",
+      "Delay",
+      "Learning",
+      "Synaptic Plasticity",
+      "STDP",
+      "Detailed Neuronal Models",
+      "Parkinson's",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Synapse"
+    ],
+    "receptors": [
+      "AMPA",
+      "M2",
+      "CO",
+      "NO",
+      "NMDA"
+    ],
+    "regions": [
+      "Superior colliculus",
+      "Hippocampus"
+    ]
+  },
+  "267686": {
+    "celltypes": [
+      "Auditory nerve",
+      "Myelinated neuron",
+      "Leech S cell",
+      "Medial Superior Olive (MSO) cell",
+      "Lateral Superior Olive (LSO) cell",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I K",
+      "I Potassium",
+      "I h",
+      "I T low threshold",
+      "I Chloride",
+      "I L high threshold",
+      "I MI",
+      "I_AHP",
+      "I Na,p",
+      "I Mixed",
+      "I N",
+      "I M",
+      "I K,Ca",
+      "I R",
+      "I Na,t"
+    ],
+    "simenvironments": [
+      "Lua",
+      "Network",
+      "SPLIT",
+      "MCell",
+      "NEURON",
+      "Python"
+    ],
+    "modelconcepts": [
+      "Reaction-diffusion",
+      "Depression",
+      "Invertebrate",
+      "Delay",
+      "Short-term Synaptic Plasticity",
+      "Synaptic Plasticity",
+      "Temperature",
+      "Facilitation",
+      "Parkinson's",
+      "Timothy Syndrome",
+      "Calcium dynamics"
+    ],
+    "modeltypes": [
+      "Axon",
+      "Synapse"
+    ],
+    "receptors": [
+      "GabaA",
+      "GabaB",
+      "Gaba",
+      "M2",
+      "AMPA",
+      "CO",
+      "NO",
+      "NMDA"
+    ],
+    "regions": [
+      "Leech",
+      "Basal ganglia",
+      "Superior colliculus",
+      "Hippocampus"
+    ]
+  },
+  "267691": {
+    "celltypes": [
+      "Myelinated neuron",
+      "Lateral Superior Olive (LSO) cell",
+      "Auditory nerve",
+      "Leech S cell",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I K",
+      "I_KD",
+      "I Potassium",
+      "I L high threshold",
+      "Late Na",
+      "I MI",
+      "I Na,p",
+      "I N",
+      "Channelrhodopsin (ChR)",
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I T low threshold",
+      "I h",
+      "I Chloride",
+      "I Mixed",
+      "I Q",
+      "I M",
+      "I K,Ca",
+      "I R",
+      "I Na,t"
+    ],
+    "simenvironments": [
+      "SPLIT",
+      "MCell",
+      "C or C++ program",
+      "Python",
+      "Virtual Cell (web link to model)",
+      "Lua",
+      "MATLAB",
+      "STEPS",
+      "Network",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Reaction-diffusion",
+      "Depression",
+      "Bifurcation",
+      "Simplified Models",
+      "Influence of Dendritic Geometry",
+      "Synaptic Plasticity",
+      "Detailed Neuronal Models",
+      "Calcium dynamics",
+      "Invertebrate",
+      "Action Potential Initiation",
+      "Intracortical Microstimulation",
+      "Delay",
+      "Short-term Synaptic Plasticity",
+      "Action Potentials",
+      "Temperature",
+      "Facilitation",
+      "Axonal Action Potentials",
+      "Parkinson's",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Axon",
+      "Synapse",
+      "Neuron or other electrically excitable cell",
+      "Extracellular"
+    ],
+    "receptors": [
+      "Zn2+",
+      "GabaA",
+      "Gaba",
+      "CO",
+      "NMDA",
+      "GabaB",
+      "M3",
+      "M2",
+      "AMPA",
+      "M1",
+      "M4",
+      "NO"
+    ],
+    "regions": [
+      "Neocortex",
+      "Basal ganglia",
+      "Leech",
+      "Subthalamic Nucleus",
+      "Superior colliculus",
+      "Hippocampus"
+    ]
+  },
+  "267694": {
+    "celltypes": [
+      "Cerebellum golgi cell",
+      "Myelinated neuron",
+      "Lateral Superior Olive (LSO) cell",
+      "Heart cell",
+      "Auditory nerve",
+      "Aplysia R15 bursting neuron",
+      "Leech S cell",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I K",
+      "I Potassium",
+      "I Ca,p",
+      "I L high threshold",
+      "I MI",
+      "I Na,p",
+      "I N",
+      "Channelrhodopsin (ChR)",
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I h",
+      "I T low threshold",
+      "I Chloride",
+      "Ca pump",
+      "I Mixed",
+      "I Q",
+      "Kir",
+      "I M",
+      "I K,Ca",
+      "I Na,t",
+      "I R"
+    ],
+    "simenvironments": [
+      "GENESIS",
+      "SPLIT",
+      "MCell",
+      "Python",
+      "Lua",
+      "neuroConstruct",
+      "STEPS",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Reaction-diffusion",
+      "Activity Patterns",
+      "Simplified Models",
+      "Bursting",
+      "Calcium dynamics",
+      "Invertebrate",
+      "Parameter Fitting",
+      "Delay",
+      "Action Potentials",
+      "Temperature",
+      "Temporal Pattern Generation",
+      "Parkinson's",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Glia",
+      "Axon",
+      "Synapse"
+    ],
+    "receptors": [
+      "Zn2+",
+      "Alpha1",
+      "GabaA",
+      "Gaba",
+      "CO",
+      "M3",
+      "AMPA",
+      "M2",
+      "M1",
+      "M5",
+      "M4",
+      "NO"
+    ],
+    "regions": [
+      "Thalamus",
+      "Cerebellum",
+      "Basal ganglia",
+      "Leech",
+      "Subthalamic Nucleus",
+      "Superior colliculus",
+      "Hippocampus"
+    ]
+  },
+  "267695": {
+    "celltypes": [
+      "Auditory nerve"
+    ],
+    "currents": [
+      "I A",
+      "I Potassium"
+    ],
+    "simenvironments": [],
+    "modelconcepts": [
+      "Delay",
+      "CREB"
+    ],
+    "modeltypes": [],
+    "receptors": [
+      "CO",
+      "NO"
+    ],
+    "regions": [
+      "Superior colliculus"
+    ]
+  },
+  "267696": {
+    "celltypes": [
+      "Auditory nerve",
+      "Astrocyte"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I K",
+      "I Potassium",
+      "I T low threshold",
+      "I L high threshold",
+      "I Na,p",
+      "Kir",
+      "I R"
+    ],
+    "simenvironments": [
+      "Network",
+      "NEURON"
+    ],
+    "modelconcepts": [],
+    "modeltypes": [
+      "Glia"
+    ],
+    "receptors": [
+      "M2",
+      "CO",
+      "NO"
+    ],
+    "regions": [
+      "Superior colliculus"
+    ]
+  },
+  "267710": {
+    "celltypes": [
+      "Lateral Superior Olive (LSO) cell",
+      "Auditory nerve",
+      "Ventral cochlear nucleus T stellate (chopper) neuron",
+      "Leech S cell",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I K",
+      "I_KD",
+      "I Potassium",
+      "I L high threshold",
+      "I MI",
+      "I Na,p",
+      "I N",
+      "I CAN",
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I h",
+      "I Chloride",
+      "I Mixed",
+      "I M",
+      "I K,Ca",
+      "I R",
+      "I Na,t"
+    ],
+    "simenvironments": [
+      "Python",
+      "Lua",
+      "STEPS",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Bifurcation",
+      "Simplified Models",
+      "Calcium dynamics",
+      "Invertebrate",
+      "Action Potential Initiation",
+      "Delay",
+      "Action Potentials",
+      "Temperature",
+      "Parkinson's",
+      "Axonal Action Potentials",
+      "Electrotonus",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Axon",
+      "Neuron or other electrically excitable cell"
+    ],
+    "receptors": [
+      "CO",
+      "M2",
+      "AMPA",
+      "NO"
+    ],
+    "regions": [
+      "Spinal motoneuron",
+      "Leech",
+      "Superior colliculus"
+    ]
+  },
+  "267728": {
+    "celltypes": [
+      "Auditory nerve",
+      "Myelinated neuron",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I K",
+      "I Potassium",
+      "I_Ks",
+      "I h",
+      "I L high threshold",
+      "I Na,p",
+      "I Mixed",
+      "I N",
+      "I M",
+      "I R",
+      "I Na,t"
+    ],
+    "simenvironments": [
+      "Lua",
+      "NEURON",
+      "Python"
+    ],
+    "modelconcepts": [
+      "Delay",
+      "Action Potentials",
+      "Temperature",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Axon",
+      "Extracellular"
+    ],
+    "receptors": [
+      "AMPA",
+      "M2",
+      "M1",
+      "CO",
+      "NO"
+    ],
+    "regions": [
+      "Superior colliculus"
+    ]
+  },
+  "267742": {
+    "celltypes": [
+      "Cerebellum deep nucleus neuron",
+      "Suprachiasmatic nucleus (SCN) neuron",
+      "Medial Nucleus of the Trapezoid Body (MNTB) neuron",
+      "Medial Superior Olive (MSO) cell",
+      "Lateral Superior Olive (LSO) cell",
+      "Nucleus accumbens spiny projection neuron",
+      "Vestibular neuron",
+      "Auditory nerve",
+      "Aplysia R15 bursting neuron",
+      "Globus pallidus neuron",
+      "Ventral cochlear nucleus T stellate (chopper) neuron",
+      "Leech S cell",
+      "Superior paraolivary nucleus neuron",
+      "Locust Lobula Giant Movement Detector (LGMD) neuron"
+    ],
+    "currents": [
+      "I K",
+      "I L high threshold",
+      "I MI",
+      "I N",
+      "Channelrhodopsin (ChR)",
+      "I p,q",
+      "I Sodium",
+      "I trp",
+      "I h",
+      "I Q",
+      "I CNG",
+      "Kir",
+      "I M",
+      "I K,Ca",
+      "I R",
+      "I_AHP",
+      "I_KD",
+      "I Potassium",
+      "I Ca,p",
+      "I Na,p",
+      "I Calcium",
+      "I A",
+      "I_HERG",
+      "I T low threshold",
+      "I Chloride",
+      "I Mixed",
+      "I Na,t",
+      "I_Ks"
+    ],
+    "simenvironments": [
+      "Java",
+      "Python",
+      "Emergent/PDP++",
+      "Lua",
+      "STEPS",
+      "LCG",
+      "IDL",
+      "CSIM",
+      "XML (web link to model)",
+      "NCS",
+      "C or C++ program",
+      "QuB",
+      "MATLAB",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Calcium dynamics",
+      "Invertebrate",
+      "CREB",
+      "Delay",
+      "Action Potentials",
+      "Sensory coding",
+      "Temperature",
+      "Parkinson's",
+      "Depression",
+      "Oscillations",
+      "unscented Kalman filter",
+      "Circadian Rhythms",
+      "Phase Response Curves",
+      "Activity Patterns",
+      "Ion Channel Kinetics",
+      "Tutorial/Teaching",
+      "Deep brain stimulation",
+      "Temporal Pattern Generation",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Axon",
+      "Neuron or other electrically excitable cell",
+      "Synapse"
+    ],
+    "receptors": [
+      "CO",
+      "IP3",
+      "M1",
+      "Gaba",
+      "Serotonin",
+      "Zn2+",
+      "NMDA",
+      "M3",
+      "M2",
+      "AMPA",
+      "M5",
+      "M4",
+      "NO"
+    ],
+    "regions": [
+      "Thalamus",
+      "Basal ganglia",
+      "Stomatogastric ganglion",
+      "Superior colliculus",
+      "Prefrontal cortex (PFC)",
+      "Leech",
+      "Subthalamic Nucleus",
+      "Hippocampus"
+    ]
+  },
+  "267754": {
+    "celltypes": [
+      "Auditory nerve",
+      "Lateral Superior Olive (LSO) cell"
+    ],
+    "currents": [
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I K",
+      "I_KD",
+      "I Potassium",
+      "I h",
+      "I T low threshold",
+      "I Chloride",
+      "I L high threshold",
+      "I Mixed",
+      "I M",
+      "I K,Ca",
+      "I R",
+      "I Na,t"
+    ],
+    "simenvironments": [
+      "STEPS",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Ion Channel Kinetics",
+      "Active Dendrites",
+      "Delay",
+      "Action Potentials",
+      "Parkinson's",
+      "Timothy Syndrome",
+      "Calcium dynamics"
+    ],
+    "modeltypes": [
+      "Axon"
+    ],
+    "receptors": [
+      "Serotonin",
+      "M2",
+      "AMPA",
+      "CO",
+      "NO"
+    ],
+    "regions": [
+      "Dentate gyrus",
+      "Superior colliculus",
+      "Hippocampus"
+    ]
+  },
+  "267768": {
+    "celltypes": [
+      "Medial Superior Olive (MSO) cell",
+      "Lateral Superior Olive (LSO) cell",
+      "Auditory nerve",
+      "Leech S cell",
+      "Globus pallidus neuron"
+    ],
+    "currents": [
+      "I K",
+      "I_KD",
+      "I Potassium",
+      "I L high threshold",
+      "I MI",
+      "I Na,p",
+      "I N",
+      "Channelrhodopsin (ChR)",
+      "I Calcium",
+      "I Sodium",
+      "I A",
+      "I h",
+      "I Chloride",
+      "I Mixed",
+      "I Q",
+      "Kir",
+      "I M",
+      "I Na,t",
+      "I R",
+      "I_AHP"
+    ],
+    "simenvironments": [
+      "IDL",
+      "MCell",
+      "Python",
+      "Emergent/PDP++",
+      "Lua",
+      "MATLAB",
+      "Network",
+      "STEPS",
+      "NEURON"
+    ],
+    "modelconcepts": [
+      "Reaction-diffusion",
+      "Activity Patterns",
+      "Bursting",
+      "Ion Channel Kinetics",
+      "Invertebrate",
+      "Delay",
+      "Action Potentials",
+      "Parkinson's",
+      "Axonal Action Potentials",
+      "Synaptic noise",
+      "Timothy Syndrome"
+    ],
+    "modeltypes": [
+      "Axon",
+      "Synapse",
+      "Extracellular"
+    ],
+    "receptors": [
+      "Zn2+",
+      "CO",
+      "M3",
+      "AMPA",
+      "M2",
+      "M1",
+      "M5",
+      "M4",
+      "NO",
+      "Gaba"
+    ],
+    "regions": [
+      "Basal ganglia",
+      "Leech",
+      "Subthalamic Nucleus",
+      "Stomatogastric ganglion",
+      "Superior colliculus"
+    ]
+  }
+}
